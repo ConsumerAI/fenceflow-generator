@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+        // Texas-inspired colors
+        texas: {
+          earth: '#8B4513',
+          sand: '#F5F5DC',
+          leather: '#A0522D',
+          terracotta: '#CD5C5C',
+          clay: '#B7410E',
+          cream: '#FFF8DC'
+        },
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +84,36 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in': {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        'slide-in': {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }
+        },
+        'image-shine': {
+          '0%': { 'background-position': '200% 0' },
+          '100%': { 'background-position': '-200% 0' }
+        },
+        'page-transition': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.7s ease-out forwards',
+        'slide-in': 'slide-in 0.7s ease-out forwards',
+        'image-shine': 'image-shine 2.5s linear infinite',
+        'page-transition': 'page-transition 0.5s ease-out forwards'
+			},
+      backgroundImage: {
+        'glass-gradient': 'linear-gradient(145deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%)',
+        'texas-pattern': "url('/textures/texas-pattern.svg')",
+      },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

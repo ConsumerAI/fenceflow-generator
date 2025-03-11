@@ -1,0 +1,53 @@
+
+import React from 'react';
+import { ServiceInfo } from '@/lib/types';
+
+interface ServiceCardProps {
+  service: ServiceInfo;
+  index: number;
+}
+
+const ServiceCard = ({ service, index }: ServiceCardProps) => {
+  const staggerDelay = `${index * 0.1}s`;
+  
+  return (
+    <div 
+      className="glass-card overflow-hidden transition-all duration-500 group hover:shadow-lg"
+      style={{
+        animationDelay: staggerDelay,
+        opacity: 0,
+        animation: `staggerFade 0.5s ease forwards ${staggerDelay}`
+      }}
+      id={service.title.toLowerCase().replace(/\s+/g, '-')}
+    >
+      <div className="p-6 md:p-8">
+        <div className="w-12 h-12 mb-4 text-texas-terracotta">
+          <img 
+            src={service.icon} 
+            alt={`${service.title} icon`} 
+            className="w-full h-full object-contain"
+          />
+        </div>
+        
+        <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-texas-terracotta transition-colors">
+          {service.title}
+        </h3>
+        
+        <p className="text-muted-foreground mb-6">
+          {service.description}
+        </p>
+        
+        <ul className="space-y-2">
+          {service.benefits.map((benefit, idx) => (
+            <li key={idx} className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-texas-terracotta flex-shrink-0" />
+              <span>{benefit}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default ServiceCard;
