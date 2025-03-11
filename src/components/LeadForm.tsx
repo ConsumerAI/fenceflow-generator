@@ -89,7 +89,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         <p className="text-muted-foreground">
           {variant === 'default' 
             ? `Request a free, no-obligation quote for your ${city} fence installation project.`
-            : 'Fill out this quick form and we'll contact you within 24 hours.'}
+            : 'Fill out this quick form and we\'ll contact you within 24 hours.'}
         </p>
       </div>
       
