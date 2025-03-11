@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -54,7 +53,12 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     
     try {
       const leadData: Lead = {
-        ...data,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        address: data.address,
+        service_type: data.service_type,
+        message: data.message || '',
         city,
       };
       
