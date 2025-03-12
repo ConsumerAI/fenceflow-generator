@@ -52,7 +52,7 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     },
   });
 
-  // Fix: Use numeric type for linearFeet when watching form values
+  // Fix: Use string type for linearFeetString when watching form values
   const linearFeetString = form.watch('linear_feet');
   const fenceMaterial = form.watch('fence_material');
 
