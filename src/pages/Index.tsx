@@ -136,7 +136,7 @@ const Index = () => {
                   automated gates, our team delivers quality across the metroplex. 
                   Transform your space with a fence you'll love!
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <a 
                     href="#quote" 
                     className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"

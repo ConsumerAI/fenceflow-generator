@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -143,7 +144,7 @@ const CityPage = () => {
                   className="text-lg text-muted-foreground prose prose-p:text-muted-foreground max-w-none" 
                   dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.intro) }} 
                 />
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <a 
                     href="#quote" 
                     className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
