@@ -75,6 +75,22 @@ const services: ServiceInfo[] = [
 ];
 
 const Index = () => {
+  // Function to handle smooth scrolling to the quote form
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const quoteElement = document.getElementById('quote');
+    
+    if (quoteElement) {
+      // Update URL with hash for page reloads
+      window.location.hash = 'quote';
+      
+      quoteElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -139,6 +155,7 @@ const Index = () => {
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <a 
                     href="#quote" 
+                    onClick={scrollToQuote}
                     className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote

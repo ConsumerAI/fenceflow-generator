@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -37,12 +36,25 @@ interface LeadFormProps {
 const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isPulsing, setIsPulsing] = useState(false);
   const [fenceDetails, setFenceDetails] = useState<{ 
     linear_feet?: number; 
     fence_material?: CalculatorFormData['fence_material'];
     estimatedCost?: { min: number; max: number };
   }>({});
   
+  useEffect(() => {
+    if (window.location.hash === '#quote') {
+      setIsPulsing(true);
+      
+      const timer = setTimeout(() => {
+        setIsPulsing(false);
+      }, 2000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -54,7 +66,6 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     },
   });
 
-  // Watch the service type to conditionally show the fence calculator
   const serviceType = form.watch('service_type');
   const isResidential = serviceType === 'Residential Fencing';
   
@@ -109,7 +120,6 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     });
   };
 
-  // Format price as currency
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -118,8 +128,10 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     }).format(price);
   };
 
+  const formClasses = `glass-card p-6 md:p-8 ${isPulsing ? 'animate-pulse' : ''} ${className}`;
+
   return (
-    <div className={`glass-card p-6 md:p-8 ${className}`} id="quote">
+    <div className={formClasses} id="quote">
       <div className="mb-6">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Get Your Free Design Quote</h2>
         <p className="text-muted-foreground">
@@ -230,14 +242,12 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                 )}
               />
               
-              {/* Only show fence calculator for Residential Fencing when explicitly selected */}
               {isResidential && (
                 <div className="mt-6 mb-6">
                   <FenceCalculator onCalculate={handleCalculate} />
                 </div>
               )}
               
-              {/* Display estimated cost above the message field if available */}
               {fenceDetails.estimatedCost && isResidential && (
                 <div className="p-4 bg-green-50 border border-green-100 rounded-md">
                   <p className="font-medium text-green-800">

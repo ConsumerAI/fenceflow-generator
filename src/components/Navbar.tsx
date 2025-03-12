@@ -19,6 +19,24 @@ const Navbar = () => {
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  
+  // Function to handle smooth scrolling to the quote form
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    closeMenu(); // Close mobile menu if open
+    
+    const quoteElement = document.getElementById('quote');
+    
+    if (quoteElement) {
+      // Update URL with hash for page reloads
+      window.location.hash = 'quote';
+      
+      quoteElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -55,6 +73,7 @@ const Navbar = () => {
             </Link>
             <a 
               href="#quote" 
+              onClick={scrollToQuote}
               className="bg-texas-terracotta text-white px-4 py-2 rounded hover:bg-texas-earth transition-colors"
             >
               Get a Free Quote
@@ -99,7 +118,7 @@ const Navbar = () => {
                 Near Me
               </Link>
               <Button asChild variant="default" className="bg-texas-terracotta hover:bg-texas-earth transition-colors">
-                <a href="#quote" className="flex items-center justify-center">
+                <a href="#quote" onClick={scrollToQuote} className="flex items-center justify-center">
                   Get a Free Quote
                 </a>
               </Button>
