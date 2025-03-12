@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CalendarCheck, ClipboardCheck, Construction, PartyPopper } from 'lucide-react';
 
@@ -100,11 +99,8 @@ const PlanToPickets = () => {
         <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 z-0 mt-14">
           <div className="container mx-auto px-8">
             <div className="relative h-1 w-full">
-              <div className="absolute inset-0 flex justify-between">
-                <div className="w-2/3 h-full border-t-2 border-dashed border-texas-terracotta/40"></div>
-                <div className="w-1/3 h-full">
-                  <div className="w-full h-full border-t-2 border-dashed border-texas-terracotta/40"></div>
-                </div>
+              <div className="absolute inset-0 flex">
+                <div className="w-full h-full border-t-2 border-dashed border-texas-terracotta/40"></div>
               </div>
             </div>
           </div>
