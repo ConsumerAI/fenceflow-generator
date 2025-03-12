@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -167,6 +168,9 @@ const Index = () => {
           </div>
         </section>
         
+        {/* Plan to Pickets Process Section - MOVED UP */}
+        <PlanToPickets />
+        
         {/* Services Section */}
         <section className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4 md:px-8">
@@ -185,9 +189,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-        
-        {/* Plan to Pickets Process Section */}
-        <PlanToPickets />
         
         {/* Cities Section */}
         <section className="py-16 md:py-24 texas-section">
