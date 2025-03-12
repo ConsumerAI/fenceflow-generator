@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -7,6 +6,7 @@ import LeadForm from '@/components/LeadForm';
 import CityGrid from '@/components/CityGrid';
 import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
+import PlanToPickets from '@/components/PlanToPickets';
 import { ServiceInfo } from '@/lib/types';
 
 // Service data
@@ -185,6 +185,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        {/* Plan to Pickets Process Section */}
+        <PlanToPickets />
         
         {/* Cities Section */}
         <section className="py-16 md:py-24 texas-section">

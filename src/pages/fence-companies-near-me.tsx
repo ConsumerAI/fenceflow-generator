@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
+import PlanToPickets from '@/components/PlanToPickets';
 import { cities } from '@/lib/cities';
 import { MapPin } from 'lucide-react';
 
@@ -204,6 +204,9 @@ const NearMePage = () => {
             </div>
           </div>
         </section>
+        
+        {/* Plan to Pickets Process Section */}
+        <PlanToPickets />
         
         {/* Areas We Serve */}
         <section className="py-16 md:py-24">

@@ -1,10 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
+import PlanToPickets from '@/components/PlanToPickets';
 import { CityContent, ServiceType } from '@/lib/types';
 import { cities, getCityFromUrl } from '@/lib/cities';
 import { supabase, generateCityContent } from '@/lib/supabase';
@@ -17,11 +17,9 @@ const CityPage = () => {
   const [cityContent, setCityContent] = useState<CityContent | null>(null);
   const [loading, setLoading] = useState(true);
   
-  // Find the properly capitalized city name from the slug
   const cityName = getCityFromUrl(`/${citySlug}`);
   
   useEffect(() => {
-    // If city doesn't exist in our list, redirect to 404
     if (!cityName) {
       navigate('/not-found');
       return;
@@ -30,22 +28,18 @@ const CityPage = () => {
     const fetchContent = async () => {
       setLoading(true);
       try {
-        // First try to get from cache
         const cachedContent = await supabase.getCachedContent(`/${citySlug}`);
         
         if (cachedContent) {
           setCityContent(cachedContent);
         } else {
-          // If not in cache, generate new content
           const newContent = await generateCityContent(cityName);
           setCityContent(newContent);
           
-          // Cache the content for future requests
           await supabase.cacheContent(`/${citySlug}`, newContent);
         }
       } catch (error) {
         console.error('Error fetching city content:', error);
-        // Fallback to generate content locally if there's an error
         const fallbackContent = await generateCityContent(cityName);
         setCityContent(fallbackContent);
       } finally {
@@ -56,7 +50,6 @@ const CityPage = () => {
     fetchContent();
   }, [citySlug, cityName, navigate]);
   
-  // Render loading state while content is being fetched
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -72,7 +65,6 @@ const CityPage = () => {
     );
   }
   
-  // If content still doesn't exist after loading, return error
   if (!cityContent) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -88,7 +80,6 @@ const CityPage = () => {
     );
   }
   
-  // Render city page with content
   return (
     <>
       <Helmet>
@@ -129,7 +120,6 @@ const CityPage = () => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         
-        {/* Hero Section */}
         <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -161,7 +151,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* Images Section */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -185,7 +174,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* Services Sections */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-8">
             <div className="space-y-16">
@@ -237,7 +225,8 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* Benefits Section */}
+        <PlanToPickets />
+        
         <section className="py-16 md:py-24 bg-texas-earth text-white">
           <div className="container mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
@@ -272,7 +261,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* FAQ Section */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-8">
             <div className="max-w-3xl mx-auto">
@@ -295,7 +283,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* Call to Action Section */}
         <section className="py-16 md:py-24 bg-texas-terracotta/10">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

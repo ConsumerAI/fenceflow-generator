@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import LeadForm from '@/components/LeadForm';
+import PlanToPickets from '@/components/PlanToPickets';
 
 const AutomaticGatesPage = () => {
   // Images for the gallery
@@ -197,6 +197,9 @@ const AutomaticGatesPage = () => {
             </div>
           </div>
         </section>
+        
+        {/* Plan to Pickets Process Section */}
+        <PlanToPickets />
         
         {/* Call to Action Section */}
         <section id="quote" className="py-16 bg-texas-terracotta/10">
