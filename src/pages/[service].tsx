@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -37,8 +36,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       <p><strong>Call us now at <a href="tel:555-555-5555">(555) 555-5555</a></strong></p>
                       
                       <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709078579887-GDI1G7DW4FVRYQDUANKY/image-asset.jpeg" 
-                        alt="Sports court construction in DFW" 
+                        src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" 
+                        alt="Tennis and pickleball court with blue playing surface and green surroundings" 
                         className="w-full rounded-lg my-6"
                       />
                       
