@@ -98,9 +98,6 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
           <p className="font-medium text-lg text-green-800">
             Estimated Cost: {formatPrice(estimatedCost.min)} – {formatPrice(estimatedCost.max)}
           </p>
-          <p className="text-xs text-green-700 mt-1">
-            Includes {NUM_GATES} gates at {formatPrice(GATE_PRICE)}/gate
-          </p>
           <p className="text-xs text-muted-foreground mt-2">
             Estimate not final—exact pricing requires an on-site appointment and measurements.
           </p>
