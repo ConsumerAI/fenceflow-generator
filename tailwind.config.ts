@@ -89,6 +89,9 @@ const config = {
         "fade-in": "fade-in 0.5s ease-out",
         "page-transition": "page-transition 0.5s ease-out"
       },
+      backgroundImage: {
+        "texas-pattern": "url('/texture.svg')"
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
