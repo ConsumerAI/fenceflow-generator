@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { cities, getCityUrl } from '@/lib/cities';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { getServiceUrl } from '@/lib/routes';
 
 const Footer = () => {
   // Display only a subset of cities in the footer to avoid overwhelming it
@@ -40,19 +41,44 @@ const Footer = () => {
             <h3 className="text-xl font-bold">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#residential" className="hover:text-texas-sand transition-colors">Residential Fencing</a>
+                <Link 
+                  to={getServiceUrl("Residential Fencing")} 
+                  className="hover:text-texas-sand transition-colors"
+                >
+                  Residential Fencing
+                </Link>
               </li>
               <li>
-                <a href="#commercial" className="hover:text-texas-sand transition-colors">Commercial Fencing</a>
+                <Link 
+                  to={getServiceUrl("Commercial Fencing")} 
+                  className="hover:text-texas-sand transition-colors"
+                >
+                  Commercial Fencing
+                </Link>
               </li>
               <li>
-                <a href="#sports" className="hover:text-texas-sand transition-colors">Sports Courts</a>
+                <Link 
+                  to={getServiceUrl("Sports Courts")} 
+                  className="hover:text-texas-sand transition-colors"
+                >
+                  Sports Courts
+                </Link>
               </li>
               <li>
-                <a href="#access" className="hover:text-texas-sand transition-colors">Access Control</a>
+                <Link 
+                  to={getServiceUrl("Access Control")} 
+                  className="hover:text-texas-sand transition-colors"
+                >
+                  Access Control
+                </Link>
               </li>
               <li>
-                <a href="#gates" className="hover:text-texas-sand transition-colors">Automatic Gates</a>
+                <Link 
+                  to={getServiceUrl("Automatic Gates")} 
+                  className="hover:text-texas-sand transition-colors"
+                >
+                  Automatic Gates
+                </Link>
               </li>
             </ul>
           </div>
