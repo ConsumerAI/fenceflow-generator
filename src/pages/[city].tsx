@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -21,13 +20,11 @@ const CityPage = () => {
   
   const cityName = getCityFromUrl(`/${citySlug}`);
   
-  // Function to handle smooth scrolling to the quote form with shake animation
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const quoteElement = document.getElementById('quote');
     
     if (quoteElement) {
-      // Update URL with hash for page reloads
       window.location.hash = 'quote';
       
       quoteElement.scrollIntoView({ 
@@ -35,7 +32,6 @@ const CityPage = () => {
         block: 'center'
       });
       
-      // Add and remove shake class to trigger animation
       quoteElement.classList.add('animate-shake');
       setTimeout(() => {
         quoteElement.classList.remove('animate-shake');
@@ -177,7 +173,7 @@ const CityPage = () => {
                 </div>
                 <div className="mt-6">
                   <img 
-                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/c7b1c87f-56ac-4c57-a034-ceb18cbaeb3d/Untitled.jpg?format=1000w" 
+                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg?format=1000w" 
                     alt={`Professional fence installation in ${cityName}`} 
                     className="rounded-lg shadow-md w-full max-w-md mx-auto h-auto"
                   />

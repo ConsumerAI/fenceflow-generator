@@ -91,6 +91,13 @@ const AutomaticGatesPage = () => {
                     Get a Free Quote
                   </a>
                 </div>
+                <div className="mt-6">
+                  <img 
+                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg?format=1000w" 
+                    alt="Elegant automatic gate installation" 
+                    className="rounded-lg shadow-md w-full max-w-md mx-auto h-auto"
+                  />
+                </div>
               </div>
               
               <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
@@ -208,7 +215,7 @@ const AutomaticGatesPage = () => {
               <div className="p-6 rounded-xl bg-white shadow-md">
                 <div className="w-12 h-12 rounded-full bg-texas-terracotta/20 flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Automation Options</h3>

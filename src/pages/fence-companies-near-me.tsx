@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -98,6 +99,13 @@ const NearMePage = () => {
                   >
                     Get a Free Quote
                   </a>
+                </div>
+                <div className="mt-6">
+                  <img 
+                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg?format=1000w" 
+                    alt="Professional fence installation in DFW" 
+                    className="rounded-lg shadow-md w-full max-w-md mx-auto h-auto"
+                  />
                 </div>
               </div>
               
