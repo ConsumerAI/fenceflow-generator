@@ -26,12 +26,12 @@ const nextConfig = {
       },
       {
         source: '/index',
-        destination: '/?redirected=true',
+        destination: '/',
         permanent: true,
       },
       {
         source: '/index.html',
-        destination: '/?redirected=true',
+        destination: '/',
         permanent: true,
       },
       {
