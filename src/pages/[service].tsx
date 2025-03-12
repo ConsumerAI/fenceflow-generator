@@ -68,7 +68,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                         <li><strong>Additional Features:</strong> Fencing, lighting, seating, and shade structures add functionality but increase the investment.</li>
                       </ul>
                       
-                      <p>Most residential pickleball court installations in DFW range from $25,000 to $45,000 for a complete project with quality materials and professional construction. For multi-court facilities or commercial projects, economies of scale may reduce per-court costs. Contact us for a detailed estimate specific to your property.</p>
+                      <p>Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
                       
                       <h4 className="text-xl font-bold mt-6 mb-4">Our Sports Court Construction Process</h4>
                       <ol className="list-decimal pl-6 my-4">
@@ -414,3 +414,4 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
 };
 
 export default ServicePage;
+
