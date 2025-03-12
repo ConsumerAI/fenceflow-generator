@@ -29,6 +29,16 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/pages/:path*',
+        destination: '/:path*',
+        permanent: true,
+      }
     ];
   },
 };
