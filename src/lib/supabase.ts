@@ -8,7 +8,7 @@ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 class Supabase {
-  async submitLead(lead: Lead): Promise<{ success: boolean; error?: string }> {
+  async submitLead(lead: Omit<Lead, 'id' | 'created_at'>): Promise<{ success: boolean; error?: string }> {
     try {
       const { error } = await supabaseClient
         .from('leads')
@@ -68,76 +68,101 @@ class Supabase {
 
 export const supabase = new Supabase();
 
-// Service image mapping for content generation
-const serviceImages = {
-  "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
-  "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
-  "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
-  "Access Control": "/lovable-uploads/223b3ff5-7edb-4b9f-8993-449414f2518b.png",
-  "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
-};
-
-// OpenAI integration for content generation
+// Function to generate city content, with fallback to static content
 export async function generateCityContent(city: string): Promise<CityContent> {
   try {
-    // Check if we have content in the cache first
-    const cachedContent = await supabase.getCachedContent(`/${city.toLowerCase()}`);
-    if (cachedContent) {
+    // First, check if there's cached content
+    const cached = await supabase.getCachedContent(`/${city.toLowerCase()}`);
+    if (cached) {
       console.log(`Using cached content for ${city}`);
-      return cachedContent;
+      return cached;
     }
 
     console.log(`Generating new content for ${city}`);
     
-    // If no cached content, use OpenAI to generate (future implementation)
-    // For now, return static content with the city name
-    const content: CityContent = {
-      metaTitle: `Fence Companies in ${city} | Fence Fanatics`,
-      metaDescription: `Top fence installation in ${city} – residential, commercial, gates. Free quotes and excellent customer service. Call now!`,
-      h1: `Quality Fence Installation Services in ${city}`,
-      intro: `We're excited to elevate ${city} with beautiful fences! From cozy residential privacy to strong commercial security and sleek automated gates, our team delivers quality across the metroplex. Transform your space with a fence you'll love!`,
-      serviceSections: {
-        "Residential Fencing": `For homeowners in ${city}, we offer premium residential fencing solutions that enhance property value and security. Our wood fences provide classic Texas charm with guaranteed durability against ${city}'s weather patterns. We also specialize in decorative pool fences that meet all local safety codes while complementing your outdoor aesthetic. As ${city}'s most trusted fence installers, we focus on quality materials and expert craftsmanship.`,
-        "Commercial Fencing": `Business owners throughout ${city} trust our commercial fencing solutions for security, durability, and professional appearance. Our iron fences provide elegant security for office buildings, while our heavy-duty installations protect industrial properties and warehouses. As the leading commercial fence company in ${city}, we understand local business needs and zoning requirements, delivering custom solutions with premium materials and professional installation.`,
-        "Sports Courts": `${city} families and facilities love our sports court fencing installations. Whether for tennis, basketball, or multi-purpose courts, our fence contractors provide durable, safe enclosures designed for years of active use. We're the sports fencing specialists near you, offering custom heights, gate configurations, and high-quality materials that stand up to intense play and ${city}'s varied weather conditions.`,
-        "Access Control": `Upgrade your ${city} property with our custom gate installation services. From elegant entrance gates for residential estates to secure access points for commercial properties, our gate installation team in ${city} delivers outstanding craftsmanship. We specialize in custom gates near you, tailored to your property's specific style and security requirements, with options ranging from classic wood to contemporary metal designs.`,
-        "Automatic Gates": `Experience ultimate convenience with our automatic gates, perfectly designed for ${city} properties. Our automated gate systems combine security with ease of access, featuring remote controls, keypads, and smartphone integration options. As the preferred automated gate company in ${city}, we handle everything from design to installation, ensuring smooth operation and reliable performance.`
-      },
-      benefits: [
-        `Free, no-obligation quotes for all ${city} customers`,
-        `Expert craftsmanship and attention to detail`,
-        `Premium materials selected for ${city}'s specific climate conditions`,
-        `Fully licensed, insured, and experienced installation teams`,
-        `Comprehensive warranties on all fence installations`
-      ],
-      faq: `Quality fences in ${city} provide enhanced security, privacy, and significant property value increase. With our climate-specific materials and professional installation techniques, a fence from Fence Fanatics delivers lasting performance while complementing ${city}'s architectural styles, making it an excellent investment for any property.`,
-      cta: `Ready for your new fence in ${city}? Complete our quick form for a free, no-obligation quote from the best fence company in ${city}. Our specialists will contact you within 24 hours to discuss your project needs and arrange a convenient consultation.`,
-      keywords: [
-        `fence companies ${city}`,
-        `fence installation ${city}`,
-        `fence installers ${city}`,
-        `residential fencing ${city}`,
-        `commercial fence company ${city}`,
-        `custom wood fences ${city}`,
-        `automatic gate installation ${city}`,
-        `sports court fencing ${city}`,
-        `iron fence contractors ${city}`,
-        `pool fence installation ${city}`
-      ],
-      images: [
-        { src: serviceImages["Residential Fencing"], alt: `Residential wood fence installation in ${city}, Texas` },
-        { src: serviceImages["Commercial Fencing"], alt: `Commercial security fencing for ${city} businesses` },
-        { src: serviceImages["Automatic Gates"], alt: `Custom automatic gate installation in ${city}, Texas` }
-      ]
-    };
-    
-    // Cache the generated content
-    await supabase.cacheContent(`/${city.toLowerCase()}`, content);
-    
-    return content;
+    try {
+      // Try to get content from the edge function
+      const response = await fetch(`${supabaseUrl}/functions/v1/generate-city-content`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`
+        },
+        body: JSON.stringify({ city })
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Failed to generate content: ${response.statusText}`);
+      }
+      
+      const content = await response.json();
+      
+      // Cache the generated content
+      await supabase.cacheContent(`/${city.toLowerCase()}`, content);
+      
+      return content;
+    } catch (err) {
+      console.error('Error generating content with edge function:', err);
+      
+      // Service image mapping for fallback content
+      const serviceImages = {
+        "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
+        "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
+        "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
+        "Access Control": "/lovable-uploads/223b3ff5-7edb-4b9f-8993-449414f2518b.png",
+        "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
+      };
+      
+      // Fallback content
+      const fallbackContent: CityContent = {
+        metaTitle: `Fence Services in ${city}`,
+        metaDescription: `Professional fence installation services in ${city}, Texas. Get a free quote today!`,
+        h1: `Quality Fence Installation in ${city}`,
+        intro: `We provide expert fence installation services in ${city}, Texas, meeting all your residential and commercial fencing needs with quality craftsmanship and materials.`,
+        serviceSections: {
+          "Residential Fencing": `Our residential fencing solutions in ${city} include wood, vinyl, and ornamental options, perfect for enhancing your home's security and curb appeal.`,
+          "Commercial Fencing": `Trust our team for durable commercial fencing in ${city}, designed to secure your business property while maintaining a professional appearance.`,
+          "Sports Courts": `We specialize in sports court fencing in ${city}, providing safe and attractive enclosures for tennis, basketball, and other recreational areas.`,
+          "Access Control": `Enhance your property security in ${city} with our access control solutions, including keypads, card readers, and remote access systems.`,
+          "Automatic Gates": `Our automatic gate installations in ${city} offer convenience and security, with custom designs to match your property's style.`
+        },
+        benefits: [
+          `Free, no-obligation quotes for all ${city} customers`,
+          `Expert craftsmanship and attention to detail`,
+          `Premium materials selected for ${city}'s specific climate conditions`,
+          `Fully licensed, insured, and experienced installation teams`,
+          `Comprehensive warranties on all fence installations`
+        ],
+        faq: `Our fences in ${city} are built to withstand local weather conditions and typically last 15-20 years with proper maintenance. We handle permits and usually complete residential projects within 2-3 days.`,
+        cta: `Ready for your new fence in ${city}? Contact us today for a free, no-obligation quote. Our team is ready to help you enhance your property's security and appearance.`,
+        keywords: [
+          `fence installation ${city}`,
+          `fence companies ${city}`,
+          `residential fencing ${city}`,
+          `commercial fence contractors ${city}`,
+          `wooden fence installation ${city}`,
+          `automatic gate installation ${city}`,
+          `fence repair ${city}`,
+          `privacy fence ${city}`,
+          `security fencing ${city}`,
+          `fence builders near me ${city}`
+        ],
+        images: [
+          { src: serviceImages["Residential Fencing"], alt: `Residential wood fence installation in ${city}, Texas` },
+          { src: serviceImages["Commercial Fencing"], alt: `Commercial security fencing for ${city} businesses` },
+          { src: serviceImages["Automatic Gates"], alt: `Custom automatic gate installation in ${city}, Texas` }
+        ]
+      };
+      
+      // Cache the fallback content
+      await supabase.cacheContent(`/${city.toLowerCase()}`, fallbackContent);
+      
+      return fallbackContent;
+    }
   } catch (error) {
-    console.error('Error generating content:', error);
-    // Return basic content if generation fails
+    console.error('Error in generateCityContent:', error);
+    
+    // Return very basic content if all else fails
     return {
       metaTitle: `Fence Services in ${city}`,
       metaDescription: `Fence installation services in ${city}`,
@@ -155,9 +180,8 @@ export async function generateCityContent(city: string): Promise<CityContent> {
       cta: `Contact us for fencing in ${city}`,
       keywords: [`fencing ${city}`],
       images: [
-        { src: serviceImages["Residential Fencing"], alt: `Residential fencing in ${city}` },
-        { src: serviceImages["Commercial Fencing"], alt: `Commercial fencing in ${city}` },
-        { src: serviceImages["Automatic Gates"], alt: `Automatic gates in ${city}` }
+        { src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg", alt: `Residential fencing in ${city}` },
+        { src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg", alt: `Commercial fencing in ${city}` }
       ]
     };
   }
