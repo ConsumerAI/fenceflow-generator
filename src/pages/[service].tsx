@@ -164,6 +164,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       <p className="mt-6">Building a pickleball court involves careful planning and consideration of various elements. Consulting with experienced contractors and considering all available options will ensure that your court is a well-loved addition to your recreational facilities.</p>
                       
                       <p className="mt-4">For further details on each aspect, consider reaching out to professional pickleball court builders who can provide personalized advice and quotes based on your specific needs.</p>
+                      
+                      <p>Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
                     </>
                   )}
                   
