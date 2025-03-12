@@ -10,6 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { toast } from '@/hooks/use-toast';
 import { Lead, ServiceType } from '@/lib/types';
 import { supabase } from '@/lib/supabase';
+import FenceCalculator from './FenceCalculator';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name is required' }),
@@ -35,6 +36,7 @@ interface LeadFormProps {
 const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [fenceDetails, setFenceDetails] = useState<{ linear_feet?: number; fence_material?: string }>({});
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -60,6 +62,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         service_type: data.service_type,
         message: data.message || '',
         city,
+        ...fenceDetails
       };
       
       const { success, error } = await supabase.submitLead(leadData);
@@ -86,6 +89,14 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     }
   };
 
+  const handleCalculate = (calculatorData: { linear_feet: number; fence_material: string }) => {
+    setFenceDetails(calculatorData);
+    toast({
+      title: "Fence details added",
+      description: "Your fence specifications have been included in the quote request.",
+    });
+  };
+
   return (
     <div className={`glass-card p-6 md:p-8 ${className}`} id="quote">
       <div className="mb-6">
@@ -109,17 +120,49 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
           </Button>
         </div>
       ) : (
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-6">
+          <FenceCalculator onCalculate={handleCalculate} />
+          
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Phone</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your phone number" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              
               <FormField
                 control={form.control}
-                name="name"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your name" {...field} />
+                      <Input placeholder="Your email address" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -128,107 +171,79 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
               
               <FormField
                 control={form.control}
-                name="phone"
+                name="address"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phone</FormLabel>
+                    <FormLabel>Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your phone number" {...field} />
+                      <Input placeholder="Property address" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-            </div>
-            
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your email address" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-              control={form.control}
-              name="address"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Address</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Property address" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-              control={form.control}
-              name="service_type"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Service Type</FormLabel>
-                  <Select 
-                    onValueChange={field.onChange} 
-                    defaultValue={field.value}
-                  >
+              
+              <FormField
+                control={form.control}
+                name="service_type"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Service Type</FormLabel>
+                    <Select 
+                      onValueChange={field.onChange} 
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select service type" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="Residential Fencing">Residential Fencing</SelectItem>
+                        <SelectItem value="Commercial Fencing">Commercial Fencing</SelectItem>
+                        <SelectItem value="Sports Courts">Sports Courts</SelectItem>
+                        <SelectItem value="Access Control">Access Control</SelectItem>
+                        <SelectItem value="Automatic Gates">Automatic Gates</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message (Optional)</FormLabel>
                     <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select service type" />
-                      </SelectTrigger>
+                      <Textarea 
+                        placeholder="Tell us about your project"
+                        className="min-h-[100px]"
+                        {...field} 
+                      />
                     </FormControl>
-                    <SelectContent>
-                      <SelectItem value="Residential Fencing">Residential Fencing</SelectItem>
-                      <SelectItem value="Commercial Fencing">Commercial Fencing</SelectItem>
-                      <SelectItem value="Sports Courts">Sports Courts</SelectItem>
-                      <SelectItem value="Access Control">Access Control</SelectItem>
-                      <SelectItem value="Automatic Gates">Automatic Gates</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Message (Optional)</FormLabel>
-                  <FormControl>
-                    <Textarea 
-                      placeholder="Tell us about your project"
-                      className="min-h-[100px]"
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <Button 
-              type="submit" 
-              className="w-full bg-green-600 hover:bg-green-700 text-white py-3 font-medium text-lg"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
-            </Button>
-            
-            <p className="text-xs text-muted-foreground text-center">
-              By submitting this form, you're taking the first step toward your new fence installation.
-              <br/>We specialize in new installations only – no repairs.
-            </p>
-          </form>
-        </Form>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 font-medium text-lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
+              </Button>
+              
+              <p className="text-xs text-muted-foreground text-center">
+                By submitting this form, you're taking the first step toward your new fence installation.
+                <br/>We specialize in new installations only – no repairs.
+              </p>
+            </form>
+          </Form>
+        </div>
       )}
     </div>
   );
