@@ -35,15 +35,10 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in DFW</h2>
                       <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong></p>
                       
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                      <div className="my-6">
                         <img 
                           src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
-                          alt="Professional pickleball court installation in DFW" 
-                          className="w-full rounded-lg"
-                        />
-                        <img 
-                          src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" 
-                          alt="Expert tennis court installation services in Dallas Fort Worth" 
+                          alt="Professional pickleball and tennis court installation in DFW" 
                           className="w-full rounded-lg"
                         />
                       </div>
@@ -414,4 +409,3 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
 };
 
 export default ServicePage;
-
