@@ -142,23 +142,6 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         </div>
       ) : (
         <div className="space-y-6">
-          {/* Only show fence calculator for Residential Fencing */}
-          {serviceType === 'Residential Fencing' && (
-            <FenceCalculator onCalculate={handleCalculate} />
-          )}
-          
-          {/* Display estimated cost above the form if available */}
-          {fenceDetails.estimatedCost && serviceType === 'Residential Fencing' && (
-            <div className="p-4 bg-green-50 border border-green-100 rounded-md">
-              <p className="font-medium text-green-800">
-                Your estimated fence cost: {formatPrice(fenceDetails.estimatedCost.min)} – {formatPrice(fenceDetails.estimatedCost.max)}
-              </p>
-              <p className="text-xs text-muted-foreground mt-1">
-                This estimate is included in your quote request.
-              </p>
-            </div>
-          )}
-          
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -246,6 +229,25 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                   </FormItem>
                 )}
               />
+              
+              {/* Only show fence calculator for Residential Fencing */}
+              {serviceType === 'Residential Fencing' && (
+                <div className="mt-6 mb-6">
+                  <FenceCalculator onCalculate={handleCalculate} />
+                </div>
+              )}
+              
+              {/* Display estimated cost above the message field if available */}
+              {fenceDetails.estimatedCost && serviceType === 'Residential Fencing' && (
+                <div className="p-4 bg-green-50 border border-green-100 rounded-md">
+                  <p className="font-medium text-green-800">
+                    Your estimated fence cost: {formatPrice(fenceDetails.estimatedCost.min)} – {formatPrice(fenceDetails.estimatedCost.max)}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    This estimate is included in your quote request.
+                  </p>
+                </div>
+              )}
               
               <FormField
                 control={form.control}

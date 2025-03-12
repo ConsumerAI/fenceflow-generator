@@ -57,13 +57,15 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
 
   // Calculate the estimated cost whenever linear feet or fence material changes
   useEffect(() => {
-    if (linearFeet && !isNaN(Number(linearFeet)) && Number(linearFeet) > 0) {
-      const feet = Number(linearFeet);
+    // This is the fix: Convert linearFeet to a number before using it
+    const feetValue = Number(linearFeet);
+    
+    if (linearFeet && !isNaN(feetValue) && feetValue > 0) {
       const materialPricing = pricingData[fenceMaterial];
       
       // Calculate the range
-      const minCost = (feet * materialPricing.min) + (NUM_GATES * GATE_PRICE);
-      const maxCost = (feet * materialPricing.max) + (NUM_GATES * GATE_PRICE);
+      const minCost = (feetValue * materialPricing.min) + (NUM_GATES * GATE_PRICE);
+      const maxCost = (feetValue * materialPricing.max) + (NUM_GATES * GATE_PRICE);
       
       setEstimatedCost({ min: minCost, max: maxCost });
     } else {
