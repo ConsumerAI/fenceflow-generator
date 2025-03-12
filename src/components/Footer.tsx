@@ -102,8 +102,8 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-white/20 text-center text-texas-sand/80 text-sm">
           <p>&copy; {new Date().getFullYear()} Fences Texas. All rights reserved.</p>
           <p className="mt-2">
-            Serving new fence installations throughout the Dallas/Fort Worth Metroplex. <br />
-            <span className="font-semibold">We specialize in new installations only - no repairs.</span>
+            Serving high-quality fence installations throughout the Dallas/Fort Worth Metroplex. <br />
+            <span className="font-semibold">Transform your space with a fence you'll love!</span>
           </p>
         </div>
       </div>

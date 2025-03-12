@@ -15,10 +15,10 @@ const NearMePage = () => {
   return (
     <>
       <Helmet>
-        <title>Fence Companies Near Me | New Fence Installation DFW</title>
+        <title>Fence Companies Near Me | Fence Installation DFW</title>
         <meta 
           name="description" 
-          content="Top fence companies near you in DFW. New fence installation for residential & commercial properties. No repairs - only quality new installations." 
+          content="Top fence companies near you in DFW. Quality fence installation for residential & commercial properties. Transform your space with a fence you'll love." 
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -69,10 +69,10 @@ const NearMePage = () => {
                   Fence Companies Near Me in Dallas/Fort Worth
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Looking for quality fence installation near you? As DFW's premier fence installation 
-                  experts, we serve the entire metroplex with high-quality new fence installations. 
-                  We specialize exclusively in new installations—never repairs—delivering exceptional 
-                  craftsmanship and premium materials throughout the region.
+                  Looking for quality fence installation near you? We're excited to elevate Dallas/Fort Worth 
+                  with beautiful fences! From cozy residential privacy to strong commercial security and 
+                  sleek automated gates, our team delivers quality craftsmanship and exceptional service 
+                  throughout the region.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
@@ -102,12 +102,12 @@ const NearMePage = () => {
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6">New Fence Installation Services Near You</h2>
+                <h2 className="text-3xl font-bold mb-6">Fence Installation Services Near You</h2>
                 <div className="prose prose-p:text-muted-foreground max-w-none">
                   <p>
                     When searching for "fence companies near me," it's important to find a 
-                    provider that specializes in exactly what you need. At Fences Texas, we 
-                    focus exclusively on new fence installations throughout the Dallas/Fort 
+                    provider that delivers exactly what you need. At Fences Texas, we 
+                    focus on creating beautiful, high-quality fence installations throughout the Dallas/Fort 
                     Worth metroplex, serving all surrounding communities with premium quality 
                     and expert craftsmanship.
                   </p>
@@ -115,13 +115,13 @@ const NearMePage = () => {
                     Our service area spans the entire DFW region, from major cities to 
                     smaller communities. No matter where you're located in the metroplex, 
                     we're your local fence installation experts, ready to deliver a beautiful, 
-                    durable new fence that enhances your property's security, privacy, and value.
+                    durable fence that enhances your property's security, privacy, and value.
                   </p>
                   <p>
-                    What sets us apart from other fence companies near you is our exclusive 
-                    focus on new installations. We don't divide our attention with repairs or 
-                    maintenance—we channel all our expertise into creating perfect new fence 
-                    installations that stand the test of time.
+                    What sets us apart from other fence companies near you is our dedication
+                    to quality and craftsmanship. We're committed to delivering fence installations 
+                    that stand the test of time, using premium materials and expert techniques
+                    to ensure your complete satisfaction.
                   </p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const NearMePage = () => {
                 <div className="aspect-square overflow-hidden rounded-xl shadow-md">
                   <img 
                     src="/placeholder.svg" 
-                    alt="New fence installation in DFW" 
+                    alt="Fence installation in DFW" 
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
@@ -220,12 +220,12 @@ const NearMePage = () => {
               <div className="glass-card overflow-hidden transition-all duration-500 group hover:shadow-lg bg-texas-terracotta text-white">
                 <div className="p-6 md:p-8">
                   <h3 className="text-xl md:text-2xl font-bold mb-4">
-                    New Installations Only
+                    Quality Craftmanship
                   </h3>
                   <p className="text-white/90 mb-6">
-                    We specialize exclusively in new fence installations—not repairs 
-                    or maintenance. This focused approach allows us to deliver the highest 
-                    quality new fencing near you.
+                    We're committed to delivering exceptional quality with every fence 
+                    installation. Our focus on craftsmanship ensures you'll receive a beautiful, 
+                    durable fence that enhances your property for years to come.
                   </p>
                 </div>
               </div>
@@ -273,8 +273,8 @@ const NearMePage = () => {
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold">Find the Best Fence Company Near You</h2>
                 <p className="text-lg text-muted-foreground">
-                  When you're looking for "fence companies near me," choose the specialists in new 
-                  installations. We're ready to provide a free, no-obligation quote for your 
+                  When you're looking for "fence companies near me," choose experts dedicated to quality
+                  and customer satisfaction. We're ready to provide a free, no-obligation quote for your 
                   fence project anywhere in the DFW metroplex.
                 </p>
                 <ul className="space-y-3">
@@ -300,7 +300,7 @@ const NearMePage = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span>Specialized in new installations only</span>
+                    <span>Expert craftsmanship and quality materials</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -275,8 +276,8 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
-                By submitting this form, you're taking the first step toward your new fence installation.
-                <br/>We specialize in new installations only – no repairs.
+                By submitting this form, you're taking the first step toward enhancing your property with a beautiful fence.
+                <br/>We're excited to help transform your space!
               </p>
             </form>
           </Form>

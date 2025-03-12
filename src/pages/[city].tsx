@@ -99,7 +99,7 @@ const CityPage = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Fences Texas",
-            "description": `New fence installation services in ${cityName}, Texas`,
+            "description": `Fence installation services in ${cityName}, Texas`,
             "telephone": "555-123-4567",
             "email": "info@fencestexas.com",
             "areaServed": {
@@ -252,7 +252,7 @@ const CityPage = () => {
                 Why Choose Us for Your {cityName} Fence Installation
               </h2>
               <p className="text-white/80 max-w-2xl mx-auto">
-                We're dedicated to providing the highest quality new fence installations
+                We're dedicated to providing the highest quality fence installations
                 with exceptional service and craftsmanship.
               </p>
             </div>
@@ -291,7 +291,7 @@ const CityPage = () => {
               
               <div className="glass-card p-8">
                 <h3 className="text-xl font-bold mb-4">
-                  Why choose a new fence in {cityName}?
+                  Why choose a fence in {cityName}?
                 </h3>
                 <div 
                   className="prose prose-p:text-muted-foreground max-w-none"
@@ -308,7 +308,7 @@ const CityPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold">
-                  Ready for Your New Fence in {cityName}?
+                  Ready for Your Fence in {cityName}?
                 </h2>
                 <div 
                   className="prose prose-p:text-muted-foreground max-w-none"

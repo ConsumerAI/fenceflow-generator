@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -79,7 +80,7 @@ const Index = () => {
         <title>Fences Texas | DFW's Premier Fence Installation Experts</title>
         <meta 
           name="description" 
-          content="Expert new fence installation across Dallas/Fort Worth. Residential, commercial, sports courts, and automatic gates. No repairs - only new installations. Get a free quote today!"
+          content="Expert fence installation across Dallas/Fort Worth. Residential, commercial, sports courts, and automatic gates. Transform your space with a fence you'll love! Get a free quote today!"
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -126,13 +127,14 @@ const Index = () => {
                   DFW's Premier Fence Installation Experts
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                  New Fence Installation Across
+                  Fence Installation Across
                   <span className="text-texas-terracotta"> Dallas/Fort Worth</span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Specializing exclusively in new fence installations — never repairs. 
-                  From residential privacy fences to commercial security solutions and 
-                  automated gates, we deliver premium quality throughout the metroplex.
+                  We're excited to elevate Dallas/Fort Worth with beautiful fences! 
+                  From cozy residential privacy to strong commercial security and sleek 
+                  automated gates, our team delivers quality across the metroplex. 
+                  Transform your space with a fence you'll love!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
@@ -178,7 +180,7 @@ const Index = () => {
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Fence Installation Services</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Explore our comprehensive range of new fence installation services. 
+                Explore our comprehensive range of fence installation services. 
                 Each project is custom-designed for your specific needs and property.
               </p>
             </div>
@@ -220,11 +222,11 @@ const Index = () => {
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">Ready for Your New Fence Installation?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold">Ready for Your Fence Installation?</h2>
                 <p className="text-lg text-muted-foreground">
                   Take the first step toward enhancing your property with a premium fence installation. 
-                  Our team specializes in new installations only — we don't do repairs — ensuring 
-                  you receive the highest quality workmanship and materials.
+                  Our team of experts is dedicated to creating beautiful, durable fences that perfectly 
+                  complement your property and meet your specific needs.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
