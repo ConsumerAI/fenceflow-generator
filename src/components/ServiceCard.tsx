@@ -25,9 +25,9 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
         <Image
           src={service.icon}
           alt={service.title}
-          width={500}
-          height={300}
-          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       

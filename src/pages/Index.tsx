@@ -1,6 +1,6 @@
 
-import { Metadata } from 'next';
-import Link from 'next/link';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
@@ -9,11 +9,6 @@ import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
 import { ServiceInfo } from '@/lib/types';
-
-export const metadata: Metadata = {
-  title: "Fences Texas | DFW's Premier Fence Installation Experts",
-  description: "Expert fence installation across Dallas/Fort Worth. Residential, commercial, sports courts, and automatic gates. Transform your space with a fence you'll love! Get a free quote today!",
-};
 
 // Service data
 const services: ServiceInfo[] = [
@@ -79,13 +74,39 @@ const services: ServiceInfo[] = [
   }
 ];
 
-export default function HomePage() {
+const Index = () => {
+  // Function to handle smooth scrolling to the quote form with shake animation
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const quoteElement = document.getElementById('quote');
+    
+    if (quoteElement) {
+      // Update URL with hash for page reloads
+      window.location.hash = 'quote';
+      
+      quoteElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+      
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
+    }
+  };
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+      <Helmet>
+        <title>Fences Texas | DFW's Premier Fence Installation Experts</title>
+        <meta 
+          name="description" 
+          content="Expert fence installation across Dallas/Fort Worth. Residential, commercial, sports courts, and automatic gates. Transform your space with a fence you'll love! Get a free quote today!"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Fences Texas",
@@ -112,9 +133,9 @@ export default function HomePage() {
             "sameAs": [
               "https://www.fencestexas.com"
             ]
-          })
-        }}
-      />
+          })}
+        </script>
+      </Helmet>
       
       <div className="min-h-screen flex flex-col">
         <Navbar />
@@ -125,25 +146,26 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-page-transition">
                 <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
-                  DFW&apos;s Premier Fence Installation Experts
+                  DFW's Premier Fence Installation Experts
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
                   Fence Installation Across
                   <span className="text-texas-terracotta"> Dallas/Fort Worth</span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  We&apos;re excited to elevate Dallas/Fort Worth with beautiful fences! 
+                  We're excited to elevate Dallas/Fort Worth with beautiful fences! 
                   From cozy residential privacy to strong commercial security and sleek 
                   automated gates, our team delivers quality across the metroplex. 
-                  Transform your space with a fence you&apos;ll love!
+                  Transform your space with a fence you'll love!
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link 
+                  <a 
                     href="#quote" 
+                    onClick={scrollToQuote}
                     className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote
-                  </Link>
+                  </a>
                 </div>
                 <div className="mt-6">
                   <img 
@@ -175,17 +197,18 @@ export default function HomePage() {
             <ImageCarousel />
             
             <div className="mt-10 flex justify-center">
-              <Link 
+              <a 
                 href="#quote" 
+                onClick={scrollToQuote}
                 className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </Link>
+              </a>
             </div>
           </div>
         </section>
         
-        {/* Plan to Pickets Process Section */}
+        {/* Plan to Pickets Process Section - MOVED UP */}
         <PlanToPickets />
         
         {/* Services Section */}
@@ -206,12 +229,13 @@ export default function HomePage() {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <Link 
+              <a 
                 href="#quote" 
+                onClick={scrollToQuote}
                 className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -230,19 +254,20 @@ export default function HomePage() {
             <CityGrid />
             
             <div className="mt-16 text-center flex flex-col sm:flex-row justify-center gap-4">
-              <Link 
+              <a 
                 href="/fence-companies-near-me" 
                 className="inline-flex items-center justify-center gap-2 bg-texas-earth text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth/90 transition-colors"
               >
                 Find Fence Companies Near Me
-              </Link>
+              </a>
               
-              <Link 
+              <a 
                 href="#quote" 
+                onClick={scrollToQuote}
                 className="inline-flex items-center justify-center bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors"
               >
                 Get a Free Quote
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -305,4 +330,6 @@ export default function HomePage() {
       </div>
     </>
   );
-}
+};
+
+export default Index;

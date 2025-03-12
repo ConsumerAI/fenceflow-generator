@@ -1,27 +1,102 @@
 
 import Link from 'next/link';
 import { services } from '@/lib/routes';
+import { cities } from '@/lib/cities';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
+  // Function to get random cities for the footer links
+  const getRandomCities = (count: number) => {
+    const shuffled = [...cities].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  const randomCities = getRandomCities(6);
+
   return (
-    <footer className="bg-secondary py-10 md:py-16 border-t border-border">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-secondary/30 border-t border-border">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Fences Texas</h3>
-            <p className="text-muted-foreground">
-              Expert fence installation across Dallas/Fort Worth. Transform your space with a fence you&apos;ll love!
+            <h3 className="text-xl font-bold mb-4">Fences Texas</h3>
+            <p className="text-muted-foreground mb-4">
+              Professional fence installation services throughout the Dallas/Fort Worth metroplex.
+              Quality craftsmanship and premium materials for residential and commercial properties.
             </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-texas-terracotta transition-colors"
+                aria-label="Facebook"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-texas-terracotta transition-colors"
+                aria-label="Twitter"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-texas-terracotta transition-colors"
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+            </div>
           </div>
           
           <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <h3 className="text-lg font-bold mb-4">Our Services</h3>
             <ul className="space-y-2">
-              {services.map(service => (
+              {services.map((service) => (
                 <li key={service}>
-                  <Link 
+                  <Link
                     href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-muted-foreground hover:text-texas-terracotta transition-colors"
                   >
@@ -29,119 +104,107 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
               <li>
-                <Link 
-                  href="/"
-                  className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
+                <Link
                   href="/fence-companies-near-me"
                   className="text-muted-foreground hover:text-texas-terracotta transition-colors"
                 >
-                  Find Near Me
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/#quote"
-                  className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-                >
-                  Get a Quote
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/privacy-policy"
-                  className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/terms-of-service"
-                  className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-                >
-                  Terms of Service
+                  Find Fence Companies Near Me
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-4">Service Areas</h3>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">Dallas/Fort Worth, TX</li>
+              {randomCities.map((city) => (
+                <li key={city}>
+                  <Link
+                    href={`/${city.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="text-muted-foreground hover:text-texas-terracotta transition-colors"
+                  >
+                    {city}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <a 
-                  href="tel:+12145551234"
-                  className="text-muted-foreground hover:text-texas-terracotta transition-colors"
+                <Link
+                  href="/fence-companies-near-me"
+                  className="text-texas-terracotta hover:text-texas-earth transition-colors"
                 >
-                  (214) 555-1234
-                </a>
+                  View All Service Areas
+                </Link>
               </li>
-              <li>
-                <a 
-                  href="mailto:info@fencestexas.com"
-                  className="text-muted-foreground hover:text-texas-terracotta transition-colors"
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-1 text-texas-terracotta"
                 >
-                  info@fencestexas.com
-                </a>
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span className="text-muted-foreground">(214) 555-0123</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-1 text-texas-terracotta"
+                >
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span className="text-muted-foreground">info@fencestexas.com</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mt-1 text-texas-terracotta"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span className="text-muted-foreground">
+                  Dallas/Fort Worth Metroplex<br />Texas, USA
+                </span>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-border pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            &copy; {currentYear} Fences Texas. All rights reserved.
+        <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="text-muted-foreground text-sm">
+            &copy; {new Date().getFullYear()} Fences Texas. All rights reserved.
           </p>
-          
-          <div className="flex space-x-4">
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-              aria-label="Facebook"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-              </svg>
-            </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-              aria-label="Instagram"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-texas-terracotta transition-colors"
-              aria-label="Twitter"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
     </footer>

@@ -113,16 +113,14 @@ const ImageCarousel = () => {
               { "opacity-100": index === currentIndex }
             )}
           >
-            <div style={{ display: index === currentIndex ? 'block' : 'none', width: '100%', height: '100%', position: 'relative' }}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                priority={index === 0}
-                sizes="(max-width: 768px) 100vw, 80vw"
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, 800px"
+              className="object-cover"
+              priority={index === 0}
+            />
           </div>
         ))}
         

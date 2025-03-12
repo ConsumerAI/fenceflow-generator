@@ -12,7 +12,6 @@ import { cn } from '@/lib/utils';
 import { ServiceType } from '@/lib/types';
 import { services } from '@/lib/routes';
 import { toast } from 'sonner';
-import { supabase } from '@/lib/supabase';
 
 interface LeadFormProps {
   city?: string;
@@ -56,22 +55,8 @@ const LeadForm = ({
     setIsSubmitting(true);
 
     try {
-      // Submit to Supabase
-      const { error } = await supabase.submitLead({
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        address: formData.address,
-        service_type: formData.service_type,
-        message: formData.message || '',
-        city: formData.city,
-        linear_feet: formData.linear_feet ? Number(formData.linear_feet) : undefined,
-        fence_material: formData.fence_material,
-      });
-      
-      if (error) {
-        throw new Error(error);
-      }
+      // Simulated submission - in a real world scenario, connect to your API
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Reset form
       setFormData({
@@ -94,7 +79,6 @@ const LeadForm = ({
         }
       );
     } catch (error) {
-      console.error('Lead submission error:', error);
       toast.error(
         "There was a problem submitting your request.",
         {
