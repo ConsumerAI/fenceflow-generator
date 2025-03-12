@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -39,14 +38,18 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
-                      <p>Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.</p>
+                      <p className="text-left">Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.
+
+                  </p>
                       
-                      <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
+                      <p className="text-left">Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
                       
                       <h3 className="text-2xl font-bold mt-6 mb-4">Expert Tennis Court Installation Services</h3>
-                      <p>As DFW's trusted tennis court installer, we create premium tennis facilities built to professional standards. Our tennis court installation services include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
+                      <p className="text-left">As DFW's trusted tennis court installer, we create premium tennis facilities built to professional standards. Our tennis court installation services include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.
+
+                  </p>
                       
-                      <p>We handle every aspect of your tennis court project, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
+                      <p className="text-left">We handle every aspect of your tennis court project, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
                       
                       <h4 className="text-xl font-bold mt-6 mb-4">The Cost to Install a Pickleball Court</h4>
                       <p>When considering the cost to install a pickleball court in the DFW area, several factors influence the final investment:</p>
@@ -58,7 +61,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                         <li><strong>Additional Features:</strong> Fencing, lighting, seating, and shade structures add functionality but increase the investment.</li>
                       </ul>
                       
-                      <p>Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
+                      <p className="text-left">Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
                       
                       <h4 className="text-xl font-bold mt-6 mb-4">Our Sports Court Construction Process</h4>
                       <ol className="list-decimal pl-6 my-4">
@@ -72,7 +75,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </ol>
 
                       <h3 className="text-2xl font-bold mt-10 mb-6">Premier Court Construction & Resurfacing Services</h3>
-                      <p>We understand the importance of a well-maintained court to your game. Our pickleball court installation and tennis court construction services are designed to provide the best playability and safety for athletes and enthusiasts alike. Here's why our solutions stand out:</p>
+                      <p className="text-left">We understand the importance of a well-maintained court to your game. Our pickleball court installation and tennis court construction services are designed to provide the best playability and safety for athletes and enthusiasts alike. Here's why our solutions stand out:</p>
                       
                       <ul className="list-disc pl-6 my-4">
                         <li className="mb-2"><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your court area to identify all site requirements.</li>
@@ -145,13 +148,15 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </ul>
                       
                       <h3 className="text-2xl font-bold mt-8 mb-4">Final Touches</h3>
-                      <p>After surfacing, add striping for pickleball and other markings as needed for multi-sport functionality.</p>
+                      <p className="text-left">After surfacing, add striping for pickleball and other markings as needed for multi-sport functionality.</p>
                       
-                      <p className="mt-6">Building a pickleball court involves careful planning and consideration of various elements. Consulting with experienced contractors and considering all available options will ensure that your court is a well-loved addition to your recreational facilities.</p>
+                      <p className="mt-6 text-left">Building a pickleball court involves careful planning and consideration of various elements. Consulting with experienced contractors and considering all available options will ensure that your court is a well-loved addition to your recreational facilities.</p>
                       
-                      <p className="mt-4">For further details on each aspect, consider reaching out to professional pickleball court builders who can provide personalized advice and quotes based on your specific needs.</p>
+                      <p className="mt-4 text-left">For further details on each aspect, consider reaching out to professional pickleball court builders who can provide personalized advice and quotes based on your specific needs.
+
+                  </p>
                       
-                      <p>Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
+                      <p className="text-left">Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
                     </>}
                   
                   {service === "Commercial Fencing" && <>
