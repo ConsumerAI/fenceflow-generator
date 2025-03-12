@@ -35,7 +35,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       
                       
                       <div className="my-6 flex justify-center">
-                        <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt="Professional pickleball and tennis court installation in DFW" className="w-3/4 md:w-2/3 rounded-lg object-contain" />
+                        <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt="Professional pickleball and tennis court installation in DFW" className="w-full rounded-lg" />
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>

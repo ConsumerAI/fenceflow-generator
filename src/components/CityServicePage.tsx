@@ -23,7 +23,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
   
   // Service image mapping
   const serviceImages = {
-    "Sports Courts": "/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png",
+    "Sports Courts": "/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png",
     "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
     "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
     "Access Control": "/lovable-uploads/223b3ff5-7edb-4b9f-8993-449414f2518b.png",
@@ -115,7 +115,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                 
                 <div className="my-6">
                   <img 
-                    src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" 
+                    src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" 
                     alt={`Professional pickleball and tennis court installation in ${cityName}`} 
                     className="w-full rounded-lg"
                   />
@@ -309,8 +309,8 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     <p>Most residential pickleball court installations in {cityName} range from $25,000 to $45,000 for a complete project with quality materials and professional construction. Contact us for a detailed estimate specific to your {cityName} property.</p>
                   </div>
                   <div>
-                    <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt={`Pickleball court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto mb-6" />
-                    <img src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" alt={`Tennis court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Pickleball court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto mb-6" />
+                    <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Tennis court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                   </div>
                 </div>
                 
@@ -318,7 +318,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   <h2 className="text-3xl font-bold mb-8">Pickleball Court Fencing & Barriers in {cityName}</h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                      <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt={`Pickleball court fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                      <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Pickleball court fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
                     <div className="prose prose-lg max-w-none">
                       <h3 className="text-2xl font-semibold mb-4">Pickleball Court Fence Design & Installation</h3>
@@ -358,7 +358,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     <p>With our tennis court fence maintenance programs, your {cityName} court will maintain its tennis court fence aesthetics and structural integrity for years to come. Our tennis court galvanized fencing resists corrosion while providing the secure enclosure your facility needs.</p>
                   </div>
                   <div>
-                    <img src={serviceImages["Sports Courts"]} alt={`Tennis court construction in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Tennis court construction in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                   </div>
                 </div>
                 
@@ -400,7 +400,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                       <p>Our sports field fence for spectators ensures safety while providing optimal viewing experiences, and our sports court fence wind reduction features minimize environmental interference with play. Whether you need durable stadium fencing, aesthetic sports court fencing, or multi-purpose athletic field fencing, our {cityName} team delivers outstanding results.</p>
                     </div>
                     <div>
-                      <img src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" alt={`Sports field fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                      <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Sports field fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
                   </div>
                 </div>
