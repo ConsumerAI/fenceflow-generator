@@ -1,7 +1,7 @@
 
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { ServiceType } from '@/lib/types';
 import LeadForm from '@/components/LeadForm';
 import { services } from '@/lib/routes';
@@ -45,8 +45,8 @@ export default function ServicePage({ params }: Props) {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="prose prose-lg max-w-none">
-              {/* Service specific content would go here, similar to the original file but adapted for Next.js */}
-              <p>Content for {service} would go here.</p>
+              <p>Expert {service.toLowerCase()} services tailored to your needs.</p>
+              <p>Contact us today for a free consultation and quote.</p>
             </div>
             
             <div>
