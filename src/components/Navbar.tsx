@@ -20,7 +20,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
   
-  // Function to handle smooth scrolling to the quote form
+  // Function to handle smooth scrolling to the quote form with shake animation
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     closeMenu(); // Close mobile menu if open
@@ -35,6 +35,12 @@ const Navbar = () => {
         behavior: 'smooth',
         block: 'center'
       });
+      
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
     }
   };
 

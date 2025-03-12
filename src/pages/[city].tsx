@@ -21,7 +21,7 @@ const CityPage = () => {
   
   const cityName = getCityFromUrl(`/${citySlug}`);
   
-  // Function to handle smooth scrolling to the quote form
+  // Function to handle smooth scrolling to the quote form with shake animation
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const quoteElement = document.getElementById('quote');
@@ -34,6 +34,12 @@ const CityPage = () => {
         behavior: 'smooth',
         block: 'center'
       });
+      
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
     }
   };
 
@@ -192,6 +198,16 @@ const CityPage = () => {
               <p className="text-muted-foreground mt-2">Browse through our gallery of fence installations</p>
             </div>
             <ImageCarousel />
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
+            </div>
           </div>
         </section>
         
@@ -222,6 +238,15 @@ const CityPage = () => {
                         className="prose prose-p:text-muted-foreground max-w-none"
                         dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
                       />
+                      <div>
+                        <a 
+                          href="#quote" 
+                          onClick={scrollToQuote}
+                          className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center mt-4"
+                        >
+                          Get a Free Quote
+                        </a>
+                      </div>
                     </div>
                     
                     <div className={`${isEven ? 'lg:order-2' : ''}`}>
@@ -242,6 +267,16 @@ const CityPage = () => {
                   </div>
                 );
               })}
+            </div>
+            
+            <div className="mt-16 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
             </div>
           </div>
         </section>
@@ -279,6 +314,16 @@ const CityPage = () => {
                 </div>
               ))}
             </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
+            </div>
           </div>
         </section>
         
@@ -299,12 +344,22 @@ const CityPage = () => {
                   className="prose prose-p:text-muted-foreground max-w-none"
                   dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.faq) }} 
                 />
+                
+                <div className="mt-6 flex justify-center">
+                  <a 
+                    href="#quote" 
+                    onClick={scrollToQuote}
+                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+                  >
+                    Get a Free Quote
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
         
-        <section className="py-16 md:py-24 bg-texas-terracotta/10">
+        <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">

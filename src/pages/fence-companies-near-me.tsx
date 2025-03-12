@@ -11,6 +11,30 @@ const NearMePage = () => {
   // In a real implementation, we would use geolocation to determine the user's city
   // For now, we'll just show a random city as an example
   const randomCity = cities[Math.floor(Math.random() * cities.length)];
+  
+  // Function to handle smooth scrolling to the quote form with shake animation
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    const quoteElement = document.getElementById('quote');
+    
+    if (quoteElement) {
+      // Update URL with hash for page reloads
+      window.location.hash = 'quote';
+      
+      quoteElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+      
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
+    }
+  };
+  
   return <>
       <Helmet>
         <title>Fence Companies Near Me | Fence Installation DFW</title>
@@ -66,8 +90,12 @@ const NearMePage = () => {
                   sleek automated gates, our team delivers quality craftsmanship and exceptional service 
                   throughout the region.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="#quote" className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center">
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <a 
+                    href="#quote" 
+                    onClick={scrollToQuote} 
+                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+                  >
                     Get a Free Quote
                   </a>
                 </div>
@@ -99,6 +127,16 @@ const NearMePage = () => {
                     that stand the test of time, using premium materials and expert techniques
                     to ensure your complete satisfaction.
                   </p>
+                </div>
+                
+                <div className="mt-6">
+                  <a 
+                    href="#quote" 
+                    onClick={scrollToQuote} 
+                    className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+                  >
+                    Get a Free Quote
+                  </a>
                 </div>
               </div>
               
@@ -202,6 +240,16 @@ const NearMePage = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote} 
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
+            </div>
           </div>
         </section>
         
@@ -231,16 +279,24 @@ const NearMePage = () => {
             </div>
             
             <div className="mt-12 text-center">
-              <p className="text-lg">
+              <p className="text-lg mb-6">
                 No matter where you are in the Dallas/Fort Worth area, we're the "fence company near me" 
                 you've been searching for!
               </p>
+              
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote} 
+                className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
             </div>
           </div>
         </section>
         
         {/* Call to Action Section */}
-        <section className="py-16 md:py-24 bg-texas-terracotta/10">
+        <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">

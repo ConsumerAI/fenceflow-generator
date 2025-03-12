@@ -75,7 +75,7 @@ const services: ServiceInfo[] = [
 ];
 
 const Index = () => {
-  // Function to handle smooth scrolling to the quote form
+  // Function to handle smooth scrolling to the quote form with shake animation
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const quoteElement = document.getElementById('quote');
@@ -88,6 +88,12 @@ const Index = () => {
         behavior: 'smooth',
         block: 'center'
       });
+      
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
     }
   };
 
@@ -189,6 +195,16 @@ const Index = () => {
             </div>
             
             <ImageCarousel />
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
+            </div>
           </div>
         </section>
         
@@ -211,6 +227,16 @@ const Index = () => {
                 <ServiceCard key={service.title} service={service} index={index} />
               ))}
             </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
+            </div>
           </div>
         </section>
         
@@ -227,19 +253,27 @@ const Index = () => {
             
             <CityGrid />
             
-            <div className="mt-16 text-center">
+            <div className="mt-16 text-center flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="/fence-companies-near-me" 
-                className="inline-flex items-center gap-2 bg-texas-earth text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-texas-earth text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth/90 transition-colors"
               >
                 Find Fence Companies Near Me
+              </a>
+              
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="inline-flex items-center justify-center bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors"
+              >
+                Get a Free Quote
               </a>
             </div>
           </div>
         </section>
         
         {/* Call to Action Section */}
-        <section className="py-16 md:py-24 bg-texas-terracotta/10">
+        <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">

@@ -35,6 +35,29 @@ const AutomaticGatesPage = () => {
     }
   ];
 
+  // Function to handle smooth scrolling to the quote form with shake animation
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    const quoteElement = document.getElementById('quote');
+    
+    if (quoteElement) {
+      // Update URL with hash for page reloads
+      window.location.hash = 'quote';
+      
+      quoteElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+      
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -59,9 +82,10 @@ const AutomaticGatesPage = () => {
                 <p className="text-lg text-muted-foreground">
                   Enhance your property's security, convenience, and curb appeal with our custom automatic gate installations. We specialize in designing and installing sophisticated gate systems tailored to your specific needs and aesthetic preferences.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href="#quote" 
+                    onClick={scrollToQuote}
                     className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote
@@ -108,6 +132,16 @@ const AutomaticGatesPage = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
             </div>
           </div>
         </section>
@@ -194,6 +228,16 @@ const AutomaticGatesPage = () => {
                   Expert installation by our experienced team, ensuring your gate operates smoothly and efficiently for years to come.
                 </p>
               </div>
+            </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              >
+                Get a Free Quote
+              </a>
             </div>
           </div>
         </section>

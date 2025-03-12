@@ -36,7 +36,7 @@ interface LeadFormProps {
 const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [isPulsing, setIsPulsing] = useState(false);
+  const [isShaking, setIsShaking] = useState(false);
   const [fenceDetails, setFenceDetails] = useState<{ 
     linear_feet?: number; 
     fence_material?: CalculatorFormData['fence_material'];
@@ -45,10 +45,10 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
   
   useEffect(() => {
     if (window.location.hash === '#quote') {
-      setIsPulsing(true);
+      setIsShaking(true);
       
       const timer = setTimeout(() => {
-        setIsPulsing(false);
+        setIsShaking(false);
       }, 2000);
       
       return () => clearTimeout(timer);
@@ -128,7 +128,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     }).format(price);
   };
 
-  const formClasses = `glass-card p-6 md:p-8 ${isPulsing ? 'animate-pulse' : ''} ${className}`;
+  const formClasses = `glass-card p-6 md:p-8 ${isShaking ? 'animate-shake' : ''} ${className}`;
 
   return (
     <div className={formClasses} id="quote">
