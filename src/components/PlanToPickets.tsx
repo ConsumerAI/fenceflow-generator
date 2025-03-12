@@ -1,98 +1,77 @@
 
-import React from 'react';
-import { CalendarCheck, ClipboardCheck, Construction, PartyPopper } from 'lucide-react';
+import Image from 'next/image';
+
+const steps = [
+  {
+    title: "Free Consultation",
+    description: "We start with a no-obligation consultation to understand your specific needs and property requirements.",
+    icon: "📝"
+  },
+  {
+    title: "Custom Design",
+    description: "Our experts create a custom fence design tailored to your property's unique characteristics.",
+    icon: "🏡"
+  },
+  {
+    title: "Detailed Quote",
+    description: "You'll receive a comprehensive quote with no hidden costs or surprises.",
+    icon: "💰"
+  },
+  {
+    title: "Permits & Preparation",
+    description: "We handle all necessary permits and prepare your property for installation.",
+    icon: "📋"
+  },
+  {
+    title: "Expert Installation",
+    description: "Our professional team installs your fence with precision and care to ensure longevity.",
+    icon: "🔨"
+  },
+  {
+    title: "Final Inspection",
+    description: "We conduct a thorough inspection to ensure your fence meets our high standards of quality.",
+    icon: "✅"
+  }
+];
 
 const PlanToPickets = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/30 to-secondary/5 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-texas-terracotta/30 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-texas-earth/30 rounded-full blur-3xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+    <section className="py-16 md:py-24 texas-section bg-secondary/30">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-block px-6 py-2 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium mb-4">
-            Our Proven Process
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-texas-earth to-texas-terracotta bg-clip-text text-transparent">
-            Our "Plan to Pickets" Process
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            It all begins with an idea. Maybe you want to have that perfect backyard oasis. 
-            Maybe you want to host a great barbecue party. Maybe you want to protect what you love. 
-            Whatever it is, this simple 4-step plan will ensure your success.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">From Plan to Pickets: Our Process</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Our streamlined fence installation process ensures a smooth experience from your initial consultation to the final inspection.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Step 1 */}
-          <div className="bg-white backdrop-blur-sm bg-opacity-80 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 relative overflow-hidden group border border-white/20 transform hover:-translate-y-1">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-texas-terracotta/10 rounded-bl-full -mr-12 -mt-12 transition-all duration-500 group-hover:bg-texas-terracotta/20 group-hover:scale-110"></div>
-            <div className="w-20 h-20 rounded-full bg-texas-terracotta/20 flex items-center justify-center mb-6 text-texas-terracotta group-hover:bg-texas-terracotta/30 transition-all duration-300">
-              <CalendarCheck size={36} className="group-hover:scale-110 transition-transform duration-300" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
+            <div 
+              key={step.title}
+              className="bg-background rounded-lg p-6 shadow-md border border-border hover:shadow-lg transition-shadow"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-xl mr-3">
+                  {step.icon}
+                </div>
+                <span className="text-sm font-medium text-muted-foreground">Step {index + 1}</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+              <p className="text-muted-foreground">{step.description}</p>
             </div>
-            <div className="relative">
-              <div className="absolute -top-10 -left-2 text-9xl font-bold text-gray-100 select-none group-hover:text-gray-200 transition-colors duration-300">1</div>
-              <h3 className="text-2xl font-bold mb-3 relative">Schedule Estimate</h3>
-              <p className="text-muted-foreground relative">
-                Scheduling an estimate is easy; you can do it online. Our professional estimators will show up at your designated time. 
-                While there we will discuss your project needs and the style you want. Whether it's board-on-board, wrought iron, horizontal, 
-                pool fencing, or automatic gates, we have the design expertise to easily walk you through the process resulting in a beautiful fence you'll love.
-              </p>
-            </div>
-          </div>
-          
-          {/* Step 2 */}
-          <div className="bg-white backdrop-blur-sm bg-opacity-80 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 relative overflow-hidden group border border-white/20 transform hover:-translate-y-1">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-texas-terracotta/10 rounded-bl-full -mr-12 -mt-12 transition-all duration-500 group-hover:bg-texas-terracotta/20 group-hover:scale-110"></div>
-            <div className="w-20 h-20 rounded-full bg-texas-terracotta/20 flex items-center justify-center mb-6 text-texas-terracotta group-hover:bg-texas-terracotta/30 transition-all duration-300">
-              <ClipboardCheck size={36} className="group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <div className="relative">
-              <div className="absolute -top-10 -left-2 text-9xl font-bold text-gray-100 select-none group-hover:text-gray-200 transition-colors duration-300">2</div>
-              <h3 className="text-2xl font-bold mb-3 relative">Place Your Order</h3>
-              <p className="text-muted-foreground relative">
-                Once you place your order and provide your home survey, Fences Texas takes it from there. 
-                Our team will file for necessary permits and have local utility companies mark active lines.
-              </p>
-            </div>
-          </div>
-          
-          {/* Step 3 */}
-          <div className="bg-white backdrop-blur-sm bg-opacity-80 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 relative overflow-hidden group border border-white/20 transform hover:-translate-y-1">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-texas-terracotta/10 rounded-bl-full -mr-12 -mt-12 transition-all duration-500 group-hover:bg-texas-terracotta/20 group-hover:scale-110"></div>
-            <div className="w-20 h-20 rounded-full bg-texas-terracotta/20 flex items-center justify-center mb-6 text-texas-terracotta group-hover:bg-texas-terracotta/30 transition-all duration-300">
-              <Construction size={36} className="group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <div className="relative">
-              <div className="absolute -top-10 -left-2 text-9xl font-bold text-gray-100 select-none group-hover:text-gray-200 transition-colors duration-300">3</div>
-              <h3 className="text-2xl font-bold mb-3 relative">Installation</h3>
-              <p className="text-muted-foreground relative">
-                Before your installation we will notify you when you are the next project in line and again the day before we come out. 
-                On the day of installation you will be greeted by our installation team and we will start building that great fence or gate. 
-                Fences Texas performs quality checks on all of our jobs. So once installation is complete your project manager will come out 
-                for a final walk though and check to make sure installation meets our highest standards.
-              </p>
-            </div>
-          </div>
-          
-          {/* Step 4 */}
-          <div className="bg-white backdrop-blur-sm bg-opacity-80 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 relative overflow-hidden group border border-white/20 transform hover:-translate-y-1">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-texas-terracotta/10 rounded-bl-full -mr-12 -mt-12 transition-all duration-500 group-hover:bg-texas-terracotta/20 group-hover:scale-110"></div>
-            <div className="w-20 h-20 rounded-full bg-texas-terracotta/20 flex items-center justify-center mb-6 text-texas-terracotta group-hover:bg-texas-terracotta/30 transition-all duration-300">
-              <PartyPopper size={36} className="group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <div className="relative">
-              <div className="absolute -top-10 -left-2 text-9xl font-bold text-gray-100 select-none group-hover:text-gray-200 transition-colors duration-300">3</div>
-              <h3 className="text-2xl font-bold mb-3 relative">Enjoy Your New Yard</h3>
-              <p className="text-muted-foreground relative">
-                It's time to show off that new backyard look by celebrating. We recommend inviting all of the neighbors over, 
-                grabbing some good meats from the store, tossing some cold ones in the cooler, bringing out the yard games, 
-                and putting on some good music!
-              </p>
-            </div>
+          ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <div className="inline-block p-1 bg-secondary rounded-lg">
+            <Image 
+              src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg"
+              width={800}
+              height={400}
+              alt="Fence installation process in Dallas"
+              className="rounded-lg object-cover h-[300px] md:h-[400px]"
+            />
           </div>
         </div>
       </div>

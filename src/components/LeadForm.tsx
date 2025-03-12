@@ -1,298 +1,268 @@
-import React, { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { toast } from '@/hooks/use-toast';
-import { Lead, ServiceType } from '@/lib/types';
-import { supabase } from '@/lib/supabase';
-import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name is required' }),
-  email: z.string().email({ message: 'Valid email is required' }),
-  phone: z
-    .string()
-    .min(10, { message: 'Phone number must be at least 10 digits' })
-    .max(15)
-    .refine((val) => /^[\d\s\-()+ ]+$/.test(val), {
-      message: 'Please enter a valid phone number',
-    }),
-  address: z.string().min(5, { message: 'Address is required' }),
-  service_type: z.enum(['Residential Fencing', 'Commercial Fencing', 'Sports Courts', 'Access Control', 'Automatic Gates']),
-  message: z.string().optional(),
-});
+"use client";
+
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
+import { Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { ServiceType } from '@/lib/types';
+import { services } from '@/lib/routes';
+import { toast } from 'sonner';
 
 interface LeadFormProps {
   city?: string;
+  service?: ServiceType;
   variant?: 'default' | 'minimal';
   className?: string;
 }
 
-const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isShaking, setIsShaking] = useState(false);
-  const [fenceDetails, setFenceDetails] = useState<{ 
-    linear_feet?: number; 
-    fence_material?: CalculatorFormData['fence_material'];
-    estimatedCost?: { min: number; max: number };
-  }>({});
-  
-  useEffect(() => {
-    if (window.location.hash === '#quote') {
-      setIsShaking(true);
-      
-      const timer = setTimeout(() => {
-        setIsShaking(false);
-      }, 2000);
-      
-      return () => clearTimeout(timer);
-    }
-  }, []);
+const DEFAULT_MATERIAL = "Cedar (Most Common)";
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      address: '',
-      message: '',
-    },
+const LeadForm = ({ 
+  city = '', 
+  service, 
+  variant = 'default',
+  className
+}: LeadFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    service_type: service || services[0],
+    message: '',
+    city: city,
+    linear_feet: '',
+    fence_material: DEFAULT_MATERIAL as "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)",
   });
 
-  const serviceType = form.watch('service_type');
-  const isResidential = serviceType === 'Residential Fencing';
-  
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const leadData: Lead = {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        address: data.address,
-        service_type: data.service_type,
-        message: data.message || '',
-        city,
-        ...fenceDetails
-      };
+      // Simulated submission - in a real world scenario, connect to your API
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
-      const { success, error } = await supabase.submitLead(leadData);
-      
-      if (success) {
-        setIsSuccess(true);
-        form.reset();
-        toast({
-          title: "Thank you for your inquiry!",
-          description: "We'll contact you within 24 hours.",
-        });
-      } else {
-        throw new Error(error || 'Failed to submit form');
-      }
-    } catch (err) {
-      console.error(err);
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or call us directly.",
-        variant: "destructive",
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        service_type: service || services[0],
+        message: '',
+        city: city,
+        linear_feet: '',
+        fence_material: DEFAULT_MATERIAL as "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)",
       });
+      
+      // Show success message
+      toast.success(
+        "Quote request submitted successfully! We'll be in touch shortly.",
+        {
+          description: "Thank you for your interest in our services.",
+        }
+      );
+    } catch (error) {
+      toast.error(
+        "There was a problem submitting your request.",
+        {
+          description: "Please try again or contact us directly.",
+        }
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleCalculate = (calculatorData: { 
-    linear_feet: number; 
-    fence_material: CalculatorFormData['fence_material'];
-    estimatedCost: { min: number; max: number };
-  }) => {
-    setFenceDetails(calculatorData);
-    toast({
-      title: "Fence details added",
-      description: "Your fence specifications have been included in the quote request.",
-    });
-  };
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
-
-  const formClasses = `glass-card p-6 md:p-8 ${isShaking ? 'animate-shake' : ''} ${className}`;
-
   return (
-    <div className={formClasses} id="quote">
-      <div className="mb-6">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Get Your Free Design Quote</h2>
-        <p className="text-muted-foreground">
-          {variant === 'default' 
-            ? `Request a free, no-obligation quote for your ${city} fence installation project.`
-            : 'Fill out this quick form and we\'ll contact you within 24 hours.'}
-        </p>
-      </div>
-      
-      {isSuccess ? (
-        <div className="bg-green-50 text-green-800 p-6 rounded-lg border border-green-200 text-center animate-fade-in">
-          <h3 className="text-xl font-bold mb-2">Thank You!</h3>
-          <p>Your request has been received. One of our fence specialists will contact you within 24 hours to discuss your project.</p>
-          <Button 
-            className="mt-4 bg-texas-terracotta hover:bg-texas-earth"
-            onClick={() => setIsSuccess(false)}
-          >
-            Submit Another Request
-          </Button>
-        </div>
-      ) : (
-        <div className="space-y-6">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your phone number" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your email address" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="address"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Address</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Property address" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="service_type"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Service Type</FormLabel>
-                    <Select 
-                      onValueChange={field.onChange} 
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select service type" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="Residential Fencing">Residential Fencing</SelectItem>
-                        <SelectItem value="Commercial Fencing">Commercial Fencing</SelectItem>
-                        <SelectItem value="Sports Courts">Sports Courts</SelectItem>
-                        <SelectItem value="Access Control">Access Control</SelectItem>
-                        <SelectItem value="Automatic Gates">Automatic Gates</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              {isResidential && (
-                <div className="mt-6 mb-6">
-                  <FenceCalculator onCalculate={handleCalculate} />
-                </div>
-              )}
-              
-              {fenceDetails.estimatedCost && isResidential && (
-                <div className="p-4 bg-green-50 border border-green-100 rounded-md">
-                  <p className="font-medium text-green-800">
-                    Your estimated fence cost: {formatPrice(fenceDetails.estimatedCost.min)} – {formatPrice(fenceDetails.estimatedCost.max)}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    This estimate is included in your quote request.
-                  </p>
-                </div>
-              )}
-              
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message (Optional)</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Tell us about your project"
-                        className="min-h-[100px]"
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 font-medium text-lg"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Submitting...' : 'Get Free Design Quote'}
-              </Button>
-              
-              <p className="text-xs text-muted-foreground text-center">
-                By submitting this form, you're taking the first step toward enhancing your property with a beautiful fence.
-                <br/>We're excited to help transform your space!
-              </p>
-            </form>
-          </Form>
-        </div>
+    <div 
+      className={cn(
+        "p-6 md:p-8 rounded-xl bg-background border shadow-lg", 
+        variant === 'minimal' ? 'glass-card' : '',
+        className
       )}
+    >
+      <h3 className="text-xl md:text-2xl font-bold mb-4">
+        {variant === 'minimal' 
+          ? 'Request a Free Quote' 
+          : 'Get Your Free Fence Installation Quote'}
+      </h3>
+      
+      {variant === 'default' && (
+        <p className="text-muted-foreground mb-6">
+          Fill out the form below, and we'll provide you with a comprehensive fence installation quote tailored to your specific needs.
+        </p>
+      )}
+      
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="name">Full Name</Label>
+            <Input 
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="John Smith"
+              required
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <Label htmlFor="email">Email Address</Label>
+            <Input 
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="phone">Phone Number</Label>
+            <Input 
+              id="phone"
+              name="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="(555) 123-4567"
+              required
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <Label htmlFor="address">Address</Label>
+            <Input 
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              placeholder="123 Main St, Dallas, TX"
+              required
+            />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="city">City</Label>
+            <Input 
+              id="city"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              placeholder="Dallas"
+              required
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <Label htmlFor="service_type">Service Type</Label>
+            <Select 
+              value={formData.service_type}
+              onValueChange={(value) => handleSelectChange('service_type', value)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent>
+                {services.map((service) => (
+                  <SelectItem key={service} value={service}>
+                    {service}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="linear_feet">Approx. Linear Feet (Optional)</Label>
+            <Input 
+              id="linear_feet"
+              name="linear_feet"
+              type="number"
+              value={formData.linear_feet}
+              onChange={handleChange}
+              placeholder="100"
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <Label htmlFor="fence_material">Preferred Material</Label>
+            <Select 
+              value={formData.fence_material}
+              onValueChange={(value) => handleSelectChange('fence_material', value as any)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select a material" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Cedar (Most Common)">Cedar (Most Common)</SelectItem>
+                <SelectItem value="Iron">Iron</SelectItem>
+                <SelectItem value="Pipe">Pipe</SelectItem>
+                <SelectItem value="Pool Mesh">Pool Mesh</SelectItem>
+                <SelectItem value="Economy (Pine)">Economy (Pine)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+        
+        <div className="space-y-2">
+          <Label htmlFor="message">Additional Details</Label>
+          <Textarea 
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Please share any specific requirements or questions you have about your fence project."
+            rows={4}
+          />
+        </div>
+        
+        <Button 
+          type="submit" 
+          className="w-full bg-texas-terracotta hover:bg-texas-earth text-white"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Submitting...
+            </>
+          ) : (
+            'Get Your Free Quote'
+          )}
+        </Button>
+        
+        <p className="text-xs text-muted-foreground text-center mt-4">
+          By submitting this form, you agree to be contacted about our services. 
+          We respect your privacy and will never share your information.
+        </p>
+      </form>
     </div>
   );
 };

@@ -1,44 +1,64 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import Link from 'next/link';
+import Image from 'next/image';
 import { ServiceInfo } from '@/lib/types';
-import { getServiceUrl } from '@/lib/routes';
+import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
+
 interface ServiceCardProps {
   service: ServiceInfo;
   index: number;
 }
-const ServiceCard = ({
-  service,
-  index
-}: ServiceCardProps) => {
-  const staggerDelay = `${index * 0.1}s`;
-  return <div className="glass-card overflow-hidden transition-all duration-500 group hover:shadow-lg" style={{
-    animationDelay: staggerDelay,
-    opacity: 0,
-    animation: `staggerFade 0.5s ease forwards ${staggerDelay}`
-  }} id={service.title.toLowerCase().replace(/\s+/g, '-')}>
-      <div className="p-6 md:p-8">
-        {/* Larger image container */}
-        <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
-          <img src={service.icon} alt={`${service.title} icon`} className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105" />
-        </div>
-        
-        <Link to={getServiceUrl(service.title)}>
-          <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-texas-terracotta transition-colors flex items-center gap-1">
-            {service.title}
-          </h3>
-        </Link>
-        
-        <p className="text-muted-foreground mb-6">
-          {service.description}
-        </p>
-        
-        <ul className="space-y-2">
-          {service.benefits.map((benefit, idx) => <li key={idx} className="flex items-start gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-texas-terracotta flex-shrink-0 mt-1.5" />
-              <span className="text-left">{benefit}</span>
-            </li>)}
-        </ul>
+
+const ServiceCard = ({ service, index }: ServiceCardProps) => {
+  // Function to get service URL
+  const getServiceUrl = (title: string): string => {
+    return `/${title.toLowerCase().replace(/\s+/g, '-')}`;
+  };
+
+  return (
+    <div 
+      className="rounded-xl overflow-hidden border border-border bg-background shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full stagger-item"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={service.icon}
+          alt={service.title}
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
-    </div>;
+      
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+        <p className="text-muted-foreground mb-4">{service.description}</p>
+        
+        <div className="mt-auto">
+          <div className="mb-4">
+            <h4 className="text-sm font-medium mb-2">Key Benefits:</h4>
+            <ul className={cn(
+              "space-y-1 text-sm text-muted-foreground", 
+              service.benefits.length > 0 ? "list-disc list-inside" : ""
+            )}>
+              {service.benefits.map((benefit, i) => (
+                <li key={i} className="pl-1">{benefit}</li>
+              ))}
+            </ul>
+          </div>
+          
+          <Link
+            href={getServiceUrl(service.title)}
+            className="inline-flex items-center text-texas-terracotta hover:text-texas-earth transition-colors group"
+          >
+            Learn more
+            <ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 };
+
 export default ServiceCard;

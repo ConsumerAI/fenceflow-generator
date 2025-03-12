@@ -1,136 +1,123 @@
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+"use client";
+
+import { useState } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { services, getServiceUrl } from '@/lib/routes';
+import { services } from '@/lib/routes';
+import { cn } from '@/lib/utils';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
-  
-  // Function to handle smooth scrolling to the quote form with shake animation
-  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    closeMenu(); // Close mobile menu if open
-    
-    const quoteElement = document.getElementById('quote');
-    
-    if (quoteElement) {
-      // Update URL with hash for page reloads
-      window.location.hash = 'quote';
-      
-      quoteElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'center'
-      });
-      
-      // Add and remove shake class to trigger animation
-      quoteElement.classList.add('animate-shake');
-      setTimeout(() => {
-        quoteElement.classList.remove('animate-shake');
-      }, 2000);
-    }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
-    }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-full bg-background/95 backdrop-blur-sm z-50 shadow-sm border-b">
+      <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link to="/" className="text-texas-earth font-bold text-xl sm:text-2xl" onClick={closeMenu}>
-              <span className="font-bold">Fences</span>
-              <span className="text-texas-terracotta font-bold">Texas</span>
-            </Link>
-          </div>
-          
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="font-bold text-xl md:text-2xl text-texas-terracotta">Fences Texas</span>
+          </Link>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-texas-terracotta transition-colors">
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link href="/" className="text-foreground hover:text-texas-terracotta transition-colors">
               Home
             </Link>
-            {services.map((service) => (
-              <Link 
-                key={service}
-                to={getServiceUrl(service)} 
-                className="text-foreground hover:text-texas-terracotta transition-colors"
-              >
-                {service}
-              </Link>
-            ))}
-            <Link 
-              to="/fence-companies-near-me" 
-              className="text-foreground hover:text-texas-terracotta transition-colors"
-            >
-              Near Me
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-foreground hover:text-texas-terracotta transition-colors">
+                Services
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 transition-transform group-hover:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="bg-white rounded-md shadow-lg py-2 border border-border">
+                  {services.map((service) => (
+                    <Link
+                      key={service}
+                      href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
+                    >
+                      {service}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <Link href="/fence-companies-near-me" className="text-foreground hover:text-texas-terracotta transition-colors">
+              Find Near Me
             </Link>
-            <a 
-              href="#quote" 
-              onClick={scrollToQuote}
-              className="bg-texas-terracotta text-white px-4 py-2 rounded hover:bg-texas-earth transition-colors"
+            <Link
+              href="/#quote"
+              className="bg-texas-terracotta text-white px-4 py-2 rounded-md hover:bg-texas-earth transition-colors"
             >
-              Get a Free Quote
-            </a>
+              Get a Quote
+            </Link>
           </div>
-          
+
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
-          </div>
+          <button className="md:hidden text-foreground" onClick={toggleMenu}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-        
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
-            <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors" onClick={closeMenu}>
-                Home
-              </Link>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div
+        className={cn(
+          "md:hidden bg-background border-t overflow-hidden transition-all duration-300",
+          isMenuOpen ? "max-h-[500px] opacity-100 border-border" : "max-h-0 opacity-0 border-transparent"
+        )}
+      >
+        <div className="container mx-auto px-4 py-4 space-y-4">
+          <Link
+            href="/"
+            className="block text-foreground hover:text-texas-terracotta transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <div className="border-t border-border pt-4">
+            <p className="text-sm text-muted-foreground mb-2">Services</p>
+            <div className="space-y-2 pl-2">
               {services.map((service) => (
-                <Link 
+                <Link
                   key={service}
-                  to={getServiceUrl(service)} 
-                  className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
-                  onClick={closeMenu}
+                  href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="block text-foreground hover:text-texas-terracotta transition-colors text-sm"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {service}
                 </Link>
               ))}
-              <Link 
-                to="/fence-companies-near-me" 
-                className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Near Me
-              </Link>
-              <Button asChild variant="default" className="bg-texas-terracotta hover:bg-texas-earth transition-colors">
-                <a href="#quote" onClick={scrollToQuote} className="flex items-center justify-center">
-                  Get a Free Quote
-                </a>
-              </Button>
             </div>
           </div>
-        )}
+          <Link
+            href="/fence-companies-near-me"
+            className="block text-foreground hover:text-texas-terracotta transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Find Near Me
+          </Link>
+          <Link
+            href="/#quote"
+            className="block w-full bg-texas-terracotta text-white px-4 py-2 rounded-md text-center hover:bg-texas-earth transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Get a Quote
+          </Link>
+        </div>
       </div>
     </nav>
   );
