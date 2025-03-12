@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -36,7 +37,11 @@ interface LeadFormProps {
 const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [fenceDetails, setFenceDetails] = useState<{ linear_feet?: number; fence_material?: CalculatorFormData['fence_material'] }>({});
+  const [fenceDetails, setFenceDetails] = useState<{ 
+    linear_feet?: number; 
+    fence_material?: CalculatorFormData['fence_material'];
+    estimatedCost?: { min: number; max: number };
+  }>({});
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -50,6 +55,9 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     },
   });
 
+  // Watch the service type to conditionally show the fence calculator
+  const serviceType = form.watch('service_type');
+  
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
@@ -89,7 +97,11 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     }
   };
 
-  const handleCalculate = (calculatorData: { linear_feet: number; fence_material: CalculatorFormData['fence_material'] }) => {
+  const handleCalculate = (calculatorData: { 
+    linear_feet: number; 
+    fence_material: CalculatorFormData['fence_material'];
+    estimatedCost: { min: number; max: number };
+  }) => {
     setFenceDetails(calculatorData);
     toast({
       title: "Fence details added",
@@ -97,10 +109,19 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     });
   };
 
+  // Format price as currency
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
   return (
     <div className={`glass-card p-6 md:p-8 ${className}`} id="quote">
       <div className="mb-6">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Get Your Free Quote</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">Get Your Free Design Quote</h2>
         <p className="text-muted-foreground">
           {variant === 'default' 
             ? `Request a free, no-obligation quote for your ${city} fence installation project.`
@@ -121,7 +142,22 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         </div>
       ) : (
         <div className="space-y-6">
-          <FenceCalculator onCalculate={handleCalculate} />
+          {/* Only show fence calculator for Residential Fencing */}
+          {serviceType === 'Residential Fencing' && (
+            <FenceCalculator onCalculate={handleCalculate} />
+          )}
+          
+          {/* Display estimated cost above the form if available */}
+          {fenceDetails.estimatedCost && serviceType === 'Residential Fencing' && (
+            <div className="p-4 bg-green-50 border border-green-100 rounded-md">
+              <p className="font-medium text-green-800">
+                Your estimated fence cost: {formatPrice(fenceDetails.estimatedCost.min)} – {formatPrice(fenceDetails.estimatedCost.max)}
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                This estimate is included in your quote request.
+              </p>
+            </div>
+          )}
           
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -234,7 +270,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                 className="w-full bg-green-600 hover:bg-green-700 text-white py-3 font-medium text-lg"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
+                {isSubmitting ? 'Submitting...' : 'Get Free Design Quote'}
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
