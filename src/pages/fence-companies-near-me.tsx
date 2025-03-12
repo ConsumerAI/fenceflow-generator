@@ -150,7 +150,11 @@ const NearMePage = () => {
               
               <div>
                 <div className="aspect-square overflow-hidden rounded-xl shadow-md">
-                  <img src="/placeholder.svg" alt="Fence installation in DFW" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                  <img 
+                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg?format=1000w" 
+                    alt="Fence installation in DFW" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                  />
                 </div>
               </div>
             </div>
