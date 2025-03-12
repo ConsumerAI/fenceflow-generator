@@ -144,6 +144,13 @@ const Index = () => {
                     Get a Free Quote
                   </a>
                 </div>
+                <div className="mt-6">
+                  <img 
+                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/c7b1c87f-56ac-4c57-a034-ceb18cbaeb3d/Untitled.jpg?format=1000w" 
+                    alt="Professional fence installation in DFW" 
+                    className="rounded-lg shadow-md w-full h-auto"
+                  />
+                </div>
               </div>
               
               <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
