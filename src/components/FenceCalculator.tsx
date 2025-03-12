@@ -19,7 +19,7 @@ const calculatorSchema = z.object({
 export type CalculatorFormData = z.infer<typeof calculatorSchema>;
 
 const pricingData = {
-  'Cedar (Most Common)': { min: 55, max: 90 },
+  'Cedar (Most Common)': { min: 50, max: 90 },
   'Iron': { min: 40, max: 60 },
   'Pipe': { min: 30, max: 45 },
   'Pool Mesh': { min: 25, max: 35 },
