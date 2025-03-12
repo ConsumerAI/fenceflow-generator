@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
@@ -8,7 +7,6 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 
-// Define the calculator schema with proper types
 const calculatorSchema = z.object({
   linear_feet: z.string().min(1, 'Linear feet is required')
     .transform((val) => Number(val))
@@ -16,10 +14,8 @@ const calculatorSchema = z.object({
   fence_material: z.enum(['Cedar (Most Common)', 'Iron', 'Pipe', 'Pool Mesh', 'Economy (Pine)']),
 });
 
-// Create a type from the schema
 export type CalculatorFormData = z.infer<typeof calculatorSchema>;
 
-// Pricing data
 const pricingData = {
   'Cedar (Most Common)': { min: 45, max: 72 },
   'Iron': { min: 40, max: 60 },
@@ -28,11 +24,9 @@ const pricingData = {
   'Economy (Pine)': { min: 30, max: 40 },
 };
 
-// Number of gates to include in estimate
 const GATE_PRICE = 500;
 const NUM_GATES = 2;
 
-// Define the props with the type created from the schema
 interface FenceCalculatorProps {
   onCalculate: (data: { 
     linear_feet: number; 
@@ -52,19 +46,15 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     },
   });
 
-  // Fix: Use string type for linearFeetString when watching form values
   const linearFeetString = form.watch('linear_feet');
   const fenceMaterial = form.watch('fence_material');
 
-  // Calculate the estimated cost whenever linear feet or fence material changes
   useEffect(() => {
-    // Convert linearFeet to a number before using it
     const feetValue = Number(linearFeetString);
     
     if (linearFeetString && !isNaN(feetValue) && feetValue > 0) {
       const materialPricing = pricingData[fenceMaterial];
       
-      // Calculate the range
       const minCost = (feetValue * materialPricing.min) + (NUM_GATES * GATE_PRICE);
       const maxCost = (feetValue * materialPricing.max) + (NUM_GATES * GATE_PRICE);
       
@@ -74,7 +64,6 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     }
   }, [linearFeetString, fenceMaterial]);
 
-  // Handle form submission and ensure the linear_feet is passed as a number
   const handleSubmit = (data: CalculatorFormData) => {
     if (estimatedCost) {
       onCalculate({
@@ -85,7 +74,6 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     }
   };
 
-  // Format price as currency
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
