@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -33,8 +34,8 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in DFW</h2>
                       
                       
-                      <div className="my-6">
-                        <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt="Professional pickleball and tennis court installation in DFW" className="w-full rounded-lg" />
+                      <div className="my-6 flex justify-center">
+                        <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt="Professional pickleball and tennis court installation in DFW" className="w-3/4 md:w-2/3 rounded-lg object-contain" />
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
