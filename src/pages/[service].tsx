@@ -5,14 +5,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import { Link } from 'react-router-dom';
-
 interface ServicePageProps {
   service: ServiceType;
 }
-
-const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
-  return (
-    <>
+const ServicePage: React.FC<ServicePageProps> = ({
+  service
+}) => {
+  return <>
       <Helmet>
         <title>{`${service} Services | Fences Texas`}</title>
         <meta name="description" content={`Professional ${service.toLowerCase()} services in DFW. Get a free quote today!`} />
@@ -30,17 +29,12 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div className="prose prose-lg max-w-none">
-                  {service === "Sports Courts" && (
-                    <>
+                  {service === "Sports Courts" && <>
                       <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in DFW</h2>
-                      <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong></p>
+                      
                       
                       <div className="my-6">
-                        <img 
-                          src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" 
-                          alt="Professional pickleball and tennis court installation in DFW" 
-                          className="w-full rounded-lg"
-                        />
+                        <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt="Professional pickleball and tennis court installation in DFW" className="w-full rounded-lg" />
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
@@ -85,11 +79,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                         <li className="mb-2"><strong>Expert Application:</strong> Our skilled professionals use the latest techniques and equipment for perfect results every time.</li>
                       </ul>
                       
-                      <img 
-                        src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" 
-                        alt="Tennis and pickleball court with blue playing surface and green surroundings" 
-                        className="w-full rounded-lg my-6"
-                      />
+                      <img src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" alt="Tennis and pickleball court with blue playing surface and green surroundings" className="w-full rounded-lg my-6" />
                       
                       <h3 className="text-2xl font-bold mt-8 mb-4">Considerations Before Construction</h3>
                       <p>Before diving into construction, it's important to consider:</p>
@@ -161,11 +151,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       <p className="mt-4">For further details on each aspect, consider reaching out to professional pickleball court builders who can provide personalized advice and quotes based on your specific needs.</p>
                       
                       <p>Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
-                    </>
-                  )}
+                    </>}
                   
-                  {service === "Commercial Fencing" && (
-                    <>
+                  {service === "Commercial Fencing" && <>
                       <h2 className="text-3xl font-bold mb-4">Commercial Capabilities</h2>
                       <p>You need a partner who is <strong>Professional</strong>, <strong>Dependable</strong>, <strong>Scalable</strong>, and <strong>Proficient</strong> with any fencing requirements. That partner must offer the best fencing solutions to keep your properties, tenants, and customers protected.</p>
                       
@@ -231,11 +219,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       <p className="my-4">Discover LiftMaster gate operator systems here: <a href="https://www.liftmaster.com/facility-management/gate-operators" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LiftMaster Gate Operators</a>.</p>
                       
                       <p className="mt-8 text-lg font-semibold"><strong>Enhance your property's security and functionality</strong> with these top-tier fencing and access control solutions. Contact us today for a consultation to find the best options for your business.</p>
-                    </>
-                  )}
+                    </>}
                   
-                  {service === "Access Control" && (
-                    <>
+                  {service === "Access Control" && <>
                       <h2 className="text-3xl font-bold mb-4">Access Control Solutions</h2>
                       
                       <h3 className="text-2xl font-bold mt-6 mb-4">Protect Your Property with Advanced Access Control Solutions</h3>
@@ -272,11 +258,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       </div>
                       
                       <p className="mt-8">Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> to discuss your access control needs and receive a personalized security solution for your property.</p>
-                    </>
-                  )}
+                    </>}
                   
-                  {service === "Automatic Gates" && (
-                    <>
+                  {service === "Automatic Gates" && <>
                       <h2 className="text-3xl font-bold mb-4">Automatic Gate Solutions</h2>
                       <p><strong>Call us now at <a href="tel:555-555-5555">(555) 555-5555</a></strong> for a free consultation.</p>
                       
@@ -340,11 +324,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       </div>
                       
                       <p className="mt-8 text-lg font-semibold">Ready to enhance your property with a custom automatic gate? Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> for a free consultation and estimate. We serve the entire DFW metroplex with quality gate solutions.</p>
-                    </>
-                  )}
+                    </>}
                   
-                  {service === "Residential Fencing" && (
-                    <>
+                  {service === "Residential Fencing" && <>
                       <h2 className="text-3xl font-bold mb-4">Residential Fencing Solutions</h2>
                       <p><strong>Call us now at <a href="tel:555-555-5555">(555) 555-5555</a></strong> for a free estimate.</p>
                       
@@ -390,8 +372,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       </ul>
                       
                       <p className="mt-8 text-lg font-semibold">Ready to enhance your home with a beautiful new fence? Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> for a free consultation and estimate. We serve homeowners throughout the DFW metroplex with quality fencing solutions.</p>
-                    </>
-                  )}
+                    </>}
                 </div>
                 
                 <div>
@@ -404,8 +385,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
         
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default ServicePage;
