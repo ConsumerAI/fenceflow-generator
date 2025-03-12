@@ -1,10 +1,10 @@
-
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ServiceType } from '@/lib/types';
 import LeadForm from '@/components/LeadForm';
 import { services } from '@/lib/routes';
+import JsonLd from '@/components/JsonLd';
 
 type Props = {
   params: { service: string };
@@ -37,6 +37,7 @@ export default function ServicePage({ params }: Props) {
 
   return (
     <main className="flex-1">
+      <JsonLd service={service} />
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">

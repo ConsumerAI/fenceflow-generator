@@ -1,4 +1,3 @@
-
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -91,6 +90,7 @@ export default async function CityPage({
   
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd city={cityName} />
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -128,9 +128,6 @@ export default async function CityPage({
           </div>
         </div>
       </section>
-      
-      {/* Additional sections remain similar to the original with Link updates */}
-      {/* For the sake of brevity, I'm not showing all sections but they would follow the same conversion pattern */}
       
       <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
         <div className="container mx-auto px-4 md:px-8">

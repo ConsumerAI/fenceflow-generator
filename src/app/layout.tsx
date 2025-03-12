@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import JsonLd from '@/components/JsonLd';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
@@ -31,7 +32,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://fencestexas.com" />
+      </head>
       <body>
+        <JsonLd />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
