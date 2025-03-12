@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { services } from '@/lib/routes';
 import { cities } from '@/lib/cities';
 
@@ -97,7 +97,7 @@ const Footer = () => {
               {services.map((service) => (
                 <li key={service}>
                   <Link
-                    href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-muted-foreground hover:text-texas-terracotta transition-colors"
                   >
                     {service}
@@ -106,7 +106,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link
-                  href="/fence-companies-near-me"
+                  to="/fence-companies-near-me"
                   className="text-muted-foreground hover:text-texas-terracotta transition-colors"
                 >
                   Find Fence Companies Near Me
@@ -121,7 +121,7 @@ const Footer = () => {
               {randomCities.map((city) => (
                 <li key={city}>
                   <Link
-                    href={`/${city.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={`/${city.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-muted-foreground hover:text-texas-terracotta transition-colors"
                   >
                     {city}
@@ -130,7 +130,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link
-                  href="/fence-companies-near-me"
+                  to="/fence-companies-near-me"
                   className="text-texas-terracotta hover:text-texas-earth transition-colors"
                 >
                   View All Service Areas

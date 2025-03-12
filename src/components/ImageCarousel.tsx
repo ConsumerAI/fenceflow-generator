@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -113,13 +112,11 @@ const ImageCarousel = () => {
               { "opacity-100": index === currentIndex }
             )}
           >
-            <Image
+            <img
               src={image.src}
               alt={image.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, 800px"
-              className="object-cover"
-              priority={index === 0}
+              className="w-full h-full object-cover"
+              style={{ display: index === currentIndex ? 'block' : 'none' }}
             />
           </div>
         ))}

@@ -1,6 +1,5 @@
 
-import Link from 'next/link';
-import Image from 'next/image';
+import { Link } from 'react-router-dom';
 import { ServiceInfo } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
@@ -22,12 +21,10 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
       style={{ animationDelay: `${index * 100}ms` }}
     >
       <div className="relative h-48 overflow-hidden">
-        <Image
+        <img
           src={service.icon}
           alt={service.title}
-          fill
-          className="object-cover transition-transform duration-500 hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
         />
       </div>
       
@@ -49,7 +46,7 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
           </div>
           
           <Link
-            href={getServiceUrl(service.title)}
+            to={getServiceUrl(service.title)}
             className="inline-flex items-center text-texas-terracotta hover:text-texas-earth transition-colors group"
           >
             Learn more
