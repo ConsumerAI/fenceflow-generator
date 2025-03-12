@@ -32,49 +32,69 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                 <div className="prose prose-lg max-w-none">
                   {service === "Sports Courts" && (
                     <>
-                      <h2 className="text-3xl font-bold mb-4">Sports Court Builder and Resurfacer in DFW</h2>
-                      <p><strong>Call us now at <a href="tel:555-555-5555">(555) 555-5555</a></strong></p>
+                      <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in DFW</h2>
+                      <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong></p>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                        <img 
+                          src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
+                          alt="Professional pickleball court installation in DFW" 
+                          className="w-full rounded-lg"
+                        />
+                        <img 
+                          src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" 
+                          alt="Expert tennis court installation services in Dallas Fort Worth" 
+                          className="w-full rounded-lg"
+                        />
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
+                      <p>Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.</p>
+                      
+                      <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
+                      
+                      <h3 className="text-2xl font-bold mt-6 mb-4">Expert Tennis Court Installation Services</h3>
+                      <p>As DFW's trusted tennis court installer, we create premium tennis facilities built to professional standards. Our tennis court installation services include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
+                      
+                      <p>We handle every aspect of your tennis court project, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
+                      
+                      <h4 className="text-xl font-bold mt-6 mb-4">The Cost to Install a Pickleball Court</h4>
+                      <p>When considering the cost to install a pickleball court in the DFW area, several factors influence the final investment:</p>
+                      
+                      <ul className="list-disc pl-6 my-4">
+                        <li><strong>Court Size:</strong> Standard pickleball courts are 20' x 44', but we can customize dimensions for your property.</li>
+                        <li><strong>Surface Material:</strong> Options include acrylic hard court surfaces, cushioned surfaces, or modular tiles at varying price points.</li>
+                        <li><strong>Site Preparation:</strong> The current condition of your property affects excavation and base preparation costs.</li>
+                        <li><strong>Additional Features:</strong> Fencing, lighting, seating, and shade structures add functionality but increase the investment.</li>
+                      </ul>
+                      
+                      <p>Most residential pickleball court installations in DFW range from $25,000 to $45,000 for a complete project with quality materials and professional construction. For multi-court facilities or commercial projects, economies of scale may reduce per-court costs. Contact us for a detailed estimate specific to your property.</p>
+                      
+                      <h4 className="text-xl font-bold mt-6 mb-4">Our Sports Court Construction Process</h4>
+                      <ol className="list-decimal pl-6 my-4">
+                        <li><strong>Initial Consultation:</strong> We discuss your vision, budget, and specific requirements for your DFW pickleball or tennis court.</li>
+                        <li><strong>Site Evaluation:</strong> Our experts inspect your property to assess conditions and identify any challenges.</li>
+                        <li><strong>Custom Design:</strong> We create detailed plans for your court, including layout, surfacing options, and amenities.</li>
+                        <li><strong>Proposal & Contract:</strong> You receive a comprehensive proposal with transparent pricing and timeline.</li>
+                        <li><strong>Construction:</strong> Our skilled team executes the project with attention to detail and quality craftsmanship.</li>
+                        <li><strong>Final Inspection:</strong> We ensure everything meets our high standards before final walkthrough.</li>
+                        <li><strong>Ongoing Support:</strong> We stand behind our work with warranties and maintenance services.</li>
+                      </ol>
+
+                      <h3 className="text-2xl font-bold mt-10 mb-6">Premier Court Construction & Resurfacing Services</h3>
+                      <p>We understand the importance of a well-maintained court to your game. Our pickleball court installation and tennis court construction services are designed to provide the best playability and safety for athletes and enthusiasts alike. Here's why our solutions stand out:</p>
+                      
+                      <ul className="list-disc pl-6 my-4">
+                        <li className="mb-2"><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your court area to identify all site requirements.</li>
+                        <li className="mb-2"><strong>High-Performance Materials:</strong> We select the most durable and visually appealing surfacing materials, suitable for both pickleball and tennis courts in DFW's climate.</li>
+                        <li className="mb-2"><strong>Expert Application:</strong> Our skilled professionals use the latest techniques and equipment for perfect results every time.</li>
+                      </ul>
                       
                       <img 
                         src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" 
                         alt="Tennis and pickleball court with blue playing surface and green surroundings" 
                         className="w-full rounded-lg my-6"
                       />
-                      
-                      <h3 className="text-2xl font-bold my-4">Welcome to Fences Texas: Your Premier Destination for Elite Sports Court Construction</h3>
-                      <p>Tennis, Pickleball, Basketball Courts, we will get you ready to play.</p>
-                      
-                      <p>At Fences Texas, we understand the passion and dedication that sports enthusiasts bring to their game. Whether you're shooting hoops, serving aces, or scoring goals, we're here to transform your backyard into the ultimate playground. From concrete foundations to surfacing and fencing, we specialize in providing comprehensive solutions that cater to your sporting needs. If you're ready to elevate your play space to new heights, read on to discover how Fences Texas can turn your dreams into reality.</p>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Concrete Foundations: Building the Backbone of Your Sports Court</h4>
-                      <p>A solid foundation is essential for the longevity and performance of your sports court. At Fences Texas, we start by carefully planning and preparing the ground to ensure optimal stability and durability. Our team of skilled professionals utilizes top-quality materials and cutting-edge techniques to construct sturdy concrete foundations that can withstand the demands of intense gameplay and weather conditions. With our attention to detail and commitment to excellence, you can trust that your sports court will provide a reliable platform for years of athletic enjoyment.</p>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Surfacing Solutions: Where Style Meets Functionality</h4>
-                      <p>The surface of your sports court plays a crucial role in enhancing performance and safety. Whether you prefer the classic feel of hardwood, the consistent bounce of acrylic, or the versatility of synthetic turf, Fences Texas offers a wide range of surfacing options to suit your needs. Our expert team will work closely with you to select the perfect material and design for your court, ensuring optimal traction, ball response, and player comfort. With our customizable solutions, you can create a sports court that not only looks great but also delivers exceptional performance every time.</p>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Fencing Solutions: Setting the Stage for Success</h4>
-                      <p>A well-designed fence not only enhances the aesthetics of your sports court but also provides essential safety and security. Fences Texas offers a variety of fencing options to suit your preferences, whether you're looking for maximum visibility, privacy, or noise reduction. From durable chain-link fences to sleek iron designs, we have the expertise to deliver the perfect solution for your court. Our team will work with you to design a fencing system that complements your court layout and meets your specific needs, ensuring that your sports space is protected and ready for action.</p>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Experience the Fences Texas Difference</h4>
-                      <p>When you choose Fences Texas, you're choosing a commitment to quality, professionalism, and customer satisfaction. From concept to completion, our dedicated team will guide you through every step of the construction process, ensuring that your vision is brought to life with precision and care. With our seamless integration of concrete, surfacing, and fencing services, you can rest assured that your sports court will exceed your expectations in every way. Ready to take your play space to the next level? Contact Fences Texas today and let us turn your sporting dreams into reality!</p>
-                      
-                      <h2 className="text-3xl font-bold mt-10 mb-6">Premier Court Resurfacing Services</h2>
-                      <p>We understand the importance of a well-maintained court to your game. Our resurfacing services are designed to breathe new life into your pickleball and tennis courts, ensuring they not only look outstanding but also offer the best playability and safety for athletes and enthusiasts alike. Here's why our resurfacing solutions stand out:</p>
-                      
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your court to identify all issues, including cracks, puddles, or fading lines, ensuring a fully customized resurfacing plan.</li>
-                        <li className="mb-2"><strong>High-Performance Materials:</strong> We select the most durable and visually appealing resurfacing materials, suitable for both pickleball and tennis courts. Our materials are designed to withstand the elements and frequent play, ensuring your court remains in top condition for years to come.</li>
-                        <li className="mb-2"><strong>Expert Application:</strong> Our skilled professionals use the latest techniques and equipment to apply resurfacing materials evenly and efficiently. This meticulous approach guarantees a smooth, consistent surface that enhances game performance and player safety.</li>
-                        <li className="mb-2"><strong>Customized Finishing Touches:</strong> From selecting the perfect color to ensuring crisp, clear lines, we tailor every aspect of the resurfacing process to meet your preferences and requirements, delivering a court that not only plays well but also looks professional.</li>
-                      </ul>
-                      
-                      <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
-                        alt="Tennis court construction and resurfacing" 
-                        className="w-full rounded-lg my-6"
-                      />
-                      
-                      <p>Building a pickleball court can be a rewarding project. The cost generally ranges from $15 to $40 per square foot, which translates to about $45,000 for a standard 30' x 60' court. Several factors influence the final cost, from materials to location specifics.</p>
                       
                       <h3 className="text-2xl font-bold mt-8 mb-4">Considerations Before Construction</h3>
                       <p>Before diving into construction, it's important to consider:</p>

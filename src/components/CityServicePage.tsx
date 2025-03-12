@@ -88,6 +88,12 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
       <Helmet>
         <title>{`${service} in ${cityName} | Fence Fanatics`}</title>
         <meta name="description" content={`Professional ${service.toLowerCase()} services in ${cityName}, TX. Get a free quote today!`} />
+        {service === "Sports Courts" && (
+          <>
+            <meta name="keywords" content={`pickleball court installer ${cityName}, tennis court installer ${cityName}, pickleball court installation near me, tennis court installation near me, sports court builder ${cityName}`} />
+            <link rel="canonical" href={`https://fencestexas.com/${citySlug}/sports-courts`} />
+          </>
+        )}
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
@@ -103,17 +109,21 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
               {service === "Sports Courts" && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
                   <div className="prose prose-lg max-w-none">
-                    <h2 className="text-3xl font-bold mb-4">Sports Court Builder and Resurfacer in {cityName}</h2>
-                    <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong></p>
-                    <h3 className="text-2xl font-semibold mt-6">Welcome to Fence Fanatics: Your Premier Destination for Elite Sports Court Construction</h3>
-                    <p>Tennis, Pickleball, Basketball Courts, we will get you ready to play in {cityName}.</p>
-                    <p>At Fence Fanatics, we understand the passion and dedication that sports enthusiasts in {cityName} bring to their game. Whether you're shooting hoops, serving aces, or scoring goals, we're here to transform your backyard into the ultimate playground. From concrete foundations to surfacing and fencing, we specialize in providing comprehensive solutions that cater to your sporting needs. If you're ready to elevate your play space to new heights, read on to discover how Fence Fanatics can turn your dreams into reality.</p>
+                    <h2 className="text-3xl font-bold mb-4">Pickleball & Tennis Court Installer in {cityName}</h2>
+                    <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong> - The premier pickleball court installer in {cityName}</p>
                     
-                    <h3 className="text-2xl font-semibold mt-6">Concrete Foundations: Building the Backbone of Your Sports Court</h3>
-                    <p>A solid foundation is essential for the longevity and performance of your sports court in {cityName}. At Fence Fanatics, we start by carefully planning and preparing the ground to ensure optimal stability and durability. Our team of skilled professionals utilizes top-quality materials and cutting-edge techniques to construct sturdy concrete foundations that can withstand the demands of intense gameplay and {cityName}'s weather conditions. With our attention to detail and commitment to excellence, you can trust that your sports court will provide a reliable platform for years of athletic enjoyment.</p>
+                    <h3 className="text-2xl font-semibold mt-6">Premier Pickleball Court Installation in {cityName}</h3>
+                    <p>Looking for professional pickleball court installers near {cityName}? At Fence Fanatics, we're the leading pickleball court installation company serving {cityName} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
+                    
+                    <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.</p>
+                    
+                    <h3 className="text-2xl font-semibold mt-6">Expert Tennis Court Installation in {cityName}</h3>
+                    <p>As the trusted tennis court installer in {cityName}, we create premium tennis facilities built to professional standards. Our tennis court installation services in {cityName} include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
+                    
+                    <p>We handle every aspect of your tennis court project in {cityName}, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
                   </div>
                   <div>
-                    <img src={serviceImages["Sports Courts"]} alt="Sports court construction in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Sports Courts"]} alt={`Pickleball and tennis court installation in ${cityName}, Texas`} className="rounded-lg shadow-lg w-full h-auto" />
                     <div className="mt-12">
                       <LeadForm city={cityName} />
                     </div>
@@ -258,47 +268,79 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
             </div>
           </section>
           
-          {/* Additional sections for different service types */}
           {service === "Sports Courts" && (
             <section className="py-16 bg-gray-50">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8">Premier Court Resurfacing Services in {cityName}</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <h2 className="text-3xl font-bold mb-8">Pickleball Court Installation Services in {cityName}</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                   <div className="prose prose-lg max-w-none">
-                    <p>We understand the importance of a well-maintained court to your game in {cityName}. Our resurfacing services are designed to breathe new life into your pickleball and tennis courts, ensuring they not only look outstanding but also offer the best playability and safety for athletes and enthusiasts alike. Here's why our resurfacing solutions stand out in {cityName}:</p>
+                    <h3 className="text-2xl font-semibold mb-4">Professional Pickleball Court Installation</h3>
+                    <p>As {cityName}'s pickleball court installation experts, we deliver custom pickleball court solutions for homeowners, clubs, and commercial facilities throughout the area. Our pickleball court installation process is comprehensive and includes:</p>
                     
-                    <ul>
-                      <li><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your {cityName} court to identify all issues, including cracks, puddles, or fading lines, ensuring a fully customized resurfacing plan.</li>
-                      <li><strong>High-Performance Materials:</strong> We select the most durable and visually appealing resurfacing materials, suitable for both pickleball and tennis courts in {cityName}. Our materials are designed to withstand the elements and frequent play, ensuring your court remains in top condition for years to come.</li>
-                      <li><strong>Expert Application:</strong> Our skilled professionals use the latest techniques and equipment to apply resurfacing materials evenly and efficiently. This meticulous approach guarantees a smooth, consistent surface that enhances game performance and player safety in {cityName}.</li>
-                      <li><strong>Customized Finishing Touches:</strong> From selecting the perfect color to ensuring crisp, clear lines, we tailor every aspect of the resurfacing process to meet your preferences and requirements, delivering a court that not only plays well but also looks professional.</li>
+                    <ul className="list-disc pl-6 space-y-2 my-4">
+                      <li><strong>Site Evaluation</strong> - We assess your {cityName} property to determine the optimal location and orientation for your pickleball court.</li>
+                      <li><strong>Custom Design</strong> - Our team creates a tailored pickleball court design for your {cityName} property, considering space constraints and aesthetic preferences.</li>
+                      <li><strong>Complete Construction</strong> - From excavation to final surfacing, our pickleball court installers handle every aspect of court construction in {cityName}.</li>
+                      <li><strong>Post Installation</strong> - We install regulation pickleball net posts, nets, and perimeter fencing to complete your court in {cityName}.</li>
                     </ul>
+                    
+                    <h3 className="text-2xl font-semibold mt-6 mb-4">The Cost to Install a Pickleball Court in {cityName}</h3>
+                    <p>When considering the cost to install a pickleball court in {cityName}, several factors influence the final investment:</p>
+                    
+                    <ul className="list-disc pl-6 space-y-2 my-4">
+                      <li><strong>Court Size</strong> - Standard pickleball courts are 20' x 44', but we can customize dimensions for your {cityName} property.</li>
+                      <li><strong>Surface Material</strong> - Options include acrylic hard court surfaces, cushioned surfaces, or modular tiles at varying price points.</li>
+                      <li><strong>Site Preparation</strong> - The current condition of your {cityName} property affects excavation and base preparation costs.</li>
+                      <li><strong>Additional Features</strong> - Fencing, lighting, seating, and shade structures add functionality but increase the investment.</li>
+                    </ul>
+                    
+                    <p>Most residential pickleball court installations in {cityName} range from $25,000 to $45,000 for a complete project with quality materials and professional construction. Contact us for a detailed estimate specific to your {cityName} property.</p>
                   </div>
                   <div>
-                    <img src={serviceImages["Sports Courts"]} alt="Tennis court resurfacing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" alt={`Pickleball court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto mb-6" />
+                    <img src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" alt={`Tennis court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                  </div>
+                </div>
+                
+                <h2 className="text-3xl font-bold mb-8">Tennis Court Installation in {cityName}</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                    <img src={serviceImages["Sports Courts"]} alt={`Tennis court construction in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                  </div>
+                  <div className="prose prose-lg max-w-none">
+                    <h3 className="text-2xl font-semibold mb-4">Complete Tennis Court Construction Services</h3>
+                    <p>As {cityName}'s trusted tennis court installation company, we provide comprehensive tennis court construction services tailored to your specific needs. Our tennis court installation process includes:</p>
+                    
+                    <ul className="list-disc pl-6 space-y-2 my-4">
+                      <li><strong>Tennis Court Design</strong> - Custom layouts that maximize your {cityName} property's potential while meeting regulation standards.</li>
+                      <li><strong>Site Preparation</strong> - Proper grading and drainage installation crucial for long-lasting tennis courts in {cityName}'s climate.</li>
+                      <li><strong>Base Construction</strong> - Engineered foundations designed specifically for tennis play and local soil conditions in {cityName}.</li>
+                      <li><strong>Surface Application</strong> - Premium acrylic surfacing, clay court installation, or synthetic grass tennis court options.</li>
+                      <li><strong>Tennis Court Fence Installation</strong> - Durable perimeter fencing with custom heights and gate configurations.</li>
+                      <li><strong>Tennis Windscreen Installation</strong> - Professional windscreen systems to improve playing conditions in {cityName}.</li>
+                      <li><strong>Tennis Net Post Installation</strong> - Regulation net systems properly anchored for stability and performance.</li>
+                    </ul>
+                    
+                    <h3 className="text-2xl font-semibold mt-6 mb-4">Tennis Court Resurfacing & Repair</h3>
+                    <p>For existing tennis courts in {cityName} needing renovation, our tennis court resurfacing services can restore playing surfaces to like-new condition. We repair cracks, address drainage issues, and apply fresh surfacing to extend your court's lifespan and improve playability.</p>
+                    
+                    <p>Contact {cityName}'s most trusted tennis court installation experts today at <a href="tel:(469)607-0505">(469) 607-0505</a> for a free consultation on your tennis court project.</p>
                   </div>
                 </div>
                 
                 <div className="mt-16">
-                  <h2 className="text-3xl font-bold mb-8">Understanding Pickleball Court Construction in {cityName}</h2>
-                  <p className="text-lg mb-6">Building a pickleball court in {cityName} can be a rewarding project. The cost generally ranges from $15 to $40 per square foot, which translates to about $45,000 for a standard 30' x 60' court. Several factors influence the final cost, from materials to location specifics in {cityName}.</p>
+                  <h2 className="text-3xl font-bold mb-8">Basketball & Multi-Sport Court Installation in {cityName}</h2>
+                  <p className="text-lg mb-6">In addition to tennis and pickleball court installation, our {cityName} sports court construction team specializes in basketball courts and multi-sport surfaces. We create versatile recreational spaces that can accommodate multiple sports on a single court, maximizing your {cityName} property's potential.</p>
                   
-                  <h3 className="text-2xl font-semibold mt-10 mb-4">Considerations Before Construction in {cityName}</h3>
-                  <p className="text-lg mb-4">Before diving into construction in {cityName}, it's important to consider:</p>
-                  <ul className="list-disc pl-8 text-lg mb-6 space-y-2">
-                    <li><strong>Base Material:</strong> Choice between asphalt and various types of concrete.</li>
-                    <li><strong>Court Placement:</strong> Issues like site work, access for equipment, grading, and drainage in {cityName}'s terrain.</li>
-                    <li><strong>Amenities:</strong> Decisions on fencing, wind screens, lighting, and shade structures.</li>
-                    <li><strong>Legal and Practical Requirements:</strong> {cityName}'s zoning restrictions, setback requirements, and utility access.</li>
-                  </ul>
-                  
-                  <h3 className="text-2xl font-semibold mt-10 mb-4">Site Work, Grading, and Sub-Base</h3>
-                  <p className="text-lg mb-4">The durability of your pickleball court in {cityName} starts with meticulous site work:</p>
-                  <ul className="list-disc pl-8 text-lg mb-6 space-y-2">
-                    <li><strong>Orientation and Placement:</strong> North-south is preferred to reduce sun glare.</li>
-                    <li><strong>Slope and Drainage:</strong> A slope of .83% to 1% is ideal for water drainage in {cityName}'s climate.</li>
-                    <li><strong>Foundation:</strong> Includes layers of stone and vapor barriers under the concrete to prevent moisture damage.</li>
-                  </ul>
+                  <div className="bg-white p-8 rounded-lg shadow-md">
+                    <h3 className="text-2xl font-bold mb-4 text-center">Contact {cityName}'s Premier Sports Court Installer</h3>
+                    <p className="text-lg mb-6 text-center">Ready to discuss your pickleball court, tennis court, or multi-sport court project in {cityName}? Contact Fence Fanatics today for expert advice and a free installation estimate.</p>
+                    <div className="flex justify-center">
+                      <a href="tel:(469)607-0505" className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-semibold text-lg hover:bg-texas-terracotta/90 transition-colors">
+                        Call (469) 607-0505
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
