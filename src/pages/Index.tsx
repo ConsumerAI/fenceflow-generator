@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -6,6 +5,7 @@ import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import CityGrid from '@/components/CityGrid';
 import ServiceCard from '@/components/ServiceCard';
+import ImageCarousel from '@/components/ImageCarousel';
 import { ServiceInfo } from '@/lib/types';
 
 // Service data
@@ -154,6 +154,21 @@ const Index = () => {
                 <LeadForm />
               </div>
             </div>
+          </div>
+        </section>
+        
+        {/* Recent Projects Section */}
+        <section className="py-16 md:py-24 bg-secondary/30">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Recent Projects</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Browse through our gallery of recently completed fence installations across DFW. 
+                Each project showcases our commitment to quality and craftsmanship.
+              </p>
+            </div>
+            
+            <ImageCarousel />
           </div>
         </section>
         
