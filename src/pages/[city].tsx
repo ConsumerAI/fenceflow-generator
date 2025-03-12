@@ -100,7 +100,6 @@ const CityPage = () => {
             "@type": "LocalBusiness",
             "name": "Fences Texas",
             "description": `Fence installation services in ${cityName}, Texas`,
-            "telephone": "555-123-4567",
             "email": "info@fencestexas.com",
             "areaServed": {
               "@type": "City",
@@ -151,12 +150,6 @@ const CityPage = () => {
                     className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote
-                  </a>
-                  <a 
-                    href="tel:555-123-4567" 
-                    className="border border-texas-terracotta/30 bg-transparent text-texas-terracotta px-6 py-3 rounded-md font-medium hover:bg-texas-terracotta/10 transition-colors text-center"
-                  >
-                    Call: 555-123-4567
                   </a>
                 </div>
               </div>

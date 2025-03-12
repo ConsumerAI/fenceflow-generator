@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -5,6 +6,7 @@ import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import { cities } from '@/lib/cities';
 import { MapPin } from 'lucide-react';
+
 const NearMePage = () => {
   // In a real implementation, we would use geolocation to determine the user's city
   // For now, we'll just show a random city as an example
@@ -19,7 +21,6 @@ const NearMePage = () => {
           "@type": "LocalBusiness",
           "name": "Fences Texas",
           "description": "DFW's Premier Fence Installation Experts",
-          "telephone": "555-123-4567",
           "email": "info@fencestexas.com",
           "areaServed": {
             "@type": "GeoCircle",
@@ -68,9 +69,6 @@ const NearMePage = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href="#quote" className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center">
                     Get a Free Quote
-                  </a>
-                  <a href="tel:555-123-4567" className="border border-texas-terracotta/30 bg-transparent text-texas-terracotta px-6 py-3 rounded-md font-medium hover:bg-texas-terracotta/10 transition-colors text-center">
-                    Call: 555-123-4567
                   </a>
                 </div>
               </div>
@@ -296,4 +294,5 @@ const NearMePage = () => {
       </div>
     </>;
 };
+
 export default NearMePage;

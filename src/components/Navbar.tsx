@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { services, getServiceUrl } from '@/lib/routes';
 
@@ -53,11 +54,10 @@ const Navbar = () => {
               Near Me
             </Link>
             <a 
-              href="tel:(469)607-0505" 
-              className="bg-texas-terracotta text-white px-4 py-2 rounded hover:bg-texas-earth transition-colors flex items-center gap-2"
+              href="#quote" 
+              className="bg-texas-terracotta text-white px-4 py-2 rounded hover:bg-texas-earth transition-colors"
             >
-              <Phone size={16} />
-              <span>(469) 607-0505</span>
+              Get a Free Quote
             </a>
           </div>
           
@@ -99,9 +99,8 @@ const Navbar = () => {
                 Near Me
               </Link>
               <Button asChild variant="default" className="bg-texas-terracotta hover:bg-texas-earth transition-colors">
-                <a href="tel:555-123-4567" className="flex items-center justify-center gap-2">
-                  <Phone size={16} />
-                  <span>555-123-4567</span>
+                <a href="#quote" className="flex items-center justify-center">
+                  Get a Free Quote
                 </a>
               </Button>
             </div>

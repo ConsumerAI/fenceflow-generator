@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cities, getCityUrl } from '@/lib/cities';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { getServiceUrl } from '@/lib/routes';
 
 const Footer = () => {
@@ -21,10 +21,6 @@ const Footer = () => {
             </h3>
             <p className="text-texas-sand/90">DFW's Premier Fence Installation Experts</p>
             <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <Phone size={16} className="text-texas-sand" />
-                <a href="tel:555-123-4567" className="hover:text-texas-sand transition-colors">555-123-4567</a>
-              </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-texas-sand" />
                 <a href="mailto:info@fencestexas.com" className="hover:text-texas-sand transition-colors">info@fencestexas.com</a>

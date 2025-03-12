@@ -66,12 +66,6 @@ const AutomaticGatesPage = () => {
                   >
                     Get a Free Quote
                   </a>
-                  <a 
-                    href="tel:555-123-4567" 
-                    className="border border-texas-terracotta/30 bg-transparent text-texas-terracotta px-6 py-3 rounded-md font-medium hover:bg-texas-terracotta/10 transition-colors text-center"
-                  >
-                    Call: 555-123-4567
-                  </a>
                 </div>
               </div>
               
