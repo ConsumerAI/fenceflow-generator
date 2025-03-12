@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -7,6 +6,8 @@ import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
 import { cities } from '@/lib/cities';
 import { MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { getCityUrl } from '@/lib/routes';
 
 const NearMePage = () => {
   // In a real implementation, we would use geolocation to determine the user's city
@@ -282,9 +283,15 @@ const NearMePage = () => {
             </div>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {cities.slice(0, 30).map(city => <div key={city} className="text-center p-3 rounded-lg hover:bg-secondary transition-colors">
+              {cities.slice(0, 30).map(city => (
+                <Link 
+                  key={city} 
+                  to={getCityUrl(city)}
+                  className="text-center p-3 rounded-lg hover:bg-secondary transition-colors hover:text-texas-terracotta"
+                >
                   <span>{city}</span>
-                </div>)}
+                </Link>
+              ))}
               <div className="text-center p-3 rounded-lg font-semibold text-texas-terracotta">
                 <span>And 70+ more cities!</span>
               </div>
