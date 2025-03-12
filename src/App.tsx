@@ -9,6 +9,7 @@ import AutomaticGatesPage from './pages/automatic-gates';
 import ServicePage from './pages/[service]';
 import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 import { services } from './lib/routes';
 import { ServiceType } from './lib/types';
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/:city" element={<CityPage />} />
