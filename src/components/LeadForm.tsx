@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -50,13 +49,13 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       email: '',
       phone: '',
       address: '',
-      service_type: 'Residential Fencing',
       message: '',
     },
   });
 
   // Watch the service type to conditionally show the fence calculator
   const serviceType = form.watch('service_type');
+  const isResidential = serviceType === 'Residential Fencing';
   
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
@@ -230,15 +229,15 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                 )}
               />
               
-              {/* Only show fence calculator for Residential Fencing */}
-              {serviceType === 'Residential Fencing' && (
+              {/* Only show fence calculator for Residential Fencing when explicitly selected */}
+              {isResidential && (
                 <div className="mt-6 mb-6">
                   <FenceCalculator onCalculate={handleCalculate} />
                 </div>
               )}
               
               {/* Display estimated cost above the message field if available */}
-              {fenceDetails.estimatedCost && serviceType === 'Residential Fencing' && (
+              {fenceDetails.estimatedCost && isResidential && (
                 <div className="p-4 bg-green-50 border border-green-100 rounded-md">
                   <p className="font-medium text-green-800">
                     Your estimated fence cost: {formatPrice(fenceDetails.estimatedCost.min)} – {formatPrice(fenceDetails.estimatedCost.max)}
