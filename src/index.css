@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
 @tailwind base;
@@ -117,4 +118,20 @@
   .prose li {
     @apply pl-1;
   }
+
+  /* Improved list styling for service pages */
+  .prose ul li, 
+  .prose ol li,
+  .list-disc li,
+  .list-decimal li {
+    @apply text-left;
+  }
+
+  .prose ul, 
+  .prose ol,
+  .list-disc,
+  .list-decimal {
+    @apply text-left w-full;
+  }
 }
+
