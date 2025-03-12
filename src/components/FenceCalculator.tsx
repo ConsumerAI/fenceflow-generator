@@ -52,15 +52,16 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     },
   });
 
-  const linearFeet = form.watch('linear_feet');
+  // Fix: Use numeric type for linearFeet when watching form values
+  const linearFeetString = form.watch('linear_feet');
   const fenceMaterial = form.watch('fence_material');
 
   // Calculate the estimated cost whenever linear feet or fence material changes
   useEffect(() => {
-    // This is the fix: Convert linearFeet to a number before using it
-    const feetValue = Number(linearFeet);
+    // Convert linearFeet to a number before using it
+    const feetValue = Number(linearFeetString);
     
-    if (linearFeet && !isNaN(feetValue) && feetValue > 0) {
+    if (linearFeetString && !isNaN(feetValue) && feetValue > 0) {
       const materialPricing = pricingData[fenceMaterial];
       
       // Calculate the range
@@ -71,7 +72,7 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     } else {
       setEstimatedCost(null);
     }
-  }, [linearFeet, fenceMaterial]);
+  }, [linearFeetString, fenceMaterial]);
 
   // Handle form submission and ensure the linear_feet is passed as a number
   const handleSubmit = (data: CalculatorFormData) => {
