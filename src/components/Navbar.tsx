@@ -1,16 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const services = [
-  { name: "Residential Fencing", path: "/residential-fencing" },
-  { name: "Commercial Fencing", path: "/commercial-fencing" },
-  { name: "Sports Courts", path: "/sports-courts" },
-  { name: "Access Control", path: "/access-control" },
-  { name: "Automatic Gates", path: "/automatic-gates" },
-];
+import { services, getServiceUrl } from '@/lib/routes';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,11 +39,11 @@ const Navbar = () => {
             </Link>
             {services.map((service) => (
               <Link 
-                key={service.path}
-                to={service.path} 
+                key={service}
+                to={getServiceUrl(service)} 
                 className="text-foreground hover:text-texas-terracotta transition-colors"
               >
-                {service.name}
+                {service}
               </Link>
             ))}
             <Link 
@@ -90,12 +82,12 @@ const Navbar = () => {
               </Link>
               {services.map((service) => (
                 <Link 
-                  key={service.path}
-                  to={service.path} 
+                  key={service}
+                  to={getServiceUrl(service)} 
                   className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
                   onClick={closeMenu}
                 >
-                  {service.name}
+                  {service}
                 </Link>
               ))}
               <Link 
