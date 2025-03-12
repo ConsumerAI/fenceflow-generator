@@ -52,12 +52,13 @@ const Navbar = () => {
             >
               Near Me
             </Link>
-            <Button asChild variant="default" className="bg-texas-terracotta hover:bg-texas-earth transition-colors">
-              <a href="tel:555-123-4567" className="flex items-center gap-2">
-                <Phone size={16} />
-                <span>555-123-4567</span>
-              </a>
-            </Button>
+            <a 
+              href="tel:(469)607-0505" 
+              className="bg-texas-terracotta text-white px-4 py-2 rounded hover:bg-texas-earth transition-colors flex items-center gap-2"
+            >
+              <Phone size={16} />
+              <span>(469) 607-0505</span>
+            </a>
           </div>
           
           {/* Mobile menu button */}

@@ -6,6 +6,7 @@ import Index from './pages/Index';
 import CityPage from './pages/[city]';
 import NearMePage from './pages/fence-companies-near-me';
 import AutomaticGatesPage from './pages/automatic-gates';
+import ServicePage from './pages/[service]';
 import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
 import { services } from './lib/routes';
@@ -18,9 +19,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/:city" element={<CityPage />} />
+          {/* General service pages */}
           {services.map((service) => (
             <Route 
               key={service}
+              path={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
+              element={<ServicePage service={service as ServiceType} />}
+            />
+          ))}
+          {/* City-specific service pages */}
+          {services.map((service) => (
+            <Route 
+              key={`city-${service}`}
               path={`/:city/${service.toLowerCase().replace(/\s+/g, '-')}`}
               element={<CityServicePage service={service as ServiceType} />}
             />
