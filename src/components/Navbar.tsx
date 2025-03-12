@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { services } from '@/lib/routes';
 import { cn } from '@/lib/utils';
@@ -19,13 +19,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <span className="font-bold text-xl md:text-2xl text-texas-terracotta">Fences Texas</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/" className="text-foreground hover:text-texas-terracotta transition-colors">
+            <Link href="/" className="text-foreground hover:text-texas-terracotta transition-colors">
               Home
             </Link>
             <div className="relative group">
@@ -46,7 +46,7 @@ const Navbar = () => {
                   {services.map((service) => (
                     <Link
                       key={service}
-                      to={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
                       className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
                     >
                       {service}
@@ -55,11 +55,11 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <Link to="/fence-companies-near-me" className="text-foreground hover:text-texas-terracotta transition-colors">
+            <Link href="/fence-companies-near-me" className="text-foreground hover:text-texas-terracotta transition-colors">
               Find Near Me
             </Link>
             <Link
-              to="/#quote"
+              href="/#quote"
               className="bg-texas-terracotta text-white px-4 py-2 rounded-md hover:bg-texas-earth transition-colors"
             >
               Get a Quote
@@ -82,7 +82,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 py-4 space-y-4">
           <Link
-            to="/"
+            href="/"
             className="block text-foreground hover:text-texas-terracotta transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -94,7 +94,7 @@ const Navbar = () => {
               {services.map((service) => (
                 <Link
                   key={service}
-                  to={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
                   className="block text-foreground hover:text-texas-terracotta transition-colors text-sm"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -104,14 +104,14 @@ const Navbar = () => {
             </div>
           </div>
           <Link
-            to="/fence-companies-near-me"
+            href="/fence-companies-near-me"
             className="block text-foreground hover:text-texas-terracotta transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Find Near Me
           </Link>
           <Link
-            to="/#quote"
+            href="/#quote"
             className="block w-full bg-texas-terracotta text-white px-4 py-2 rounded-md text-center hover:bg-texas-earth transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >

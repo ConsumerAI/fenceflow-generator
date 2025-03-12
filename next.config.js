@@ -7,6 +7,16 @@ const nextConfig = {
       'images.squarespace-cdn.com',
       'lovable-uploads',
     ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.squarespace-cdn.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'lovable-uploads'
+      }
+    ]
   },
   async redirects() {
     return [

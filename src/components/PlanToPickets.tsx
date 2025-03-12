@@ -1,4 +1,6 @@
 
+import Image from 'next/image';
+
 const steps = [
   {
     title: "Free Consultation",
@@ -63,11 +65,15 @@ const PlanToPickets = () => {
         
         <div className="mt-16 text-center">
           <div className="inline-block p-1 bg-secondary rounded-lg">
-            <img 
-              src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg"
-              alt="Fence installation process in Dallas"
-              className="rounded-lg object-cover h-[300px] md:h-[400px] w-[800px] max-w-full"
-            />
+            <div className="relative h-[300px] md:h-[400px] w-[800px] max-w-full">
+              <Image 
+                src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg"
+                alt="Fence installation process in Dallas"
+                fill
+                className="rounded-lg object-cover"
+                sizes="(max-width: 800px) 100vw, 800px"
+              />
+            </div>
           </div>
         </div>
       </div>
