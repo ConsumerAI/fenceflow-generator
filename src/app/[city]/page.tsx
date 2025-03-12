@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -5,6 +6,7 @@ import { notFound } from 'next/navigation';
 import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
 import ImageCarousel from '@/components/ImageCarousel';
+import JsonLd from '@/components/JsonLd';
 import { CityContent, ServiceType } from '@/lib/types';
 import { cities, getCityFromUrl } from '@/lib/cities';
 import { supabase, generateCityContent } from '@/lib/supabase';

@@ -6,6 +6,7 @@ import CityGrid from '@/components/CityGrid';
 import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
+import JsonLd from '@/components/JsonLd';
 import { ServiceInfo } from '@/lib/types';
 
 export const metadata: Metadata = {
@@ -80,6 +81,7 @@ const services: ServiceInfo[] = [
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd />
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
         <div className="container mx-auto px-4 md:px-8">
