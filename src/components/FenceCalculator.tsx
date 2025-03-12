@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
@@ -7,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 
+// First, clearly define the schema with proper string to number conversion
 const calculatorSchema = z.object({
   linear_feet: z.string().min(1, 'Linear feet is required')
     .transform((val) => Number(val))
@@ -38,7 +40,11 @@ interface FenceCalculatorProps {
 const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
   const [estimatedCost, setEstimatedCost] = useState<{ min: number; max: number } | null>(null);
   
-  const form = useForm<CalculatorFormData>({
+  // Ensure the form uses string type for linear_feet as input
+  const form = useForm<{
+    linear_feet: string;
+    fence_material: CalculatorFormData['fence_material'];
+  }>({
     resolver: zodResolver(calculatorSchema),
     defaultValues: {
       linear_feet: '',
@@ -64,7 +70,8 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     }
   }, [linearFeetString, fenceMaterial]);
 
-  const handleSubmit = (data: CalculatorFormData) => {
+  // When submitting, ensure we're providing a number for linear_feet
+  const handleSubmit = (data: any) => {
     if (estimatedCost) {
       onCalculate({
         linear_feet: Number(data.linear_feet),
