@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 
+// Define the calculator schema with proper types
 const calculatorSchema = z.object({
   linear_feet: z.string().min(1, 'Linear feet is required')
     .transform((val) => Number(val))
@@ -15,10 +16,12 @@ const calculatorSchema = z.object({
   fence_material: z.enum(['Wood', 'Iron', 'Vinyl', 'Chain Link']),
 });
 
-type CalculatorFormData = z.infer<typeof calculatorSchema>;
+// Create a type from the schema
+export type CalculatorFormData = z.infer<typeof calculatorSchema>;
 
+// Define the props with the type created from the schema
 interface FenceCalculatorProps {
-  onCalculate: (data: CalculatorFormData) => void;
+  onCalculate: (data: { linear_feet: number; fence_material: CalculatorFormData['fence_material'] }) => void;
 }
 
 const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
@@ -30,12 +33,20 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     },
   });
 
+  // Handle form submission and ensure the linear_feet is passed as a number
+  const handleSubmit = (data: CalculatorFormData) => {
+    onCalculate({
+      linear_feet: Number(data.linear_feet),
+      fence_material: data.fence_material
+    });
+  };
+
   return (
     <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 shadow-lg">
       <h3 className="text-xl font-semibold mb-4">Calculate Fence Cost</h3>
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onCalculate)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
             control={form.control}
             name="linear_feet"

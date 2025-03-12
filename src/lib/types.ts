@@ -8,6 +8,8 @@ export interface Lead {
   service_type: ServiceType;
   message: string;
   city: string;
+  linear_feet?: number;
+  fence_material?: "Wood" | "Iron" | "Vinyl" | "Chain Link";
   created_at?: string;
 }
 

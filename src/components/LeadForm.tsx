@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { toast } from '@/hooks/use-toast';
 import { Lead, ServiceType } from '@/lib/types';
 import { supabase } from '@/lib/supabase';
-import FenceCalculator from './FenceCalculator';
+import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name is required' }),
@@ -36,7 +36,7 @@ interface LeadFormProps {
 const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [fenceDetails, setFenceDetails] = useState<{ linear_feet?: number; fence_material?: string }>({});
+  const [fenceDetails, setFenceDetails] = useState<{ linear_feet?: number; fence_material?: CalculatorFormData['fence_material'] }>({});
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -89,7 +89,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     }
   };
 
-  const handleCalculate = (calculatorData: { linear_feet: number; fence_material: string }) => {
+  const handleCalculate = (calculatorData: { linear_feet: number; fence_material: CalculatorFormData['fence_material'] }) => {
     setFenceDetails(calculatorData);
     toast({
       title: "Fence details added",
