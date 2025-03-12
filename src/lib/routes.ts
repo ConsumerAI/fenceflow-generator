@@ -14,6 +14,10 @@ export function getServiceUrl(service: ServiceType): string {
   return `/${service.toLowerCase().replace(/\s+/g, '-')}`;
 }
 
+export function getCityUrl(city: string): string {
+  return `/${city.toLowerCase().replace(/\s+/g, '-')}`;
+}
+
 export function getCityServiceUrl(city: string, service: ServiceType): string {
   return `${getCityUrl(city)}/${service.toLowerCase().replace(/\s+/g, '-')}`;
 }
