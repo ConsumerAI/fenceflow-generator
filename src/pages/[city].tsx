@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -82,7 +81,6 @@ const CityPage = () => {
     );
   }
   
-  // Service image mapping
   const serviceImages = {
     "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
     "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
@@ -157,7 +155,7 @@ const CityPage = () => {
                   <img 
                     src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/c7b1c87f-56ac-4c57-a034-ceb18cbaeb3d/Untitled.jpg?format=1000w" 
                     alt={`Professional fence installation in ${cityName}`} 
-                    className="rounded-lg shadow-md w-full h-auto"
+                    className="rounded-lg shadow-md w-full max-w-md mx-auto h-auto"
                   />
                 </div>
               </div>
