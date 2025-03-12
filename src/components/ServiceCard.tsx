@@ -46,18 +46,19 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
       id={service.title.toLowerCase().replace(/\s+/g, '-')}
     >
       <div className="p-6 md:p-8">
-        <div className="w-12 h-12 mb-4 text-texas-terracotta">
+        {/* Larger image container */}
+        <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
           {pixabayImage ? (
             <img 
               src={pixabayImage} 
               alt={`${service.title} image`} 
-              className="w-full h-full object-cover rounded"
+              className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
             <img 
               src={service.icon} 
               alt={`${service.title} icon`} 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105"
             />
           )}
         </div>
