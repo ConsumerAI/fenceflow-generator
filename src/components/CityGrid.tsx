@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Input } from '@/components/ui/input';
 import { cities } from '@/lib/cities';
 import { cn } from '@/lib/utils';
@@ -58,7 +58,7 @@ const CityGrid = () => {
                 {groupedCities[letter].map((city, index) => (
                   <Link
                     key={city}
-                    to={getCityUrl(city)}
+                    href={getCityUrl(city)}
                     className={cn(
                       "text-muted-foreground hover:text-texas-terracotta transition-colors py-1 stagger-item",
                       { "delay-100": index % 5 === 0 },
