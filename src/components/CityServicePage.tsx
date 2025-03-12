@@ -22,6 +22,15 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
   
   const cityName = getCityFromUrl(`/${citySlug}`);
   
+  // Service image mapping
+  const serviceImages = {
+    "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
+    "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
+    "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
+    "Access Control": "/lovable-uploads/06d47b76-a6a7-4638-aa6c-23b076a7332e.png",
+    "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
+  };
+  
   React.useEffect(() => {
     if (!cityName) {
       navigate('/not-found');
@@ -105,7 +114,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     <p>A solid foundation is essential for the longevity and performance of your sports court in {cityName}. At Fence Fanatics, we start by carefully planning and preparing the ground to ensure optimal stability and durability. Our team of skilled professionals utilizes top-quality materials and cutting-edge techniques to construct sturdy concrete foundations that can withstand the demands of intense gameplay and {cityName}'s weather conditions. With our attention to detail and commitment to excellence, you can trust that your sports court will provide a reliable platform for years of athletic enjoyment.</p>
                   </div>
                   <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709078579887-GDI1G7DW4FVRYQDUANKY/image-asset.jpeg" alt="Sports court construction in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Sports Courts"]} alt="Sports court construction in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     <div className="mt-12">
                       <LeadForm city={cityName} />
                     </div>
@@ -141,7 +150,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     </ul>
                   </div>
                   <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/ba1e4023-2b96-495d-b30b-ddfcf4d62b93/Gate%2C+Wrought+Iron%2C+Commercial%2C+720px.jpg" alt="Commercial fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Commercial Fencing"]} alt="Commercial fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     <div className="mt-12">
                       <LeadForm city={cityName} />
                     </div>
@@ -172,7 +181,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     </ul>
                   </div>
                   <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4cabda6a-733c-41cf-883a-9aa081d48d44/Driveway+Gate%2C+Iron%2C+Solar.jpg" alt="Access control systems in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Access Control"]} alt="Access control systems in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     <div className="mt-12">
                       <LeadForm city={cityName} />
                     </div>
@@ -201,7 +210,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     </ul>
                   </div>
                   <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/f8b4f6b6-0ac3-4f7f-a7af-a0c13c99239c/Driveway+Gate.jpg" alt="Automatic gate installation in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Automatic Gates"]} alt="Automatic gate installation in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     <div className="mt-12">
                       <LeadForm city={cityName} />
                     </div>
@@ -229,7 +238,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     <p>Our residential fences are built to withstand {cityName}'s unique climate while complementing your home's architecture. We use premium materials selected specifically for durability in Texas weather, ensuring your investment looks beautiful for years to come. From initial design consultation to final installation, our {cityName}-based team delivers exceptional craftsmanship and customer service.</p>
                   </div>
                   <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/2433a5f7-7d8b-45bb-add3-55c0dfdcee86/Double+Gate+with+Doggie+Bubble+Wood.jpg" alt="Residential fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Residential Fencing"]} alt="Residential fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     <div className="mt-12">
                       <LeadForm city={cityName} />
                     </div>
@@ -267,7 +276,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     </ul>
                   </div>
                   <div>
-                    <img src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" alt="Tennis court resurfacing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={serviceImages["Sports Courts"]} alt="Tennis court resurfacing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                   </div>
                 </div>
                 

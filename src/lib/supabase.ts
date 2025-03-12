@@ -68,6 +68,15 @@ class Supabase {
 
 export const supabase = new Supabase();
 
+// Service image mapping for content generation
+const serviceImages = {
+  "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
+  "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
+  "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
+  "Access Control": "/lovable-uploads/06d47b76-a6a7-4638-aa6c-23b076a7332e.png",
+  "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
+};
+
 // OpenAI integration for content generation
 export async function generateCityContent(city: string): Promise<CityContent> {
   try {
@@ -116,9 +125,9 @@ export async function generateCityContent(city: string): Promise<CityContent> {
         `pool fence installation ${city}`
       ],
       images: [
-        { src: "/placeholder.svg", alt: `Residential wood fence installation in ${city}, Texas` },
-        { src: "/placeholder.svg", alt: `Commercial security fencing for ${city} businesses` },
-        { src: "/placeholder.svg", alt: `Custom automatic gate installation in ${city}, Texas` }
+        { src: serviceImages["Residential Fencing"], alt: `Residential wood fence installation in ${city}, Texas` },
+        { src: serviceImages["Commercial Fencing"], alt: `Commercial security fencing for ${city} businesses` },
+        { src: serviceImages["Automatic Gates"], alt: `Custom automatic gate installation in ${city}, Texas` }
       ]
     };
     
@@ -145,7 +154,11 @@ export async function generateCityContent(city: string): Promise<CityContent> {
       faq: `Frequently asked questions about fencing in ${city}`,
       cta: `Contact us for fencing in ${city}`,
       keywords: [`fencing ${city}`],
-      images: [{ src: "/placeholder.svg", alt: `Fencing in ${city}` }]
+      images: [
+        { src: serviceImages["Residential Fencing"], alt: `Residential fencing in ${city}` },
+        { src: serviceImages["Commercial Fencing"], alt: `Commercial fencing in ${city}` },
+        { src: serviceImages["Automatic Gates"], alt: `Automatic gates in ${city}` }
+      ]
     };
   }
 }

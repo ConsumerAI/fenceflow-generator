@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -5,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
+import ImageCarousel from '@/components/ImageCarousel';
 import { CityContent, ServiceType } from '@/lib/types';
 import { cities, getCityFromUrl } from '@/lib/cities';
 import { supabase, generateCityContent } from '@/lib/supabase';
@@ -80,6 +82,15 @@ const CityPage = () => {
     );
   }
   
+  // Service image mapping
+  const serviceImages = {
+    "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
+    "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
+    "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
+    "Access Control": "/lovable-uploads/06d47b76-a6a7-4638-aa6c-23b076a7332e.png",
+    "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
+  };
+  
   return (
     <>
       <Helmet>
@@ -153,24 +164,11 @@ const CityPage = () => {
         
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4 md:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {cityContent.images.map((image, index) => (
-                <div 
-                  key={index} 
-                  className="aspect-video overflow-hidden rounded-xl shadow-md bg-white/50"
-                  style={{
-                    opacity: 0,
-                    animation: `staggerFade 0.5s ease forwards ${index * 0.1 + 0.2}s`
-                  }}
-                >
-                  <img 
-                    src={image.src} 
-                    alt={image.alt} 
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
-              ))}
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold">Our Work in {cityName}</h2>
+              <p className="text-muted-foreground mt-2">Browse through our gallery of fence installations</p>
             </div>
+            <ImageCarousel />
           </div>
         </section>
         
@@ -212,7 +210,7 @@ const CityPage = () => {
                         }}
                       >
                         <img 
-                          src="/placeholder.svg" 
+                          src={serviceImages[service]} 
                           alt={`${service} in ${cityName}, Texas`} 
                           className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                         />

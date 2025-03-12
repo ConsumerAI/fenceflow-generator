@@ -69,11 +69,11 @@ serve(async (req) => {
       // Parse the JSON content
       const contentObject = JSON.parse(content)
       
-      // Add placeholder images
+      // Add specific images instead of placeholders
       contentObject.images = [
-        { src: "/placeholder.svg", alt: `Residential wood fence installation in ${city}, Texas` },
-        { src: "/placeholder.svg", alt: `Commercial security fencing for ${city} businesses` },
-        { src: "/placeholder.svg", alt: `Custom automatic gate installation in ${city}, Texas` }
+        { src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg", alt: `Residential wood fence installation in ${city}, Texas` },
+        { src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg", alt: `Commercial security fencing for ${city} businesses` },
+        { src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg", alt: `Custom automatic gate installation in ${city}, Texas` }
       ]
       
       return new Response(
