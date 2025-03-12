@@ -24,6 +24,11 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
