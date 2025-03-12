@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ServiceInfo } from '@/lib/types';
 import { getServiceUrl } from '@/lib/routes';
@@ -11,29 +11,6 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ service, index }: ServiceCardProps) => {
   const staggerDelay = `${index * 0.1}s`;
-  const [pixabayImage, setPixabayImage] = useState<string | null>(null);
-  
-  useEffect(() => {
-    // Fetch image from Pixabay based on description
-    const fetchPixabayImage = async () => {
-      try {
-        const PIXABAY_API_KEY = '42186459-a3a0de254f9e0bcd1d66c7f5c'; // Public API key for demo
-        const query = encodeURIComponent(`${service.title} fence`);
-        const response = await fetch(
-          `https://pixabay.com/api/?key=${PIXABAY_API_KEY}&q=${query}&image_type=photo&per_page=3`
-        );
-        const data = await response.json();
-        
-        if (data.hits && data.hits.length > 0) {
-          setPixabayImage(data.hits[0].webformatURL);
-        }
-      } catch (error) {
-        console.error('Error fetching Pixabay image:', error);
-      }
-    };
-    
-    fetchPixabayImage();
-  }, [service.title]);
   
   return (
     <div 
@@ -48,19 +25,11 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
       <div className="p-6 md:p-8">
         {/* Larger image container */}
         <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
-          {pixabayImage ? (
-            <img 
-              src={pixabayImage} 
-              alt={`${service.title} image`} 
-              className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105"
-            />
-          ) : (
-            <img 
-              src={service.icon} 
-              alt={`${service.title} icon`} 
-              className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105"
-            />
-          )}
+          <img 
+            src={service.icon} 
+            alt={`${service.title} icon`} 
+            className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
         
         <Link to={getServiceUrl(service.title)}>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -38,7 +39,7 @@ const services: ServiceInfo[] = [
   {
     title: "Sports Courts",
     description: "Specialized fencing for tennis courts, basketball courts, and other recreational areas with durability in mind.",
-    icon: "https://images.squarespace.cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
+    icon: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
     benefits: [
       "Ball containment systems",
       "Wind screens and privacy panels",
