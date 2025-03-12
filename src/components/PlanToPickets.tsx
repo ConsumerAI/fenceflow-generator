@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CalendarCheck, ClipboardCheck, Construction, PartyPopper } from 'lucide-react';
 
@@ -84,24 +85,13 @@ const PlanToPickets = () => {
               <PartyPopper size={36} className="group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div className="relative">
-              <div className="absolute -top-10 -left-2 text-9xl font-bold text-gray-100 select-none group-hover:text-gray-200 transition-colors duration-300">4</div>
+              <div className="absolute -top-10 -left-2 text-9xl font-bold text-gray-100 select-none group-hover:text-gray-200 transition-colors duration-300">3</div>
               <h3 className="text-2xl font-bold mb-3 relative">Enjoy Your New Yard</h3>
               <p className="text-muted-foreground relative">
                 It's time to show off that new backyard look by celebrating. We recommend inviting all of the neighbors over, 
                 grabbing some good meats from the store, tossing some cold ones in the cooler, bringing out the yard games, 
                 and putting on some good music!
               </p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Decorative dotted line connecting the steps (visible on larger screens) */}
-        <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 z-0 mt-14">
-          <div className="container mx-auto px-8">
-            <div className="relative h-1 w-full">
-              <div className="absolute inset-0 flex">
-                <div className="w-full h-full border-t-2 border-dashed border-texas-terracotta/40"></div>
-              </div>
             </div>
           </div>
         </div>
