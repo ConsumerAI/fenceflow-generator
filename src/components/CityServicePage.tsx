@@ -23,9 +23,9 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
   
   // Service image mapping
   const serviceImages = {
+    "Sports Courts": "/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png",
     "Residential Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
     "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
-    "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
     "Access Control": "/lovable-uploads/223b3ff5-7edb-4b9f-8993-449414f2518b.png",
     "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
   };
@@ -100,46 +100,50 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
         <Navbar />
         
         <main className="flex-1">
-          <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
-            <div className="container mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {service} in {cityName}, Texas
-              </h1>
-              
-              {service === "Sports Courts" && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
-                  <div className="prose prose-lg max-w-none">
-                    <h2 className="text-3xl font-bold mb-4">Pickleball & Tennis Court Installer in {cityName}</h2>
-                    <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong> - The premier pickleball court installer in {cityName}</p>
-                    
-                    <div className="my-6">
-                      <img 
-                        src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
-                        alt={`Professional pickleball and tennis court installation in ${cityName}`} 
-                        className="w-full rounded-lg"
-                      />
-                    </div>
-                    
-                    {service === "Sports Courts" && (
-                      <>
-                        <h3 className="text-2xl font-semibold mt-6">Premier Pickleball Court Installation in {cityName}</h3>
-                        <p>Looking for professional pickleball court installers near {cityName}? At Fence Fanatics, we're the leading pickleball court installation company serving {cityName} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
-                        
-                        <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.</p>
-                        
-                        <h3 className="text-2xl font-semibold mt-6">Expert Tennis Court Installation in {cityName}</h3>
-                        <p>As the trusted tennis court installer in {cityName}, we create premium tennis facilities built to professional standards. Our tennis court installation services in {cityName} include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
-                        
-                        <p>We handle every aspect of your tennis court project in {cityName}, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
-                      </>
-                    )}
-                  </div>
-                  <div>
-                    <LeadForm city={cityName} />
-                  </div>
+          
+      {service === "Sports Courts" && (
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
+          <div className="container mx-auto px-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              {service} in {cityName}, Texas
+            </h1>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+              <div className="prose prose-lg max-w-none">
+                <h2 className="text-3xl font-bold mb-4">Pickleball & Tennis Court Installer in {cityName}</h2>
+                <p><strong>Call us now at <a href="tel:(469)607-0505">(469) 607-0505</a></strong> - The premier pickleball court installer in {cityName}</p>
+                
+                <div className="my-6">
+                  <img 
+                    src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" 
+                    alt={`Professional pickleball and tennis court installation in ${cityName}`} 
+                    className="w-full rounded-lg"
+                  />
                 </div>
-              )}
+                
+                
+                  <>
+                    <h3 className="text-2xl font-semibold mt-6">Premier Pickleball Court Installation in {cityName}</h3>
+                    <p>Looking for professional pickleball court installers near {cityName}? At Fence Fanatics, we're the leading pickleball court installation company serving {cityName} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
+                    
+                    <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.</p>
+                    
+                    <h3 className="text-2xl font-semibold mt-6">Expert Tennis Court Installation in {cityName}</h3>
+                    <p>As the trusted tennis court installer in {cityName}, we create premium tennis facilities built to professional standards. Our tennis court installation services in {cityName} include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
+                    
+                    <p>We handle every aspect of your tennis court project in {cityName}, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
+                  </>
+                
+              </div>
               
+                <LeadForm city={cityName} />
+              
+            </div>
+          </div>
+        </section>
+      )}
+      
+      
               {service === "Commercial Fencing" && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
                   <div className="prose prose-lg max-w-none">
@@ -274,8 +278,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   </div>
                 </div>
               )}
-            </div>
-          </section>
+            
           
           {service === "Sports Courts" && (
             <section className="py-16 bg-gray-50">
@@ -306,7 +309,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     <p>Most residential pickleball court installations in {cityName} range from $25,000 to $45,000 for a complete project with quality materials and professional construction. Contact us for a detailed estimate specific to your {cityName} property.</p>
                   </div>
                   <div>
-                    <img src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" alt={`Pickleball court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto mb-6" />
+                    <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt={`Pickleball court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto mb-6" />
                     <img src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" alt={`Tennis court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                   </div>
                 </div>
@@ -315,7 +318,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   <h2 className="text-3xl font-bold mb-8">Pickleball Court Fencing & Barriers in {cityName}</h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                      <img src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" alt={`Pickleball court fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                      <img src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" alt={`Pickleball court fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
                     <div className="prose prose-lg max-w-none">
                       <h3 className="text-2xl font-semibold mb-4">Pickleball Court Fence Design & Installation</h3>
@@ -478,6 +481,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
               </div>
             </section>
           )}
+        
         </main>
         
         <Footer />

@@ -37,7 +37,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
                       
                       <div className="my-6">
                         <img 
-                          src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
+                          src="/lovable-uploads/f0e24677-fd61-4796-82d5-66ed2b7beb8c.png" 
                           alt="Professional pickleball and tennis court installation in DFW" 
                           className="w-full rounded-lg"
                         />
