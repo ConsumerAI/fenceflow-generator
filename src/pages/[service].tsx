@@ -268,7 +268,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   
                   {service === "Automatic Gates" && <>
                       <h2 className="text-3xl font-bold mb-4">Automatic Gate Solutions</h2>
-                      <p><strong>Call us now at <a href="tel:555-555-5555">(555) 555-5555</a></strong> for a free consultation.</p>
+                      
                       
                       <p className="my-4">At <strong>Fences Texas</strong>, we specialize in designing, installing, and maintaining automatic gate systems for residential and commercial properties throughout the DFW area. Our custom gate solutions enhance security, convenience, and curb appeal while providing reliable performance year after year.</p>
                       
