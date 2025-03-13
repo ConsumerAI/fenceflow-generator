@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import Breadcrumbs from './components/Breadcrumbs';
 import { services } from './lib/routes';
+import { cities } from './lib/cities';
 import { ServiceType } from './lib/types';
 
 /**
@@ -39,13 +40,15 @@ function App() {
             />
           ))}
           
-          {/* City-specific Service Pages */}
-          {services.map((service) => (
-            <Route 
-              key={`city-${service}`}
-              path={`/:city/${service.toLowerCase().replace(/\s+/g, '-')}`}
-              element={<CityServicePage service={service as ServiceType} />}
-            />
+          {/* City-specific Service Pages - Dynamically generate all city+service combinations */}
+          {cities.map((city) => (
+            services.map((service) => (
+              <Route 
+                key={`${city}-${service}`}
+                path={`/${city.toLowerCase().replace(/\s+/g, '-')}/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                element={<CityServicePage service={service as ServiceType} />}
+              />
+            ))
           ))}
           
           {/* Special Pages */}
