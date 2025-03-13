@@ -74,6 +74,30 @@ const services: ServiceInfo[] = [
   }
 ];
 
+// FAQ data for the homepage
+const homepageFaqs = [
+  {
+    question: "What areas of DFW do you serve?",
+    answer: "We proudly serve over 100 cities across the Dallas/Fort Worth metroplex, including Dallas, Fort Worth, Plano, Irving, Arlington, Frisco, and many more."
+  },
+  {
+    question: "What types of fences do you install?",
+    answer: "We install a wide variety of fences including wood privacy fences, ornamental iron, chain link, vinyl, and custom designs for both residential and commercial properties."
+  },
+  {
+    question: "How long does a typical fence installation take?",
+    answer: "Most residential fence installations can be completed in 1-3 days, while commercial projects may take longer depending on the scope and complexity."
+  },
+  {
+    question: "Do you offer free estimates?",
+    answer: "Yes! We provide free, no-obligation estimates for all fence installation projects throughout the DFW area."
+  },
+  {
+    question: "What warranties do you offer on fence installations?",
+    answer: "We stand behind our work with comprehensive warranties on both materials and craftsmanship. Specific warranty details vary by product and installation type."
+  }
+];
+
 const Index = () => {
   // Function to handle smooth scrolling to the quote form with shake animation
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -135,6 +159,20 @@ const Index = () => {
             ]
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": homepageFaqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
@@ -172,6 +210,9 @@ const Index = () => {
                     src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg?format=1000w" 
                     alt="Professional fence installation in DFW" 
                     className="rounded-lg shadow-md w-full max-w-md mx-auto h-auto"
+                    width="800"
+                    height="600"
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -224,7 +265,9 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <ServiceCard key={service.title} service={service} index={index} />
+                <article key={service.title} className="h-full">
+                  <ServiceCard service={service} index={index} />
+                </article>
               ))}
             </div>
             
@@ -265,6 +308,39 @@ const Index = () => {
                 href="#quote" 
                 onClick={scrollToQuote}
                 className="inline-flex items-center justify-center bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors"
+              >
+                Get a Free Quote
+              </a>
+            </div>
+          </div>
+        </section>
+        
+        {/* FAQ Section */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Get answers to common questions about our fence installation services.
+              </p>
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="space-y-6">
+                {homepageFaqs.map((faq, index) => (
+                  <article key={index} className="bg-secondary/20 rounded-lg p-6">
+                    <h3 className="text-xl font-bold mb-3">{faq.question}</h3>
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="#quote" 
+                onClick={scrollToQuote}
+                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
               </a>

@@ -21,5 +21,20 @@ Allow: /dallas/
 Allow: /fort-worth/
 Allow: /plano/
 
+# Allow search engines to index images
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Allow search engines to index CSS and JavaScript
+Allow: /*.css$
+Allow: /*.js$
+
+# Set crawl delay for better server performance
+Crawl-delay: 1
+
 # Sitemap location
 Sitemap: https://fencestexas.com/sitemap.xml
+

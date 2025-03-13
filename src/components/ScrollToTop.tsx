@@ -3,6 +3,18 @@ import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface SEOData {
+  title?: string;
+  description?: string;
+  faqs?: FAQItem[];
+  imageUrl?: string;
+}
+
 export default function ScrollToTop() {
   const { pathname } = useLocation();
   const prevPathRef = useRef<string>(pathname);
@@ -37,6 +49,22 @@ export default function ScrollToTop() {
 
   // Construct the canonical URL
   const canonicalUrl = `https://fencestexas.com${pathname}`;
+  
+  // Default FAQ schema for all pages
+  const defaultFaqs: FAQItem[] = [
+    {
+      question: "What areas do you service in Texas?",
+      answer: "We provide fence installation services across the entire Dallas/Fort Worth metroplex, including over 100 cities and communities."
+    },
+    {
+      question: "What types of fencing do you install?",
+      answer: "We install residential fencing, commercial fencing, sports courts, access control systems, and automatic gates throughout the DFW area."
+    },
+    {
+      question: "How long does fence installation take?",
+      answer: "Most residential fence installations can be completed in 1-3 days, while commercial projects may take longer depending on the scope and complexity."
+    }
+  ];
 
   return (
     <Helmet>
@@ -72,6 +100,22 @@ export default function ScrollToTop() {
           })}
         </script>
       )}
+      
+      {/* Add FAQ Schema for all pages */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": defaultFaqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        })}
+      </script>
     </Helmet>
   );
 }

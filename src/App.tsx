@@ -14,15 +14,23 @@ import Breadcrumbs from './components/Breadcrumbs';
 import { services } from './lib/routes';
 import { ServiceType } from './lib/types';
 
+/**
+ * Main application component that defines all routes
+ * Organized into logical sections for better maintainability
+ */
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          {/* Home Page */}
           <Route path="/" element={<Index />} />
+          
+          {/* City-specific Pages */}
           <Route path="/:city" element={<CityPage />} />
-          {/* General service pages */}
+          
+          {/* General Service Pages */}
           {services.map((service) => (
             <Route 
               key={service}
@@ -30,7 +38,8 @@ function App() {
               element={<ServicePage service={service as ServiceType} />}
             />
           ))}
-          {/* City-specific service pages */}
+          
+          {/* City-specific Service Pages */}
           {services.map((service) => (
             <Route 
               key={`city-${service}`}
@@ -38,14 +47,17 @@ function App() {
               element={<CityServicePage service={service as ServiceType} />}
             />
           ))}
+          
+          {/* Special Pages */}
           <Route path="/fence-companies-near-me" element={<NearMePage />} />
           <Route path="/automatic-gates" element={<AutomaticGatesPage />} />
           
-          {/* Add additional service-related routes (for deeper content linking) */}
+          {/* Additional Service-related Routes (for deeper content linking) */}
           <Route path="/fence-types" element={<ServicePage service="Residential Fencing" />} />
           <Route path="/commercial-security-fencing" element={<ServicePage service="Commercial Fencing" />} />
           <Route path="/residential-fence-styles" element={<ServicePage service="Residential Fencing" />} />
           
+          {/* 404 Not Found */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
