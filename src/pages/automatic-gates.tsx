@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
+import { Button } from '@/components/ui/button';
 
 const AutomaticGatesPage = () => {
   // Images for the gallery
@@ -83,13 +84,12 @@ const AutomaticGatesPage = () => {
                   Enhance your property's security, convenience, and curb appeal with our custom automatic gate installations. We specialize in designing and installing sophisticated gate systems tailored to your specific needs and aesthetic preferences.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="#quote" 
+                  <Button 
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                     onClick={scrollToQuote}
-                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote
-                  </a>
+                  </Button>
                 </div>
                 <div className="mt-6">
                   <img 
@@ -142,13 +142,12 @@ const AutomaticGatesPage = () => {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
+              <Button 
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -238,13 +237,12 @@ const AutomaticGatesPage = () => {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
+              <Button 
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </a>
+              </Button>
             </div>
           </div>
         </section>

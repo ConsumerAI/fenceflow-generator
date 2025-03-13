@@ -11,6 +11,7 @@ import { cities, getCityFromUrl } from '@/lib/cities';
 import { supabase, generateCityContent } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 import { marked } from 'marked';
+import { Button } from '@/components/ui/button';
 
 const CityPage = () => {
   const { city: citySlug } = useParams<{ city: string }>();
@@ -20,7 +21,7 @@ const CityPage = () => {
   
   const cityName = getCityFromUrl(`/${citySlug}`);
   
-  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     e.preventDefault();
     const quoteElement = document.getElementById('quote');
     
@@ -163,13 +164,12 @@ const CityPage = () => {
                   dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.intro) }} 
                 />
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <a 
-                    href="#quote" 
+                  <Button 
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                     onClick={scrollToQuote}
-                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote
-                  </a>
+                  </Button>
                 </div>
                 <div className="mt-6">
                   <img 
@@ -196,13 +196,12 @@ const CityPage = () => {
             <ImageCarousel />
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
+              <Button 
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -235,13 +234,12 @@ const CityPage = () => {
                         dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
                       />
                       <div>
-                        <a 
-                          href="#quote" 
+                        <Button 
+                          className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors mt-4"
                           onClick={scrollToQuote}
-                          className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center mt-4"
                         >
                           Get a Free Quote
-                        </a>
+                        </Button>
                       </div>
                     </div>
                     
@@ -266,13 +264,12 @@ const CityPage = () => {
             </div>
             
             <div className="mt-16 flex justify-center">
-              <a 
-                href="#quote" 
+              <Button 
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -312,13 +309,12 @@ const CityPage = () => {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
+              <Button 
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
               >
                 Get a Free Quote
-              </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -342,13 +338,12 @@ const CityPage = () => {
                 />
                 
                 <div className="mt-6 flex justify-center">
-                  <a 
-                    href="#quote" 
+                  <Button 
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                     onClick={scrollToQuote}
-                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
                   >
                     Get a Free Quote
-                  </a>
+                  </Button>
                 </div>
               </div>
             </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -5,6 +6,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+
 interface ServicePageProps {
   service: ServiceType;
 }
@@ -330,6 +333,28 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </div>
                       
                       <p className="mt-8 text-lg font-semibold">Ready to enhance your property with a custom automatic gate? Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> for a free consultation and estimate. We serve the entire DFW metroplex with quality gate solutions.</p>
+                      
+                      <div className="mt-4">
+                        <Button 
+                          className="bg-texas-terracotta hover:bg-texas-earth text-white"
+                          onClick={() => {
+                            const quoteElement = document.getElementById('quote');
+                            if (quoteElement) {
+                              window.location.hash = 'quote';
+                              quoteElement.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'center'
+                              });
+                              quoteElement.classList.add('animate-shake');
+                              setTimeout(() => {
+                                quoteElement.classList.remove('animate-shake');
+                              }, 2000);
+                            }
+                          }}
+                        >
+                          Get Free Quote
+                        </Button>
+                      </div>
                     </>}
                   
                   {service === "Residential Fencing" && <>
