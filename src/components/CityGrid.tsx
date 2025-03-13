@@ -30,6 +30,7 @@ const CityGrid = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="pl-10 py-6 text-base border-texas-sand/20 focus:border-texas-terracotta"
+          aria-label="Search for cities"
         />
       </div>
       
@@ -38,17 +39,29 @@ const CityGrid = () => {
           <p className="text-lg text-muted-foreground">No cities found matching "{searchQuery}"</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-          {filteredCities.map((city) => (
+        <div 
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"
+          itemScope 
+          itemType="https://schema.org/ItemList"
+        >
+          {filteredCities.map((city, index) => (
             <Link
               key={city}
               to={getCityUrl(city)}
               className="group"
+              itemProp="itemListElement"
+              itemScope
+              itemType="https://schema.org/ListItem"
             >
+              <meta itemProp="position" content={String(index + 1)} />
               <div className="h-full border border-border rounded-lg p-4 transition-all duration-300 hover:border-texas-terracotta hover:shadow-md flex items-center justify-center">
-                <span className="text-foreground group-hover:text-texas-terracotta transition-colors text-center">
+                <span 
+                  className="text-foreground group-hover:text-texas-terracotta transition-colors text-center"
+                  itemProp="name"
+                >
                   {city}
                 </span>
+                <meta itemProp="url" content={`https://fencestexas.com/${city.toLowerCase().replace(/\s+/g, '-')}`} />
               </div>
             </Link>
           ))}
