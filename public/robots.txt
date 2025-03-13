@@ -5,5 +5,11 @@
 User-agent: *
 Allow: /
 
+# Preventing crawling of potential internal-only paths
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
 # Sitemap location
 Sitemap: https://fencestexas.com/sitemap.xml
+

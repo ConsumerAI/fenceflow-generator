@@ -1,6 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,5 +35,12 @@ export default function ScrollToTop() {
     }
   }, [pathname]);
 
-  return null;
+  // Construct the canonical URL
+  const canonicalUrl = `https://fencestexas.com${pathname}`;
+
+  return (
+    <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
+  );
 }

@@ -40,6 +40,8 @@ const ServiceCard = ({
             className="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105"
             itemProp="image"
             loading="lazy"
+            width="400"
+            height="300"
           />
         </div>
         
@@ -80,6 +82,7 @@ const ServiceCard = ({
         
         <meta itemProp="provider" content="Fences Texas" />
         <meta itemProp="areaServed" content="Dallas-Fort Worth Metroplex" />
+        <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(service.title)}`} />
       </div>
     </div>
   );

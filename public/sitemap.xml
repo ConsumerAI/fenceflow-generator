@@ -80,6 +80,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://fencestexas.com/mckinney</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/denton</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/irving</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/garland</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/richardson</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
   <!-- Major city-service pages -->
   <url>
@@ -120,6 +150,24 @@
   </url>
   <url>
     <loc>https://fencestexas.com/fort-worth/commercial-fencing</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/fort-worth/sports-courts</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/fort-worth/access-control</loc>
+    <lastmod>2023-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fencestexas.com/fort-worth/automatic-gates</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

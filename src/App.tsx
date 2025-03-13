@@ -10,6 +10,7 @@ import ServicePage from './pages/[service]';
 import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
+import Breadcrumbs from './components/Breadcrumbs';
 import { services } from './lib/routes';
 import { ServiceType } from './lib/types';
 
