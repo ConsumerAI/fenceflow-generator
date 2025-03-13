@@ -1,22 +1,45 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ServiceInfo } from '@/lib/types';
-import { getServiceUrl } from '@/lib/routes';
+import { ServiceInfo, ServiceType } from '@/lib/types';
+import { getServiceUrl, getCityServiceUrl } from '@/lib/routes';
+import { cities } from '@/lib/cities';
 
 interface ServiceCardProps {
   service: ServiceInfo;
   index: number;
+  showRelatedServices?: boolean;
+  city?: string;
 }
 
 const ServiceCard = ({
   service,
-  index
+  index,
+  showRelatedServices = false,
+  city
 }: ServiceCardProps) => {
   const staggerDelay = `${index * 0.1}s`;
   
   // Create formatted ID for better HTML semantics and SEO
   const serviceId = service.title.toLowerCase().replace(/\s+/g, '-');
+  
+  // Find related services (excluding current service)
+  const getRelatedServices = (): ServiceType[] => {
+    const allServices: ServiceType[] = [
+      "Residential Fencing",
+      "Commercial Fencing",
+      "Sports Courts",
+      "Access Control",
+      "Automatic Gates"
+    ];
+    
+    // Return 2 related services (excluding current one)
+    return allServices
+      .filter(s => s !== service.title)
+      .slice(0, 2);
+  };
+  
+  const relatedServices = getRelatedServices();
   
   return (
     <div 
@@ -79,6 +102,42 @@ const ServiceCard = ({
             </li>
           ))}
         </ul>
+        
+        {/* Contextual Internal Links Section */}
+        {showRelatedServices && (
+          <div className="mt-6 pt-4 border-t border-muted">
+            <h4 className="text-sm font-medium text-muted-foreground mb-2">Related Services:</h4>
+            <div className="flex flex-wrap gap-2">
+              {relatedServices.map((relatedService) => (
+                <Link
+                  key={relatedService}
+                  to={city ? getCityServiceUrl(city, relatedService) : getServiceUrl(relatedService)}
+                  className="text-sm px-3 py-1 bg-secondary rounded-full hover:bg-texas-terracotta/10 hover:text-texas-terracotta transition-colors"
+                >
+                  {relatedService}
+                </Link>
+              ))}
+            </div>
+            
+            {/* Link to specific cities if on a service page */}
+            {!city && (
+              <div className="mt-3">
+                <h4 className="text-sm font-medium text-muted-foreground mb-2">Popular Locations:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {cities.slice(0, 3).map((popularCity) => (
+                    <Link
+                      key={popularCity}
+                      to={getCityServiceUrl(popularCity, service.title)}
+                      className="text-sm px-3 py-1 bg-secondary rounded-full hover:bg-texas-terracotta/10 hover:text-texas-terracotta transition-colors"
+                    >
+                      {service.title} in {popularCity}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
         
         <meta itemProp="provider" content="Fences Texas" />
         <meta itemProp="areaServed" content="Dallas-Fort Worth Metroplex" />

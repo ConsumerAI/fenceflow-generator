@@ -40,6 +40,12 @@ function App() {
           ))}
           <Route path="/fence-companies-near-me" element={<NearMePage />} />
           <Route path="/automatic-gates" element={<AutomaticGatesPage />} />
+          
+          {/* Add additional service-related routes (for deeper content linking) */}
+          <Route path="/fence-types" element={<ServicePage service="Residential Fencing" />} />
+          <Route path="/commercial-security-fencing" element={<ServicePage service="Commercial Fencing" />} />
+          <Route path="/residential-fence-styles" element={<ServicePage service="Residential Fencing" />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

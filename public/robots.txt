@@ -10,6 +10,16 @@ Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /api/
 
+# Important pages for increased crawling priority
+Allow: /fence-companies-near-me
+Allow: /residential-fencing
+Allow: /commercial-fencing
+Allow: /sports-courts
+Allow: /access-control
+Allow: /automatic-gates
+Allow: /dallas/
+Allow: /fort-worth/
+Allow: /plano/
+
 # Sitemap location
 Sitemap: https://fencestexas.com/sitemap.xml
-

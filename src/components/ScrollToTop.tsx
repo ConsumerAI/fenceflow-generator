@@ -41,6 +41,37 @@ export default function ScrollToTop() {
   return (
     <Helmet>
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Add next/prev links for paginated content if applicable */}
+      {pathname.includes('/fence-companies-near-me') && (
+        <>
+          <link rel="next" href="https://fencestexas.com/residential-fencing" />
+        </>
+      )}
+      
+      {/* Add schema.org structured data for breadcrumbs */}
+      {pathname !== '/' && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://fencestexas.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": document.title.split('|')[0].trim(),
+                "item": canonicalUrl
+              }
+            ]
+          })}
+        </script>
+      )}
     </Helmet>
   );
 }
