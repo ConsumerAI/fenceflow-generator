@@ -266,7 +266,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                         </div>
                       </div>
                       
-                      <p className="mt-8">Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> to discuss your access control needs and receive a personalized security solution for your property.</p>
+                      <p className="mt-8">Contact <strong>Fences Texas</strong> today to discuss your access control needs and receive a personalized security solution for your property.</p>
                     </>}
                   
                   {service === "Automatic Gates" && <>
@@ -332,7 +332,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                         </div>
                       </div>
                       
-                      <p className="mt-8 text-lg font-semibold">Ready to enhance your property with a custom automatic gate? Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> for a free consultation and estimate. We serve the entire DFW metroplex with quality gate solutions.</p>
+                      <p className="mt-8 text-lg font-semibold">Ready to enhance your property with a custom automatic gate? Contact <strong>Fences Texas</strong> today for a free consultation and estimate. We serve the entire DFW metroplex with quality gate solutions.</p>
                       
                       <div className="mt-4">
                         <Button 
@@ -359,7 +359,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   
                   {service === "Residential Fencing" && <>
                       <h2 className="text-3xl font-bold mb-4">Residential Fencing Solutions</h2>
-                      <p><strong>Call us now at <a href="tel:555-555-5555">(555) 555-5555</a></strong> for a free estimate.</p>
+                      <p><strong>Call us now</strong> for a free estimate.</p>
                       
                       <p className="my-4">At <strong>Fences Texas</strong>, we understand that your fence is more than just a boundary—it's an extension of your home and a reflection of your style. Our residential fencing solutions are designed to enhance your property's security, privacy, and aesthetics while adding lasting value to your home.</p>
                       
@@ -402,7 +402,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                         <li className="mb-2"><strong>Competitive Pricing:</strong> Receive excellent value with fair, transparent pricing and no hidden costs.</li>
                       </ul>
                       
-                      <p className="mt-8 text-lg font-semibold">Ready to enhance your home with a beautiful new fence? Contact <strong>Fences Texas</strong> today at <a href="tel:555-555-5555">(555) 555-5555</a> for a free consultation and estimate. We serve homeowners throughout the DFW metroplex with quality fencing solutions.</p>
+                      <p className="mt-8 text-lg font-semibold">Ready to enhance your home with a beautiful new fence? Contact <strong>Fences Texas</strong> today for a free consultation and estimate. We serve homeowners throughout the DFW metroplex with quality fencing solutions.</p>
                     </>}
                 </div>
                 

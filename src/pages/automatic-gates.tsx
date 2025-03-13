@@ -37,7 +37,7 @@ const AutomaticGatesPage = () => {
   ];
 
   // Function to handle smooth scrolling to the quote form with shake animation
-  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToQuote = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     
     const quoteElement = document.getElementById('quote');
@@ -178,7 +178,7 @@ const AutomaticGatesPage = () => {
               <div className="p-6 rounded-xl bg-white shadow-md">
                 <div className="w-12 h-12 rounded-full bg-texas-terracotta/20 flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Solar Power Options</h3>
