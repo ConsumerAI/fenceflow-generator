@@ -4,6 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://fencestexas.com/</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,6 +12,7 @@
   <!-- Catch-all near me page -->
   <url>
     <loc>https://fencestexas.com/fence-companies-near-me</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -18,26 +20,31 @@
   <!-- Service pages -->
   <url>
     <loc>https://fencestexas.com/residential-fencing</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/commercial-fencing</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/sports-courts</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/access-control</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/automatic-gates</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -45,51 +52,31 @@
   <!-- Major city pages -->
   <url>
     <loc>https://fencestexas.com/dallas</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/fort-worth</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/arlington</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/plano</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/frisco</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/irving</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/garland</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/mckinney</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/denton</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/carrollton</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -97,57 +84,47 @@
   <!-- Major city-service pages -->
   <url>
     <loc>https://fencestexas.com/dallas/residential-fencing</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/dallas/commercial-fencing</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/dallas/sports-courts</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/dallas/access-control</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/dallas/automatic-gates</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/fort-worth/residential-fencing</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fencestexas.com/fort-worth/commercial-fencing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/fort-worth/sports-courts</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/fort-worth/access-control</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fencestexas.com/fort-worth/automatic-gates</loc>
+    <lastmod>2023-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Note: For a complete sitemap with all 607 pages, you would continue 
-       listing all cities and service combinations. This is a representative
-       sample showing the pattern. For production, consider generating this
-       file dynamically or using a sitemap generator. -->
+  <!-- Note: For production, you should generate this file to include all 607 pages.
+       This is a representative sample showing the primary pages and pattern. -->
 </urlset>

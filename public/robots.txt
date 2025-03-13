@@ -1,9 +1,9 @@
 
+# Fences Texas - Robots.txt
+# https://fencestexas.com
+
 User-agent: *
 Allow: /
-
-# Allow all crawlers full access
-Disallow: 
 
 # Sitemap location
 Sitemap: https://fencestexas.com/sitemap.xml
