@@ -1001,8 +1001,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- For remaining cities, add their service pages following the same pattern -->
-  <!-- The complete sitemap would include all 100 cities with 5 services each -->
-  <!-- This is a representative sample - the actual sitemap would contain all 607 URLs -->
 </urlset>
