@@ -23,4 +23,16 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     include: ['zod', '@hookform/resolvers/zod']
   },
+  build: {
+    commonjsOptions: {
+      include: [/zod/, /node_modules/],
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'zod', '@hookform/resolvers/zod'],
+        }
+      }
+    }
+  }
 }));
