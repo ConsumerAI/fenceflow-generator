@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -18,6 +17,8 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      'zod': path.resolve(__dirname, 'node_modules/zod'),
+      '@hookform/resolvers': path.resolve(__dirname, 'node_modules/@hookform/resolvers')
     }
   },
   optimizeDeps: {
@@ -34,8 +35,7 @@ export default defineConfig(({ mode }) => ({
           'vendor': ['react', 'react-dom'],
           'form': ['zod', '@hookform/resolvers/zod']
         }
-      },
-      external: [] // Ensure no externals that should be bundled
+      }
     }
   }
 }));
