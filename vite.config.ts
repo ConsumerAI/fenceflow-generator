@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -17,7 +18,8 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "zod": path.resolve(__dirname, "node_modules/zod/lib/index.js")
+      // Use the ESM version of zod instead of CJS
+      "zod": path.resolve(__dirname, "node_modules/zod/lib/index.mjs")
     }
   },
   optimizeDeps: {
