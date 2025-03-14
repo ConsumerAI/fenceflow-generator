@@ -23,3 +23,12 @@ export function getCityServiceUrl(city: string, service: ServiceType): string {
   const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
   return `/${citySlug}/${serviceSlug}`;
 }
+
+// For sitemap generation
+export const serviceRouteMap: Record<string, ServiceType> = {
+  'residential-fencing': 'Residential Fencing',
+  'commercial-fencing': 'Commercial Fencing',
+  'sports-courts': 'Sports Courts',
+  'access-control': 'Access Control',
+  'automatic-gates': 'Automatic Gates'
+};

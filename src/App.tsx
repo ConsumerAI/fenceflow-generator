@@ -31,29 +31,29 @@ function App() {
           {/* City-specific Pages */}
           <Route path="/:city" element={<CityPage />} />
           
-          {/* General Service Pages */}
-          {services.map((service) => (
-            <Route 
-              key={service}
-              path={`/${service.toLowerCase().replace(/\s+/g, '-')}`}
-              element={<ServicePage service={service as ServiceType} />}
-            />
-          ))}
+          {/* General Service Pages - Using exact route paths that match the sitemap */}
+          <Route path="/residential-fencing" element={<ServicePage service="Residential Fencing" />} />
+          <Route path="/commercial-fencing" element={<ServicePage service="Commercial Fencing" />} />
+          <Route path="/sports-courts" element={<ServicePage service="Sports Courts" />} />
+          <Route path="/access-control" element={<ServicePage service="Access Control" />} />
+          <Route path="/automatic-gates" element={<AutomaticGatesPage />} />
           
           {/* City-specific Service Pages - Dynamically generate all city+service combinations */}
           {cities.map((city) => (
-            services.map((service) => (
-              <Route 
-                key={`${city}-${service}`}
-                path={`/${city.toLowerCase().replace(/\s+/g, '-')}/${service.toLowerCase().replace(/\s+/g, '-')}`}
-                element={<CityServicePage service={service as ServiceType} />}
-              />
-            ))
+            services.map((service) => {
+              const serviceRoute = service.toLowerCase().replace(/\s+/g, '-');
+              return (
+                <Route 
+                  key={`${city}-${service}`}
+                  path={`/${city.toLowerCase().replace(/\s+/g, '-')}/${serviceRoute}`}
+                  element={<CityServicePage service={service as ServiceType} />}
+                />
+              );
+            })
           ))}
           
           {/* Special Pages */}
           <Route path="/fence-companies-near-me" element={<NearMePage />} />
-          <Route path="/automatic-gates" element={<AutomaticGatesPage />} />
           
           {/* Additional Service-related Routes (for deeper content linking) */}
           <Route path="/fence-types" element={<ServicePage service="Residential Fencing" />} />

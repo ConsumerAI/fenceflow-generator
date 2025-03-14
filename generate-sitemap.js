@@ -1,3 +1,4 @@
+
 import fs from 'fs';
 
 // Define all cities (100 total)
@@ -18,10 +19,14 @@ const cities = [
   'lavon', 'alvarado', 'venus', 'decatur', 'bridgeport', 'ponder', 'aledo'
 ];
 
-// Define services
-const services = [
-  'residential-fencing', 'commercial-fencing', 'sports-courts', 'access-control', 'automatic-gates'
-];
+// Define services with correct route format
+const serviceRoutes = {
+  'residential-fencing': 'Residential Fencing',
+  'commercial-fencing': 'Commercial Fencing',
+  'sports-courts': 'Sports Courts',
+  'access-control': 'Access Control',
+  'automatic-gates': 'Automatic Gates'
+};
 
 // Generate sitemap content
 let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
@@ -30,7 +35,7 @@ let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www
 sitemap += `
   <url>
     <loc>https://fencestexas.com/</loc>
-    <lastmod>2025-03-13</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>`;
@@ -39,17 +44,17 @@ sitemap += `
 sitemap += `
   <url>
     <loc>https://fencestexas.com/fence-companies-near-me</loc>
-    <lastmod>2025-03-13</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>`;
 
 // Service pages (5)
-services.forEach(service => {
+Object.keys(serviceRoutes).forEach(serviceRoute => {
   sitemap += `
   <url>
-    <loc>https://fencestexas.com/${service}</loc>
-    <lastmod>2025-03-13</lastmod>
+    <loc>https://fencestexas.com/${serviceRoute}</loc>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`;
@@ -60,7 +65,7 @@ cities.forEach(city => {
   sitemap += `
   <url>
     <loc>https://fencestexas.com/${city}</loc>
-    <lastmod>2025-03-13</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`;
@@ -68,11 +73,11 @@ cities.forEach(city => {
 
 // City-service pages (500)
 cities.forEach(city => {
-  services.forEach(service => {
+  Object.keys(serviceRoutes).forEach(serviceRoute => {
     sitemap += `
   <url>
-    <loc>https://fencestexas.com/${city}/${service}</loc>
-    <lastmod>2025-03-13</lastmod>
+    <loc>https://fencestexas.com/${city}/${serviceRoute}</loc>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`;
