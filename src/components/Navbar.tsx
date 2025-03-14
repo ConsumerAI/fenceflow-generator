@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -52,9 +51,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center text-texas-earth font-bold text-xl sm:text-2xl" onClick={closeMenu}>
-              <span className="font-bold text-3xl mr-1">F</span>
-              <span className="text-texas-terracotta font-bold text-3xl">T</span>
-              <span className="text-texas-earth text-sm font-medium ml-1 hidden sm:inline-block">FencesTexas</span>
+              <span className="text-texas-earth font-bold">FencesTexas</span>
             </Link>
           </div>
           
