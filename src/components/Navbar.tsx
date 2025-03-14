@@ -19,15 +19,13 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
   
-  // Function to handle smooth scrolling to the quote form with shake animation
   const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    closeMenu(); // Close mobile menu if open
+    closeMenu();
     
     const quoteElement = document.getElementById('quote');
     
     if (quoteElement) {
-      // Update URL with hash for page reloads
       window.location.hash = 'quote';
       
       quoteElement.scrollIntoView({ 
@@ -35,7 +33,6 @@ const Navbar = () => {
         block: 'center'
       });
       
-      // Add and remove shake class to trigger animation
       quoteElement.classList.add('animate-shake');
       setTimeout(() => {
         quoteElement.classList.remove('animate-shake');
@@ -50,12 +47,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center text-texas-earth font-bold text-xl sm:text-2xl" onClick={closeMenu}>
-              <span className="text-texas-earth font-bold">FencesTexas</span>
+            <Link to="/" className="flex items-center font-bold text-xl sm:text-2xl" onClick={closeMenu}>
+              <span className="text-texas-earth font-bold">Fences</span>
+              <span className="text-texas-terracotta font-bold">Texas</span>
             </Link>
           </div>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-foreground hover:text-texas-terracotta transition-colors">
               Home
@@ -84,7 +81,6 @@ const Navbar = () => {
             </a>
           </div>
           
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <Button 
               variant="ghost" 
@@ -97,7 +93,6 @@ const Navbar = () => {
           </div>
         </div>
         
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
