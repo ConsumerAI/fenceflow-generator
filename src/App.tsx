@@ -20,53 +20,55 @@ import { ServiceType } from './lib/types';
  * Organized into logical sections for better maintainability
  */
 function App() {
+  // Debug function to log route registration during development
+  const logRoute = (path: string, component: string) => {
+    console.log(`Registered route: ${path} => ${component}`);
+    return path;
+  };
+
   return (
     <HelmetProvider>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
           {/* Home Page */}
-          <Route path="/" element={<Index />} />
+          <Route path={logRoute("/", "Index")} element={<Index />} />
           
           {/* City-specific Pages */}
-          <Route path="/:city" element={<CityPage />} />
+          <Route path={logRoute("/:city", "CityPage")} element={<CityPage />} />
           
-          {/* General Service Pages - Using exact route paths that match the sitemap */}
-          {services.map((service) => {
-            const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
-            return (
-              <Route 
-                key={serviceSlug}
-                path={`/${serviceSlug}`} 
-                element={<ServicePage service={service} />}
-              />
-            );
-          })}
+          {/* Special Pages with explicit paths */}
+          <Route path={logRoute("/fence-companies-near-me", "NearMePage")} element={<NearMePage />} />
+          <Route path={logRoute("/automatic-gates", "AutomaticGatesPage")} element={<AutomaticGatesPage />} />
           
-          {/* Special Pages */}
-          <Route path="/fence-companies-near-me" element={<NearMePage />} />
+          {/* General Service Pages - Using explicit path matching for clarity */}
+          <Route path={logRoute("/residential-fencing", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
+          <Route path={logRoute("/commercial-fencing", "ServicePage:Commercial")} element={<ServicePage service="Commercial Fencing" />} />
+          <Route path={logRoute("/sports-courts", "ServicePage:Sports")} element={<ServicePage service="Sports Courts" />} />
+          <Route path={logRoute("/access-control", "ServicePage:Access")} element={<ServicePage service="Access Control" />} />
+          
+          {/* Additional Service-related Routes (for deeper content linking) */}
+          <Route path={logRoute("/fence-types", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
+          <Route path={logRoute("/commercial-security-fencing", "ServicePage:Commercial")} element={<ServicePage service="Commercial Fencing" />} />
+          <Route path={logRoute("/residential-fence-styles", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
           
           {/* City-specific Service Pages - Dynamically generate all city+service combinations */}
           {cities.map((city) => (
             services.map((service) => {
               const citySlug = city.toLowerCase().replace(/\s+/g, '-');
               const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
+              const path = `/${citySlug}/${serviceSlug}`;
               return (
                 <Route 
                   key={`${citySlug}-${serviceSlug}`}
-                  path={`/${citySlug}/${serviceSlug}`}
+                  path={logRoute(path, `CityServicePage:${city}:${service}`)}
                   element={<CityServicePage service={service as ServiceType} />}
                 />
               );
             })
           ))}
           
-          {/* Additional Service-related Routes (for deeper content linking) */}
-          <Route path="/fence-types" element={<ServicePage service="Residential Fencing" />} />
-          <Route path="/commercial-security-fencing" element={<ServicePage service="Commercial Fencing" />} />
-          <Route path="/residential-fence-styles" element={<ServicePage service="Residential Fencing" />} />
-          
-          {/* 404 Not Found */}
+          {/* 404 Not Found - Must be last */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
