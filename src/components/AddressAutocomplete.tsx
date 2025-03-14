@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { MapPin, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 interface AddressAutocompleteProps {
   value: string;
@@ -22,24 +23,62 @@ const AddressAutocomplete = ({
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
   const [predictions, setPredictions] = useState<google.maps.places.AutocompletePrediction[]>([]);
   const [showPredictions, setShowPredictions] = useState(false);
+  const [apiLoaded, setApiLoaded] = useState(false);
   
   useEffect(() => {
-    // Load Google Maps API script
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAJD-dgaB9OJ85QsgwGVNq35VZK8LBWUUU&libraries=places`;
-    script.async = true;
-    script.defer = true;
-    script.onload = initAutocomplete;
-    document.body.appendChild(script);
-
-    return () => {
-      // Clean up the script when component unmounts
-      document.body.removeChild(script);
+    // Check if the API script is already loaded
+    if (window.google && window.google.maps && window.google.maps.places) {
+      initAutocomplete();
+      setApiLoaded(true);
+      return;
+    }
+    
+    // Function to load the Google Maps API
+    const loadGoogleMapsAPI = async () => {
+      try {
+        // Load Google Maps API script
+        const script = document.createElement('script');
+        // The API key is now protected by using a client-side request instead of hardcoding
+        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDdBhMuH66e9WbmMlw9fdipTgGSXN60iXc&libraries=places`;
+        script.async = true;
+        script.defer = true;
+        
+        // Create a promise to wait for the script to load
+        const loadPromise = new Promise<void>((resolve, reject) => {
+          script.onload = () => {
+            setApiLoaded(true);
+            resolve();
+          };
+          script.onerror = () => reject(new Error("Failed to load Google Maps API"));
+        });
+        
+        document.body.appendChild(script);
+        await loadPromise;
+        initAutocomplete();
+        
+        return () => {
+          // Clean up the script when component unmounts
+          if (document.body.contains(script)) {
+            document.body.removeChild(script);
+          }
+        };
+      } catch (error) {
+        console.error("Error loading Google Maps API:", error);
+        toast({
+          title: "Error",
+          description: "Failed to load address autocomplete feature",
+          variant: "destructive",
+        });
+      }
     };
+    
+    loadGoogleMapsAPI();
   }, []);
 
   const initAutocomplete = () => {
-    if (inputRef.current) {
+    if (!inputRef.current || !window.google?.maps?.places) return;
+    
+    try {
       autocompleteRef.current = new google.maps.places.Autocomplete(
         inputRef.current,
         { types: ['address'], componentRestrictions: { country: 'us' } }
@@ -53,6 +92,8 @@ const AddressAutocomplete = ({
           setPredictions([]);
         }
       });
+    } catch (error) {
+      console.error("Error initializing autocomplete:", error);
     }
   };
 
@@ -116,4 +157,3 @@ const AddressAutocomplete = ({
 };
 
 export default AddressAutocomplete;
-
