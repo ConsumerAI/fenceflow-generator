@@ -33,7 +33,8 @@ export default defineConfig(({ mode }) => ({
           'vendor': ['react', 'react-dom'],
           'form': ['zod', '@hookform/resolvers/zod']
         }
-      }
+      },
+      external: ['zod', '@hookform/resolvers/zod']
     }
   }
 }));
