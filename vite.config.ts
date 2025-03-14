@@ -18,8 +18,7 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      // Use the ESM version of zod instead of CJS
-      "zod": path.resolve(__dirname, "node_modules/zod/lib/index.mjs")
+      // Remove the problematic zod alias
     }
   },
   optimizeDeps: {
