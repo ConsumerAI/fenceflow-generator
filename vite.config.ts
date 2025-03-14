@@ -16,7 +16,8 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src")
+      "@": path.resolve(__dirname, "./src"),
+      "zod": path.resolve(__dirname, "node_modules/zod/dist/index.js")
     }
   },
   optimizeDeps: {
