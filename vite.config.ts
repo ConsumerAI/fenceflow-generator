@@ -17,25 +17,24 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "zod": path.resolve(__dirname, "node_modules/zod/lib/index.js")
     }
   },
   optimizeDeps: {
-    include: ['zod', '@hookform/resolvers/zod']
+    include: ['zod', '@hookform/resolvers/zod'],
+    esbuildOptions: {
+      target: 'es2020'
+    }
   },
   build: {
-    commonjsOptions: {
-      include: [/node_modules/],
-      transformMixedEsModules: true
-    },
+    target: 'es2020',
     rollupOptions: {
-      external: [],
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom'],
-          'zod': ['zod', '@hookform/resolvers/zod']
+          'form': ['zod', '@hookform/resolvers/zod']
         }
       }
-    },
-    target: 'esnext'
+    }
   }
 }));
