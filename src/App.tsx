@@ -11,7 +11,7 @@ import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import Breadcrumbs from './components/Breadcrumbs';
-import { services } from './lib/routes';
+import { services, serviceRouteMap } from './lib/routes';
 import { cities } from './lib/cities';
 import { ServiceType } from './lib/types';
 
@@ -32,28 +32,34 @@ function App() {
           <Route path="/:city" element={<CityPage />} />
           
           {/* General Service Pages - Using exact route paths that match the sitemap */}
-          <Route path="/residential-fencing" element={<ServicePage service="Residential Fencing" />} />
-          <Route path="/commercial-fencing" element={<ServicePage service="Commercial Fencing" />} />
-          <Route path="/sports-courts" element={<ServicePage service="Sports Courts" />} />
-          <Route path="/access-control" element={<ServicePage service="Access Control" />} />
-          <Route path="/automatic-gates" element={<AutomaticGatesPage />} />
+          {services.map((service) => {
+            const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
+            return (
+              <Route 
+                key={serviceSlug}
+                path={`/${serviceSlug}`} 
+                element={<ServicePage service={service} />}
+              />
+            );
+          })}
+          
+          {/* Special Pages */}
+          <Route path="/fence-companies-near-me" element={<NearMePage />} />
           
           {/* City-specific Service Pages - Dynamically generate all city+service combinations */}
           {cities.map((city) => (
             services.map((service) => {
-              const serviceRoute = service.toLowerCase().replace(/\s+/g, '-');
+              const citySlug = city.toLowerCase().replace(/\s+/g, '-');
+              const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
               return (
                 <Route 
-                  key={`${city}-${service}`}
-                  path={`/${city.toLowerCase().replace(/\s+/g, '-')}/${serviceRoute}`}
+                  key={`${citySlug}-${serviceSlug}`}
+                  path={`/${citySlug}/${serviceSlug}`}
                   element={<CityServicePage service={service as ServiceType} />}
                 />
               );
             })
           ))}
-          
-          {/* Special Pages */}
-          <Route path="/fence-companies-near-me" element={<NearMePage />} />
           
           {/* Additional Service-related Routes (for deeper content linking) */}
           <Route path="/fence-types" element={<ServicePage service="Residential Fencing" />} />
