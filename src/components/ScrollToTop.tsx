@@ -66,6 +66,10 @@ export default function ScrollToTop() {
     }
   ];
 
+  // Check if we're on the homepage - if so, skip adding the FAQ schema here
+  // since Index.tsx already has its own FAQ schema
+  const isHomePage = pathname === '/';
+
   return (
     <Helmet>
       <link rel="canonical" href={canonicalUrl} />
@@ -101,21 +105,23 @@ export default function ScrollToTop() {
         </script>
       )}
       
-      {/* Add FAQ Schema for all pages */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": defaultFaqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        })}
-      </script>
+      {/* Add FAQ Schema only for pages that don't have their own FAQ schema */}
+      {!isHomePage && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": defaultFaqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+      )}
     </Helmet>
   );
 }
