@@ -12,6 +12,7 @@ import { toast } from '@/hooks/use-toast';
 import { Lead, ServiceType } from '@/lib/types';
 import { supabase } from '@/lib/supabase';
 import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
+import { MapPin } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name is required' }),
@@ -66,6 +67,20 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       message: '',
     },
   });
+
+  const openGoogleMaps = () => {
+    const address = form.getValues('address');
+    if (address.trim().length > 0) {
+      const encodedAddress = encodeURIComponent(address);
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+    } else {
+      toast({
+        title: "Address field is empty",
+        description: "Please enter an address first.",
+        variant: "destructive",
+      });
+    }
+  };
 
   const serviceType = form.watch('service_type');
   const isResidential = serviceType === 'Residential Fencing';
@@ -207,9 +222,20 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Address</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Property address" {...field} />
-                    </FormControl>
+                    <div className="flex gap-2">
+                      <FormControl>
+                        <Input placeholder="Property address" {...field} />
+                      </FormControl>
+                      <Button 
+                        type="button" 
+                        variant="outline" 
+                        onClick={openGoogleMaps}
+                        className="flex-shrink-0"
+                        title="Verify address on Google Maps"
+                      >
+                        <MapPin className="h-4 w-4" />
+                      </Button>
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}
