@@ -35,6 +35,5 @@ Allow: /*.js$
 # Set crawl delay for better server performance
 Crawl-delay: 1
 
-# Sitemap location
+# Sitemap location with proper URL
 Sitemap: https://fencestexas.com/sitemap.xml
-

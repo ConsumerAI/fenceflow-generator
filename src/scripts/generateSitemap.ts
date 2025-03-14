@@ -47,6 +47,10 @@ function generateSitemap() {
   // Write to file
   fs.writeFileSync('public/sitemap.xml', sitemap);
   console.log('Sitemap generated successfully!');
+  
+  // Calculate total URLs
+  const totalUrls = 1 + 1 + services.length + cities.length + (cities.length * services.length);
+  console.log(`Total URLs: ${totalUrls}`);
 }
 
 // Run the generator
