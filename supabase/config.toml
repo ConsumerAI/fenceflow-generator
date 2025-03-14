@@ -3,3 +3,6 @@ project_id = "vmniocmdyxvhqbetsjub"
 
 [functions.generate-content]
 verify_jwt = false
+
+[functions.get-maps-api-key]
+verify_jwt = false

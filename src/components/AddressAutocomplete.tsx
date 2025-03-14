@@ -24,6 +24,7 @@ const AddressAutocomplete = ({
   const [predictions, setPredictions] = useState<google.maps.places.AutocompletePrediction[]>([]);
   const [showPredictions, setShowPredictions] = useState(false);
   const [apiLoaded, setApiLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   
   useEffect(() => {
     // Check if the API script is already loaded
@@ -36,10 +37,22 @@ const AddressAutocomplete = ({
     // Function to load the Google Maps API
     const loadGoogleMapsAPI = async () => {
       try {
+        setIsLoading(true);
+        
+        // Get API key from Supabase Edge Function
+        const { data, error } = await supabase.functions.invoke('get-maps-api-key');
+        
+        if (error) {
+          throw new Error(`Failed to retrieve API key: ${error.message}`);
+        }
+        
+        if (!data?.apiKey) {
+          throw new Error('API key not found');
+        }
+        
         // Load Google Maps API script
         const script = document.createElement('script');
-        // The API key is now protected by using a client-side request instead of hardcoding
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDdBhMuH66e9WbmMlw9fdipTgGSXN60iXc&libraries=places`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${data.apiKey}&libraries=places`;
         script.async = true;
         script.defer = true;
         
@@ -69,6 +82,8 @@ const AddressAutocomplete = ({
           description: "Failed to load address autocomplete feature",
           variant: "destructive",
         });
+      } finally {
+        setIsLoading(false);
       }
     };
     
@@ -127,9 +142,10 @@ const AddressAutocomplete = ({
             ref={inputRef}
             value={value}
             onChange={(e) => onChange(e.target.value)}
-            placeholder={placeholder}
+            placeholder={isLoading ? "Loading address service..." : placeholder}
             className={className}
             onFocus={() => setShowPredictions(true)}
+            disabled={isLoading}
           />
           {value && (
             <button
@@ -148,6 +164,7 @@ const AddressAutocomplete = ({
           onClick={openGoogleMaps}
           className="flex-shrink-0"
           title="Verify address on Google Maps"
+          disabled={isLoading || !value}
         >
           <MapPin className="h-4 w-4" />
         </Button>
