@@ -35,7 +35,9 @@ export default defineConfig(({ mode }) => ({
           'vendor': ['react', 'react-dom'],
           'form': ['zod', '@hookform/resolvers/zod']
         }
-      }
+      },
+      // Explicitly mark zod as external to prevent resolution issues
+      external: []
     }
   }
 }));
