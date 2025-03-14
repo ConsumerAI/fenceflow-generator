@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -18,7 +17,6 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      // Remove the problematic zod alias
     }
   },
   optimizeDeps: {
@@ -35,9 +33,7 @@ export default defineConfig(({ mode }) => ({
           'vendor': ['react', 'react-dom'],
           'form': ['zod', '@hookform/resolvers/zod']
         }
-      },
-      // Explicitly mark zod as external to prevent resolution issues
-      external: []
+      }
     }
   }
 }));
