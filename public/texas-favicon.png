@@ -1,6 +1,5 @@
 
-<!-- 
-This file should be replaced with an actual favicon image with "FT" text in brown/terracotta colors. 
-Size: 32x32 or 64x64 pixels
-Format: PNG with transparency 
--->
+// This is a binary file that will be created with an "FT" logo in brown/terracotta colors
+// Size: 32x32 pixels
+// Format: PNG with transparency
+// The image will use the colors from the texas theme in tailwind.config.ts
