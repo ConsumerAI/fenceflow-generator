@@ -17,22 +17,30 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-    },
+    }
   },
   optimizeDeps: {
     include: ['zod', '@hookform/resolvers/zod'],
-    exclude: ['@hookform/resolvers']
+    exclude: []
   },
   build: {
     commonjsOptions: {
-      include: [/zod/, /node_modules/],
+      include: [/node_modules/],
       transformMixedEsModules: true
     },
     rollupOptions: {
+      external: [],
       output: {
-        manualChunks: {
-          'vendor': ['react', 'react-dom'],
-          'form': ['zod', '@hookform/resolvers/zod']
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('zod') || id.includes('@hookform/resolvers')) {
+              return 'form-deps';
+            }
+            if (id.includes('react')) {
+              return 'vendor';
+            }
+            return 'deps';
+          }
         }
       }
     }
