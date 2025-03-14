@@ -20,8 +20,7 @@ export default defineConfig(({ mode }) => ({
     }
   },
   optimizeDeps: {
-    include: ['zod', '@hookform/resolvers/zod'],
-    exclude: []
+    include: ['zod', '@hookform/resolvers/zod']
   },
   build: {
     commonjsOptions: {
@@ -31,18 +30,12 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       external: [],
       output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('zod') || id.includes('@hookform/resolvers')) {
-              return 'form-deps';
-            }
-            if (id.includes('react')) {
-              return 'vendor';
-            }
-            return 'deps';
-          }
+        manualChunks: {
+          'vendor': ['react', 'react-dom'],
+          'zod': ['zod', '@hookform/resolvers/zod']
         }
       }
-    }
+    },
+    target: 'esnext'
   }
 }));
