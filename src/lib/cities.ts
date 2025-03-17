@@ -1,4 +1,3 @@
-
 export const cities = [
   "Dallas", "Fort Worth", "Arlington", "Plano", "Garland", 
   "Irving", "Frisco", "McKinney", "Grand Prairie", "Denton", 
@@ -32,4 +31,13 @@ export function getCityFromUrl(url: string): string | null {
     city => city.toLowerCase().replace(/\s+/g, '-') === citySlug
   );
   return foundCity || null;
+}
+
+/**
+ * Checks if a city exists in our list of supported cities
+ */
+export function isCityValid(citySlug: string): boolean {
+  // Convert the slug to a standardized format for comparison
+  const normalizedSlug = citySlug.toLowerCase().replace(/-/g, ' ');
+  return cities.some(city => city.toLowerCase() === normalizedSlug);
 }

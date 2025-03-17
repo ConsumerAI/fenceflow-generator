@@ -24,7 +24,7 @@ export function getCityServiceUrl(city: string, service: ServiceType): string {
   return `/${citySlug}/${serviceSlug}`;
 }
 
-// For sitemap generation
+// For sitemap generation and route matching
 export const serviceRouteMap: Record<string, ServiceType> = {
   'residential-fencing': 'Residential Fencing',
   'commercial-fencing': 'Commercial Fencing',

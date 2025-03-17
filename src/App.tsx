@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import Index from './pages/Index';
@@ -10,10 +10,22 @@ import ServicePage from './pages/[service]';
 import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
-import Breadcrumbs from './components/Breadcrumbs';
 import { services, serviceRouteMap } from './lib/routes';
-import { cities } from './lib/cities';
+import { cities, isCityValid } from './lib/cities';
 import { ServiceType } from './lib/types';
+
+// Wrapper component to handle dynamic CityServicePage routing
+const CityServicePageWrapper = () => {
+  const { city, service } = useParams();
+  if (!city || !service) return <NotFound />;
+  
+  // Convert URL slugs back to proper format
+  const serviceType = serviceRouteMap[service];
+  
+  if (!serviceType) return <NotFound />;
+  
+  return <CityServicePage service={serviceType as ServiceType} />;
+};
 
 /**
  * Main application component that defines all routes
@@ -52,21 +64,8 @@ function App() {
           <Route path={logRoute("/commercial-security-fencing", "ServicePage:Commercial")} element={<ServicePage service="Commercial Fencing" />} />
           <Route path={logRoute("/residential-fence-styles", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
           
-          {/* City-specific Service Pages - Dynamically generate all city+service combinations */}
-          {cities.map((city) => (
-            services.map((service) => {
-              const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-              const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
-              const path = `/${citySlug}/${serviceSlug}`;
-              return (
-                <Route 
-                  key={`${citySlug}-${serviceSlug}`}
-                  path={logRoute(path, `CityServicePage:${city}:${service}`)}
-                  element={<CityServicePage service={service as ServiceType} />}
-                />
-              );
-            })
-          ))}
+          {/* City-specific Service Pages using dynamic routing pattern */}
+          <Route path={logRoute("/:city/:service", "CityServicePageWrapper")} element={<CityServicePageWrapper />} />
           
           {/* 404 Not Found - Must be last */}
           <Route path="*" element={<NotFound />} />
