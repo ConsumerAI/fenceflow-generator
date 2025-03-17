@@ -17,10 +17,11 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "zod": path.resolve(__dirname, "node_modules/zod")
     }
   },
   optimizeDeps: {
-    include: ['zod', '@hookform/resolvers/zod']
+    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form']
   },
   build: {
     target: 'es2020',
@@ -29,6 +30,7 @@ export default defineConfig(({ mode }) => ({
       include: [/node_modules/],
     },
     rollupOptions: {
+      external: [],
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom'],
