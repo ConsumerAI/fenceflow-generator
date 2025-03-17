@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -32,12 +31,12 @@ const SportsCourtPage: React.FC = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
                     <img 
-                      src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
+                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
                       alt="Professional pickleball court installation in DFW" 
                       className="w-full rounded-lg"
                     />
                     <img 
-                      src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" 
+                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
                       alt="Expert tennis court installation services in Dallas Fort Worth" 
                       className="w-full rounded-lg"
                     />
@@ -68,7 +67,7 @@ const SportsCourtPage: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div>
                     <img 
-                      src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
+                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
                       alt="Pickleball court fencing and installation in DFW" 
                       className="rounded-lg shadow-lg w-full h-auto"
                     />
@@ -146,7 +145,7 @@ const SportsCourtPage: React.FC = () => {
                   </div>
                   <div>
                     <img 
-                      src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" 
+                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
                       alt="Tennis court fence installation in Dallas Fort Worth" 
                       className="rounded-lg shadow-lg w-full h-auto"
                     />
@@ -179,7 +178,7 @@ const SportsCourtPage: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div>
                     <img 
-                      src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" 
+                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
                       alt="Sports field fencing and materials in DFW" 
                       className="rounded-lg shadow-lg w-full h-auto"
                     />
