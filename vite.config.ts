@@ -16,12 +16,12 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "zod": path.resolve(__dirname, "node_modules/zod")
+      "@": path.resolve(__dirname, "./src")
     }
   },
   optimizeDeps: {
-    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form']
+    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form'],
+    force: true
   },
   build: {
     target: 'es2020',
