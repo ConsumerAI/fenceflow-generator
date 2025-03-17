@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -17,7 +18,7 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "zod": path.resolve(__dirname, "node_modules/zod/lib/index.js")
+      "zod": path.resolve(__dirname, "node_modules/zod")
     }
   },
   optimizeDeps: {
@@ -28,11 +29,15 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     target: 'es2020',
+    commonjsOptions: {
+      include: [/zod/, /node_modules/],
+      extensions: ['.js', '.cjs', '.ts']
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom'],
-          'form': ['zod', '@hookform/resolvers/zod']
+          'form': ['zod', '@hookform/resolvers/zod', 'react-hook-form']
         }
       }
     }
