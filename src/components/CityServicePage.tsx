@@ -95,9 +95,9 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
     return (
       <>
         <Helmet>
-          <title>{`${service} in ${cityName} | Fence Fanatics`}</title>
-          <meta name="description" content={`Professional ${service.toLowerCase()} services in ${cityName}, TX. Get a free quote today!`} />
-          <meta name="keywords" content={`pickleball court installer ${cityName}, tennis court installer ${cityName}, pickleball court installation near me, tennis court installation near me, sports court builder ${cityName}, pickleball court fencing ${cityName}, tennis court fence installation ${cityName}, sports court fencing contractor ${cityName}, basketball court fencing, chain link fence for tennis court, sports field fencing near me`} />
+          <title>{`Professional Sports Court Installation in ${cityName} | Pickleball & Tennis Court Contractors`}</title>
+          <meta name="description" content={`Expert sports court installation in ${cityName}. Specializing in pickleball court installation, tennis court construction, and sports field fencing solutions. Free quotes!`} />
+          <meta name="keywords" content={`pickleball court installer ${cityName}, tennis court installation near me, sports court fencing contractor ${cityName}, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence, pickleball court windscreens, basketball court fencing, volleyball court fence, athletic field fencing`} />
           <link rel="canonical" href={`https://fencestexas.com/${citySlug}/sports-courts`} />
         </Helmet>
         
@@ -105,200 +105,181 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
           <Navbar />
           
           <main className="flex-1">
-            <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
+            <section className="pt-24 pb-16 md:pt-32 md:pb-24">
               <div className="container mx-auto px-4">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Sports Courts in {cityName}, Texas
+                  Sports Court Installation & Fencing Solutions in {cityName}
                 </h1>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div className="prose prose-lg max-w-none">
-                    <h2 className="text-3xl font-bold mb-4">Pickleball & Tennis Court Installer in {cityName}</h2>
+                    <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in {cityName}</h2>
                     
-                    <div className="my-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
                       <img 
-                        src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" 
-                        alt={`Professional pickleball and tennis court installation in ${cityName}`} 
+                        src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
+                        alt={`Professional pickleball court installation in ${cityName}`}
+                        className="w-full rounded-lg"
+                      />
+                      <img 
+                        src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" 
+                        alt={`Expert tennis court installation services in ${cityName}`}
                         className="w-full rounded-lg"
                       />
                     </div>
                     
-                    <h3 className="text-2xl font-semibold mt-6">Premier Pickleball Court Installation in {cityName}</h3>
-                    <p>Looking for professional pickleball court installers near {cityName}? At Fence Fanatics, we're the leading pickleball court installation company serving {cityName} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
+                    <h3 className="text-2xl font-bold my-4">{cityName}'s Premier Pickleball Court Installer</h3>
+                    <p>Looking for professional pickleball court installers near {cityName}? Fence Fanatics is {cityName}'s leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName} and surrounding areas.</p>
                     
-                    <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.</p>
+                    <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
                     
-                    <div className="mt-4">
-                      <button 
-                        onClick={scrollToForm}
-                        className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-semibold text-lg hover:bg-texas-terracotta/90 transition-colors"
-                      >
-                        Get a Free Quote
-                      </button>
-                    </div>
-                    
-                    <h3 className="text-2xl font-semibold mt-6">Expert Tennis Court Installation in {cityName}</h3>
-                    <p>As the trusted tennis court installer in {cityName}, we create premium tennis facilities built to professional standards. Our tennis court installation services in {cityName} include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
+                    <h3 className="text-2xl font-bold mt-6 mb-4">Expert Tennis Court Installation Services</h3>
+                    <p>As {cityName}'s trusted tennis court installer, we create premium tennis facilities built to professional standards. Our tennis court installation services include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
                     
                     <p>We handle every aspect of your tennis court project in {cityName}, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
                   </div>
                   
-                  <div id="lead-form">
+                  <div>
                     <LeadForm city={cityName} />
                   </div>
                 </div>
               </div>
             </section>
-          
+            
             <section className="py-16 bg-gray-50">
               <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8">Pickleball Court Installation & Fencing Services in {cityName}</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                  <div className="prose prose-lg max-w-none">
-                    <h3 className="text-2xl font-semibold mb-4">Professional Pickleball Court Installation</h3>
-                    <p>As {cityName}'s pickleball court installation experts, we deliver custom pickleball court solutions for homeowners, clubs, and commercial facilities throughout the area. Our pickleball court installation process is comprehensive and includes:</p>
-                    
-                    <ul className="list-disc pl-6 space-y-2 my-4">
-                      <li><strong>Site Evaluation</strong> - We assess your {cityName} property to determine the optimal location and orientation for your pickleball court.</li>
-                      <li><strong>Custom Design</strong> - Our team creates a tailored pickleball court design for your {cityName} property, considering space constraints and aesthetic preferences.</li>
-                      <li><strong>Complete Construction</strong> - From excavation to final surfacing, our pickleball court installers handle every aspect of court construction in {cityName}.</li>
-                      <li><strong>Post Installation</strong> - We install regulation pickleball net posts, nets, and perimeter fencing to complete your court in {cityName}.</li>
-                    </ul>
-                    
-                    <h3 className="text-2xl font-semibold mt-6 mb-4">The Cost to Install a Pickleball Court in {cityName}</h3>
-                    <p>When considering the cost to install a pickleball court in {cityName}, several factors influence the final investment:</p>
-                    
-                    <ul className="list-disc pl-6 space-y-2 my-4">
-                      <li><strong>Court Size</strong> - Standard pickleball courts are 20' x 44', but we can customize dimensions for your {cityName} property.</li>
-                      <li><strong>Surface Material</strong> - Options include acrylic hard court surfaces, cushioned surfaces, or modular tiles at varying price points.</li>
-                      <li><strong>Site Preparation</strong> - The current condition of your {cityName} property affects excavation and base preparation costs.</li>
-                      <li><strong>Additional Features</strong> - Fencing, lighting, seating, and shade structures add functionality but increase the investment.</li>
-                    </ul>
-                    
-                    <p>Most residential pickleball court installations in {cityName} range from $25,000 to $45,000 for a complete project with quality materials and professional construction. Contact us for a detailed estimate specific to your {cityName} property.</p>
-                  </div>
-                  <div>
-                    <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Pickleball court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto mb-6" />
-                    <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Tennis court installation in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
-                  </div>
-                </div>
-                
                 <div className="mb-16">
-                  <h2 className="text-3xl font-bold mb-8">Pickleball Court Fencing & Barriers in {cityName}</h2>
+                  <h2 className="text-3xl font-bold mb-8 text-center">Complete Sports Court Fencing Solutions in {cityName}</h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                      <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Pickleball court fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
+                      <img 
+                        src="/lovable-uploads/e375c1f0-53ad-4729-a527-958c7ccc73c8.png" 
+                        alt={`Pickleball court fencing and installation in ${cityName}`}
+                        className="rounded-lg shadow-lg w-full h-auto"
+                      />
                     </div>
                     <div className="prose prose-lg max-w-none">
-                      <h3 className="text-2xl font-semibold mb-4">Pickleball Court Fence Design & Installation</h3>
-                      <p>As {cityName}'s trusted pickleball court fencing contractor, we understand that proper fencing is essential for both functionality and aesthetics. Our pickleball court fence specifications meet industry standards while providing the perfect enclosure for your court.</p>
+                      <h3 className="text-2xl font-bold mb-4">Sports Court Fencing Expertise</h3>
+                      <p>At Fence Fanatics, we're not just court builders—we're {cityName}'s leading sports court fencing contractor, specializing in comprehensive fencing solutions for all types of athletic facilities. From professional pickleball court fencing to tennis court fence installation, our team delivers durable, attractive enclosures designed for both functionality and appearance.</p>
                       
-                      <ul className="list-disc pl-6 space-y-2 my-4">
-                        <li><strong>Pickleball Court Fence Dimensions</strong> - We install perimeter fencing at optimal heights (typically 8-10 feet) with proper spacing from court lines to ensure ball containment without compromising play.</li>
-                        <li><strong>Windscreen Integration</strong> - Our pickleball court windscreens reduce wind interference while providing privacy and a clean backdrop for improved ball visibility.</li>
-                        <li><strong>Safety Barriers</strong> - We install pickleball court safety barriers designed to protect both players and spectators while enhancing the court experience.</li>
-                        <li><strong>Gate Placement</strong> - Strategic access points are incorporated into the pickleball court fence installation for convenient entry and exit.</li>
+                      <p>Our sports field fencing options in {cityName} include:</p>
+                      <ul className="list-disc pl-6 my-4">
+                        <li><strong>Chain Link Sports Fencing</strong> - Durable and cost-effective solutions</li>
+                        <li><strong>Vinyl-Coated Options</strong> - Enhanced aesthetics and protection</li>
+                        <li><strong>Custom Heights</strong> - Tailored to your specific needs</li>
+                        <li><strong>Windscreen Systems</strong> - Improved playing conditions</li>
+                        <li><strong>Security Features</strong> - Access control and safety measures</li>
                       </ul>
-                      
-                      <p>Whether you need residential pickleball court fencing or a commercial installation, our {cityName} team delivers durable, attractive solutions using premium pickleball court fencing materials that withstand the Texas climate while complementing your property.</p>
                     </div>
-                  </div>
-                </div>
-                
-                <h2 className="text-3xl font-bold mb-8">Tennis Court Installation & Fencing in {cityName}</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                  <div className="prose prose-lg max-w-none">
-                    <h3 className="text-2xl font-semibold mb-4">Complete Tennis Court Construction Services</h3>
-                    <p>As {cityName}'s trusted tennis court installation company, we provide comprehensive tennis court construction services tailored to your specific needs. Our tennis court installation process includes:</p>
-                    
-                    <ul className="list-disc pl-6 space-y-2 my-4">
-                      <li><strong>Tennis Court Design</strong> - Custom layouts that maximize your {cityName} property's potential while meeting regulation standards.</li>
-                      <li><strong>Site Preparation</strong> - Proper grading and drainage installation crucial for long-lasting tennis courts in {cityName}'s climate.</li>
-                      <li><strong>Base Construction</strong> - Engineered foundations designed specifically for tennis play and local soil conditions in {cityName}.</li>
-                      <li><strong>Surface Application</strong> - Premium acrylic surfacing, clay court installation, or synthetic grass tennis court options.</li>
-                      <li><strong>Tennis Court Fence Installation</strong> - Durable perimeter fencing with custom heights and gate configurations.</li>
-                      <li><strong>Tennis Windscreen Installation</strong> - Professional windscreen systems to improve playing conditions in {cityName}.</li>
-                      <li><strong>Tennis Net Post Installation</strong> - Regulation net systems properly anchored for stability and performance.</li>
-                    </ul>
-                    
-                    <h3 className="text-2xl font-semibold mt-6 mb-4">Tennis Court Fencing Solutions</h3>
-                    <p>Our tennis court fence installation services in {cityName} feature premium chain link fence for tennis court enclosures, designed for durability and appearance. We offer various tennis court fencing heights to accommodate different facility needs, along with tennis court privacy screens and customized gate systems.</p>
-                    
-                    <p>With our tennis court fence maintenance programs, your {cityName} court will maintain its tennis court fence aesthetics and structural integrity for years to come. Our tennis court galvanized fencing resists corrosion while providing the secure enclosure your facility needs.</p>
-                  </div>
-                  <div>
-                    <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Tennis court construction in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                   </div>
                 </div>
                 
                 <div className="mb-16">
-                  <h2 className="text-3xl font-bold mb-8">Other Sports Field Fencing in {cityName}</h2>
+                  <h2 className="text-3xl font-bold mb-8">Pickleball Court Installation & Fencing in {cityName}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="prose prose-lg max-w-none">
+                      <h3 className="text-2xl font-bold mb-4">Comprehensive Pickleball Court Solutions</h3>
+                      <p>As {cityName}'s premier pickleball court installer, we provide complete court construction services from concept to completion. Our pickleball court installation process follows proven methodologies that ensure optimal playing surfaces and proper court layout.</p>
+                      
+                      <p>Our pickleball court services in {cityName} include:</p>
+                      <ul className="list-disc pl-6 my-4">
+                        <li><strong>Site Evaluation & Preparation</strong> - Expert assessment and ground preparation for proper drainage and stability.</li>
+                        <li><strong>Base Construction</strong> - Engineered foundations specifically designed for pickleball play.</li>
+                        <li><strong>Surface Installation</strong> - Premium acrylic surfaces with precise line markings.</li>
+                        <li><strong>Pickleball Court Fencing</strong> - Durable perimeter fencing with customizable heights and configurations.</li>
+                        <li><strong>Pickleball Court Windscreens</strong> - Wind reduction solutions that enhance playability and provide privacy.</li>
+                        <li><strong>Pickleball Court Safety Barriers</strong> - Protective elements that enhance player and spectator safety.</li>
+                      </ul>
+                    </div>
+                    <div className="prose prose-lg max-w-none">
+                      <h3 className="text-2xl font-bold mb-4">Pickleball Court Fencing Options</h3>
+                      <p>The right fencing is essential for a complete pickleball facility. As experienced pickleball court fencing contractors in {cityName}, we offer multiple options to meet your specific needs:</p>
+                      
+                      <ul className="list-disc pl-6 my-4">
+                        <li><strong>Chain Link Pickleball Court Fence</strong> - Our most popular option, providing visibility and durability with various coating options.</li>
+                        <li><strong>Pickleball Court Fence Dimensions</strong> - Typically installed at 8-10 feet height with proper spacing from court lines.</li>
+                        <li><strong>Pickleball Court Privacy Fencing</strong> - Enhanced options for facilities requiring additional privacy or wind control.</li>
+                        <li><strong>Pickleball Court Fence Specifications</strong> - All installations meet professional standards for safety and performance.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold mb-8">Tennis Court Fence Installation & Solutions in {cityName}</h2>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="prose prose-lg max-w-none">
+                      <h3 className="text-2xl font-bold mb-4">Premium Tennis Court Fencing</h3>
+                      <p>Our tennis court fence installation services in {cityName} deliver professional-grade enclosures that enhance your facility's appearance, security, and functionality. As an experienced tennis court fencing company, we understand the specific requirements for these specialized sports enclosures.</p>
+                      
+                      <p>Our tennis court fencing solutions include:</p>
+                      <ul className="list-disc pl-6 my-4">
+                        <li><strong>Tennis Court Galvanized Fencing</strong> - Durable, corrosion-resistant options designed for longevity in outdoor environments.</li>
+                        <li><strong>Tennis Court Fence Aesthetics</strong> - Attractive designs that complement your property while providing necessary functionality.</li>
+                        <li><strong>Tennis Court Fence Maintenance</strong> - Ongoing services to ensure your fencing remains in optimal condition.</li>
+                        <li><strong>Tennis Court Privacy Screens</strong> - Windscreen and privacy options that improve playing conditions.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <img 
+                        src="/lovable-uploads/ff181a35-3894-4eb0-82b4-f588c9c59ff1.png" 
+                        alt={`Tennis court fence installation in ${cityName}`}
+                        className="rounded-lg shadow-lg w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold mb-8">Additional Sports Field Fencing Services in {cityName}</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-bold mb-3">Baseball Field Fencing</h3>
-                      <p>Our {cityName} team specializes in complete baseball field fencing solutions, including outfield fence installation, backstop fencing for baseball & softball fields, and protective baseball field safety netting. We understand proper baseball outfield fence height requirements and provide durable chain link fence for baseball field enclosures tailored to your facility's needs.</p>
+                      <h3 className="text-xl font-bold mb-3">Baseball & Softball Field Fencing</h3>
+                      <p>Our {cityName} baseball field fencing services include outfield fence installation, backstop fencing for baseball and softball fields, and safety netting systems. We understand proper baseball outfield fence height requirements and provide durable chain link fence for baseball field enclosures tailored to league specifications and facility needs.</p>
                     </div>
                     
                     <div className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-bold mb-3">Basketball & Volleyball Courts</h3>
-                      <p>Enhance your recreational facilities with our basketball court fencing and volleyball court fence solutions. We install durable basketball court chain link fence systems and volleyball court fencing designed to contain play while allowing spectator visibility. Our sports court fence options include both chain link and basketball court privacy fencing based on your requirements.</p>
+                      <h3 className="text-xl font-bold mb-3">Football & Soccer Field Fencing</h3>
+                      <p>We provide complete stadium fence installation services in {cityName} including football stadium fencing, soccer field fence perimeters, and track field boundary solutions. Our sports field fence for spectators ensures safety while offering optimal viewing experiences.</p>
                     </div>
                     
                     <div className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-bold mb-3">Football & Soccer Fields</h3>
-                      <p>Our stadium fence installation services include football stadium fencing, soccer field fence enclosures, and track field perimeter fence systems. We provide football field chain link fence and soccer field perimeter fencing solutions that enhance facility safety and appearance while meeting the specific needs of athletic venues in {cityName}.</p>
+                      <h3 className="text-xl font-bold mb-3">Basketball & Volleyball Court Fencing</h3>
+                      <p>Our {cityName} basketball court fencing and volleyball court fence solutions provide secure, attractive boundaries for recreational facilities. We install durable basketball court chain link fence systems and volleyball court fencing designed to contain play while allowing spectator visibility.</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mb-16">
-                  <h2 className="text-3xl font-bold mb-8">Sports Court Fencing Materials & Options</h2>
+                  <h2 className="text-3xl font-bold mb-8">Sports Court Fencing Materials & Specifications</h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <img 
+                        src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" 
+                        alt={`Sports field fencing and materials in ${cityName}`}
+                        className="rounded-lg shadow-lg w-full h-auto"
+                      />
+                    </div>
                     <div className="prose prose-lg max-w-none">
-                      <p>At Fence Fanatics, we offer a comprehensive range of sports field fence materials to ensure your {cityName} facility gets the perfect combination of durability, functionality, and appearance:</p>
+                      <p>When it comes to sports field fence materials in {cityName}, quality and durability are essential. Our comprehensive options include:</p>
                       
                       <ul className="list-disc pl-6 space-y-3 my-4">
-                        <li><strong>Galvanized Chain Link Sports Fence</strong> - Our most popular and cost-effective option for sports court fencing, providing excellent durability and visibility.</li>
-                        <li><strong>Vinyl-Coated Sports Fencing</strong> - Enhanced aesthetics and corrosion resistance with color options to complement your facility design.</li>
-                        <li><strong>Aluminum Fencing for Sports Fields</strong> - Premium appearance with minimal maintenance requirements, ideal for front-facing or public facilities.</li>
-                        <li><strong>Custom Sports Court Fencing</strong> - Tailored solutions for unique requirements including mixed materials and decorative elements.</li>
+                        <li><strong>Galvanized Chain Link Sports Fence</strong> - Traditional, cost-effective option with excellent durability.</li>
+                        <li><strong>Vinyl-Coated Sports Fencing</strong> - Enhanced appearance with additional corrosion protection.</li>
+                        <li><strong>Aluminum Fencing for Sports Fields</strong> - Premium look with minimal maintenance requirements.</li>
+                        <li><strong>Sports Field Fence Height</strong> - Various height options to meet specific sport requirements.</li>
+                        <li><strong>Sports Court Fence Wind Reduction</strong> - Windscreen systems that improve playing conditions.</li>
+                        <li><strong>Athletic Field Fence Aesthetics</strong> - Design options that enhance facility appearance.</li>
                       </ul>
-                      
-                      <p>All our sports field fence installations in {cityName} are performed by experienced sports court fencing contractors who understand the unique requirements of athletic facilities. We consider factors like sports field fence height, wind exposure, spectator access, and aesthetic preferences to create the perfect sports court fence design for your needs.</p>
-                      
-                      <p>Our sports field fence for spectators ensures safety while providing optimal viewing experiences, and our sports court fence wind reduction features minimize environmental interference with play. Whether you need durable stadium fencing, aesthetic sports court fencing, or multi-purpose athletic field fencing, our {cityName} team delivers outstanding results.</p>
-                    </div>
-                    <div>
-                      <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt={`Sports field fencing in ${cityName}`} className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-16">
-                  <h2 className="text-3xl font-bold mb-8">Additional Sports Court Services in {cityName}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-bold mb-3">Multi-Sport Court Solutions</h3>
-                      <p>Our {cityName} sports court construction team specializes in designing and building versatile recreational spaces that can accommodate multiple sports on a single court. This approach maximizes your property's potential while providing diverse athletic options. Our multi-court pickleball fencing systems are perfect for clubs and community centers looking to expand playing capacity.</p>
-                    </div>
-                    
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-bold mb-3">Commercial Sports Fencing</h3>
-                      <p>For {cityName} businesses, schools, and public facilities, our commercial sports fencing solutions provide the perfect combination of security, durability, and professional appearance. We handle projects of all sizes, from small recreational areas to complete athletic complexes, ensuring your {cityName} facility makes a positive impression while meeting practical needs.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white p-8 rounded-lg shadow-md">
-                    <h3 className="text-2xl font-bold mb-4 text-center">Contact {cityName}'s Premier Sports Court Installer</h3>
-                    <p className="text-lg mb-6 text-center">Ready to discuss your sports court project in {cityName}? Whether you need pickleball court installation, tennis court fencing, or athletic field solutions, contact Fence Fanatics today for expert advice and a free installation estimate.</p>
-                    <div className="flex justify-center">
-                      <button 
-                        onClick={scrollToForm}
-                        className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-semibold text-lg hover:bg-texas-terracotta/90 transition-colors"
-                      >
-                        Get a Free Quote
-                      </button>
-                    </div>
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <h3 className="text-2xl font-bold mb-4 text-center">Contact {cityName}'s Premier Sports Court Fencing Contractor</h3>
+                  <p className="text-lg mb-6 text-center">Ready to discuss your sports court project in {cityName}? Whether you need pickleball court installation, tennis court fencing, or athletic field solutions, contact Fence Fanatics today for expert advice and a free installation estimate.</p>
+                  <div className="flex justify-center">
+                    <LeadForm city={cityName} />
                   </div>
                 </div>
               </div>
