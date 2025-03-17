@@ -16,12 +16,12 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src")
+      "@": path.resolve(__dirname, "./src"),
+      "zod": path.resolve(__dirname, "node_modules/zod")
     }
   },
   optimizeDeps: {
-    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form'],
-    exclude: []
+    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form']
   },
   build: {
     target: 'es2020',
@@ -33,7 +33,6 @@ export default defineConfig(({ mode }) => ({
       transformMixedEsModules: true
     },
     rollupOptions: {
-      external: [],
       input: {
         main: path.resolve(__dirname, 'index.html')
       },
