@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => ({
     }
   },
   optimizeDeps: {
-    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form']
+    include: ['zod', '@hookform/resolvers/zod', 'react-hook-form'],
+    exclude: []
   },
   build: {
     target: 'es2020',
@@ -32,6 +33,7 @@ export default defineConfig(({ mode }) => ({
       transformMixedEsModules: true
     },
     rollupOptions: {
+      external: [],
       input: {
         main: path.resolve(__dirname, 'index.html')
       },
