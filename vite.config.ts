@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => ({
   },
   optimizeDeps: {
     include: ['zod'],
-    exclude: [],
     esbuildOptions: {
       target: 'es2020'
     }
@@ -33,14 +32,10 @@ export default defineConfig(({ mode }) => ({
       include: [/node_modules/],
     },
     rollupOptions: {
-      external: ['zod'],
       output: {
-        globals: {
-          'zod': 'zod'
-        },
         manualChunks: {
           'vendor': ['react', 'react-dom'],
-          'form': ['@hookform/resolvers/zod', 'react-hook-form']
+          'form': ['@hookform/resolvers/zod', 'react-hook-form', 'zod']
         }
       }
     }
