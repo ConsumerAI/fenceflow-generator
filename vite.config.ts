@@ -33,7 +33,11 @@ export default defineConfig(({ mode }) => ({
       include: [/node_modules/],
     },
     rollupOptions: {
+      external: ['zod'],
       output: {
+        globals: {
+          'zod': 'zod'
+        },
         manualChunks: {
           'vendor': ['react', 'react-dom'],
           'form': ['@hookform/resolvers/zod', 'react-hook-form']
