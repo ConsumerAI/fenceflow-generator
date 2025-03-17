@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -35,15 +34,12 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   {service === "Sports Courts" && <>
                       <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in DFW</h2>
                       
-                      
                       <div className="my-6 flex justify-center">
                         <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt="Professional pickleball and tennis court installation in DFW" className="w-full rounded-lg" />
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
-                      <p className="text-left">Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.
-
-                  </p>
+                      <p className="text-left">Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.</p>
                       
                       <p className="text-left">Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
                       

@@ -1,4 +1,3 @@
-
 import { createClient } from '@supabase/supabase-js';
 import { Lead, CityContent, ContentCache } from './types';
 
@@ -99,7 +98,7 @@ export async function generateCityContent(city: string): Promise<CityContent> {
       serviceSections: {
         "Residential Fencing": `For homeowners in ${city}, we offer premium residential fencing solutions that enhance property value and security. Our wood fences provide classic Texas charm with guaranteed durability against ${city}'s weather patterns. We also specialize in decorative pool fences that meet all local safety codes while complementing your outdoor aesthetic. As ${city}'s most trusted fence installers, we focus on quality materials and expert craftsmanship.`,
         "Commercial Fencing": `Business owners throughout ${city} trust our commercial fencing solutions for security, durability, and professional appearance. Our iron fences provide elegant security for office buildings, while our heavy-duty installations protect industrial properties and warehouses. As the leading commercial fence company in ${city}, we understand local business needs and zoning requirements, delivering custom solutions with premium materials and professional installation.`,
-        "Sports Courts": `${city} families and facilities love our sports court fencing installations. Whether for tennis, basketball, or multi-purpose courts, our fence contractors provide durable, safe enclosures designed for years of active use. We're the sports fencing specialists near you, offering custom heights, gate configurations, and high-quality materials that stand up to intense play and ${city}'s varied weather conditions.`,
+        "Sports Courts": `Looking for professional pickleball court installers near ${city}? We're the leading pickleball court installation company serving ${city} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout ${city}. Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing. As ${city}'s trusted tennis court installer, we create premium tennis facilities built to professional standards, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.`,
         "Access Control": `Upgrade your ${city} property with our custom gate installation services. From elegant entrance gates for residential estates to secure access points for commercial properties, our gate installation team in ${city} delivers outstanding craftsmanship. We specialize in custom gates near you, tailored to your property's specific style and security requirements, with options ranging from classic wood to contemporary metal designs.`,
         "Automatic Gates": `Experience ultimate convenience with our automatic gates, perfectly designed for ${city} properties. Our automated gate systems combine security with ease of access, featuring remote controls, keypads, and smartphone integration options. As the preferred automated gate company in ${city}, we handle everything from design to installation, ensuring smooth operation and reliable performance.`
       },
@@ -120,7 +119,12 @@ export async function generateCityContent(city: string): Promise<CityContent> {
         `commercial fence company ${city}`,
         `custom wood fences ${city}`,
         `automatic gate installation ${city}`,
+        `pickleball court installer ${city}`,
+        `tennis court installation ${city}`,
         `sports court fencing ${city}`,
+        `pickleball court fencing ${city}`,
+        `tennis court fence installation ${city}`,
+        `sports court builder ${city}`,
         `iron fence contractors ${city}`,
         `pool fence installation ${city}`
       ],

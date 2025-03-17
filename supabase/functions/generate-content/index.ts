@@ -1,6 +1,5 @@
-
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1"
+import { serve } from '@supabase/functions-js';
+import { Configuration, OpenAIApi } from 'openai';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -108,7 +107,16 @@ serve(async (req) => {
         intro: `Looking for professional sports court installation in ${city}? Our team specializes in designing and building high-quality athletic courts and sports field fencing throughout ${city} and surrounding areas. From pickleball court installation to tennis court fencing and baseball field safety solutions, we deliver premium results that enhance performance and safety.`,
         pickleball: {
           heading: `Professional Pickleball Court Installation in ${city}`,
-          content: `As ${city}'s leading pickleball court installer, we create regulation-compliant courts featuring proper dimensions, premium surfacing, and durable pickleball court fencing. Our comprehensive pickleball court fence installation includes windscreens, safety barriers, and customizable height options tailored to your property. Whether you need residential pickleball court fencing or multi-court pickleball fencing for commercial facilities, our pickleball court fencing contractors deliver excellent results.`
+          content: `As ${city}'s leading pickleball court installer, we create regulation-compliant courts featuring proper dimensions, premium surfacing, and durable pickleball court fencing. Our comprehensive pickleball court fence installation services include:
+
+          • Professional site evaluation and preparation
+          • Custom court design and layout
+          • Premium surfacing materials and installation
+          • Regulation net systems and equipment
+          • Durable perimeter fencing with windscreens
+          • Optional lighting and shade structures
+
+          Whether you need a new pickleball court installed or are looking to upgrade existing facilities in ${city}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.`
         },
         tennis: {
           heading: `Expert Tennis Court Fence Installation in ${city}`,
