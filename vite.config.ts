@@ -20,10 +20,7 @@ export default defineConfig(({ mode }) => ({
     }
   },
   optimizeDeps: {
-    include: ['zod'],
-    esbuildOptions: {
-      target: 'es2020'
-    }
+    include: ['zod', '@hookform/resolvers/zod']
   },
   build: {
     target: 'es2020',
