@@ -16,8 +16,7 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "zod": path.resolve(__dirname, "node_modules/zod")
+      "@": path.resolve(__dirname, "./src")
     }
   },
   optimizeDeps: {
@@ -25,16 +24,27 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     target: 'es2020',
+    modulePreload: {
+      polyfill: true
+    },
     commonjsOptions: {
-      transformMixedEsModules: true,
       include: [/node_modules/],
+      transformMixedEsModules: true
     },
     rollupOptions: {
-      external: [],
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      },
       output: {
-        manualChunks: {
-          'vendor': ['react', 'react-dom'],
-          'form': ['@hookform/resolvers/zod', 'react-hook-form', 'zod']
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react/') || id.includes('react-dom/')) {
+              return 'vendor';
+            }
+            if (id.includes('zod') || id.includes('@hookform') || id.includes('react-hook-form')) {
+              return 'form';
+            }
+          }
         }
       }
     }
