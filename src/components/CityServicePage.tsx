@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import LeadForm from './LeadForm';
-import { cities, getCityFromUrl } from '@/lib/cities';
+import { getCityFromUrl } from '@/lib/cities';
 import { ServiceType } from '@/lib/types';
 import { Loader2 } from 'lucide-react';
 import { supabase, generateCityContent } from '@/lib/supabase';
@@ -518,4 +519,20 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   </div>
                   
                   <div>
-                    <h3 className="
+                    <h3 className="text-2xl font-bold mb-6">Professional Installation & Service</h3>
+                    <p className="text-lg mb-4">Our team of experienced fence professionals serves {cityName} and surrounding areas with exceptional installation quality. We understand the local climate considerations, soil conditions, and permit requirements specific to {cityName}, ensuring your commercial fence project completes smoothly and stands the test of time.</p>
+                    <p className="text-lg">After installation, our comprehensive maintenance programs help extend the life of your commercial fencing investment, with regular inspections, repairs, and upgrades available to all {cityName} clients.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default CityServicePage;
