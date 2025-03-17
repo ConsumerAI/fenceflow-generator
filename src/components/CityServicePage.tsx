@@ -121,26 +121,24 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                       />
                     </div>
                     
-                    
-                      <>
-                        <h3 className="text-2xl font-semibold mt-6">Premier Pickleball Court Installation in {cityName}</h3>
-                        <p>Looking for professional pickleball court installers near {cityName}? At Fence Fanatics, we're the leading pickleball court installation company serving {cityName} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
-                        
-                        <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.</p>
-                        
-                        <h3 className="text-2xl font-semibold mt-6">Expert Tennis Court Installation in {cityName}</h3>
-                        <p>As the trusted tennis court installer in {cityName}, we create premium tennis facilities built to professional standards. Our tennis court installation services in {cityName} include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
-                        
-                        <p>We handle every aspect of your tennis court project in {cityName}, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
-                      </>
-                    
+                    <>
+                      <h3 className="text-2xl font-semibold mt-6">Premier Pickleball Court Installation in {cityName}</h3>
+                      <p>Looking for professional pickleball court installers near {cityName}? At Fence Fanatics, we're the leading pickleball court installation company serving {cityName} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
+                      
+                      <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities in {cityName}, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net installation, and perimeter fencing.</p>
+                      
+                      <h3 className="text-2xl font-semibold mt-6">Expert Tennis Court Installation in {cityName}</h3>
+                      <p>As the trusted tennis court installer in {cityName}, we create premium tennis facilities built to professional standards. Our tennis court installation services in {cityName} include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.</p>
+                      
+                      <p>We handle every aspect of your tennis court project in {cityName}, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
+                    </>
                   </div>
                   
+                  <div>
                     <LeadForm city={cityName} />
-                  
+                  </div>
                 </div>
               )}
-              
               
               {service === "Commercial Fencing" && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
@@ -168,12 +166,14 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                       <li>Sound Barriers</li>
                       <li>Retaining Walls</li>
                     </ul>
-                  </div>
-                  <div>
-                    <img src={serviceImages["Commercial Fencing"]} alt="Commercial fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
-                    <div className="mt-12">
-                      <LeadForm city={cityName} />
+                    
+                    <div className="mt-6">
+                      <img src={serviceImages["Commercial Fencing"]} alt="Commercial fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
+                  </div>
+                  
+                  <div>
+                    <LeadForm city={cityName} />
                   </div>
                 </div>
               )}
@@ -199,12 +199,14 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                         <p>Take control of your security remotely with systems that connect directly to your smartphone. Grant or deny access, monitor activity, and receive alerts with ease for your {cityName} property.</p>
                       </li>
                     </ul>
-                  </div>
-                  <div>
-                    <img src={serviceImages["Access Control"]} alt="Access control systems in Texas" className="rounded-lg shadow-lg w-full h-auto" />
-                    <div className="mt-12">
-                      <LeadForm city={cityName} />
+                    
+                    <div className="mt-6">
+                      <img src={serviceImages["Access Control"]} alt="Access control systems in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
+                  </div>
+                  
+                  <div>
+                    <LeadForm city={cityName} />
                   </div>
                 </div>
               )}
@@ -228,12 +230,14 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                       <li>Solar power options</li>
                       <li>Battery backup systems</li>
                     </ul>
-                  </div>
-                  <div>
-                    <img src={serviceImages["Automatic Gates"]} alt="Automatic gate installation in Texas" className="rounded-lg shadow-lg w-full h-auto" />
-                    <div className="mt-12">
-                      <LeadForm city={cityName} />
+                    
+                    <div className="mt-6">
+                      <img src={serviceImages["Automatic Gates"]} alt="Automatic gate installation in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
+                  </div>
+                  
+                  <div>
+                    <LeadForm city={cityName} />
                   </div>
                 </div>
               )}
@@ -256,12 +260,14 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     
                     <h3 className="text-2xl font-semibold mt-6">Why {cityName} Homeowners Choose Our Fencing</h3>
                     <p>Our residential fences are built to withstand {cityName}'s unique climate while complementing your home's architecture. We use premium materials selected specifically for durability in Texas weather, ensuring your investment looks beautiful for years to come. From initial design consultation to final installation, our {cityName}-based team delivers exceptional craftsmanship and customer service.</p>
-                  </div>
-                  <div>
-                    <img src={serviceImages["Residential Fencing"]} alt="Residential fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
-                    <div className="mt-12">
-                      <LeadForm city={cityName} />
+                    
+                    <div className="mt-6">
+                      <img src={serviceImages["Residential Fencing"]} alt="Residential fencing in Texas" className="rounded-lg shadow-lg w-full h-auto" />
                     </div>
+                  </div>
+                  
+                  <div>
+                    <LeadForm city={cityName} />
                   </div>
                 </div>
               )}
@@ -270,8 +276,17 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div className="prose prose-lg max-w-none">
                     <p>{content.serviceSections[service]}</p>
+                    
+                    <div className="mt-6">
+                      <img 
+                        src={serviceImages[service] || "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg"} 
+                        alt={`${service} in ${cityName}`} 
+                        className="rounded-lg shadow-lg w-full h-auto"
+                      />
+                    </div>
                   </div>
-                  <div className="lg:ml-auto w-full max-w-lg">
+                  
+                  <div>
                     <LeadForm city={cityName} />
                   </div>
                 </div>
