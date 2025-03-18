@@ -8,7 +8,7 @@ import { getCityFromUrl } from '@/lib/cities';
 import { ServiceType } from '@/lib/types';
 import { Loader2 } from 'lucide-react';
 import { supabase, generateCityContent } from '@/lib/supabase';
-import { SERVICE_IMAGES } from '@/lib/images';
+import { SERVICE_IMAGES, SPORTS_COURT_IMAGES } from '@/lib/images';
 
 interface CityServicePageProps {
   service: ServiceType;
@@ -112,12 +112,12 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
                       <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                        src={SPORTS_COURT_IMAGES.pickleball}
                         alt={`Professional pickleball court installation in ${cityName}`}
                         className="w-full rounded-lg"
                       />
                       <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                        src={SPORTS_COURT_IMAGES.tennis}
                         alt={`Expert tennis court installation services in ${cityName}`}
                         className="w-full rounded-lg"
                       />
@@ -148,7 +148,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                       <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                        src={SPORTS_COURT_IMAGES.fencing}
                         alt={`Pickleball court fencing and installation in ${cityName}`}
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
@@ -217,7 +217,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                     </div>
                     <div>
                       <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                        src={SPORTS_COURT_IMAGES.tennis}
                         alt={`Tennis court fence installation in ${cityName}`}
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
@@ -250,7 +250,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
                       <img 
-                        src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                        src={SPORTS_COURT_IMAGES.fencing}
                         alt={`Sports field fencing and materials in ${cityName}`}
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
