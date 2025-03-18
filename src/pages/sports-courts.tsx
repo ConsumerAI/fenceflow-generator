@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
+import { SPORTS_COURT_IMAGES } from '@/lib/images';
 
 const SportsCourtPage: React.FC = () => {
   return (
@@ -31,12 +32,12 @@ const SportsCourtPage: React.FC = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
                     <img 
-                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                      src={SPORTS_COURT_IMAGES.pickleball}
                       alt="Professional pickleball court installation in DFW" 
                       className="w-full rounded-lg"
                     />
                     <img 
-                      src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg" 
+                      src={SPORTS_COURT_IMAGES.tennis}
                       alt="Expert tennis court installation services in Dallas Fort Worth" 
                       className="w-full rounded-lg"
                     />
