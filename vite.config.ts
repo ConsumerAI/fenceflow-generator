@@ -17,11 +17,15 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src")
-    }
+    },
+    dedupe: ['zod', 'react-hook-form', '@hookform/resolvers/zod']
   },
   optimizeDeps: {
     include: ['zod', '@hookform/resolvers/zod', 'react-hook-form'],
-    force: true
+    force: true,
+    entries: [
+      './src/**/*.{ts,tsx}',
+    ]
   },
   build: {
     target: 'es2020',
