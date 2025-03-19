@@ -15,7 +15,7 @@ export type Database = {
           city: string
           created_at: string
           email: string
-          estimated_cost: string | null
+          estimated_cost_quote: string | null
           fence_material: string | null
           id: string
           linear_feet: number | null
@@ -29,7 +29,7 @@ export type Database = {
           city: string
           created_at?: string
           email: string
-          estimated_cost?: string | null
+          estimated_cost_quote?: string | null
           fence_material?: string | null
           id?: string
           linear_feet?: number | null
@@ -43,7 +43,7 @@ export type Database = {
           city?: string
           created_at?: string
           email?: string
-          estimated_cost?: string | null
+          estimated_cost_quote?: string | null
           fence_material?: string | null
           id?: string
           linear_feet?: number | null
