@@ -5,15 +5,7 @@ import { Lead, CityContent, ContentCache } from './types';
 const supabaseUrl = 'https://vmniocmdyxvhqbetsjub.supabase.co';
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtbmlvY21keXh2aHFiZXRzanViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE3MjY3NjIsImV4cCI6MjA1NzMwMjc2Mn0.woc9RNWJNDgYAk_84aPgCRLg32WtkEjYpMuhZvagp1M';
 
-// Create the Supabase client with additional options
-const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    persistSession: false // Don't persist the session
-  },
-  global: {
-    fetch: fetch // Use the global fetch
-  }
-});
+const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 class Supabase {
   async submitLead(lead: Lead): Promise<{ success: boolean; error?: string }> {
@@ -27,10 +19,7 @@ class Supabase {
 
       const { error } = await supabaseClient
         .from('leads')
-        .insert([{
-          ...lead,
-          created_at: new Date().toISOString()
-        }]);
+        .insert(lead);
       
       if (error) {
         console.error('Supabase insert error:', error);
