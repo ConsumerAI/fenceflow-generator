@@ -83,7 +83,10 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         service_type: data.service_type,
         message: data.message || '',
         city,
-        ...fenceDetails
+        ...fenceDetails,
+        ...(fenceDetails.estimatedCost && {
+          estimated_cost: `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
+        })
       };
       
       const { success, error } = await supabase.submitLead(leadData);
