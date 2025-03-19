@@ -75,6 +75,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     setIsSubmitting(true);
     
     try {
+      console.log('Submitting form with fence details:', fenceDetails);
       const leadData: Lead = {
         name: data.name,
         email: data.email,
@@ -90,6 +91,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         })
       };
       
+      console.log('Submitting lead data:', leadData);
       const { success, error } = await supabase.submitLead(leadData);
       
       if (success) {
@@ -119,11 +121,8 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     fence_material: CalculatorFormData['fence_material'];
     estimatedCost: { min: number; max: number };
   }) => {
+    console.log('Fence details updated:', calculatorData);
     setFenceDetails(calculatorData);
-    toast({
-      title: "Fence details added",
-      description: "Your fence specifications have been included in the quote request.",
-    });
   };
 
   const formatPrice = (price: number) => {

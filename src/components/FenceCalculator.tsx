@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import * as z from 'zod';
 import { useForm } from 'react-hook-form';
@@ -65,21 +64,17 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
       const maxCost = (feetValue * materialPricing.max) + (NUM_GATES * GATE_PRICE);
       
       setEstimatedCost({ min: minCost, max: maxCost });
+      
+      // Automatically call onCalculate whenever we have valid inputs
+      onCalculate({
+        linear_feet: feetValue,
+        fence_material: fenceMaterial,
+        estimatedCost: { min: minCost, max: maxCost }
+      });
     } else {
       setEstimatedCost(null);
     }
-  }, [linearFeetString, fenceMaterial]);
-
-  // When submitting, ensure we're providing a number for linear_feet
-  const handleSubmit = (data: any) => {
-    if (estimatedCost) {
-      onCalculate({
-        linear_feet: Number(data.linear_feet),
-        fence_material: data.fence_material,
-        estimatedCost
-      });
-    }
-  };
+  }, [linearFeetString, fenceMaterial, onCalculate]);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -105,7 +100,7 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
       )}
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+        <form className="space-y-4">
           <FormField
             control={form.control}
             name="fence_material"
@@ -151,13 +146,6 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
               </FormItem>
             )}
           />
-          
-          <Button 
-            type="submit"
-            className="w-full bg-texas-terracotta hover:bg-texas-earth text-white"
-          >
-            Calculate Cost
-          </Button>
         </form>
       </Form>
     </div>
