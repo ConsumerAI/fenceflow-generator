@@ -73,9 +73,9 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
   
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
+    console.log('Form submission started with data:', data);
     
     try {
-      console.log('Submitting form with fence details:', fenceDetails);
       const leadData: Lead = {
         name: data.name,
         email: data.email,
@@ -84,19 +84,23 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         service_type: data.service_type,
         message: data.message || '',
         city,
-        linear_feet: fenceDetails.linear_feet,
-        fence_material: fenceDetails.fence_material,
-        ...(fenceDetails.estimatedCost && {
-          estimated_cost_quote: `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
-        })
+        ...(isResidential && fenceDetails ? {
+          linear_feet: fenceDetails.linear_feet,
+          fence_material: fenceDetails.fence_material,
+          ...(fenceDetails.estimatedCost && {
+            estimated_cost_quote: `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
+          })
+        } : {})
       };
       
-      console.log('Submitting lead data:', leadData);
+      console.log('Attempting to submit lead data:', leadData);
       const { success, error } = await supabase.submitLead(leadData);
+      console.log('Submission response:', { success, error });
       
       if (success) {
         setIsSuccess(true);
         form.reset();
+        setFenceDetails({}); // Reset fence details after successful submission
         toast({
           title: "Thank you for your inquiry!",
           description: "We'll contact you within 24 hours.",
@@ -105,7 +109,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         throw new Error(error || 'Failed to submit form');
       }
     } catch (err) {
-      console.error(err);
+      console.error('Form submission error:', err);
       toast({
         title: "Something went wrong",
         description: "Please try again or call us directly.",

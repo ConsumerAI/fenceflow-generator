@@ -9,16 +9,20 @@ const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 class Supabase {
   async submitLead(lead: Lead): Promise<{ success: boolean; error?: string }> {
     try {
+      console.log('Attempting to submit lead to Supabase:', lead);
       const { error } = await supabaseClient
         .from('leads')
         .insert(lead);
       
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase insert error:', error);
+        throw error;
+      }
       
       console.log('Lead submitted successfully:', lead);
       return { success: true };
     } catch (err) {
-      console.error('Error submitting lead:', err);
+      console.error('Error submitting lead to Supabase:', err);
       return { 
         success: false, 
         error: err instanceof Error ? err.message : 'Unknown error occurred' 
