@@ -4,8 +4,7 @@
     {
       "source": "/:path*",
       "destination": "https://fencestexas.com/:path*",
-      "statusCode": 301,
-      "basePath": false
+      "statusCode": 301
     }
   ],
   "rewrites": [
