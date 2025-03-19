@@ -1,7 +1,7 @@
 export const SPORTS_COURT_IMAGES = {
-  pickleball: "https://www.fencestexas.com/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png",
-  tennis: "https://www.fencestexas.com/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png",
-  fencing: "https://www.fencestexas.com/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png"
+  pickleball: "https://fencestexas.com/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png",
+  tennis: "https://fencestexas.com/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png",
+  fencing: "https://fencestexas.com/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png"
 };
 
 export const SERVICE_IMAGES = {

@@ -140,7 +140,7 @@ const CityPage = () => {
               "geoRadius": "100 mi"
             },
             "sameAs": [
-              "https://www.fencestexas.com"
+              "https://fencestexas.com"
             ]
           })}
         </script>

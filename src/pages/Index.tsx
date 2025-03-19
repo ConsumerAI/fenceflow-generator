@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -155,7 +154,7 @@ const Index = () => {
               "geoRadius": "100 mi"
             },
             "sameAs": [
-              "https://www.fencestexas.com"
+              "https://fencestexas.com"
             ]
           })}
         </script>

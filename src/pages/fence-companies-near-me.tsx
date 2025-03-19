@@ -66,7 +66,7 @@ const NearMePage = () => {
             },
             "geoRadius": "100 mi"
           },
-          "sameAs": ["https://www.fencestexas.com"]
+          "sameAs": ["https://fencestexas.com"]
         })}
         </script>
       </Helmet>

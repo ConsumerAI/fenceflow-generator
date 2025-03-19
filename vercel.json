@@ -10,7 +10,8 @@
         }
       ],
       "destination": "https://fencestexas.com/:path*",
-      "permanent": true
+      "permanent": true,
+      "continue": true
     }
   ],
   "rewrites": [
@@ -20,7 +21,8 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "X-Robots-Tag", "value": "all" }
       ]
     }
   ]
