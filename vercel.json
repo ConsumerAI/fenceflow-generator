@@ -3,8 +3,14 @@
   "redirects": [
     {
       "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.fencestexas.com"
+        }
+      ],
       "destination": "https://fencestexas.com/:path*",
-      "statusCode": 301
+      "permanent": true
     }
   ],
   "rewrites": [
