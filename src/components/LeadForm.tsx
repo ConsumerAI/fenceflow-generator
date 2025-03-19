@@ -85,9 +85,9 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         message: data.message || '',
         city: city,
         ...(isResidential && fenceDetails ? {
-          linear_feet: fenceDetails.linear_feet,
+          linear_feet: Number(fenceDetails.linear_feet),
           fence_material: fenceDetails.fence_material,
-          estimated_cost_quote: `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
+          "Estimated Cost Quote": `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
         } : {})
       };
 

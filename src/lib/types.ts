@@ -9,7 +9,7 @@ export interface Lead {
   city: string;
   linear_feet?: number;
   fence_material?: "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)";
-  estimated_cost_quote?: string;
+  "Estimated Cost Quote"?: string;
   created_at?: string;
 }
 
