@@ -10,8 +10,7 @@
         }
       ],
       "destination": "https://fencestexas.com/:path*",
-      "permanent": true,
-      "continue": true
+      "permanent": true
     }
   ],
   "rewrites": [
