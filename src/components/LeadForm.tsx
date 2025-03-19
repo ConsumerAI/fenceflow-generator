@@ -72,6 +72,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
   const isResidential = serviceType === 'Residential Fencing';
   
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
     try {
       console.log('Form submission started with data:', data);
       
@@ -102,6 +103,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       // Clear form and show success message
       form.reset();
       setFenceDetails(null);
+      setIsSuccess(true);
       
       toast({
         title: "Success!",
@@ -116,6 +118,8 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -294,7 +298,14 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                 className="w-full bg-green-600 hover:bg-green-700 text-white py-3 font-medium text-lg"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Submitting...' : 'Get Free Design Quote'}
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>Submitting...</span>
+                  </div>
+                ) : (
+                  'Get Free Design Quote'
+                )}
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
