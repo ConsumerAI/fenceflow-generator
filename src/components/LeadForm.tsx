@@ -83,7 +83,8 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         service_type: data.service_type,
         message: data.message || '',
         city,
-        ...fenceDetails,
+        linear_feet: fenceDetails.linear_feet,
+        fence_material: fenceDetails.fence_material,
         ...(fenceDetails.estimatedCost && {
           estimated_cost: `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
         })
