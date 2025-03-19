@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { MapPin, X } from 'lucide-react';
@@ -23,14 +22,25 @@ const AddressAutocomplete = ({
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
   const [predictions, setPredictions] = useState<google.maps.places.AutocompletePrediction[]>([]);
   const [showPredictions, setShowPredictions] = useState(false);
-  const [apiLoaded, setApiLoaded] = useState(false);
+  const [isGoogleLoaded, setIsGoogleLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   
+  useEffect(() => {
+    // Check if Google Places API is available and working
+    if (window.google && window.google.maps && window.google.maps.places) {
+      try {
+        setIsGoogleLoaded(true);
+      } catch (error) {
+        console.warn('Google Places API not properly initialized:', error);
+        setIsGoogleLoaded(false);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     // Check if the API script is already loaded
     if (window.google && window.google.maps && window.google.maps.places) {
       initAutocomplete();
-      setApiLoaded(true);
       return;
     }
     
@@ -59,7 +69,7 @@ const AddressAutocomplete = ({
         // Create a promise to wait for the script to load
         const loadPromise = new Promise<void>((resolve, reject) => {
           script.onload = () => {
-            setApiLoaded(true);
+            initAutocomplete();
             resolve();
           };
           script.onerror = () => reject(new Error("Failed to load Google Maps API"));
@@ -67,7 +77,6 @@ const AddressAutocomplete = ({
         
         document.body.appendChild(script);
         await loadPromise;
-        initAutocomplete();
         
         return () => {
           // Clean up the script when component unmounts
@@ -133,6 +142,18 @@ const AddressAutocomplete = ({
       inputRef.current.focus();
     }
   };
+
+  // If Google Places isn't loaded, fall back to regular input
+  if (!isGoogleLoaded) {
+    return (
+      <Input
+        type="text"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder || "Enter address"}
+      />
+    );
+  }
 
   return (
     <div className="relative w-full">
