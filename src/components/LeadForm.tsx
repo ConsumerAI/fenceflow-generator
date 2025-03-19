@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -120,14 +120,14 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     }
   };
 
-  const handleCalculate = (calculatorData: { 
+  const handleCalculate = useCallback((calculatorData: { 
     linear_feet: number; 
     fence_material: CalculatorFormData['fence_material'];
     estimatedCost: { min: number; max: number };
   }) => {
     console.log('Fence details updated:', calculatorData);
     setFenceDetails(calculatorData);
-  };
+  }, []);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {

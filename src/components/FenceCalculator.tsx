@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import * as z from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -38,6 +38,11 @@ interface FenceCalculatorProps {
 
 const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
   const [estimatedCost, setEstimatedCost] = useState<{ min: number; max: number } | null>(null);
+  const onCalculateRef = useRef(onCalculate);
+  
+  useEffect(() => {
+    onCalculateRef.current = onCalculate;
+  }, [onCalculate]);
   
   // Ensure the form uses string type for linear_feet as input
   const form = useForm<{
@@ -65,8 +70,8 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
       
       setEstimatedCost({ min: minCost, max: maxCost });
       
-      // Automatically call onCalculate whenever we have valid inputs
-      onCalculate({
+      // Use the ref to get the latest onCalculate function
+      onCalculateRef.current({
         linear_feet: feetValue,
         fence_material: fenceMaterial,
         estimatedCost: { min: minCost, max: maxCost }
@@ -74,7 +79,7 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
     } else {
       setEstimatedCost(null);
     }
-  }, [linearFeetString, fenceMaterial, onCalculate]);
+  }, [linearFeetString, fenceMaterial]); // Removed onCalculate from dependencies
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
