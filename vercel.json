@@ -1,7 +1,10 @@
 {
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { 
+      "source": "/((?!favicon\\.ico|.*\\.png|.*\\.svg|.*\\.txt|.*\\.webmanifest|.*\\.xml).*)",
+      "destination": "/index.html"
+    }
   ],
   "headers": [
     {
