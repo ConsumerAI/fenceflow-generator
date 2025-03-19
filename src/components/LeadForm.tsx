@@ -72,51 +72,51 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
   const isResidential = serviceType === 'Residential Fencing';
   
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    setIsSubmitting(true);
-    console.log('Form submission started with data:', data);
-    
     try {
-      const leadData: Lead = {
+      console.log('Form submission started with data:', data);
+      
+      // Prepare the lead data
+      const leadData = {
         name: data.name,
         email: data.email,
         phone: data.phone,
-        address: data.address,
-        service_type: data.service_type,
+        address: data.address || '',
+        service_type: variant === 'default' ? data.service_type : 'Residential Fencing',
         message: data.message || '',
-        city,
+        city: city,
         ...(isResidential && fenceDetails ? {
           linear_feet: fenceDetails.linear_feet,
           fence_material: fenceDetails.fence_material,
-          ...(fenceDetails.estimatedCost && {
-            estimated_cost_quote: `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
-          })
+          estimated_cost_min: fenceDetails.estimatedCost.min,
+          estimated_cost_max: fenceDetails.estimatedCost.max
         } : {})
       };
-      
+
       console.log('Attempting to submit lead data:', leadData);
-      const { success, error } = await supabase.submitLead(leadData);
-      console.log('Submission response:', { success, error });
       
-      if (success) {
-        setIsSuccess(true);
-        form.reset();
-        setFenceDetails({}); // Reset fence details after successful submission
-        toast({
-          title: "Thank you for your inquiry!",
-          description: "We'll contact you within 24 hours.",
-        });
-      } else {
-        throw new Error(error || 'Failed to submit form');
+      const result = await supabase.submitLead(leadData);
+      
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to submit lead');
       }
-    } catch (err) {
-      console.error('Form submission error:', err);
+
+      // Clear form and show success message
+      form.reset();
+      setFenceDetails(null);
+      
       toast({
-        title: "Something went wrong",
-        description: "Please try again or call us directly.",
+        title: "Success!",
+        description: "Thank you for your interest! We'll be in touch shortly.",
+        variant: "default",
+      });
+      
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 

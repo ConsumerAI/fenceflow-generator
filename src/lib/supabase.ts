@@ -4,15 +4,33 @@ import { Lead, CityContent, ContentCache } from './types';
 // Initialize the Supabase client
 const supabaseUrl = 'https://vmfocmdyxvhqbetsjub.supabase.co';
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtZm9jbWR5eHZocWJldHNqdWIiLCJyb2xlIjoiYW5vbiIsImlhVCI6MTcwOTI1ODk5NSwiZXhwIjoyMDI0ODM0OTk1fQ.Wd_KkC7HLB9Zc9T5rKH9ZQ9J9K9X9ZX9ZQ9J9K9X9ZX';
-const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+
+// Create the Supabase client with additional options
+const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: false // Don't persist the session
+  },
+  global: {
+    fetch: fetch // Use the global fetch
+  }
+});
 
 class Supabase {
   async submitLead(lead: Lead): Promise<{ success: boolean; error?: string }> {
     try {
       console.log('Attempting to submit lead to Supabase:', lead);
+      
+      // Validate lead data before submission
+      if (!lead.name || !lead.email || !lead.phone) {
+        throw new Error('Missing required fields');
+      }
+
       const { error } = await supabaseClient
         .from('leads')
-        .insert(lead);
+        .insert([{
+          ...lead,
+          created_at: new Date().toISOString()
+        }]);
       
       if (error) {
         console.error('Supabase insert error:', error);
