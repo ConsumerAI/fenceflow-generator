@@ -92,7 +92,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
       <>
         <Helmet>
           <title>{`Professional Sports Court Installation in ${cityName} | Pickleball & Tennis Court Contractors`}</title>
-          <meta name="description" content={`Expert sports court installation in ${cityName}. Specializing in pickleball court installation, tennis court construction, and sports field fencing solutions. Free quotes!`} />
+          <meta name="description" content={`We are ${cityName}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`} />
           <meta name="keywords" content={`pickleball court installer ${cityName}, tennis court installation near me, sports court fencing contractor ${cityName}, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence, pickleball court windscreens, basketball court fencing, volleyball court fence, athletic field fencing`} />
           <link rel="canonical" href={`https://fencestexas.com/${citySlug}/sports-courts`} />
         </Helmet>
@@ -111,7 +111,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
     <>
       <Helmet>
         <title>{`${service} in ${cityName} | Fence Fanatics`}</title>
-        <meta name="description" content={`Professional ${service.toLowerCase()} services in ${cityName}, TX. Get a free quote today!`} />
+        <meta name="description" content={`We are ${cityName}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`} />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
