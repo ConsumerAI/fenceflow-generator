@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cities, getCityUrl } from '@/lib/cities';
@@ -126,6 +125,19 @@ const Footer = () => {
           <p className="mt-2">
             Serving high-quality fence installations throughout the Dallas/Fort Worth Metroplex. <br />
             <span className="font-semibold">Transform your space with a fence you'll love!</span>
+          </p>
+        </div>
+
+        {/* Disclaimer Section */}
+        <div className="mt-8 pt-8 border-t border-white/20 text-center text-texas-sand/80 text-sm">
+          <p className="mb-4">
+            Disclaimer: FencesTexas is a lead generation service, not a fence installation company. We connect homeowners with licensed contractors in your area, but we do not perform installations ourselves. The information on this site is for informational purposes only and does not guarantee services.
+          </p>
+          <p className="mb-4">
+            This site is not a part of Google, Facebook, or YouTube websites and is not endorsed by them in any way. FACEBOOK is a trademark of Facebook, Inc., and YOUTUBE is a trademark of Google Inc..
+          </p>
+          <p>
+            FencesTexas is not affiliated with any specific contractor or manufacturer. All trademarks and logos are the property of their respective owners.
           </p>
         </div>
       </div>
