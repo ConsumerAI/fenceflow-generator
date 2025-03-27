@@ -174,6 +174,50 @@ export default function PrivacyPolicy() {
               </tbody>
             </table>
           </div>
+
+          <p className="mt-4">Personal information does not include:</p>
+          <ul className="list-disc pl-6 mt-2">
+            <li>Publicly available information from government records.</li>
+            <li>Information that we believe has been lawfully made public by the consumer or from widely distributed media or from disclosure to a third party by the consumer where the consumer did not limit disclosure to a specific audience.</li>
+            <li>De-identified or aggregated Covered User information.</li>
+            <li>Information excluded from the scope of Applicable State Laws, such as, in some instances: Health or medical information covered by the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and, for California residents, the California Confidentiality of Medical Information Act (CMIA) or clinical trial data; and</li>
+            <li>Personal information covered by certain sector-specific privacy laws, including the Fair Credit Reporting Act (FRCA), the Gramm-Leach-Bliley Act (GLBA) or, for California residents, California Financial Information Privacy Act (FIPA), and the Driver's Privacy Protection Act of 1994.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold mt-6 mb-3">Sources of Personal Information</h3>
+          <p>We obtain the categories of personal information listed above (including the information set forth in the "Personal Information that We Collect" section above) from the following categories of sources (with the specific categories of personal information indicated in parenthesis):</p>
+          <ul className="list-disc pl-6 mt-2">
+            <li>Directly from our Covered Users. For example, from contact forms and/or registration forms that our Covered Users submit to us in connection with the products and/or services that we offer by and through the Site. (Categories A, B and C)</li>
+            <li>Indirectly from our Covered Users. For example, through information we collect from our Covered Users in the course of providing our products and/or services to them. (Categories A, B, C and F)</li>
+            <li>Directly and indirectly from activity on the Site. This includes the type of browser that the Covered User uses (e.g., Safari, Chrome, Internet Explorer), Covered User IP address, the type of operating system used by the Covered User (e.g., Windows or iOS) and the domain name of the Covered User's Internet Service Provider. In addition, we obtain certain Site usage details and analytics as same are collected automatically by us and our third party partners. (Category F)</li>
+            <li>From third-parties that interact with us in connection with the products and/or services that we offer to our Covered Users. For example, third party entities that assist us in sending direct and electronic mail, removing duplicate information from Covered User lists, analyzing data and providing marketing analysis. (Categories A, B, C and F)</li>
+          </ul>
+
+          <h3 className="text-xl font-bold mt-6 mb-3">Retention of Personal Information and Sensitive Personal Information</h3>
+          <p>We retain all categories of your personal information and sensitive personal information (including the information set forth in the "Personal Information that We Collect" section above) that we collect for the maximum period permitted by applicable law. We may also use certain criteria to determine whether and when to delete certain categories of collected personal and sensitive personal information including:</p>
+          <ul className="list-disc pl-6 mt-2">
+            <li>Date of collection.</li>
+            <li>Frequency of consumer interaction with us.</li>
+            <li>Last interaction the consumer had with us.</li>
+            <li>Whether the purpose of collection has been completed.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold mt-6 mb-3">Use of Personal Information</h3>
+          <p>We may use the personal information that we collect (including the information set forth in the "Personal Information that We Collect" section above) for one or more of the following business purposes (with the specific categories of personal information indicated in parenthesis):</p>
+          <ul className="list-disc pl-6 mt-2">
+            <li>To fulfill or meet the reason for which the information is provided. For example, if you provide us with personal information in connection with your request for fence quotes or services, we will use that information to process your request. (Categories A, B, C and F)</li>
+            <li>To provide you with information, products or services that you request from us. (Categories A, B, C and F)</li>
+            <li>To create, maintain, customize and secure your account with us. (Categories A, B, C and F)</li>
+            <li>To provide you with e-mail, direct mail and telemarketing messages concerning certain Company products and/or services, as well as third-party products and/or services, that we believe may be of interest to you. (Categories A, B, C and F)</li>
+            <li>To deliver relevant Site content and advertisements to you and measure or understand the effectiveness of the advertising we serve to you. (Categories A, B, C and F)</li>
+            <li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including the Site's Terms and Conditions. (Categories A, B, C and F)</li>
+            <li>To improve the Site and better present its contents to you. (Categories A, B, C and F)</li>
+            <li>For customer service purposes and to respond to inquiries from you. (Categories A, B and C)</li>
+            <li>For testing, research, analysis and product development. (Categories A, B, C and F)</li>
+            <li>As necessary or appropriate to protect our rights, property or safety, and that of our clients and/or others. (Categories A, B, C and F)</li>
+            <li>To respond to law enforcement requests and as required by applicable law, court order, or governmental regulations. (Categories A, B, C and F)</li>
+            <li>As described to you when collecting your personal information or as otherwise permitted under Applicable State Laws. (Categories A, B, C and F)</li>
+          </ul>
         </div>
       </main>
       
