@@ -116,6 +116,9 @@ const Footer = () => {
               <li>
                 <a href="#quote" className="hover:text-texas-sand transition-colors">Get a Free Quote</a>
               </li>
+              <li>
+                <Link to="/privacy-policy" className="hover:text-texas-sand transition-colors">Privacy Policy</Link>
+              </li>
             </ul>
           </div>
         </div>

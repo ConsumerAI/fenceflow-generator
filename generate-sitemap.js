@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 
 // Define all cities (100 total)
@@ -38,6 +37,15 @@ sitemap += `
     <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>`;
+
+// Privacy Policy
+sitemap += `
+  <url>
+    <loc>https://fencestexas.com/privacy-policy</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>`;
 
 // Near-me page

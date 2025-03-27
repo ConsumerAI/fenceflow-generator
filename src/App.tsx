@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
@@ -10,6 +9,7 @@ import ServicePage from './pages/[service]';
 import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
+import PrivacyPolicyPage from './pages/privacy-policy';
 import { services, serviceRouteMap } from './lib/routes';
 import { cities, isCityValid } from './lib/cities';
 import { ServiceType } from './lib/types';
@@ -52,6 +52,7 @@ function App() {
           {/* Special Pages with explicit paths */}
           <Route path={logRoute("/fence-companies-near-me", "NearMePage")} element={<NearMePage />} />
           <Route path={logRoute("/automatic-gates", "AutomaticGatesPage")} element={<AutomaticGatesPage />} />
+          <Route path={logRoute("/privacy-policy", "PrivacyPolicyPage")} element={<PrivacyPolicyPage />} />
           
           {/* General Service Pages - Using explicit path matching for clarity */}
           <Route path={logRoute("/residential-fencing", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
