@@ -103,7 +103,7 @@ export async function generateCityContent(city: string): Promise<CityContent> {
     // For now, return static content with the city name
     const content: CityContent = {
       metaTitle: `Fence Companies in ${city} | Fence Fanatics`,
-      metaDescription: `Top fence installation in ${city} – residential, commercial, gates. Free quotes and excellent customer service. Call now!`,
+      metaDescription: `We are ${city}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`,
       h1: `Quality Fence Installation Services in ${city}`,
       intro: `We're excited to elevate ${city} with beautiful fences! From cozy residential privacy to strong commercial security and sleek automated gates, our team delivers quality across the metroplex. Transform your space with a fence you'll love!`,
       serviceSections: {
@@ -155,7 +155,7 @@ export async function generateCityContent(city: string): Promise<CityContent> {
     // Return basic content if generation fails
     return {
       metaTitle: `Fence Services in ${city}`,
-      metaDescription: `Fence installation services in ${city}`,
+      metaDescription: `We are ${city}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`,
       h1: `Fence Services in ${city}`,
       intro: `Quality fence installation in ${city}.`,
       serviceSections: {
