@@ -119,6 +119,9 @@ const Footer = () => {
               <li>
                 <Link to="/privacy-policy" className="hover:text-texas-sand transition-colors">Privacy Policy</Link>
               </li>
+              <li>
+                <a href="/terms-and-conditions" className="hover:text-texas-sand transition-colors">Terms & Conditions</a>
+              </li>
             </ul>
           </div>
         </div>

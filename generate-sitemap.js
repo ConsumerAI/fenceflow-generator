@@ -48,6 +48,15 @@ sitemap += `
     <priority>0.5</priority>
   </url>`;
 
+// Terms and Conditions
+sitemap += `
+  <url>
+    <loc>https://fencestexas.com/terms-and-conditions</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>`;
+
 // Near-me page
 sitemap += `
   <url>

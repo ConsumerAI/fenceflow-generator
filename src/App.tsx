@@ -10,6 +10,7 @@ import CityServicePage from './components/CityServicePage';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicyPage from './pages/privacy-policy';
+import TermsAndConditionsPage from './pages/terms-and-conditions';
 import { services, serviceRouteMap } from './lib/routes';
 import { cities, isCityValid } from './lib/cities';
 import { ServiceType } from './lib/types';
@@ -53,6 +54,7 @@ function App() {
           <Route path={logRoute("/fence-companies-near-me", "NearMePage")} element={<NearMePage />} />
           <Route path={logRoute("/automatic-gates", "AutomaticGatesPage")} element={<AutomaticGatesPage />} />
           <Route path={logRoute("/privacy-policy", "PrivacyPolicyPage")} element={<PrivacyPolicyPage />} />
+          <Route path={logRoute("/terms-and-conditions", "TermsAndConditionsPage")} element={<TermsAndConditionsPage />} />
           
           {/* General Service Pages - Using explicit path matching for clarity */}
           <Route path={logRoute("/residential-fencing", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
