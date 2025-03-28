@@ -443,7 +443,7 @@ serve(async (req) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4",
         messages: [
           { role: "system", content: "You are an expert content writer for construction companies specializing in SEO, particularly for athletic courts and sports facilities installers and fence contractors. You excel at including specific local weather details and how they affect fencing materials and installation techniques." },
           { role: "user", content: prompt }
