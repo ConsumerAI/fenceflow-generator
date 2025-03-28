@@ -207,9 +207,7 @@ const NearMePage = () => {
                     Athletic Courts and Sports Facilities
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    Create safe, enclosed recreational spaces with our specialized sports court 
-                    fencing. Perfect for tennis courts, basketball courts, and multipurpose 
-                    athletic areas throughout DFW.
+                    Create safe, enclosed recreational spaces with our specialized athletic courts and sports facilities
                   </p>
                 </div>
               </div>

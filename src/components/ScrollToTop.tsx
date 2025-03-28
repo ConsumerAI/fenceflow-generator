@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -60,7 +59,7 @@ export default function ScrollToTop() {
     } else if (pathname.includes('commercial')) {
       description = "Secure commercial fencing solutions for DFW businesses. High-security perimeter fencing, gates & access control systems. Free quotes!";
     } else if (pathname.includes('sports')) {
-      description = "Professional sports court fencing for tennis courts, basketball courts & more. Durable materials & expert installation across DFW.";
+      description = "Professional athletic courts and sports facilities including tennis courts, basketball courts & more. Durable materials & expert installation across DFW.";
     } else if (pathname.includes('automatic-gates')) {
       description = "Custom automatic gate solutions for DFW homes & businesses. Smart features, remote access & professional installation. Get a quote!";
     } else if (pathname.includes('near-me')) {
@@ -85,7 +84,7 @@ export default function ScrollToTop() {
     },
     {
       question: "What types of fencing do you install?",
-      answer: "We install residential fencing, commercial fencing, sports courts, access control systems, and automatic gates throughout the DFW area."
+      answer: "We install residential fencing, commercial fencing, athletic courts and sports facilities, access control systems, and automatic gates throughout the DFW area."
     },
     {
       question: "How long does fence installation take?",

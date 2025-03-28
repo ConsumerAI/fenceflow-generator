@@ -56,11 +56,11 @@ const AthleticCourtsContent: React.FC<AthleticCourtsContentProps> = ({ cityName 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">Our Sports Court Construction Process</h2>
+            <h2 className="text-3xl font-bold mb-8">Our Athletic Courts and Sports Facilities Construction Process</h2>
             <ol className="list-decimal pl-6 space-y-4">
-              <li><strong>Initial Consultation:</strong> We discuss your vision, budget, and specific requirements for your {cityName} pickleball or tennis court.</li>
+              <li><strong>Initial Consultation:</strong> We discuss your vision, budget, and specific requirements for your {cityName} athletic courts and sports facilities.</li>
               <li><strong>Site Evaluation:</strong> Our experts inspect your property to assess conditions and identify any challenges.</li>
-              <li><strong>Custom Design:</strong> We create detailed plans for your court, including layout, surfacing options, and amenities.</li>
+              <li><strong>Custom Design:</strong> We create detailed plans for your facility, including layout, surfacing options, and amenities.</li>
               <li><strong>Proposal & Contract:</strong> You receive a comprehensive proposal with transparent pricing and timeline.</li>
               <li><strong>Construction:</strong> Our skilled team executes the project with attention to detail and quality craftsmanship.</li>
               <li><strong>Final Inspection:</strong> We ensure everything meets our high standards before final walkthrough.</li>
@@ -69,12 +69,12 @@ const AthleticCourtsContent: React.FC<AthleticCourtsContentProps> = ({ cityName 
           </div>
 
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">Premier Court Construction & Resurfacing Services</h2>
-            <p className="mb-6">We understand the importance of a well-maintained court to your game. Our pickleball court installation and tennis court construction services are designed to provide the best playability and safety for athletes and enthusiasts alike. Here's why our solutions stand out:</p>
+            <h2 className="text-3xl font-bold mb-8">Premier Athletic Court Construction & Resurfacing Services</h2>
+            <p className="mb-6">We understand the importance of a well-maintained facility to your game. Our athletic court installation and construction services are designed to provide the best playability and safety for athletes and enthusiasts alike. Here's why our solutions stand out:</p>
             
             <ul className="list-disc pl-6 mb-8">
-              <li><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your court area to identify all site requirements.</li>
-              <li><strong>High-Performance Materials:</strong> We select the most durable and visually appealing surfacing materials, suitable for both pickleball and tennis courts in {cityName}'s climate.</li>
+              <li><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your facility area to identify all site requirements.</li>
+              <li><strong>High-Performance Materials:</strong> We select the most durable and visually appealing surfacing materials, suitable for all athletic courts and sports facilities in {cityName}'s climate.</li>
               <li><strong>Expert Application:</strong> Our skilled professionals use the latest techniques and equipment for perfect results every time.</li>
             </ul>
 

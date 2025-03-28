@@ -31,133 +31,6 @@ const ServicePage: React.FC<ServicePageProps> = ({
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div className="prose prose-lg max-w-none">
-                  {service === "Sports Courts" && <>
-                      <h2 className="text-3xl font-bold mb-4">Professional Pickleball & Tennis Court Installation in DFW</h2>
-                      
-                      <div className="my-6 flex justify-center">
-                        <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt="Professional pickleball and tennis court installation in DFW" className="w-full rounded-lg" />
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
-                      <p className="text-left">Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.</p>
-                      
-                      <p className="text-left">Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
-                      
-                      <h3 className="text-2xl font-bold mt-6 mb-4">Expert Tennis Court Installation Services</h3>
-                      <p className="text-left">As DFW's trusted tennis court installer, we create premium tennis facilities built to professional standards. Our tennis court installation services include comprehensive solutions from initial design through completion, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.
-
-                  </p>
-                      
-                      <p className="text-left">We handle every aspect of your tennis court project, including tennis court fence installation, windscreen installation, net post installation, and optional features like lighting systems and spectator areas.</p>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">The Cost to Install a Pickleball Court</h4>
-                      <p>When considering the cost to install a pickleball court in the DFW area, several factors influence the final investment:</p>
-                      
-                      <ul className="list-disc pl-6 my-4">
-                        <li><strong>Court Size:</strong> Standard pickleball courts are 20' x 44', but we can customize dimensions for your property.</li>
-                        <li><strong>Surface Material:</strong> Options include acrylic hard court surfaces, cushioned surfaces, or modular tiles at varying price points.</li>
-                        <li><strong>Site Preparation:</strong> The current condition of your property affects excavation and base preparation costs.</li>
-                        <li><strong>Additional Features:</strong> Fencing, lighting, seating, and shade structures add functionality but increase the investment.</li>
-                      </ul>
-                      
-                      <p className="text-left">Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Our Sports Court Construction Process</h4>
-                      <ol className="list-decimal pl-6 my-4">
-                        <li><strong>Initial Consultation:</strong> We discuss your vision, budget, and specific requirements for your DFW pickleball or tennis court.</li>
-                        <li><strong>Site Evaluation:</strong> Our experts inspect your property to assess conditions and identify any challenges.</li>
-                        <li><strong>Custom Design:</strong> We create detailed plans for your court, including layout, surfacing options, and amenities.</li>
-                        <li><strong>Proposal & Contract:</strong> You receive a comprehensive proposal with transparent pricing and timeline.</li>
-                        <li><strong>Construction:</strong> Our skilled team executes the project with attention to detail and quality craftsmanship.</li>
-                        <li><strong>Final Inspection:</strong> We ensure everything meets our high standards before final walkthrough.</li>
-                        <li><strong>Ongoing Support:</strong> We stand behind our work with warranties and maintenance services.</li>
-                      </ol>
-
-                      <h3 className="text-2xl font-bold mt-10 mb-6">Premier Court Construction & Resurfacing Services</h3>
-                      <p className="text-left">We understand the importance of a well-maintained court to your game. Our pickleball court installation and tennis court construction services are designed to provide the best playability and safety for athletes and enthusiasts alike. Here's why our solutions stand out:</p>
-                      
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Comprehensive Evaluation:</strong> Before we begin, our experts conduct a thorough assessment of your court area to identify all site requirements.</li>
-                        <li className="mb-2"><strong>High-Performance Materials:</strong> We select the most durable and visually appealing surfacing materials, suitable for both pickleball and tennis courts in DFW's climate.</li>
-                        <li className="mb-2"><strong>Expert Application:</strong> Our skilled professionals use the latest techniques and equipment for perfect results every time.</li>
-                      </ul>
-                      
-                      <img src="/lovable-uploads/06ad0853-44a4-41c1-bb88-5389b46bc009.png" alt="Tennis and pickleball court with blue playing surface and green surroundings" className="w-full rounded-lg my-6" />
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Considerations Before Construction</h3>
-                      <p>Before diving into construction, it's important to consider:</p>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Base Material:</strong> Choice between asphalt and various types of concrete.</li>
-                        <li className="mb-2"><strong>Court Placement:</strong> Issues like site work, access for equipment, grading, and drainage.</li>
-                        <li className="mb-2"><strong>Amenities:</strong> Decisions on fencing, wind screens, lighting, and shade structures.</li>
-                        <li className="mb-2"><strong>Legal and Practical Requirements:</strong> Zoning restrictions, setback requirements, and utility access.</li>
-                      </ul>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Site Work, Grading, and Sub-Base</h3>
-                      <p>The durability of your pickleball court starts with meticulous site work:</p>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Orientation and Placement:</strong> North-south is preferred to reduce sun glare.</li>
-                        <li className="mb-2"><strong>Slope and Drainage:</strong> A slope of .83% to 1% is ideal for water drainage.</li>
-                        <li className="mb-2"><strong>Foundation:</strong> Includes layers of stone and vapor barriers under the concrete to prevent moisture damage.</li>
-                      </ul>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Fencing and Lighting Options</h3>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Fencing</h4>
-                      <p>Fencing is essential for safety and ball containment:</p>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Materials and Design:</strong> Options range from chain link to vinyl, tailored for visibility and durability.</li>
-                        <li className="mb-2"><strong>Height and Layout:</strong> Typically, fencing should be at least 6 feet high and encompass all sides of the court.</li>
-                      </ul>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Lighting</h4>
-                      <p>Proper lighting extends playing time and improves safety:</p>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Types of Lights:</strong> LED and halogen are popular for their efficiency and brightness.</li>
-                        <li className="mb-2"><strong>Placement and Coverage:</strong> Lights should be placed to minimize shadows and glare for players.</li>
-                      </ul>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Pickleball Court Construction Accessories</h3>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Permanent Fixtures</h4>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Net Posts:</strong> Installed in concrete footers for stability, yet designed to be removable for maintenance.</li>
-                      </ul>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Portable Options</h4>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Net Systems:</strong> For flexibility, consider portable net systems that do not require permanent installation.</li>
-                      </ul>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Surfacing Options</h3>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Types of Surfaces</h4>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Hard vs. Cushioned:</strong> Choose from standard acrylic or cushioned surfaces for better shock absorption and comfort.</li>
-                      </ul>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Customization Options</h4>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Colors and Logos:</strong> Customize the court with various color schemes and logos.</li>
-                      </ul>
-                      
-                      <h4 className="text-xl font-bold mt-6 mb-4">Cost Comparison</h4>
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Surfacing Costs:</strong> Acrylic systems are more affordable, whereas ProCushion offers enhanced comfort at a higher price.</li>
-                      </ul>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Final Touches</h3>
-                      <p className="text-left">After surfacing, add striping for pickleball and other markings as needed for multi-sport functionality.</p>
-                      
-                      <p className="mt-6 text-left">Building a pickleball court involves careful planning and consideration of various elements. Consulting with experienced contractors and considering all available options will ensure that your court is a well-loved addition to your recreational facilities.</p>
-                      
-                      <p className="mt-4 text-left">For further details on each aspect, consider reaching out to professional pickleball court builders who can provide personalized advice and quotes based on your specific needs.
-
-                  </p>
-                      
-                      <p className="text-left">Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
-                    </>}
-                  
                   {service === "Commercial Fencing" && <>
                       <h2 className="text-3xl font-bold mb-4">Commercial Capabilities</h2>
                       <p>You need a partner who is <strong>Professional</strong>, <strong>Dependable</strong>, <strong>Scalable</strong>, and <strong>Proficient</strong> with any fencing requirements. That partner must offer the best fencing solutions to keep your properties, tenants, and customers protected.</p>
@@ -402,10 +275,10 @@ const ServicePage: React.FC<ServicePageProps> = ({
                     </>}
                   
                   {service === "Athletic Courts and Sports Facilities" && <>
-                      <h2 className="text-3xl font-bold mb-4">Professional Sports Court Installation in DFW</h2>
+                      <h2 className="text-3xl font-bold mb-4">Professional Athletic Courts and Sports Facilities in DFW</h2>
                       
                       <div className="my-6 flex justify-center">
-                        <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt="Professional pickleball and tennis court installation in DFW" className="w-full rounded-lg" />
+                        <img src="/lovable-uploads/7230064e-9fa2-45f8-abd3-d337e43f9067.png" alt="Professional athletic courts and sports facilities in DFW" className="w-full rounded-lg" />
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
@@ -432,7 +305,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       
                       <p className="text-left">Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
                       
-                      <h4 className="text-xl font-bold mt-6 mb-4">Our Sports Court Construction Process</h4>
+                      <h4 className="text-xl font-bold mt-6 mb-4">Our Athletic Courts and Sports Facilities Construction Process</h4>
                       <ol className="list-decimal pl-6 my-4">
                         <li><strong>Initial Consultation:</strong> We discuss your vision, budget, and specific requirements for your DFW pickleball or tennis court.</li>
                         <li><strong>Site Evaluation:</strong> Our experts inspect your property to assess conditions and identify any challenges.</li>

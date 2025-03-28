@@ -8,9 +8,9 @@ const SportsCourtPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Sports Court Installation | Pickleball & Tennis Court Contractors</title>
-        <meta name="description" content="Expert sports court installation in DFW. Specializing in pickleball court installation, tennis court construction, and sports field fencing solutions. Free quotes!" />
-        <meta name="keywords" content="pickleball court installer, tennis court installation near me, sports court fencing contractor, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence, pickleball court windscreens, basketball court fencing, volleyball court fence, athletic field fencing" />
+        <title>Professional Athletic Courts and Sports Facilities | Pickleball & Tennis Court Contractors</title>
+        <meta name="description" content="Expert athletic courts and sports facilities installation in DFW. Specializing in pickleball court installation, tennis court construction, and sports field fencing solutions. Free quotes!" />
+        <meta name="keywords" content="pickleball court installer, tennis court installation near me, athletic court fencing contractor, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence" />
         <link rel="canonical" href="https://fencestexas.com/sports-courts" />
       </Helmet>
       

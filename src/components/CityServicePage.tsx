@@ -92,8 +92,8 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
       <>
         <Helmet>
           <title>{`Professional Athletic Courts and Sports Facilities in ${cityName} | Pickleball & Tennis Court Contractors`}</title>
-          <meta name="description" content={`We are ${cityName}'s premier athletic court and sports facility contractor, trusted for projects of all sizes. From pickleball courts to stadium facilities, we got you covered.`} />
-          <meta name="keywords" content={`pickleball court installer ${cityName}, tennis court installation near me, sports court fencing contractor ${cityName}, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence, pickleball court windscreens, basketball court fencing, volleyball court fence, athletic field fencing`} />
+          <meta name="description" content={`We are ${cityName}'s premier athletic courts and sports facilities contractor, trusted for projects of all sizes. From pickleball courts to stadium facilities, we got you covered.`} />
+          <meta name="keywords" content={`athletic courts ${cityName}, sports facilities near me, athletic court contractor ${cityName}, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence, pickleball court windscreens, basketball court fencing, volleyball court fence, athletic field fencing`} />
           <link rel="canonical" href={`https://fencestexas.com/${citySlug}/athletic-courts-and-sports-facilities`} />
         </Helmet>
         
@@ -256,7 +256,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                 </div>
               )}
               
-              {!["Sports Courts", "Commercial Fencing", "Access Control", "Automatic Gates", "Residential Fencing"].includes(service) && (
+              {!["Athletic Courts and Sports Facilities", "Commercial Fencing", "Access Control", "Automatic Gates", "Residential Fencing"].includes(service) && (
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div className="prose prose-lg max-w-none">
                     <p>{content.serviceSections[service]}</p>
