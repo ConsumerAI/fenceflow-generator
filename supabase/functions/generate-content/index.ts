@@ -302,6 +302,8 @@ async function getLocalEnvironmentalData(city: string) {
 }
 
 serve(async (req) => {
+  console.log('Updated generate-content function with weather API integration - ' + new Date().toISOString());
+  
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
