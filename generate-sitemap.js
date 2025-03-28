@@ -24,7 +24,8 @@ const serviceRoutes = {
   'commercial-fencing': 'Commercial Fencing',
   'sports-courts': 'Sports Courts',
   'access-control': 'Access Control',
-  'automatic-gates': 'Automatic Gates'
+  'automatic-gates': 'Automatic Gates',
+  'athletic-courts-and-sports-facilities': 'Athletic Courts and Sports Facilities'
 };
 
 // Generate sitemap content

@@ -53,10 +53,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to={getServiceUrl("Sports Courts")} 
+                  to={getServiceUrl("Athletic Courts and Sports Facilities")} 
                   className="hover:text-texas-sand transition-colors"
                 >
-                  Sports Courts
+                  Athletic Courts and Sports Facilities
                 </Link>
               </li>
               <li>

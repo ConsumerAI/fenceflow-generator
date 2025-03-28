@@ -18,7 +18,8 @@ export type ServiceType =
   | "Commercial Fencing"
   | "Sports Courts"
   | "Access Control"
-  | "Automatic Gates";
+  | "Automatic Gates"
+  | "Athletic Courts and Sports Facilities";
 
 export interface ServiceInfo {
   title: ServiceType;

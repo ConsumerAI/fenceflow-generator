@@ -106,6 +106,26 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
     );
   }
 
+  // Athletic Courts and Sports Facilities content rendering
+  if (service === "Athletic Courts and Sports Facilities") {
+    return (
+      <>
+        <Helmet>
+          <title>{`Professional Sports Court Installation in ${cityName} | Pickleball & Tennis Court Contractors`}</title>
+          <meta name="description" content={`We are ${cityName}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`} />
+          <meta name="keywords" content={`pickleball court installer ${cityName}, tennis court installation near me, sports court fencing contractor ${cityName}, pickleball court fencing, tennis court fence, sports field fencing near me, chain link fence for baseball field, backstop fencing baseball, tennis court chain link fence, pickleball court windscreens, basketball court fencing, volleyball court fence, athletic field fencing`} />
+          <link rel="canonical" href={`https://fencestexas.com/${citySlug}/sports-courts`} />
+        </Helmet>
+        
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <SportsCourtContent cityName={cityName} />
+          <Footer />
+        </div>
+      </>
+    );
+  }
+
   // Handle other service types with existing code
   return (
     <>

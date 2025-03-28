@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ServiceInfo, ServiceType } from '@/lib/types';
@@ -28,7 +27,7 @@ const ServiceCard = ({
     const allServices: ServiceType[] = [
       "Residential Fencing",
       "Commercial Fencing",
-      "Sports Courts",
+      "Athletic Courts and Sports Facilities",
       "Access Control",
       "Automatic Gates"
     ];

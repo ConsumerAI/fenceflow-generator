@@ -12,7 +12,7 @@ const SportsCourtContent: React.FC<SportsCourtContentProps> = ({ cityName = 'DFW
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Sports Courts Services in {cityName}
+            Athletic Courts and Sports Facilities Services in {cityName}
           </h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

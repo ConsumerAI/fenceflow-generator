@@ -1,4 +1,3 @@
-
 import { cities } from './cities';
 import { ServiceType } from './types';
 
@@ -7,7 +6,8 @@ export const services: ServiceType[] = [
   "Commercial Fencing",
   "Sports Courts",
   "Access Control",
-  "Automatic Gates"
+  "Automatic Gates",
+  "Athletic Courts and Sports Facilities"
 ];
 
 export function getServiceUrl(service: ServiceType): string {
@@ -30,5 +30,6 @@ export const serviceRouteMap: Record<string, ServiceType> = {
   'commercial-fencing': 'Commercial Fencing',
   'sports-courts': 'Sports Courts',
   'access-control': 'Access Control',
-  'automatic-gates': 'Automatic Gates'
+  'automatic-gates': 'Automatic Gates',
+  'athletic-courts-and-sports-facilities': 'Athletic Courts and Sports Facilities'
 };

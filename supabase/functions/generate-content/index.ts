@@ -1,5 +1,5 @@
-import { serve } from '@supabase/functions-js';
-import { Configuration, OpenAIApi } from 'openai';
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -37,12 +37,13 @@ serve(async (req) => {
     1. A compelling headline (h1) for the city page
     2. An introduction paragraph about fence installation services in ${city}
     3. Five distinct benefits of getting a fence installed in ${city} by this company
-    4. Detailed descriptions for these services, with extra focus on Sports Courts section: 
+    4. Detailed descriptions for these services, with extra focus on Athletic Courts and Sports Facilities section: 
        - Residential Fencing
        - Commercial Fencing
        - Sports Courts (heavily emphasize pickleball court installation and tennis court installation, using these exact terms multiple times)
        - Access Control
        - Automatic Gates
+       - Athletic Courts and Sports Facilities (heavily emphasize pickleball court installation and tennis court installation, using these exact terms multiple times)
        All descriptions should be tailored to ${city}
     5. A FAQ section about fencing in ${city}
     6. A call-to-action paragraph
@@ -59,6 +60,16 @@ serve(async (req) => {
     The company only does new installations, not repairs.
     
     For the Sports Courts section, include comprehensive information about:
+    - Pickleball court installation, fencing, dimensions, safety barriers, windscreens, and chain link options
+    - Tennis court installation, fencing heights, privacy screens, fence aesthetics, and maintenance
+    - Basketball court fencing options and chain link installation
+    - Baseball field fencing, outfield fence installation, safety netting, backstop fencing
+    - Volleyball court fencing solutions
+    - Football and soccer field perimeter fencing
+    - Multi-court fencing systems
+    - Various materials including galvanized chain link, vinyl-coated options, and aluminum fencing
+    
+    For the Athletic Courts and Sports Facilities section, include comprehensive information about:
     - Pickleball court installation, fencing, dimensions, safety barriers, windscreens, and chain link options
     - Tennis court installation, fencing heights, privacy screens, fence aesthetics, and maintenance
     - Basketball court fencing options and chain link installation

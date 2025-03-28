@@ -204,7 +204,7 @@ const NearMePage = () => {
               <div className="glass-card overflow-hidden transition-all duration-500 group hover:shadow-lg">
                 <div className="p-6 md:p-8">
                   <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-texas-terracotta transition-colors">
-                    Sports Courts
+                    Athletic Courts and Sports Facilities
                   </h3>
                   <p className="text-muted-foreground mb-6">
                     Create safe, enclosed recreational spaces with our specialized sports court 

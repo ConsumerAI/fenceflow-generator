@@ -84,7 +84,8 @@ const serviceImages = {
   "Commercial Fencing": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
   "Sports Courts": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
   "Access Control": "/lovable-uploads/223b3ff5-7edb-4b9f-8993-449414f2518b.png",
-  "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg"
+  "Automatic Gates": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg",
+  "Athletic Courts and Sports Facilities": "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg"
 };
 
 // OpenAI integration for content generation
@@ -111,7 +112,8 @@ export async function generateCityContent(city: string): Promise<CityContent> {
         "Commercial Fencing": `Business owners throughout ${city} trust our commercial fencing solutions for security, durability, and professional appearance. Our iron fences provide elegant security for office buildings, while our heavy-duty installations protect industrial properties and warehouses. As the leading commercial fence company in ${city}, we understand local business needs and zoning requirements, delivering custom solutions with premium materials and professional installation.`,
         "Sports Courts": `Looking for professional pickleball court installers near ${city}? We're the leading pickleball court installation company serving ${city} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout ${city}. Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing. As ${city}'s trusted tennis court installer, we create premium tennis facilities built to professional standards, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.`,
         "Access Control": `Upgrade your ${city} property with our custom gate installation services. From elegant entrance gates for residential estates to secure access points for commercial properties, our gate installation team in ${city} delivers outstanding craftsmanship. We specialize in custom gates near you, tailored to your property's specific style and security requirements, with options ranging from classic wood to contemporary metal designs.`,
-        "Automatic Gates": `Experience ultimate convenience with our automatic gates, perfectly designed for ${city} properties. Our automated gate systems combine security with ease of access, featuring remote controls, keypads, and smartphone integration options. As the preferred automated gate company in ${city}, we handle everything from design to installation, ensuring smooth operation and reliable performance.`
+        "Automatic Gates": `Experience ultimate convenience with our automatic gates, perfectly designed for ${city} properties. Our automated gate systems combine security with ease of access, featuring remote controls, keypads, and smartphone integration options. As the preferred automated gate company in ${city}, we handle everything from design to installation, ensuring smooth operation and reliable performance.`,
+        "Athletic Courts and Sports Facilities": `Looking for professional pickleball court installers near ${city}? We're the leading pickleball court installation company serving ${city} and surrounding areas. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout ${city}. Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing. As ${city}'s trusted tennis court installer, we create premium tennis facilities built to professional standards, featuring proper drainage systems, high-quality surfacing options, and premium court accessories.`
       },
       benefits: [
         `Free, no-obligation quotes for all ${city} customers`,
@@ -137,12 +139,14 @@ export async function generateCityContent(city: string): Promise<CityContent> {
         `tennis court fence installation ${city}`,
         `sports court builder ${city}`,
         `iron fence contractors ${city}`,
-        `pool fence installation ${city}`
+        `pool fence installation ${city}`,
+        `athletic court fencing ${city}`
       ],
       images: [
         { src: serviceImages["Residential Fencing"], alt: `Residential wood fence installation in ${city}, Texas` },
         { src: serviceImages["Commercial Fencing"], alt: `Commercial security fencing for ${city} businesses` },
-        { src: serviceImages["Automatic Gates"], alt: `Custom automatic gate installation in ${city}, Texas` }
+        { src: serviceImages["Automatic Gates"], alt: `Custom automatic gate installation in ${city}, Texas` },
+        { src: serviceImages["Athletic Courts and Sports Facilities"], alt: `Athletic court fencing in ${city}` }
       ]
     };
     
@@ -163,7 +167,8 @@ export async function generateCityContent(city: string): Promise<CityContent> {
         "Commercial Fencing": `Commercial fencing in ${city}`,
         "Sports Courts": `Sports court fencing in ${city}`,
         "Access Control": `Access control solutions in ${city}`,
-        "Automatic Gates": `Automatic gates in ${city}`
+        "Automatic Gates": `Automatic gates in ${city}`,
+        "Athletic Courts and Sports Facilities": `Athletic court fencing in ${city}`
       },
       benefits: [`Quality service in ${city}`],
       faq: `Frequently asked questions about fencing in ${city}`,
@@ -172,7 +177,8 @@ export async function generateCityContent(city: string): Promise<CityContent> {
       images: [
         { src: serviceImages["Residential Fencing"], alt: `Residential fencing in ${city}` },
         { src: serviceImages["Commercial Fencing"], alt: `Commercial fencing in ${city}` },
-        { src: serviceImages["Automatic Gates"], alt: `Automatic gates in ${city}` }
+        { src: serviceImages["Automatic Gates"], alt: `Automatic gates in ${city}` },
+        { src: serviceImages["Athletic Courts and Sports Facilities"], alt: `Athletic court fencing in ${city}` }
       ]
     };
   }

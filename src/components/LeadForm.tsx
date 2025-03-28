@@ -25,7 +25,7 @@ const formSchema = z.object({
       message: 'Please enter a valid phone number',
     }),
   address: z.string().min(5, { message: 'Address is required' }),
-  service_type: z.enum(['Residential Fencing', 'Commercial Fencing', 'Sports Courts', 'Access Control', 'Automatic Gates']),
+  service_type: z.enum(['Residential Fencing', 'Commercial Fencing', 'Athletic Courts and Sports Facilities', 'Access Control', 'Automatic Gates']),
   message: z.string().optional(),
 });
 
@@ -248,7 +248,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                       <SelectContent>
                         <SelectItem value="Residential Fencing">Residential Fencing</SelectItem>
                         <SelectItem value="Commercial Fencing">Commercial Fencing</SelectItem>
-                        <SelectItem value="Sports Courts">Sports Courts</SelectItem>
+                        <SelectItem value="Athletic Courts and Sports Facilities">Athletic Courts and Sports Facilities</SelectItem>
                         <SelectItem value="Access Control">Access Control</SelectItem>
                         <SelectItem value="Automatic Gates">Automatic Gates</SelectItem>
                       </SelectContent>
