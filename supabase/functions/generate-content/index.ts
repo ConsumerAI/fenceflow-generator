@@ -440,7 +440,7 @@ serve(async (req) => {
     `
 
     const completion = await openai.createChatCompletion({
-      model: "gpt-4o-mini",
+      model: "GPT-4o mini",
       messages: [
         { role: "system", content: "You are an expert content writer for construction companies specializing in SEO, particularly for athletic courts and sports facilities installers and fence contractors. You excel at including specific local weather details and how they affect fencing materials and installation techniques." },
         { role: "user", content: prompt }
