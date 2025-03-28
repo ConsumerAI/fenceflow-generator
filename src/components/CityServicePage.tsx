@@ -110,7 +110,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
   return (
     <>
       <Helmet>
-        <title>{`${service} in ${cityName} | Fence Fanatics`}</title>
+        <title>{`${service} in ${cityName}`}</title>
         <meta name="description" content={`We are ${cityName}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`} />
       </Helmet>
       
@@ -129,7 +129,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                   <div className="prose prose-lg max-w-none">
                     <h2 className="text-3xl font-bold mb-4">Commercial Fencing Solutions in {cityName}</h2>
                     <p>You need a partner who is <strong>Professional</strong>, <strong>Dependable</strong>, <strong>Scalable</strong>, and <strong>Proficient</strong> with any fencing requirements in {cityName}. That partner must offer the best fencing solutions to keep your properties, tenants, and customers protected.</p>
-                    <p>General Contractors in {cityName} choose <strong>Fence Fanatics</strong> as a supplier-of-choice because we are <strong>technology-forward</strong>, <strong>process-driven</strong>, and committed to <strong>excellence</strong> at all levels.</p>
+                    <p>General Contractors in {cityName} choose us as a supplier-of-choice because we are <strong>technology-forward</strong>, <strong>process-driven</strong>, and committed to <strong>excellence</strong> at all levels.</p>
                     
                     <h3 className="text-2xl font-semibold mt-6">Our Commercial Capabilities in {cityName}</h3>
                     <ul className="grid grid-cols-2 gap-2">
@@ -166,7 +166,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
                   <div className="prose prose-lg max-w-none">
                     <h2 className="text-3xl font-bold mb-4">Access Control Solutions in {cityName}</h2>
-                    <p>At <strong>Fence Fanatics</strong>, we understand that your security in {cityName} is a top priority. That's why we offer <strong>state-of-the-art access control solutions</strong> tailored to meet your specific needs. Whether it's for commercial, residential, or industrial properties in {cityName}, we provide systems that integrate seamlessly with your fencing to create a secure perimeter.</p>
+                    <p>We understand that your security in {cityName} is a top priority. That's why we offer <strong>state-of-the-art access control solutions</strong> tailored to meet your specific needs. Whether it's for commercial, residential, or industrial properties in {cityName}, we provide systems that integrate seamlessly with your fencing to create a secure perimeter.</p>
                     
                     <h3 className="text-2xl font-semibold mt-6">Our Access Control Offerings for {cityName}</h3>
                     <ul className="space-y-4">
@@ -199,7 +199,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
                   <div className="prose prose-lg max-w-none">
                     <h2 className="text-3xl font-bold mb-4">Automatic Gates in {cityName}</h2>
-                    <p>Enhance your property's security and curb appeal in {cityName} with our premium automatic gate solutions. At Fence Fanatics, we create custom gate systems that provide convenience, security, and style for homes and businesses throughout {cityName}.</p>
+                    <p>Enhance your property's security and curb appeal in {cityName} with our premium automatic gate solutions. We create custom gate systems that provide convenience, security, and style for homes and businesses throughout {cityName}.</p>
                     
                     <h3 className="text-2xl font-semibold mt-6">Custom Gate Solutions for {cityName} Properties</h3>
                     <p>Our automatic gates are designed specifically for {cityName}'s unique architectural styles and security needs. We offer both residential driveway gates and commercial entrance systems with options for swing, sliding, or bi-folding designs. Using premium materials like wrought iron, wood, aluminum, and steel, we ensure your gate is both beautiful and durable against {cityName}'s weather conditions.</p>

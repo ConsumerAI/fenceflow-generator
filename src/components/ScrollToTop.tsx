@@ -136,33 +136,19 @@ export default function ScrollToTop() {
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "HomeAndConstructionBusiness",
-          "subType": "FenceContractor", 
+          "@type": "LocalBusiness",
           "name": "Fences Texas",
-          "description": "DFW's Premier Fence Installation Experts serving Dallas, Fort Worth and surrounding areas.",
+          "description": metadata.description,
+          "email": "info@fencestexas.com",
           "url": "https://fencestexas.com",
-          "telephone": "+1-214-555-5555",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Fence Lane",
-            "addressLocality": "Dallas",
-            "addressRegion": "TX",
-            "postalCode": "75201",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 32.7767,
-            "longitude": -96.7970
-          },
           "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": 32.7767,
-              "longitude": -96.7970
-            },
-            "geoRadius": "100 mi"
+            "@type": "City",
+            "name": "Dallas-Fort Worth Metroplex",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
           },
           "priceRange": "$$",
           "openingHoursSpecification": [

@@ -26,7 +26,7 @@ const AthleticCourtsContent: React.FC<AthleticCourtsContentProps> = ({ cityName 
               />
               
               <h3 className="text-2xl font-bold my-4">{cityName}'s Premier Pickleball Court Installer</h3>
-              <p>Looking for professional pickleball court installers near you? Fence Fanatics is the {cityName} area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
+              <p>Looking for professional pickleball court installers near you? We are the {cityName} area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout {cityName}.</p>
               
               <p>Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
               

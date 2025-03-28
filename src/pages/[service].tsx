@@ -282,7 +282,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </div>
                       
                       <h3 className="text-2xl font-bold my-4">DFW's Premier Pickleball Court Installer</h3>
-                      <p className="text-left">Looking for professional pickleball court installers near you? Fence Fanatics is the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.</p>
+                      <p className="text-left">Looking for professional pickleball court installers near you? We are the Dallas-Fort Worth area's leading pickleball court installation company. Our expert team specializes in building regulation pickleball courts for residential properties, community centers, and commercial facilities throughout DFW.</p>
                       
                       <p className="text-left">Whether you need a new pickleball court installed or are looking to upgrade existing facilities, we provide end-to-end services including site preparation, concrete work, surfacing, line marking, net post installation, and perimeter fencing.</p>
                       

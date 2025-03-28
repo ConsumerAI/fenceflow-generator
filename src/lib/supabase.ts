@@ -102,7 +102,7 @@ export const generateCityContent = async (city: string): Promise<CityContent> =>
     // If no cached content, use OpenAI to generate (future implementation)
     // For now, return static content with the city name
     const content: CityContent = {
-      metaTitle: `Fence Companies in ${city} | Fence Fanatics`,
+      metaTitle: `Fence Companies in ${city}`,
       metaDescription: `We are ${city}'s premier fence company, trusted for residential & commercial projects of all sizes (we did Brock ISDs new stadium fencing 😊). From backyards to stadiums, we got you.`,
       h1: `Quality Fence Installation Services in ${city}`,
       intro: `We're excited to elevate ${city} with beautiful fences! From cozy residential privacy to strong commercial security and sleek automated gates, our team delivers quality across the metroplex. Transform your space with a fence you'll love!`,
@@ -120,7 +120,7 @@ export const generateCityContent = async (city: string): Promise<CityContent> =>
         `Fully licensed, insured, and experienced installation teams`,
         `Comprehensive warranties on all fence installations`
       ],
-      faq: `Quality fences in ${city} provide enhanced security, privacy, and significant property value increase. With our climate-specific materials and professional installation techniques, a fence from Fence Fanatics delivers lasting performance while complementing ${city}'s architectural styles, making it an excellent investment for any property.`,
+      faq: `Quality fences in ${city} provide enhanced security, privacy, and significant property value increase. With our climate-specific materials and professional installation techniques, our fences deliver lasting performance while complementing ${city}'s architectural styles, making it an excellent investment for any property.`,
       cta: `Ready for your new fence in ${city}? Complete our quick form for a free, no-obligation quote from the best fence company in ${city}. Our specialists will contact you within 24 hours to discuss your project needs and arrange a convenient consultation.`,
       keywords: [
         `fence companies ${city}`,
