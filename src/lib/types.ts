@@ -40,6 +40,29 @@ export interface CityContent {
   cta: string;
   keywords: string[];
   images: ImageData[];
+  
+  // New environmental fields
+  environmentalConsiderations?: string;
+  environmentalData?: {
+    temp: number;
+    humidity: number;
+    rainfall: number;
+    windSpeed: number;
+    description: string;
+    soilType: {
+      type: string;
+      characteristics: string;
+      postDepth: number;
+      fenceConsiderations: string;
+    };
+    isCoastal: boolean;
+    uvIndex: number;
+    uvCategory: string;
+    hasFreezeCycles: boolean;
+    hurricaneRisk: number;
+    specificChallenges: string;
+    region?: string;
+  };
 }
 
 export interface ImageData {

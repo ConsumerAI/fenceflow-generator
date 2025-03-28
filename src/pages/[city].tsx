@@ -350,6 +350,37 @@ const CityPage = () => {
           </div>
         </section>
         
+        {/* Environmental Considerations Section */}
+        {'environmentalConsiderations' in cityContent && cityContent.environmentalConsiderations && (
+          <section className="py-16 md:py-24 bg-secondary/30">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-3xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold mb-4">
+                    Environmental Considerations for {cityName} Fence Installations
+                  </h2>
+                </div>
+                
+                <div className="glass-card p-8">
+                  <div 
+                    className="prose prose-p:text-muted-foreground max-w-none"
+                    dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.environmentalConsiderations) }} 
+                  />
+                  
+                  <div className="mt-6 flex justify-center">
+                    <Button 
+                      className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                      onClick={scrollToQuote}
+                    >
+                      Get a Free Quote
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+        
         <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
