@@ -1,5 +1,4 @@
 import { serve } from "std/http/server.ts";
-import { Configuration, OpenAIApi } from "openai";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -329,9 +328,6 @@ serve(async (req) => {
     const envData = await getLocalEnvironmentalData(city)
     console.log(`Environmental data for ${city}:`, envData)
 
-    const configuration = new Configuration({ apiKey: OPENAI_API_KEY })
-    const openai = new OpenAIApi(configuration)
-
     const prompt = `
     Create detailed, SEO-optimized content for a fence installation company website for the city of ${city}, Texas. Include:
     
@@ -439,17 +435,24 @@ serve(async (req) => {
     Use natural language that incorporates the keywords without obvious stuffing. The section should read fluidly while mentioning the various sports court fence types, materials, specifications, and installation processes.
     `
 
-    const completion = await openai.createChatCompletion({
-      model: "GPT-4o mini",
-      messages: [
-        { role: "system", content: "You are an expert content writer for construction companies specializing in SEO, particularly for athletic courts and sports facilities installers and fence contractors. You excel at including specific local weather details and how they affect fencing materials and installation techniques." },
-        { role: "user", content: prompt }
-      ],
-      temperature: 0.7,
-      max_tokens: 2500,
-    })
+    // Make the API call directly to OpenAI's endpoint
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [
+          { role: "system", content: "You are an expert content writer for construction companies specializing in SEO, particularly for athletic courts and sports facilities installers and fence contractors. You excel at including specific local weather details and how they affect fencing materials and installation techniques." },
+          { role: "user", content: prompt }
+        ]
+      })
+    });
 
-    const content = completion.data.choices[0]?.message?.content
+    const completion = await response.json();
+    const content = completion.choices[0]?.message?.content;
     if (!content) {
       throw new Error('Failed to generate content')
     }
