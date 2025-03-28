@@ -273,6 +273,8 @@ async function getLocalEnvironmentalData(city: string) {
 }
 
 serve(async (req) => {
+  console.log('New version of temp-generate-content function - with weather API integration');
+  
   // Handle CORS
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
