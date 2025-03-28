@@ -7,6 +7,29 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+function getServicePrompt(serviceName: string): string {
+  const prompts = {
+    'Athletic Courts and Sports Facilities': 
+      'You are a professional content writer specializing in athletic court and sports facility construction. Create SEO-optimized, engaging content that highlights the benefits of professional court installation, focusing on quality, safety, and performance. Include details about construction processes, materials, and local considerations.',
+    'Chain Link Fences':
+      'You are a professional content writer specializing in chain link fence installation. Create SEO-optimized content that highlights the durability, security, and cost-effectiveness of chain link fencing. Focus on commercial applications, property security, and the benefits of professional installation.',
+    'Wood Fences':
+      'You are a professional content writer specializing in wood fence installation. Create SEO-optimized content that emphasizes the natural beauty, privacy, and property value benefits of wood fencing. Include details about wood types, maintenance requirements, and aesthetic customization options.',
+    'Vinyl Fences':
+      'You are a professional content writer specializing in vinyl fence installation. Create SEO-optimized content that showcases the low-maintenance benefits, durability, and modern aesthetics of vinyl fencing. Highlight the long-term cost benefits and variety of styles available.',
+    'Ornamental Iron Fences':
+      'You are a professional content writer specializing in ornamental iron fence installation. Create SEO-optimized content that emphasizes the elegant aesthetics, security features, and lasting durability of iron fencing. Focus on custom design options and architectural enhancement.',
+    'Commercial Fencing':
+      'You are a professional content writer specializing in commercial fence installation. Create SEO-optimized content that addresses business security needs, property demarcation, and professional appearance. Include details about compliance, durability, and return on investment.',
+    'Farm and Ranch Fencing':
+      'You are a professional content writer specializing in farm and ranch fence installation. Create SEO-optimized content that focuses on livestock containment, property security, and agricultural applications. Include details about durability, maintenance, and specific agricultural requirements.',
+    'Automatic Gates':
+      'You are a professional content writer specializing in automatic gate installation. Create SEO-optimized content that highlights convenience, security features, and property value enhancement. Include details about access control options, maintenance requirements, and integration capabilities.'
+  };
+
+  return prompts[serviceName] || 'You are a professional content writer for a fence company website. Create SEO-optimized, engaging content that highlights the benefits of the requested service in the specified city. Focus on local relevance, customer pain points, and the high quality of service.';
+}
+
 // Initialize OpenAI API
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
@@ -33,9 +56,7 @@ serve(async (req) => {
         messages: [
           { 
             role: 'system', 
-            content: serviceName === 'Athletic Courts and Sports Facilities' 
-              ? 'You are a professional content writer specializing in athletic court and sports facility construction. Create SEO-optimized, engaging content that highlights the benefits of professional court installation, focusing on quality, safety, and performance. Include details about construction processes, materials, and local considerations.'
-              : 'You are a professional content writer for a fence company website. Create SEO-optimized, engaging content that highlights the benefits of the requested fencing service in the specified city. Focus on local relevance, customer pain points, and the high quality of service.'
+            content: getServicePrompt(serviceName)
           },
           { 
             role: 'user', 
