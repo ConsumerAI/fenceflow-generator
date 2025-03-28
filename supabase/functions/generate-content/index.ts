@@ -1,5 +1,5 @@
-import { serve } from "http/server.ts";
-import { Configuration, OpenAIApi } from "openai";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
