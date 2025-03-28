@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
@@ -34,7 +33,9 @@ serve(async (req) => {
         messages: [
           { 
             role: 'system', 
-            content: 'You are a professional content writer for a fence company website. Create SEO-optimized, engaging content that highlights the benefits of the requested fencing service in the specified city. Focus on local relevance, customer pain points, and the high quality of service.'
+            content: serviceName === 'Athletic Courts and Sports Facilities' 
+              ? 'You are a professional content writer specializing in athletic court and sports facility construction. Create SEO-optimized, engaging content that highlights the benefits of professional court installation, focusing on quality, safety, and performance. Include details about construction processes, materials, and local considerations.'
+              : 'You are a professional content writer for a fence company website. Create SEO-optimized, engaging content that highlights the benefits of the requested fencing service in the specified city. Focus on local relevance, customer pain points, and the high quality of service.'
           },
           { 
             role: 'user', 
