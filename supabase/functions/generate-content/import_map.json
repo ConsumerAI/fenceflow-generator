@@ -1,1 +1,6 @@
- 
+{
+  "imports": {
+    "http/": "https://deno.land/std@0.168.0/http/",
+    "openai": "https://esm.sh/openai@3.2.1"
+  }
+} 
