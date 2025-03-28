@@ -440,7 +440,7 @@ serve(async (req) => {
     `
 
     const completion = await openai.createChatCompletion({
-      model: "gpt-4o-mini", // Using GPT-4o mini for cost control
+      model: "gpt-3.5-turbo", // Using GPT-3.5 Turbo for cost efficiency
       messages: [
         { role: "system", content: "You are an expert content writer for construction companies specializing in SEO, particularly for athletic courts and sports facilities installers and fence contractors. You excel at including specific local weather details and how they affect fencing materials and installation techniques." },
         { role: "user", content: prompt }
