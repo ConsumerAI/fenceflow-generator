@@ -301,7 +301,7 @@ async function getLocalEnvironmentalData(city: string) {
 }
 
 serve(async (req) => {
-  console.log('Generate-content function running - GitHub integration test - ' + new Date().toISOString());
+  console.log('New deployment of generate-content function - ' + new Date().toISOString());
   
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
