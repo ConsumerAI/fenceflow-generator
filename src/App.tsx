@@ -59,7 +59,8 @@ function App() {
           {/* General Service Pages - Using explicit path matching for clarity */}
           <Route path={logRoute("/residential-fencing", "ServicePage:Residential")} element={<ServicePage service="Residential Fencing" />} />
           <Route path={logRoute("/commercial-fencing", "ServicePage:Commercial")} element={<ServicePage service="Commercial Fencing" />} />
-          <Route path={logRoute("/sports-courts", "ServicePage:Sports")} element={<ServicePage service="Sports Courts" />} />
+          <Route path={logRoute("/athletic-courts-and-sports-facilities", "ServicePage:Athletic")} element={<ServicePage service="Athletic Courts and Sports Facilities" />} />
+          <Route path={logRoute("/sports-courts", "ServicePage:Athletic")} element={<ServicePage service="Athletic Courts and Sports Facilities" />} />
           <Route path={logRoute("/access-control", "ServicePage:Access")} element={<ServicePage service="Access Control" />} />
           
           {/* Additional Service-related Routes (for deeper content linking) */}

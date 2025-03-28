@@ -19,13 +19,13 @@ const cities = [
 ];
 
 // Define services with correct route format
-const serviceRoutes = {
+const serviceRouteMap = {
   'residential-fencing': 'Residential Fencing',
   'commercial-fencing': 'Commercial Fencing',
-  'sports-courts': 'Sports Courts',
+  'athletic-courts-and-sports-facilities': 'Athletic Courts and Sports Facilities',
   'access-control': 'Access Control',
   'automatic-gates': 'Automatic Gates',
-  'athletic-courts-and-sports-facilities': 'Athletic Courts and Sports Facilities'
+  'sports-courts': 'Athletic Courts and Sports Facilities'
 };
 
 // Generate sitemap content
@@ -68,7 +68,7 @@ sitemap += `
   </url>`;
 
 // Service pages (5)
-Object.keys(serviceRoutes).forEach(serviceRoute => {
+Object.keys(serviceRouteMap).forEach(serviceRoute => {
   sitemap += `
   <url>
     <loc>https://fencestexas.com/${serviceRoute}</loc>
@@ -91,7 +91,7 @@ cities.forEach(city => {
 
 // City-service pages (500)
 cities.forEach(city => {
-  Object.keys(serviceRoutes).forEach(serviceRoute => {
+  Object.keys(serviceRouteMap).forEach(serviceRoute => {
     sitemap += `
   <url>
     <loc>https://fencestexas.com/${city}/${serviceRoute}</loc>

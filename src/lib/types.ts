@@ -16,10 +16,9 @@ export interface Lead {
 export type ServiceType = 
   | "Residential Fencing"
   | "Commercial Fencing"
-  | "Sports Courts"
+  | "Athletic Courts and Sports Facilities"
   | "Access Control"
-  | "Automatic Gates"
-  | "Athletic Courts and Sports Facilities";
+  | "Automatic Gates";
 
 export interface ServiceInfo {
   title: ServiceType;

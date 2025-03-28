@@ -2,11 +2,11 @@ import React from 'react';
 import { SPORTS_COURT_IMAGES } from '@/lib/images';
 import LeadForm from './LeadForm';
 
-interface SportsCourtContentProps {
+interface AthleticCourtsContentProps {
   cityName?: string;
 }
 
-const SportsCourtContent: React.FC<SportsCourtContentProps> = ({ cityName = 'DFW' }) => {
+const AthleticCourtsContent: React.FC<AthleticCourtsContentProps> = ({ cityName = 'DFW' }) => {
   return (
     <main className="flex-1">
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
@@ -133,4 +133,4 @@ const SportsCourtContent: React.FC<SportsCourtContentProps> = ({ cityName = 'DFW
   );
 };
 
-export default SportsCourtContent; 
+export default AthleticCourtsContent; 
