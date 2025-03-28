@@ -262,7 +262,7 @@ async function getLocalEnvironmentalData(city: string) {
     return {
       temp: weatherData.main.temp,
       humidity: weatherData.main.humidity,
-      rainfall: rainfall, // Annual rainfall using our mapping
+      rainfall, // Annual rainfall using our mapping
       windSpeed: weatherData.wind.speed,
       description: weatherData.weather[0].description,
       coord: weatherData.coord, // Keep coordinates for reference
