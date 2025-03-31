@@ -75,9 +75,45 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         // No cached content, generate new content
         console.log(`Attempting to generate new content for ${cityName} and ${serviceName}`);
         
-        const promptTemplate = serviceName !== ServiceType.ResidentialFencing
-          ? `Write an informative, engaging, and detailed section about ${String(serviceName)} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${String(serviceName).toLowerCase()} projects. Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate.`
-          : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate.`;
+        const promptTemplate = `You are an elite-level professional content writer specializing in fence installation and athletic court construction. Create rich, SEO-optimized content for ${cityName}, Texas focusing on ${String(serviceName)} that positions our service as the premier local connection to top fence contractors.
+
+Important: We are a lead generation service connecting homeowners with qualified fence contractors, NOT a fence contractor ourselves. All content must make this relationship clear.
+
+Your content must:
+
+1. DEMONSTRATE DEEP LOCAL KNOWLEDGE:
+   - Reference specific ${cityName} neighborhoods, developments, or landmarks
+   - Address unique local conditions (weather patterns, soil types, architectural styles)
+   - Mention any relevant local regulations, HOA requirements, or permitting considerations
+
+2. SHOWCASE INDUSTRY EXPERTISE FOR ${String(serviceName)}:
+   - Explain what homeowners should know about ${String(serviceName)} in ${cityName}
+   - Detail material selection considerations unique to this service and location
+   - Describe what to look for in quality contractors for this service
+
+3. INCORPORATE CUSTOMER PSYCHOLOGY:
+   - Address the specific pain points ${cityName} residents face regarding ${String(serviceName)}
+   - Frame solutions in terms of tangible lifestyle benefits, not just features
+   - Use persuasive language that resonates with local property owners' values
+
+4. ESTABLISH CLEAR VALUE PROPOSITION:
+   - Explain how our service helps connect homeowners with the right contractors
+   - Emphasize our knowledge of ${cityName}'s unique conditions and requirements
+   - Highlight the benefits of using our matching service rather than finding contractors alone
+
+5. OPTIMIZE FOR LOCAL SEO:
+   - Naturally integrate "${cityName} ${String(serviceName)}" and related long-tail keywords
+   - Format content with proper H2/H3 headings, brief paragraphs, and bullet points
+   - Include specific calls-to-action relevant to local customers
+
+6. PROVIDE ACTIONABLE INFORMATION:
+   - Include specific considerations for ${String(serviceName)} in ${cityName}'s climate
+   - Offer transparent insights into what to expect from a quality contractor
+   - Give readers genuine value even if they don't convert immediately
+
+Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.
+
+Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate. Replace any mentions of 'Your Company Name' with 'Fences Texas' and remove any phone number references.`;
         
         // Try generate-content first
         let data;
@@ -187,7 +223,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
                   className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   onClick={handleContactClick}
                 >
-                  Get a Free Quote
+                  Get Your Perfect Fence
                 </Button>
               </div>
             </div>
