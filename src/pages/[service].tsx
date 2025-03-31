@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -10,6 +11,7 @@ import { Button } from '@/components/ui/button';
 interface ServicePageProps {
   service: ServiceType;
 }
+
 const ServicePage: React.FC<ServicePageProps> = ({
   service
 }) => {
@@ -414,4 +416,5 @@ const ServicePage: React.FC<ServicePageProps> = ({
       </div>
     </>;
 };
+
 export default ServicePage;

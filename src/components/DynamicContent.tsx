@@ -27,8 +27,9 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         setIsLoading(true);
         
         // Generate a cache key based on city and optional service
+        const serviceNameValue = serviceName as string;
         const cacheKey = serviceName !== ServiceType.ResidentialFencing 
-          ? `${cityName.toLowerCase()}-${serviceName.toLowerCase().replace(/\s+/g, '-')}-dynamic`
+          ? `${cityName.toLowerCase()}-${serviceNameValue.toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
         // Use RPC function to get cached content
@@ -47,14 +48,15 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         // No cached content, generate new content
         console.log(`Generating new dynamic content for ${cityName} and ${serviceName}`);
         
+        const serviceNameValue = serviceName as string;
         const promptTemplate = serviceName !== ServiceType.ResidentialFencing
-          ? `Write an informative, engaging, and detailed section about ${serviceName} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${serviceName.toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis.`
+          ? `Write an informative, engaging, and detailed section about ${serviceNameValue} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${serviceNameValue.toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis.`
           : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Format with H2/H3 headings and use HTML formatting for emphasis.`;
         
         const { data, error } = await supabase.functions.invoke('generate-city-content', {
           body: {
             cityName,
-            serviceName: serviceName,
+            serviceName: serviceNameValue,
             prompt: promptTemplate
           }
         });

@@ -5,7 +5,8 @@ import { ServiceType } from './types';
 export const services = Object.values(ServiceType);
 
 export function getServiceUrl(service: ServiceType): string {
-  return `/${service.toLowerCase().replace(/\s+/g, '-')}`;
+  // Convert enum value to string and format for URL
+  return `/${String(service).toLowerCase().replace(/\s+/g, '-')}`;
 }
 
 export function getCityUrl(city: string): string {
@@ -14,7 +15,7 @@ export function getCityUrl(city: string): string {
 
 export function getCityServiceUrl(city: string, service: ServiceType): string {
   const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-  const serviceSlug = service.toLowerCase().replace(/\s+/g, '-');
+  const serviceSlug = String(service).toLowerCase().replace(/\s+/g, '-');
   return `/${citySlug}/${serviceSlug}`;
 }
 

@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cities, getCityUrl } from '@/lib/cities';
 import { Mail, MapPin } from 'lucide-react';
 import { getServiceUrl } from '@/lib/routes';
+import { ServiceType } from '@/lib/types';
 
 const Footer = () => {
   // Display only a subset of cities in the footer to avoid overwhelming it
@@ -37,7 +39,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link 
-                  to={getServiceUrl("Residential Fencing")} 
+                  to={getServiceUrl(ServiceType.ResidentialFencing)} 
                   className="hover:text-texas-sand transition-colors"
                 >
                   Residential Fencing
@@ -45,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to={getServiceUrl("Commercial Fencing")} 
+                  to={getServiceUrl(ServiceType.CommercialFencing)} 
                   className="hover:text-texas-sand transition-colors"
                 >
                   Commercial Fencing
@@ -53,7 +55,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to={getServiceUrl("Athletic Courts and Sports Facilities")} 
+                  to={getServiceUrl(ServiceType.AthleticCourts)} 
                   className="hover:text-texas-sand transition-colors"
                 >
                   Athletic Courts and Sports Facilities
@@ -61,7 +63,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to={getServiceUrl("Access Control")} 
+                  to={getServiceUrl(ServiceType.AccessControl)} 
                   className="hover:text-texas-sand transition-colors"
                 >
                   Access Control
@@ -69,7 +71,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to={getServiceUrl("Automatic Gates")} 
+                  to={getServiceUrl(ServiceType.AutomaticGates)} 
                   className="hover:text-texas-sand transition-colors"
                 >
                   Automatic Gates

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ServiceType } from '@/lib/types';
@@ -30,7 +29,7 @@ const ServiceCard = ({
   
   // Find related services (excluding current service)
   const getRelatedServices = (): string[] => {
-    const allServices = Object.values(ServiceType);
+    const allServices = Object.values(ServiceType).map(s => String(s));
     
     // Return 2 related services (excluding current one)
     return allServices
@@ -39,6 +38,13 @@ const ServiceCard = ({
   };
   
   const relatedServices = getRelatedServices();
+  
+  // Helper to convert string to ServiceType enum
+  const getServiceTypeFromString = (serviceString: string): ServiceType => {
+    return Object.values(ServiceType).find(
+      (enumValue) => String(enumValue) === serviceString
+    ) as ServiceType;
+  };
   
   return (
     <div 
@@ -67,7 +73,7 @@ const ServiceCard = ({
           />
         </div>
         
-        <Link to={getServiceUrl(service.title as ServiceType)}>
+        <Link to={getServiceUrl(getServiceTypeFromString(service.title))}>
           <h3 
             className="text-xl md:text-2xl font-bold mb-4 group-hover:text-texas-terracotta transition-colors flex items-center gap-1"
             itemProp="name"
@@ -110,7 +116,10 @@ const ServiceCard = ({
               {relatedServices.map((relatedService) => (
                 <Link
                   key={relatedService}
-                  to={city ? getCityServiceUrl(city, relatedService as ServiceType) : getServiceUrl(relatedService as ServiceType)}
+                  to={city 
+                      ? getCityServiceUrl(city, getServiceTypeFromString(relatedService)) 
+                      : getServiceUrl(getServiceTypeFromString(relatedService))
+                  }
                   className="text-sm px-3 py-1 bg-secondary rounded-full hover:bg-texas-terracotta/10 hover:text-texas-terracotta transition-colors"
                 >
                   {relatedService}
@@ -126,7 +135,7 @@ const ServiceCard = ({
                   {cities.slice(0, 3).map((popularCity) => (
                     <Link
                       key={popularCity}
-                      to={getCityServiceUrl(popularCity, service.title as ServiceType)}
+                      to={getCityServiceUrl(popularCity, getServiceTypeFromString(service.title))}
                       className="text-sm px-3 py-1 bg-secondary rounded-full hover:bg-texas-terracotta/10 hover:text-texas-terracotta transition-colors"
                     >
                       {service.title} in {popularCity}
@@ -140,7 +149,7 @@ const ServiceCard = ({
         
         <meta itemProp="provider" content="Fences Texas" />
         <meta itemProp="areaServed" content="Dallas-Fort Worth Metroplex" />
-        <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(service.title as ServiceType)}`} />
+        <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(getServiceTypeFromString(service.title))}`} />
       </div>
     </div>
   );

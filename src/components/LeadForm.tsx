@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -25,7 +26,7 @@ const formSchema = z.object({
       message: 'Please enter a valid phone number',
     }),
   address: z.string().min(5, { message: 'Address is required' }),
-  service_type: z.enum(['Residential Fencing', 'Commercial Fencing', 'Athletic Courts and Sports Facilities', 'Access Control', 'Automatic Gates']),
+  service_type: z.nativeEnum(ServiceType),
   message: z.string().optional(),
 });
 
@@ -65,11 +66,12 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       phone: '',
       address: '',
       message: '',
+      service_type: variant === 'default' ? undefined : ServiceType.ResidentialFencing,
     },
   });
 
   const serviceType = form.watch('service_type');
-  const isResidential = serviceType === 'Residential Fencing';
+  const isResidential = serviceType === ServiceType.ResidentialFencing;
   
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
@@ -77,20 +79,22 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       console.log('Form submission started with data:', data);
       
       // Prepare the lead data
-      const leadData = {
+      const leadData: Lead = {
         name: data.name,
         email: data.email,
         phone: data.phone,
         address: data.address || '',
-        service_type: variant === 'default' ? data.service_type : 'Residential Fencing',
+        service_type: variant === 'default' ? data.service_type : ServiceType.ResidentialFencing,
         message: data.message || '',
         city: city,
-        ...(isResidential && fenceDetails ? {
-          linear_feet: Number(fenceDetails.linear_feet),
-          fence_material: fenceDetails.fence_material,
-          "Estimated Cost Quote": `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`
-        } : {})
       };
+      
+      // Add fence details if it's a residential project
+      if (isResidential && fenceDetails && fenceDetails.estimatedCost) {
+        leadData.linear_feet = Number(fenceDetails.linear_feet);
+        leadData.fence_material = fenceDetails.fence_material;
+        leadData["Estimated Cost Quote"] = `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`;
+      }
 
       console.log('Attempting to submit lead data:', leadData);
       

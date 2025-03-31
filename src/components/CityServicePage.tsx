@@ -13,6 +13,7 @@ import { ServiceType } from '@/lib/types';
 import { cities } from '@/lib/cities';
 import { SERVICE_IMAGES } from '@/lib/images';
 import { cn } from '@/lib/utils';
+import { serviceRouteMap } from '@/lib/routes';
 
 interface CityServicePageProps {}
 
@@ -29,29 +30,27 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
   };
 
   const formattedCity = formatString(city);
-  const formattedService = formatString(service);
-
-  // Get all valid service types from the ServiceType enum
-  const validServiceTypes = Object.values(ServiceType);
   
-  // Check if the formatted service is a valid service type
-  if (!validServiceTypes.includes(formattedService as ServiceType)) {
+  // Get service type from route map
+  const serviceType = serviceRouteMap[service];
+  
+  if (!serviceType) {
     return <div>Error: Invalid service type.</div>;
   }
 
   const breadcrumbLinks = [
     { to: '/', label: 'Home' },
     { to: `/${city}`, label: formattedCity },
-    { to: `/${city}/${service}`, label: formattedService },
+    { to: `/${city}/${service}`, label: String(serviceType) },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <title>{`${formattedService} in ${formattedCity} | Fences Texas`}</title>
+        <title>{`${serviceType} in ${formattedCity} | Fences Texas`}</title>
         <meta
           name="description"
-          content={`Get the best ${formattedService.toLowerCase()} services in ${formattedCity}. Contact us for a free quote!`}
+          content={`Get the best ${String(serviceType).toLowerCase()} services in ${formattedCity}. Contact us for a free quote!`}
         />
       </Helmet>
 
@@ -78,7 +77,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
             </nav>
 
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              {formattedService} in {formattedCity}
+              {serviceType} in {formattedCity}
             </h1>
             <p className="text-lg text-center text-gray-700">
               Your trusted source for quality fencing and athletic court services in the {formattedCity} area.
@@ -88,7 +87,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
 
         <DynamicContent 
           cityName={formattedCity} 
-          serviceName={formattedService as ServiceType}
+          serviceName={serviceType}
         />
         
         <PlanToPickets />
@@ -106,18 +105,17 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {validServiceTypes.map((relatedService) => {
-                const serviceStr = relatedService as string;
+              {Object.values(ServiceType).map((relatedService, index) => {
                 return (
                   <ServiceCard
-                    key={serviceStr}
+                    key={String(relatedService)}
                     service={{
-                      title: serviceStr,
-                      description: `Learn more about our ${serviceStr.toLowerCase()} services in ${formattedCity}.`,
-                      icon: SERVICE_IMAGES[serviceStr as ServiceType],
+                      title: String(relatedService),
+                      description: `Learn more about our ${String(relatedService).toLowerCase()} services in ${formattedCity}.`,
+                      icon: SERVICE_IMAGES[relatedService],
                       benefits: ['Professional Installation', 'High-Quality Materials', 'Exceptional Customer Service']
                     }}
-                    index={0}
+                    index={index}
                     city={city}
                   />
                 );
