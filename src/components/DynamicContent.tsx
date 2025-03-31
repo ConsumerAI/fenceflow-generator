@@ -41,8 +41,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
   const [content, setContent] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  // Configure marked
   useEffect(() => {
-    // Set up marked options
     marked.setOptions({
       gfm: true,
       breaks: true
@@ -76,8 +76,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         console.log(`Generating new dynamic content for ${cityName} and ${serviceName}`);
         
         const promptTemplate = serviceName !== ServiceType.ResidentialFencing
-          ? `Write an informative, engaging, and detailed section about ${String(serviceName)} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${String(serviceName).toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis. Use strong tags for important concepts, em tags for technical terms, and organize information with bullet points where appropriate.`
-          : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Format with H2/H3 headings and use HTML formatting for emphasis. Use strong tags for important concepts, em tags for technical terms, and organize information with bullet points where appropriate.`;
+          ? `Write an informative, engaging, and detailed section about ${String(serviceName)} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${String(serviceName).toLowerCase()} projects. Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate.`
+          : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate.`;
         
         const { data, error } = await supabase.functions.invoke('generate-city-content', {
           body: {
@@ -145,9 +145,9 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
               </p>
             </div>
           ) : (
-            <div className="glass-card p-8 md:p-10 prose-custom">
+            <div className="glass-card p-8 md:p-10">
               <div 
-                className="prose prose-lg max-w-none prose-custom prose-headings:text-texas-earth prose-h2:text-2xl prose-h2:font-bold prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mb-3 prose-h3:mt-6 prose-h3:text-texas-terracotta prose-p:mb-4 prose-p:text-muted-foreground prose-ul:pl-5 prose-ul:mb-6 prose-ul:space-y-2 prose-ul:list-disc prose-ul:text-muted-foreground prose-li:ml-4 prose-strong:font-semibold prose-strong:text-foreground prose-em:text-texas-terracotta prose-em:font-medium"
+                className="prose prose-lg max-w-none [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mb-4 [&>h2]:text-texas-earth [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mb-3 [&>h3]:mt-6 [&>h3]:text-texas-terracotta [&>p]:mb-4 [&>p]:text-muted-foreground [&>ul]:pl-5 [&>ul]:mb-6 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:text-muted-foreground [&>li]:ml-4 [&>strong]:font-semibold [&>strong]:text-foreground [&>em]:text-texas-terracotta [&>em]:font-medium"
                 dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
               />
               
