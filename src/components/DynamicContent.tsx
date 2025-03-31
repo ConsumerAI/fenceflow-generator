@@ -75,17 +75,21 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         // No cached content, generate new content
         console.log(`Attempting to generate new content for ${cityName} and ${serviceName}`);
         
-        const promptTemplate = `You are an elite-level professional content writer specializing in fence installation and athletic court construction. Create rich, SEO-optimized content for ${cityName}, Texas focusing on ${String(serviceName)} that positions our service as the premier local connection to top fence contractors.
+        const promptTemplate = `You are an elite-level professional content writer specializing in fence installation and athletic court construction. Create rich, SEO-optimized content for ${cityName}, Texas focusing on ${String(serviceName)} that positions Fences Texas as the premier local connection to top fence contractors.
 
-Important: We are a lead generation service connecting homeowners with qualified fence contractors, NOT a fence contractor ourselves. All content must make this relationship clear.
+CRITICAL REQUIREMENTS:
+1. ALWAYS use "Fences Texas" as the company name
+2. NEVER use placeholders like [Your Company Name] or (Phone Number)
+3. NEVER mention being a contractor - we connect homeowners with contractors
+4. Use the exact markdown structure provided below
 
 FORMAT YOUR RESPONSE WITH THIS EXACT STRUCTURE AND MARKDOWN:
 
 # ${String(serviceName)} Services in ${cityName}, Texas
 
-When it comes to enhancing the beauty, security, and value of your property in **${cityName}, Texas**, our ${String(serviceName).toLowerCase()} services stand out as the premier choice for local homeowners. With 15+ years of experience and a deep understanding of ${cityName}'s unique needs, we connect you with trusted contractors that perfectly complement your home while addressing local conditions and regulations.
+When it comes to enhancing the beauty, security, and value of your property in **${cityName}, Texas**, Fences Texas stands out as your premier connection to quality ${String(serviceName).toLowerCase()} contractors. With 15+ years of experience connecting homeowners with trusted professionals and a deep understanding of ${cityName}'s unique needs, we ensure you get the perfect fence that complements your home while addressing local conditions and regulations.
 
-## Why Choose Our ${String(serviceName)} Services?
+## Why Choose Fences Texas for ${String(serviceName)}?
 
 ### Local Expertise
 [Write a paragraph about local knowledge, mentioning specific neighborhoods, developments, or landmarks]
@@ -93,7 +97,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
 ### Tailored Solutions for Local Conditions
 [Write about local weather, soil conditions, and specific challenges]
 
-#### Materials We Recommend
+#### Materials Our Contractors Specialize In
 - **[Material 1]**: [Brief description of benefits]
 - **[Material 2]**: [Brief description of benefits]
 - **[Material 3]**: [Brief description of benefits]
@@ -120,8 +124,8 @@ When it comes to enhancing the beauty, security, and value of your property in *
 ### 3. Quality Installation
 [Describe the installation process]
 
-## Why Trust Our Service?
-[Write about our unique value proposition]
+## Why Trust Fences Texas?
+[Write about our unique value proposition as a contractor matching service]
 
 Remember to:
 1. Use **bold** for important terms and locations
