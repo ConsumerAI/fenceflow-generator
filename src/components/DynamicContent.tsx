@@ -79,6 +79,58 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
 Important: We are a lead generation service connecting homeowners with qualified fence contractors, NOT a fence contractor ourselves. All content must make this relationship clear.
 
+FORMAT YOUR RESPONSE WITH THIS EXACT STRUCTURE AND MARKDOWN:
+
+# ${String(serviceName)} Services in ${cityName}, Texas
+
+When it comes to enhancing the beauty, security, and value of your property in **${cityName}, Texas**, our ${String(serviceName).toLowerCase()} services stand out as the premier choice for local homeowners. With 15+ years of experience and a deep understanding of ${cityName}'s unique needs, we connect you with trusted contractors that perfectly complement your home while addressing local conditions and regulations.
+
+## Why Choose Our ${String(serviceName)} Services?
+
+### Local Expertise
+[Write a paragraph about local knowledge, mentioning specific neighborhoods, developments, or landmarks]
+
+### Tailored Solutions for Local Conditions
+[Write about local weather, soil conditions, and specific challenges]
+
+#### Materials We Recommend
+- **[Material 1]**: [Brief description of benefits]
+- **[Material 2]**: [Brief description of benefits]
+- **[Material 3]**: [Brief description of benefits]
+
+## The Benefits of Professional ${String(serviceName)}
+
+### Enhanced Privacy and Security
+[Write about privacy and security benefits]
+
+### Increased Property Value
+[Write about property value benefits]
+
+### Customization Options
+[Write about customization possibilities]
+
+## Our Comprehensive Process
+
+### 1. Initial Consultation
+[Describe the consultation process]
+
+### 2. Expert Contractor Matching
+[Explain how we match with the right contractor]
+
+### 3. Quality Installation
+[Describe the installation process]
+
+## Why Trust Our Service?
+[Write about our unique value proposition]
+
+Remember to:
+1. Use **bold** for important terms and locations
+2. Use *italics* for emphasis
+3. Maintain consistent heading hierarchy (h1 > h2 > h3)
+4. Use bullet points for lists
+5. Keep paragraphs short and scannable
+6. Include specific local details throughout
+
 Your content must:
 
 1. DEMONSTRATE DEEP LOCAL KNOWLEDGE:
@@ -103,17 +155,15 @@ Your content must:
 
 5. OPTIMIZE FOR LOCAL SEO:
    - Naturally integrate "${cityName} ${String(serviceName)}" and related long-tail keywords
-   - Format content with proper H2/H3 headings, brief paragraphs, and bullet points
    - Include specific calls-to-action relevant to local customers
+   - Use location-specific terms and phrases
 
 6. PROVIDE ACTIONABLE INFORMATION:
    - Include specific considerations for ${String(serviceName)} in ${cityName}'s climate
    - Offer transparent insights into what to expect from a quality contractor
    - Give readers genuine value even if they don't convert immediately
 
-Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.
-
-Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate. Replace any mentions of 'Your Company Name' with 'Fences Texas' and remove any phone number references.`;
+Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.`;
         
         // Try generate-content first
         let data;
@@ -197,7 +247,7 @@ Use markdown formatting with ## for main headings and ### for subheadings. Use *
   };
 
   return (
-    <section className="py-16 md:py-24 bg-secondary/30 texas-section">
+    <section className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {isLoading ? (
@@ -208,13 +258,26 @@ Use markdown formatting with ## for main headings and ### for subheadings. Use *
           ) : content ? (
             <div>
               <div 
-                className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground"
+                className="prose prose-lg max-w-none
+                  prose-headings:font-display
+                  prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:text-center prose-h1:mb-8
+                  prose-h2:text-3xl prose-h2:font-bold prose-h2:text-texas-earth prose-h2:mt-12 prose-h2:mb-6
+                  prose-h3:text-2xl prose-h3:font-semibold prose-h3:text-texas-terracotta prose-h3:mt-8 prose-h3:mb-4
+                  prose-h4:text-xl prose-h4:font-medium prose-h4:text-texas-earth/80 prose-h4:mt-6 prose-h4:mb-3
+                  prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
+                  prose-strong:text-foreground prose-strong:font-semibold
+                  prose-em:text-texas-terracotta prose-em:font-medium
+                  prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                  prose-li:text-muted-foreground prose-li:marker:text-texas-terracotta
+                  prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth
+                  [&_strong]:text-foreground [&_strong]:font-semibold
+                  [&_em]:text-texas-terracotta [&_em]:font-medium"
                 dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
               />
-              <div className="mt-8 flex justify-center">
+              <div className="mt-12 flex justify-center">
                 <Button 
                   onClick={handleContactClick}
-                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-3"
                 >
                   Get Your Perfect Fence
                 </Button>
