@@ -79,11 +79,11 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
 CRITICAL REQUIREMENTS:
 1. ALWAYS use "Fences Texas" as the company name
-2. NEVER include phone numbers or any contact methods - form submission only
+2. NEVER include any CTAs, contact information, or form references
 3. NEVER include internal notes about SEO or content strategy
 4. NEVER mention being a contractor - we connect homeowners with contractors
 5. Use the exact markdown structure provided below
-6. The final two sections MUST be exactly as shown below - DO NOT MODIFY THEM AT ALL
+6. STOP after the "Quality Installation" section - do not add any additional sections
 
 FORMAT YOUR RESPONSE WITH THIS EXACT STRUCTURE AND MARKDOWN:
 
@@ -126,8 +126,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
 ### 3. Quality Installation
 [Describe the installation process]
 
-## Why Trust Fences Texas?
-[Write about our unique value proposition as a contractor matching service]
+[END OF CONTENT - DO NOT ADD ANY MORE SECTIONS, CALLS TO ACTION, OR CONTACT INFORMATION]
 
 Remember to:
 1. Use **bold** for important terms and locations
@@ -290,20 +289,20 @@ Ready to enhance your property with a beautiful and functional fence? Fill out o
               />
               
               {/* Hardcoded CTA Section */}
-              <div className="mt-16 text-center">
+              <div className="mt-16 text-center border-t border-texas-terracotta/20 pt-16">
                 <h2 className="text-3xl font-bold text-texas-earth mb-6">Get Started Today</h2>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                   Ready to enhance your property with a top-quality {serviceName.toLowerCase()}? At Fences Texas, we're committed to 
                   delivering exceptional service and results that stand the test of time.
                 </p>
                 
                 <h3 className="text-2xl font-semibold text-texas-terracotta mb-4">Contact Us</h3>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                   Fill out our online form for a free consultation and estimate. Discover why we are {cityName}'s premier 
                   choice for {serviceName.toLowerCase()}!
                 </p>
                 
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                   By choosing us, you're not just getting a fence; you're investing in a lasting solution that adds value, 
                   security, and beauty to your home. Let's build something great together!
                 </p>
