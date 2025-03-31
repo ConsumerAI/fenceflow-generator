@@ -310,20 +310,28 @@ By choosing us, you're not just getting a fence; you're investing in a lasting s
               />
               
               {/* Hardcoded CTA Section */}
-              <div className="mt-12 prose prose-texas max-w-none">
-                <h2 className="text-3xl font-bold text-texas-earth">Get Started Today</h2>
-                <p className="text-muted-foreground">
+              <div className="mt-12 prose prose-lg max-w-none
+                prose-headings:font-display
+                prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:text-center prose-h1:mb-8 prose-h1:text-foreground
+                prose-h2:text-3xl prose-h2:font-bold prose-h2:text-texas-earth prose-h2:mt-12 prose-h2:mb-6
+                prose-h3:text-2xl prose-h3:font-semibold prose-h3:text-texas-terracotta prose-h3:mt-8 prose-h3:mb-4
+                prose-h4:text-xl prose-h4:font-medium prose-h4:text-texas-earth/80 prose-h4:mt-6 prose-h4:mb-3
+                prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
+                prose-strong:text-foreground prose-strong:font-semibold
+                prose-em:text-texas-terracotta prose-em:font-medium">
+                <h2 className="text-3xl font-bold text-texas-earth mt-12 mb-6">Get Started Today</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   Ready to enhance your property with a top-quality {serviceName.toLowerCase()}? At Fences Texas, we're committed to 
                   delivering exceptional service and results that stand the test of time.
                 </p>
                 
-                <h2 className="text-3xl font-bold text-texas-earth">Contact Us</h2>
-                <p className="text-muted-foreground">
+                <h2 className="text-3xl font-bold text-texas-earth mt-12 mb-6">Contact Us</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   Fill out our online form for a free consultation and estimate. Discover why we are {cityName}'s premier 
                   choice for {serviceName.toLowerCase()}!
                 </p>
                 
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-8">
                   By choosing us, you're not just getting a fence; you're investing in a lasting solution that adds value, 
                   security, and beauty to your home. Let's build something great together!
                 </p>
