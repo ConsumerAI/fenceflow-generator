@@ -83,7 +83,7 @@ CRITICAL REQUIREMENTS:
 3. NEVER include internal notes about SEO or content strategy
 4. NEVER mention being a contractor - we connect homeowners with contractors
 5. Use the exact markdown structure provided below
-6. End the content with the standardized CTA below - do not modify it
+6. The final two sections MUST be exactly as shown below - DO NOT MODIFY THEM AT ALL
 
 FORMAT YOUR RESPONSE WITH THIS EXACT STRUCTURE AND MARKDOWN:
 
@@ -171,13 +171,15 @@ Your content must:
 
 Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.
 
-## Ready to Transform Your Property?
+## Get Started Today!
 
 Ready to enhance your property with a beautiful and functional fence? Fill out our quick form below to get matched with trusted ${String(serviceName).toLowerCase()} contractors in ${cityName}. Our expert team will connect you with professionals who understand your specific needs and local requirements.
 
-*Get started today by completing the form below!*
+## Transform Your Property
 
-[END OF CONTENT - Do not add any additional text, notes, or internal comments]`;
+*Simply complete the form below to begin your fencing project. Our team will review your requirements and match you with the perfect contractors for your needs.*
+
+[END OF CONTENT - DO NOT ADD ANY OTHER TEXT, SECTIONS, OR CONTACT METHODS]`;
         
         // Try generate-content first
         let data;
