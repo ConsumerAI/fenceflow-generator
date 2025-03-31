@@ -8,26 +8,51 @@ const corsHeaders = {
 };
 
 function getServicePrompt(serviceName: string): string {
+  const basePrompt = `You are an elite-level professional content writer specializing in fence installation and athletic court construction with 15+ years of industry experience. Create rich, SEO-optimized content for {city}, Texas focusing on {service_type} that positions our company as the premier local expert.
+
+Your content must:
+
+1. DEMONSTRATE DEEP LOCAL KNOWLEDGE:
+   - Reference specific {city} neighborhoods, developments, or landmarks
+   - Address unique local conditions (weather patterns, soil types, architectural styles)
+   - Mention any relevant local regulations, HOA requirements, or permitting considerations
+
+2. SHOWCASE TECHNICAL EXPERTISE FOR {service_type}:
+   - Explain specialized construction techniques specific to {service_type} in {city}
+   - Detail material selection considerations unique to this service and location
+   - Describe our proprietary installation methods that ensure superior results
+
+3. INCORPORATE CUSTOMER PSYCHOLOGY:
+   - Address the specific pain points {city} residents face regarding {service_type}
+   - Frame solutions in terms of tangible lifestyle benefits, not just features
+   - Use persuasive language that resonates with local property owners' values
+
+4. ESTABLISH CLEAR DIFFERENTIATION:
+   - Contrast our premium approach with competitors' standard practices
+   - Emphasize our specialized knowledge of {city}'s unique conditions
+   - Highlight our proven track record with {service_type} in this specific area
+
+5. OPTIMIZE FOR LOCAL SEO:
+   - Naturally integrate "{city} {service_type}" and related long-tail keywords
+   - Format content with proper H2/H3 headings, brief paragraphs, and bullet points
+   - Include specific calls-to-action relevant to local customers
+
+6. PROVIDE ACTIONABLE INFORMATION:
+   - Include specific maintenance advice for {service_type} in {city}'s climate
+   - Offer transparent insights into project timelines and processes
+   - Give readers genuine value even if they don't convert immediately
+
+Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in {service_type} for {city} properties.`;
+
   const prompts = {
-    'Athletic Courts and Sports Facilities': 
-      'You are a professional content writer specializing in athletic court and sports facility construction. Create SEO-optimized, engaging content that highlights the benefits of professional court installation, focusing on quality, safety, and performance. Include details about construction processes, materials, and local considerations.',
-    'Chain Link Fences':
-      'You are a professional content writer specializing in chain link fence installation. Create SEO-optimized content that highlights the durability, security, and cost-effectiveness of chain link fencing. Focus on commercial applications, property security, and the benefits of professional installation.',
-    'Wood Fences':
-      'You are a professional content writer specializing in wood fence installation. Create SEO-optimized content that emphasizes the natural beauty, privacy, and property value benefits of wood fencing. Include details about wood types, maintenance requirements, and aesthetic customization options.',
-    'Vinyl Fences':
-      'You are a professional content writer specializing in vinyl fence installation. Create SEO-optimized content that showcases the low-maintenance benefits, durability, and modern aesthetics of vinyl fencing. Highlight the long-term cost benefits and variety of styles available.',
-    'Ornamental Iron Fences':
-      'You are a professional content writer specializing in ornamental iron fence installation. Create SEO-optimized content that emphasizes the elegant aesthetics, security features, and lasting durability of iron fencing. Focus on custom design options and architectural enhancement.',
-    'Commercial Fencing':
-      'You are a professional content writer specializing in commercial fence installation. Create SEO-optimized content that addresses business security needs, property demarcation, and professional appearance. Include details about compliance, durability, and return on investment.',
-    'Farm and Ranch Fencing':
-      'You are a professional content writer specializing in farm and ranch fence installation. Create SEO-optimized content that focuses on livestock containment, property security, and agricultural applications. Include details about durability, maintenance, and specific agricultural requirements.',
-    'Automatic Gates':
-      'You are a professional content writer specializing in automatic gate installation. Create SEO-optimized content that highlights convenience, security features, and property value enhancement. Include details about access control options, maintenance requirements, and integration capabilities.'
+    'Residential Fencing': basePrompt.replace(/{service_type}/g, 'residential fencing'),
+    'Commercial Fencing': basePrompt.replace(/{service_type}/g, 'commercial fencing'),
+    'Athletic Courts and Sports Facilities': basePrompt.replace(/{service_type}/g, 'athletic courts and sports facilities'),
+    'Access Control': basePrompt.replace(/{service_type}/g, 'access control systems'),
+    'Automatic Gates': basePrompt.replace(/{service_type}/g, 'automatic gates')
   };
 
-  return prompts[serviceName] || 'You are a professional content writer for a fence company website. Create SEO-optimized, engaging content that highlights the benefits of the requested service in the specified city. Focus on local relevance, customer pain points, and the high quality of service.';
+  return prompts[serviceName] || basePrompt.replace(/{service_type}/g, serviceName);
 }
 
 // Initialize OpenAI API
