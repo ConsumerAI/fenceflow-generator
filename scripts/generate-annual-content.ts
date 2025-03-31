@@ -21,6 +21,12 @@ const SERVICES = [
   ServiceType.AutomaticGates
 ];
 
+interface GenerationFailure {
+  city: string;
+  service: ServiceType;
+  error: unknown;
+}
+
 async function generateContent(city: string, service: ServiceType): Promise<string> {
   try {
     console.log(`Generating content for ${city} - ${service}...`);
@@ -71,7 +77,7 @@ async function main() {
 
   console.log('Starting annual content generation...');
   let totalGenerated = 0;
-  let failures = [];
+  const failures: GenerationFailure[] = [];
 
   for (const city of cities) {
     for (const service of SERVICES) {
