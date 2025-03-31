@@ -73,19 +73,45 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         }
         
         // No cached content, generate new content
-        console.log(`Generating new dynamic content for ${cityName} and ${serviceName}`);
+        console.log(`Attempting to generate new content for ${cityName} and ${serviceName}`);
         
         const promptTemplate = serviceName !== ServiceType.ResidentialFencing
           ? `Write an informative, engaging, and detailed section about ${String(serviceName)} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${String(serviceName).toLowerCase()} projects. Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate.`
           : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Use markdown formatting with ## for main headings and ### for subheadings. Use **bold** for important terms and *italics* for emphasis. Use bullet points where appropriate.`;
         
-        const { data, error } = await supabase.functions.invoke('generate-city-content', {
-          body: {
-            cityName,
-            serviceName: String(serviceName),
-            prompt: promptTemplate
+        // Try generate-content first
+        let data;
+        let error;
+        
+        try {
+          const result = await supabase.functions.invoke('generate-content', {
+            body: {
+              city: cityName,
+              service: String(serviceName),
+            }
+          });
+          
+          if (result.error) {
+            console.error("Error with generate-content:", result.error);
+            // If first function fails, try generate-city-content
+            console.log("Trying fallback function generate-city-content...");
+            const fallbackResult = await supabase.functions.invoke('generate-city-content', {
+              body: {
+                cityName,
+                serviceName: String(serviceName),
+                prompt: promptTemplate
+              }
+            });
+            data = fallbackResult.data;
+            error = fallbackResult.error;
+          } else {
+            data = result.data;
+            error = result.error;
           }
-        });
+        } catch (invokeError) {
+          console.error("Error invoking function:", invokeError);
+          error = invokeError;
+        }
 
         if (error) {
           console.error("Error fetching dynamic content:", error);
@@ -93,6 +119,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         }
 
         if (data?.content) {
+          console.log("Successfully generated content:", data.content.substring(0, 100) + "...");
           // Cache the content using RPC function
           const { error: cachingError } = await typedSupabase
             .rpc('cache_content', { 
@@ -103,9 +130,13 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           
           if (cachingError) {
             console.error("Error caching content:", cachingError);
+          } else {
+            console.log("Successfully cached content");
           }
           
           setContent(data.content);
+        } else {
+          console.error("No content received from function");
         }
       } catch (error) {
         console.error("Error in dynamic content generation:", error);
