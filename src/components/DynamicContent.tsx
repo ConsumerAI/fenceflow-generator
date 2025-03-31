@@ -27,9 +27,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         setIsLoading(true);
         
         // Generate a cache key based on city and optional service
-        const serviceNameValue = serviceName as string;
         const cacheKey = serviceName !== ServiceType.ResidentialFencing 
-          ? `${cityName.toLowerCase()}-${serviceNameValue.toLowerCase().replace(/\s+/g, '-')}-dynamic`
+          ? `${cityName.toLowerCase()}-${String(serviceName).toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
         // Use RPC function to get cached content
@@ -48,15 +47,14 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         // No cached content, generate new content
         console.log(`Generating new dynamic content for ${cityName} and ${serviceName}`);
         
-        const serviceNameValue = serviceName as string;
         const promptTemplate = serviceName !== ServiceType.ResidentialFencing
-          ? `Write an informative, engaging, and detailed section about ${serviceNameValue} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${serviceNameValue.toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis.`
-          : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Format with H2/H3 headings and use HTML formatting for emphasis.`;
+          ? `Write an informative, engaging, and detailed section about ${String(serviceName)} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${String(serviceName).toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis. Use strong tags for important concepts, em tags for technical terms, and organize information with bullet points where appropriate.`
+          : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Format with H2/H3 headings and use HTML formatting for emphasis. Use strong tags for important concepts, em tags for technical terms, and organize information with bullet points where appropriate.`;
         
         const { data, error } = await supabase.functions.invoke('generate-city-content', {
           body: {
             cityName,
-            serviceName: serviceNameValue,
+            serviceName: String(serviceName),
             prompt: promptTemplate
           }
         });
@@ -105,25 +103,54 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
     }
   };
 
+  // Add custom renderer to enhance the styling of the markdown content
+  useEffect(() => {
+    marked.use({
+      renderer: {
+        heading(text, level) {
+          const fontSize = level === 2 ? 'text-2xl font-bold mb-4 text-texas-earth' : 
+                          level === 3 ? 'text-xl font-semibold mb-3 mt-6 text-texas-terracotta' : '';
+          return `<h${level} class="${fontSize}">${text}</h${level}>`;
+        },
+        paragraph(text) {
+          return `<p class="mb-4 text-muted-foreground">${text}</p>`;
+        },
+        list(body, ordered) {
+          const listType = ordered ? 'ol' : 'ul';
+          return `<${listType} class="pl-5 mb-6 space-y-2 list-disc text-muted-foreground">${body}</${listType}>`;
+        },
+        listitem(text) {
+          return `<li class="ml-4">${text}</li>`;
+        },
+        strong(text) {
+          return `<strong class="font-semibold text-foreground">${text}</strong>`;
+        },
+        em(text) {
+          return `<em class="text-texas-terracotta font-medium">${text}</em>`;
+        }
+      }
+    });
+  }, []);
+
   return (
-    <section className="py-12 md:py-16 bg-secondary/30">
+    <section className="py-16 md:py-24 bg-secondary/30 texas-section">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Expert Insights for {serviceName} in {cityName}
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-texas-earth">
+            Expert Insights for {String(serviceName)} in {cityName}
           </h2>
           
           {isLoading ? (
             <div className="flex flex-col items-center py-12">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-texas-terracotta"></div>
               <p className="mt-4 text-sm text-gray-500">
-                Generating specialized {serviceName.toLowerCase()} insights for {cityName}...
+                Generating specialized {String(serviceName).toLowerCase()} insights for {cityName}...
               </p>
             </div>
           ) : (
-            <>
+            <div className="glass-card p-8 md:p-10 prose-custom">
               <div 
-                className="prose prose-lg max-w-none"
+                className="prose prose-lg max-w-none prose-custom"
                 dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
               />
               
@@ -135,7 +162,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
                   Get a Free Quote
                 </Button>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>

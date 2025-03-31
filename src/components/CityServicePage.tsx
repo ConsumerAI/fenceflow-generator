@@ -105,7 +105,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Object.values(ServiceType).map((relatedService, index) => {
+              {Object.values(ServiceType).map((relatedService) => {
                 return (
                   <ServiceCard
                     key={String(relatedService)}
@@ -115,7 +115,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                       icon: SERVICE_IMAGES[relatedService],
                       benefits: ['Professional Installation', 'High-Quality Materials', 'Exceptional Customer Service']
                     }}
-                    index={index}
+                    index={Object.values(ServiceType).indexOf(relatedService)}
                     city={city}
                   />
                 );

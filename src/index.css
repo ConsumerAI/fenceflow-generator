@@ -111,6 +111,51 @@
     }
   }
   
+  /* Enhanced prose styling for dynamic content */
+  .prose-custom h2 {
+    @apply text-2xl font-bold mb-5 mt-8 text-texas-earth border-b border-texas-earth/20 pb-2;
+  }
+  
+  .prose-custom h3 {
+    @apply text-xl font-semibold mb-3 mt-6 text-texas-terracotta;
+  }
+  
+  .prose-custom p {
+    @apply mb-4 text-muted-foreground leading-relaxed;
+  }
+  
+  .prose-custom ul, 
+  .prose-custom ol {
+    @apply pl-5 mb-6 space-y-2 list-disc text-muted-foreground;
+  }
+  
+  .prose-custom li {
+    @apply ml-4 mb-2;
+  }
+  
+  .prose-custom strong {
+    @apply font-semibold text-foreground;
+  }
+  
+  .prose-custom em {
+    @apply text-texas-terracotta font-medium not-italic;
+  }
+  
+  .prose-custom ul li, 
+  .prose-custom ol li,
+  .list-disc li,
+  .list-decimal li {
+    @apply text-left;
+  }
+
+  .prose-custom ul, 
+  .prose-custom ol,
+  .list-disc,
+  .list-decimal {
+    @apply text-left w-full;
+  }
+  
+  /* Existing prose styles */
   .prose ul {
     @apply pl-4;
   }
@@ -134,4 +179,3 @@
     @apply text-left w-full;
   }
 }
-
