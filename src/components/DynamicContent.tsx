@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { marked } from 'marked';
+import { marked, Renderer, Token, HeadingToken, ParagraphToken, ListToken, ListItemToken, StrongToken, EmToken } from 'marked';
 import { Button } from '@/components/ui/button';
 import { ServiceType } from '@/lib/types';
 
@@ -105,31 +105,39 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
   // Add custom renderer to enhance the styling of the markdown content
   useEffect(() => {
-    marked.use({
-      renderer: {
-        heading(text: string, level: number) {
-          const fontSize = level === 2 ? 'text-2xl font-bold mb-4 text-texas-earth' : 
-                          level === 3 ? 'text-xl font-semibold mb-3 mt-6 text-texas-terracotta' : '';
-          return `<h${level} class="${fontSize}">${text}</h${level}>`;
-        },
-        paragraph(text: string) {
-          return `<p class="mb-4 text-muted-foreground">${text}</p>`;
-        },
-        list(body: string, ordered: boolean) {
-          const listType = ordered ? 'ol' : 'ul';
-          return `<${listType} class="pl-5 mb-6 space-y-2 list-disc text-muted-foreground">${body}</${listType}>`;
-        },
-        listitem(text: string) {
-          return `<li class="ml-4">${text}</li>`;
-        },
-        strong(text: string) {
-          return `<strong class="font-semibold text-foreground">${text}</strong>`;
-        },
-        em(text: string) {
-          return `<em class="text-texas-terracotta font-medium">${text}</em>`;
-        }
-      }
-    });
+    const customRenderer = new Renderer();
+
+    customRenderer.heading = function(this: Renderer, token: HeadingToken) {
+      const level = token.depth;
+      const text = token.text;
+      const fontSize = level === 2 ? 'text-2xl font-bold mb-4 text-texas-earth' : 
+                      level === 3 ? 'text-xl font-semibold mb-3 mt-6 text-texas-terracotta' : '';
+      return `<h${level} class="${fontSize}">${text}</h${level}>`;
+    };
+
+    customRenderer.paragraph = function(this: Renderer, token: ParagraphToken) {
+      return `<p class="mb-4 text-muted-foreground">${token.text}</p>`;
+    };
+
+    customRenderer.list = function(this: Renderer, token: ListToken) {
+      const listType = token.ordered ? 'ol' : 'ul';
+      return `<${listType} class="pl-5 mb-6 space-y-2 list-disc text-muted-foreground">${token.items.map(item => 
+        this.listitem(item)).join('')}</${listType}>`;
+    };
+
+    customRenderer.listitem = function(this: Renderer, token: ListItemToken) {
+      return `<li class="ml-4">${token.text}</li>`;
+    };
+
+    customRenderer.strong = function(this: Renderer, token: StrongToken) {
+      return `<strong class="font-semibold text-foreground">${token.text}</strong>`;
+    };
+
+    customRenderer.em = function(this: Renderer, token: EmToken) {
+      return `<em class="text-texas-terracotta font-medium">${token.text}</em>`;
+    };
+
+    marked.use({ renderer: customRenderer });
   }, []);
 
   return (
