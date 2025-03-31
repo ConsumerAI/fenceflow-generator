@@ -1,15 +1,37 @@
-
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { marked, Renderer, Token, HeadingToken, ParagraphToken, ListToken, ListItemToken, StrongToken, EmToken } from 'marked';
+import { marked } from 'marked';
 import { Button } from '@/components/ui/button';
 import { ServiceType } from '@/lib/types';
+import { SupabaseClient } from '@supabase/supabase-js';
+import type { Database as GeneratedDatabase } from '@/integrations/supabase/types';
 
 interface DynamicContentProps {
   cityName: string;
   serviceName?: ServiceType;
   onContactClick?: () => void;
 }
+
+type Database = GeneratedDatabase & {
+  public: {
+    Functions: {
+      get_cached_content: {
+        Args: { cache_key: string };
+        Returns: string;
+      };
+      cache_content: {
+        Args: { 
+          cache_key: string;
+          cache_content: string;
+          expire_days: number;
+        };
+        Returns: void;
+      };
+    };
+  };
+};
+
+const typedSupabase = supabase as unknown as SupabaseClient<Database>;
 
 const DynamicContent: React.FC<DynamicContentProps> = ({ 
   cityName, 
@@ -18,6 +40,14 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 }) => {
   const [content, setContent] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Set up marked options
+    marked.setOptions({
+      gfm: true,
+      breaks: true
+    });
+  }, []);
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -32,10 +62,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           : `${cityName.toLowerCase()}-dynamic`;
         
         // Use RPC function to get cached content
-        const { data: cachedContent, error: cacheError } = await supabase.rpc(
-          'get_cached_content',
-          { cache_key: cacheKey }
-        );
+        const { data: cachedContent, error: cacheError } = await typedSupabase
+          .rpc('get_cached_content', { cache_key: cacheKey });
         
         if (!cacheError && cachedContent) {
           console.log('Using cached dynamic content');
@@ -66,14 +94,12 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
         if (data?.content) {
           // Cache the content using RPC function
-          const { error: cachingError } = await supabase.rpc(
-            'cache_content',
-            { 
+          const { error: cachingError } = await typedSupabase
+            .rpc('cache_content', { 
               cache_key: cacheKey,
               cache_content: data.content,
               expire_days: 30
-            }
-          );
+            });
           
           if (cachingError) {
             console.error("Error caching content:", cachingError);
@@ -103,43 +129,6 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
     }
   };
 
-  // Add custom renderer to enhance the styling of the markdown content
-  useEffect(() => {
-    const customRenderer = new Renderer();
-
-    customRenderer.heading = function(this: Renderer, token: HeadingToken) {
-      const level = token.depth;
-      const text = token.text;
-      const fontSize = level === 2 ? 'text-2xl font-bold mb-4 text-texas-earth' : 
-                      level === 3 ? 'text-xl font-semibold mb-3 mt-6 text-texas-terracotta' : '';
-      return `<h${level} class="${fontSize}">${text}</h${level}>`;
-    };
-
-    customRenderer.paragraph = function(this: Renderer, token: ParagraphToken) {
-      return `<p class="mb-4 text-muted-foreground">${token.text}</p>`;
-    };
-
-    customRenderer.list = function(this: Renderer, token: ListToken) {
-      const listType = token.ordered ? 'ol' : 'ul';
-      return `<${listType} class="pl-5 mb-6 space-y-2 list-disc text-muted-foreground">${token.items.map(item => 
-        this.listitem(item)).join('')}</${listType}>`;
-    };
-
-    customRenderer.listitem = function(this: Renderer, token: ListItemToken) {
-      return `<li class="ml-4">${token.text}</li>`;
-    };
-
-    customRenderer.strong = function(this: Renderer, token: StrongToken) {
-      return `<strong class="font-semibold text-foreground">${token.text}</strong>`;
-    };
-
-    customRenderer.em = function(this: Renderer, token: EmToken) {
-      return `<em class="text-texas-terracotta font-medium">${token.text}</em>`;
-    };
-
-    marked.use({ renderer: customRenderer });
-  }, []);
-
   return (
     <section className="py-16 md:py-24 bg-secondary/30 texas-section">
       <div className="container mx-auto px-4 md:px-8">
@@ -158,7 +147,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           ) : (
             <div className="glass-card p-8 md:p-10 prose-custom">
               <div 
-                className="prose prose-lg max-w-none prose-custom"
+                className="prose prose-lg max-w-none prose-custom prose-headings:text-texas-earth prose-h2:text-2xl prose-h2:font-bold prose-h2:mb-4 prose-h3:text-xl prose-h3:font-semibold prose-h3:mb-3 prose-h3:mt-6 prose-h3:text-texas-terracotta prose-p:mb-4 prose-p:text-muted-foreground prose-ul:pl-5 prose-ul:mb-6 prose-ul:space-y-2 prose-ul:list-disc prose-ul:text-muted-foreground prose-li:ml-4 prose-strong:font-semibold prose-strong:text-foreground prose-em:text-texas-terracotta prose-em:font-medium"
                 dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
               />
               
