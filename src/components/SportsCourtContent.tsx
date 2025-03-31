@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import LeadForm from '@/components/LeadForm';
 import { Separator } from '@/components/ui/separator';
 import { services } from '@/lib/routes';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '@/integrations/supabase/client';
 
 const SportsCourtContent: React.FC = () => {
   const [content, setContent] = useState<string>("");
@@ -15,6 +15,7 @@ const SportsCourtContent: React.FC = () => {
     const fetchContent = async () => {
       try {
         setIsLoading(true);
+        // Use the client.functions.invoke method from the imported Supabase client
         const { data, error } = await supabase.functions.invoke('generate-city-content', {
           body: {
             cityName: "Dallas",
@@ -118,7 +119,8 @@ const SportsCourtContent: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">
                 Fill out the form below to discuss your athletic court or sports facility project with our specialists.
               </p>
-              <LeadForm serviceType="Athletic Courts and Sports Facilities" />
+              {/* Fix: Use 'city' prop instead of 'serviceType' to match LeadFormProps */}
+              <LeadForm city="Dallas" />
             </CardContent>
           </Card>
         </div>
