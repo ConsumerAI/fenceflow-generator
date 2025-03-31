@@ -79,9 +79,10 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
 CRITICAL REQUIREMENTS:
 1. ALWAYS use "Fences Texas" as the company name
-2. NEVER use placeholders like [Your Company Name] or (Phone Number)
-3. NEVER mention being a contractor - we connect homeowners with contractors
-4. Use the exact markdown structure provided below
+2. NEVER include phone numbers or contact methods other than the form
+3. ALL calls-to-action must direct to filling out the form only
+4. NEVER mention being a contractor - we connect homeowners with contractors
+5. Use the exact markdown structure provided below
 
 FORMAT YOUR RESPONSE WITH THIS EXACT STRUCTURE AND MARKDOWN:
 
@@ -167,7 +168,13 @@ Your content must:
    - Offer transparent insights into what to expect from a quality contractor
    - Give readers genuine value even if they don't convert immediately
 
-Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.`;
+Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.
+
+## Ready to Transform Your Property?
+
+Don't wait to enhance your property's value and security. Fill out our simple form below to get matched with trusted ${String(serviceName).toLowerCase()} contractors in ${cityName}. Our expert team will connect you with professionals who understand your specific needs and local requirements.
+
+*Get started today by completing our quick form below!*`;
         
         // Try generate-content first
         let data;
@@ -260,33 +267,20 @@ Write in a professional yet conversational tone that builds trust while establis
               <p className="mt-4 text-muted-foreground">Generating content for {cityName}...</p>
             </div>
           ) : content ? (
-            <div>
-              <div 
-                className="prose prose-lg max-w-none
-                  prose-headings:font-display
-                  prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:text-center prose-h1:mb-8
-                  prose-h2:text-3xl prose-h2:font-bold prose-h2:text-texas-earth prose-h2:mt-12 prose-h2:mb-6
-                  prose-h3:text-2xl prose-h3:font-semibold prose-h3:text-texas-terracotta prose-h3:mt-8 prose-h3:mb-4
-                  prose-h4:text-xl prose-h4:font-medium prose-h4:text-texas-earth/80 prose-h4:mt-6 prose-h4:mb-3
-                  prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
-                  prose-strong:text-foreground prose-strong:font-semibold
-                  prose-em:text-texas-terracotta prose-em:font-medium
-                  prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
-                  prose-li:text-muted-foreground prose-li:marker:text-texas-terracotta
-                  prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth
-                  [&_strong]:text-foreground [&_strong]:font-semibold
-                  [&_em]:text-texas-terracotta [&_em]:font-medium"
-                dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-              />
-              <div className="mt-12 flex justify-center">
-                <Button 
-                  onClick={handleContactClick}
-                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-3"
-                >
-                  Get Your Perfect Fence
-                </Button>
-              </div>
-            </div>
+            <article className="prose prose-lg max-w-none
+              prose-headings:font-display
+              prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:text-center prose-h1:mb-8 prose-h1:text-foreground
+              prose-h2:text-3xl prose-h2:font-bold prose-h2:text-texas-earth prose-h2:mt-12 prose-h2:mb-6
+              prose-h3:text-2xl prose-h3:font-semibold prose-h3:text-texas-terracotta prose-h3:mt-8 prose-h3:mb-4
+              prose-h4:text-xl prose-h4:font-medium prose-h4:text-texas-earth/80 prose-h4:mt-6 prose-h4:mb-3
+              prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
+              prose-strong:text-foreground prose-strong:font-semibold
+              prose-em:text-texas-terracotta prose-em:font-medium
+              prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+              prose-li:text-muted-foreground prose-li:marker:text-texas-terracotta
+              prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth">
+              <div dangerouslySetInnerHTML={{ __html: marked.parse(content) }} />
+            </article>
           ) : (
             <div className="text-center py-12">
               <p className="text-muted-foreground">No content available.</p>
