@@ -79,10 +79,11 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
 
 CRITICAL REQUIREMENTS:
 1. ALWAYS use "Fences Texas" as the company name
-2. NEVER include phone numbers or contact methods other than the form
-3. ALL calls-to-action must direct to filling out the form only
+2. NEVER include phone numbers or any contact methods - form submission only
+3. NEVER include internal notes about SEO or content strategy
 4. NEVER mention being a contractor - we connect homeowners with contractors
 5. Use the exact markdown structure provided below
+6. End the content with the standardized CTA below - do not modify it
 
 FORMAT YOUR RESPONSE WITH THIS EXACT STRUCTURE AND MARKDOWN:
 
@@ -172,9 +173,11 @@ Write in a professional yet conversational tone that builds trust while establis
 
 ## Ready to Transform Your Property?
 
-Don't wait to enhance your property's value and security. Fill out our simple form below to get matched with trusted ${String(serviceName).toLowerCase()} contractors in ${cityName}. Our expert team will connect you with professionals who understand your specific needs and local requirements.
+Ready to enhance your property with a beautiful and functional fence? Fill out our quick form below to get matched with trusted ${String(serviceName).toLowerCase()} contractors in ${cityName}. Our expert team will connect you with professionals who understand your specific needs and local requirements.
 
-*Get started today by completing our quick form below!*`;
+*Get started today by completing the form below!*
+
+[END OF CONTENT - Do not add any additional text, notes, or internal comments]`;
         
         // Try generate-content first
         let data;
