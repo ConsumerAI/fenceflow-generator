@@ -1,0 +1,77 @@
+name: Annual Content Generation
+
+on:
+  schedule:
+    # Run on January 1st at 00:00 UTC
+    - cron: '0 0 1 1 *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Generate content
+        run: npm run generate-content
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          
+      - name: Upload generation logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: generation-logs
+          path: logs/
+          
+      - name: Check for failures
+        run: |
+          if [ -f "logs/latest-generation-summary.txt" ]; then
+            if grep -q "Failed: 0" "logs/latest-generation-summary.txt"; then
+              echo "Content generation completed successfully"
+            else
+              echo "Content generation had failures"
+              exit 1
+            fi
+          else
+            echo "Summary file not found"
+            exit 1
+          fi
+          
+      - name: Create Issue on Failure
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            let summary = '';
+            try {
+              summary = fs.readFileSync('logs/latest-generation-summary.txt', 'utf8');
+            } catch (error) {
+              summary = 'Error reading summary file';
+            }
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '⚠️ Annual Content Generation Failed',
+              body: `The annual content generation job failed. Please check the logs for details.
+
+\`\`\`
+${summary}
+\`\`\`
+
+[View Action Run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`
+            }); 
