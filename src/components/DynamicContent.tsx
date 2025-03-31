@@ -107,25 +107,25 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
   useEffect(() => {
     marked.use({
       renderer: {
-        heading(text, level) {
+        heading(text: string, level: number) {
           const fontSize = level === 2 ? 'text-2xl font-bold mb-4 text-texas-earth' : 
                           level === 3 ? 'text-xl font-semibold mb-3 mt-6 text-texas-terracotta' : '';
           return `<h${level} class="${fontSize}">${text}</h${level}>`;
         },
-        paragraph(text) {
+        paragraph(text: string) {
           return `<p class="mb-4 text-muted-foreground">${text}</p>`;
         },
-        list(body, ordered) {
+        list(body: string, ordered: boolean) {
           const listType = ordered ? 'ol' : 'ul';
           return `<${listType} class="pl-5 mb-6 space-y-2 list-disc text-muted-foreground">${body}</${listType}>`;
         },
-        listitem(text) {
+        listitem(text: string) {
           return `<li class="ml-4">${text}</li>`;
         },
-        strong(text) {
+        strong(text: string) {
           return `<strong class="font-semibold text-foreground">${text}</strong>`;
         },
-        em(text) {
+        em(text: string) {
           return `<em class="text-texas-terracotta font-medium">${text}</em>`;
         }
       }
