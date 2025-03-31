@@ -100,6 +100,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <AthleticCourtsContent cityName={cityName} />
+          <DynamicContent cityName={cityName} serviceName={service} />
           <Footer />
         </div>
       </>

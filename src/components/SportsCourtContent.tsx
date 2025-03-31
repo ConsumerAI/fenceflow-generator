@@ -7,7 +7,7 @@ import { Separator } from '@/components/ui/separator';
 import { services } from '@/lib/routes';
 import { supabase } from '@/integrations/supabase/client';
 
-const SportsCourtContent: React.FC = () => {
+const SportsCourtContent: React.FC<{ cityName?: string }> = ({ cityName = "Dallas" }) => {
   const [content, setContent] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -18,7 +18,7 @@ const SportsCourtContent: React.FC = () => {
         // Use the client.functions.invoke method from the imported Supabase client
         const { data, error } = await supabase.functions.invoke('generate-city-content', {
           body: {
-            cityName: "Dallas",
+            cityName: cityName,
             serviceName: "Athletic Courts and Sports Facilities",
             prompt: "Write comprehensive content about athletic courts and sports facilities installation services, focusing on tennis courts, basketball courts, pickleball courts, and multi-sport facilities. Include information about surfacing options, equipment, lighting, and fencing specific to athletic courts."
           }
@@ -40,7 +40,7 @@ const SportsCourtContent: React.FC = () => {
     };
 
     fetchContent();
-  }, []);
+  }, [cityName]);
 
   return (
     <main className="flex-1 container mx-auto py-10 px-4 md:px-6">
@@ -48,7 +48,7 @@ const SportsCourtContent: React.FC = () => {
         <div className="lg:col-span-2">
           <h1 className="text-4xl font-bold tracking-tight">Professional Athletic Courts & Sports Facilities</h1>
           <p className="mt-4 text-xl text-gray-600">
-            Expert installation of high-performance athletic courts and sports facilities throughout the Dallas-Fort Worth metroplex
+            Expert installation of high-performance athletic courts and sports facilities throughout the {cityName} area
           </p>
 
           <div className="mt-8 prose prose-blue max-w-none">
@@ -98,7 +98,7 @@ const SportsCourtContent: React.FC = () => {
             <div className="mt-8">
               <h2 className="text-2xl font-bold">Why Choose Our Athletic Court Construction Team?</h2>
               <p className="mt-3">
-                With decades of specialized experience in athletic court construction throughout Dallas-Fort Worth, our team brings unmatched expertise to every project. We understand the unique requirements of various sports surfaces and build facilities that deliver optimal performance, safety, and durability in the Texas climate.
+                With decades of specialized experience in athletic court construction throughout {cityName}, our team brings unmatched expertise to every project. We understand the unique requirements of various sports surfaces and build facilities that deliver optimal performance, safety, and durability in the Texas climate.
               </p>
               <p className="mt-3">
                 Whether you're building a residential tennis court, a commercial pickleball facility, or a multi-sport complex for a school or park, our end-to-end solutions ensure your project is completed on time, within budget, and built to professional standards.
@@ -120,7 +120,7 @@ const SportsCourtContent: React.FC = () => {
                 Fill out the form below to discuss your athletic court or sports facility project with our specialists.
               </p>
               {/* Fix: Use 'city' prop instead of 'serviceType' to match LeadFormProps */}
-              <LeadForm city="Dallas" />
+              <LeadForm city={cityName} />
             </CardContent>
           </Card>
         </div>

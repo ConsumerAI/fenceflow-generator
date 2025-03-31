@@ -12,6 +12,7 @@ import { supabase, generateCityContent } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 import { marked } from 'marked';
 import { Button } from '@/components/ui/button';
+import DynamicContent from '@/components/DynamicContent';
 
 const CityPage = () => {
   const { city: citySlug } = useParams<{ city: string }>();
@@ -273,6 +274,9 @@ const CityPage = () => {
             </div>
           </div>
         </section>
+        
+        {/* Add the dynamic content before Plan to Pickets */}
+        <DynamicContent cityName={cityName} />
         
         <PlanToPickets />
         
