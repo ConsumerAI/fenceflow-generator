@@ -170,15 +170,36 @@ Your content must:
 
 Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.
 
-## Get Started Today!
+## Maintenance Tips for {service_type} in {city}
 
-Ready to enhance your property with a beautiful and functional fence? Fill out our quick form below to get matched with trusted ${String(serviceName).toLowerCase()} contractors in ${cityName}. Our expert team will connect you with professionals who understand your specific needs and local requirements.
+To ensure your {service_type} remains in optimal condition and enhances your property for years to come, consider the following maintenance tips:
 
-## Transform Your Property
+- **Regular Inspections**: Inspect your fence at least twice a year for signs of wear, rot, or damage. Pay close attention to the posts, gates, and any hardware.
 
-*Simply complete the form below to begin your fencing project. Our team will review your requirements and match you with the perfect contractors for your needs.*
+- **Cleaning**: Depending on the material, clean your fence regularly to prevent mold, mildew, and dirt buildup. For wood fences, a gentle power wash can work wonders.
 
-[END OF CONTENT - DO NOT ADD ANY OTHER TEXT, SECTIONS, OR CONTACT METHODS]`;
+- **Sealing and Staining**: If you have a wooden fence, apply a protective sealant every couple of years to guard against moisture and UV damage. Staining can also enhance the wood's longevity and appearance.
+
+- **Prompt Repairs**: Address any issues immediately, such as loose boards or rusted hardware, to prevent more significant problems down the road.
+
+Fences Texas is committed to providing the highest quality {service_type} solutions tailored to the unique needs of {city} homeowners. With our extensive knowledge, reliable craftsmanship, and personalized service, we ensure that your fencing project is a success.
+
+## Get Started Today
+
+Ready to enhance your property with a top-quality {service_type}? At Fences Texas, we're committed to delivering exceptional service and results that stand the test of time.
+
+## Contact Us
+
+Fill out our online form for a free consultation and estimate. Discover why we are {city}'s premier choice for {service_type}!
+
+By choosing us, you're not just getting a fence; you're investing in a lasting solution that adds value, security, and beauty to your home. Let's build something great together!
+
+<Button 
+  onClick={handleContactClick}
+  className="mt-8 bg-terracotta hover:bg-terracotta/90 text-white"
+>
+  Get Your Perfect Fence
+</Button>`;
         
         // Try generate-content first
         let data;
@@ -289,20 +310,20 @@ Ready to enhance your property with a beautiful and functional fence? Fill out o
               />
               
               {/* Hardcoded CTA Section */}
-              <div className="mt-16 text-center border-t border-texas-terracotta/20 pt-16">
-                <h2 className="text-3xl font-bold text-texas-earth mb-6">Get Started Today</h2>
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <div className="mt-12 prose prose-texas max-w-none">
+                <h2 className="text-3xl font-bold text-texas-earth">Get Started Today</h2>
+                <p className="text-muted-foreground">
                   Ready to enhance your property with a top-quality {serviceName.toLowerCase()}? At Fences Texas, we're committed to 
                   delivering exceptional service and results that stand the test of time.
                 </p>
                 
-                <h3 className="text-2xl font-semibold text-texas-terracotta mb-4">Contact Us</h3>
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <h2 className="text-3xl font-bold text-texas-earth">Contact Us</h2>
+                <p className="text-muted-foreground">
                   Fill out our online form for a free consultation and estimate. Discover why we are {cityName}'s premier 
                   choice for {serviceName.toLowerCase()}!
                 </p>
                 
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-muted-foreground mb-8">
                   By choosing us, you're not just getting a fence; you're investing in a lasting solution that adds value, 
                   security, and beauty to your home. Let's build something great together!
                 </p>
