@@ -1,19 +1,18 @@
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CITY_DATA } from '@/lib/cities';
-import { capitalizeWords } from '@/lib/utils';
 import LeadForm from '@/components/LeadForm';
 import ServiceCard from '@/components/ServiceCard';
 import PlanToPickets from '@/components/PlanToPickets';
 import ImageCarousel from '@/components/ImageCarousel';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import { ServiceType } from '@/lib/types';
-import { SERVICE_IMAGES } from '@/lib/supabase';
 import DynamicContent from '@/components/DynamicContent';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Link } from 'react-router-dom';
+import { ServiceType } from '@/lib/types';
+import { cities } from '@/lib/cities';
+import { SERVICE_IMAGES } from '@/lib/images';
+import { cn } from '@/lib/utils';
 
 interface CityServicePageProps {}
 
@@ -24,11 +23,19 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
     return <div>Error: City and service must be provided in the URL.</div>;
   }
 
-  const cityData = CITY_DATA.find((c) => c.url === city);
-  const formattedCity = cityData ? cityData.name : capitalizeWords(city.replace(/-/g, ' '));
-  const formattedService = capitalizeWords(service.replace(/-/g, ' ')) as ServiceType;
+  // Format the city and service names
+  const formatString = (str: string): string => {
+    return str.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  };
 
-  if (!Object.values(ServiceType).includes(formattedService)) {
+  const formattedCity = formatString(city);
+  const formattedService = formatString(service) as ServiceType;
+
+  // Get all valid service types from the ServiceType enum
+  const validServiceTypes: string[] = Object.values(ServiceType);
+  
+  // Check if the formatted service is a valid service type
+  if (!validServiceTypes.includes(formattedService)) {
     return <div>Error: Invalid service type.</div>;
   }
 
@@ -53,7 +60,22 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
       <main className="flex-1">
         <section className="bg-texas-terracotta/10 py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <Breadcrumbs links={breadcrumbLinks} />
+            {/* Use custom Breadcrumbs component which accepts links prop */}
+            <nav className="mb-4 text-sm">
+              <ol className="flex items-center space-x-2">
+                {breadcrumbLinks.map((link, index) => (
+                  <li key={index} className="flex items-center">
+                    {index > 0 && <span className="mx-2">/</span>}
+                    <a href={link.to} className={cn(
+                      "hover:text-texas-terracotta",
+                      index === breadcrumbLinks.length - 1 ? "font-semibold" : ""
+                    )}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
 
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
               {formattedService} in {formattedCity}
@@ -64,21 +86,19 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
           </div>
         </section>
 
-        {cityData && (
-          <DynamicContent 
-            cityName={cityData.name} 
-            serviceName={formattedService as ServiceType}
-          />
-        )}
+        <DynamicContent 
+          cityName={formattedCity} 
+          serviceName={formattedService}
+        />
         
         <PlanToPickets />
 
-        <ImageCarousel images={SERVICE_IMAGES} />
+        <ImageCarousel />
 
         <section id="quote" className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Get a Free Quote</h2>
-            <LeadForm city={formattedCity} service_type={formattedService} />
+            <LeadForm city={formattedCity} />
           </div>
         </section>
 
@@ -86,12 +106,12 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Object.values(ServiceType).map((relatedService) => (
+              {validServiceTypes.map((relatedService) => (
                 <ServiceCard
                   key={relatedService}
                   title={relatedService}
                   description={`Learn more about our ${relatedService.toLowerCase()} services in ${formattedCity}.`}
-                  imageUrl={SERVICE_IMAGES[relatedService]}
+                  imageUrl={SERVICE_IMAGES[relatedService as ServiceType]}
                   linkTo={`/${city}/${relatedService.toLowerCase().replace(/ /g, '-')}`}
                 />
               ))}

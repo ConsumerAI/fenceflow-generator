@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
@@ -25,7 +26,7 @@ const CityServicePageWrapper = () => {
   
   if (!serviceType) return <NotFound />;
   
-  return <CityServicePage service={serviceType as ServiceType} />;
+  return <CityServicePage />;
 };
 
 /**

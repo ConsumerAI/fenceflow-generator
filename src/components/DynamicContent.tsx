@@ -3,16 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { marked } from 'marked';
 import { Button } from '@/components/ui/button';
+import { ServiceType } from '@/lib/types';
 
 interface DynamicContentProps {
   cityName: string;
-  serviceName?: string;
+  serviceName?: ServiceType;
   onContactClick?: () => void;
 }
 
 const DynamicContent: React.FC<DynamicContentProps> = ({ 
   cityName, 
-  serviceName = "Fencing Services", 
+  serviceName = "Residential Fencing" as ServiceType, 
   onContactClick 
 }) => {
   const [content, setContent] = useState<string>("");
@@ -26,19 +27,19 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         setIsLoading(true);
         
         // Generate a cache key based on city and optional service
-        const cacheKey = serviceName !== "Fencing Services" 
+        const cacheKey = serviceName !== "Residential Fencing" 
           ? `${cityName.toLowerCase()}-${serviceName.toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
-        // Check for cached content in the database using RPC call
-        const { data: functionData, error: functionError } = await supabase.rpc(
+        // Use RPC function to get cached content
+        const { data: cachedContent, error: cacheError } = await supabase.rpc(
           'get_cached_content',
           { cache_key: cacheKey }
         );
         
-        if (!functionError && functionData) {
+        if (!cacheError && cachedContent) {
           console.log('Using cached dynamic content');
-          setContent(functionData);
+          setContent(cachedContent);
           setIsLoading(false);
           return;
         }
@@ -46,7 +47,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         // No cached content, generate new content
         console.log(`Generating new dynamic content for ${cityName} and ${serviceName}`);
         
-        const promptTemplate = serviceName !== "Fencing Services"
+        const promptTemplate = serviceName !== "Residential Fencing"
           ? `Write an informative, engaging, and detailed section about ${serviceName} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${serviceName.toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis.`
           : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Format with H2/H3 headings and use HTML formatting for emphasis.`;
         
@@ -64,8 +65,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         }
 
         if (data?.content) {
-          // Cache the content for future use using RPC call
-          const { error: cacheError } = await supabase.rpc(
+          // Cache the content using RPC function
+          const { error: cachingError } = await supabase.rpc(
             'cache_content',
             { 
               cache_key: cacheKey,
@@ -74,8 +75,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
             }
           );
           
-          if (cacheError) {
-            console.error("Error caching content:", cacheError);
+          if (cachingError) {
+            console.error("Error caching content:", cachingError);
           }
           
           setContent(data.content);
