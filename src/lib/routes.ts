@@ -1,13 +1,8 @@
+
 import { cities } from './cities';
 import { ServiceType } from './types';
 
-export const services: ServiceType[] = [
-  "Residential Fencing",
-  "Commercial Fencing",
-  "Athletic Courts and Sports Facilities",
-  "Access Control",
-  "Automatic Gates"
-];
+export const services = Object.values(ServiceType);
 
 export function getServiceUrl(service: ServiceType): string {
   return `/${service.toLowerCase().replace(/\s+/g, '-')}`;
@@ -25,10 +20,10 @@ export function getCityServiceUrl(city: string, service: ServiceType): string {
 
 // For sitemap generation and route matching
 export const serviceRouteMap: Record<string, ServiceType> = {
-  'residential-fencing': 'Residential Fencing',
-  'commercial-fencing': 'Commercial Fencing',
-  'athletic-courts-and-sports-facilities': 'Athletic Courts and Sports Facilities',
-  'access-control': 'Access Control',
-  'automatic-gates': 'Automatic Gates',
-  'sports-courts': 'Athletic Courts and Sports Facilities' // Keep this for backward compatibility
+  'residential-fencing': ServiceType.ResidentialFencing,
+  'commercial-fencing': ServiceType.CommercialFencing,
+  'athletic-courts-and-sports-facilities': ServiceType.AthleticCourts,
+  'access-control': ServiceType.AccessControl,
+  'automatic-gates': ServiceType.AutomaticGates,
+  'sports-courts': ServiceType.AthleticCourts // Keep this for backward compatibility
 };

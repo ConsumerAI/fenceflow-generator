@@ -29,13 +29,13 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
   };
 
   const formattedCity = formatString(city);
-  const formattedService = formatString(service) as ServiceType;
+  const formattedService = formatString(service);
 
   // Get all valid service types from the ServiceType enum
-  const validServiceTypes: string[] = Object.values(ServiceType);
+  const validServiceTypes = Object.values(ServiceType);
   
   // Check if the formatted service is a valid service type
-  if (!validServiceTypes.includes(formattedService)) {
+  if (!validServiceTypes.includes(formattedService as ServiceType)) {
     return <div>Error: Invalid service type.</div>;
   }
 
@@ -88,7 +88,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
 
         <DynamicContent 
           cityName={formattedCity} 
-          serviceName={formattedService}
+          serviceName={formattedService as ServiceType}
         />
         
         <PlanToPickets />
@@ -106,15 +106,22 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {validServiceTypes.map((relatedService) => (
-                <ServiceCard
-                  key={relatedService}
-                  title={relatedService}
-                  description={`Learn more about our ${relatedService.toLowerCase()} services in ${formattedCity}.`}
-                  imageUrl={SERVICE_IMAGES[relatedService as ServiceType]}
-                  linkTo={`/${city}/${relatedService.toLowerCase().replace(/ /g, '-')}`}
-                />
-              ))}
+              {validServiceTypes.map((relatedService) => {
+                const serviceStr = relatedService as string;
+                return (
+                  <ServiceCard
+                    key={serviceStr}
+                    service={{
+                      title: serviceStr,
+                      description: `Learn more about our ${serviceStr.toLowerCase()} services in ${formattedCity}.`,
+                      icon: SERVICE_IMAGES[serviceStr as ServiceType],
+                      benefits: ['Professional Installation', 'High-Quality Materials', 'Exceptional Customer Service']
+                    }}
+                    index={0}
+                    city={city}
+                  />
+                );
+              })}
             </div>
           </div>
         </section>

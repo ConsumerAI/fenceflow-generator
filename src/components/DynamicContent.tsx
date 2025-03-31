@@ -13,7 +13,7 @@ interface DynamicContentProps {
 
 const DynamicContent: React.FC<DynamicContentProps> = ({ 
   cityName, 
-  serviceName = "Residential Fencing" as ServiceType, 
+  serviceName = ServiceType.ResidentialFencing, 
   onContactClick 
 }) => {
   const [content, setContent] = useState<string>("");
@@ -27,7 +27,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         setIsLoading(true);
         
         // Generate a cache key based on city and optional service
-        const cacheKey = serviceName !== "Residential Fencing" 
+        const cacheKey = serviceName !== ServiceType.ResidentialFencing 
           ? `${cityName.toLowerCase()}-${serviceName.toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
@@ -47,7 +47,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         // No cached content, generate new content
         console.log(`Generating new dynamic content for ${cityName} and ${serviceName}`);
         
-        const promptTemplate = serviceName !== "Residential Fencing"
+        const promptTemplate = serviceName !== ServiceType.ResidentialFencing
           ? `Write an informative, engaging, and detailed section about ${serviceName} in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence ${serviceName.toLowerCase()} projects. Format with H2/H3 headings and use HTML formatting for emphasis.`
           : `Write an informative, engaging, and detailed section about fencing services in ${cityName}, Texas. Include specific information about ${cityName}'s local conditions (climate, regulations, popular styles) and how they influence fencing projects. Format with H2/H3 headings and use HTML formatting for emphasis.`;
         

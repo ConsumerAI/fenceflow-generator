@@ -1,3 +1,5 @@
+
+// Make sure we're properly exporting ServiceType
 export interface Lead {
   id?: string;
   name: string;
@@ -13,15 +15,16 @@ export interface Lead {
   created_at?: string;
 }
 
-export type ServiceType = 
-  | "Residential Fencing"
-  | "Commercial Fencing"
-  | "Athletic Courts and Sports Facilities"
-  | "Access Control"
-  | "Automatic Gates";
+export enum ServiceType {
+  ResidentialFencing = "Residential Fencing",
+  CommercialFencing = "Commercial Fencing",
+  AthleticCourts = "Athletic Courts and Sports Facilities",
+  AccessControl = "Access Control",
+  AutomaticGates = "Automatic Gates"
+}
 
 export interface ServiceInfo {
-  title: ServiceType;
+  title: string;
   description: string;
   icon: string;
   benefits: string[];

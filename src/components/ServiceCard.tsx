@@ -1,11 +1,17 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ServiceInfo, ServiceType } from '@/lib/types';
+import { ServiceType } from '@/lib/types';
 import { getServiceUrl, getCityServiceUrl } from '@/lib/routes';
 import { cities } from '@/lib/cities';
 
 interface ServiceCardProps {
-  service: ServiceInfo;
+  service: {
+    title: string;
+    description: string;
+    icon: string;
+    benefits: string[];
+  };
   index: number;
   showRelatedServices?: boolean;
   city?: string;
@@ -23,14 +29,8 @@ const ServiceCard = ({
   const serviceId = service.title.toLowerCase().replace(/\s+/g, '-');
   
   // Find related services (excluding current service)
-  const getRelatedServices = (): ServiceType[] => {
-    const allServices: ServiceType[] = [
-      "Residential Fencing",
-      "Commercial Fencing",
-      "Athletic Courts and Sports Facilities",
-      "Access Control",
-      "Automatic Gates"
-    ];
+  const getRelatedServices = (): string[] => {
+    const allServices = Object.values(ServiceType);
     
     // Return 2 related services (excluding current one)
     return allServices
@@ -67,7 +67,7 @@ const ServiceCard = ({
           />
         </div>
         
-        <Link to={getServiceUrl(service.title)}>
+        <Link to={getServiceUrl(service.title as ServiceType)}>
           <h3 
             className="text-xl md:text-2xl font-bold mb-4 group-hover:text-texas-terracotta transition-colors flex items-center gap-1"
             itemProp="name"
@@ -110,7 +110,7 @@ const ServiceCard = ({
               {relatedServices.map((relatedService) => (
                 <Link
                   key={relatedService}
-                  to={city ? getCityServiceUrl(city, relatedService) : getServiceUrl(relatedService)}
+                  to={city ? getCityServiceUrl(city, relatedService as ServiceType) : getServiceUrl(relatedService as ServiceType)}
                   className="text-sm px-3 py-1 bg-secondary rounded-full hover:bg-texas-terracotta/10 hover:text-texas-terracotta transition-colors"
                 >
                   {relatedService}
@@ -126,7 +126,7 @@ const ServiceCard = ({
                   {cities.slice(0, 3).map((popularCity) => (
                     <Link
                       key={popularCity}
-                      to={getCityServiceUrl(popularCity, service.title)}
+                      to={getCityServiceUrl(popularCity, service.title as ServiceType)}
                       className="text-sm px-3 py-1 bg-secondary rounded-full hover:bg-texas-terracotta/10 hover:text-texas-terracotta transition-colors"
                     >
                       {service.title} in {popularCity}
@@ -140,7 +140,7 @@ const ServiceCard = ({
         
         <meta itemProp="provider" content="Fences Texas" />
         <meta itemProp="areaServed" content="Dallas-Fort Worth Metroplex" />
-        <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(service.title)}`} />
+        <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(service.title as ServiceType)}`} />
       </div>
     </div>
   );
