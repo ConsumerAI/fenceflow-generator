@@ -30,16 +30,16 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           ? `${cityName.toLowerCase()}-${serviceName.toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
-        // Check for cached content first
-        const { data: cachedData } = await supabase
-          .from('content_cache')
-          .select('content')
-          .eq('page_url', cacheKey)
-          .maybeSingle();
+        // Check for cached content in the database using RPC call
+        // We're using a function_select since we cannot access content_cache directly from the client
+        const { data: functionData, error: functionError } = await supabase.rpc(
+          'get_cached_content',
+          { cache_key: cacheKey }
+        );
         
-        if (cachedData && cachedData.content) {
+        if (!functionError && functionData) {
           console.log('Using cached dynamic content');
-          setContent(cachedData.content);
+          setContent(functionData);
           setIsLoading(false);
           return;
         }
@@ -65,14 +65,19 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         }
 
         if (data?.content) {
-          // Cache the content for future use
-          await supabase
-            .from('content_cache')
-            .upsert({
-              page_url: cacheKey,
-              content: data.content,
-              expires_at: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString() // 30 days cache
-            });
+          // Cache the content for future use using RPC call
+          const { error: cacheError } = await supabase.rpc(
+            'cache_content',
+            { 
+              cache_key: cacheKey,
+              cache_content: data.content,
+              expire_days: 30
+            }
+          );
+          
+          if (cacheError) {
+            console.error("Error caching content:", cacheError);
+          }
           
           setContent(data.content);
         }

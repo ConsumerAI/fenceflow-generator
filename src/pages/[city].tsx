@@ -6,13 +6,13 @@ import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
 import ImageCarousel from '@/components/ImageCarousel';
+import DynamicContent from '@/components/DynamicContent';
 import { CityContent, ServiceType } from '@/lib/types';
 import { cities, getCityFromUrl } from '@/lib/cities';
 import { supabase, generateCityContent } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 import { marked } from 'marked';
 import { Button } from '@/components/ui/button';
-import DynamicContent from '@/components/DynamicContent';
 
 const CityPage = () => {
   const { city: citySlug } = useParams<{ city: string }>();
@@ -275,7 +275,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* Add the dynamic content before Plan to Pickets */}
         <DynamicContent cityName={cityName} />
         
         <PlanToPickets />
@@ -354,7 +353,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        {/* Environmental Considerations Section */}
         {'environmentalConsiderations' in cityContent && cityContent.environmentalConsiderations && (
           <section className="py-16 md:py-24 bg-secondary/30">
             <div className="container mx-auto px-4 md:px-8">

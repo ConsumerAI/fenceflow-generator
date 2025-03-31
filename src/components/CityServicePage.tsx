@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import LeadForm from './LeadForm';
+import DynamicContent from './DynamicContent';
 import { getCityFromUrl } from '@/lib/cities';
 import { ServiceType } from '@/lib/types';
 import { Loader2 } from 'lucide-react';
@@ -30,7 +31,6 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
   
   const cityName = getCityFromUrl(`/${citySlug}`);
   
-  // Use the shared service images configuration
   const serviceImages = SERVICE_IMAGES;
   
   React.useEffect(() => {
@@ -86,7 +86,6 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
     );
   }
 
-  // Athletic Courts and Sports Facilities content rendering
   if (service === "Athletic Courts and Sports Facilities") {
     return (
       <>
@@ -107,7 +106,6 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
     );
   }
 
-  // Handle other service types with existing code
   return (
     <>
       <Helmet>
@@ -324,6 +322,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ service }) => {
           )}
         </main>
         
+        <DynamicContent cityName={cityName} serviceName={service} />
         <Footer />
       </div>
     </>
