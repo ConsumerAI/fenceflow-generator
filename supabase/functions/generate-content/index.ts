@@ -66,8 +66,8 @@ serve(async (req) => {
   
   try {
     // Parse request body
-    const { prompt, cityName, serviceName } = await req.json();
-    console.log(`Generating content for ${cityName} and service ${serviceName}`);
+    const { city, service } = await req.json();
+    console.log(`Generating content for ${city} and service ${service}`);
     
     // Prepare the OpenAI API request
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -77,15 +77,15 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: 'gpt-3.5-turbo',
         messages: [
           { 
             role: 'system', 
-            content: getServicePrompt(serviceName)
+            content: getServicePrompt(service)
           },
           { 
             role: 'user', 
-            content: prompt || `Write a detailed, SEO-optimized page about ${serviceName} services in ${cityName}, Texas. Include information about the benefits, process, and why customers should choose our company.` 
+            content: `Write a detailed, SEO-optimized page about ${service} services in ${city}, Texas. Include information about the benefits, process, and why customers should choose our company.` 
           }
         ],
         temperature: 0.7,
