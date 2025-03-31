@@ -198,34 +198,31 @@ Use markdown formatting with ## for main headings and ### for subheadings. Use *
 
   return (
     <section className="py-16 md:py-24 bg-secondary/30 texas-section">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-texas-earth">
-            Expert Insights for {String(serviceName)} in {cityName}
-          </h2>
-          
           {isLoading ? (
-            <div className="flex flex-col items-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-texas-terracotta"></div>
-              <p className="mt-4 text-sm text-gray-500">
-                Generating specialized {String(serviceName).toLowerCase()} insights for {cityName}...
-              </p>
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-texas-terracotta mx-auto"></div>
+              <p className="mt-4 text-muted-foreground">Generating content for {cityName}...</p>
             </div>
-          ) : (
-            <div className="glass-card p-8 md:p-10">
+          ) : content ? (
+            <div>
               <div 
-                className="prose prose-lg max-w-none [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mb-4 [&>h2]:text-texas-earth [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mb-3 [&>h3]:mt-6 [&>h3]:text-texas-terracotta [&>p]:mb-4 [&>p]:text-muted-foreground [&>ul]:pl-5 [&>ul]:mb-6 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:text-muted-foreground [&>li]:ml-4 [&>strong]:font-semibold [&>strong]:text-foreground [&>em]:text-texas-terracotta [&>em]:font-medium"
-                dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
+                className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground"
+                dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
               />
-              
               <div className="mt-8 flex justify-center">
                 <Button 
-                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   onClick={handleContactClick}
+                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 >
                   Get Your Perfect Fence
                 </Button>
               </div>
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">No content available.</p>
             </div>
           )}
         </div>

@@ -169,7 +169,7 @@ const CityPage = () => {
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                     onClick={scrollToQuote}
                   >
-                    Get a Free Quote
+                    Get Your Perfect Fence
                   </Button>
                 </div>
                 <div className="mt-6">
@@ -201,7 +201,7 @@ const CityPage = () => {
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
               >
-                Get a Free Quote
+                Get Your Perfect Fence
               </Button>
             </div>
           </div>
@@ -239,7 +239,7 @@ const CityPage = () => {
                           className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors mt-4"
                           onClick={scrollToQuote}
                         >
-                          Get a Free Quote
+                          Get Your Perfect Fence
                         </Button>
                       </div>
                     </div>
@@ -269,7 +269,7 @@ const CityPage = () => {
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
               >
-                Get a Free Quote
+                Get Your Perfect Fence
               </Button>
             </div>
           </div>
@@ -316,7 +316,7 @@ const CityPage = () => {
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
               >
-                Get a Free Quote
+                Get Your Perfect Fence
               </Button>
             </div>
           </div>
@@ -345,7 +345,7 @@ const CityPage = () => {
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                     onClick={scrollToQuote}
                   >
-                    Get a Free Quote
+                    Get Your Perfect Fence
                   </Button>
                 </div>
               </div>
@@ -374,7 +374,7 @@ const CityPage = () => {
                       className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                       onClick={scrollToQuote}
                     >
-                      Get a Free Quote
+                      Get Your Perfect Fence
                     </Button>
                   </div>
                 </div>

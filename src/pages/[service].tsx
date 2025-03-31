@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceType } from '@/lib/types';
@@ -18,7 +17,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
   return <>
       <Helmet>
         <title>{`${service} Services | Fences Texas`}</title>
-        <meta name="description" content={`Professional ${service.toLowerCase()} services in DFW. Get a free quote today!`} />
+        <meta name="description" content={`Professional ${service.toLowerCase()} services in DFW. Transform your space with a fence you'll love!`} />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">

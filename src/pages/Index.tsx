@@ -131,7 +131,7 @@ const Index = () => {
         <title>Fences Texas | DFW's Premier Fence Installation Experts</title>
         <meta 
           name="description" 
-          content="Expert fence installation across Dallas/Fort Worth. Residential, commercial, athletic courts and sports facilities, and automatic gates. Transform your space with a fence you'll love! Get a free quote today!"
+          content="Expert fence installation across Dallas/Fort Worth. Residential, commercial, athletic courts and sports facilities, and automatic gates. Transform your space with a fence you'll love!"
         />
         <script type="application/ld+json">
           {JSON.stringify({

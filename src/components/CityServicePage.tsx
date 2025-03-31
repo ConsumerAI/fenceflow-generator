@@ -49,7 +49,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
         <title>{`${serviceType} in ${formattedCity} | Fences Texas`}</title>
         <meta
           name="description"
-          content={`Get the best ${String(serviceType).toLowerCase()} services in ${formattedCity}. Contact us for a free quote!`}
+          content={`Transform your space with ${String(serviceType).toLowerCase()} services in ${formattedCity}. Contact us to get your perfect fence!`}
         />
       </Helmet>
 
