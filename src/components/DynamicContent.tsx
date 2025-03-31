@@ -31,7 +31,6 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           : `${cityName.toLowerCase()}-dynamic`;
         
         // Check for cached content in the database using RPC call
-        // We're using a function_select since we cannot access content_cache directly from the client
         const { data: functionData, error: functionError } = await supabase.rpc(
           'get_cached_content',
           { cache_key: cacheKey }
