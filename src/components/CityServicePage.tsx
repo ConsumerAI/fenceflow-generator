@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -96,7 +95,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
 
         <section id="quote" className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8">Get a Free Quote</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Get Your Perfect Fence</h2>
             <LeadForm city={formattedCity} />
           </div>
         </section>

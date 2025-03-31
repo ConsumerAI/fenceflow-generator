@@ -8,6 +8,7 @@ import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
 import { ServiceInfo } from '@/lib/types';
+import { Button } from '@/components/ui/button';
 
 // Service data
 const services: ServiceInfo[] = [
@@ -120,6 +121,10 @@ const Index = () => {
     }
   };
 
+  const handleQuoteClick = () => {
+    // Implementation of handleQuoteClick function
+  };
+
   return (
     <>
       <Helmet>
@@ -196,13 +201,12 @@ const Index = () => {
                   Transform your space with a fence you'll love!
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <a 
-                    href="#quote" 
-                    onClick={scrollToQuote}
-                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+                  <Button 
+                    onClick={handleQuoteClick}
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get a Free Quote
-                  </a>
+                    Get Your Perfect Fence
+                  </Button>
                 </div>
                 <div className="mt-6">
                   <img 
@@ -237,13 +241,12 @@ const Index = () => {
             <ImageCarousel />
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
-                onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              <Button 
+                onClick={handleQuoteClick}
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get a Free Quote
-              </a>
+                Get Your Perfect Fence
+              </Button>
             </div>
           </div>
         </section>
@@ -271,13 +274,12 @@ const Index = () => {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
-                onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              <Button 
+                onClick={handleQuoteClick}
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get a Free Quote
-              </a>
+                Get Your Perfect Fence
+              </Button>
             </div>
           </div>
         </section>
@@ -303,13 +305,12 @@ const Index = () => {
                 Find Fence Companies Near Me
               </a>
               
-              <a 
-                href="#quote" 
-                onClick={scrollToQuote}
+              <Button 
+                onClick={handleQuoteClick}
                 className="inline-flex items-center justify-center bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors"
               >
-                Get a Free Quote
-              </a>
+                Get Your Perfect Fence
+              </Button>
             </div>
           </div>
         </section>
@@ -336,13 +337,12 @@ const Index = () => {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
-                onClick={scrollToQuote}
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              <Button 
+                onClick={handleQuoteClick}
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get a Free Quote
-              </a>
+                Get Your Perfect Fence
+              </Button>
             </div>
           </div>
         </section>

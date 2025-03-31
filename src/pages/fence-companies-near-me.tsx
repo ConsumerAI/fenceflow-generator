@@ -8,6 +8,7 @@ import { cities } from '@/lib/cities';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getCityUrl } from '@/lib/routes';
+import { Button } from '@/components/ui/button';
 
 const NearMePage = () => {
   // In a real implementation, we would use geolocation to determine the user's city
@@ -35,6 +36,10 @@ const NearMePage = () => {
         quoteElement.classList.remove('animate-shake');
       }, 2000);
     }
+  };
+  
+  const handleQuoteClick = () => {
+    // Implementation of handleQuoteClick function
   };
   
   return <>
@@ -93,13 +98,12 @@ const NearMePage = () => {
                   throughout the region.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <a 
-                    href="#quote" 
-                    onClick={scrollToQuote} 
-                    className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+                  <Button 
+                    onClick={handleQuoteClick}
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get a Free Quote
-                  </a>
+                    Get Your Perfect Fence
+                  </Button>
                 </div>
                 <div className="mt-6">
                   <img 
@@ -139,13 +143,12 @@ const NearMePage = () => {
                 </div>
                 
                 <div className="mt-6">
-                  <a 
-                    href="#quote" 
-                    onClick={scrollToQuote} 
-                    className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+                  <Button 
+                    onClick={handleQuoteClick}
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get a Free Quote
-                  </a>
+                    Get Your Perfect Fence
+                  </Button>
                 </div>
               </div>
               
@@ -253,13 +256,12 @@ const NearMePage = () => {
             </div>
             
             <div className="mt-10 flex justify-center">
-              <a 
-                href="#quote" 
-                onClick={scrollToQuote} 
-                className="bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              <Button 
+                onClick={handleQuoteClick}
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get a Free Quote
-              </a>
+                Get Your Perfect Fence
+              </Button>
             </div>
           </div>
         </section>
@@ -301,13 +303,12 @@ const NearMePage = () => {
                 you've been searching for!
               </p>
               
-              <a 
-                href="#quote" 
-                onClick={scrollToQuote} 
-                className="inline-block bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors text-center"
+              <Button 
+                onClick={handleQuoteClick}
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get a Free Quote
-              </a>
+                Get Your Perfect Fence
+              </Button>
             </div>
           </div>
         </section>

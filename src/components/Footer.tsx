@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cities, getCityUrl } from '@/lib/cities';
@@ -116,7 +115,7 @@ const Footer = () => {
                 <Link to="/fence-companies-near-me" className="hover:text-texas-sand transition-colors">Fence Companies Near Me</Link>
               </li>
               <li>
-                <a href="#quote" className="hover:text-texas-sand transition-colors">Get a Free Quote</a>
+                <a href="#quote" className="hover:text-texas-sand transition-colors">Get Your Perfect Fence</a>
               </li>
               <li>
                 <Link to="/privacy-policy" className="hover:text-texas-sand transition-colors">Privacy Policy</Link>

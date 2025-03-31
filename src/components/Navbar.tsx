@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { services, getServiceUrl } from '@/lib/routes';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
-const Navbar = () => {
+interface NavbarProps {
+  transparent?: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -19,7 +24,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
   
-  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToQuote = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     closeMenu();
     
@@ -72,58 +77,58 @@ const Navbar = () => {
             >
               Near Me
             </Link>
-            <a 
-              href="#quote" 
+            <Button
               onClick={scrollToQuote}
-              className="bg-texas-terracotta text-white px-4 py-2 rounded hover:bg-texas-earth transition-colors"
+              className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
             >
-              Get a Free Quote
-            </a>
+              Get Your Perfect Fence
+            </Button>
           </div>
           
           <div className="md:hidden flex items-center">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
+            <Sheet open={isMenuOpen} onOpenChange={toggleMenu}>
+              <SheetTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  aria-label="Toggle menu"
+                >
+                  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <div className="flex flex-col space-y-4 mt-8">
+                  <Link to="/" className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors" onClick={closeMenu}>
+                    Home
+                  </Link>
+                  {services.map((service) => (
+                    <Link 
+                      key={service}
+                      to={getServiceUrl(service)} 
+                      className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
+                      onClick={closeMenu}
+                    >
+                      {service}
+                    </Link>
+                  ))}
+                  <Link 
+                    to="/fence-companies-near-me" 
+                    className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Near Me
+                  </Link>
+                  <Button
+                    onClick={scrollToQuote}
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full"
+                  >
+                    Get Your Perfect Fence
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-        
-        {isMenuOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
-            <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors" onClick={closeMenu}>
-                Home
-              </Link>
-              {services.map((service) => (
-                <Link 
-                  key={service}
-                  to={getServiceUrl(service)} 
-                  className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
-                  onClick={closeMenu}
-                >
-                  {service}
-                </Link>
-              ))}
-              <Link 
-                to="/fence-companies-near-me" 
-                className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Near Me
-              </Link>
-              <Button asChild variant="default" className="bg-texas-terracotta hover:bg-texas-earth transition-colors">
-                <a href="#quote" onClick={scrollToQuote} className="flex items-center justify-center">
-                  Get a Free Quote
-                </a>
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );

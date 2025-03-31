@@ -88,7 +88,7 @@ const AutomaticGatesPage = () => {
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                     onClick={scrollToQuote}
                   >
-                    Get a Free Quote
+                    Get Your Perfect Fence
                   </Button>
                 </div>
                 <div className="mt-6">
@@ -146,7 +146,7 @@ const AutomaticGatesPage = () => {
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
               >
-                Get a Free Quote
+                Get Your Perfect Fence
               </Button>
             </div>
           </div>
@@ -241,7 +241,7 @@ const AutomaticGatesPage = () => {
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
               >
-                Get a Free Quote
+                Get Your Perfect Fence
               </Button>
             </div>
           </div>
