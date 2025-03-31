@@ -35,12 +35,19 @@ Your content must:
 5. OPTIMIZE FOR LOCAL SEO:
    - Naturally integrate "{city} {service_type}" and related long-tail keywords
    - Format content with proper H2/H3 headings, brief paragraphs, and bullet points
-   - Include specific calls-to-action relevant to local customers
+   - Focus on informational content that helps readers make informed decisions
 
 6. PROVIDE ACTIONABLE INFORMATION:
    - Include specific maintenance advice for {service_type} in {city}'s climate
    - Offer transparent insights into project timelines and processes
-   - Give readers genuine value even if they don't convert immediately
+   - Give readers genuine value that demonstrates our expertise
+
+CRITICAL REQUIREMENTS:
+- DO NOT include any calls to action
+- DO NOT add any contact information or phone numbers
+- DO NOT create any "Get Started" or similar sections
+- STOP after providing maintenance advice
+- Always use "Fences Texas" as the company name
 
 Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in {service_type} for {city} properties.`;
 
