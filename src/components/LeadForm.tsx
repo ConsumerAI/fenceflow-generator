@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -13,7 +12,7 @@ import { Lead, ServiceType } from '@/lib/types';
 import { supabase } from '@/lib/supabase';
 import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
 import AddressAutocomplete from './AddressAutocomplete';
-import { MapPin } from 'lucide-react';
+import { MapPin, Fence, Star } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name is required' }),
@@ -27,6 +26,9 @@ const formSchema = z.object({
     }),
   address: z.string().min(5, { message: 'Address is required' }),
   service_type: z.nativeEnum(ServiceType),
+  preferred_timeline: z.enum(['ASAP', 'Within 1 Month', 'Within 3 Months', 'Just Researching'], {
+    required_error: 'Please select your preferred timeline',
+  }),
   message: z.string().optional(),
 });
 
@@ -66,6 +68,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       phone: '',
       address: '',
       message: '',
+      preferred_timeline: undefined,
       service_type: variant === 'default' ? undefined : ServiceType.ResidentialFencing,
     },
   });
@@ -85,6 +88,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         phone: data.phone,
         address: data.address || '',
         service_type: variant === 'default' ? data.service_type : ServiceType.ResidentialFencing,
+        preferred_timeline: data.preferred_timeline,
         message: data.message || '',
         city: city,
       };
@@ -149,11 +153,9 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
   return (
     <div className={formClasses} id="quote">
       <div className="mb-6">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Get Your Free Design Quote</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">Your Perfect Fence Awaits</h2>
         <p className="text-muted-foreground">
-          {variant === 'default' 
-            ? `Request a free, no-obligation quote for your ${city} fence installation project.`
-            : 'Fill out this quick form and we\'ll contact you within 24 hours.'}
+          Request a free, no-obligation quote for your {city} fence installation project.
         </p>
       </div>
       
@@ -162,7 +164,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
           <h3 className="text-xl font-bold mb-2">Thank You!</h3>
           <p>Your request has been received. One of our fence specialists will contact you within 24 hours to discuss your project.</p>
           <Button 
-            className="mt-4 bg-texas-terracotta hover:bg-texas-earth"
+            className="mt-4 bg-green-600 hover:bg-green-700"
             onClick={() => setIsSuccess(false)}
           >
             Submit Another Request
@@ -281,13 +283,37 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
               
               <FormField
                 control={form.control}
+                name="preferred_timeline"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Preferred Timeline</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="When do you want your new fence?" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="ASAP">ASAP</SelectItem>
+                        <SelectItem value="Within 1 Month">Within 1 Month</SelectItem>
+                        <SelectItem value="Within 3 Months">Within 3 Months</SelectItem>
+                        <SelectItem value="Just Researching">Just Researching</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
                 name="message"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Message (Optional)</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Tell us about your project"
+                        placeholder="Share your vision for your perfect fence"
                         className="min-h-[100px]"
                         {...field} 
                       />
@@ -299,22 +325,37 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
               
               <Button 
                 type="submit" 
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 font-medium text-lg"
+                className="w-full bg-green-600 hover:bg-green-700 text-white" 
                 disabled={isSubmitting}
               >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    <span>Submitting...</span>
-                  </div>
-                ) : (
-                  'Get Free Design Quote'
-                )}
+                {isSubmitting ? "Submitting..." : "Transform My Property"}
               </Button>
               
-              <p className="text-xs text-muted-foreground text-center">
-                By submitting this form, you're taking the first step toward enhancing your property with a beautiful fence.
-                <br/>We're excited to help transform your space!
+              <div className="flex justify-center items-center gap-12 mt-4">
+                <div className="flex flex-col items-center gap-1">
+                  <Fence className="h-5 w-5 text-green-600" />
+                  <span className="text-xs font-medium">Free Estimates</span>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <Star className="h-5 w-5 text-green-600" />
+                  <span className="text-xs font-medium">Serving Texas Since 2018</span>
+                </div>
+              </div>
+
+              <p className="text-sm text-muted-foreground text-center mt-4">
+                By submitting this form, you're one step closer to enjoying the privacy, security, and beauty a custom fence brings to your property.
+              </p>
+              
+              <p className="text-xs text-muted-foreground text-center mt-2">
+                By submitting this form, you consent to receive calls, texts, and emails about your fence request from a local fence provider. Your information is secure. Reply STOP to unsubscribe.{' '}
+                <a 
+                  href="/terms" 
+                  className="text-green-600 hover:text-green-700 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Full Terms
+                </a>
               </p>
             </form>
           </Form>

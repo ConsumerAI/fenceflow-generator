@@ -1,4 +1,3 @@
-
 // Make sure we're properly exporting ServiceType
 export interface Lead {
   id?: string;
@@ -7,6 +6,7 @@ export interface Lead {
   phone: string;
   address: string;
   service_type: ServiceType;
+  preferred_timeline: 'ASAP' | 'Within 1 Month' | 'Within 3 Months' | 'Just Researching';
   message: string;
   city: string;
   linear_feet?: number;

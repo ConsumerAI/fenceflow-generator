@@ -51,9 +51,9 @@ async function cacheContent(city: string, service: ServiceType, content: string)
       : `${city.toLowerCase()}-dynamic`;
 
     const { error } = await supabase.rpc('cache_content', {
-      cache_key: cacheKey,
-      cache_content: content,
-      expire_days: 365
+      p_cache_key: cacheKey,
+      p_cache_content: content,
+      p_expire_days: 365
     });
 
     if (error) throw error;
@@ -75,13 +75,20 @@ async function main() {
   const logFile = path.join(logsDir, `content-generation-${new Date().toISOString().split('T')[0]}.log`);
   const successLog = fs.createWriteStream(logFile);
 
-  console.log('Starting annual content generation...');
+  // Test with first 5 cities
+  const testCities = ["Dallas", "Fort Worth", "Arlington", "Plano", "Garland"];
+  
+  console.log('Starting test batch content generation...');
+  console.log(`Generating for cities: ${testCities.join(', ')}`);
+  console.log(`Services: ${SERVICES.join(', ')}\n`);
+  
   let totalGenerated = 0;
   const failures: GenerationFailure[] = [];
 
-  for (const city of cities) {
+  for (const city of testCities) {
     for (const service of SERVICES) {
       try {
+        console.log(`\nGenerating ${service} content for ${city}...`);
         const content = await generateContent(city, service);
         await cacheContent(city, service, content);
         
@@ -89,7 +96,7 @@ async function main() {
         totalGenerated++;
         
         // Add a small delay to avoid rate limits
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
       } catch (error) {
         failures.push({ city, service, error });
@@ -102,7 +109,8 @@ async function main() {
   const summary = `
 Generation Summary (${new Date().toISOString()})
 ----------------------------------------------
-Total Cities: ${cities.length}
+Test Batch Results:
+Total Cities: ${testCities.length}
 Total Services: ${SERVICES.length}
 Successfully Generated: ${totalGenerated}
 Failed: ${failures.length}
