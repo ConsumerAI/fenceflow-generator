@@ -70,7 +70,7 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
-  
+
   try {
     // Parse request body
     const { city, service } = await req.json();
@@ -85,7 +85,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: 'gpt-4o-mini',
-        messages: [
+      messages: [
           { 
             role: 'system', 
             content: getServicePrompt(service)
@@ -94,9 +94,9 @@ serve(async (req) => {
             role: 'user', 
             content: `Write a detailed, SEO-optimized page about ${service} services in ${city}, Texas. Include information about the benefits, process, and why customers should choose our company.` 
           }
-        ],
-        temperature: 0.7,
-        max_tokens: 2500,
+      ],
+      temperature: 0.7,
+      max_tokens: 2500,
       }),
     });
 
@@ -110,10 +110,10 @@ serve(async (req) => {
     // Parse and return the generated content
     const data = await response.json();
     const generatedContent = data.choices[0].message.content;
-    
-    return new Response(
+      
+      return new Response(
       JSON.stringify({ content: generatedContent }),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
     
   } catch (error) {

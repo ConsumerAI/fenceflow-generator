@@ -14,6 +14,7 @@ import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
 import AddressAutocomplete from './AddressAutocomplete';
 import { MapPin, Fence, Star, ArrowRight, Lock, Calendar, Users } from 'lucide-react';
 import ProgressBar from './ProgressBar';
+import { useRecaptcha } from '@/hooks/useRecaptcha';
 
 const formSchema = z.object({
   zipCode: z.string().min(5, { message: 'Valid ZIP code is required' }),
@@ -32,6 +33,7 @@ const formSchema = z.object({
     required_error: 'Please select your preferred timeline',
   }),
   message: z.string().optional(),
+  website: z.string(),
 });
 
 interface LeadFormProps {
@@ -51,6 +53,15 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     estimatedCost?: { min: number; max: number };
   }>({});
 
+  const { executeV3, initV2, getV2Response, resetV2, showV2Captcha, setShowV2Captcha } = useRecaptcha();
+  const [v2ContainerId] = useState(`recaptcha-${Math.random().toString(36).substring(7)}`);
+  
+  useEffect(() => {
+    if (showV2Captcha) {
+      initV2(v2ContainerId);
+    }
+  }, [showV2Captcha, initV2, v2ContainerId]);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -62,6 +73,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       message: '',
       preferred_timeline: undefined,
       service_type: variant === 'default' ? undefined : ServiceType.ResidentialFencing,
+      website: '',
     },
     mode: 'onSubmit',
   });
@@ -92,19 +104,54 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     setCurrentStep(prev => prev + 1);
   };
 
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
+      if (values.website) {
+        console.log('Honeypot triggered - likely bot submission');
+        return;
+      }
+
+      const { token: v3Token, score } = await executeV3('lead_submission');
+      let v2Token = null;
+      
+      if (score < 0.5) {
+        setShowV2Captcha(true);
+        v2Token = getV2Response();
+        if (!v2Token) {
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
+      const verifyResponse = await supabase.functions.invoke('verify-recaptcha', {
+        body: JSON.stringify({ v3Token, v2Token })
+      });
+
+      if (verifyResponse.error) {
+        throw new Error('CAPTCHA verification failed');
+      }
+
+      const verifyResult = verifyResponse.data;
+      if (!verifyResult.success) {
+        throw new Error('CAPTCHA verification failed');
+      }
+
+      const { website, ...submitData } = values;
+
       const leadData: Lead = {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        address: data.address || '',
-        service_type: variant === 'default' ? data.service_type : ServiceType.ResidentialFencing,
-        preferred_timeline: data.preferred_timeline,
-        message: data.message || '',
+        name: submitData.name,
+        email: submitData.email,
+        phone: submitData.phone,
+        address: submitData.address || '',
+        service_type: variant === 'default' ? submitData.service_type : ServiceType.ResidentialFencing,
+        preferred_timeline: submitData.preferred_timeline,
+        message: submitData.message || '',
         city: city,
-        zip_code: data.zipCode,
+        zip_code: submitData.zipCode,
+        recaptcha_v3_token: v3Token,
+        recaptcha_v3_score: verifyResult.score,
+        recaptcha_v2_token: v2Token,
       };
       
       if (isResidential && fenceDetails && fenceDetails.estimatedCost) {
@@ -113,12 +160,12 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         leadData["Estimated Cost Quote"] = `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`;
       }
 
-      const result = await supabase.submitLead(leadData);
-      
-      if (!result.success) {
-        throw new Error(result.error || 'Failed to submit lead');
-      }
+      const { error } = await supabase
+        .from('leads')
+        .insert([leadData]);
 
+      if (error) throw error;
+      
       form.reset();
       setFenceDetails(null);
       setIsSuccess(true);
@@ -235,7 +282,21 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         </div>
 
         <Form {...form}>
-          <form className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="hidden" aria-hidden="true">
+              <FormField
+                control={form.control}
+                name="website"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input {...field} tabIndex={-1} autoComplete="off" />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+            </div>
+
             {currentStep === 1 && (
               <>
                 <FormField
@@ -484,6 +545,12 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                   </a>
                 </p>
               </>
+            )}
+
+            {showV2Captcha && (
+              <div className="flex justify-center my-4">
+                <div id={v2ContainerId}></div>
+              </div>
             )}
           </form>
         </Form>

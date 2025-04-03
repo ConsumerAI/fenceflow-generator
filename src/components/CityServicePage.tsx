@@ -55,7 +55,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
           content={`Transform your space with ${String(serviceType).toLowerCase()} services in ${formattedCity}. Contact us to get your perfect fence!`}
         />
       </Helmet>
-
+      
       <div className="min-h-screen flex flex-col">
         <Navbar />
         
@@ -67,7 +67,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
               </h1>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div className="prose prose-lg max-w-none">
+                  <div className="prose prose-lg max-w-none">
                   {serviceType === ServiceType.AthleticCourts && (
                     <>
                       <h2 className="text-3xl font-bold mb-4">Professional Athletic Courts and Sports Facilities in {formattedCity}</h2>
@@ -131,23 +131,23 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                       
                       <p>Our capabilities include:</p>
                       <ul className="list-disc pl-6 my-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-                        <li>Pre-Fab Walls</li>
-                        <li>Dumpster Enclosures</li>
-                        <li>Farm and Ranch</li>
-                        <li>Security Fencing</li>
-                        <li>Apartment Fencing</li>
-                        <li>Housing Development Fencing</li>
-                        <li>Pool Fencing</li>
+                      <li>Pre-Fab Walls</li>
+                      <li>Dumpster Enclosures</li>
+                      <li>Farm and Ranch</li>
+                      <li>Security Fencing</li>
+                      <li>Apartment Fencing</li>
+                      <li>Housing Development Fencing</li>
+                      <li>Pool Fencing</li>
                         <li>Multi-family and Apartment Services</li>
-                        <li>Athletics Fencing</li>
-                        <li>Chain link Fencing</li>
-                        <li>Custom Gates</li>
-                        <li>Security Gates</li>
-                        <li>Access Controls</li>
-                        <li>Solar Power</li>
-                        <li>Sound Barriers</li>
-                        <li>Retaining Walls</li>
-                      </ul>
+                      <li>Athletics Fencing</li>
+                      <li>Chain link Fencing</li>
+                      <li>Custom Gates</li>
+                      <li>Security Gates</li>
+                      <li>Access Controls</li>
+                      <li>Solar Power</li>
+                      <li>Sound Barriers</li>
+                      <li>Retaining Walls</li>
+                    </ul>
                     </>
                   )}
                   
@@ -163,11 +163,11 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                           <h4 className="text-xl font-bold mb-2">Gate Operators & Automation</h4>
                           <p>Simplify your entry points with automated gate systems. We offer durable and reliable solutions for swing, slide, and barrier gates.</p>
                         </div>
-                        <div>
+                  <div>
                           <h4 className="text-xl font-bold mb-2">Keypads & Card Readers</h4>
                           <p>Control access to your property with user-friendly keypads and card reader systems. Manage permissions efficiently to ensure only authorized individuals can enter.</p>
-                        </div>
-                      </div>
+                  </div>
+                </div>
                     </>
                   )}
                   
@@ -183,7 +183,7 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                         <li className="mb-2"><strong>Increased Property Value:</strong> Add a luxurious, high-end feature that boosts curb appeal and resale value.</li>
                         <li className="mb-2"><strong>Privacy Protection:</strong> Maintain your privacy and security with controlled access.</li>
                         <li className="mb-2"><strong>Pet and Child Safety:</strong> Keep children and pets safely contained within your property.</li>
-                      </ul>
+                    </ul>
                     </>
                   )}
                   
@@ -199,16 +199,16 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                         <li className="mb-2"><strong>Decorative Fencing:</strong> Enhance your home's curb appeal</li>
                         <li className="mb-2"><strong>Security Fencing:</strong> Protect your property with style</li>
                         <li className="mb-2"><strong>Custom Gates:</strong> Personalized entry solutions</li>
-                      </ul>
+                    </ul>
                     </>
                   )}
-                </div>
-
-                <div>
+                  </div>
+                  
+                  <div>
                   <LeadForm city={formattedCity} />
                 </div>
-              </div>
-            </div>
+                    </div>
+                  </div>
           </section>
 
           {/* Dynamic City-Specific Content */}
@@ -255,12 +255,12 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                   );
                 })}
               </div>
-            </div>
-          </section>
+              </div>
+            </section>
         </main>
-
+        
         <Suspense fallback={<div className="h-[100px]" />}>
-          <Footer />
+        <Footer />
         </Suspense>
       </div>
     </>

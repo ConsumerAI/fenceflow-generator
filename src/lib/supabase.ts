@@ -1,11 +1,32 @@
 import { createClient } from '@supabase/supabase-js';
 import { Lead, CityContent, ContentCache } from './types';
+import type { Database } from './types';
+import { env } from '@/lib/env';
 
-// Initialize the Supabase client
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Create Supabase client with validated environment variables
+export const supabase = createClient<Database>(
+  env.VITE_SUPABASE_URL,
+  env.VITE_SUPABASE_ANON_KEY,
+  {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: true
+    },
+    global: {
+      headers: {
+        'x-application-name': 'fenceflow',
+      },
+    },
+  }
+);
 
-const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+// Add error handling for failed requests
+supabase.handleError = (error: Error) => {
+  console.error('Supabase Error:', error);
+  // You can add error reporting service here
+  return error;
+};
 
 class Supabase {
   async submitLead(lead: Lead): Promise<{ success: boolean; error?: string }> {
@@ -17,7 +38,7 @@ class Supabase {
         throw new Error('Missing required fields');
       }
 
-      const { error } = await supabaseClient
+      const { error } = await supabase
         .from('leads')
         .insert(lead);
       
@@ -39,7 +60,7 @@ class Supabase {
 
   async getCachedContent(cityUrl: string): Promise<CityContent | null> {
     try {
-      const { data, error } = await supabaseClient
+      const { data, error } = await supabase
         .from('content_cache')
         .select('content')
         .eq('page_url', cityUrl)
@@ -59,7 +80,7 @@ class Supabase {
 
   async cacheContent(pageUrl: string, content: CityContent): Promise<void> {
     try {
-      const { error } = await supabaseClient
+      const { error } = await supabase
         .from('content_cache')
         .upsert({ 
           page_url: pageUrl, 
@@ -76,7 +97,7 @@ class Supabase {
   }
 }
 
-export const supabase = new Supabase();
+export const supabaseInstance = new Supabase();
 
 // Service image mapping for content generation
 export const SERVICE_IMAGES = {
@@ -91,7 +112,7 @@ export const SERVICE_IMAGES = {
 export const generateCityContent = async (city: string): Promise<CityContent> => {
   try {
     // Check if we have content in the cache first
-    const cachedContent = await supabase.getCachedContent(`/${city.toLowerCase()}`);
+    const cachedContent = await supabaseInstance.getCachedContent(`/${city.toLowerCase()}`);
     if (cachedContent) {
       console.log(`Using cached content for ${city}`);
       return cachedContent;
@@ -149,7 +170,7 @@ export const generateCityContent = async (city: string): Promise<CityContent> =>
     };
     
     // Cache the generated content
-    await supabase.cacheContent(`/${city.toLowerCase()}`, content);
+    await supabaseInstance.cacheContent(`/${city.toLowerCase()}`, content);
     
     return content;
   } catch (error) {

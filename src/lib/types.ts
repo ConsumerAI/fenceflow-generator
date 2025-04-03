@@ -13,6 +13,10 @@ export interface Lead {
   linear_feet?: number;
   fence_material?: "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)";
   "Estimated Cost Quote"?: string;
+  recaptcha_v3_token?: string;
+  recaptcha_v3_score?: number;
+  recaptcha_v2_token?: string;
+  client_ip?: string;
   created_at?: string;
 }
 
