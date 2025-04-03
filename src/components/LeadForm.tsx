@@ -9,7 +9,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { toast } from '@/hooks/use-toast';
 import { Lead, ServiceType } from '@/lib/types';
-import { supabase } from '@/lib/supabase';
+import { supabase, supabaseInstance } from '@/lib/supabase';
 import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
 import AddressAutocomplete from './AddressAutocomplete';
 import { MapPin, Fence, Star, ArrowRight, Lock, Calendar, Users } from 'lucide-react';
@@ -160,11 +160,13 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         leadData["Estimated Cost Quote"] = `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`;
       }
 
-      const { error } = await supabase
-        .from('leads')
-        .insert([leadData]);
+      console.log('Submitting lead data:', leadData);
+      const { success, error: submitError } = await supabaseInstance.submitLead(leadData);
 
-      if (error) throw error;
+      if (!success || submitError) {
+        console.error('Lead submission error:', submitError);
+        throw new Error(submitError || 'Failed to submit lead');
+      }
       
       form.reset();
       setFenceDetails(null);

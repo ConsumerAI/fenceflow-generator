@@ -88,6 +88,18 @@ export interface ContentCache {
 
 type Database = {
   public: {
+    Tables: {
+      leads: {
+        Row: Lead;
+        Insert: Omit<Lead, 'id' | 'created_at' | 'client_ip'>;
+        Update: Partial<Lead>;
+      };
+      content_cache: {
+        Row: ContentCache;
+        Insert: Omit<ContentCache, 'id' | 'created_at'>;
+        Update: Partial<ContentCache>;
+      };
+    };
     Functions: {
       get_cached_content: {
         Args: { p_cache_key: string };
@@ -101,6 +113,12 @@ type Database = {
         };
         Returns: void;
       };
+      verify_recaptcha: {
+        Args: { v3_token?: string; v2_token?: string };
+        Returns: { success: boolean; score?: number };
+      };
     };
   };
 };
+
+export type { Database };
