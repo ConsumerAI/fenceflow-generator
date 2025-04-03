@@ -9,7 +9,11 @@ declare global {
       render: (element: string | HTMLElement, options: any) => number;
       getResponse: (widgetId?: number) => string;
       reset: (widgetId?: number) => void;
-      enterprise?: any;
+      enterprise: {
+        ready: (callback: () => void) => void;
+        execute: (siteKey: string, options: { action: string }) => Promise<string>;
+        render: (element: string | HTMLElement, options: any) => number;
+      };
     };
     onRecaptchaLoad?: () => void;
   }
@@ -23,7 +27,7 @@ export function useRecaptcha() {
   const v3LoadPromiseRef = useRef<Promise<void>>();
   const v2LoadPromiseRef = useRef<Promise<void>>();
 
-  // Load reCAPTCHA v3
+  // Load reCAPTCHA v3 Enterprise
   useEffect(() => {
     const loadV3 = async () => {
       if (v3LoadPromiseRef.current) return v3LoadPromiseRef.current;
@@ -35,23 +39,23 @@ export function useRecaptcha() {
             document.head.removeChild(script);
           });
 
-          // Create and append the script
+          // Create and append the enterprise script
           const script = document.createElement('script');
-          script.src = `https://www.google.com/recaptcha/api.js?render=${env.VITE_RECAPTCHA_V3_SITE_KEY}`;
+          script.src = `https://www.google.com/recaptcha/enterprise.js?render=${env.VITE_RECAPTCHA_V3_SITE_KEY}`;
           script.async = true;
           script.defer = true;
           script.id = 'recaptcha-v3';
 
           script.onload = () => {
-            window.grecaptcha?.ready(() => {
-              console.log('reCAPTCHA v3 loaded successfully');
+            window.grecaptcha.enterprise.ready(() => {
+              console.log('reCAPTCHA v3 Enterprise loaded successfully');
               setIsV3Loaded(true);
               resolve();
             });
           };
 
           script.onerror = (error) => {
-            console.error('Failed to load reCAPTCHA v3:', error);
+            console.error('Failed to load reCAPTCHA v3 Enterprise:', error);
             reject(error);
           };
 
@@ -129,17 +133,17 @@ export function useRecaptcha() {
 
   const executeV3 = useCallback(async (action: string): Promise<{ token: string; score: number }> => {
     if (!isV3Loaded) {
-      console.log('Waiting for reCAPTCHA v3 to load...');
+      console.log('Waiting for reCAPTCHA v3 Enterprise to load...');
       await v3LoadPromiseRef.current;
     }
 
     try {
-      console.log('Executing reCAPTCHA v3...');
-      const token = await window.grecaptcha.execute(env.VITE_RECAPTCHA_V3_SITE_KEY, { action });
-      console.log('reCAPTCHA v3 execution successful');
+      console.log('Executing reCAPTCHA v3 Enterprise...');
+      const token = await window.grecaptcha.enterprise.execute(env.VITE_RECAPTCHA_V3_SITE_KEY, { action });
+      console.log('reCAPTCHA v3 Enterprise execution successful');
       return { token, score: 0.9 }; // Score will be determined server-side
     } catch (error) {
-      console.error('reCAPTCHA v3 execution error:', error);
+      console.error('reCAPTCHA v3 Enterprise execution error:', error);
       throw new Error('Failed to execute reCAPTCHA v3');
     }
   }, [isV3Loaded]);
