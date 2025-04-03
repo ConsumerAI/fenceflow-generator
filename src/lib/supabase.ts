@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 import { Lead, CityContent, ContentCache } from './types';
 
 // Initialize the Supabase client
-const supabaseUrl = 'https://vmniocmdyxvhqbetsjub.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtbmlvY21keXh2aHFiZXRzanViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE3MjY3NjIsImV4cCI6MjA1NzMwMjc2Mn0.woc9RNWJNDgYAk_84aPgCRLg32WtkEjYpMuhZvagp1M';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
