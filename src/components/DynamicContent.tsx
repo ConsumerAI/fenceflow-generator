@@ -6,24 +6,18 @@ import { ServiceType } from '@/lib/types';
 import { SupabaseClient } from '@supabase/supabase-js';
 import type { Database as GeneratedDatabase } from '@/integrations/supabase/types';
 
-interface DynamicContentProps {
-  cityName: string;
-  serviceName?: ServiceType;
-  onContactClick?: () => void;
-}
-
-type Database = GeneratedDatabase & {
+type Database = {
   public: {
     Functions: {
       get_cached_content: {
-        Args: { cache_key: string };
+        Args: { p_cache_key: string };
         Returns: string;
       };
       cache_content: {
         Args: { 
-          cache_key: string;
-          cache_content: string;
-          expire_days: number;
+          p_cache_key: string;
+          p_cache_content: string;
+          p_expire_days: number;
         };
         Returns: void;
       };
@@ -31,7 +25,34 @@ type Database = GeneratedDatabase & {
   };
 };
 
+interface DynamicContentProps {
+  cityName: string;
+  serviceName?: ServiceType;
+  onContactClick?: () => void;
+}
+
 const typedSupabase = supabase as unknown as SupabaseClient<Database>;
+
+const LoadingSkeleton = () => (
+  <div className="animate-pulse space-y-8">
+    <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto"></div>
+    <div className="space-y-4">
+      <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+      <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+      <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+    </div>
+    <div className="space-y-4">
+      <div className="h-6 bg-gray-200 rounded w-1/3"></div>
+      <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+      <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+    </div>
+    <div className="space-y-4">
+      <div className="h-6 bg-gray-200 rounded w-1/3"></div>
+      <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+      <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+    </div>
+  </div>
+);
 
 const DynamicContent: React.FC<DynamicContentProps> = ({ 
   cityName, 
@@ -61,19 +82,21 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
           ? `${cityName.toLowerCase()}-${String(serviceName).toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
+        console.log('Attempting to fetch cached content for:', cacheKey);
+        
         // Use RPC function to get cached content
         const { data: cachedContent, error: cacheError } = await typedSupabase
-          .rpc('get_cached_content', { cache_key: cacheKey });
+          .rpc('get_cached_content', { p_cache_key: cacheKey });
         
         if (!cacheError && cachedContent) {
-          console.log('Using cached dynamic content');
+          console.log('Found cached dynamic content for:', cacheKey);
           setContent(cachedContent);
           setIsLoading(false);
           return;
         }
         
         // No cached content, generate new content
-        console.log(`Attempting to generate new content for ${cityName} and ${serviceName}`);
+        console.log(`No cache found. Attempting to generate new content for ${cityName} and ${serviceName}`);
         
         const promptTemplate = `You are an elite-level professional content writer specializing in fence installation and athletic court construction. Create rich, SEO-optimized content for ${cityName}, Texas focusing on ${String(serviceName)} that positions Fences Texas as the premier local connection to top fence contractors.
 
@@ -124,141 +147,46 @@ When it comes to enhancing the beauty, security, and value of your property in *
 [Explain how we match with the right contractor]
 
 ### 3. Quality Installation
-[Describe the installation process]
-
-[END OF CONTENT - DO NOT ADD ANY MORE SECTIONS, CALLS TO ACTION, OR CONTACT INFORMATION]
-
-Remember to:
-1. Use **bold** for important terms and locations
-2. Use *italics* for emphasis
-3. Maintain consistent heading hierarchy (h1 > h2 > h3)
-4. Use bullet points for lists
-5. Keep paragraphs short and scannable
-6. Include specific local details throughout
-
-Your content must:
-
-1. DEMONSTRATE DEEP LOCAL KNOWLEDGE:
-   - Reference specific ${cityName} neighborhoods, developments, or landmarks
-   - Address unique local conditions (weather patterns, soil types, architectural styles)
-   - Mention any relevant local regulations, HOA requirements, or permitting considerations
-
-2. SHOWCASE INDUSTRY EXPERTISE FOR ${String(serviceName)}:
-   - Explain what homeowners should know about ${String(serviceName)} in ${cityName}
-   - Detail material selection considerations unique to this service and location
-   - Describe what to look for in quality contractors for this service
-
-3. INCORPORATE CUSTOMER PSYCHOLOGY:
-   - Address the specific pain points ${cityName} residents face regarding ${String(serviceName)}
-   - Frame solutions in terms of tangible lifestyle benefits, not just features
-   - Use persuasive language that resonates with local property owners' values
-
-4. ESTABLISH CLEAR VALUE PROPOSITION:
-   - Explain how our service helps connect homeowners with the right contractors
-   - Emphasize our knowledge of ${cityName}'s unique conditions and requirements
-   - Highlight the benefits of using our matching service rather than finding contractors alone
-
-5. OPTIMIZE FOR LOCAL SEO:
-   - Naturally integrate "${cityName} ${String(serviceName)}" and related long-tail keywords
-   - Include specific calls-to-action relevant to local customers
-   - Use location-specific terms and phrases
-
-6. PROVIDE ACTIONABLE INFORMATION:
-   - Include specific considerations for ${String(serviceName)} in ${cityName}'s climate
-   - Offer transparent insights into what to expect from a quality contractor
-   - Give readers genuine value even if they don't convert immediately
-
-Write in a professional yet conversational tone that builds trust while establishing authority. Avoid generic platitudes - every sentence should deliver specific, valuable information that demonstrates our unique expertise in connecting ${cityName} homeowners with quality ${String(serviceName)} contractors.
-
-## Maintenance Tips for {service_type} in {city}
-
-To ensure your {service_type} remains in optimal condition and enhances your property for years to come, consider the following maintenance tips:
-
-- **Regular Inspections**: Inspect your fence at least twice a year for signs of wear, rot, or damage. Pay close attention to the posts, gates, and any hardware.
-
-- **Cleaning**: Depending on the material, clean your fence regularly to prevent mold, mildew, and dirt buildup. For wood fences, a gentle power wash can work wonders.
-
-- **Sealing and Staining**: If you have a wooden fence, apply a protective sealant every couple of years to guard against moisture and UV damage. Staining can also enhance the wood's longevity and appearance.
-
-- **Prompt Repairs**: Address any issues immediately, such as loose boards or rusted hardware, to prevent more significant problems down the road.
-
-Fences Texas is committed to providing the highest quality {service_type} solutions tailored to the unique needs of {city} homeowners. With our extensive knowledge, reliable craftsmanship, and personalized service, we ensure that your fencing project is a success.
-
-## Get Started Today
-
-Ready to enhance your property with a top-quality {service_type}? At Fences Texas, we're committed to delivering exceptional service and results that stand the test of time.
-
-## Contact Us
-
-Fill out our online form for a free consultation and estimate. Discover why we are {city}'s premier choice for {service_type}!
-
-By choosing us, you're not just getting a fence; you're investing in a lasting solution that adds value, security, and beauty to your home. Let's build something great together!
-
-<Button 
-  onClick={handleContactClick}
-  className="mt-8 bg-terracotta hover:bg-terracotta/90 text-white"
->
-  Get Your Perfect Fence
-</Button>`;
+[Describe the installation process]`;
         
-        // Try generate-content first
-        let data;
-        let error;
-        
+        // Try generate-city-content directly (removing the first attempt that always fails)
         try {
-          const result = await supabase.functions.invoke('generate-content', {
+          console.log('Calling generate-city-content function...');
+          const { data, error } = await supabase.functions.invoke('generate-city-content', {
             body: {
-              city: cityName,
-              service: String(serviceName),
+              cityName,
+              serviceName: String(serviceName),
+              prompt: promptTemplate
             }
           });
-          
-          if (result.error) {
-            console.error("Error with generate-content:", result.error);
-            // If first function fails, try generate-city-content
-            console.log("Trying fallback function generate-city-content...");
-            const fallbackResult = await supabase.functions.invoke('generate-city-content', {
-              body: {
-                cityName,
-                serviceName: String(serviceName),
-                prompt: promptTemplate
-              }
-            });
-            data = fallbackResult.data;
-            error = fallbackResult.error;
+
+          if (error) {
+            console.error("Error with generate-city-content:", error);
+            return;
+          }
+
+          if (data?.content) {
+            console.log("Successfully generated content, caching...");
+            // Cache the content using RPC function with correct parameter names
+            const { error: cachingError } = await typedSupabase
+              .rpc('cache_content', { 
+                p_cache_key: cacheKey,
+                p_cache_content: data.content,
+                p_expire_days: 30
+              });
+            
+            if (cachingError) {
+              console.error("Error caching content:", cachingError);
+            } else {
+              console.log("Successfully cached content");
+            }
+            
+            setContent(data.content);
           } else {
-            data = result.data;
-            error = result.error;
+            console.error("No content received from function");
           }
         } catch (invokeError) {
           console.error("Error invoking function:", invokeError);
-          error = invokeError;
-        }
-
-        if (error) {
-          console.error("Error fetching dynamic content:", error);
-          return;
-        }
-
-        if (data?.content) {
-          console.log("Successfully generated content:", data.content.substring(0, 100) + "...");
-          // Cache the content using RPC function
-          const { error: cachingError } = await typedSupabase
-            .rpc('cache_content', { 
-              cache_key: cacheKey,
-              cache_content: data.content,
-              expire_days: 30
-            });
-          
-          if (cachingError) {
-            console.error("Error caching content:", cachingError);
-          } else {
-            console.log("Successfully cached content");
-          }
-          
-          setContent(data.content);
-        } else {
-          console.error("No content received from function");
         }
       } catch (error) {
         console.error("Error in dynamic content generation:", error);
@@ -287,10 +215,7 @@ By choosing us, you're not just getting a fence; you're investing in a lasting s
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {isLoading ? (
-            <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-texas-terracotta mx-auto"></div>
-              <p className="mt-4 text-muted-foreground">Generating content for {cityName}...</p>
-            </div>
+            <LoadingSkeleton />
           ) : content ? (
             <article>
               <div 

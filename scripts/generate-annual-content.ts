@@ -28,20 +28,31 @@ interface GenerationFailure {
 }
 
 async function generateContent(city: string, service: ServiceType): Promise<string> {
-  try {
-    console.log(`Generating content for ${city} - ${service}...`);
-    
-    const { data, error } = await supabase.functions.invoke('generate-content', {
-      body: { city, service }
-    });
+  const maxRetries = 3;
+  let attempt = 0;
+  
+  while (attempt < maxRetries) {
+    try {
+      console.log(`Generating content for ${city} - ${service}... (Attempt ${attempt + 1}/${maxRetries})`);
+      
+      const { data, error } = await supabase.functions.invoke('generate-content', {
+        body: { city, service }
+      });
 
-    if (error) throw error;
-    return data.content;
-    
-  } catch (error) {
-    console.error(`Error generating content for ${city} - ${service}:`, error);
-    throw error;
+      if (error) throw error;
+      return data.content;
+      
+    } catch (error) {
+      attempt++;
+      if (attempt === maxRetries) {
+        console.error(`Error generating content for ${city} - ${service} after ${maxRetries} attempts:`, error);
+        throw error;
+      }
+      console.log(`Attempt ${attempt} failed, retrying in 5 seconds...`);
+      await new Promise(resolve => setTimeout(resolve, 5000));
+    }
   }
+  throw new Error('Unexpected error');
 }
 
 async function cacheContent(city: string, service: ServiceType, content: string) {
@@ -75,17 +86,14 @@ async function main() {
   const logFile = path.join(logsDir, `content-generation-${new Date().toISOString().split('T')[0]}.log`);
   const successLog = fs.createWriteStream(logFile);
 
-  // Test with first 5 cities
-  const testCities = ["Dallas", "Fort Worth", "Arlington", "Plano", "Garland"];
-  
-  console.log('Starting test batch content generation...');
-  console.log(`Generating for cities: ${testCities.join(', ')}`);
+  console.log('Starting full content generation for all cities...');
+  console.log(`Generating for cities: ${cities.join(', ')}`);
   console.log(`Services: ${SERVICES.join(', ')}\n`);
   
   let totalGenerated = 0;
   const failures: GenerationFailure[] = [];
 
-  for (const city of testCities) {
+  for (const city of cities) {
     for (const service of SERVICES) {
       try {
         console.log(`\nGenerating ${service} content for ${city}...`);
@@ -101,6 +109,10 @@ async function main() {
       } catch (error) {
         failures.push({ city, service, error });
         console.error(`Failed to generate/cache content for ${city} - ${service}`);
+        
+        // Log failures immediately to a separate file
+        const failureLog = path.join(logsDir, 'failures.log');
+        fs.appendFileSync(failureLog, `${new Date().toISOString()} - Failed: ${city} - ${service}\n${error}\n\n`);
       }
     }
   }
@@ -109,8 +121,8 @@ async function main() {
   const summary = `
 Generation Summary (${new Date().toISOString()})
 ----------------------------------------------
-Test Batch Results:
-Total Cities: ${testCities.length}
+Full Generation Results:
+Total Cities: ${cities.length}
 Total Services: ${SERVICES.length}
 Successfully Generated: ${totalGenerated}
 Failed: ${failures.length}

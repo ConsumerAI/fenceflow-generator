@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Carousel,
@@ -146,33 +145,24 @@ const images = [
 
 const ImageCarousel = () => {
   return (
-    <Carousel
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      className="w-full max-w-7xl mx-auto"
-    >
-      <CarouselContent className="-ml-2 md:-ml-4">
+    <div className="relative overflow-hidden">
+      <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
         {images.map((image, index) => (
-          <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-            <div className="rounded-xl overflow-hidden">
-              <AspectRatio ratio={4/3}>
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                />
-              </AspectRatio>
-            </div>
-          </CarouselItem>
+          <div 
+            key={index}
+            className="flex-none w-full md:w-1/2 lg:w-1/3 snap-center"
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="w-full h-64 object-cover rounded-lg shadow-md"
+            />
+          </div>
         ))}
-      </CarouselContent>
-      <div className="hidden md:flex">
-        <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2" />
-        <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2" />
       </div>
-    </Carousel>
+    </div>
   );
 };
 

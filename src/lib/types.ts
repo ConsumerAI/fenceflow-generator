@@ -9,6 +9,7 @@ export interface Lead {
   preferred_timeline: 'ASAP' | 'Within 1 Month' | 'Within 3 Months' | 'Just Researching';
   message: string;
   city: string;
+  zip_code: string;
   linear_feet?: number;
   fence_material?: "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)";
   "Estimated Cost Quote"?: string;
@@ -80,3 +81,22 @@ export interface ContentCache {
   created_at?: string;
   expires_at?: string;
 }
+
+type Database = {
+  public: {
+    Functions: {
+      get_cached_content: {
+        Args: { p_cache_key: string };
+        Returns: string;
+      };
+      cache_content: {
+        Args: { 
+          p_cache_key: string;
+          p_cache_content: string;
+          p_expire_days: number;
+        };
+        Returns: void;
+      };
+    };
+  };
+};
