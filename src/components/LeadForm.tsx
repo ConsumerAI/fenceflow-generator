@@ -120,8 +120,13 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         return;
       }
 
+      // Wait for reCAPTCHA to load if it hasn't already
       if (!isV3Loaded) {
-        throw new Error('reCAPTCHA v3 not loaded yet. Please try again.');
+        console.log('Waiting for reCAPTCHA to load...');
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Give it a chance to load
+        if (!isV3Loaded) {
+          throw new Error('reCAPTCHA failed to load. Please refresh the page and try again.');
+        }
       }
 
       console.log('Executing reCAPTCHA v3...');
@@ -145,7 +150,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         }
         
         if (!v2Token) {
-          throw new Error('reCAPTCHA verification timeout. Please try again.');
+          throw new Error('Please complete the reCAPTCHA verification to submit the form.');
         }
       }
 
@@ -156,16 +161,16 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
 
       if (verifyResponse.error) {
         console.error('Verification error:', verifyResponse.error);
-        throw new Error('CAPTCHA verification failed');
+        throw new Error('Security verification failed. Please try again.');
       }
 
       const verifyResult = verifyResponse.data;
       if (!verifyResult?.success) {
         console.error('Verification failed:', verifyResult);
-        throw new Error('CAPTCHA verification failed');
+        throw new Error('Security verification failed. Please try again.');
       }
 
-      console.log('reCAPTCHA verified, submitting lead...');
+      console.log('reCAPTCHA verified, preparing lead data...');
       const { website, ...submitData } = values;
 
       const leadData: Lead = {
@@ -189,12 +194,12 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         leadData["Estimated Cost Quote"] = `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`;
       }
 
-      console.log('Submitting lead to Supabase:', leadData);
+      console.log('Submitting lead to Supabase...');
       const { success, error: submitError } = await supabaseInstance.submitLead(leadData);
 
       if (!success || submitError) {
         console.error('Lead submission error:', submitError);
-        throw new Error(submitError || 'Failed to submit lead');
+        throw new Error(submitError || 'Failed to submit lead. Please try again.');
       }
 
       console.log('Lead submitted successfully!');
@@ -209,6 +214,8 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         description: error instanceof Error ? error.message : "Failed to submit form. Please try again.",
         variant: "destructive",
       });
+      setIsShaking(true);
+      setTimeout(() => setIsShaking(false), 820);
     } finally {
       setIsSubmitting(false);
       if (showV2Captcha) {
