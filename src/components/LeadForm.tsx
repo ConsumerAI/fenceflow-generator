@@ -53,7 +53,15 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
     estimatedCost?: { min: number; max: number };
   }>({});
 
-  const { executeV3, initV2, getV2Response, resetV2, showV2Captcha, setShowV2Captcha } = useRecaptcha();
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
+  const { executeV3, initV2, getV2Response, resetV2, showV2Captcha, setShowV2Captcha, isV3Loaded } = useRecaptcha();
   const [v2ContainerId] = useState(`recaptcha-${Math.random().toString(36).substring(7)}`);
   
   useEffect(() => {
@@ -112,31 +120,52 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         return;
       }
 
+      if (!isV3Loaded) {
+        throw new Error('reCAPTCHA v3 not loaded yet. Please try again.');
+      }
+
+      console.log('Executing reCAPTCHA v3...');
       const { token: v3Token, score } = await executeV3('lead_submission');
+      console.log('reCAPTCHA v3 executed, score:', score);
+
       let v2Token = null;
-      
       if (score < 0.5) {
+        console.log('Low reCAPTCHA score, showing v2...');
         setShowV2Captcha(true);
-        v2Token = getV2Response();
+        
+        // Wait for v2 response
+        const maxAttempts = 30; // 30 seconds timeout
+        let attempts = 0;
+        while (!v2Token && attempts < maxAttempts) {
+          v2Token = getV2Response();
+          if (!v2Token) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            attempts++;
+          }
+        }
+        
         if (!v2Token) {
-          setIsSubmitting(false);
-          return;
+          throw new Error('reCAPTCHA verification timeout. Please try again.');
         }
       }
 
+      console.log('Verifying reCAPTCHA tokens...');
       const verifyResponse = await supabase.functions.invoke('verify-recaptcha', {
-        body: JSON.stringify({ v3Token, v2Token })
+        body: { v3Token, v2Token }
       });
 
       if (verifyResponse.error) {
+        console.error('Verification error:', verifyResponse.error);
         throw new Error('CAPTCHA verification failed');
       }
 
       const verifyResult = verifyResponse.data;
-      if (!verifyResult.success) {
+      if (!verifyResult?.success) {
+        console.error('Verification failed:', verifyResult);
         throw new Error('CAPTCHA verification failed');
       }
 
+      console.log('reCAPTCHA verified, submitting lead...');
       const { website, ...submitData } = values;
 
       const leadData: Lead = {
@@ -160,14 +189,15 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
         leadData["Estimated Cost Quote"] = `${formatPrice(fenceDetails.estimatedCost.min)} - ${formatPrice(fenceDetails.estimatedCost.max)}`;
       }
 
-      console.log('Submitting lead data:', leadData);
+      console.log('Submitting lead to Supabase:', leadData);
       const { success, error: submitError } = await supabaseInstance.submitLead(leadData);
 
       if (!success || submitError) {
         console.error('Lead submission error:', submitError);
         throw new Error(submitError || 'Failed to submit lead');
       }
-      
+
+      console.log('Lead submitted successfully!');
       form.reset();
       setFenceDetails(null);
       setIsSuccess(true);
@@ -181,6 +211,10 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       });
     } finally {
       setIsSubmitting(false);
+      if (showV2Captcha) {
+        resetV2();
+        setShowV2Captcha(false);
+      }
     }
   };
 
@@ -191,14 +225,6 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
   }) => {
     setFenceDetails(calculatorData);
   }, []);
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
 
   const formClasses = `glass-card p-6 md:p-8 ${isShaking ? 'animate-shake' : ''} ${className} 
     bg-white bg-opacity-95 backdrop-blur-sm shadow-xl`;
