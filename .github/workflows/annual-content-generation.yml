@@ -4,9 +4,11 @@ on:
   schedule:
     # Run on January 1st at 00:00 UTC
     - cron: '0 0 1 1 *'
+  workflow_dispatch:  # Allow manual triggering through GitHub UI
 
 jobs:
   generate:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     
     steps:
