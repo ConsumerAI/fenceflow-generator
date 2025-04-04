@@ -565,7 +565,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
                   disabled={isSubmitting}
                   className={buttonBaseClasses}
                 >
-                  Secure Your Dedicated Contractor Now
+                  Secure the Best Contractor Now
                   <Lock className="ml-2 h-4 w-4" />
                 </Button>
 
