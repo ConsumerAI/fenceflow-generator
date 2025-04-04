@@ -1,8 +1,10 @@
--- Add reCAPTCHA columns if they don't exist
+-- Add missing columns
 ALTER TABLE leads
+ADD COLUMN IF NOT EXISTS zip_code TEXT,
 ADD COLUMN IF NOT EXISTS recaptcha_v3_token TEXT,
 ADD COLUMN IF NOT EXISTS recaptcha_v3_score FLOAT,
-ADD COLUMN IF NOT EXISTS recaptcha_v2_token TEXT;
+ADD COLUMN IF NOT EXISTS recaptcha_v2_token TEXT,
+ADD COLUMN IF NOT EXISTS client_ip TEXT;
 
 -- Create rate limiting function
 CREATE OR REPLACE FUNCTION check_rate_limit(
@@ -34,11 +36,14 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
--- Drop existing policy
+-- Drop all existing policies
 DROP POLICY IF EXISTS "Enhanced submission verification" ON leads;
+DROP POLICY IF EXISTS "Lead submission rate limiting" ON leads;
+DROP POLICY IF EXISTS "Rate limit lead submissions" ON leads;
+DROP POLICY IF EXISTS "Require valid reCAPTCHA" ON leads;
 
 -- Create new policy without reCAPTCHA verification (since we do it in the Edge Function)
-CREATE POLICY "Lead submission rate limiting" 
+CREATE POLICY "Lead submission rate limiting v2" 
 ON leads
 FOR INSERT 
 TO authenticated, anon
