@@ -245,10 +245,15 @@ const Index = () => {
             </div>
           </section>
           
-          {/* About Us Section - Moved here */}
-          <section className="py-16 bg-white">
+          {/* About Us Section */}
+          <section className="py-16 bg-secondary/10">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold mb-8 text-center">About Us</h2>
+              <div className="text-center mb-12">
+                <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
+                  About FencesTexas
+                </div>
+                <h2 className="text-4xl font-bold mb-4 text-texas-terracotta">About Us</h2>
+              </div>
               <div className="max-w-4xl mx-auto space-y-6">
                 <p className="text-muted-foreground text-center">
                   FencesTexas takes the guesswork out of finding the right fence contractor in Dallas/Fort Worth. Unlike other services that sell your information to multiple companies, we use our proprietary Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your specific project.
@@ -264,7 +269,7 @@ const Index = () => {
           </section>
 
           {/* Plan to Pickets Process Section */}
-          <section className="py-16 bg-secondary/10">
+          <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                 <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
@@ -277,46 +282,30 @@ const Index = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <CalendarDays className="w-6 h-6 text-texas-terracotta" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Schedule Estimate</h3>
-                  <p className="text-muted-foreground">
-                    Scheduling an estimate is easy; you can do it online. Our professional estimators will show up at your designated time. While there we will discuss your project needs and the style you want. Whether it's board-on-board, wrought iron, horizontal, pool fencing, or automatic gates, we have the design expertise to easily walk you through the process resulting in a beautiful fence you'll love.
-                  </p>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
+                  <h3 className="font-semibold mb-2">Tell us about your project</h3>
+                  <p className="text-muted-foreground">Location, fence type, and timeline</p>
                 </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <ClipboardList className="w-6 h-6 text-texas-terracotta" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Place Your Order</h3>
-                  <p className="text-muted-foreground">
-                    Once you place your order and provide your home survey, Fences Texas takes it from there. Our team will file for necessary permits and have local utility companies mark active lines.
-                  </p>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
+                  <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
+                  <p className="text-muted-foreground">Our Perfect Match™ system identifies the one contractor who's ideal for your specific needs</p>
                 </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <Fence className="w-6 h-6 text-texas-terracotta" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Installation</h3>
-                  <p className="text-muted-foreground">
-                    Before your installation we will notify you when you are the next project in line and again the day before we come out. On the day of installation you will be greeted by our installation team and we will start building that great fence or gate. Fences Texas performs quality checks on all of our jobs. So once installation is complete your project manager will come out for a final walk though and check to make sure installation meets our highest standards.
-                  </p>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
+                  <h3 className="font-semibold mb-2">Direct Connection</h3>
+                  <p className="text-muted-foreground">You'll be connected directly with your matched contractor</p>
                 </div>
-
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <PartyPopper className="w-6 h-6 text-texas-terracotta" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">Enjoy Your New Yard</h3>
-                  <p className="text-muted-foreground">
-                    It's time to show off that new backyard look by celebrating. We recommend inviting all of the neighbors over, grabbing some good meats from the store, tossing some cold ones in the cooler, bringing out the yard games, and putting on some good music!
-                  </p>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
+                  <h3 className="font-semibold mb-2">Expert Installation</h3>
+                  <p className="text-muted-foreground">Get your fence installed by a verified expert who specializes in your project type</p>
                 </div>
               </div>
+              <p className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
+                Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, eliminating the hassle of filtering through competing bids.
+              </p>
             </div>
           </section>
           

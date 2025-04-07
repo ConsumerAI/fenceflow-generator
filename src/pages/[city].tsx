@@ -223,9 +223,14 @@ const CityPage = () => {
           </div>
         </section>
         
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-secondary/10">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">About Us</h2>
+            <div className="text-center mb-12">
+              <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
+                About FencesTexas
+              </div>
+              <h2 className="text-4xl font-bold mb-4 text-texas-terracotta">About Us</h2>
+            </div>
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-muted-foreground text-center">
                 FencesTexas takes the guesswork out of finding the right fence contractor in {cityName}. Unlike other services that sell your information to multiple companies, we use our proprietary Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your specific project.
@@ -329,7 +334,45 @@ const CityPage = () => {
         
         <DynamicContent cityName={cityName} />
         
-        <PlanToPickets />
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
+                Our Proven Process
+              </div>
+              <h2 className="text-4xl font-bold mb-4">Our "Plan to Pickets" Process</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                It all begins with an idea. Maybe you want to have that perfect backyard oasis. Maybe you want to host a great barbecue party. Maybe you want to protect what you love. Whatever it is, this simple 4-step plan will ensure your success.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
+                <h3 className="font-semibold mb-2">Tell us about your project</h3>
+                <p className="text-muted-foreground">Location, fence type, and timeline</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
+                <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
+                <p className="text-muted-foreground">Our Perfect Match™ system identifies the one contractor who's ideal for your specific needs</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
+                <h3 className="font-semibold mb-2">Direct Connection</h3>
+                <p className="text-muted-foreground">You'll be connected directly with your matched contractor</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
+                <h3 className="font-semibold mb-2">Expert Installation</h3>
+                <p className="text-muted-foreground">Get your fence installed by a verified expert who specializes in your project type</p>
+              </div>
+            </div>
+            <p className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
+              Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, eliminating the hassle of filtering through competing bids.
+            </p>
+          </div>
+        </section>
         
         <section className="py-16 md:py-24 bg-texas-earth text-white">
           <div className="container mx-auto px-4 md:px-8">
@@ -456,37 +499,6 @@ const CityPage = () => {
                 />
               </div>
             </div>
-          </div>
-        </section>
-        
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8">Our Plans to Picket Process</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
-                <h3 className="font-semibold mb-2">Tell us about your project</h3>
-                <p className="text-muted-foreground">Location, fence type, and timeline</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
-                <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
-                <p className="text-muted-foreground">Our Perfect Match™ system identifies the one contractor who's ideal for your specific needs</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
-                <h3 className="font-semibold mb-2">Direct Connection</h3>
-                <p className="text-muted-foreground">You'll be connected directly with your matched contractor</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
-                <h3 className="font-semibold mb-2">Expert Installation</h3>
-                <p className="text-muted-foreground">Get your fence installed by a verified expert who specializes in your project type</p>
-              </div>
-            </div>
-            <p className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
-              Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, eliminating the hassle of filtering through competing bids.
-            </p>
           </div>
         </section>
         

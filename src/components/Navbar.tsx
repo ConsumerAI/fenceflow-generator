@@ -82,9 +82,6 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-texas-terracotta transition-colors">
-              Home
-            </Link>
             {services.map((service) => (
               <Link 
                 key={service}
@@ -94,20 +91,9 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                 {service}
               </Link>
             ))}
-            <Link 
-              to="/fence-companies-near-me" 
-              className="text-foreground hover:text-texas-terracotta transition-colors"
-            >
-              Near Me
-            </Link>
             <Link to="/commercial-fencing">
               <span className="text-muted-foreground hover:text-foreground transition-colors">
                 Commercial Fencing
-              </span>
-            </Link>
-            <Link to="/about-us">
-              <span className="text-muted-foreground hover:text-foreground transition-colors">
-                About Us
               </span>
             </Link>
             <Button
@@ -131,9 +117,6 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
-                  <Link to="/" className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors" onClick={closeMenu}>
-                    Home
-                  </Link>
                   {services.map((service) => (
                     <Link 
                       key={service}
@@ -144,21 +127,9 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                       {service}
                     </Link>
                   ))}
-                  <Link 
-                    to="/fence-companies-near-me" 
-                    className="text-foreground hover:text-texas-terracotta px-4 py-2 rounded-md transition-colors"
-                    onClick={closeMenu}
-                  >
-                    Near Me
-                  </Link>
                   <Link to="/commercial-fencing">
                     <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
                       Commercial Fencing
-                    </span>
-                  </Link>
-                  <Link to="/about-us">
-                    <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
-                      About Us
                     </span>
                   </Link>
                   <Button
