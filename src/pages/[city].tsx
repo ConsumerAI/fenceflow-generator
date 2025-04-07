@@ -442,6 +442,27 @@ const CityPage = () => {
           </div>
         </section>
         
+        <section className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-4">
+              Recent Projects from Our Verified Contractors in {cityName}
+            </h2>
+            <p className="text-gray-600 text-center mb-12">
+              Browse through our gallery of fence installations in {cityName}. Each project showcases our commitment to quality and craftsmanship.
+            </p>
+            <ImageCarousel />
+            
+            <div className="mt-10 flex justify-center">
+              <Button 
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                onClick={scrollToQuote}
+              >
+                Find Your Fence Pro
+              </Button>
+            </div>
+          </div>
+        </section>
+        
         <Footer />
       </div>
     </>
