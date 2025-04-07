@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from "next/link"
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { services, getServiceUrl } from '@/lib/routes';
@@ -77,12 +77,12 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
             >
               Near Me
             </Link>
-            <Link href="/commercial-fencing">
+            <Link to="/commercial-fencing">
               <span className="text-muted-foreground hover:text-foreground transition-colors">
                 Commercial Fencing
               </span>
             </Link>
-            <Link href="/about-us">
+            <Link to="/about-us">
               <span className="text-muted-foreground hover:text-foreground transition-colors">
                 About Us
               </span>
@@ -128,12 +128,12 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                   >
                     Near Me
                   </Link>
-                  <Link href="/commercial-fencing">
+                  <Link to="/commercial-fencing">
                     <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
                       Commercial Fencing
                     </span>
                   </Link>
-                  <Link href="/about-us">
+                  <Link to="/about-us">
                     <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
                       About Us
                     </span>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import Head from "next/head"
+import { Helmet } from "react-helmet"
 
 export default function AboutUs() {
   const scrollToQuote = () => {
@@ -13,10 +13,10 @@ export default function AboutUs() {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>About Us - FencesTexas</title>
         <meta name="description" content="Learn about FencesTexas and our mission to connect homeowners with the perfect fence contractor through our proprietary Perfect Match™ system." />
-      </Head>
+      </Helmet>
 
       <Navbar />
 
