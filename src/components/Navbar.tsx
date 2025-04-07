@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
               onClick={scrollToQuote}
               className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
             >
-              Get Your Perfect Fence
+              Find Your Fence Pro
             </Button>
           </div>
           
@@ -122,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                     onClick={scrollToQuote}
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full"
                   >
-                    Get Your Perfect Fence
+                    Find Your Fence Pro
                   </Button>
                 </div>
               </SheetContent>
