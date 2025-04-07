@@ -26,9 +26,76 @@ const ServicePage: React.FC<ServicePageProps> = ({
         <main className="flex-1">
           <section className="pt-24 pb-16 md:pt-32 md:pb-24">
             <div className="container mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {service} Services in DFW
-              </h1>
+              <div className="max-w-4xl mx-auto text-center">
+                <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+                  {service} Installation Services in Texas
+                </h1>
+                <p className="text-gray-600 mb-8">
+                  We're excited to help you with your {service.toLowerCase()} project! From cozy residential privacy to strong commercial security and sleek automated gates, our team delivers quality across the metroplex. Transform your space with a fence you'll love!
+                </p>
+                
+                <div className="flex flex-col sm:flex-row items-center gap-4 justify-center mb-8">
+                  <div className="flex items-center gap-4 w-full sm:w-auto">
+                    <Button 
+                      onClick={() => {
+                        const quoteElement = document.getElementById('quote');
+                        if (quoteElement) {
+                          window.location.hash = 'quote';
+                          quoteElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'center'
+                          });
+                          quoteElement.classList.add('animate-shake');
+                          setTimeout(() => {
+                            quoteElement.classList.remove('animate-shake');
+                          }, 2000);
+                        }
+                      }}
+                      className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full sm:w-[240px] h-[48px] text-base"
+                    >
+                      Find Your Fence Pro
+                    </Button>
+                    
+                    <div className="flex items-center gap-3 flex-1 sm:flex-none">
+                      <div className="flex -space-x-3">
+                        <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                          <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="" />
+                        </div>
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        <span className="font-semibold">732+</span> homeowners matched this week
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Triple-Verified</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">100% Free Service</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Saves Time & Money</span>
+                  </div>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div className="prose prose-lg max-w-none">
