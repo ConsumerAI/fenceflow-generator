@@ -161,7 +161,7 @@ const ServiceCard = ({
         
         <Button 
           onClick={handleQuoteClick}
-          className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full"
+          className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full mt-6"
         >
           Get Your Personalized Match
         </Button>

@@ -297,17 +297,10 @@ const Index = () => {
             
             <CityGrid />
             
-            <div className="mt-16 text-center flex flex-col sm:flex-row justify-center gap-4">
-              <a 
-                href="/fence-companies-near-me" 
-                className="inline-flex items-center justify-center gap-2 bg-texas-earth text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth/90 transition-colors"
-              >
-                Find Fence Companies Near Me
-              </a>
-              
+            <div className="mt-16 text-center flex justify-center">
               <Button 
                 onClick={handleQuoteClick}
-                className="inline-flex items-center justify-center bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors"
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
                 Get Your Personalized Match
               </Button>
