@@ -86,7 +86,7 @@ const NearMePage = () => {
               <div className="space-y-6 animate-page-transition">
                 <div className="inline-flex items-center gap-2 px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
                   <MapPin size={16} />
-                  <span>Serving your area: {randomCity}</span>
+                  <span>Serving DFW, Texas</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                   Fence Companies Near Me in Dallas/Fort Worth

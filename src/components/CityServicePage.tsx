@@ -46,6 +46,10 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
     { to: `/${city}/${service}`, label: String(serviceType) },
   ];
 
+  const handleQuoteClick = () => {
+    // Implement the logic to handle the quote click
+  };
+
   return (
     <>
       <Helmet>
@@ -62,6 +66,9 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
         <main className="flex-1">
           <section className="pt-24 pb-16 md:pt-32 md:pb-24">
             <div className="container mx-auto px-4">
+              <div className="text-texas-terracotta text-sm font-medium mb-2">
+                Serving {formattedCity}, Texas
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {serviceType} Services in {formattedCity}
               </h1>

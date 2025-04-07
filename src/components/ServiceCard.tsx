@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ServiceType } from '@/lib/types';
 import { getServiceUrl, getCityServiceUrl } from '@/lib/routes';
 import { cities } from '@/lib/cities';
+import { Button } from '@/components/ui/button';
 
 interface ServiceCardProps {
   service: {
@@ -44,6 +45,13 @@ const ServiceCard = ({
     return Object.values(ServiceType).find(
       (enumValue) => String(enumValue) === serviceString
     ) as ServiceType;
+  };
+  
+  const handleQuoteClick = () => {
+    const form = document.getElementById('quote');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
   };
   
   return (
@@ -150,6 +158,13 @@ const ServiceCard = ({
         <meta itemProp="provider" content="Fences Texas" />
         <meta itemProp="areaServed" content="Dallas-Fort Worth Metroplex" />
         <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(getServiceTypeFromString(service.title))}`} />
+        
+        <Button 
+          onClick={handleQuoteClick}
+          className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full"
+        >
+          Get Your Personalized Match
+        </Button>
       </div>
     </div>
   );
