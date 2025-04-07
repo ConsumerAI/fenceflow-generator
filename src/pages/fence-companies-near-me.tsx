@@ -51,7 +51,7 @@ const NearMePage = () => {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Fences Texas",
-          "description": "DFW's Premier Fence Installation Experts",
+          "description": "DFW's #1 Fence Contractor Network",
           "email": "info@fencestexas.com",
           "areaServed": {
             "@type": "GeoCircle",
@@ -102,7 +102,7 @@ const NearMePage = () => {
                     onClick={handleQuoteClick}
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get Your Perfect Fence
+                    Get Your Personalized Match
                   </Button>
                 </div>
                 <div className="mt-6">
@@ -147,7 +147,7 @@ const NearMePage = () => {
                     onClick={handleQuoteClick}
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get Your Perfect Fence
+                    Get Your Personalized Match
                   </Button>
                 </div>
               </div>
@@ -260,7 +260,7 @@ const NearMePage = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Perfect Fence
+                Get Your Personalized Match
               </Button>
             </div>
           </div>
@@ -307,7 +307,7 @@ const NearMePage = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Perfect Fence
+                Get Your Personalized Match
               </Button>
             </div>
           </div>

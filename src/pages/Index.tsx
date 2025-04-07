@@ -128,7 +128,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Fences Texas | DFW's Premier Fence Installation Experts</title>
+        <title>Fences Texas | DFW's #1 Fence Contractor Network</title>
         <meta 
           name="description" 
           content="Expert fence installation across Dallas/Fort Worth. Residential, commercial, athletic courts and sports facilities, and automatic gates. Transform your space with a fence you'll love!"
@@ -138,7 +138,7 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Fences Texas",
-            "description": "DFW's Premier Fence Installation Experts",
+            "description": "DFW's #1 Fence Contractor Network",
             "email": "info@fencestexas.com",
             "areaServed": {
               "@type": "GeoCircle",
@@ -188,7 +188,7 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-page-transition">
                 <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
-                  DFW's Premier Fence Installation Experts
+                  DFW's #1 Fence Contractor Network
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
                   Fence Installation Across
@@ -205,7 +205,7 @@ const Index = () => {
                     onClick={handleQuoteClick}
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get Your Perfect Fence
+                    Get Your Personalized Match
                   </Button>
                 </div>
                 <div className="mt-6">
@@ -245,7 +245,7 @@ const Index = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Perfect Fence
+                Get Your Personalized Match
               </Button>
             </div>
           </div>
@@ -278,7 +278,7 @@ const Index = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Perfect Fence
+                Get Your Personalized Match
               </Button>
             </div>
           </div>
@@ -309,7 +309,7 @@ const Index = () => {
                 onClick={handleQuoteClick}
                 className="inline-flex items-center justify-center bg-texas-terracotta text-white px-6 py-3 rounded-md font-medium hover:bg-texas-earth transition-colors"
               >
-                Get Your Perfect Fence
+                Get Your Personalized Match
               </Button>
             </div>
           </div>
@@ -341,7 +341,7 @@ const Index = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Perfect Fence
+                Get Your Personalized Match
               </Button>
             </div>
           </div>
