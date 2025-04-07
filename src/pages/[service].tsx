@@ -9,11 +9,20 @@ import { Button } from '@/components/ui/button';
 
 interface ServicePageProps {
   service: ServiceType;
+  cityName: string;
 }
 
 const ServicePage: React.FC<ServicePageProps> = ({
-  service
+  service,
+  cityName
 }) => {
+  const scrollToQuote = () => {
+    const quoteSection = document.getElementById('quote-form')
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return <>
       <Helmet>
         <title>{`${service} Services | Fences Texas`}</title>
@@ -214,53 +223,124 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </div>
                     </>}
                   
-                  {service === "Residential Fencing" && <>
-                      <h2 className="text-3xl font-bold mb-4">Residential Fencing Solutions</h2>
-                      <p><strong>Call us now</strong> for a free estimate.</p>
-                      
-                      <p className="my-4">At <strong>Fences Texas</strong>, we understand that your fence is more than just a boundary—it's an extension of your home and a reflection of your style. Our residential fencing solutions are designed to enhance your property's security, privacy, and aesthetics while adding lasting value to your home.</p>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Our Residential Fencing Options</h3>
-                      
-                      <div className="space-y-6 mt-6">
-                        <div>
-                          <h4 className="text-xl font-bold mb-2">Wood Fencing</h4>
-                          <p>Our premium cedar and pine wood fences offer natural beauty, durability, and privacy. Choose from various styles including board-on-board, cap and trim, and traditional privacy designs. Each fence is built with quality materials and expert craftsmanship to withstand Texas weather.</p>
+                  {service === "Residential Fencing" && (
+                    <>
+                      <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+                        Residential Fence Installation in {cityName}: Find Your Perfect Match Today
+                      </h1>
+                      <h2 className="text-xl md:text-2xl text-center text-muted-foreground mb-8">
+                        Skip the contractor nightmares. We'll match you with ONE verified residential fence expert who specializes in your exact project.
+                      </h2>
+                      <div className="flex justify-center mb-12">
+                        <Button 
+                          className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                          onClick={scrollToQuote}
+                        >
+                          Get Your Perfect Fence Match™
+                        </Button>
+                      </div>
+                      <div className="max-w-4xl mx-auto">
+                        <p className="text-muted-foreground mb-6 text-lg">
+                          {cityName} homeowners face unique challenges when installing residential fencing. From strict HOA regulations to challenging soil conditions and extreme weather, your fence project requires specialized expertise.
+                        </p>
+                        <p className="text-muted-foreground text-lg">
+                          At <strong>FencesTexas</strong>, we've streamlined the process of finding your perfect residential fence contractor. Our proprietary Perfect Match™ system connects you with ONE verified expert who specializes in your specific residential fence type, location, and requirements.
+                        </p>
+                      </div>
+
+                      <div className="mt-16">
+                        <h3 className="text-2xl font-bold mb-6">Why {cityName} homeowners choose FencesTexas:</h3>
+                        <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-12">
+                          <li>Connect with ONE contractor perfectly matched to your project - no multiple calls or sales pressure</li>
+                          <li>All contractors pass our rigorous 27-point verification process (81% of local fence companies fail)</li>
+                          <li>Save 15-22% compared to contractor direct pricing</li>
+                          <li>Enjoy faster installation timelines with pre-vetted professionals</li>
+                        </ul>
+
+                        <h2 className="text-3xl font-bold mb-8">Our Residential Fencing Options</h2>
+
+                        <div className="space-y-12">
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Wood Fences in {cityName}</h3>
+                            <p className="text-muted-foreground">
+                              The timeless appeal of wood fencing enhances any {cityName} property with natural beauty and security. Our network of verified wood fence contractors specializes in cedar, pine, redwood, and composite materials designed to withstand local weather conditions. From classic picket fences to modern horizontal designs, your matched contractor will deliver exceptional craftsmanship tailored to your home's aesthetic.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Ornamental Iron Fencing</h3>
+                            <p className="text-muted-foreground">
+                              Add elegance and security with our custom ornamental iron fences. These sophisticated fences combine beauty with strength and are perfect for defining boundaries while maintaining visibility. Your matched {cityName} specialist creates stunning custom designs that balance security with sophisticated aesthetics. Perfect for estate properties, pool enclosures, and garden boundaries that make a lasting impression.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Vinyl Fences in {cityName}</h3>
+                            <p className="text-muted-foreground">
+                              Low-maintenance vinyl fencing provides {cityName} homeowners with decades of beauty without the upkeep. Your matched vinyl fence specialist will help you select the perfect style and grade to complement your home while withstanding local environmental challenges. Explore privacy, semi-privacy, picket, and ranch rail options in multiple colors and textures.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Chain Link Fences in {cityName}</h3>
+                            <p className="text-muted-foreground">
+                              Affordable and durable, chain link fencing remains a practical solution for {cityName} properties requiring security without sacrificing visibility. Your matched chain link specialist offers residential-grade options including vinyl-coated, galvanized, and decorative designs perfect for pet containment, pool safety, and property demarcation.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Custom Gates</h3>
+                            <p className="text-muted-foreground">
+                              Enhance your fence with custom-designed gates from our verified {cityName} contractors. From simple garden gates to elaborate driveway entrances, your matched specialist will create beautiful, functional gates that complement your fence and provide convenient access to your property.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Custom & Specialty Fences in {cityName}</h3>
+                            <p className="text-muted-foreground">
+                              Unique properties deserve distinctive fencing solutions. Your matched specialty fence contractor brings expertise in bamboo, stone/brick combinations, louvered designs, and custom fabrications that set your {cityName} property apart. Discover innovative solutions for challenging landscapes, unusual property lines, or one-of-a-kind design visions.
+                            </p>
+                          </div>
                         </div>
-                        
-                        <div>
-                          <h4 className="text-xl font-bold mb-2">Ornamental Iron Fencing</h4>
-                          <p>Add elegance and security with our custom ornamental iron fences. These sophisticated fences combine beauty with strength and are perfect for defining boundaries while maintaining visibility. Available in various styles and designs to complement any architectural style.</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="text-xl font-bold mb-2">Vinyl Fencing</h4>
-                          <p>Low-maintenance and long-lasting, our vinyl fences come in multiple styles and colors. These fences won't rot, warp, or need painting, making them an excellent investment for busy homeowners seeking durability without sacrificing appearance.</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="text-xl font-bold mb-2">Chain Link Fencing</h4>
-                          <p>Economical and durable, our residential chain link fences are perfect for defining boundaries, containing pets, and securing play areas. Available in galvanized or vinyl-coated options with various heights to meet your specific needs.</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="text-xl font-bold mb-2">Custom Gates</h4>
-                          <p>Enhance your fence with our custom-designed gates. From simple garden gates to elaborate driveway entrances, we create beautiful, functional gates that complement your fence and provide convenient access to your property.</p>
+
+                        <div className="mt-16">
+                          <h2 className="text-3xl font-bold mb-8">Why Choose FencesTexas for Your Residential Fencing?</h2>
+                          <ul className="space-y-4 text-muted-foreground mb-12">
+                            <li className="flex gap-2">
+                              <strong>Perfect Matching:</strong> Unlike services that sell your information to multiple companies, we connect you with just ONE perfect contractor for your specific project
+                            </li>
+                            <li className="flex gap-2">
+                              <strong>Quality Verification:</strong> All contractors in our network pass our rigorous 27-point verification process (81% of local fence companies fail)
+                            </li>
+                            <li className="flex gap-2">
+                              <strong>Local Expertise:</strong> Your matched contractor brings deep understanding of {cityName}'s unique soil conditions, weather challenges, and local regulations
+                            </li>
+                            <li className="flex gap-2">
+                              <strong>No Sales Pressure:</strong> You'll never be bombarded with calls from competing contractors - just one perfect match
+                            </li>
+                            <li className="flex gap-2">
+                              <strong>Time & Money Savings:</strong> Skip the research and avoid the common pitfalls of hiring the wrong contractor
+                            </li>
+                          </ul>
+
+                          <h2 className="text-3xl font-bold text-center mb-6">
+                            Find Your Perfect Residential Fence Contractor in {cityName}
+                          </h2>
+                          <p className="text-center text-muted-foreground mb-8">
+                            Take 15 seconds to tell us about your residential fence project. Our Perfect Match™ system will connect you with the ONE verified contractor who specializes in exactly what you need.
+                          </p>
+                          <div className="flex justify-center">
+                            <Button 
+                              className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                              onClick={scrollToQuote}
+                            >
+                              Get Your Perfect Fence Match™
+                            </Button>
+                          </div>
                         </div>
                       </div>
-                      
-                      <h3 className="text-2xl font-bold mt-8 mb-4">Why Choose Fences Texas for Your Residential Fencing?</h3>
-                      
-                      <ul className="list-disc pl-6 my-4">
-                        <li className="mb-2"><strong>Quality Materials:</strong> We use only premium-grade materials that withstand the Texas climate and provide long-lasting performance.</li>
-                        <li className="mb-2"><strong>Expert Installation:</strong> Our skilled installers ensure your fence is properly installed with attention to detail and craftsmanship.</li>
-                        <li className="mb-2"><strong>Custom Solutions:</strong> We design fences that address your specific needs for privacy, security, and aesthetics while complementing your home's architecture.</li>
-                        <li className="mb-2"><strong>Comprehensive Warranties:</strong> We stand behind our work with solid warranties on both materials and labor.</li>
-                        <li className="mb-2"><strong>Competitive Pricing:</strong> Receive excellent value with fair, transparent pricing and no hidden costs.</li>
-                      </ul>
-                      
-                      <p className="mt-8 text-lg font-semibold">Ready to enhance your home with a beautiful new fence? Contact <strong>Fences Texas</strong> today for a free consultation and estimate. We serve homeowners throughout the DFW metroplex with quality fencing solutions.</p>
-                    </>}
+                    </>
+                  )}
                   
                   {service === "Athletic Courts and Sports Facilities" && <>
                       <h2 className="text-3xl font-bold mb-4">Professional Athletic Courts and Sports Facilities in DFW</h2>
