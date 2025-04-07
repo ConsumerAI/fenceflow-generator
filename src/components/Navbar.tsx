@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from "next/link"
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { services, getServiceUrl } from '@/lib/routes';
@@ -77,11 +77,21 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
             >
               Near Me
             </Link>
+            <Link href="/commercial-fencing">
+              <span className="text-muted-foreground hover:text-foreground transition-colors">
+                Commercial Fencing
+              </span>
+            </Link>
+            <Link href="/about-us">
+              <span className="text-muted-foreground hover:text-foreground transition-colors">
+                About Us
+              </span>
+            </Link>
             <Button
-              onClick={scrollToQuote}
               className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+              onClick={scrollToQuote}
             >
-              Find Your Fence Pro
+              Get Your Perfect Fence Match™
             </Button>
           </div>
           
@@ -118,11 +128,21 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                   >
                     Near Me
                   </Link>
+                  <Link href="/commercial-fencing">
+                    <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
+                      Commercial Fencing
+                    </span>
+                  </Link>
+                  <Link href="/about-us">
+                    <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
+                      About Us
+                    </span>
+                  </Link>
                   <Button
                     onClick={scrollToQuote}
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full"
+                    className="w-full bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Find Your Fence Pro
+                    Get Your Perfect Fence Match™
                   </Button>
                 </div>
               </SheetContent>

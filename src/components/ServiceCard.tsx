@@ -160,10 +160,10 @@ const ServiceCard = ({
         <meta itemProp="url" content={`https://fencestexas.com${getServiceUrl(getServiceTypeFromString(service.title))}`} />
         
         <Button 
+          className="w-full bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
           onClick={handleQuoteClick}
-          className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full mt-6"
         >
-          Find Your Fence Pro
+          Get Your Perfect Fence Match™
         </Button>
       </div>
     </div>

@@ -99,10 +99,10 @@ const NearMePage = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Button 
-                    onClick={handleQuoteClick}
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                    className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                    onClick={scrollToQuote}
                   >
-                    Find Your Fence Pro
+                    Get Your Perfect Fence Match™
                   </Button>
                 </div>
                 <div className="mt-6">
@@ -144,10 +144,10 @@ const NearMePage = () => {
                 
                 <div className="mt-6">
                   <Button 
-                    onClick={handleQuoteClick}
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                    className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                    onClick={scrollToQuote}
                   >
-                    Find Your Fence Pro
+                    Get Your Perfect Fence Match™
                   </Button>
                 </div>
               </div>
@@ -257,10 +257,10 @@ const NearMePage = () => {
             
             <div className="mt-10 flex justify-center">
               <Button 
-                onClick={handleQuoteClick}
-                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                onClick={scrollToQuote}
               >
-                Find Your Fence Pro
+                Get Your Perfect Fence Match™
               </Button>
             </div>
           </div>
@@ -304,10 +304,10 @@ const NearMePage = () => {
               </p>
               
               <Button 
-                onClick={handleQuoteClick}
-                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                onClick={scrollToQuote}
               >
-                Find Your Fence Pro
+                Get Your Perfect Fence Match™
               </Button>
             </div>
           </div>

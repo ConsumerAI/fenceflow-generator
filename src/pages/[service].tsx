@@ -206,23 +206,10 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       
                       <div className="mt-4">
                         <Button 
-                          className="bg-texas-terracotta hover:bg-texas-earth text-white"
-                          onClick={() => {
-                            const quoteElement = document.getElementById('quote');
-                            if (quoteElement) {
-                              window.location.hash = 'quote';
-                              quoteElement.scrollIntoView({ 
-                                behavior: 'smooth',
-                                block: 'center'
-                              });
-                              quoteElement.classList.add('animate-shake');
-                              setTimeout(() => {
-                                quoteElement.classList.remove('animate-shake');
-                              }, 2000);
-                            }
-                          }}
+                          className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                          onClick={scrollToQuote}
                         >
-                          Find Your Fence Pro
+                          Get Your Perfect Fence Match™
                         </Button>
                       </div>
                     </>}

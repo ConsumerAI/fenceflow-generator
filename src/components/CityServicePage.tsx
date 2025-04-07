@@ -50,6 +50,10 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
     // Implement the logic to handle the quote click
   };
 
+  const scrollToQuote = () => {
+    // Implement the logic to scroll to the quote section
+  };
+
   return (
     <>
       <Helmet>
@@ -76,10 +80,10 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
                 <div className="flex items-center gap-4 w-full sm:w-auto">
                   <Button 
-                    onClick={handleQuoteClick}
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full sm:w-[240px] h-[48px] text-base"
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                    onClick={scrollToQuote}
                   >
-                    Find Your Fence Pro
+                    Get Your Perfect Fence Match™
                   </Button>
                   
                   <div className="flex items-center gap-3 flex-1 sm:flex-none">

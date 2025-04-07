@@ -194,37 +194,23 @@ const Index = () => {
                   Fence Installation Across
                   <span className="text-texas-terracotta"> Dallas/Fort Worth</span>
                 </h1>
-                <p className="text-lg text-muted-foreground">
-                  We're excited to elevate Dallas/Fort Worth with beautiful fences! 
-                  From cozy residential privacy to strong commercial security and sleek 
-                  automated gates, our team delivers quality across the metroplex. 
-                  Transform your space with a fence you'll love!
+                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
+                  Dallas/Fort Worth homeowners trust us to match them with their perfect fence contractor. From residential privacy fences to commercial security installations and automated gate systems, we connect you with one verified local expert who's precisely right for your project. No multiple calls or comparing quotes - just one perfect match.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center gap-4">
-                  <div className="flex items-center gap-4 w-full sm:w-auto">
-                    <Button 
-                      onClick={handleQuoteClick}
-                      className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full sm:w-[240px] h-[48px] text-base"
-                    >
-                      Find Your Fence Pro
-                    </Button>
-                    
-                    <div className="flex items-center gap-3 flex-1 sm:flex-none">
-                      <div className="flex -space-x-3">
-                        <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
-                        </div>
-                        <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
-                        </div>
-                        <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
-                          <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="" />
-                        </div>
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        <span className="font-semibold">732+</span> homeowners<br />matched this week
-                      </div>
+                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button 
+                    className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                    onClick={scrollToQuote}
+                  >
+                    Get Your Perfect Fence Match™
+                  </Button>
+                  <div className="flex items-center gap-1">
+                    <div className="flex -space-x-2">
+                      {[...Array(3)].map((_, i) => (
+                        <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white" />
+                      ))}
                     </div>
+                    <span className="text-muted-foreground ml-2">732+ homeowners matched this week</span>
                   </div>
                 </div>
 
@@ -420,6 +406,54 @@ const Index = () => {
                 <LeadForm city="DFW" variant="minimal" className="shadow-xl border border-white/30" />
               </div>
             </div>
+          </div>
+        </section>
+        
+        <section className="py-16 bg-secondary/10">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-muted-foreground mb-4">
+                FencesTexas takes the guesswork out of finding the right fence contractor in Dallas/Fort Worth. Unlike other services that sell your information to multiple companies, we use our proprietary Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your specific project.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Our rigorous 27-point verification process eliminates 81% of local fence companies, ensuring you're only matched with contractors who deliver exceptional quality, reliability, and value. We understand the unique challenges of Texas fence installation - from soil conditions to HOA requirements to withstanding extreme weather.
+              </p>
+              <p className="text-muted-foreground">
+                When you use FencesTexas, you'll never be bombarded with calls from competing contractors. Your information is treated with respect, and you're matched with a single pre-screened expert who specializes in exactly what you need.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8">Our Plans to Picket Process</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
+                <h3 className="font-semibold mb-2">Tell us about your project</h3>
+                <p className="text-muted-foreground">Location, fence type, and timeline</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
+                <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
+                <p className="text-muted-foreground">Our Perfect Match™ system identifies the one contractor who's ideal for your specific needs</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
+                <h3 className="font-semibold mb-2">Direct Connection</h3>
+                <p className="text-muted-foreground">You'll be connected directly with your matched contractor</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
+                <h3 className="font-semibold mb-2">Expert Installation</h3>
+                <p className="text-muted-foreground">Get your fence installed by a verified expert who specializes in your project type</p>
+              </div>
+            </div>
+            <p className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
+              Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, eliminating the hassle of filtering through competing bids.
+            </p>
           </div>
         </section>
         
