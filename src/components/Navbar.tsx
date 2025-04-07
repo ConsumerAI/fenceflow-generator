@@ -45,6 +45,29 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
     }
   };
 
+  const navigation = [
+    {
+      name: "Residential Fencing",
+      href: "/residential-fencing",
+    },
+    {
+      name: "Commercial Fencing",
+      href: "/commercial-fencing",
+    },
+    {
+      name: "Athletic Courts and Sports Facilities",
+      href: "/athletic-courts-and-sports-facilities",
+    },
+    {
+      name: "Access Control",
+      href: "/access-control",
+    },
+    {
+      name: "Automatic Gates",
+      href: "/automatic-gates",
+    },
+  ];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'

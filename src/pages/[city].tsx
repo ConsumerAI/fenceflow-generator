@@ -223,6 +223,23 @@ const CityPage = () => {
           </div>
         </section>
         
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center">About Us</h2>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-muted-foreground text-center">
+                FencesTexas takes the guesswork out of finding the right fence contractor in {cityName}. Unlike other services that sell your information to multiple companies, we use our proprietary Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your specific project.
+              </p>
+              <p className="text-muted-foreground text-center">
+                Our rigorous 27-point verification process eliminates 81% of local fence companies, ensuring you're only matched with contractors who deliver exceptional quality, reliability, and value. We understand the unique challenges of Texas fence installation - from soil conditions to HOA requirements to withstanding extreme weather.
+              </p>
+              <p className="text-muted-foreground text-center">
+                When you use FencesTexas, you'll never be bombarded with calls from competing contractors. Your information is treated with respect, and you're matched with a single pre-screened expert who specializes in exactly what you need.
+              </p>
+            </div>
+          </div>
+        </section>
+        
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4 md:px-8">
             <div className="text-center mb-8">
@@ -442,23 +459,6 @@ const CityPage = () => {
           </div>
         </section>
         
-        <section className="py-16 bg-secondary/10">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-muted-foreground mb-4">
-                FencesTexas takes the guesswork out of finding the right fence contractor in {cityName}. Unlike other services that sell your information to multiple companies, we use our proprietary Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your specific project.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                Our rigorous 27-point verification process eliminates 81% of local fence companies, ensuring you're only matched with contractors who deliver exceptional quality, reliability, and value. We understand the unique challenges of Texas fence installation - from soil conditions to HOA requirements to withstanding extreme weather.
-              </p>
-              <p className="text-muted-foreground">
-                When you use FencesTexas, you'll never be bombarded with calls from competing contractors. Your information is treated with respect, and you're matched with a single pre-screened expert who specializes in exactly what you need.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Our Plans to Picket Process</h2>
