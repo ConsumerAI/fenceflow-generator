@@ -102,7 +102,7 @@ const NearMePage = () => {
                     onClick={handleQuoteClick}
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get Your Personalized Match
+                    Find Your Fence Pro
                   </Button>
                 </div>
                 <div className="mt-6">
@@ -147,7 +147,7 @@ const NearMePage = () => {
                     onClick={handleQuoteClick}
                     className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   >
-                    Get Your Personalized Match
+                    Find Your Fence Pro
                   </Button>
                 </div>
               </div>
@@ -260,7 +260,7 @@ const NearMePage = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Personalized Match
+                Find Your Fence Pro
               </Button>
             </div>
           </div>
@@ -307,7 +307,7 @@ const NearMePage = () => {
                 onClick={handleQuoteClick}
                 className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               >
-                Get Your Personalized Match
+                Find Your Fence Pro
               </Button>
             </div>
           </div>

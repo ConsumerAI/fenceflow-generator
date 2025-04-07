@@ -163,7 +163,7 @@ const ServiceCard = ({
           onClick={handleQuoteClick}
           className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full mt-6"
         >
-          Get Your Personalized Match
+          Find Your Fence Pro
         </Button>
       </div>
     </div>

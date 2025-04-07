@@ -265,7 +265,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
                   onClick={handleContactClick}
                   className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-3"
                 >
-                  Get Your Personalized Match
+                  Find Your Fence Pro
                 </Button>
               </div>
             </article>
