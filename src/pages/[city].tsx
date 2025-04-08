@@ -367,34 +367,28 @@ const CityPage = () => {
         
         <DynamicContent cityName={cityName} />
         
-        <section className="py-16 md:py-24 bg-texas-terracotta/5">
+        <section className="py-16 bg-texas-terracotta/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-8">About FencesTexas</h2>
               <div className="prose prose-lg mx-auto">
                 <p className="text-center mb-6">
-                  At FencesTexas, we're revolutionizing how homeowners find and hire fence contractors. 
-                  Our mission is simple: connect you with the perfect fence professional for your project, 
-                  saving you time and ensuring quality results.
+                  FencesTexas takes the guesswork out of finding the right fence contractor in Dallas/Fort Worth. 
+                  Unlike other services that sell your information to multiple companies, we use our proprietary 
+                  Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your 
+                  specific project.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-4">Our Process</h3>
-                    <p>
-                      We've streamlined the contractor matching process to make it simple and stress-free. 
-                      Instead of dealing with multiple contractors and endless phone calls, we match you 
-                      with one verified professional who's perfect for your specific project.
-                    </p>
-                  </div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-4">Why Choose Us</h3>
-                    <p>
-                      We carefully vet all contractors in our network, ensuring they meet our high standards 
-                      for quality and professionalism. Our matching system considers your project details, 
-                      location, and specific requirements to find your ideal match.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-center mb-6">
+                  Our rigorous 27-point verification process eliminates 81% of local fence companies, ensuring 
+                  you're only matched with contractors who deliver exceptional quality, reliability, and value. 
+                  We understand the unique challenges of Texas fence installation - from soil conditions to HOA 
+                  requirements to withstanding extreme weather.
+                </p>
+                <p className="text-center mb-6">
+                  When you use FencesTexas, you'll never be bombarded with calls from competing contractors. 
+                  Your information is treated with respect, and you're matched with a single pre-screened expert 
+                  who specializes in exactly what you need.
+                </p>
               </div>
             </div>
           </div>
