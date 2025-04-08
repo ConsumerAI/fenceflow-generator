@@ -289,11 +289,11 @@ const Index = () => {
                 </div>
                 <h2 className="text-4xl font-bold mb-4">Our "Plan to Pickets" Process</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Our simple 3-step process takes less than 47 seconds and connects you with top fence pros in your area
+                  Our simple 4-step process takes less than 15 seconds and connects you with top fence pros in your area
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="text-center bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-16 h-16 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-texas-terracotta mx-auto mb-4">
                     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -302,7 +302,7 @@ const Index = () => {
                   </div>
                   <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
                   <h3 className="font-semibold mb-2">Tell Us About Your Project</h3>
-                  <p className="text-muted-foreground">Answer a few quick questions about your fence needs, property, and timeline. It only takes 47 seconds.</p>
+                  <p className="text-muted-foreground">Answer a few quick questions about your fence needs, property, and timeline. It only takes 15 seconds.</p>
                 </div>
 
                 <div className="text-center bg-white rounded-lg p-6 shadow-sm">
@@ -314,8 +314,8 @@ const Index = () => {
                     </svg>
                   </div>
                   <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
-                  <h3 className="font-semibold mb-2">Get Matched With Pros</h3>
-                  <p className="text-muted-foreground">Our Perfect Match™ algorithm connects you with up to 3 pre-screened, verified fence contractors in your area.</p>
+                  <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
+                  <p className="text-muted-foreground">Our Perfect Match™ System identifies the ONE contractor who's ideal for your specific needs.</p>
                 </div>
 
                 <div className="text-center bg-white rounded-lg p-6 shadow-sm">
@@ -325,9 +325,26 @@ const Index = () => {
                     </svg>
                   </div>
                   <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
-                  <h3 className="font-semibold mb-2">Compare & Hire</h3>
-                  <p className="text-muted-foreground">Compare quotes from multiple contractors, read verified reviews, and hire the best pro for your project.</p>
+                  <h3 className="font-semibold mb-2">Direct Connection</h3>
+                  <p className="text-muted-foreground">You'll be connected directly to your Perfect Match™ contractor.</p>
                 </div>
+
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-16 h-16 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-texas-terracotta mx-auto mb-4">
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
+                  <h3 className="font-semibold mb-2">Expert Installation</h3>
+                  <p className="text-muted-foreground">Get your fence installed by a local verified expert who specializes in your project type.</p>
+                </div>
+              </div>
+
+              <div className="mt-8 text-center max-w-3xl mx-auto">
+                <p className="text-muted-foreground mb-8">
+                  Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, only your Perfect Match™, saving you countless hours and eliminating the hassle of fielding dozens of phone calls, setting up multiple site inspections, and trying to figure who is the best quality and the best price. We've done it for you.
+                </p>
               </div>
 
               <div className="mt-12 text-center">
