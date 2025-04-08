@@ -164,7 +164,9 @@ const CityPage = () => {
                 Across <span className="text-texas-terracotta">{cityName}</span>
               </h1>
               <p className="text-muted-foreground mt-4 max-w-3xl mb-8">
-                {cityName} homeowners trust us to match them with their perfect fence contractor. From residential privacy fences to commercial security installations and automated gate systems, we connect you with one verified local expert who's precisely right for your project. No multiple calls or comparing quotes - just one perfect match.
+                {cityName} homeowners trust us to match them with their perfect fence contractor. From residential privacy fences 
+                to commercial security installations and automated gate systems, we connect you with one verified local expert 
+                who's precisely right for your project. No multiple calls or comparing quotes - just one perfect match.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
@@ -279,21 +281,18 @@ const CityPage = () => {
           </section>
 
           {/* Recent Projects Section */}
-          <section className="py-16 md:py-24 bg-gray-50">
-            <div className="container mx-auto px-4">
-              <h2 className="text-4xl font-bold text-center mb-4">
-                Recent Projects from Our Verified Contractors in {cityName}
-              </h2>
-              <p className="text-gray-600 text-center mb-12">
-                Browse through our gallery of recently completed fence installations in {cityName}. Each project showcases our commitment to quality and craftsmanship.
-              </p>
-              
+          <section className="py-12 md:py-16 bg-secondary/30">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold">Recent Projects from Our Verified Contractors in {cityName}</h2>
+                <p className="text-muted-foreground mt-2">Browse through our gallery of fence installations in {cityName}. Each project showcases our commitment to quality and craftsmanship.</p>
+              </div>
               <ImageCarousel />
               
               <div className="mt-10 flex justify-center">
                 <Button 
+                  className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                   onClick={scrollToQuote}
-                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 >
                   Find Your Fence Pro
                 </Button>
@@ -301,8 +300,29 @@ const CityPage = () => {
             </div>
           </section>
 
-          {/* Dynamic City Content */}
-          <DynamicContent cityName={cityName} />
+          {/* Services Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Fence Installation Services</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {Object.entries(cityContent.serviceSections).map(([serviceKey, content], index) => {
+                  const service = serviceKey as ServiceType;
+                  return (
+                    <ServiceCard 
+                      key={service} 
+                      service={{ 
+                        title: service,
+                        description: content,
+                        icon: serviceImages[service],
+                        benefits: []
+                      }} 
+                      index={index}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          </section>
 
           {/* About Us Section */}
           <section className="py-16 bg-texas-terracotta/5">
@@ -331,9 +351,66 @@ const CityPage = () => {
               </div>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <section className="py-16 md:py-24">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="max-w-3xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold mb-4">
+                    Frequently Asked Questions
+                  </h2>
+                </div>
+                
+                <div className="glass-card p-8">
+                  <h3 className="text-xl font-bold mb-4">
+                    Why choose a fence in {cityName}?
+                  </h3>
+                  <div 
+                    className="prose prose-p:text-muted-foreground max-w-none"
+                    dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.faq) }} 
+                  />
+                  
+                  <div className="mt-6 flex justify-center">
+                    <Button 
+                      className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                      onClick={scrollToQuote}
+                    >
+                      Find Your Fence Pro
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Bottom Lead Form Section */}
+          <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
+            <div className="container mx-auto px-4 md:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-bold">
+                    Ready for Your Fence in {cityName}?
+                  </h2>
+                  <div 
+                    className="prose prose-p:text-muted-foreground max-w-none"
+                    dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.cta) }} 
+                  />
+                </div>
+                
+                <div className="lg:ml-auto w-full max-w-lg">
+                  <LeadForm 
+                    city={cityName} 
+                    variant="minimal" 
+                    className="shadow-xl border border-white/30" 
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <Footer />
         </main>
-        
-        <Footer />
       </div>
     </>
   );
