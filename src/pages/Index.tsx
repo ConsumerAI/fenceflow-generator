@@ -282,29 +282,29 @@ const Index = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
                   <h3 className="font-semibold mb-2">Tell us about your project</h3>
                   <p className="text-muted-foreground">Location, fence type, and timeline</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
                   <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
-                  <p className="text-muted-foreground">Our Perfect Match™ system identifies the one contractor who's ideal for your specific needs</p>
+                  <p className="text-muted-foreground">Our Perfect Match™ system identifies the one local contractor who's ideal for your specific needs</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
                   <h3 className="font-semibold mb-2">Direct Connection</h3>
                   <p className="text-muted-foreground">You'll be connected directly with your matched contractor</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
                   <div className="w-12 h-12 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
                   <h3 className="font-semibold mb-2">Expert Installation</h3>
                   <p className="text-muted-foreground">Get your fence installed by a verified expert who specializes in your project type</p>
                 </div>
               </div>
               <p className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
-                Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, eliminating the hassle of filtering through competing bids.
+                Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, eliminating the hassle of filtering through competing bids and taking dozens of phone calls.
               </p>
             </div>
           </section>
