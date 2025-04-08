@@ -257,29 +257,52 @@ const Index = () => {
             </div>
           </section>
           
-          {/* About Us Section */}
-          <section className="py-16 bg-secondary/10">
+          {/* Services Section */}
+          <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
-                  About FencesTexas
-                </div>
-                <h2 className="text-4xl font-bold mb-4 text-texas-terracotta">About Us</h2>
-              </div>
-              <div className="max-w-4xl mx-auto space-y-6">
-                <p className="text-muted-foreground text-center">
-                  FencesTexas takes the guesswork out of finding the right fence contractor in Dallas/Fort Worth. Unlike other services that sell your information to multiple companies, we use our proprietary Perfect Match™ system to connect you with just ONE contractor - the ideal professional for your specific project.
-                </p>
-                <p className="text-muted-foreground text-center">
-                  Our rigorous 27-point verification process eliminates 81% of local fence companies, ensuring you're only matched with contractors who deliver exceptional quality, reliability, and value. We understand the unique challenges of Texas fence installation - from soil conditions to HOA requirements to withstanding extreme weather.
-                </p>
-                <p className="text-muted-foreground text-center">
-                  When you use FencesTexas, you'll never be bombarded with calls from competing contractors. Your information is treated with respect, and you're matched with a single pre-screened expert who specializes in exactly what you need.
-                </p>
+              <h2 className="text-3xl font-bold text-center mb-12">Our Fence Installation Services</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <ServiceCard key={service.title} service={service} index={index} />
+                ))}
               </div>
             </div>
           </section>
 
+          {/* About Us Section */}
+          <section className="py-16 bg-texas-terracotta/5">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-8">About FencesTexas</h2>
+                <div className="prose prose-lg mx-auto">
+                  <p className="text-center mb-6">
+                    At FencesTexas, we're revolutionizing how homeowners find and hire fence contractors. 
+                    Our mission is simple: connect you with the perfect fence professional for your project, 
+                    saving you time and ensuring quality results.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="bg-white p-6 rounded-lg shadow-sm">
+                      <h3 className="text-xl font-semibold mb-4">Our Process</h3>
+                      <p>
+                        We've streamlined the contractor matching process to make it simple and stress-free. 
+                        Instead of dealing with multiple contractors and endless phone calls, we match you 
+                        with one verified professional who's perfect for your specific project.
+                      </p>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-sm">
+                      <h3 className="text-xl font-semibold mb-4">Why Choose Us</h3>
+                      <p>
+                        We carefully vet all contractors in our network, ensuring they meet our high standards 
+                        for quality and professionalism. Our matching system considers your project details, 
+                        location, and specific requirements to find your ideal match.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
           {/* Plan to Pickets Process Section */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
@@ -376,36 +399,6 @@ const Index = () => {
               </p>
               
               <ImageCarousel />
-              
-              <div className="mt-10 flex justify-center">
-                <Button 
-                  onClick={handleQuoteClick}
-                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                >
-                  Find Your Fence Pro
-                </Button>
-              </div>
-            </div>
-          </section>
-          
-          {/* Services Section */}
-          <section className="py-16 md:py-24 bg-secondary/30">
-            <div className="container mx-auto px-4 md:px-8">
-              <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Fence Installation Services</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Explore our comprehensive range of fence installation services. 
-                  Each project is custom-designed for your specific needs and property.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service, index) => (
-                  <article key={service.title} className="h-full">
-                    <ServiceCard service={service} index={index} />
-                  </article>
-                ))}
-              </div>
               
               <div className="mt-10 flex justify-center">
                 <Button 
