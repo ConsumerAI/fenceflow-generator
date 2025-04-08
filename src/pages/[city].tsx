@@ -155,36 +155,128 @@ const CityPage = () => {
         <main>
           {/* Hero Section */}
           <section className="py-20 bg-secondary/10">
-            <div className="container mx-auto px-4 md:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6 animate-page-transition">
-                  <div className="inline-flex items-center gap-2 px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
-                    <MapPin size={16} />
-                    <span>Serving {cityName}, Texas</span>
+            <div className="container mx-auto px-4">
+              <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
+                DFW's #1 Fence Contractor Network
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Fence Installation<br />
+                Across <span className="text-texas-terracotta">{cityName}</span>
+              </h1>
+              <p className="text-muted-foreground mt-4 max-w-3xl mb-8">
+                {cityName} homeowners trust us to match them with their perfect fence contractor. From residential privacy fences to commercial security installations and automated gate systems, we connect you with one verified local expert who's precisely right for your project. No multiple calls or comparing quotes - just one perfect match.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+                <Button 
+                  onClick={scrollToQuote}
+                  className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                >
+                  Get Your Perfect Fence Match™
+                </Button>
+                
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-3">
+                    <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                      <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="" />
+                    </div>
                   </div>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                    Fence Installation in {cityName}
-                  </h1>
-                  <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
-                    {cityName} homeowners trust us to match them with their perfect fence contractor. From residential privacy fences to commercial security installations and automated gate systems, we connect you with one verified local expert who's precisely right for your project. No multiple calls or comparing quotes - just one perfect match.
-                  </p>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
-                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Saves Time & Money</span>
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold">732+</span> homeowners matched this week
                   </div>
                 </div>
-                
-                <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
-                  <LeadForm city={cityName} />
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                  <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Triple-Verified</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                  <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">100% Free Service</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                  <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Saves Time & Money</span>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Plan to Pickets Process Section */}
-          <PlanToPickets />
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <div className="inline-block px-4 py-1 mb-4 bg-red-100 text-texas-terracotta rounded-full text-sm">
+                  Our Proven Process
+                </div>
+                <h2 className="text-4xl font-bold mb-4">Our "Plan to Pickets" Process</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Our simple 4-step process takes less than 15 seconds and connects you with top fence pros in your area
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
+                  <h3 className="font-semibold mb-2">Tell Us About Your Project</h3>
+                  <p className="text-muted-foreground">Answer a few quick questions about your fence needs, property, and timeline. It only takes 15 seconds.</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
+                  <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
+                  <p className="text-muted-foreground">Our Perfect Match™ System identifies the ONE contractor who's ideal for your specific needs.</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
+                  <h3 className="font-semibold mb-2">Direct Connection</h3>
+                  <p className="text-muted-foreground">You'll be connected directly to your Perfect Match™ contractor.</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
+                  <h3 className="font-semibold mb-2">Expert Installation</h3>
+                  <p className="text-muted-foreground">Get your fence installed by a verified expert who specializes in your project type.</p>
+                </div>
+              </div>
+
+              <div className="mt-8 text-center max-w-3xl mx-auto">
+                <p className="text-muted-foreground mb-8">
+                  Our matching service is 100% free, with no obligation. We never share your information with multiple contractors, only your Perfect Match™, saving you countless hours and eliminating the hassle of fielding dozens of phone calls, setting up multiple site inspections, and trying to figure who is the best quality and the best price. We've done it for you.
+                </p>
+              </div>
+
+              <div className="mt-12 text-center">
+                <Button 
+                  onClick={scrollToQuote}
+                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                >
+                  Find Your Fence Pro
+                </Button>
+              </div>
+
+              <div className="mt-8 text-center">
+                <p className="text-sm text-texas-terracotta bg-texas-terracotta/10 inline-block px-4 py-2 rounded-full">
+                  Pro Tip: The best time to schedule fence installations is 4-5 weeks in advance. With current demand, we recommend starting your search early.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Recent Projects Section */}
           <section className="py-16 md:py-24 bg-gray-50">
@@ -240,232 +332,6 @@ const CityPage = () => {
             </div>
           </section>
         </main>
-        
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Fence Installation Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Object.entries(cityContent.serviceSections).map(([serviceKey, content], index) => {
-                const service = serviceKey as ServiceType;
-                return (
-                  <ServiceCard 
-                    key={service} 
-                    service={{ 
-                      title: service,
-                      description: content,
-                      icon: serviceImages[service],
-                      benefits: []
-                    }} 
-                    index={index}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-16 bg-secondary/30">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold">Recent Projects from Our Verified Contractors in {cityName}</h2>
-              <p className="text-muted-foreground mt-2">Browse through our gallery of fence installations in {cityName}. Each project showcases our commitment to quality and craftsmanship.</p>
-            </div>
-            <ImageCarousel />
-            
-            <div className="mt-10 flex justify-center">
-              <Button 
-                className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                onClick={scrollToQuote}
-              >
-                Get Your Perfect Fence Match™
-              </Button>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">About FencesTexas</h2>
-            <div className="prose prose-lg mx-auto">
-              <p className="text-center mb-6">
-                At FencesTexas, we're revolutionizing how homeowners find and hire fence contractors. 
-                Our mission is simple: connect you with the perfect fence professional for your project, 
-                saving you time and ensuring quality results.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-semibold mb-4">Our Process</h3>
-                  <p>
-                    We've streamlined the contractor matching process to make it simple and stress-free. 
-                    Instead of dealing with multiple contractors and endless phone calls, we match you 
-                    with one verified professional who's perfect for your specific project.
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-semibold mb-4">Why Choose Us</h3>
-                  <p>
-                    We carefully vet all contractors in our network, ensuring they meet our high standards 
-                    for quality and professionalism. Our matching system considers your project details, 
-                    location, and specific requirements to find your ideal match.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="space-y-16">
-              {Object.entries(cityContent.serviceSections).map(([serviceKey, content], index) => {
-                const service = serviceKey as ServiceType;
-                const isEven = index % 2 === 0;
-                
-                return (
-                  <div 
-                    key={service} 
-                    className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                      isEven ? '' : 'lg:flex-row-reverse'
-                    }`}
-                    id={service.toLowerCase().replace(/\s+/g, '-')}
-                  >
-                    <div 
-                      className={`space-y-6 ${isEven ? '' : 'lg:order-2'}`}
-                      style={{
-                        opacity: 0,
-                        animation: `staggerFade 0.5s ease forwards ${index * 0.1}s`
-                      }}
-                    >
-                      <h2 className="text-3xl font-bold">{service} in {cityName}</h2>
-                      <div 
-                        className="prose prose-p:text-muted-foreground max-w-none"
-                        dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
-                      />
-                      <div>
-                        <Button 
-                          className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                          onClick={scrollToQuote}
-                        >
-                          Get Your Perfect Fence Match™
-                        </Button>
-                      </div>
-                    </div>
-                    
-                    <div className={`${isEven ? 'lg:order-2' : ''}`}>
-                      <div 
-                        className="aspect-video overflow-hidden rounded-xl shadow-md"
-                        style={{
-                          opacity: 0,
-                          animation: `staggerFade 0.5s ease forwards ${index * 0.1 + 0.2}s`
-                        }}
-                      >
-                        <img 
-                          src={serviceImages[service]} 
-                          alt={`${service} in ${cityName}, Texas`} 
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            
-            <div className="mt-16 flex justify-center">
-              <Button 
-                className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                onClick={scrollToQuote}
-              >
-                Get Your Perfect Fence Match™
-              </Button>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">
-                  Frequently Asked Questions
-                </h2>
-              </div>
-              
-              <div className="glass-card p-8">
-                <h3 className="text-xl font-bold mb-4">
-                  Why choose a fence in {cityName}?
-                </h3>
-                <div 
-                  className="prose prose-p:text-muted-foreground max-w-none"
-                  dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.faq) }} 
-                />
-                
-                <div className="mt-6 flex justify-center">
-                  <Button 
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                    onClick={scrollToQuote}
-                  >
-                    Get Your Perfect Fence Match™
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {'environmentalConsiderations' in cityContent && cityContent.environmentalConsiderations && (
-          <section className="py-16 md:py-24 bg-secondary/30">
-            <div className="container mx-auto px-4 md:px-8">
-              <div className="max-w-3xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold mb-4">
-                    Environmental Considerations for {cityName} Fence Installations
-                  </h2>
-                </div>
-                
-                <div className="glass-card p-8">
-                  <div 
-                    className="prose prose-p:text-muted-foreground max-w-none"
-                    dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.environmentalConsiderations) }} 
-                  />
-                  
-                  <div className="mt-6 flex justify-center">
-                    <Button 
-                      className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                      onClick={scrollToQuote}
-                    >
-                      Get Your Perfect Fence Match™
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-        
-        <section className="py-16 md:py-24 bg-texas-terracotta/10" id="quote">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  Ready for Your Fence in {cityName}?
-                </h2>
-                <div 
-                  className="prose prose-p:text-muted-foreground max-w-none"
-                  dangerouslySetInnerHTML={{ __html: marked.parse(cityContent.cta) }} 
-                />
-              </div>
-              
-              <div className="lg:ml-auto w-full max-w-lg">
-                <LeadForm 
-                  city={cityName} 
-                  variant="minimal" 
-                  className="shadow-xl border border-white/30" 
-                />
-              </div>
-            </div>
-          </div>
-        </section>
         
         <Footer />
       </div>
