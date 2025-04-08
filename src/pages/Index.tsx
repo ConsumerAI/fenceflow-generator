@@ -101,7 +101,7 @@ const homepageFaqs = [
 
 const Index = () => {
   // Function to handle smooth scrolling to the quote form with shake animation
-  const scrollToQuote = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToQuote = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     e.preventDefault();
     const quoteElement = document.getElementById('quote');
     
@@ -208,9 +208,21 @@ const Index = () => {
                     </Button>
                     <div className="flex items-center gap-1">
                       <div className="flex -space-x-2">
-                        {[...Array(3)].map((_, i) => (
-                          <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white" />
-                        ))}
+                        <img 
+                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=faces&q=80" 
+                          alt="Happy customer" 
+                          className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                        />
+                        <img 
+                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=faces&q=80" 
+                          alt="Happy customer" 
+                          className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                        />
+                        <img 
+                          src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=32&h=32&fit=crop&crop=faces&q=80" 
+                          alt="Happy customer" 
+                          className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                        />
                       </div>
                       <span className="text-muted-foreground ml-2">732+ homeowners matched this week</span>
                     </div>

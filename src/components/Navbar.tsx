@@ -91,11 +91,6 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                 {service}
               </Link>
             ))}
-            <Link to="/commercial-fencing">
-              <span className="text-muted-foreground hover:text-foreground transition-colors">
-                Commercial Fencing
-              </span>
-            </Link>
             <Button
               className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
               onClick={scrollToQuote}
@@ -127,11 +122,6 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
                       {service}
                     </Link>
                   ))}
-                  <Link to="/commercial-fencing">
-                    <span className="text-foreground hover:text-foreground px-4 py-2 rounded-md transition-colors block" onClick={closeMenu}>
-                      Commercial Fencing
-                    </span>
-                  </Link>
                   <Button
                     onClick={scrollToQuote}
                     className="w-full bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
