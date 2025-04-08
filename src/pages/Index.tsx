@@ -257,52 +257,6 @@ const Index = () => {
             </div>
           </section>
           
-          {/* Services Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl font-bold text-center mb-12">Our Fence Installation Services</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service, index) => (
-                  <ServiceCard key={service.title} service={service} index={index} />
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* About Us Section */}
-          <section className="py-16 bg-texas-terracotta/5">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-8">About FencesTexas</h2>
-                <div className="prose prose-lg mx-auto">
-                  <p className="text-center mb-6">
-                    At FencesTexas, we're revolutionizing how homeowners find and hire fence contractors. 
-                    Our mission is simple: connect you with the perfect fence professional for your project, 
-                    saving you time and ensuring quality results.
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-white p-6 rounded-lg shadow-sm">
-                      <h3 className="text-xl font-semibold mb-4">Our Process</h3>
-                      <p>
-                        We've streamlined the contractor matching process to make it simple and stress-free. 
-                        Instead of dealing with multiple contractors and endless phone calls, we match you 
-                        with one verified professional who's perfect for your specific project.
-                      </p>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow-sm">
-                      <h3 className="text-xl font-semibold mb-4">Why Choose Us</h3>
-                      <p>
-                        We carefully vet all contractors in our network, ensuring they meet our high standards 
-                        for quality and professionalism. Our matching system considers your project details, 
-                        location, and specific requirements to find your ideal match.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          
           {/* Plan to Pickets Process Section */}
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
@@ -407,6 +361,52 @@ const Index = () => {
                 >
                   Find Your Fence Pro
                 </Button>
+              </div>
+            </div>
+          </section>
+          
+          {/* Services Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Fence Installation Services</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <ServiceCard key={service.title} service={service} index={index} />
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* About Us Section */}
+          <section className="py-16 bg-texas-terracotta/5">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-8">About FencesTexas</h2>
+                <div className="prose prose-lg mx-auto">
+                  <p className="text-center mb-6">
+                    At FencesTexas, we're revolutionizing how homeowners find and hire fence contractors. 
+                    Our mission is simple: connect you with the perfect fence professional for your project, 
+                    saving you time and ensuring quality results.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="bg-white p-6 rounded-lg shadow-sm">
+                      <h3 className="text-xl font-semibold mb-4">Our Process</h3>
+                      <p>
+                        We've streamlined the contractor matching process to make it simple and stress-free. 
+                        Instead of dealing with multiple contractors and endless phone calls, we match you 
+                        with one verified professional who's perfect for your specific project.
+                      </p>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-sm">
+                      <h3 className="text-xl font-semibold mb-4">Why Choose Us</h3>
+                      <p>
+                        We carefully vet all contractors in our network, ensuring they meet our high standards 
+                        for quality and professionalism. Our matching system considers your project details, 
+                        location, and specific requirements to find your ideal match.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
