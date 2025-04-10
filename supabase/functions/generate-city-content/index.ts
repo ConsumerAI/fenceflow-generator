@@ -21,6 +21,9 @@ serve(async (req) => {
     console.log(`Generating content for ${cityName} and ${serviceName}`);
     
     // Prepare the OpenAI API request
+    console.log("Calling OpenAI API...");
+    const start = Date.now();
+    
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -44,6 +47,9 @@ serve(async (req) => {
       }),
     });
 
+    const end = Date.now();
+    console.log(`OpenAI API call completed in ${end - start}ms`);
+
     // Check for successful response
     if (!response.ok) {
       const errorData = await response.json();
@@ -54,6 +60,8 @@ serve(async (req) => {
     // Parse and return the generated content
     const data = await response.json();
     const generatedContent = data.choices[0].message.content;
+    
+    console.log("Content generated successfully. Content length:", generatedContent.length);
     
     return new Response(
       JSON.stringify({ content: generatedContent }),
