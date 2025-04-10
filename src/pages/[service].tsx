@@ -218,7 +218,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service, cityName = '' }) => 
                     </div>
                   </h1>
                   <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
-                    Dallas/Fort Worth homeowners trust us to match them with their perfect fence contractor. From residential privacy fences to commercial security installations and automated gate systems, we connect you with one verified local expert who's precisely right for your project. No multiple calls or comparing quotes - just one perfect match.
+                    What if finding your ideal Dallas / Fort Worth commercial fence contractor took less time than reading this paragraph? FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local commercial fencing specialist for your exact specifications, delivering immediate peace of mind with one perfect match. While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
                   </p>
                   <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Button 
