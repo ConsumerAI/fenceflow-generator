@@ -46,7 +46,7 @@ const NearMePage = () => {
           </button>
         </div>
 
-        <LeadForm service_type={ServiceType.ResidentialFencing} />
+        <LeadForm serviceType={ServiceType.ResidentialFencing} />
       </div>
 
       <Footer />
