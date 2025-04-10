@@ -1,3 +1,5 @@
+
+// Import the supabaseInstance directly
 import { supabaseInstance, generateCityContent } from '../lib/supabase';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -24,6 +26,7 @@ const CityPage = () => {
       }
 
       try {
+        // Try to get content from cache first
         const cachedContent = await supabaseInstance.getCachedContent(`/${city.toLowerCase()}`);
         
         if (cachedContent) {
@@ -32,9 +35,11 @@ const CityPage = () => {
           return;
         }
 
+        // If no cached content, generate new content
         const generatedContent = await generateCityContent(city);
         setContent(generatedContent);
         
+        // Cache the generated content for future use
         await supabaseInstance.cacheContent(`/${city.toLowerCase()}`, generatedContent);
         
       } catch (error) {
