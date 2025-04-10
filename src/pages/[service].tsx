@@ -246,7 +246,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service, cityName = '' }) => 
                         />
                       </div>
                       <span className="text-muted-foreground ml-2">
-                        17 businesses matched with commercial fence contractors this week
+                        17 businesses matched this week
                       </span>
                     </div>
                   </div>
