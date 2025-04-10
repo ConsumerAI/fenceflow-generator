@@ -179,7 +179,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       
                       
                     </div>
-                    <span className="text-muted-foreground ml-2">17 businesses matched with contractors this week</span>
+                    <span className="text-muted-foreground ml-2">17 DFW businesses matched with contractors this week!</span>
                   </div>
                 </div>
 
