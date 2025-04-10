@@ -163,9 +163,13 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">One Perfect Commercial Fence Contractor
 in Dallas/Fort Worth</div>
                 </h1>
-                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
-                  What if finding your ideal Dallas / Fort Worth commercial fence contractor took less time than reading this paragraph? FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local commercial fencing specialist for your exact specifications, delivering immediate peace of mind with one perfect match. While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
-                </p>
+                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">What if finding your ideal Dallas/Fort Worth commercial fence contractor took less time than reading this paragraph? 
+
+
+FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs.
+
+
+While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.</p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors" onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToQuote(e)}>
                     Get Your Perfect Fence Match™
@@ -224,46 +228,28 @@ in Dallas/Fort Worth</div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                <div className="w-16 h-16 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-texas-terracotta mx-auto mb-4">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                
                 <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
                 <h3 className="font-semibold mb-2">Tell Us About Your Project</h3>
                 <p className="text-muted-foreground">Answer a few quick questions about your fence needs, property, and timeline. It only takes 15 seconds.</p>
               </div>
 
               <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                <div className="w-16 h-16 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-texas-terracotta mx-auto mb-4">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 20H7C4.79086 20 3 18.2091 3 16V8C3 5.79086 4.79086 4 7 4H17C19.2091 4 21 5.79086 21 8V16C21 18.2091 19.2091 20 17 20Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M19 15C17.5186 13.4008 15.3654 12.5 13 12.5C10.6346 12.5 8.48138 13.4008 7 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                
                 <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
                 <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
                 <p className="text-muted-foreground">Our Perfect Match™ System identifies the ONE contractor who's ideal for your specific needs.</p>
               </div>
 
               <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                <div className="w-16 h-16 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-texas-terracotta mx-auto mb-4">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                
                 <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
                 <h3 className="font-semibold mb-2">Direct Connection</h3>
                 <p className="text-muted-foreground">You'll be connected directly to your Perfect Match™ contractor.</p>
               </div>
 
               <div className="text-center bg-white rounded-lg p-6 shadow-sm">
-                <div className="w-16 h-16 bg-texas-terracotta/10 rounded-full flex items-center justify-center text-texas-terracotta mx-auto mb-4">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                
                 <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
                 <h3 className="font-semibold mb-2">Expert Installation</h3>
                 <p className="text-muted-foreground">Get your fence installed by a local verified expert who specializes in your project type.</p>
