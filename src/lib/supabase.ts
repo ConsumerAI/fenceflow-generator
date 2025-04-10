@@ -64,7 +64,7 @@ class Supabase {
       const { data, error } = await supabase
         .from('content_cache')
         .select('content')
-        .eq('page_url', cityUrl)
+        .eq('cache_key', cityUrl)
         .single();
       
       if (error || !data) {
@@ -84,7 +84,7 @@ class Supabase {
       const { error } = await supabase
         .from('content_cache')
         .upsert({ 
-          page_url: pageUrl, 
+          cache_key: pageUrl, 
           content,
           expires_at: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString() // 30 days
         });
