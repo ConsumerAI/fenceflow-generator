@@ -7,6 +7,7 @@ import CityGrid from '@/components/CityGrid';
 import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
+import DynamicContent from '@/components/DynamicContent';
 import { ServiceInfo, ServiceType } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, ClipboardList, Fence, PartyPopper, Building, Briefcase, Factory } from 'lucide-react';
@@ -57,6 +58,7 @@ const homepageFaqs = [{
   question: "What warranties do you offer on fence installations?",
   answer: "We stand behind our work with comprehensive warranties on both materials and craftsmanship. Specific warranty details vary by product and installation type."
 }];
+
 interface ServicePageProps {
   service: ServiceType;
   cityName?: string;
@@ -163,7 +165,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">One Perfect Commercial Fence Contractor
 in Dallas/Fort Worth</div>
                 </h1>
-                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">What if finding your ideal Dallas/Fort Worth commercial fence contractor took less time than reading this paragraph? 
+                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">What if finding your ideal Dallas/Fort Worth commercial fence contractor took less time than reading this paragraph? 
 
 
 FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs.
@@ -209,6 +211,20 @@ While others waste days comparison shopping, DFW businesses who use our 15-secon
               <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
                 <LeadForm />
               </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Dynamic Content Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              {service === ServiceType.CommercialFencing && (
+                <DynamicContent 
+                  cityName="DFW" 
+                  serviceName={ServiceType.CommercialFencing} 
+                />
+              )}
             </div>
           </div>
         </section>
