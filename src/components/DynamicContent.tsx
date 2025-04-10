@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { marked } from 'marked';
@@ -5,6 +6,7 @@ import { CityContent } from '@/lib/types';
 import { ServiceType } from '@/lib/types';
 import { SupabaseClient } from '@supabase/supabase-js';
 import type { Database } from '@/integrations/supabase/types';
+import { Button } from "@/components/ui/button";
 
 export interface DynamicContentProps {
   cityName: string;
