@@ -9,7 +9,7 @@ import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
 import { ServiceInfo, ServiceType } from '@/lib/types';
 import { Button } from '@/components/ui/button';
-import { CalendarDays, ClipboardList, Fence, PartyPopper } from 'lucide-react';
+import { CalendarDays, ClipboardList, Fence, PartyPopper, Building, Briefcase, Factory } from 'lucide-react';
 import CommercialCityGrid from '@/components/CommercialCityGrid';
 
 // Service data
@@ -57,6 +57,7 @@ const homepageFaqs = [{
   question: "What warranties do you offer on fence installations?",
   answer: "We stand behind our work with comprehensive warranties on both materials and craftsmanship. Specific warranty details vary by product and installation type."
 }];
+
 interface ServicePageProps {
   service: ServiceType;
   cityName?: string;
@@ -101,7 +102,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
     pageTitle = `${service} in DFW | Fences Texas`;
     pageDescription = `Expert ${service.toString().toLowerCase()} installation across Dallas/Fort Worth. Transform your space with a fence you'll love!`;
   }
-  return <>
+  return (
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -176,9 +177,15 @@ const ServicePage: React.FC<ServicePageProps> = ({
                     </Button>
                     <div className="flex items-center gap-1">
                       <div className="flex -space-x-2">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                        <div className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center">
+                          <Building className="w-4 h-4 text-gray-700" />
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center">
+                          <Briefcase className="w-4 h-4 text-gray-700" />
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center">
+                          <Factory className="w-4 h-4 text-gray-700" />
+                        </div>
                       </div>
                       <span className="text-muted-foreground ml-2">17 businesses matched with contractors this week</span>
                     </div>
@@ -458,6 +465,6 @@ const ServicePage: React.FC<ServicePageProps> = ({
         
         <Footer />
       </div>
-    </>;
+    );
 };
 export default ServicePage;
