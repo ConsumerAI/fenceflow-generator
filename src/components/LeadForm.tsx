@@ -15,14 +15,14 @@ export interface LeadFormProps {
   city?: string;
   variant?: 'default' | 'minimal';
   className?: string;
-  service_type?: ServiceType;  // Renamed from serviceType to match prop
+  serviceType?: ServiceType;
 }
 
 const LeadForm = ({ 
   city = 'DFW', 
   variant = 'default', 
   className = '', 
-  service_type 
+  serviceType 
 }: LeadFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionResult, setSubmissionResult] = useState<{ success: boolean; message: string } | null>(null);
@@ -46,7 +46,7 @@ const LeadForm = ({
     zip_code: z.string().min(5, {
       message: "Zip code must be at least 5 characters.",
     }),
-    service_type: z.nativeEnum(ServiceType, {
+    serviceType: z.nativeEnum(ServiceType, {
       invalid_type_error: "Please select a service type.",
     }),
     preferred_timeline: z.enum(['ASAP', 'Within 1 Month', 'Within 3 Months', 'Just Researching']),
@@ -62,9 +62,9 @@ const LeadForm = ({
       address: "",
       city: city,
       zip_code: "",
-      service_type: variant === 'default' 
+      serviceType: variant === 'default' 
         ? undefined 
-        : service_type || ServiceType.ResidentialFencing,
+        : serviceType || ServiceType.ResidentialFencing,
       preferred_timeline: 'ASAP',
       message: "",
     },
@@ -184,7 +184,7 @@ const LeadForm = ({
         />
         <FormField
           control={form.control}
-          name="service_type"
+          name="serviceType"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Service Type</FormLabel>
