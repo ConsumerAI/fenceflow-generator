@@ -1,36 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { marked } from 'marked';
-import { Button } from '@/components/ui/button';
+import { CityContent } from '@/lib/types';
 import { ServiceType } from '@/lib/types';
 import { SupabaseClient } from '@supabase/supabase-js';
-import type { Database as GeneratedDatabase } from '@/integrations/supabase/types';
+import type { Database } from '@/integrations/supabase/types';
 
-type Database = {
-  public: {
-    Functions: {
-      get_cached_content: {
-        Args: { p_cache_key: string };
-        Returns: string;
-      };
-      cache_content: {
-        Args: { 
-          p_cache_key: string;
-          p_cache_content: string;
-          p_expire_days: number;
-        };
-        Returns: void;
-      };
-    };
-  };
-};
-
-interface DynamicContentProps {
+export interface DynamicContentProps {
   cityName: string;
   serviceName?: ServiceType;
+  content?: CityContent;
   onContactClick?: () => void;
-  // Remove the content prop as it's not required by how we're using the component
 }
 
 const typedSupabase = supabase as unknown as SupabaseClient<Database>;
@@ -59,12 +39,12 @@ const LoadingSkeleton = () => (
 const DynamicContent: React.FC<DynamicContentProps> = ({ 
   cityName, 
   serviceName = ServiceType.ResidentialFencing, 
+  content,
   onContactClick 
 }) => {
-  const [content, setContent] = useState<string>("");
+  const [contentState, setContentState] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  // Configure marked
   useEffect(() => {
     marked.setOptions({
       gfm: true,
@@ -79,25 +59,22 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
       try {
         setIsLoading(true);
         
-        // Generate a cache key based on city and optional service
         const cacheKey = serviceName !== ServiceType.ResidentialFencing 
           ? `${cityName.toLowerCase()}-${String(serviceName).toLowerCase().replace(/\s+/g, '-')}-dynamic`
           : `${cityName.toLowerCase()}-dynamic`;
         
         console.log('Attempting to fetch cached content for:', cacheKey);
         
-        // Use RPC function to get cached content
         const { data: cachedContent, error: cacheError } = await typedSupabase
           .rpc('get_cached_content', { p_cache_key: cacheKey });
         
         if (!cacheError && cachedContent) {
           console.log('Found cached dynamic content for:', cacheKey);
-          setContent(cachedContent);
+          setContentState(cachedContent);
           setIsLoading(false);
           return;
         }
         
-        // No cached content, generate new content
         console.log(`No cache found. Attempting to generate new content for ${cityName} and ${serviceName}`);
         
         const promptTemplate = `You are an elite-level professional content writer specializing in fence installation and athletic court construction. Create rich, SEO-optimized content for ${cityName}, Texas focusing on ${String(serviceName)} that positions Fences Texas as the premier local connection to top fence contractors.
@@ -151,7 +128,6 @@ When it comes to enhancing the beauty, security, and value of your property in *
 ### 3. Quality Installation
 [Describe the installation process]`;
         
-        // Try generate-city-content directly (removing the first attempt that always fails)
         try {
           console.log('Calling generate-city-content function...');
           const { data, error } = await supabase.functions.invoke('generate-city-content', {
@@ -169,7 +145,6 @@ When it comes to enhancing the beauty, security, and value of your property in *
 
           if (data?.content) {
             console.log("Successfully generated content, caching...");
-            // Cache the content using RPC function with correct parameter names
             const { error: cachingError } = await typedSupabase
               .rpc('cache_content', { 
                 p_cache_key: cacheKey,
@@ -183,7 +158,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
               console.log("Successfully cached content");
             }
             
-            setContent(data.content);
+            setContentState(data.content);
           } else {
             console.error("No content received from function");
           }
@@ -204,7 +179,6 @@ When it comes to enhancing the beauty, security, and value of your property in *
     if (onContactClick) {
       onContactClick();
     } else {
-      // Scroll to the form if no click handler provided
       const form = document.getElementById('quote');
       if (form) {
         form.scrollIntoView({ behavior: 'smooth' });
@@ -218,7 +192,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
         <div className="max-w-4xl mx-auto">
           {isLoading ? (
             <LoadingSkeleton />
-          ) : content ? (
+          ) : contentState ? (
             <article>
               <div 
                 className="prose prose-lg max-w-none
@@ -233,10 +207,9 @@ When it comes to enhancing the beauty, security, and value of your property in *
                   prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
                   prose-li:text-muted-foreground prose-li:marker:text-texas-terracotta
                   prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth"
-                dangerouslySetInnerHTML={{ __html: marked.parse(content) }} 
+                dangerouslySetInnerHTML={{ __html: marked.parse(contentState) }} 
               />
               
-              {/* Hardcoded CTA Section */}
               <div className="mt-12 prose prose-lg max-w-none
                 prose-headings:font-display
                 prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:text-center prose-h1:mb-8 prose-h1:text-foreground
