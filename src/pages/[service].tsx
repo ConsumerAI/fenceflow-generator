@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -213,7 +212,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service, cityName = '' }) => 
                     DFW's #1 Fence Contractor Network
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                    Fence Installation Across
+                    Stop Searching, Start Building: One Perfect Commercial Fence Contractor in
                     <span className="text-texas-terracotta"> Dallas/Fort Worth</span>
                   </h1>
                   <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
