@@ -212,7 +212,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service, cityName = '' }) => 
                     DFW's #1 Fence Contractor Network
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                    <span>Stop <span className="text-texas-terracotta">Searching</span>, <span className="text-texas-terracotta">Building</span></span>
+                    <span>Stop <span className="text-texas-terracotta">Searching</span>, <span className="text-texas-terracotta">Start Building</span></span>
                     <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2">
                       One Perfect Commercial Fence Contractor in Dallas/Fort Worth
                     </div>
