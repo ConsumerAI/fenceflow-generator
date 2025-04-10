@@ -246,7 +246,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ service, cityName = '' }) => 
                         />
                       </div>
                       <span className="text-muted-foreground ml-2">
-                        17 businesses matched this week
+                        17 businesses matched with contractors this week
                       </span>
                     </div>
                   </div>
@@ -518,35 +518,4 @@ const ServicePage: React.FC<ServicePageProps> = ({ service, cityName = '' }) => 
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span>Premium materials and expert installation</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span>Custom solutions for your specific needs</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="lg:ml-auto w-full max-w-lg">
-                  <LeadForm city="DFW" variant="minimal" className="shadow-xl border border-white/30" />
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default ServicePage;
+                        <svg className="w-4 h-4 text-green-600" fill="none"
