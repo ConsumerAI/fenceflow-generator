@@ -15,6 +15,7 @@ import AddressAutocomplete from './AddressAutocomplete';
 import { MapPin, Fence, Star, ArrowRight, Lock, Calendar, Users } from 'lucide-react';
 import ProgressBar from './ProgressBar';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
+
 const formSchema = z.object({
   zipCode: z.string().min(5, {
     message: 'Valid ZIP code is required'
@@ -40,12 +41,14 @@ const formSchema = z.object({
   message: z.string().optional(),
   website: z.string()
 });
+
 interface LeadFormProps {
   city?: string;
   variant?: 'default' | 'minimal';
   className?: string;
   service_type?: ServiceType;
 }
+
 const LeadForm = ({
   city = 'DFW',
   variant = 'default',
@@ -64,6 +67,7 @@ const LeadForm = ({
       max: number;
     };
   }>({});
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -71,6 +75,7 @@ const LeadForm = ({
       maximumFractionDigits: 0
     }).format(price);
   };
+
   const {
     executeV3,
     initV2,
@@ -80,12 +85,15 @@ const LeadForm = ({
     setShowV2Captcha,
     isV3Loaded
   } = useRecaptcha();
+
   const [v2ContainerId] = useState(`recaptcha-${Math.random().toString(36).substring(7)}`);
+
   useEffect(() => {
     if (showV2Captcha) {
       initV2(v2ContainerId);
     }
   }, [showV2Captcha, initV2, v2ContainerId]);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -101,8 +109,10 @@ const LeadForm = ({
     },
     mode: 'onSubmit'
   });
+
   const serviceType = form.watch('service_type');
   const isResidential = serviceType === ServiceType.ResidentialFencing;
+
   const handleNextStep = async (e: React.FormEvent) => {
     e.preventDefault();
     const values = form.getValues();
@@ -125,6 +135,7 @@ const LeadForm = ({
     }
     setCurrentStep(prev => prev + 1);
   };
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
@@ -133,10 +144,9 @@ const LeadForm = ({
         return;
       }
 
-      // Wait for reCAPTCHA to load if it hasn't already
       if (!isV3Loaded) {
         console.log('Waiting for reCAPTCHA to load...');
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Give it a chance to load
+        await new Promise(resolve => setTimeout(resolve, 2000));
         if (!isV3Loaded) {
           throw new Error('reCAPTCHA failed to load. Please refresh the page and try again.');
         }
@@ -152,8 +162,7 @@ const LeadForm = ({
         console.log('Low reCAPTCHA score, showing v2...');
         setShowV2Captcha(true);
 
-        // Wait for v2 response
-        const maxAttempts = 30; // 30 seconds timeout
+        const maxAttempts = 30;
         let attempts = 0;
         while (!v2Token && attempts < maxAttempts) {
           v2Token = getV2Response();
@@ -236,6 +245,7 @@ const LeadForm = ({
       }
     }
   };
+
   const handleCalculate = useCallback((calculatorData: {
     linear_feet: number;
     fence_material: CalculatorFormData['fence_material'];
@@ -246,9 +256,12 @@ const LeadForm = ({
   }) => {
     setFenceDetails(calculatorData);
   }, []);
+
   const formClasses = `glass-card p-6 md:p-8 ${isShaking ? 'animate-shake' : ''} ${className} 
     bg-white bg-opacity-95 backdrop-blur-sm shadow-xl`;
+
   const buttonBaseClasses = "w-full bg-texas-terracotta hover:bg-texas-earth text-white flex items-center justify-center transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]";
+
   if (isSuccess) {
     return <div className={formClasses}>
         <div className="text-center mb-8">
@@ -307,6 +320,7 @@ const LeadForm = ({
         </div>
       </div>;
   }
+
   return <>
       <div className={formClasses} id="quote">
         <div className="rounded-t-xl bg-texas-terracotta text-white p-6 -mx-6 -mt-6 md:-mx-8 md:-mt-8">
@@ -538,9 +552,10 @@ const LeadForm = ({
           
         </div>
         <div className="text-sm text-gray-600">
-          <span className="font-semibold">732+</span> homeowners matched this week
+          <span className="font-semibold">17</span> DFW businesses matched with contractors this week!
         </div>
       </div>
     </>;
 };
+
 export default LeadForm;
