@@ -40,9 +40,10 @@ interface LeadFormProps {
   city?: string;
   variant?: 'default' | 'minimal';
   className?: string;
+  service_type?: ServiceType;
 }
 
-const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFormProps) => {
+const LeadForm = ({ city = 'DFW', variant = 'default', className = '', service_type }: LeadFormProps) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -80,7 +81,7 @@ const LeadForm = ({ city = 'DFW', variant = 'default', className = '' }: LeadFor
       address: '',
       message: '',
       preferred_timeline: undefined,
-      service_type: variant === 'default' ? undefined : ServiceType.ResidentialFencing,
+      service_type: variant === 'default' ? undefined : service_type || ServiceType.ResidentialFencing,
       website: '',
     },
     mode: 'onSubmit',

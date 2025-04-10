@@ -1,3 +1,4 @@
+
 // Import the supabaseInstance directly
 import { supabaseInstance, generateCityContent } from '../lib/supabase';
 import { useParams, Link } from 'react-router-dom';
@@ -59,11 +60,6 @@ const CityPage = () => {
     return <NotFound />;
   }
 
-  const breadcrumbLinks = [
-    { to: "/", label: "Home" },
-    { to: `/${city}`, label: city },
-  ];
-
   return (
     <>
       <Helmet>
@@ -76,12 +72,12 @@ const CityPage = () => {
       <Navbar />
 
       <main className="container mx-auto px-4 py-8">
-        <Breadcrumbs links={breadcrumbLinks} />
+        <Breadcrumbs />
         
         <h1 className="text-3xl font-semibold mb-4">{content.h1}</h1>
         <p className="mb-4">{content.intro}</p>
 
-        <DynamicContent content={content} city={city} />
+        <DynamicContent cityName={city} />
 
         <div className="mt-8">
           <Button asChild>

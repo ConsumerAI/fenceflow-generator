@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
@@ -45,7 +46,7 @@ const NearMePage = () => {
           </button>
         </div>
 
-        <LeadForm serviceType={ServiceType.ResidentialFencing} />
+        <LeadForm service_type={ServiceType.ResidentialFencing} />
       </div>
 
       <Footer />
