@@ -58,16 +58,16 @@ function App() {
           <Route path={logRoute("/terms-and-conditions", "TermsAndConditionsPage")} element={<TermsAndConditionsPage />} />
           
           {/* General Service Pages - Using explicit path matching for clarity */}
-          <Route path={logRoute("/residential-fencing", "ServicePage:Residential")} element={<ServicePage service={ServiceType.ResidentialFencing} />} />
-          <Route path={logRoute("/commercial-fencing", "ServicePage:Commercial")} element={<ServicePage service={ServiceType.CommercialFencing} />} />
-          <Route path={logRoute("/athletic-courts-and-sports-facilities", "ServicePage:Athletic")} element={<ServicePage service={ServiceType.AthleticCourts} />} />
-          <Route path={logRoute("/sports-courts", "ServicePage:Athletic")} element={<ServicePage service={ServiceType.AthleticCourts} />} />
-          <Route path={logRoute("/access-control", "ServicePage:Access")} element={<ServicePage service={ServiceType.AccessControl} />} />
+          <Route path={logRoute("/residential-fencing", "ServicePage:Residential")} element={<ServicePage service={ServiceType.ResidentialFencing} cityName="" />} />
+          <Route path={logRoute("/commercial-fencing", "ServicePage:Commercial")} element={<ServicePage service={ServiceType.CommercialFencing} cityName="" />} />
+          <Route path={logRoute("/athletic-courts-and-sports-facilities", "ServicePage:Athletic")} element={<ServicePage service={ServiceType.AthleticCourts} cityName="" />} />
+          <Route path={logRoute("/sports-courts", "ServicePage:Athletic")} element={<ServicePage service={ServiceType.AthleticCourts} cityName="" />} />
+          <Route path={logRoute("/access-control", "ServicePage:Access")} element={<ServicePage service={ServiceType.AccessControl} cityName="" />} />
           
           {/* Additional Service-related Routes (for deeper content linking) */}
-          <Route path={logRoute("/fence-types", "ServicePage:Residential")} element={<ServicePage service={ServiceType.ResidentialFencing} />} />
-          <Route path={logRoute("/commercial-security-fencing", "ServicePage:Commercial")} element={<ServicePage service={ServiceType.CommercialFencing} />} />
-          <Route path={logRoute("/residential-fence-styles", "ServicePage:Residential")} element={<ServicePage service={ServiceType.ResidentialFencing} />} />
+          <Route path={logRoute("/fence-types", "ServicePage:Residential")} element={<ServicePage service={ServiceType.ResidentialFencing} cityName="" />} />
+          <Route path={logRoute("/commercial-security-fencing", "ServicePage:Commercial")} element={<ServicePage service={ServiceType.CommercialFencing} cityName="" />} />
+          <Route path={logRoute("/residential-fence-styles", "ServicePage:Residential")} element={<ServicePage service={ServiceType.ResidentialFencing} cityName="" />} />
           
           {/* City-specific Service Pages using dynamic routing pattern */}
           <Route path={logRoute("/:city/:service", "CityServicePageWrapper")} element={<CityServicePageWrapper />} />

@@ -1,3 +1,4 @@
+
 import { createClient } from '@supabase/supabase-js';
 import { Lead, CityContent, ContentCache } from './types';
 import type { Database } from './types';
@@ -21,8 +22,8 @@ export const supabase = createClient<Database>(
   }
 );
 
-// Add error handling for failed requests
-supabase.handleError = (error: Error) => {
+// Error handling for Supabase
+const handleSupabaseError = (error: Error) => {
   console.error('Supabase Error:', error);
   // You can add error reporting service here
   return error;
@@ -200,4 +201,4 @@ export const generateCityContent = async (city: string): Promise<CityContent> =>
       ]
     };
   }
-}
+};
