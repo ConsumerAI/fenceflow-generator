@@ -6,6 +6,9 @@ import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import CityGrid from '@/components/CityGrid';
+import PlanToPickets from '@/components/PlanToPickets';
+import ImageCarousel from '@/components/ImageCarousel';
 
 interface ServicePageProps {
   service: ServiceType;
@@ -23,7 +26,8 @@ const ServicePage: React.FC<ServicePageProps> = ({
     }
   }
 
-  return <>
+  return (
+    <>
       <Helmet>
         <title>{`${service} Services | Fences Texas`}</title>
         <meta name="description" content={`Professional ${service.toLowerCase()} services in DFW. Transform your space with a fence you'll love!`} />
@@ -33,15 +37,71 @@ const ServicePage: React.FC<ServicePageProps> = ({
         <Navbar />
         
         <main className="flex-1">
-          <section className="pt-24 pb-16 md:pt-32 md:pb-24">
+          {/* Hero Section */}
+          <section className="relative bg-texas-earth/10 pt-24 pb-16 md:pt-32 md:pb-24">
             <div className="container mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {service} Services in DFW
-              </h1>
-              
+              <div className="max-w-4xl">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                  {service} Services in DFW
+                </h1>
+                
+                <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+                  <Button 
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors w-full sm:w-auto"
+                    onClick={scrollToQuote}
+                  >
+                    Get Your Perfect Fence Match™
+                  </Button>
+                  
+                  <div className="flex items-center gap-3 flex-1 sm:flex-none">
+                    <div className="flex -space-x-3">
+                      <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
+                      </div>
+                      <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
+                      </div>
+                      <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                        <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="" />
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      <span className="font-semibold">732+</span> homeowners<br />matched this week
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span className="text-sm font-medium text-texas-terracotta">Triple-Verified</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span className="text-sm font-medium text-texas-terracotta">100% Free Service</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
+                    <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span className="text-sm font-medium text-texas-terracotta">Saves Time & Money</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Main Content Section */}
+          <section className="py-12">
+            <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div className="prose prose-lg max-w-none">
-                  {service === "Commercial Fencing" && <>
+                  {service === ServiceType.CommercialFencing && (
+                    <>
                       <h2 className="text-3xl font-bold mb-4">Commercial Capabilities</h2>
                       <p>You need a partner who is <strong>Professional</strong>, <strong>Dependable</strong>, <strong>Scalable</strong>, and <strong>Proficient</strong> with any fencing requirements. That partner must offer the best fencing solutions to keep your properties, tenants, and customers protected.</p>
                       
@@ -107,9 +167,11 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       <p className="my-4">Discover LiftMaster gate operator systems here: <a href="https://www.liftmaster.com/facility-management/gate-operators" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LiftMaster Gate Operators</a>.</p>
                       
                       <p className="mt-8 text-lg font-semibold"><strong>Enhance your property's security and functionality</strong> with these top-tier fencing and access control solutions. Contact us today for a consultation to find the best options for your business.</p>
-                    </>}
+                    </>
+                  )}
                   
-                  {service === "Access Control" && <>
+                  {service === ServiceType.AccessControl && (
+                    <>
                       <h2 className="text-3xl font-bold mb-4">Access Control Solutions</h2>
                       
                       <h3 className="text-2xl font-bold mt-6 mb-4">Protect Your Property with Advanced Access Control Solutions</h3>
@@ -146,11 +208,12 @@ const ServicePage: React.FC<ServicePageProps> = ({
                       </div>
                       
                       <p className="mt-8">Contact <strong>Fences Texas</strong> today to discuss your access control needs and receive a personalized security solution for your property.</p>
-                    </>}
+                    </>
+                  )}
                   
-                  {service === "Automatic Gates" && <>
+                  {service === ServiceType.AutomaticGates && (
+                    <>
                       <h2 className="text-3xl font-bold mb-4">Automatic Gate Solutions</h2>
-                      
                       
                       <p className="my-4">At <strong>Fences Texas</strong>, we specialize in designing, installing, and maintaining automatic gate systems for residential and commercial properties throughout the DFW area. Our custom gate solutions enhance security, convenience, and curb appeal while providing reliable performance year after year.</p>
                       
@@ -221,9 +284,10 @@ const ServicePage: React.FC<ServicePageProps> = ({
                           Get Your Perfect Fence Match™
                         </Button>
                       </div>
-                    </>}
+                    </>
+                  )}
                   
-                  {service === "Residential Fencing" && (
+                  {service === ServiceType.ResidentialFencing && (
                     <>
                       <section className="py-20 bg-secondary/10">
                         <div className="container mx-auto px-4">
@@ -358,7 +422,8 @@ const ServicePage: React.FC<ServicePageProps> = ({
                     </>
                   )}
                   
-                  {service === "Athletic Courts and Sports Facilities" && <>
+                  {service === ServiceType.AthleticCourts && (
+                    <>
                       <h2 className="text-3xl font-bold mb-4">Professional Athletic Courts and Sports Facilities in DFW</h2>
                       
                       <div className="my-6 flex justify-center">
@@ -483,7 +548,8 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   </p>
                       
                       <p className="text-left">Due to the variety of options available for pickleball court installations, including surface materials, site preparation requirements, additional features like fencing, lighting, seating, and shade structures, we provide custom quotes tailored to your specific needs. Contact us for a detailed estimate specific to your property and requirements.</p>
-                    </>}
+                    </>
+                  )}
                 </div>
                 
                 <div>
@@ -492,11 +558,35 @@ const ServicePage: React.FC<ServicePageProps> = ({
               </div>
             </div>
           </section>
+
+          {/* Cities We Serve Section */}
+          <section className="py-12 bg-gray-50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-8">Cities We Serve</h2>
+              <CityGrid />
+            </div>
+          </section>
+
+          {/* Our Process Section */}
+          <section className="py-12">
+            <div className="container mx-auto px-4">
+              <PlanToPickets />
+            </div>
+          </section>
+
+          {/* Featured Projects */}
+          <section className="py-12 bg-gray-50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-8">Our Work</h2>
+              <ImageCarousel />
+            </div>
+          </section>
         </main>
         
         <Footer />
       </div>
-    </>;
+    </>
+  );
 };
 
 export default ServicePage;
