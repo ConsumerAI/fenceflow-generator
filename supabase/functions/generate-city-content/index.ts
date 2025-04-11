@@ -111,6 +111,19 @@ const defaultUserPrompt = `Create compelling, SEO-optimized content about our {s
 
 Format with H2/H3 headings and use HTML formatting for emphasis.`;
 
+const cleanContent = (content: string): string => {
+  return content
+    // Remove ```html tags
+    .replace(/```html\s*/g, '')
+    .replace(/```\s*$/g, '')
+    // Remove meta-comments about SEO/content
+    .replace(/This content is designed to be.*$/gm, '')
+    .replace(/Note: This content is optimized.*$/gm, '')
+    // Clean up any extra newlines that might be left
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+};
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -171,10 +184,7 @@ serve(async (req) => {
 
     // Parse and return the generated content
     const data = await response.json();
-    let generatedContent = data.choices[0].message.content;
-    
-    // Clean up the content by removing markdown code fence blocks and language specifiers
-    generatedContent = generatedContent.replace(/```html\n?/g, '').replace(/```\n?/g, '');
+    const generatedContent = cleanContent(data.choices[0].message.content);
     
     console.log("Content generated successfully. Content length:", generatedContent.length);
     
