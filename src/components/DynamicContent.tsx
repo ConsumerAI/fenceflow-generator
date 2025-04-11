@@ -43,6 +43,9 @@ const cleanContent = (content: string): string => {
     // Remove meta-comments about SEO/content
     .replace(/This content is designed to be.*$/gm, '')
     .replace(/Note: This content is optimized.*$/gm, '')
+    // Remove standalone dots and ellipsis
+    .replace(/^\s*\.{3}\s*$/gm, '')
+    .replace(/\s*\.{3}\s*$/g, '')
     // Clean up any extra newlines that might be left
     .replace(/\n{3,}/g, '\n\n')
     .trim();
