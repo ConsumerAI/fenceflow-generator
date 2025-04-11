@@ -229,38 +229,6 @@ When it comes to enhancing the beauty, security, and value of your property in *
                   prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth"
                 dangerouslySetInnerHTML={{ __html: content }} 
               />
-              
-              {/* Hardcoded CTA Section */}
-              <div className="mt-12 prose prose-lg max-w-none
-                prose-headings:font-display
-                prose-h2:text-3xl prose-h2:font-bold prose-h2:text-texas-earth prose-h2:mt-12 prose-h2:mb-6
-                prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4">
-                <h2>Get Started Today</h2>
-                <p>
-                  Ready to enhance your property with a top-quality {serviceName.toLowerCase()}? At Fences Texas, we're committed to 
-                  delivering exceptional service and results that stand the test of time.
-                </p>
-                
-                <h2>Contact Us</h2>
-                <p>
-                  Fill out our online form for a free consultation and estimate. Discover why we are {cityName}'s premier 
-                  choice for {serviceName.toLowerCase()}!
-                </p>
-                
-                <p className="mb-8">
-                  By choosing us, you're not just getting a fence; you're investing in a lasting solution that adds value, 
-                  security, and beauty to your home. Let's build something great together!
-                </p>
-
-                {onContactClick && (
-                  <Button 
-                    onClick={onContactClick}
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                  >
-                    Get Your Perfect Fence Match™
-                  </Button>
-                )}
-              </div>
             </article>
           ) : (
             <div className="text-center py-12">
