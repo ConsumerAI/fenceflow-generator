@@ -37,9 +37,10 @@ const cleanContent = (content: string): string => {
   if (!content) return '';
   
   return content
-    // Remove ```html tags
+    // Remove ```html tags and standalone backticks
     .replace(/```html\s*/g, '')
     .replace(/```\s*$/g, '')
+    .replace(/^\s*```\s*$/gm, '')
     // Remove meta-comments about SEO/content
     .replace(/This content is designed to be.*$/gm, '')
     .replace(/Note: This content is optimized.*$/gm, '')
