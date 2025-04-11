@@ -33,6 +33,21 @@ interface DynamicContentProps {
 
 const typedSupabase = supabase as unknown as SupabaseClient<Database>;
 
+const cleanContent = (content: string): string => {
+  if (!content) return '';
+  
+  return content
+    // Remove ```html tags
+    .replace(/```html\s*/g, '')
+    .replace(/```\s*$/g, '')
+    // Remove meta-comments about SEO/content
+    .replace(/This content is designed to be.*$/gm, '')
+    .replace(/Note: This content is optimized.*$/gm, '')
+    // Clean up any extra newlines that might be left
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+};
+
 const LoadingSkeleton = () => (
   <div className="animate-pulse space-y-8">
     <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto"></div>
@@ -84,7 +99,7 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
         
         if (!cacheError && cachedContent) {
           console.log('Found cached dynamic content for:', cacheKey);
-          setContent(cachedContent);
+          setContent(cleanContent(cachedContent));
           setIsLoading(false);
           return;
         }
@@ -161,11 +176,13 @@ When it comes to enhancing the beauty, security, and value of your property in *
 
           if (data?.content) {
             console.log("Successfully generated content, caching...");
-            // Cache the content using RPC function with correct parameter names
+            const cleanedContent = cleanContent(data.content);
+            
+            // Cache the cleaned content
             const { error: cachingError } = await typedSupabase
               .rpc('cache_content', { 
                 p_cache_key: cacheKey,
-                p_cache_content: data.content,
+                p_cache_content: cleanedContent,
                 p_expire_days: 30
               });
             
@@ -175,7 +192,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
               console.log("Successfully cached content");
             }
             
-            setContent(data.content);
+            setContent(cleanedContent);
           } else {
             console.error("No content received from function");
           }
