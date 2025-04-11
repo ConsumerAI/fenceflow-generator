@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { marked } from 'marked';
 import { Button } from '@/components/ui/button';
 import { ServiceType } from '@/lib/types';
 import { SupabaseClient } from '@supabase/supabase-js';
@@ -63,14 +62,8 @@ const DynamicContent: React.FC<DynamicContentProps> = ({
   const [content, setContent] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  // Configure marked
-  useEffect(() => {
-    marked.setOptions({
-      gfm: true,
-      breaks: true
-    });
-  }, []);
-
+  // Remove marked configuration since we're not using it anymore
+  
   useEffect(() => {
     const fetchContent = async () => {
       if (!cityName) return;
@@ -215,9 +208,6 @@ When it comes to enhancing the beauty, security, and value of your property in *
     return <LoadingSkeleton />;
   }
 
-  // Convert markdown to HTML
-  const htmlContent = content ? marked(content) : '';
-
   return (
     <section className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -237,7 +227,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
                   prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
                   prose-li:text-muted-foreground prose-li:marker:text-texas-terracotta
                   prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth"
-                dangerouslySetInnerHTML={{ __html: htmlContent }} 
+                dangerouslySetInnerHTML={{ __html: content }} 
               />
               
               {/* Hardcoded CTA Section */}
