@@ -237,7 +237,7 @@ When it comes to enhancing the beauty, security, and value of your property in *
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {content ? (
-            <article className="space-y-8">
+            <article>
               <div 
                 className="prose prose-lg max-w-none
                   prose-headings:font-display
@@ -253,14 +253,6 @@ When it comes to enhancing the beauty, security, and value of your property in *
                   prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth"
                 dangerouslySetInnerHTML={{ __html: content }} 
               />
-              <div className="flex justify-center pt-8">
-                <Button 
-                  onClick={handleContactClick}
-                  className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-6"
-                >
-                  Get Your Perfect Fence Match™
-                </Button>
-              </div>
             </article>
           ) : (
             <div className="text-center py-12">
