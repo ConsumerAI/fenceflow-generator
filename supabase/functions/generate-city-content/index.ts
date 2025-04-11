@@ -171,7 +171,10 @@ serve(async (req) => {
 
     // Parse and return the generated content
     const data = await response.json();
-    const generatedContent = data.choices[0].message.content;
+    let generatedContent = data.choices[0].message.content;
+    
+    // Clean up the content by removing markdown code fence blocks and language specifiers
+    generatedContent = generatedContent.replace(/```html\n?/g, '').replace(/```\n?/g, '');
     
     console.log("Content generated successfully. Content length:", generatedContent.length);
     
