@@ -41,9 +41,12 @@ const cleanContent = (content: string): string => {
     .replace(/```html\s*/g, '')
     .replace(/```\s*$/g, '')
     .replace(/^\s*```\s*$/gm, '')
-    // Remove meta-comments about SEO/content
+    // Remove meta-comments about SEO/content/structure
     .replace(/This content is designed to be.*$/gm, '')
     .replace(/Note: This content is optimized.*$/gm, '')
+    .replace(/This structured,? engaging content.*$/gm, '')
+    .replace(/.*effectively communicates the value.*$/gm, '')
+    .replace(/.*promoting convenience and time savings\..*$/gm, '')
     // Remove standalone dots and ellipsis
     .replace(/^\s*\.{3}\s*$/gm, '')
     .replace(/\s*\.{3}\s*$/g, '')
