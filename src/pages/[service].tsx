@@ -7,7 +7,6 @@ import CityGrid from '@/components/CityGrid';
 import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
-import DynamicContent from '@/components/DynamicContent';
 import { ServiceInfo, ServiceType } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, ClipboardList, Fence, PartyPopper, Building, Briefcase, Factory } from 'lucide-react';
@@ -211,20 +210,6 @@ While others waste days comparison shopping, DFW businesses who use our 15-secon
               <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
                 <LeadForm />
               </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Dynamic Content Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              {service === ServiceType.CommercialFencing && (
-                <DynamicContent 
-                  cityName="DFW" 
-                  serviceName={ServiceType.CommercialFencing} 
-                />
-              )}
             </div>
           </div>
         </section>
