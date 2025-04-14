@@ -58,10 +58,12 @@ const homepageFaqs = [{
   question: "What warranties do you offer on fence installations?",
   answer: "We stand behind our work with comprehensive warranties on both materials and craftsmanship. Specific warranty details vary by product and installation type."
 }];
+
 interface ServicePageProps {
   service: ServiceType;
   cityName?: string;
 }
+
 const ServicePage: React.FC<ServicePageProps> = ({
   service,
   cityName = ''
@@ -95,13 +97,13 @@ const ServicePage: React.FC<ServicePageProps> = ({
     }
   };
 
+  // Get the service info for the current service type
+  const serviceInfo = services.find(s => s.title === service) || services[0];
+
   // Page title and description based on service type
-  let pageTitle = "Fences Texas | DFW's #1 Fence Contractor Network";
-  let pageDescription = "Expert fence installation across Dallas/Fort Worth. Residential, commercial, athletic courts and sports facilities, and automatic gates. Transform your space with a fence you'll love!";
-  if (service) {
-    pageTitle = `${service} in DFW | Fences Texas`;
-    pageDescription = `Expert ${service.toString().toLowerCase()} installation across Dallas/Fort Worth. Transform your space with a fence you'll love!`;
-  }
+  const pageTitle = `${service} in ${cityName || 'DFW'} | Fences Texas`;
+  const pageDescription = `Expert ${service.toString().toLowerCase()} installation across ${cityName || 'Dallas/Fort Worth'}. Transform your space with a fence you'll love!`;
+
   return <div className="min-h-screen flex flex-col">
       <Helmet>
         <title>{pageTitle}</title>
@@ -164,14 +166,14 @@ const ServicePage: React.FC<ServicePageProps> = ({
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground lg:text-6xl">
                   <span>Stop <span className="text-texas-terracotta">Searching</span>, Start <span className="text-texas-terracotta">Building</span></span>
                   <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
-                    One Perfect {service} Contractor in {cityName ? `${cityName}` : 'Dallas/Fort Worth'}
+                    One Perfect {service} Contractor in {cityName || 'Dallas/Fort Worth'}
                   </div>
                 </h1>
                 <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                  What if finding your ideal {cityName ? `${cityName}` : 'Dallas/Fort Worth'} {service.toString().toLowerCase()} contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations business owners face—multiple contractor calls, conflicting quotes, and wasted hours.
+                  What if finding your ideal {cityName || 'Dallas/Fort Worth'} {service.toString().toLowerCase()} contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations {service === ServiceType.ResidentialFencing ? 'homeowners' : 'business owners'} face—multiple contractor calls, conflicting quotes, and wasted hours.
                 </p>
                 <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                  Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
+                  Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, {service === ServiceType.ResidentialFencing ? 'DFW homeowners' : 'DFW businesses'} who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors" onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToQuote(e)}>
