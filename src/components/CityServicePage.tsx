@@ -40,6 +40,56 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
     return <div>Error: Invalid service type.</div>;
   }
 
+  // Get service-specific content
+  const getServiceContent = (type: ServiceType) => {
+    switch(type) {
+      case ServiceType.CommercialFencing:
+        return {
+          headline: `Fast, Quality Commercial Fencing in ${formattedCity}`,
+          subHeadline: `Your Hassle-Free Perfect Contractor Match`,
+          paragraph1: `What if finding your ideal ${formattedCity} commercial fencing contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations business owners face—multiple contractor calls, conflicting quotes, and wasted hours.`,
+          paragraph2: `Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, ${formattedCity} businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.`
+        };
+      case ServiceType.ResidentialFencing:
+        return {
+          headline: `Effortless Residential Fencing in ${formattedCity}`,
+          subHeadline: `We Guarantee the Perfect Contractor for Your Project`,
+          paragraph1: `Tired of the time-consuming hassle of researching countless residential fence contractors in ${formattedCity}, sifting through conflicting quotes, and wondering if you've made the right choice? FencesTexas eliminates that frustration.`,
+          paragraph2: `Our revolutionary matching system does the heavy lifting, connecting you with the *single*, most qualified and specialized residential fence installation expert for your exact project needs in ${formattedCity} – guaranteed. Say goodbye to wasted hours and hello to a seamless, confident path to the perfect fence for your home.`
+        };
+      case ServiceType.AthleticCourts:
+        return {
+          headline: "Stop Planning, Start Playing",
+          subHeadline: `Your Dedicated Sports Facility Expert in ${formattedCity} - Built for Performance.`,
+          paragraph1: `Ready to transform your ${formattedCity} property with a professional athletic court? Skip the endless contractor search. Our network includes the area's most qualified court construction specialists, ready to bring your vision to life.`,
+          paragraph2: `From tennis courts to pickleball facilities, we match you with the top contractor who understands the unique requirements of athletic court construction on YOUR property. Get connected with your perfect contractor in just 15 seconds.`
+        };
+      case ServiceType.AccessControl:
+        return {
+          headline: `Top-Rated Access Control Installation in ${formattedCity}`,
+          subHeadline: `Fast, Precise Matching to Your Ideal Security Specialist.`,
+          paragraph1: `Finding the right access control specialist in ${formattedCity} shouldn't be a security risk itself. Our Perfect Match system connects you with the top local contractor who specializes in your exact needs. From basic keypads to advanced multi-point systems. We have an expert for your job.`,
+          paragraph2: `Don't compromise on security. While others are collecting quotes from random contractors, you'll be one step closer to a secure property. Get matched with your ideal access control specialist in just 15 seconds.`
+        };
+      case ServiceType.AutomaticGates:
+        return {
+          headline: `Effortless Automatic Gate Installation in ${formattedCity}`,
+          subHeadline: `Get Your Perfect Expert Match - Instantly!`,
+          paragraph1: `Looking for automatic gate installation in ${formattedCity}? Skip the hassle of comparing multiple bids. We'll match you with the perfect local expert who specializes in your exact type of gate automation project.`,
+          paragraph2: `While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.`
+        };
+      default:
+        return {
+          headline: `Find Your Perfect Fence Pro in ${formattedCity}`,
+          subHeadline: `Your Perfect Local Match - Fast & Easy!`,
+          paragraph1: `What if finding your ideal ${formattedCity} ${String(serviceType).toLowerCase()} contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations property owners face—multiple contractor calls, conflicting quotes, and wasted hours.`,
+          paragraph2: `Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, you'll be working with the perfect contractor for your specific requirements.`
+        };
+    }
+  };
+
+  const content = getServiceContent(serviceType);
+
   const breadcrumbLinks = [
     { to: '/', label: 'Home' },
     { to: `/${city}`, label: formattedCity },
@@ -76,16 +126,16 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                     {`${formattedCity}'s #1 ${serviceType} Contractor Network`}
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground lg:text-6xl">
-                    <span>Stop <span className="text-texas-terracotta">Searching</span>, Start <span className="text-texas-terracotta">Building</span></span>
+                    <span>{content.headline}</span>
                     <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
-                      One Perfect {serviceType} Contractor in {formattedCity}
+                      {content.subHeadline}
                     </div>
                   </h1>
                   <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                    What if finding your ideal {formattedCity} {String(serviceType).toLowerCase()} contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations business owners face—multiple contractor calls, conflicting quotes, and wasted hours.
+                    {content.paragraph1}
                   </p>
                   <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                    Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, {formattedCity} businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
+                    {content.paragraph2}
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
