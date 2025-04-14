@@ -57,7 +57,6 @@ const homepageFaqs = [{
   question: "What warranties do you offer on fence installations?",
   answer: "We stand behind our work with comprehensive warranties on both materials and craftsmanship. Specific warranty details vary by product and installation type."
 }];
-
 interface ServicePageProps {
   service: ServiceType;
   cityName?: string;
@@ -164,13 +163,10 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">One Perfect Commercial Fence Contractor
 in Dallas/Fort Worth</div>
                 </h1>
-                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">What if finding your ideal Dallas/Fort Worth commercial fence contractor took less time than reading this paragraph? 
+                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">What if finding your ideal Dallas/Fort Worth commercial fence contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations business owners face—multiple contractor calls, conflicting quotes, and wasted hours. 
 
 
-FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs.
-
-
-While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.</p>
+Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.</p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors" onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToQuote(e)}>
                     Get Your Perfect Fence Match™
