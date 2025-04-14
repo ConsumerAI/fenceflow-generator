@@ -157,6 +157,43 @@ const CityServicePage: React.FC<CityServicePageProps> = () => {
                       <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Saves Time & Money</span>
                     </div>
                   </div>
+
+                  <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+                    <div className="flex items-center gap-4 w-full sm:w-auto">
+                      <Button 
+                        className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                        onClick={() => {
+                          const formElement = document.querySelector('.lead-form');
+                          if (formElement) {
+                            formElement.classList.add('shake-animation');
+                            setTimeout(() => {
+                              formElement.classList.remove('shake-animation');
+                            }, 820);
+                            formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                          }
+                        }}
+                      >
+                        Get Your Perfect Fence Match™
+                      </Button>
+                      
+                      <div className="flex items-center gap-3 flex-1 sm:flex-none">
+                        <div className="flex -space-x-3">
+                          <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
+                          </div>
+                          <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
+                          </div>
+                          <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="" />
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          <span className="font-semibold">17 DFW</span> businesses<br />matched this week!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
                   <LeadForm city={formattedCity} />
