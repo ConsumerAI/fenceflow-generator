@@ -7,6 +7,7 @@ import CityGrid from '@/components/CityGrid';
 import ServiceCard from '@/components/ServiceCard';
 import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
+import CityCapabilities from '@/components/CityCapabilities';
 import { ServiceInfo, ServiceType } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, ClipboardList, Fence, PartyPopper, Building, Briefcase, Factory } from 'lucide-react';
@@ -158,19 +159,22 @@ const ServicePage: React.FC<ServicePageProps> = ({
           <div className="container mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-page-transition">
-                <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">DFW's #1 Commercial Fence Contractor Network</div>
+                <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
+                  {`DFW's #1 ${service} Contractor Network`}
+                </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground lg:text-6xl">
                   <span>Stop <span className="text-texas-terracotta">Searching</span>, Start <span className="text-texas-terracotta">Building</span></span>
-                  <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">One Perfect Commercial Fence Contractor
-in Dallas/Fort Worth</div>
+                  <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                    One Perfect {service} Contractor in {cityName ? `${cityName}` : 'Dallas/Fort Worth'}
+                  </div>
                 </h1>
-                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">What if finding your ideal Dallas/Fort Worth commercial fence contractor took less time than reading this paragraph? 
+                <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
+                  What if finding your ideal {cityName ? `${cityName}` : 'Dallas/Fort Worth'} {service.toString().toLowerCase()} contractor took less time than reading this paragraph? 
 
+                  FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs.
 
-FencesTexas eliminates the #1 frustration business owners face—multiple contractor calls, conflicting quotes, and wasted hours. Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs.
-
-
-While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.</p>
+                  While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
+                </p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors" onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToQuote(e)}>
                     Get Your Perfect Fence Match™
@@ -213,6 +217,14 @@ While others waste days comparison shopping, DFW businesses who use our 15-secon
             </div>
           </div>
         </section>
+        
+        {/* Render CityCapabilities only for city-specific pages */}
+        {cityName && (
+          <CityCapabilities 
+            cityName={cityName}
+            serviceType={service}
+          />
+        )}
         
         {/* Plan to Pickets Process Section */}
         <section className="py-16 bg-white">
