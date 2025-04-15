@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import LeadForm from '@/components/LeadForm';
 import ServiceCard from '@/components/ServiceCard';
@@ -18,13 +17,11 @@ const ImageCarousel = lazy(() => import('@/components/ImageCarousel'));
 const Footer = lazy(() => import('@/components/Footer'));
 
 interface CityServicePageProps {
-  city?: string;
-  service?: string;
+  city: string;
+  service: string;
 }
 
-const CityServicePage: React.FC<CityServicePageProps> = () => {
-  const { city, service } = useParams<{ city: string; service: string }>();
-
+const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
   if (!city || !service) {
     return <div>Error: City and service must be provided in the URL.</div>;
   }
