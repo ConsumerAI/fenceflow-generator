@@ -17,7 +17,10 @@ const PlanToPickets = lazy(() => import('@/components/PlanToPickets'));
 const ImageCarousel = lazy(() => import('@/components/ImageCarousel'));
 const Footer = lazy(() => import('@/components/Footer'));
 
-interface CityServicePageProps {}
+interface CityServicePageProps {
+  city?: string;
+  service?: string;
+}
 
 const CityServicePage: React.FC<CityServicePageProps> = () => {
   const { city, service } = useParams<{ city: string; service: string }>();

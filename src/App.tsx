@@ -23,12 +23,16 @@ const CityServicePageWrapper = () => {
   // Validate city
   if (!isCityValid(city)) return <NotFound />;
   
+  // Format the service parameter to match the serviceRouteMap keys
+  const formattedService = service.toLowerCase().replace(/\s+/g, '-');
+  
   // Convert URL slugs back to proper format
-  const serviceType = serviceRouteMap[service];
+  const serviceType = serviceRouteMap[formattedService];
   
   if (!serviceType) return <NotFound />;
   
-  return <CityServicePage />;
+  // Pass both city and service as props
+  return <CityServicePage city={city} service={formattedService} />;
 };
 
 /**
