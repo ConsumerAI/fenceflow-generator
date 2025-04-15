@@ -23,12 +23,23 @@ export default function ResidentialFencing() {
       <main>
         <section className="py-20 bg-secondary/10">
           <div className="container mx-auto px-4">
+            <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium text-center mx-auto mb-4">
+              DFW's #1 Residential Fencing Contractor Network
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              Residential Fence Installation in Dallas/Fort Worth: Find Your Perfect Match Today
+              Effortless Residential Fencing
             </h1>
-            <h2 className="text-xl md:text-2xl text-center text-muted-foreground mb-8">
-              Skip the contractor nightmares. We'll match you with ONE verified residential fence expert who specializes in your exact project.
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-muted-foreground mb-8">
+              We Guarantee the Perfect Contractor for Your Project
             </h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-muted-foreground mb-6 text-lg text-justify">
+                Tired of the time-consuming hassle of researching countless residential fencing contractors in DFW, sifting through conflicting quotes, and wondering if you've made the right choice? FencesTexas eliminates that frustration.
+              </p>
+              <p className="text-muted-foreground mb-8 text-lg text-justify">
+                Our revolutionary matching system does the heavy lifting, connecting you with the *single*, most qualified and specialized residential fence expert for your exact project needs in DFW – guaranteed. Say goodbye to wasted hours and hello to a seamless, confident path to the perfect fence for your home.
+              </p>
+            </div>
             <div className="flex justify-center mb-12">
               <Button 
                 className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
@@ -36,14 +47,6 @@ export default function ResidentialFencing() {
               >
                 Get Your Perfect Fence Match™
               </Button>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-muted-foreground mb-6 text-lg">
-                Dallas/Fort Worth homeowners face unique challenges when installing residential fencing. From strict HOA regulations to challenging soil conditions and extreme weather, your fence project requires specialized expertise.
-              </p>
-              <p className="text-muted-foreground text-lg">
-                At <strong>FencesTexas</strong>, we've streamlined the process of finding your perfect residential fence contractor. Our proprietary Perfect Match™ system connects you with ONE verified expert who specializes in your specific residential fence type, location, and requirements.
-              </p>
             </div>
           </div>
         </section>
