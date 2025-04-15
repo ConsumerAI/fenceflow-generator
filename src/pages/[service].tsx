@@ -164,7 +164,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   {`DFW's #1 ${service} Contractor Network`}
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground lg:text-6xl">
-                  <span>Stop <span className="text-texas-terracotta">Searching</span>, Start <span className="text-texas-terracotta">Building</span></span>
+                  <span>Stop Searching, Start Building</span>
                   <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
                     One Perfect {service} Contractor in {cityName || 'Dallas/Fort Worth'}
                   </div>
