@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
@@ -20,6 +19,9 @@ import { ServiceType } from './lib/types';
 const CityServicePageWrapper = () => {
   const { city, service } = useParams();
   if (!city || !service) return <NotFound />;
+  
+  // Validate city
+  if (!isCityValid(city)) return <NotFound />;
   
   // Convert URL slugs back to proper format
   const serviceType = serviceRouteMap[service];
