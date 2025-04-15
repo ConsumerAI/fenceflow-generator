@@ -110,34 +110,57 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
         <title>{`${serviceType} in ${formattedCity} | Fences Texas`}</title>
         <meta
           name="description"
-          content={`Transform your space with ${String(serviceType).toLowerCase()} services in ${formattedCity}. Contact us to get your perfect fence!`}
+          content={`Expert fence installation in ${formattedCity}. Transform your space with ${String(serviceType).toLowerCase()} services from the area's top contractors. Get matched with your perfect fence pro today!`}
         />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
         <Navbar />
         
-        <main className="flex-1">
+        <main>
           <section className="py-20 bg-secondary/10">
             <div className="container mx-auto px-4 md:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 animate-page-transition">
                   <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
-                    {`${formattedCity}'s #1 ${serviceType} Contractor Network`}
+                    {`${formattedCity}'s #1 Fence Contractor Network`}
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-foreground lg:text-6xl">
-                    <span>{content.headline}</span>
-                    <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+                    {content.headline}
+                    <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2">
                       {content.subHeadline}
                     </div>
                   </h1>
-                  <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
+                  <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-center">
                     {content.paragraph1}
                   </p>
-                  <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                    {content.paragraph2}
-                  </p>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <Button 
+                      className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                      onClick={() => {
+                        const formElement = document.querySelector('.lead-form');
+                        if (formElement) {
+                          formElement.classList.add('shake-animation');
+                          setTimeout(() => {
+                            formElement.classList.remove('shake-animation');
+                          }, 820);
+                          formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                      }}
+                    >
+                      Get Your Perfect Fence Match™
+                    </Button>
+                    <div className="flex items-center gap-1">
+                      <div className="flex -space-x-2">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
+                      </div>
+                      <span className="text-muted-foreground ml-2">732+ homeowners matched this week</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mt-6">
                     <div className="flex items-center gap-2 px-4 py-2 bg-texas-terracotta/10 rounded-full">
                       <svg className="w-5 h-5 text-texas-terracotta" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -157,44 +180,8 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
                       <span className="text-sm font-medium text-texas-terracotta whitespace-nowrap">Saves Time & Money</span>
                     </div>
                   </div>
-
-                  <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
-                    <div className="flex items-center gap-4 w-full sm:w-auto">
-                      <Button 
-                        className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                        onClick={() => {
-                          const formElement = document.querySelector('.lead-form');
-                          if (formElement) {
-                            formElement.classList.add('shake-animation');
-                            setTimeout(() => {
-                              formElement.classList.remove('shake-animation');
-                            }, 820);
-                            formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                          }
-                        }}
-                      >
-                        Get Your Perfect Fence Match™
-                      </Button>
-                      
-                      <div className="flex items-center gap-3 flex-1 sm:flex-none">
-                        <div className="flex -space-x-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" />
-                          </div>
-                          <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" />
-                          </div>
-                          <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="" />
-                          </div>
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          <span className="font-semibold">17 DFW</span> businesses<br />matched this week!
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+                
                 <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
                   <LeadForm city={formattedCity} />
                 </div>
@@ -246,12 +233,12 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
                   );
                 })}
               </div>
-              </div>
-            </section>
+            </div>
+          </section>
         </main>
         
         <Suspense fallback={<div className="h-[100px]" />}>
-        <Footer />
+          <Footer />
         </Suspense>
       </div>
     </>
