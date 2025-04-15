@@ -164,16 +164,74 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   {`DFW's #1 ${service} Contractor Network`}
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground lg:text-6xl">
-                  <span>Stop Searching, Start Building</span>
-                  <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
-                    One Perfect {service} Contractor in {cityName || 'Dallas/Fort Worth'}
-                  </div>
+                  {service === ServiceType.CommercialFencing ? (
+                    <>
+                      <span>Fast, Quality Commercial Fencing in {cityName || 'DFW'}</span>
+                      <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                        Your Hassle-Free Perfect Contractor Match
+                      </div>
+                    </>
+                  ) : service === ServiceType.ResidentialFencing ? (
+                    <>
+                      <span>Effortless Residential Fencing in {cityName || 'DFW'}</span>
+                      <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                        We Guarantee the Perfect Contractor for Your Project
+                      </div>
+                    </>
+                  ) : service === ServiceType.AthleticCourts ? (
+                    <>
+                      <span>Stop Planning, Start Playing</span>
+                      <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                        Your Dedicated Sports Facility Expert in {cityName || 'DFW'} - Built for Performance.
+                      </div>
+                    </>
+                  ) : service === ServiceType.AccessControl ? (
+                    <>
+                      <span>Top-Rated Access Control Installation in {cityName || 'DFW'}</span>
+                      <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                        Fast, Precise Matching to Your Ideal Security Specialist.
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <span>Stop Searching, Start Building</span>
+                      <div className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 my-[10px]">
+                        One Perfect {service} Contractor in {cityName || 'Dallas/Fort Worth'}
+                      </div>
+                    </>
+                  )}
                 </h1>
                 <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                  What if finding your ideal {cityName || 'Dallas/Fort Worth'} {service.toString().toLowerCase()} contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations {service === ServiceType.ResidentialFencing ? 'homeowners' : 'business owners'} face—multiple contractor calls, conflicting quotes, and wasted hours.
+                  {(() => {
+                    switch (service) {
+                      case ServiceType.CommercialFencing:
+                        return `What if finding your ideal ${cityName || 'DFW'} commercial fencing contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations business owners face.`;
+                      case ServiceType.ResidentialFencing:
+                        return `Tired of the time-consuming hassle of researching countless residential fence contractors in ${cityName || 'DFW'}, sifting through conflicting reviews and quotes?`;
+                      case ServiceType.AthleticCourts:
+                        return `Ready to transform your ${cityName || 'DFW'} property with a professional athletic court? Skip the endless contractor search. Our network of sports courts to pickleball facilities.`;
+                      case ServiceType.AccessControl:
+                        return `Finding the right access control specialist in ${cityName || 'DFW'} shouldn't be a security risk itself. Our Perfect Match system connects you with the single most qualified security expert.`;
+                      default:
+                        return `What if finding your ideal ${cityName || 'Dallas/Fort Worth'} ${service.toString().toLowerCase()} contractor took less time than reading this paragraph? FencesTexas eliminates the frustrations property owners face—multiple contractor calls, conflicting quotes, and wasted hours.`;
+                    }
+                  })()}
                 </p>
                 <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-justify">
-                  Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, {service === ServiceType.ResidentialFencing ? 'DFW homeowners' : 'DFW businesses'} who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.
+                  {(() => {
+                    switch (service) {
+                      case ServiceType.CommercialFencing:
+                        return `Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, DFW businesses who use our 15-second matching service move directly to project execution.`;
+                      case ServiceType.ResidentialFencing:
+                        return `Our revolutionary matching system does the heavy lifting, connecting you with the *single*, most qualified and specialized residential fence contractor in ${cityName || 'DFW'} for your specific project.`;
+                      case ServiceType.AthleticCourts:
+                        return `From tennis courts to pickleball facilities, we match you with the top contractor who understands the unique requirements of athletic court construction.`;
+                      case ServiceType.AccessControl:
+                        return `Don't compromise on security. While others are collecting quotes from random contractors, you'll be one step closer to a secure property with our Perfect Match™ system.`;
+                      default:
+                        return `Our proprietary matching algorithm identifies the single most qualified local specialist for your exact project needs. While others waste days comparison shopping, property owners who use our 15-second matching service move directly to project execution, securing their properties faster and with complete confidence.`;
+                    }
+                  })()}
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors" onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToQuote(e)}>
