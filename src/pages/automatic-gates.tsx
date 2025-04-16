@@ -82,9 +82,6 @@ const AutomaticGatesPage = () => {
                       Get Your Perfect Fence Match™
                     </Button>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm text-muted-foreground">
-                        732+ homeowners matched this week
-                      </span>
                       <div className="flex -space-x-2">
                         <img
                           src="https://randomuser.me/api/portraits/men/32.jpg"
@@ -102,6 +99,9 @@ const AutomaticGatesPage = () => {
                           className="w-8 h-8 rounded-full border-2 border-white"
                         />
                       </div>
+                      <span className="text-sm text-muted-foreground">
+                        732+ homeowners matched this week
+                      </span>
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-6">
