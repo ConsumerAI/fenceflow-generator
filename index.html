@@ -75,29 +75,10 @@
     <meta name="revisit-after" content="7 days" />
     <meta name="geo.region" content="US-TX" />
     <meta name="geo.placename" content="Dallas" />
-
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contactForm").submit();
-      }
-    </script>
   </head>
 
   <body>
     <div id="root"></div>
-    <form id="contactForm" method="POST">
-      <!-- Your existing form fields here -->
-      
-      <!-- reCAPTCHA submit button -->
-      <button 
-        class="g-recaptcha" 
-        data-sitekey="6LfXMgkrAAAAAO0KfRfsK7OZut3xV0edHSzYQ_5U"
-        data-callback="onSubmit"
-        data-action="submit">
-        Submit
-      </button>
-    </form>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
