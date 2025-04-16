@@ -232,9 +232,9 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="mt-12 text-center">
+              <div className="mt-10 flex justify-center">
                 <Button onClick={scrollToQuote} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-6 h-auto">
-                  Find Your Fence Pro
+                  Get Your Perfect Fence Match™
                 </Button>
               </div>
 
@@ -260,8 +260,8 @@ const Index = () => {
               <ImageCarousel />
               
               <div className="mt-10 flex justify-center">
-                <Button onClick={handleQuoteClick} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors">
-                  Find Your Fence Pro
+                <Button onClick={scrollToQuote} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-6 h-auto">
+                  Get Your Perfect Fence Match™
                 </Button>
               </div>
             </div>
@@ -319,8 +319,8 @@ const Index = () => {
               <CityGrid />
               
               <div className="mt-16 text-center flex justify-center">
-                <Button onClick={handleQuoteClick} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors">
-                  Find Your Fence Pro
+                <Button onClick={scrollToQuote} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-6 h-auto">
+                  Get Your Perfect Fence Match™
                 </Button>
               </div>
             </div>
@@ -346,8 +346,8 @@ const Index = () => {
               </div>
               
               <div className="mt-10 flex justify-center">
-                <Button onClick={handleQuoteClick} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors">
-                  Find Your Fence Pro
+                <Button onClick={scrollToQuote} className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors text-lg px-8 py-6 h-auto">
+                  Get Your Perfect Fence Match™
                 </Button>
               </div>
             </div>

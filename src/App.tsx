@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import './App.css';
 import Index from './pages/Index';
 import CityPage from './pages/[city]';
@@ -48,6 +48,21 @@ function App() {
 
   return (
     <HelmetProvider>
+      {/* Hotjar Tracking Code */}
+      <Helmet>
+        <script>
+          {`
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:6374569,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </script>
+      </Helmet>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
