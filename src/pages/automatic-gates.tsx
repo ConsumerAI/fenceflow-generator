@@ -74,12 +74,36 @@ const AutomaticGatesPage = () => {
                   <p className="text-muted-foreground mb-8 text-lg">
                     While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.
                   </p>
-                  <Button 
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg mb-6"
-                    onClick={scrollToQuote}
-                  >
-                    Get Your Perfect Fence Match™
-                  </Button>
+                  <div className="flex items-center gap-4 mb-6">
+                    <Button 
+                      className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg"
+                      onClick={scrollToQuote}
+                    >
+                      Get Your Perfect Fence Match™
+                    </Button>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-muted-foreground">
+                        732+ homeowners matched this week
+                      </span>
+                      <div className="flex -space-x-2">
+                        <img
+                          src="https://randomuser.me/api/portraits/men/32.jpg"
+                          alt="Avatar 1"
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                        <img
+                          src="https://randomuser.me/api/portraits/women/44.jpg"
+                          alt="Avatar 2"
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                        <img
+                          src="https://randomuser.me/api/portraits/men/47.jpg"
+                          alt="Avatar 3"
+                          className="w-8 h-8 rounded-full border-2 border-white"
+                        />
+                      </div>
+                    </div>
+                  </div>
                   <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-6">
                     <div className="inline-flex items-center gap-2 bg-texas-terracotta/10 text-texas-terracotta rounded-full px-4 py-2">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,28 +122,6 @@ const AutomaticGatesPage = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span>Saves Time & Money</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 justify-center lg:justify-start">
-                    <span className="text-sm text-muted-foreground">
-                      732+ homeowners matched this week
-                    </span>
-                    <div className="flex -space-x-2">
-                      <img
-                        src="https://randomuser.me/api/portraits/men/32.jpg"
-                        alt="Avatar 1"
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
-                      <img
-                        src="https://randomuser.me/api/portraits/women/44.jpg"
-                        alt="Avatar 2"
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
-                      <img
-                        src="https://randomuser.me/api/portraits/men/47.jpg"
-                        alt="Avatar 3"
-                        className="w-8 h-8 rounded-full border-2 border-white"
-                      />
                     </div>
                   </div>
                 </div>
