@@ -1,10 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- reCAPTCHA Enterprise script -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfXMgkrAAAAAO0KfRfsK7OZut3xV0edHSzYQ_5U"></script>
     
     <!-- Preload critical fonts -->
     <link 
@@ -73,10 +75,28 @@
     <meta name="revisit-after" content="7 days" />
     <meta name="geo.region" content="US-TX" />
     <meta name="geo.placename" content="Dallas" />
+
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contactForm").submit();
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+    <form id="contactForm" method="POST">
+      <!-- Your existing form fields here -->
+      
+      <!-- reCAPTCHA submit button -->
+      <button 
+        class="g-recaptcha" 
+        data-sitekey="6LfXMgkrAAAAAO0KfRfsK7OZut3xV0edHSzYQ_5U"
+        data-callback="onSubmit"
+        data-action="submit">
+        Submit
+      </button>
+    </form>
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
