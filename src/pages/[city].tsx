@@ -215,7 +215,31 @@ const CityPage = () => {
                 </p>
               </div>
 
-              <PlanToPickets />
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">1</div>
+                  <h3 className="font-semibold mb-2">Tell Us About Your Project</h3>
+                  <p className="text-muted-foreground">Answer a few quick questions about your fence needs, property, and timeline. It only takes 15 seconds.</p>
+                </div>
+
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">2</div>
+                  <h3 className="font-semibold mb-2">Perfect Match™ System</h3>
+                  <p className="text-muted-foreground">Our Perfect Match™ System identifies the ONE contractor who's ideal for your specific needs.</p>
+                </div>
+
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">3</div>
+                  <h3 className="font-semibold mb-2">Direct Connection</h3>
+                  <p className="text-muted-foreground">You'll be connected directly to your Perfect Match™ contractor.</p>
+                </div>
+
+                <div className="text-center bg-white rounded-lg p-6 shadow-sm">
+                  <div className="w-8 h-8 bg-texas-terracotta rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4">4</div>
+                  <h3 className="font-semibold mb-2">Expert Installation</h3>
+                  <p className="text-muted-foreground">Get your fence installed by a local verified expert who specializes in your project type.</p>
+                </div>
+              </div>
 
               <div className="mt-8 text-center max-w-3xl mx-auto">
                 <p className="text-muted-foreground mb-8">
