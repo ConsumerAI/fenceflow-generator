@@ -102,7 +102,7 @@ const AutomaticGatesPage = () => {
                   </div>
                   <div className="flex items-center gap-2 justify-center lg:justify-start">
                     <span className="text-sm text-muted-foreground">
-                      17 DFW businesses matched with contractors this week!
+                      732+ homeowners matched this week
                     </span>
                     <div className="flex -space-x-2">
                       <img
