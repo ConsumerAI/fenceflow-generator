@@ -339,7 +339,7 @@ const LeadForm = ({
         </div>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-4">
             <div className="hidden" aria-hidden="true">
               <FormField control={form.control} name="website" render={({
               field
