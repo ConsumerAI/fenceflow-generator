@@ -37,75 +37,54 @@ const AutomaticGatesPage = () => {
   ];
 
   // Function to handle smooth scrolling to the quote form with shake animation
-  const scrollToQuote = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    
-    const quoteElement = document.getElementById('quote');
-    
-    if (quoteElement) {
-      // Update URL with hash for page reloads
-      window.location.hash = 'quote';
-      
-      quoteElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'center'
-      });
-      
-      // Add and remove shake class to trigger animation
-      quoteElement.classList.add('animate-shake');
-      setTimeout(() => {
-        quoteElement.classList.remove('animate-shake');
-      }, 2000);
+  const scrollToQuote = () => {
+    const quoteSection = document.getElementById('quote-form')
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <>
       <Helmet>
-        <title>Automatic Gates | Fences Texas</title>
-        <meta name="description" content="Custom automatic gate installation for residential and commercial properties across Texas. Solar-powered options, security features, and elegant designs." />
+        <title>Automatic Gate Installation in Dallas/Fort Worth - FencesTexas</title>
+        <meta name="description" content="Find your perfect automatic gate contractor in Dallas/Fort Worth. Expert installation of residential and commercial automatic gates. Get matched with ONE verified pro." />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
         <Navbar />
         
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 texas-section">
-          <div className="container mx-auto px-4 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 animate-page-transition">
-                <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium">
-                  Premium Gate Solutions
-                </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-                  Automatic Gates for Texas Properties
-                </h1>
-                <p className="text-lg text-muted-foreground">
-                  Enhance your property's security, convenience, and curb appeal with our custom automatic gate installations. We specialize in designing and installing sophisticated gate systems tailored to your specific needs and aesthetic preferences.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                    onClick={scrollToQuote}
-                  >
-                    Get Your Perfect Fence
-                  </Button>
-                </div>
-                <div className="mt-6">
-                  <img 
-                    src="https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg?format=1000w" 
-                    alt="Elegant automatic gate installation" 
-                    className="rounded-lg shadow-md w-full max-w-md mx-auto h-auto"
-                  />
-                </div>
+        <main>
+          <section className="py-20 bg-secondary/10">
+            <div className="container mx-auto px-4">
+              <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium text-center mx-auto mb-4">
+                DFW's #1 Automatic Gate Contractor Network
               </div>
-              
-              <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
-                <LeadForm city="" />
+              <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+                Effortless Automatic Gate Installation in DFW
+              </h1>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-muted-foreground mb-8">
+                Get Your Perfect Expert Match - Instantly!
+              </h2>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-muted-foreground mb-6 text-lg text-justify">
+                  Looking for automatic gate installation in DFW? Skip the hassle of comparing multiple bids. We'll match you with the perfect local expert who specializes in your exact type of gate automation project.
+                </p>
+                <p className="text-muted-foreground mb-8 text-lg text-justify">
+                  While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.
+                </p>
+              </div>
+              <div className="flex justify-center mb-12">
+                <Button 
+                  className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                  onClick={scrollToQuote}
+                >
+                  Get Your Perfect Fence Match™
+                </Button>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
         
         {/* Gallery Section */}
         <section className="py-16 bg-secondary/30">
