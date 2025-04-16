@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-texas-sand" />
-                <a href="mailto:info@fencestexas.com" className="hover:text-texas-sand transition-colors">info@fencestexas.com</a>
+                <a href="mailto:team@fencestexas.com" className="hover:text-texas-sand transition-colors">team@fencestexas.com</a>
               </div>
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-texas-sand mt-1" />

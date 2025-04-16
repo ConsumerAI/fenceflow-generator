@@ -115,7 +115,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
           "@type": "LocalBusiness",
           "name": "Fences Texas",
           "description": "DFW's #1 Fence Contractor Network",
-          "email": "info@fencestexas.com",
+          "email": "team@fencestexas.com",
           "areaServed": {
             "@type": "GeoCircle",
             "geoMidpoint": {
