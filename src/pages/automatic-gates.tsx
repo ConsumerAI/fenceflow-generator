@@ -57,30 +57,74 @@ const AutomaticGatesPage = () => {
         <main>
           <section className="py-20 bg-secondary/10">
             <div className="container mx-auto px-4">
-              <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium text-center mx-auto mb-4">
-                DFW's #1 Automatic Gate Contractor Network
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-                Effortless Automatic Gate Installation in DFW
-              </h1>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-muted-foreground mb-8">
-                Get Your Perfect Expert Match - Instantly!
-              </h2>
-              <div className="max-w-4xl mx-auto">
-                <p className="text-muted-foreground mb-6 text-lg text-justify">
-                  Looking for automatic gate installation in DFW? Skip the hassle of comparing multiple bids. We'll match you with the perfect local expert who specializes in your exact type of gate automation project.
-                </p>
-                <p className="text-muted-foreground mb-8 text-lg text-justify">
-                  While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.
-                </p>
-              </div>
-              <div className="flex justify-center mb-12">
-                <Button 
-                  className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                  onClick={scrollToQuote}
-                >
-                  Get Your Perfect Fence Match™
-                </Button>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium text-center mx-auto mb-4">
+                    DFW's #1 Automatic Gate Contractor Network
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    Effortless Automatic Gate Installation in DFW
+                  </h1>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8">
+                    Get Your Perfect Expert Match - Instantly!
+                  </h2>
+                  <div className="max-w-4xl">
+                    <p className="text-muted-foreground mb-6 text-lg">
+                      Looking for automatic gate installation in DFW? Skip the hassle of comparing multiple bids. We'll match you with the perfect local expert who specializes in your exact type of gate automation project.
+                    </p>
+                    <p className="text-muted-foreground mb-8 text-lg">
+                      While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.
+                    </p>
+                  </div>
+                  <div className="flex gap-4 mb-8">
+                    <div className="inline-flex items-center gap-2">
+                      <svg className="w-5 h-5 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>Triple-Verified</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2">
+                      <svg className="w-5 h-5 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>100% Free Service</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2">
+                      <svg className="w-5 h-5 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>Saves Time & Money</span>
+                    </div>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    17 DFW businesses matched with contractors this week!
+                  </div>
+                </div>
+                <div className="lg:ml-auto w-full max-w-lg">
+                  <div className="bg-white rounded-xl shadow-lg p-6">
+                    <div className="text-center mb-6">
+                      <h3 className="text-2xl font-bold mb-2">Get Your Perfect Fence Match™</h3>
+                      <p className="text-sm text-muted-foreground">Takes only 15 seconds to complete</p>
+                      <div className="flex items-center justify-center gap-2 mt-2">
+                        <svg className="w-5 h-5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span className="text-sm text-muted-foreground">7 people near you matched with their perfect contractors today</span>
+                      </div>
+                    </div>
+                    <LeadForm 
+                      city="" 
+                      variant="minimal" 
+                      className="space-y-4" 
+                    />
+                    <div className="flex items-center justify-center gap-2 mt-4">
+                      <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      <span className="text-sm text-muted-foreground">100% Secure & Confidential</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
