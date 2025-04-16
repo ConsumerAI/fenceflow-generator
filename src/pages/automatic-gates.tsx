@@ -57,9 +57,9 @@ const AutomaticGatesPage = () => {
         <main>
           <section className="py-20 bg-secondary/10">
             <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium text-center mx-auto mb-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+                  <div className="inline-block px-4 py-1 bg-texas-terracotta/10 rounded-full text-texas-terracotta text-sm font-medium mb-4">
                     DFW's #1 Automatic Gate Contractor Network
                   </div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -68,43 +68,41 @@ const AutomaticGatesPage = () => {
                   <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8">
                     Get Your Perfect Expert Match - Instantly!
                   </h2>
-                  <div className="max-w-4xl">
-                    <p className="text-muted-foreground mb-6 text-lg">
-                      Looking for automatic gate installation in DFW? Skip the hassle of comparing multiple bids. We'll match you with the perfect local expert who specializes in your exact type of gate automation project.
-                    </p>
-                    <p className="text-muted-foreground mb-8 text-lg">
-                      While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.
-                    </p>
-                  </div>
-                  <div className="flex gap-4 mb-8">
-                    <div className="inline-flex items-center gap-2">
-                      <svg className="w-5 h-5 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>Triple-Verified</span>
-                    </div>
-                    <div className="inline-flex items-center gap-2">
-                      <svg className="w-5 h-5 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>100% Free Service</span>
-                    </div>
-                    <div className="inline-flex items-center gap-2">
-                      <svg className="w-5 h-5 text-texas-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>Saves Time & Money</span>
-                    </div>
-                  </div>
-                  <div className="text-sm text-muted-foreground mb-8">
-                    17 DFW businesses matched with contractors this week!
-                  </div>
+                  <p className="text-muted-foreground mb-6 text-lg">
+                    Looking for automatic gate installation in DFW? Skip the hassle of comparing multiple bids. We'll match you with the perfect local expert who specializes in your exact type of gate automation project.
+                  </p>
+                  <p className="text-muted-foreground mb-8 text-lg">
+                    While others spend days researching contractors, you'll be designing your dream entrance. Our Perfect Match™ system finds your ideal gate automation specialist in just 15 seconds.
+                  </p>
                   <Button 
-                    className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors mb-8"
+                    className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg mb-6"
                     onClick={scrollToQuote}
                   >
                     Get Your Perfect Fence Match™
                   </Button>
+                  <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-6">
+                    <div className="inline-flex items-center gap-2 bg-texas-terracotta/10 text-texas-terracotta rounded-full px-4 py-2">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Triple-Verified</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 bg-texas-terracotta/10 text-texas-terracotta rounded-full px-4 py-2">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>100% Free Service</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 bg-texas-terracotta/10 text-texas-terracotta rounded-full px-4 py-2">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>Saves Time & Money</span>
+                    </div>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    17 DFW businesses matched with contractors this week!
+                  </div>
                 </div>
                 <div className="lg:ml-auto w-full max-w-lg">
                   <LeadForm 
