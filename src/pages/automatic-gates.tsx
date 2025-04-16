@@ -173,10 +173,10 @@ const AutomaticGatesPage = () => {
             
             <div className="mt-10 flex justify-center">
               <Button 
-                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg"
                 onClick={scrollToQuote}
               >
-                Get Your Perfect Fence
+                Get Your Perfect Fence Match™
               </Button>
             </div>
           </div>
@@ -268,10 +268,10 @@ const AutomaticGatesPage = () => {
             
             <div className="mt-10 flex justify-center">
               <Button 
-                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg"
                 onClick={scrollToQuote}
               >
-                Get Your Perfect Fence
+                Get Your Perfect Fence Match™
               </Button>
             </div>
           </div>
@@ -279,6 +279,14 @@ const AutomaticGatesPage = () => {
         
         {/* Plan to Pickets Process Section */}
         <PlanToPickets />
+        <div className="flex justify-center py-10 bg-secondary/10">
+          <Button 
+            className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg"
+            onClick={scrollToQuote}
+          >
+            Get Your Perfect Fence Match™
+          </Button>
+        </div>
         
         {/* Call to Action Section */}
         <section id="quote" className="py-16 bg-texas-terracotta/10">
