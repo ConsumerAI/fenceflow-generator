@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ServiceType } from '@/lib/types';
 import { SupabaseClient } from '@supabase/supabase-js';
 import type { Database as GeneratedDatabase } from '@/integrations/supabase/types';
+import SocialProof from '@/components/SocialProof';
 
 type Database = {
   public: {
@@ -217,14 +218,20 @@ When it comes to enhancing the beauty, security, and value of your property in *
   }, [cityName, serviceName]);
 
   const handleContactClick = () => {
-    if (onContactClick) {
-      onContactClick();
-    } else {
-      // Scroll to the form if no click handler provided
-      const form = document.getElementById('quote');
-      if (form) {
-        form.scrollIntoView({ behavior: 'smooth' });
-      }
+    const quoteElement = document.getElementById('quote');
+    if (quoteElement) {
+      // Update URL with hash for page reloads
+      window.location.hash = 'quote';
+      quoteElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+      // Add and remove shake class to trigger animation
+      quoteElement.classList.add('animate-shake');
+      setTimeout(() => {
+        quoteElement.classList.remove('animate-shake');
+      }, 2000);
     }
   };
 
@@ -253,6 +260,15 @@ When it comes to enhancing the beauty, security, and value of your property in *
                   prose-a:text-texas-terracotta prose-a:no-underline hover:prose-a:text-texas-earth"
                 dangerouslySetInnerHTML={{ __html: content }} 
               />
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button 
+                  className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
+                  onClick={handleContactClick}
+                >
+                  Get Your Perfect Fence Match™
+                </Button>
+                <SocialProof />
+              </div>
             </article>
           ) : (
             <div className="text-center py-12">

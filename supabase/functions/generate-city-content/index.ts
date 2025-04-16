@@ -216,44 +216,56 @@ const defaultUserPrompt = `Create compelling, SEO-optimized content about our {s
 
 Format with H2/H3 headings and use HTML formatting for emphasis.`;
 
-const cleanContent = (content: string): string => {
-  return content
-    // Remove ```html tags
-    .replace(/```html\s*/g, '')
-    .replace(/```\s*$/g, '')
-    // Remove meta-comments about SEO/content
-    .replace(/This content is designed to be.*$/gm, '')
-    .replace(/Note: This content is optimized.*$/gm, '')
-    // Clean up any extra newlines that might be left
+// Clean and format content before returning
+function cleanContent(content: string): string {
+  let cleanedContent = content
+    // Remove markdown headers
+    .replace(/#+\s/g, '')
+    // Remove any ```html tags
+    .replace(/```html/g, '')
+    .replace(/```/g, '')
+    // Remove meta comments about content structure or SEO
+    .replace(/This content is designed to be.*?(?=\n)/g, '')
+    .replace(/I have structured this content.*?(?=\n)/g, '')
+    .replace(/This HTML-formatted content.*?(?=\n)/g, '')
+    // Clean up extra newlines
     .replace(/\n{3,}/g, '\n\n')
     .trim();
-};
+
+  // Ensure proper HTML structure for headings
+  cleanedContent = cleanedContent
+    // Fix any improperly formatted headings
+    .replace(/<h2>\s*(.*?)\s*<\/h2>/gi, (_, text) => `\n<h2>${text}</h2>\n`)
+    .replace(/<h3>\s*(.*?)\s*<\/h3>/gi, (_, text) => `\n<h3>${text}</h3>\n`)
+    // Fix any improperly formatted paragraphs
+    .replace(/<p>\s*(.*?)\s*<\/p>/gi, (_, text) => `<p>${text}</p>\n`)
+    // Fix any improperly formatted lists
+    .replace(/<ul>\s*(.*?)\s*<\/ul>/gis, (_, items) => `\n<ul>\n${items}\n</ul>\n`)
+    .replace(/<li>\s*(.*?)\s*<\/li>/gi, (_, text) => `  <li>${text}</li>\n`)
+    // Clean up any remaining formatting issues
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+
+  // Add a wrapper div for consistent styling
+  return `<div class="dynamic-content">\n${cleanedContent}\n</div>`;
+}
 
 serve(async (req) => {
-  // Handle CORS preflight requests
+  // Add CORS headers
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
+    return new Response('ok', { headers: corsHeaders });
   }
-  
+
   try {
-    // Parse request body
-    const { cityName, serviceName, prompt } = await req.json();
-    console.log(`Generating content for ${cityName} and ${serviceName}`);
-    
-    // Select the appropriate prompts
-    const systemPrompt = (serviceSystemPrompts[serviceName] || defaultSystemPrompt)
-      .replace(/{cityName}/g, cityName)
-      .replace(/{serviceName}/g, serviceName);
-      
-    const userPrompt = prompt || 
-      (serviceUserPrompts[serviceName] || defaultUserPrompt)
-        .replace(/{cityName}/g, cityName)
-        .replace(/{serviceName}/g, serviceName);
-    
-    // Prepare the OpenAI API request
-    console.log("Calling OpenAI API...");
-    const start = Date.now();
-    
+    const { city, service } = await req.json();
+
+    if (!city || !service) {
+      throw new Error('City and service are required');
+    }
+
+    const systemPrompt = serviceSystemPrompts[service].replace('{cityName}', city);
+    const userPrompt = serviceUserPrompts[service].replace('{cityName}', city);
+
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -261,52 +273,40 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4',
         messages: [
-          { 
-            role: 'system', 
-            content: systemPrompt
-          },
-          { 
-            role: 'user', 
-            content: userPrompt
-          }
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
         ],
         temperature: 0.7,
-        max_tokens: 1500,
       }),
     });
 
-    const end = Date.now();
-    console.log(`OpenAI API call completed in ${end - start}ms`);
-
-    // Check for successful response
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('OpenAI API error:', errorData);
-      throw new Error(`OpenAI API error: ${errorData.error?.message || 'Unknown error'}`);
+    const data = await response.json();
+    
+    if (!data.choices?.[0]?.message?.content) {
+      throw new Error('No content received from OpenAI');
     }
 
-    // Parse and return the generated content
-    const data = await response.json();
-    const generatedContent = cleanContent(data.choices[0].message.content);
-    
-    console.log("Content generated successfully. Content length:", generatedContent.length);
-    
+    const cleanedContent = cleanContent(data.choices[0].message.content);
+
     return new Response(
-      JSON.stringify({ content: generatedContent }),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      JSON.stringify({
+        content: cleanedContent,
+      }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 200,
+      },
     );
-    
+
   } catch (error) {
-    console.error('Error in generate-city-content function:', error);
-    
     return new Response(
-      JSON.stringify({ error: error.message || 'An unexpected error occurred' }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
-      }
+      JSON.stringify({ error: error.message }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 400,
+      },
     );
   }
 });

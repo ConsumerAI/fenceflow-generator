@@ -35,7 +35,7 @@ async function generateContent(city: string, service: ServiceType): Promise<stri
     try {
       console.log(`Generating content for ${city} - ${service}... (Attempt ${attempt + 1}/${maxRetries})`);
       
-      const { data, error } = await supabase.functions.invoke('generate-content', {
+      const { data, error } = await supabase.functions.invoke('generate-city-content', {
         body: { city, service }
       });
 
@@ -61,11 +61,16 @@ async function cacheContent(city: string, service: ServiceType, content: string)
       ? `${city.toLowerCase()}-${String(service).toLowerCase().replace(/\s+/g, '-')}-dynamic`
       : `${city.toLowerCase()}-dynamic`;
 
-    const { error } = await supabase.rpc('cache_content', {
-      p_cache_key: cacheKey,
-      p_cache_content: content,
-      p_expire_days: 365
-    });
+    // Use direct table insertion instead of RPC
+    const { error } = await supabase
+      .from('content_cache')
+      .upsert({
+        cache_key: cacheKey,
+        content: content,
+        expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000) // 365 days from now
+      }, {
+        onConflict: 'cache_key'
+      });
 
     if (error) throw error;
     console.log(`Successfully cached content for ${city} - ${service}`);

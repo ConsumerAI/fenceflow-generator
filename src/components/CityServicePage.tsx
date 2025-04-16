@@ -9,6 +9,7 @@ import { SERVICE_IMAGES } from '@/lib/images';
 import { cn } from '@/lib/utils';
 import { serviceRouteMap } from '@/lib/routes';
 import { Button } from '@/components/ui/button';
+import SocialProof from '@/components/SocialProof';
 
 // Lazy load components that aren't immediately visible
 const DynamicContent = lazy(() => import('@/components/DynamicContent'));
@@ -137,27 +138,11 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
                   <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Button 
                       className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
-                      onClick={() => {
-                        const formElement = document.querySelector('.lead-form');
-                        if (formElement) {
-                          formElement.classList.add('shake-animation');
-                          setTimeout(() => {
-                            formElement.classList.remove('shake-animation');
-                          }, 820);
-                          formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                      }}
+                      onClick={scrollToQuote}
                     >
                       Get Your Perfect Fence Match™
                     </Button>
-                    <div className="flex items-center gap-1">
-                      <div className="flex -space-x-2">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=32&h=32&fit=crop&crop=faces&q=80" alt="Happy customer" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                      </div>
-                      <span className="text-muted-foreground ml-2">732+ homeowners matched this week</span>
-                    </div>
+                    <SocialProof />
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 mt-6">

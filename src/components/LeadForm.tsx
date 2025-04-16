@@ -15,6 +15,7 @@ import AddressAutocomplete from './AddressAutocomplete';
 import { MapPin, Fence, Star, ArrowRight, Lock, Calendar, Users } from 'lucide-react';
 import ProgressBar from './ProgressBar';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
+import SocialProof from '@/components/SocialProof';
 
 const formSchema = z.object({
   zipCode: z.string().min(5, {
@@ -544,16 +545,8 @@ const LeadForm = ({
           </form>
         </Form>
       </div>
-      <div className="mt-4 flex items-center justify-center gap-3">
-        <div className="flex -space-x-3">
-          
-          
-          
-          
-        </div>
-        <div className="text-sm text-gray-600">
-          <span className="font-semibold">17</span> DFW businesses matched with contractors this week!
-        </div>
+      <div className="mt-4">
+        <SocialProof />
       </div>
     </>;
 };

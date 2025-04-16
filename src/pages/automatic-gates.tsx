@@ -6,6 +6,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
 import { Button } from '@/components/ui/button';
+import SocialProof from '@/components/SocialProof';
 
 const AutomaticGatesPage = () => {
   // Images for the gallery
@@ -171,13 +172,14 @@ const AutomaticGatesPage = () => {
               ))}
             </div>
             
-            <div className="mt-10 flex justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button 
-                className="bg-texas-terracotta text-white hover:bg-texas-earth transition-colors px-6 py-3 text-lg"
+                className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors"
                 onClick={scrollToQuote}
               >
                 Get Your Perfect Fence Match™
               </Button>
+              <SocialProof />
             </div>
           </div>
         </section>

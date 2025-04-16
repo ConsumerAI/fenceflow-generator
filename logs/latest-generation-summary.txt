@@ -1,10 +1,11 @@
 
-Generation Summary (2025-04-02T13:37:16.065Z)
+Generation Summary (2025-04-13T15:02:29.528Z)
 ----------------------------------------------
-Retry Results:
-Total Items: 3
-Successfully Generated: 3
-Failed: 0
+Full Generation Results:
+Total Cities: 100
+Total Services: 5
+Successfully Generated: 499
+Failed: 1
 
 Failed Items:
-
+- Ponder - Commercial Fencing: [object Object]

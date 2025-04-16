@@ -12,6 +12,7 @@ import { ServiceInfo, ServiceType } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, ClipboardList, Fence, PartyPopper, Building, Briefcase, Factory } from 'lucide-react';
 import CommercialCityGrid from '@/components/CommercialCityGrid';
+import SocialProof from '@/components/SocialProof';
 
 // Service data
 const services: ServiceInfo[] = [{
@@ -237,14 +238,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   <Button className="w-full sm:w-[240px] h-[48px] text-base bg-texas-terracotta text-white hover:bg-texas-earth transition-colors" onClick={(e: React.MouseEvent<HTMLButtonElement>) => scrollToQuote(e)}>
                     Get Your Perfect Fence Match™
                   </Button>
-                  <div className="flex items-center gap-1">
-                    <div className="flex -space-x-2">
-                      
-                      
-                      
-                    </div>
-                    <span className="text-muted-foreground ml-2">17 DFW businesses matched with contractors this week!</span>
-                  </div>
+                  <SocialProof />
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-6">
