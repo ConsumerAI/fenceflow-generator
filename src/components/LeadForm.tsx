@@ -339,7 +339,7 @@ const LeadForm = ({
         </div>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" noValidate>
+          <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-4">
             <div className="hidden" aria-hidden="true">
               <FormField control={form.control} name="website" render={({
               field
@@ -518,11 +518,16 @@ const LeadForm = ({
                     </FormItem>} />
 
                 <Button type="button" onClick={async () => {
-              const result = await form.handleSubmit(onSubmit)();
-              if (!form.formState.errors || Object.keys(form.formState.errors).length === 0) {
-                setIsSuccess(true);
-              }
-            }} disabled={isSubmitting} className={buttonBaseClasses}>
+                  try {
+                    const result = await form.handleSubmit(onSubmit)();
+                    console.log('Form submission result:', result);
+                    if (!form.formState.errors || Object.keys(form.formState.errors).length === 0) {
+                      setIsSuccess(true);
+                    }
+                  } catch (error) {
+                    console.error('Form submission error:', error);
+                  }
+                }} disabled={isSubmitting} className={buttonBaseClasses}>
                   Secure the Best Contractor Now
                   <Lock className="ml-2 h-4 w-4" />
                 </Button>
