@@ -100,8 +100,27 @@ const AutomaticGatesPage = () => {
                       <span>Saves Time & Money</span>
                     </div>
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    17 DFW businesses matched with contractors this week!
+                  <div className="flex items-center gap-2 justify-center lg:justify-start">
+                    <span className="text-sm text-muted-foreground">
+                      17 DFW businesses matched with contractors this week!
+                    </span>
+                    <div className="flex -space-x-2">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        alt="Avatar 1"
+                        className="w-8 h-8 rounded-full border-2 border-white"
+                      />
+                      <img
+                        src="https://randomuser.me/api/portraits/women/44.jpg"
+                        alt="Avatar 2"
+                        className="w-8 h-8 rounded-full border-2 border-white"
+                      />
+                      <img
+                        src="https://randomuser.me/api/portraits/men/47.jpg"
+                        alt="Avatar 3"
+                        className="w-8 h-8 rounded-full border-2 border-white"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="lg:ml-auto w-full max-w-lg">
