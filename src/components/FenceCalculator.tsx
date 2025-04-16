@@ -105,7 +105,7 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
       )}
       
       <Form {...form}>
-        <form className="space-y-4">
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
           <FormField
             control={form.control}
             name="fence_material"
