@@ -49,21 +49,28 @@ export default function ScrollToTop() {
   // Get page-specific metadata
   const getPageMetadata = () => {
     // Default description
-    let description = "Expert fence installation services across the DFW metroplex. Premium materials, skilled craftsmanship, and competitive pricing.";
+    let description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
     
     // Customize based on current page
     if (pathname === '/') {
-      description = "Transform your property with beautiful, durable fencing by DFW's most trusted fence contractors. Get your free quote today!";
+      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('residential')) {
-      description = "Beautiful residential fencing solutions for Dallas/Fort Worth homes. Enhance privacy, security & property value with our expert installation.";
+      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('commercial')) {
-      description = "Secure commercial fencing solutions for DFW businesses. High-security perimeter fencing, gates & access control systems. Free quotes!";
+      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('sports')) {
-      description = "Professional athletic courts and sports facilities including tennis courts, basketball courts & more. Durable materials & expert installation across DFW.";
+      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('automatic-gates')) {
-      description = "Custom automatic gate solutions for DFW homes & businesses. Smart features, remote access & professional installation. Get a quote!";
+      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('near-me')) {
-      description = "Looking for reliable fence companies near you in DFW? Fences Texas provides top-quality installation services across 100+ cities.";
+      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+    } else if (pathname.includes('/')) {
+      // Extract city name from pathname for city-specific pages
+      const cityMatch = pathname.match(/\/([^\/]+)(?:\/|$)/);
+      if (cityMatch && cityMatch[1]) {
+        const city = cityMatch[1].replace(/-/g, ' ');
+        description = `STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal ${city} fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.`;
+      }
     }
     
     return {
