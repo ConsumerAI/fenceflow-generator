@@ -105,7 +105,7 @@ const LeadForm = ({
       address: '',
       message: '',
       preferred_timeline: undefined,
-      service_type: variant === 'default' ? undefined : service_type || ServiceType.ResidentialFencing,
+      service_type: service_type,
       website: ''
     },
     mode: 'onSubmit'
@@ -202,7 +202,7 @@ const LeadForm = ({
         email: submitData.email,
         phone: submitData.phone,
         address: submitData.address || '',
-        service_type: variant === 'default' ? submitData.service_type : ServiceType.ResidentialFencing,
+        service_type: submitData.service_type,
         preferred_timeline: submitData.preferred_timeline,
         message: submitData.message || '',
         city: city,
