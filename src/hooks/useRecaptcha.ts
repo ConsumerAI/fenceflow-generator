@@ -1,22 +1,19 @@
 import { useEffect, useCallback, useState, useRef } from 'react';
 import { env } from '@/lib/env';
 
-// reCAPTCHA keys
-const RECAPTCHA_V2_KEY = '6LcFewkrAAAAAA_wOLvhaJDi81i_-Y6_-ONwIpnz';  // v2 key
-const RECAPTCHA_V3_KEY = '6LeEdQkrAAAAAI1P7Tj_bNCck6aXpH9cZxFszIA2';  // v3 key
+// reCAPTCHA Enterprise keys
+const RECAPTCHA_V2_KEY = '6LcFewkrAAAAAA_wOLvhaJDi81i_-Y6_-ONwIpnz';
+const RECAPTCHA_V3_KEY = '6LeEdQkrAAAAAI1P7Tj_bNCck6aXpH9cZxFszIA2';
 
 declare global {
   interface Window {
     grecaptcha: {
-      ready: (callback: () => void) => void;
-      execute: (siteKey: string, options: { action: string }) => Promise<string>;
-      render: (element: string | HTMLElement, options: any) => number;
-      getResponse: (widgetId?: number) => string;
-      reset: (widgetId?: number) => void;
       enterprise: {
         ready: (callback: () => void) => void;
         execute: (siteKey: string, options: { action: string }) => Promise<string>;
         render: (element: string | HTMLElement, options: any) => number;
+        getResponse: (widgetId?: number) => string;
+        reset: (widgetId?: number) => void;
       };
     };
     onRecaptchaLoad?: () => void;
@@ -27,7 +24,6 @@ export function useRecaptcha() {
   const [v2WidgetId, setV2WidgetId] = useState<number | null>(null);
   const [showV2Captcha, setShowV2Captcha] = useState(false);
   const [isV3Loaded, setIsV3Loaded] = useState(false);
-  const v3LoadPromiseRef = useRef<Promise<void>>();
 
   // Initialize Enterprise reCAPTCHA
   useEffect(() => {
@@ -94,7 +90,7 @@ export function useRecaptcha() {
     }
 
     try {
-      const response = window.grecaptcha.getResponse(v2WidgetId);
+      const response = window.grecaptcha.enterprise.getResponse(v2WidgetId);
       console.log('Got reCAPTCHA v2 response:', response ? 'success' : 'empty');
       return response;
     } catch (error) {
@@ -107,7 +103,7 @@ export function useRecaptcha() {
     if (!window.grecaptcha?.enterprise || v2WidgetId === null) return;
     
     try {
-      window.grecaptcha.reset(v2WidgetId);
+      window.grecaptcha.enterprise.reset(v2WidgetId);
       console.log('reCAPTCHA v2 reset successful');
     } catch (error) {
       console.error('Failed to reset reCAPTCHA v2:', error);
