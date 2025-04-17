@@ -49,27 +49,27 @@ export default function ScrollToTop() {
   // Get page-specific metadata
   const getPageMetadata = () => {
     // Default description
-    let description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+    let description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     
     // Customize based on current page
     if (pathname === '/') {
-      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+      description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('residential')) {
-      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+      description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('commercial')) {
-      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+      description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('sports')) {
-      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+      description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('automatic-gates')) {
-      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+      description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('near-me')) {
-      description = "STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal DFW fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.";
+      description = "STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect DFW fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.";
     } else if (pathname.includes('/')) {
       // Extract city name from pathname for city-specific pages
       const cityMatch = pathname.match(/\/([^\/]+)(?:\/|$)/);
       if (cityMatch && cityMatch[1]) {
         const city = cityMatch[1].replace(/-/g, ' ');
-        description = `STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal ${city} fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.`;
+        description = `STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect ${city} fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.`;
       }
     }
     

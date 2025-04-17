@@ -178,7 +178,7 @@ export const generateCityContent = async (city: string): Promise<CityContent> =>
     // Return basic content if generation fails
     return {
       metaTitle: `Fence Services in ${city}`,
-      metaDescription: `STOP wasting hours searching for fence contractors. Our Perfect Match system eliminates the guesswork, finding THE ONE ideal ${city} fence pro for YOUR project. Others settle for random quotes. You get precision-matched expertise. 100% FREE.`,
+      metaDescription: `STOP wasting hours comparing fence contractors! Our Perfect Match system finds THE ONE perfect ${city} fence pro for YOUR project. Others waste time, you get precision-matched expertise. 100% FREE.`,
       h1: `Fence Services in ${city}`,
       intro: `Quality fence installation in ${city}.`,
       serviceSections: {
