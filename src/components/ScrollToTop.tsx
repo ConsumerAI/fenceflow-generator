@@ -176,7 +176,7 @@ export default function ScrollToTop() {
       </script>
       
       {/* Add FAQ Schema only for pages that don't have their own FAQ schema */}
-      {!isHomePage && (
+      {!isHomePage && !pathname.includes('commercial-fencing') && (
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
