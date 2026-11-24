@@ -32,7 +32,7 @@ const SocialProof: React.FC<SocialProofProps> = ({ className = "" }) => {
           />
         ))}
       </div>
-      <span className="text-muted-foreground ml-2">73 Perfect Fence Matches Made This Week!</span>
+      <span className="text-muted-foreground ml-2">Homeowners across DFW get matched with local fence pros</span>
     </div>
   );
 };

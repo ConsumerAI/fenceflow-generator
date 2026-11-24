@@ -335,7 +335,7 @@ const LeadForm = ({
         
         <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mt-4 mb-6">
           <Users className="h-4 w-4" />
-          <span>7 people near you matched with their perfect contractors today</span>
+          <span>Homeowners near you get matched with their perfect contractor</span>
         </div>
 
         <Form {...form}>
