@@ -3,8 +3,8 @@ import { z } from 'zod';
 
 // Define environment schema with proper validation
 const envSchema = z.object({
-  VITE_SUPABASE_URL: z.string().url().default('https://vmniocmdyxvhqbetsjub.supabase.co'),
-  VITE_SUPABASE_ANON_KEY: z.string().min(1).default('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtbmlvY21keXh2aHFiZXRzanViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE3MjY3NjIsImV4cCI6MjA1NzMwMjc2Mn0.woc9RNWJNDgYAk_84aPgCRLg32WtkEjYpMuhZvagp1M'),
+  VITE_SUPABASE_URL: z.string().url().default('https://yybkjsuqcihqzlbnjjtk.supabase.co'),
+  VITE_SUPABASE_ANON_KEY: z.string().min(1).default('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5Ymtqc3VxY2locXpsYm5qanRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU1NTczNDgsImV4cCI6MjExMTEzMzM0OH0.KljNXJYN6G1hyw04caXm9Lt1jBrH_BbA7qcDjD4jQoo'),
   VITE_GOOGLE_MAPS_API_KEY: z.string().min(1).default('YOUR_MAPS_API_KEY'),
   VITE_RECAPTCHA_V3_SITE_KEY: z.string().min(1).default('YOUR_RECAPTCHA_V3_SITE_KEY'),
   VITE_RECAPTCHA_V2_SITE_KEY: z.string().min(1).default('YOUR_RECAPTCHA_V2_SITE_KEY'),
