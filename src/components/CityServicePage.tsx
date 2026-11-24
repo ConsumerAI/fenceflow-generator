@@ -11,8 +11,9 @@ import { serviceRouteMap } from '@/lib/routes';
 import { Button } from '@/components/ui/button';
 import SocialProof from '@/components/SocialProof';
 
+import StaticServiceContent from '@/components/StaticServiceContent';
+
 // Lazy load components that aren't immediately visible
-const DynamicContent = lazy(() => import('@/components/DynamicContent'));
 const PlanToPickets = lazy(() => import('@/components/PlanToPickets'));
 const ImageCarousel = lazy(() => import('@/components/ImageCarousel'));
 const Footer = lazy(() => import('@/components/Footer'));
@@ -113,6 +114,7 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
           name="description"
           content={`Expert fence installation in ${formattedCity}. Transform your space with ${String(serviceType).toLowerCase()} services from the area's top contractors. Get matched with your perfect fence pro today!`}
         />
+        <link rel="canonical" href={`https://fencestexas.com/${city}/${service}`} />
       </Helmet>
       
       <div className="min-h-screen flex flex-col">
@@ -174,19 +176,14 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
             </div>
           </section>
 
-          {/* Dynamic City-Specific Content */}
+          {/* Static City-Service Content (rendered at build time; replaces the
+              retired runtime AI-generation pipeline in DynamicContent) */}
           <section className="py-8 md:py-12 bg-gray-50">
             <div className="container mx-auto px-4">
-              <Suspense fallback={
-                <div className="py-8 flex justify-center">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-texas-terracotta"></div>
-                </div>
-              }>
-                <DynamicContent 
-                  cityName={formattedCity} 
-                  serviceName={serviceType}
-                />
-              </Suspense>
+              <StaticServiceContent
+                cityName={formattedCity}
+                serviceName={serviceType}
+              />
             </div>
           </section>
           

@@ -82,6 +82,14 @@ export default function ScrollToTop() {
   // Construct the canonical URL
   const canonicalUrl = `https://fencestexas.com${pathname}`;
   const metadata = getPageMetadata();
+
+  // Human-readable page name derived from the path. (This used to read
+  // document.title during render, which crashes build-time prerendering
+  // where no DOM exists.)
+  const pageName = (pathname.split('/').filter(Boolean).pop() ?? '')
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
   
   // Default FAQ schema for all pages
   const defaultFaqs: FAQItem[] = [
@@ -131,7 +139,7 @@ export default function ScrollToTop() {
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": document.title.split('|')[0].trim(),
+                "name": pageName,
                 "item": canonicalUrl
               }
             ]
