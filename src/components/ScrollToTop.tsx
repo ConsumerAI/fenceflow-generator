@@ -91,25 +91,14 @@ export default function ScrollToTop() {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
   
-  // Default FAQ schema for all pages
-  const defaultFaqs: FAQItem[] = [
-    {
-      question: "What areas do you service in Texas?",
-      answer: "We provide fence installation services across the entire Dallas/Fort Worth metroplex, including over 100 cities and communities."
-    },
-    {
-      question: "What types of fencing do you install?",
-      answer: "We install residential fencing, commercial fencing, athletic courts and sports facilities, access control systems, and automatic gates throughout the DFW area."
-    },
-    {
-      question: "How long does fence installation take?",
-      answer: "Most residential fence installations can be completed in 1-3 days, while commercial projects may take longer depending on the scope and complexity."
-    }
-  ];
-
-  // Check if we're on the homepage - if so, skip adding the FAQ schema here
-  // since Index.tsx already has its own FAQ schema
-  const isHomePage = pathname === '/';
+  // Structured data note (schema-spec, SEO cycle 1): this component emits
+  // only the BreadcrumbList below. The legacy LocalBusiness block
+  // (priceRange, opening hours, unapproved description) and the generic
+  // FAQPage block that used to live here were deleted, not edited: their
+  // facts failed the claims register. Claims-safe schema is generated per
+  // page by src/lib/schema.ts on the homepage, the service hubs and the
+  // rebuilt wave pages. Legacy pages carry no business or FAQ schema
+  // until their copy is rebuilt.
 
   return (
     <Helmet>
@@ -147,59 +136,6 @@ export default function ScrollToTop() {
         </script>
       )}
       
-      {/* Add schema.org LocalBusiness structured data to every page */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Fences Texas",
-          "description": metadata.description,
-          "email": "info@fencestexas.com",
-          "url": "https://fencestexas.com",
-          "areaServed": {
-            "@type": "City",
-            "name": "Dallas-Fort Worth Metroplex",
-            "address": {
-              "@type": "PostalAddress",
-              "addressRegion": "TX",
-              "addressCountry": "US"
-            }
-          },
-          "priceRange": "$$",
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "08:00",
-              "closes": "18:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "09:00",
-              "closes": "15:00"
-            }
-          ]
-        })}
-      </script>
-      
-      {/* Add FAQ Schema only for pages that don't have their own FAQ schema */}
-      {!isHomePage && !pathname.includes('commercial-fencing') && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": defaultFaqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-      )}
     </Helmet>
   );
 }

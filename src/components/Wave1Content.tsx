@@ -4,6 +4,15 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
 import { CityBreadcrumbs, CityLinkBlocks } from '@/components/CityLinkBlocks';
+import {
+  buildGraph,
+  businessNode,
+  webPageNode,
+  serviceNode,
+  faqPageNode,
+  SITE_URL,
+  type FaqItem,
+} from '@/lib/schema';
 import { Button } from '@/components/ui/button';
 import type { Wave1Page, PageSection, ContentBlock } from '@/data/wave1Content';
 
@@ -175,6 +184,63 @@ function Hero({ page }: { page: Wave1Page }) {
   );
 }
 
+/**
+ * Claims-safe structured data for rebuilt wave pages (schema-spec,
+ * src/lib/schema.ts). Register basis for the facts used:
+ * - One-call line inside the Service description: item 1, published
+ *   wording, fence and courts variants exactly as registered.
+ * - Business areaServed: the shared 50 city list, item 17 (coverage by
+ *   ZIP and job type still open, so schema claims only rebuilt cities).
+ * - Service areaServed: this page's city only.
+ * - FAQPage: generated from the same sections data that renders the
+ *   visible FAQs on this page (mirror rule), never hand written.
+ * - No price or priceRange anywhere: item 3, pricing lives only in the
+ *   calculator. No ratings, reviews, counts, hours or geo: banned list.
+ */
+function wavePageSchema(page: Wave1Page, canonicalPath: string): string {
+  const pageUrl = `${SITE_URL}${canonicalPath}`;
+  const faqs: FaqItem[] = page.sections
+    .flatMap((section) => section.blocks)
+    .filter((block): block is Extract<ContentBlock, { type: 'faqs' }> => block.type === 'faqs')
+    .flatMap((block) => block.items);
+
+  const isCourts = page.kind === 'courts';
+  const businessDescription = isCourts
+    ? `Fences Texas connects ${page.cityName} homeowners with a local court builder. You describe the yard and the game, a local builder measures it and quotes the real project, and you decide.`
+    : `Fences Texas connects ${page.cityName} homeowners with a local fence contractor. You describe the job once, he measures and quotes it, and you decide.`;
+  const service = isCourts
+    ? {
+        name: 'Sports Courts',
+        description:
+          `Backyard sports court building in ${page.cityName}. Send the form and ` +
+          'your builder will call within one business day to schedule your free visit. ' +
+          'After he measures, you get a free, written, itemized quote and you decide.',
+      }
+    : {
+        name: 'Residential Fencing',
+        description:
+          `Residential fence installation in ${page.cityName}. Run your footage through ` +
+          'the calculator on this page for a planning range, then send the form. ' +
+          'Your contractor will call within one business day to schedule your free measurement. ' +
+          'After he measures, you get a free, written, itemized quote and you decide.',
+      };
+
+  const nodes = [
+    businessNode(businessDescription),
+    webPageNode(pageUrl, page.metaTitle),
+    serviceNode({
+      pageUrl,
+      name: service.name,
+      description: service.description,
+      cityName: page.cityName,
+    }),
+  ];
+  if (faqs.length > 0) {
+    nodes.push(faqPageNode(pageUrl, faqs));
+  }
+  return buildGraph(nodes);
+}
+
 function Wave1Layout({ page, canonicalPath }: { page: Wave1Page; canonicalPath: string }) {
   return (
     <>
@@ -182,6 +248,7 @@ function Wave1Layout({ page, canonicalPath }: { page: Wave1Page; canonicalPath: 
         <title>{page.metaTitle}</title>
         <meta name="description" content={page.metaDescription} />
         <link rel="canonical" href={`https://fencestexas.com${canonicalPath}`} />
+        <script type="application/ld+json">{wavePageSchema(page, canonicalPath)}</script>
       </Helmet>
       <div className="min-h-screen flex flex-col">
         <Navbar />
