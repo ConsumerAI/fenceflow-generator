@@ -7,6 +7,8 @@
 // - estimate_calculated: a visitor produced a ballpark in the calculator
 // - lead_form_start: a visitor advanced past the estimate step
 // - generate_lead: a lead was successfully inserted (GA4 standard name)
+// - estimate_bar_tap: a visitor tapped the sticky mobile estimate bar
+//   (conversion round 2, Nov 25, 2026)
 // Qualified leads per 100 visitors = generate_lead count / GA4 sessions
 // or pageviews for the same page, once GA read access exists. Until then
 // the Supabase leads table is the ground truth for submissions.

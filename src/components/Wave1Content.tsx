@@ -134,6 +134,9 @@ function BodySection({ section, tinted }: { section: PageSection; tinted: boolea
 function Hero({ page }: { page: Wave1Page }) {
   const hero = page.sections[0];
   const proof = PROOF_PHOTOS[page.kind];
+  // The sticky mobile bar speaks in the page's own hero CTA copy.
+  const heroCta = hero.blocks.find((block) => block.type === 'cta');
+  const heroCtaLabel = heroCta && heroCta.type === 'cta' ? heroCta.label : undefined;
   return (
     <section className="py-16 md:py-20 bg-secondary/10">
       <div className="container mx-auto px-4 md:px-8">
@@ -176,7 +179,7 @@ function Hero({ page }: { page: Wave1Page }) {
             )}
           </div>
           <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
-            <LeadForm city={page.cityName} pageKind={page.kind} screenParas={page.screenBlock?.paras ?? null} />
+            <LeadForm city={page.cityName} pageKind={page.kind} screenParas={page.screenBlock?.paras ?? null} stickyBar stickyLabel={heroCtaLabel} />
           </div>
         </div>
       </div>
