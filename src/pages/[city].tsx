@@ -16,32 +16,34 @@ import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
 import { ServiceInfo } from '@/lib/types';
 import SocialProof from '@/components/SocialProof';
+import { getWave1Page } from '@/data/wave1Content';
+import { Wave1CityLayout } from '@/components/Wave1Content';
 
 // Service data
 const services: ServiceInfo[] = [{
   title: "Residential Fencing",
   description: "Beautiful, durable fencing solutions for homes across DFW, enhancing privacy, security, and property value.",
-  icon: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/6d4752ad-e781-4bec-92ec-b07a9dc74a07/Board+on+Board+with+Trim+and+Cap.jpg",
+  icon: "/images/residential-board-on-board.jpg",
   benefits: ["Classic wood fences with Texas craftsmanship", "Elegant iron and aluminum designs", "Privacy fences with premium materials", "Pool enclosures meeting safety codes", "Custom gates with optional automation"]
 }, {
   title: "Commercial Fencing",
   description: "Secure, professional fencing for businesses, industrial sites, and commercial properties throughout the metroplex.",
-  icon: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4d9c257b-d4c7-4206-8aa5-22623aa2f863/301399581_23852070435550391_1586117276639848672_n.jpg",
+  icon: "/images/commercial-fencing.jpg",
   benefits: ["High-security perimeter fencing", "Decorative commercial frontage", "Industrial-grade materials", "Property line demarcation", "Code-compliant installations"]
 }, {
   title: "Athletic Courts and Sports Facilities",
   description: "Specialized fencing for tennis courts, basketball courts, and other recreational areas with durability in mind.",
-  icon: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/1709258995381-OZJ85PI1IF9KHG170S1W/GettyImages-145988391.jpg",
+  icon: "/images/pickleball-complex.jpg",
   benefits: ["Ball containment systems", "Wind screens and privacy panels", "Custom heights and configurations", "Specialized gates for easy access", "Weather-resistant materials"]
 }, {
   title: "Access Control",
   description: "Custom gate solutions for controlled entry points, enhancing security while adding aesthetic appeal.",
-  icon: "/lovable-uploads/223b3ff5-7edb-4b9f-8993-449414f2518b.png",
+  icon: "/images/automatic-gate-star.jpg",
   benefits: ["Custom entry gates", "Pedestrian access points", "Matching fence-gate combinations", "Heavy-duty commercial gates", "Decorative and functional designs"]
 }, {
   title: "Automatic Gates",
   description: "Sophisticated automated gate systems for convenient access control with remote operation and smart features.",
-  icon: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/7426f5b7-ded7-4a47-bc45-c4cb46fec966/star+gate.jpg",
+  icon: "/images/automatic-gate-star.jpg",
   benefits: ["Remote control operation", "Keypad and card reader integration", "Smartphone connectivity options", "Safety sensors and features", "Battery backup systems"]
 }];
 
@@ -75,6 +77,12 @@ const CityPage = () => {
         return;
       }
 
+      // Wave 1 cities render locked static copy; no runtime content fetch.
+      if (getWave1Page(city)) {
+        setIsLoading(false);
+        return;
+      }
+
       try {
         // Try to get content from cache first
         const cachedContent = await supabaseInstance.getCachedContent(`/${city.toLowerCase()}`);
@@ -104,6 +112,12 @@ const CityPage = () => {
 
   if (!city || !isCityValid(city)) {
     return <NotFound />;
+  }
+
+  // Wave 1: locked v5 copy replaces the template for these cities.
+  const wave1Page = getWave1Page(city);
+  if (wave1Page) {
+    return <Wave1CityLayout page={wave1Page} />;
   }
 
   // Format city name for display (e.g., "dallas" -> "Dallas")
