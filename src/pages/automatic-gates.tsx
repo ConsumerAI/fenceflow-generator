@@ -10,30 +10,19 @@ import SocialProof from '@/components/SocialProof';
 
 const AutomaticGatesPage = () => {
   // Images for the gallery
+  // Self-hosted partner photos (wave 1 photo library), descriptive alts only
   const gateImages = [
     {
-      src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/f8b4f6b6-0ac3-4f7f-a7af-a0c13c99239c/Driveway+Gate.jpg",
-      alt: "Elegant Driveway Gate"
+      src: "/images/automatic-gate-star.jpg",
+      alt: "Black wrought-iron double swing driveway gate with Texas star medallions"
     },
     {
-      src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/4cabda6a-733c-41cf-883a-9aa081d48d44/Driveway+Gate%2C+Iron%2C+Solar.jpg",
-      alt: "Iron Driveway Gate with Solar Power"
+      src: "/images/commercial-fencing.jpg",
+      alt: "Black ornamental steel picket fence enclosing a playground in front of a brick institutional building"
     },
     {
-      src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/d7bbea15-3b91-480c-82b4-d3578aaa54f9/Gate%2C+Wrought+Iron%2C+Driveway%2C+2500px.jpg",
-      alt: "Wrought Iron Driveway Gate"
-    },
-    {
-      src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/ba1e4023-2b96-495d-b30b-ddfcf4d62b93/Gate%2C+Wrought+Iron%2C+Commercial%2C+720px.jpg",
-      alt: "Wrought Iron Commercial Gate"
-    },
-    {
-      src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/2433a5f7-7d8b-45bb-add3-55c0dfdcee86/Double+Gate+with+Doggie+Bubble+Wood.jpg",
-      alt: "Double Gate with Doggie Bubble in Wood"
-    },
-    {
-      src: "https://images.squarespace-cdn.com/content/v1/60e487658384ee39ddeb139d/d37a2302-6605-4b39-992c-34349517b12b/Driveway+Gate%2C+Wood.jpg",
-      alt: "Wooden Driveway Gate"
+      src: "/images/residential-board-on-board.jpg",
+      alt: "Board-on-board cedar privacy fence with trim and cap rail on a stone base in a suburban backyard"
     }
   ];
 
