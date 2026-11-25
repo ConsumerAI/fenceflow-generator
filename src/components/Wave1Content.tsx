@@ -176,7 +176,7 @@ function Hero({ page }: { page: Wave1Page }) {
             )}
           </div>
           <div className="lg:ml-auto w-full max-w-lg animate-fade-in">
-            <LeadForm city={page.cityName} />
+            <LeadForm city={page.cityName} pageKind={page.kind} screenParas={page.screenBlock?.paras ?? null} />
           </div>
         </div>
       </div>
@@ -262,7 +262,7 @@ function Wave1Layout({ page, canonicalPath }: { page: Wave1Page; canonicalPath: 
           <section className="py-16 md:py-20 bg-texas-terracotta/10">
             <div className="container mx-auto px-4">
               <div className="max-w-lg mx-auto">
-                <LeadForm city={page.cityName} />
+                <LeadForm city={page.cityName} pageKind={page.kind} screenParas={page.screenBlock?.paras ?? null} />
               </div>
             </div>
           </section>

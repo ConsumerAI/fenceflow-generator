@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,12 +10,23 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { toast } from '@/hooks/use-toast';
 import { Lead, ServiceType } from '@/lib/types';
 import { supabase, supabaseInstance } from '@/lib/supabase';
-import FenceCalculator, { CalculatorFormData } from './FenceCalculator';
+import FenceCalculator, { CalculatorFormData, CalculatorResult } from './FenceCalculator';
 import AddressAutocomplete from './AddressAutocomplete';
-import { MapPin, Fence, Star, ArrowRight, Lock, Calendar, Users } from 'lucide-react';
+import { MapPin, Lock, ArrowRight, ArrowLeft } from 'lucide-react';
 import ProgressBar from './ProgressBar';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
 import SocialProof from '@/components/SocialProof';
+import { trackEvent } from '@/lib/analytics';
+
+// Conversion pass (Nov 25, 2026): the estimate is step 1, not a reward for
+// finishing the form. Flow is now:
+//   Step 1: "What do you need?" chips + the calculator (residential) + ZIP.
+//   Step 2: service type, timeline, project details.
+//   Step 3: name, phone, email, address (ZIP first, address last, per the
+//           form addendum), then submit.
+// The submission payload keys and the Supabase path are unchanged. The
+// project-need answer rides in the existing message field as a labeled
+// first line, so the lead record needs no new column.
 
 const formSchema = z.object({
   zipCode: z.string().min(5, {
@@ -43,23 +54,35 @@ const formSchema = z.object({
   website: z.string()
 });
 
+const PROJECT_NEEDS = ['New fence', 'Full replacement', 'Partial replacement', 'Not sure'] as const;
+type ProjectNeed = typeof PROJECT_NEEDS[number];
+
 interface LeadFormProps {
   city?: string;
   variant?: 'default' | 'minimal';
   className?: string;
   service_type?: ServiceType;
+  // Wave pages pass their kind so courts pages get builder wording.
+  pageKind?: 'residential' | 'courts';
+  // The page's locked v5 screen copy (estimate results bridge on fence
+  // pages, quote bridge on the courts page), from the wave data.
+  screenParas?: string[] | null;
 }
 
 const LeadForm = ({
   city = 'DFW',
   variant = 'default',
   className = '',
-  service_type
+  service_type,
+  pageKind,
+  screenParas
 }: LeadFormProps) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isShaking, setIsShaking] = useState(false);
+  const [projectNeed, setProjectNeed] = useState<ProjectNeed | null>(null);
+  const [needError, setNeedError] = useState(false);
   const [fenceDetails, setFenceDetails] = useState<{
     linear_feet?: number;
     fence_material?: CalculatorFormData['fence_material'];
@@ -68,6 +91,8 @@ const LeadForm = ({
       max: number;
     };
   }>({});
+  const trackedEstimateRef = useRef(false);
+  const trackedStartRef = useRef(false);
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -105,7 +130,10 @@ const LeadForm = ({
       address: '',
       message: '',
       preferred_timeline: undefined,
-      service_type: service_type,
+      // Default to residential when the page does not preset a service, so
+      // the calculator is visible from the first step instead of hiding
+      // behind a dropdown choice. Courts pages default to courts.
+      service_type: service_type ?? (pageKind === 'courts' ? ServiceType.AthleticCourts : ServiceType.ResidentialFencing),
       website: ''
     },
     mode: 'onSubmit'
@@ -113,28 +141,79 @@ const LeadForm = ({
 
   const serviceType = form.watch('service_type');
   const isResidential = serviceType === ServiceType.ResidentialFencing;
+  const isCourts = pageKind === 'courts' || serviceType === ServiceType.AthleticCourts;
 
-  const handleNextStep = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const values = form.getValues();
-    if (currentStep === 1) {
-      if (!values.zipCode || values.zipCode.length < 5) {
-        form.setError('zipCode', {
-          message: 'Valid ZIP code is required'
-        });
-        return;
-      }
-    } else if (currentStep === 2) {
-      if (!values.service_type || !values.preferred_timeline) {
-        toast({
-          title: "Required Fields",
-          description: "Please fill in all required fields before continuing.",
-          variant: "destructive"
-        });
-        return;
-      }
+  // The chips and calculator belong to the residential flow. When the page
+  // presets a non-residential service, step 1 is ZIP plus the quote bridge.
+  const showResidentialTools = pageKind !== 'courts' && (!service_type || service_type === ServiceType.ResidentialFencing);
+
+  const callLine = isCourts
+    ? 'Your builder will call within one business day to schedule your free visit.'
+    : 'Your contractor will call within one business day to schedule your free measurement.';
+  const quoteCta = isCourts ? 'Get my free quote' : 'Get my free fence quote';
+  const formTitle = isCourts
+    ? 'Get my free court quote'
+    : showResidentialTools
+      ? 'Estimate my fence cost'
+      : 'Get my free quote';
+  const formSubtitle = isCourts
+    ? 'Tell us about the yard and the game. No obligation.'
+    : showResidentialTools
+      ? 'Start with a ballpark for your yard. No phone number needed for the estimate.'
+      : 'Tell us about the project. No obligation.';
+
+  const handleCalculate = useCallback((calculatorData: CalculatorResult | null) => {
+    if (calculatorData === null) {
+      setFenceDetails({});
+      return;
     }
-    setCurrentStep(prev => prev + 1);
+    if (!trackedEstimateRef.current) {
+      trackedEstimateRef.current = true;
+      trackEvent('estimate_calculated', { city, service_type: 'Residential Fencing' });
+    }
+    setFenceDetails(calculatorData);
+  }, [city]);
+
+  const goToStep = (step: number) => {
+    if (step > 1 && !trackedStartRef.current) {
+      trackedStartRef.current = true;
+      trackEvent('lead_form_start', { city });
+    }
+    setCurrentStep(step);
+  };
+
+  const validateStep1 = (): boolean => {
+    const values = form.getValues();
+    let ok = true;
+    if (!values.zipCode || values.zipCode.length < 5) {
+      form.setError('zipCode', {
+        message: 'Valid ZIP code is required'
+      });
+      ok = false;
+    }
+    if (showResidentialTools && !projectNeed) {
+      setNeedError(true);
+      ok = false;
+    }
+    return ok;
+  };
+
+  const validateStep2 = (): boolean => {
+    const values = form.getValues();
+    let ok = true;
+    if (!values.service_type) {
+      form.setError('service_type', {
+        message: 'Please select a service type'
+      });
+      ok = false;
+    }
+    if (!values.preferred_timeline) {
+      form.setError('preferred_timeline', {
+        message: 'Please select your preferred timeline'
+      });
+      ok = false;
+    }
+    return ok;
   };
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
@@ -197,6 +276,11 @@ const LeadForm = ({
         website,
         ...submitData
       } = values;
+      // The project-need answer rides in the existing message field as a
+      // labeled first line. Payload keys are unchanged.
+      const composedMessage = projectNeed
+        ? [`Project type: ${projectNeed}.`, submitData.message || ''].filter(Boolean).join('\n')
+        : (submitData.message || '');
       const leadData: Lead = {
         name: submitData.name,
         email: submitData.email,
@@ -204,7 +288,7 @@ const LeadForm = ({
         address: submitData.address || '',
         service_type: submitData.service_type,
         preferred_timeline: submitData.preferred_timeline,
-        message: submitData.message || '',
+        message: composedMessage,
         city: city,
         zip_code: submitData.zipCode,
         recaptcha_v3_token: v3Token,
@@ -226,8 +310,13 @@ const LeadForm = ({
         throw new Error(submitError || 'Failed to submit lead. Please try again.');
       }
       console.log('Lead submitted successfully!');
+      trackEvent('generate_lead', {
+        city,
+        service_type: submitData.service_type,
+        project_type: projectNeed ?? 'not specified'
+      });
       form.reset();
-      setFenceDetails(null);
+      setFenceDetails({});
       setIsSuccess(true);
     } catch (error) {
       console.error('Form submission error:', error);
@@ -247,21 +336,12 @@ const LeadForm = ({
     }
   };
 
-  const handleCalculate = useCallback((calculatorData: {
-    linear_feet: number;
-    fence_material: CalculatorFormData['fence_material'];
-    estimatedCost: {
-      min: number;
-      max: number;
-    };
-  }) => {
-    setFenceDetails(calculatorData);
-  }, []);
-
   const formClasses = `glass-card p-6 md:p-8 ${isShaking ? 'animate-shake' : ''} ${className} 
     bg-white bg-opacity-95 backdrop-blur-sm shadow-xl`;
 
   const buttonBaseClasses = "w-full bg-texas-terracotta hover:bg-texas-earth text-white flex items-center justify-center transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]";
+
+  const stepLabels = ['Your estimate', 'Project details', 'Your details'];
 
   if (isSuccess) {
     return <div className={formClasses}>
@@ -271,9 +351,8 @@ const LeadForm = ({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold mb-2">🎯 SUCCESS! YOUR PERFECT CONTRACTOR MATCH IS ON THE WAY</h2>
-          <p className="text-gray-600 mb-6">Your exclusive fence match is being arranged right now</p>
-          <p className="text-gray-600 mb-6">We've already started connecting you with your dedicated fence specialist. They're being notified about your project as we speak!</p>
+          <h2 className="text-2xl font-bold mb-2">Your request is in</h2>
+          <p className="text-gray-600 mb-6">{callLine}</p>
         </div>
 
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
@@ -281,62 +360,67 @@ const LeadForm = ({
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="mr-2">1.</span>
-              <span>Expect a call within 24 hours from a local number (that's your new fence contractor!)</span>
+              <span>{callLine} On that call he goes over your details and sets the time, nothing more.</span>
             </li>
             <li className="flex items-start">
               <span className="mr-2">2.</span>
-              <span>Your contractor will discuss your specific fence needs and provide a personalized quote</span>
+              <span>{isCourts
+                ? 'He walks your yard, checks the footprint and access, and prices the whole project in writing, each part on its own line.'
+                : 'He measures your fence line and gives you a free, written, itemized quote that spells out gates, removal, and any required permit.'}</span>
             </li>
             <li className="flex items-start">
               <span className="mr-2">3.</span>
-              <span>This is an exclusive match - we've carefully selected just one top-rated professional for your project (we don't pass your info to every contractor in the country like other sites 😊, don't you hate that?)</span>
-            </li>
-          </ul>
-        </div>
-
-        <div className="bg-gray-50 p-6 rounded-lg mb-8">
-          <h3 className="font-bold flex items-center mb-4">
-            <span className="mr-2">💡</span>
-            Why customers love our fence specialists:
-          </h3>
-          <ul className="space-y-3">
-            <li className="flex items-center">
-              <Star className="w-5 h-5 mr-2 text-yellow-500" />
-              <span>Prompt service - 93% of our specialists respond within hours, not days</span>
-            </li>
-            <li className="flex items-center">
-              <Star className="w-5 h-5 mr-2 text-yellow-500" />
-              <span>Quality craftsmanship - Average rating of 4.8/5 from verified customers</span>
-            </li>
-            <li className="flex items-center">
-              <Star className="w-5 h-5 mr-2 text-yellow-500" />
-              <span>Fair pricing - No obligation, transparent quotes with no hidden fees</span>
+              <span>The written number is yours to keep whether you build or not. You decide.</span>
             </li>
           </ul>
         </div>
 
         <div className="text-center text-gray-600">
-          <p className="mb-2">Answer calls from local numbers in the next 24 hours - your dedicated fence specialist is eager to help with your project!</p>
-          <p>We've also sent these details to your email for easy reference</p>
+          <p className="mb-2">No robocalls, no selling your number, no pressure to sign anything.</p>
+          <p>Every matched contractor backs the work with a one-year workmanship warranty in writing.</p>
         </div>
       </div>;
   }
 
+  // Courts pages have no calculator, so their locked quote bridge copy
+  // renders in step 1 where the estimate would sit.
+  const renderCourtsBridge = () => {
+    if (!screenParas || screenParas.length === 0) return null;
+    return (
+      <div className="p-4 bg-white border border-secondary rounded-md">
+        {screenParas.map((para, i) => {
+          if (para.startsWith('*') && para.endsWith('*') && !para.startsWith('**')) {
+            return (
+              <p key={i} className="text-xs text-muted-foreground mt-3 italic">
+                {para.slice(1, -1)}
+              </p>
+            );
+          }
+          const text = para.replace(/\*\*([^*]+)\*\*/g, '$1');
+          return (
+            <p key={i} className={i === 0 ? 'text-sm text-muted-foreground leading-relaxed' : 'text-sm text-muted-foreground mt-3 leading-relaxed'}>
+              {text}
+            </p>
+          );
+        })}
+      </div>
+    );
+  };
+
   return <>
       <div className={formClasses} id="quote">
         <div className="rounded-t-xl bg-texas-terracotta text-white p-6 -mx-6 -mt-6 md:-mx-8 md:-mt-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Get Your Perfect Fence Match™</h2>
-          <p className="text-white/90">Takes only 15 seconds to complete</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">{formTitle}</h2>
+          <p className="text-white/90">{formSubtitle}</p>
         </div>
-        
+
         <div className="-mx-6 md:-mx-8">
           <ProgressBar currentStep={currentStep} totalSteps={3} />
         </div>
-        
-        <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mt-4 mb-6">
-          <Users className="h-4 w-4" />
-          <span>Homeowners near you get matched with their perfect contractor</span>
-        </div>
+
+        <p className="text-center text-sm text-muted-foreground mt-4 mb-6">
+          Step {currentStep} of 3: {stepLabels[currentStep - 1]}
+        </p>
 
         <Form {...form}>
           <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-4">
@@ -351,30 +435,54 @@ const LeadForm = ({
             </div>
 
             {currentStep === 1 && <>
+                {showResidentialTools && <>
+                  <div>
+                    <p className="text-sm font-medium leading-none mb-3">What do you need?</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {PROJECT_NEEDS.map(need => (
+                        <button
+                          key={need}
+                          type="button"
+                          aria-pressed={projectNeed === need}
+                          onClick={() => { setProjectNeed(need); setNeedError(false); }}
+                          className={`h-[48px] px-3 rounded-md border text-sm font-medium transition-colors ${
+                            projectNeed === need
+                              ? 'bg-texas-terracotta text-white border-texas-terracotta'
+                              : 'bg-white text-foreground border-input hover:border-texas-terracotta'
+                          }`}
+                        >
+                          {need}
+                        </button>
+                      ))}
+                    </div>
+                    {needError && <p className="text-sm font-medium text-destructive mt-2">Pick the one closest to your project. You can sort out the details on the call.</p>}
+                  </div>
+
+                  <FenceCalculator
+                    onCalculate={handleCalculate}
+                    bridgeParas={screenParas}
+                    onBridgeCta={() => { if (validateStep1()) goToStep(2); }}
+                    projectNeed={projectNeed ?? undefined}
+                  />
+                </>}
+
+                {!showResidentialTools && renderCourtsBridge()}
+
                 <FormField control={form.control} name="zipCode" render={({
               field
             }) => <FormItem>
                       <FormLabel>What's your ZIP code?</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter ZIP code" {...field} />
+                        <Input placeholder="Enter ZIP code" inputMode="numeric" autoComplete="postal-code" {...field} />
                       </FormControl>
                       <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
-                        <span>Your ZIP code helps us find the best local match</span>
-                        <MapPin className="h-4 w-4" />
+                        <span>Your ZIP routes your request to the contractor who covers your area</span>
+                        <MapPin className="h-4 w-4 shrink-0" />
                       </div>
                       <FormMessage />
                     </FormItem>} />
-                <Button type="button" onClick={() => {
-              const zipCode = form.getValues('zipCode');
-              if (!zipCode || zipCode.length < 5) {
-                form.setError('zipCode', {
-                  message: 'Valid ZIP code is required'
-                });
-                return;
-              }
-              setCurrentStep(2);
-            }} className={buttonBaseClasses}>
-                  View Fence Options
+                <Button type="button" onClick={() => { if (validateStep1()) goToStep(2); }} className={buttonBaseClasses}>
+                  {quoteCta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <p className="text-center text-sm text-muted-foreground mt-4">
@@ -402,21 +510,13 @@ const LeadForm = ({
                             </SelectItem>)}
                         </SelectContent>
                       </Select>
-                      <div className="mt-2 text-sm text-muted-foreground">
-                        We'll match you with specialists based on your exact project requirements
-                      </div>
                       <FormMessage />
                     </FormItem>} />
-
-                {isResidential && <FenceCalculator onCalculate={handleCalculate} />}
 
                 <FormField control={form.control} name="preferred_timeline" render={({
               field
             }) => <FormItem>
-                      <FormLabel className="flex items-center gap-2">
-                        Preferred Timeline
-                        <Calendar className="h-4 w-4 text-muted-foreground" />
-                      </FormLabel>
+                      <FormLabel>Preferred Timeline</FormLabel>
                       <Select onValueChange={value => {
                 field.onChange(value);
                 form.clearErrors('preferred_timeline');
@@ -441,33 +541,26 @@ const LeadForm = ({
             }) => <FormItem>
                       <FormLabel>Project Details (Optional)</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Tell us more about your project..." className="resize-none" {...field} />
+                        <Textarea
+                          placeholder={projectNeed === 'Partial replacement'
+                            ? 'Which side is failing? Anything else your contractor should know?'
+                            : 'Anything your contractor should know? A gate that sticks, a dog, an HOA letter, it all helps.'}
+                          className="resize-none"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>} />
 
-                <Button type="button" onClick={() => {
-              const values = form.getValues();
-              if (!values.service_type || !values.preferred_timeline) {
-                if (!values.service_type) {
-                  form.setError('service_type', {
-                    message: 'Please select a service type'
-                  });
-                }
-                if (!values.preferred_timeline) {
-                  form.setError('preferred_timeline', {
-                    message: 'Please select your preferred timeline'
-                  });
-                }
-                return;
-              }
-              setCurrentStep(3);
-            }} className={buttonBaseClasses}>
-                  Save Project & Continue
+                <Button type="button" onClick={() => { if (validateStep2()) goToStep(3); }} className={buttonBaseClasses}>
+                  Continue
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <p className="text-center text-sm text-foreground mt-2">
-                  ⚡ 86% of users complete this form once reaching this step - you're almost there!
+                <button type="button" onClick={() => setCurrentStep(1)} className="w-full text-sm text-muted-foreground underline underline-offset-2 flex items-center justify-center gap-1">
+                  <ArrowLeft className="h-3 w-3" /> Back to your estimate
+                </button>
+                <p className="text-center text-sm text-muted-foreground mt-2">
+                  One step left: your contact details, so your contractor can call with the measurement time.
                 </p>
               </>}
 
@@ -478,38 +571,38 @@ const LeadForm = ({
               }) => <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input placeholder="Your name" autoComplete="name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>} />
-                  
+
                   <FormField control={form.control} name="phone" render={({
                 field
               }) => <FormItem>
                         <FormLabel>Phone</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your phone number" {...field} />
+                          <Input placeholder="Your phone number" autoComplete="tel" {...field} />
                         </FormControl>
                         <div className="mt-1 text-sm text-muted-foreground">
-                          Your contractor calls to schedule the measurement.
+                          Your contractor calls this number to schedule the measurement. No robocalls, and we never sell your number.
                         </div>
                         <FormMessage />
                       </FormItem>} />
                 </div>
-                
+
                 <FormField control={form.control} name="email" render={({
               field
             }) => <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your email address" {...field} />
+                        <Input placeholder="Your email address" autoComplete="email" {...field} />
                       </FormControl>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        No spam, ever. We Promise.
+                        Your written quote goes here. No spam, ever.
                       </div>
                       <FormMessage />
                     </FormItem>} />
-                
+
                 <FormField control={form.control} name="address" render={({
               field
             }) => <FormItem>
@@ -517,6 +610,9 @@ const LeadForm = ({
                       <FormControl>
                         <AddressAutocomplete value={field.value} onChange={field.onChange} placeholder="Property address" />
                       </FormControl>
+                      <div className="mt-1 text-sm text-muted-foreground">
+                        So the contractor measures the right yard. Your ZIP already routed the request; the address is only for scheduling the visit.
+                      </div>
                       <FormMessage />
                     </FormItem>} />
 
@@ -531,12 +627,15 @@ const LeadForm = ({
                     console.error('Form submission error:', error);
                   }
                 }} disabled={isSubmitting} className={buttonBaseClasses}>
-                  Secure the Best Contractor Now
+                  {quoteCta}
                   <Lock className="ml-2 h-4 w-4" />
                 </Button>
+                <button type="button" onClick={() => setCurrentStep(2)} className="w-full text-sm text-muted-foreground underline underline-offset-2 flex items-center justify-center gap-1">
+                  <ArrowLeft className="h-3 w-3" /> Back to project details
+                </button>
 
                 <p className="text-center text-sm text-foreground mt-2">
-                  ⏱️ Top contractors in your area typically book up within 24-48 hours
+                  Free. No obligation. {callLine}
                 </p>
 
                 <p className="text-center text-sm text-muted-foreground mt-4">
