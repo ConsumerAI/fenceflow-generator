@@ -11,7 +11,7 @@ export interface Lead {
   city: string;
   zip_code: string;
   linear_feet?: number;
-  fence_material?: "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)";
+  fence_material?: "Cedar (Most Common)" | "Iron" | "Pipe" | "Pool Mesh" | "Economy (Pine)" | "Not sure yet";
   "Estimated Cost Quote"?: string;
   recaptcha_v3_token?: string;
   recaptcha_v3_score?: number;
