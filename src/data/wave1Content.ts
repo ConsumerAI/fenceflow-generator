@@ -61,11 +61,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "You run the estimate, then send the form.",
-                "text": "Rough footage, new fence or replacement, your address. The ballpark comes first, no phone number needed, and Get my free fence quote is the button that sends it."
+                "text": "Rough footage, new fence or replacement, your address. The ballpark comes first, no phone number needed, and sending the form gets your job to a local contractor."
               },
               {
-                "title": "Fences Texas calls you first.",
-                "text": "We confirm the details. Then your contractor calls to schedule the measurement."
+                "title": "Your contractor calls to schedule the measurement.",
+                "text": "He goes over the details with you and books the visit."
               },
               {
                 "title": "You get the itemized quote.",
@@ -145,7 +145,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That first call is us confirming your details, nothing more. No robocalls, no selling your number to a call center, no pressure to sign anything. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On that call he goes over your details and sets the time to measure, nothing more. No robocalls, no selling your number to a call center, no pressure to sign anything. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -182,7 +182,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "How does matching work, and what does it cost me?",
-                "a": "Nothing. You describe the job once, we match you with a local contractor who wants the work, and you get an itemized quote. Fences Texas calls you first to confirm the details; the contractor calls after that, about scheduling the measurement. You pay only the contractor you hire, and only for the fence. If the quote comes in too high, you do not hire him, and the quote cost you nothing."
+                "a": "Nothing. You describe the job once, we match you with a local contractor who wants the work, and you get an itemized quote. Your contractor calls about the details and scheduling the measurement. You pay only the contractor you hire, and only for the fence. If the quote comes in too high, you do not hire him, and the quote cost you nothing."
               },
               {
                 "q": "My fence is only bad on one side. Can I replace part of it?",
@@ -214,7 +214,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
         "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
         "**[Get my free fence quote]**",
-        "*Fences Texas calls first to confirm your project. Then your contractor calls to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -256,11 +256,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Send the form after you see the ballpark.",
-                "text": "The estimate runs on your footage, no phone number asked. When the range looks workable, the button labeled Get my free fence quote passes the job along."
+                "text": "The estimate runs on your footage, no phone number asked. When the range looks workable, send your details in to request your free quote."
               },
               {
-                "title": "The first call is from Fences Texas.",
-                "text": "We walk through the details, and after that the contractor rings you to set the measuring visit."
+                "title": "The contractor rings you.",
+                "text": "He walks through the details with you and sets the measuring visit on that same call."
               },
               {
                 "title": "Then comes the written quote.",
@@ -344,7 +344,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once your form is in: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That call is a details check, nothing more. Nobody from a call center will ever ring you about it, and nothing obligates you to buy. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Once your form is in: Your contractor will call within one business day to schedule your free measurement. On that call he checks the details with you, nothing more. Nobody from a call center will ever ring you about it, and nothing obligates you to buy. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -376,11 +376,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "I have a few acres outside the subdivisions. Is that a different kind of job?",
-                "a": "Yes. Line fencing on acreage is usually pipe rail, gates need room to pull a vehicle off the road before opening them, and runs of 300 feet and up are normal. Describe the property in the form, and say it is acreage. The confirmation call sorts out who can take it, and if it sits outside the coverage we have today, you will hear that on the call instead of waiting on one that never comes."
+                "a": "Yes. Line fencing on acreage is usually pipe rail, gates need room to pull a vehicle off the road before opening them, and runs of 300 feet and up are normal. Describe the property in the form, and say it is acreage. The contractor's call sorts out whether he can take it, and if it sits outside the coverage we have today, you will hear that on the call instead of waiting on one that never comes."
               },
               {
                 "q": "What does matching cost me?",
-                "a": "Nothing at all. One form, one local contractor matched to your job, one itemized quote to judge. Fences Texas calls first to confirm the details, then the contractor calls about the measurement. You pay the contractor you hire, and nobody else. Too high? Then you pass. The quote was free, and it stays free either way."
+                "a": "Nothing at all. One form, one local contractor matched to your job, one itemized quote to judge. Your contractor calls to go over the details and talk about the measurement. You pay the contractor you hire, and nobody else. Too high? Then you pass. The quote was free, and it stays free either way."
               }
             ]
           }
@@ -408,7 +408,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The range on your screen comes from two things only: your footage and your material. It has never seen your yard, so it cannot account for the gates you need, for pulling out and hauling off an old fence, or for any required permit. Those are the lines that separate an estimate from a price.",
         "**Want the firm number for your yard?** A Sherman contractor will come measure the line and hand you a free written quote with gates, removal, and any required permit spelled out.",
         "**[Get my free fence quote]**",
-        "*The first call is Fences Texas, confirming your project. The contractor calls next to book the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -453,8 +453,8 @@ export const wave1Pages: Record<string, Wave1Page> = {
                 "text": "A close guess at length is plenty, plus whether the fence is new or a replacement. No phone needed here. If the range works, hit Get my free fence quote."
               },
               {
-                "title": "We ring you before he does.",
-                "text": "Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement."
+                "title": "Your contractor rings you to book the visit.",
+                "text": "He calls within one business day to go over the job and schedule the measurement."
               },
               {
                 "title": "Read the written quote at your kitchen table.",
@@ -534,7 +534,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "That first call is short, just a details check. Your number goes to us and the one contractor matched to your job, nowhere else. It never gets sold, and no phone bank will start calling about fences. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Your contractor will call within one business day to schedule your free measurement. That call is short, just a details check and a time set for the visit. Your number goes to us and the one contractor matched to your job, nowhere else. It never gets sold, and no phone bank will start calling about fences. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -607,7 +607,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The number on your screen was built from two inputs, your footage and your material, and from nothing in your actual yard. It cannot see how many gates your layout needs, whether a tired fence has to be torn out and hauled away first, or whether your height and lot trigger any required permit. Those unknowns are exactly where a ballpark stops and a price begins.",
         "**Ready for the firm number on your lot?** A Fort Worth contractor will measure the line at your house and give you a free written quote with gates, removal, and any required permit spelled out.",
         "**[Get my free fence quote]**",
-        "*Expect two calls, in this order: Fences Texas first, to confirm the project, then the contractor, to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -649,11 +649,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Run the numbers, then send the form.",
-                "text": "The estimate works off your footage and asks for no phone number. When the range looks reasonable, Get my free fence quote puts your job in front of us."
+                "text": "The estimate works off your footage and asks for no phone number. When the range looks reasonable, send the form to request your free quote."
               },
               {
-                "title": "Our confirmation call comes first.",
-                "text": "Fences Texas rings you to go over the job, and only after that does the contractor call to book the measurement."
+                "title": "Your contractor calls to book the measurement.",
+                "text": "He rings you to go over the job and pick a time to come out and measure."
               },
               {
                 "title": "A written quote follows the visit.",
@@ -707,7 +707,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "One wrinkle: Pantego and Dalworthington Gardens sit inside Arlington on the map but are separate towns with their own permitting. If your house is in one, say so in the form and the confirmation call sorts out which rules apply. Utility lines get located through 811 before digging, and on a replacement the old fence is hauled off as part of the quoted work."
+            "text": "One wrinkle: Pantego and Dalworthington Gardens sit inside Arlington on the map but are separate towns with their own permitting. If your house is in one, say so in the form and the contractor's call sorts out which rules apply. Utility lines get located through 811 before digging, and on a replacement the old fence is hauled off as part of the quoted work."
           }
         ]
       },
@@ -733,7 +733,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That first call only confirms what you sent us. We do not robocall, we do not sell your number, and nobody will chase you if you pass. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. He has read your form before he dials, so the conversation is about your fence, and it ends with a measuring visit booked. We do not robocall, we do not sell your number, and nobody will chase you if you pass. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -806,7 +806,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The estimate was calculated from the footage and material you typed in. It has not seen your lot, so it cannot count the gates your layout calls for, charge for tearing out and hauling off a fence that is already there, or allow for any required permit. Those are the three items that most often move a job off its ballpark.",
         "**Want the price nailed down for your address?** An Arlington contractor will come out, measure the line, and leave you a free written quote that separates gates, removal, and any required permit.",
         "**[Get my free fence quote]**",
-        "*Two calls follow, in order: Fences Texas to confirm your project, then the contractor to set up the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -851,8 +851,8 @@ export const wave1Pages: Record<string, Wave1Page> = {
                 "text": "Enter footage and material to see a range, no phone number required. Like the range? The Get my free fence quote button sends the details in."
               },
               {
-                "title": "We ring you to verify.",
-                "text": "A short call from Fences Texas confirms the details you entered. Your contractor then reaches out to arrange the on-site measurement."
+                "title": "Your contractor rings you.",
+                "text": "He goes over the details you entered and arranges the on-site measurement with you."
               },
               {
                 "title": "Review the written price.",
@@ -936,7 +936,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you submit: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That call from us is only to verify the job. We keep your number private to us and your matched contractor. No sales calls from anyone else. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you submit: Your contractor will call within one business day to schedule your free measurement. On that call he goes over the job with you and sets the visit time. We keep your number private to us and your matched contractor. No sales calls from anyone else. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -973,7 +973,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What does the matching service cost me?",
-                "a": "Zero. Send one form, get matched with one Plano contractor, receive a written itemized quote. Fences Texas rings first to check the job details, then the contractor contacts you about measuring. Your only payment goes to the contractor if you hire him."
+                "a": "Zero. Send one form, get matched with one Plano contractor, receive a written itemized quote. Your contractor calls to check the job details and talk through measuring. Your only payment goes to the contractor if you hire him."
               },
               {
                 "q": "Can I replace only the side that is failing?",
@@ -1005,7 +1005,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The estimate is built from the footage and material you typed in. It has not seen your lot, so it cannot price the gates your fence actually needs, the removal of the old fence, or any required permit. Those items are where an estimate and a firm price separate.",
         "**Want a firm price for your yard?** A local contractor will measure the line and give you a free written quote that lays out gates, removal, and any required permit line by line.",
         "**[Get my free fence quote]**",
-        "*You will hear from Fences Texas first, to confirm the project. Your contractor calls after that to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -1047,11 +1047,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Estimate first, form second.",
-                "text": "Enter footage and pick a material to see a ballpark range, no phone number needed. Ready? The Get my free fence quote button forwards the project."
+                "text": "Enter footage and pick a material to see a ballpark range, no phone number needed. Ready? Send the form to get your project priced."
               },
               {
-                "title": "Fences Texas verifies the project.",
-                "text": "Expect a call from us to check the details. Next, the contractor contacts you to book a time to measure."
+                "title": "Your contractor verifies the project.",
+                "text": "Expect a call from him to check the details and book a time to measure."
               },
               {
                 "title": "A written quote after measuring.",
@@ -1131,7 +1131,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once the form is in: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. Our call is simply a check that we have the project right. No robocalls, and no selling your number. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Once the form is in: Your contractor will call within one business day to schedule your free measurement. His call is simply a check that he has the project right before he comes out. No robocalls, and no selling your number. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -1168,7 +1168,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "How does matching work, and what does it cost me?",
-                "a": "It costs you nothing. Complete one form and we connect you with one Frisco contractor for your project, who provides a written itemized quote. Fences Texas contacts you first to verify the project, the contractor follows up to arrange measuring. If you hire him, you pay him directly for the work."
+                "a": "It costs you nothing. Complete one form and we connect you with one Frisco contractor for your project, who provides a written itemized quote. Your contractor contacts you to verify the project and arrange measuring. If you hire him, you pay him directly for the work."
               },
               {
                 "q": "My fence is only bad on one side. Can I replace part of it?",
@@ -1200,7 +1200,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The estimate knows two things: the footage you entered and the material you picked. It cannot see the gates your yard needs, whether an old fence has to be removed and hauled off, or any required permit. Those are the items that move a ballpark into a real price.",
         "**Want a firm price for your yard?** A local contractor will measure the fence line and give you a free, written quote covering gates, removal, and any required permit, each on its own line.",
         "**[Get my free fence quote]**",
-        "*Fences Texas calls first to confirm your project, and your contractor calls after that to book the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -1238,11 +1238,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Start with numbers, not a sales call.",
-                "text": "Punch in rough footage and see a range right away, no phone number required. Like what you see? The free quote button forwards your project for follow up."
+                "text": "Punch in rough footage and see a range right away, no phone number required. Like what you see? Submit the form to send your project for follow up."
               },
               {
-                "title": "We check in before the contractor does.",
-                "text": "Expect a brief call from Fences Texas to make sure we have the project right. Your contractor reaches out next to find a time to measure."
+                "title": "Your contractor calls to set the visit.",
+                "text": "Expect a brief call from him to go over the project and find a time to measure."
               },
               {
                 "title": "A proposal you can actually read.",
@@ -1322,7 +1322,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That opening call only verifies your project. Your number goes to us and your matched contractor, nowhere else: no robocalls, no call centers, no sales floor. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. On that call he verifies the project details with you and sets the visit. Your number goes to us and your matched contractor, nowhere else: no robocalls, no call centers, no sales floor. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -1359,7 +1359,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What will matching cost me, and how does it work?",
-                "a": "Nothing at all. Send one description of what you need, and we connect you with a local contractor who will measure and prepare an itemized proposal in writing. We ring first to confirm we have the project right, then he contacts you to arrange the measuring visit. Money only changes hands if you hire him, paid directly to him for the fence. If his price misses the mark, walk away having spent nothing on the quote."
+                "a": "Nothing at all. Send one description of what you need, and we connect you with a local contractor who will measure and prepare an itemized proposal in writing. He rings to go over the project with you and arrange the measuring visit. Money only changes hands if you hire him, paid directly to him for the fence. If his price misses the mark, walk away having spent nothing on the quote."
               },
               {
                 "q": "Only one side of my fence is failing. Can I redo just that side?",
@@ -1395,7 +1395,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "It was built from the footage and material you typed in, and that is all it knows. It cannot see the gates your yard needs, whether a tired old fence has to come out and be hauled away, or any required permit. Those items are exactly where an estimate and a firm quote separate.",
         "**Want a firm price for your yard?** A McKinney contractor will walk the line, measure it, and give you a free written quote with gates, removal, and any required permit spelled out.",
         "**[Get my free fence quote]**",
-        "*Fences Texas calls first to confirm the details of your project. Your contractor calls after that to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -1433,11 +1433,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Get the range before you give us anything.",
-                "text": "Enter your footage and see an estimate with no phone number tied to it. If the numbers look workable, the free quote button sends your project our way."
+                "text": "Enter your footage and see an estimate with no phone number tied to it. If the numbers look workable, submit the form to send your project our way."
               },
               {
-                "title": "Our call comes first, on purpose.",
-                "text": "Fences Texas reaches out to confirm the project directly. The contractor only calls after that, to arrange a time to measure."
+                "title": "The contractor calls to arrange the visit.",
+                "text": "He goes over the project with you directly and finds a time to come measure."
               },
               {
                 "title": "Then a quote you can hold onto.",
@@ -1521,7 +1521,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That first call only confirms your details. We do not robocall and we do not hand your number to a call center. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Expect him to ask the questions the form could not, then fix a time to come measure. We do not robocall and we do not hand your number to a call center. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -1558,7 +1558,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What does it cost to get matched, and how does matching work?",
-                "a": "There is no charge to you. One form describes the work, and we pair you with a local contractor who measures and prepares an itemized quote. Our team calls first to confirm the details, then his call follows to set up the measurement. You only pay the contractor if you hire him, and only for the fence itself. If his quote is too high, do not hire him."
+                "a": "There is no charge to you. One form describes the work, and we pair you with a local contractor who measures and prepares an itemized quote. He calls to go over the details and set up the measurement. You only pay the contractor if you hire him, and only for the fence itself. If his quote is too high, do not hire him."
               },
               {
                 "q": "Only one side of my fence is bad. Can I replace just that part?",
@@ -1594,7 +1594,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The range was calculated from two inputs, the footage and the material, and nothing about the lot itself. It cannot price the gates you need, the removal of an old fence, or any required permit. Those three items are where an estimate stops and an actual price begins.",
         "**Want a firm price for your yard?** A local contractor will measure the line at your house and give you a free, written quote covering gates, removal, and any required permit.",
         "**[Get my free fence quote]**",
-        "*Expect Fences Texas to call first and confirm your project. The contractor's call comes next, about scheduling the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -1636,11 +1636,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Ballpark first, paperwork second.",
-                "text": "Enter a rough length and say new build or replacement. The range appears before anyone asks for a phone number, and the Get my free fence quote button forwards your job."
+                "text": "Enter a rough length and say new build or replacement. The range appears before anyone asks for a phone number, and sending the form gets you a free quote for your yard."
               },
               {
-                "title": "A quick check-in from our side.",
-                "text": "Fences Texas rings first to verify the basics. Afterward the contractor reaches out and picks a time to measure."
+                "title": "A quick check-in from your contractor.",
+                "text": "He rings to verify the basics and picks a time to measure."
               },
               {
                 "title": "A written number you can sit with.",
@@ -1720,7 +1720,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in, here is the sequence. Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. The call exists only to verify details. Your number is never sold, no call center receives it, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in, here is what happens. Your contractor will call within one business day to schedule your free measurement. On that call he verifies the details and sets the visit. Your number is never sold, no call center receives it, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -1757,7 +1757,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What will matching cost me, and how does it actually work?",
-                "a": "You owe Fences Texas nothing. Fill out the form once, we line up one local contractor, and he prepares a detailed quote after measuring. Our team rings first to verify the basics, then his call follows to arrange the visit. You pay the contractor only if you hire him. Quote feels steep? Walk away."
+                "a": "You owe Fences Texas nothing. Fill out the form once, we line up one local contractor, and he prepares a detailed quote after measuring. He rings to verify the basics and arrange the visit. You pay the contractor only if you hire him. Quote feels steep? Walk away."
               },
               {
                 "q": "Only one side of my yard looks rough. Can that side alone be replaced?",
@@ -1789,7 +1789,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The range was built from two inputs, your footage and your material, and it has not seen your property. It cannot price the gates your yard actually needs, the cost of removing an old fence, or any required permit. Those items are exactly where an estimate stops and a price starts.",
         "**Want a firm price for your yard?** A local contractor will walk and measure the line, then give you a free written quote with gates, removal, and any required permit spelled out.",
         "**[Get my free fence quote]**",
-        "*You will hear from Fences Texas first, to confirm the project. Your contractor calls after that to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -1831,11 +1831,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Enter footage, view the estimate, submit.",
-                "text": "Pick new build or replacement and type in a rough length. No phone number is required for the range. Pressing the Get my free fence quote button sends the job forward."
+                "text": "Pick new build or replacement and type in a rough length. No phone number is required for the range. Submit the form to send the job forward."
               },
               {
-                "title": "Confirmation comes from Fences Texas first.",
-                "text": "We verify address and scope, then the contractor contacts you to arrange his measurement visit."
+                "title": "The contractor calls to arrange his visit.",
+                "text": "He verifies your address and scope with you, then sets a time to measure."
               },
               {
                 "title": "The quote arrives in writing, broken apart.",
@@ -1915,7 +1915,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Submitting the form sets a short sequence in motion. Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That opening call only confirms scope. Your number stays private, it is never sold, and there are no pressure tactics. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum. Keep that paperwork with your quote."
+            "text": "Submitting the form sets a short sequence in motion. Your contractor will call within one business day to schedule your free measurement. On that call he goes over the scope with you and sets the visit. Your number stays private, it is never sold, and there are no pressure tactics. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum. Keep that paperwork with your quote."
           }
         ]
       },
@@ -1952,7 +1952,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What do I pay for the matching service?",
-                "a": "Zero. Submit one form and we pair you with a single Irving contractor, who provides the detailed quote. Fences Texas phones first to confirm basics, the contractor phones next to arrange measurement. Money only changes hands between you and the contractor you hire. Price not right? Decline and move on."
+                "a": "Zero. Submit one form and we pair you with a single Irving contractor, who provides the detailed quote. The contractor phones to go over the basics and arrange the measurement. Money only changes hands between you and the contractor you hire. Price not right? Decline and move on."
               },
               {
                 "q": "Can I replace just the failing side?",
@@ -1984,7 +1984,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The estimate knows your footage and your material choice and nothing about your actual yard. It cannot see the gates you need, whether an old fence has to be torn out and hauled away, or any required permit for the job. Those are the items that move a ballpark into a real price.",
         "**Want a firm price for your yard?** A local contractor will measure the fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
         "**[Get my free fence quote]**",
-        "*Fences Texas calls first to confirm your project. Then your contractor calls to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -2029,8 +2029,8 @@ export const wave1Pages: Record<string, Wave1Page> = {
                 "text": "Enter an approximate length and whether the fence is new or a replacement. No phone number is needed."
               },
               {
-                "title": "Our confirmation comes first.",
-                "text": "Fences Texas verifies the basics with you. Only then does the builder ring to arrange his visit."
+                "title": "The builder calls to arrange his visit.",
+                "text": "He verifies the basics with you and rings to set a time to measure."
               },
               {
                 "title": "You receive a quote with the parts separated.",
@@ -2110,7 +2110,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That first call is a details check, nothing more. No free quote obligates you to build. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On that call he checks the details and sets the visit, nothing more. No free quote obligates you to build. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -2147,7 +2147,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "Is there a charge for getting matched, or for the quote?",
-                "a": "No charge for either. One submission is all it takes: we pair you with a nearby builder who wants the work, and he prepares a quote with the costs broken out. Expect our call first, to verify what you sent, and his call after that to set the measuring appointment. The only money you spend goes to the builder you hire, for the fence he builds. If his total is too much, pass on it. Passing costs you nothing."
+                "a": "No charge for either. One submission is all it takes: we pair you with a nearby builder who wants the work, and he prepares a quote with the costs broken out. Expect his call to go over what you sent and set the measuring appointment. The only money you spend goes to the builder you hire, for the fence he builds. If his total is too much, pass on it. Passing costs you nothing."
               },
               {
                 "q": "One side of my fence is failing. Can I do just that side?",
@@ -2183,7 +2183,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The calculator only knows the footage and material you typed in. It has never seen your lot, so it cannot price the gates your layout calls for, the cost of tearing out and hauling off the fence that is there now, or any required permit. Those items are exactly where an estimate and a firm quote split apart.",
         "**Want a firm price for your yard?** A local contractor will measure the line in person and give you a free written quote with gates, removal, and any required permit spelled out.",
         "**[Get my free fence quote]**",
-        "*Fences Texas calls first to confirm your project. Then your contractor calls to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -2228,8 +2228,8 @@ export const wave1Pages: Record<string, Wave1Page> = {
                 "text": "Type in a rough length, say whether this is new or a replacement, and add the address. No phone number is asked for at this stage."
               },
               {
-                "title": "Our call comes before his.",
-                "text": "Fences Texas checks the submission with you first. His call to arrange the site visit only happens after ours."
+                "title": "His call arranges the site visit.",
+                "text": "Your contractor checks the submission with you and picks a time to come out and measure."
               },
               {
                 "title": "A written quote, split into parts.",
@@ -2309,7 +2309,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. Our call is short, just a check that we read your request right. No pressure. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. His call is short, just a check that he read your request right and a time set for the visit. No pressure. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -2346,7 +2346,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What does using this matching service cost me?",
-                "a": "Zero. Fill out the form a single time and we line you up with a nearby builder who wants the work. You hear from us first, to verify the request, and from him afterward to set a time to measure. Money only changes hands between you and the builder you hire, for the fence itself. If his price misses the mark, decline it. Declining leaves you out nothing."
+                "a": "Zero. Fill out the form a single time and we line you up with a nearby builder who wants the work. You hear from him to verify the request and set a time to measure. Money only changes hands between you and the builder you hire, for the fence itself. If his price misses the mark, decline it. Declining leaves you out nothing."
               },
               {
                 "q": "Only one side of my fence is shot. Can the rest stay?",
@@ -2382,7 +2382,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The estimate is built from the two things you entered, and nothing else. It cannot see how many gates your layout needs, whether the old fence has to be removed and hauled off, or any required permit for the job. Those are the lines that move a ballpark into a real price.",
         "**Want a firm price for your yard?** A local contractor will come out, measure the fence line, and hand you a free written quote that spells out gates, removal, and any required permit.",
         "**[Get my free fence quote]**",
-        "*The first call comes from Fences Texas to confirm your project. Your contractor calls after that to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -2427,8 +2427,8 @@ export const wave1Pages: Record<string, Wave1Page> = {
                 "text": "Enter an approximate length and note whether the project is new or a replacement. No phone number is needed. When the range fits your budget, the Get my free fence quote button forwards the details."
               },
               {
-                "title": "Confirmation comes before scheduling.",
-                "text": "Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement."
+                "title": "Scheduling starts with his call.",
+                "text": "Your contractor calls within one business day, goes over your project with you, and sets a time to measure."
               },
               {
                 "title": "Review a quote with every cost separated.",
@@ -2508,7 +2508,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "That confirmation call is brief, limited to verifying project details. Your number is shared only with the contractor matched to your job. Expect no call center follow up, no robocalls, and no pressure to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Your contractor will call within one business day to schedule your free measurement. His call is brief: he goes over your project details with you before the visit. Your number is shared only with the contractor matched to your job. Expect no call center follow up, no robocalls, and no pressure to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -2581,7 +2581,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "The estimate knows two things: the footage you entered and the material you picked. It has not walked your alley, counted the gates your lot actually needs, priced hauling the old fence away, or checked whether your job needs a city permit. Those items are exactly where an estimate and a firm price separate.",
         "**Want a firm price for your yard?** A local contractor will measure the line at your house and give you a free written quote covering gates, removal and any required permit, each on its own line.",
         "**[Get my free fence quote]**",
-        "*You will hear from Fences Texas first, confirming the project. Your contractor calls after that to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -2623,11 +2623,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Get the ballpark, then decide.",
-                "text": "Rough footage and a material choice are all the calculator asks for, no phone number needed. If the number feels workable, the Get my free fence quote button sends your form."
+                "text": "Rough footage and a material choice are all the calculator asks for, no phone number needed. If the number feels workable, submit your form to request the quote."
               },
               {
-                "title": "Our call comes first.",
-                "text": "Fences Texas checks in first to confirm your project. His call comes after, to pick a measuring time."
+                "title": "The contractor calls to pick a time.",
+                "text": "He checks the project details with you and sets a time to come measure."
               },
               {
                 "title": "Read the quote like a menu.",
@@ -2707,7 +2707,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That first call is short, just a check that we have your details right. Your number is not sold, never lands on a robocall list, and a free quote carries no hard sell. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. That call is short, just a check of your details while he sets the measuring time. Your number is not sold, never lands on a robocall list, and a free quote carries no hard sell. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -2744,7 +2744,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What does it cost to get matched?",
-                "a": "Not a cent. One form pairs you with a Lewisville contractor who measures and writes the quote out line by line. Our call comes first, just to confirm the project; his follows to set up the visit. Money only moves if you hire him, straight to him for the fence. Too steep? Passing costs you nothing."
+                "a": "Not a cent. One form pairs you with a Lewisville contractor who measures and writes the quote out line by line. His call covers the project details and sets up the visit. Money only moves if you hire him, straight to him for the fence. Too steep? Passing costs you nothing."
               },
               {
                 "q": "Only one side is failing. Do I need a whole new fence?",
@@ -2780,7 +2780,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "Your ballpark was built from footage and material alone. It cannot see how many gates your lot needs, whether the old fence has to be torn out and hauled off, or whether your project needs a city permit. In Lewisville, that last one catches people out, because even a modest replacement can cross the city permit line.",
         "**Want a firm price for your yard?** A local contractor will come measure your fence line and hand you a free written quote that spells out gates, removal and any required permit.",
         "**[Get my free fence quote]**",
-        "*First, Fences Texas calls to confirm your project. Then your contractor calls to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -2822,11 +2822,11 @@ export const wave1Pages: Record<string, Wave1Page> = {
             "items": [
               {
                 "title": "Punch in your footage.",
-                "text": "The calculator builds your ballpark from footage and material, no phone number asked. Like it? Hit Get my free fence quote and the job is in."
+                "text": "The calculator builds your ballpark from footage and material, no phone number asked. Like it? Submit the form and the job is in."
               },
               {
-                "title": "We check the job before anyone else calls.",
-                "text": "Fences Texas rings you first to check the details. Only then does the contractor ring you to book the measuring visit."
+                "title": "The contractor calls to book the visit.",
+                "text": "He checks the details with you himself and books a time to come measure."
               },
               {
                 "title": "A price built on measurements, not guesses.",
@@ -2906,7 +2906,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once the form is in: Fences Texas will call within one business day to confirm your project. Then the contractor will call to schedule a measurement. That first call is a quick check of your details. Your number stays with us: not passed around, no robocall service picks it up, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Once the form is in: Your contractor will call within one business day to schedule your free measurement. On that call he does a quick check of your details and books the visit. Your number stays with us: not passed around, no robocall service picks it up, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
           }
         ]
       },
@@ -2947,7 +2947,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What does getting matched cost me?",
-                "a": "Zero. One form pairs your job with a Grand Prairie contractor who measures your yard and writes a line-by-line quote. Our office rings you first to double-check the details; his call after that books the measurement. The only money that changes hands goes to the contractor you hire, for the fence itself."
+                "a": "Zero. One form pairs your job with a Grand Prairie contractor who measures your yard and writes a line-by-line quote. He rings you to double-check the details and book the measurement. The only money that changes hands goes to the contractor you hire, for the fence itself."
               },
               {
                 "q": "One side of my fence is bad. Do I have to replace the whole thing?",
@@ -2979,7 +2979,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
         "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
         "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
         "**[Get my free fence quote]**",
-        "*Fences Texas calls first to confirm your project. Then your contractor calls to schedule the measurement. No obligation.*"
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
   },
@@ -3009,7 +3009,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           {
             "type": "cta",
             "label": "Get my free fence quote",
-            "micro": "Free. No obligation. Fences Texas calls first to talk through your project, then a local court builder schedules the visit."
+            "micro": "Free. No obligation. Your builder will call within one business day to schedule your free visit."
           }
         ]
       },
@@ -3024,8 +3024,8 @@ export const wave1Pages: Record<string, Wave1Page> = {
                 "text": "Your yard, what you want to play, and anything you know you want: lights, a hitting wall, basketball lines for the kids."
               },
               {
-                "title": "Fences Texas calls you first.",
-                "text": "We talk through the project. Then a local court builder calls to schedule the visit."
+                "title": "A local court builder calls you.",
+                "text": "He gets your project details, and within one business day he calls to schedule the free visit and talk through the project with you."
               },
               {
                 "title": "You get the itemized quote.",
@@ -3057,7 +3057,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           {
             "type": "cta",
             "label": "Get my free fence quote",
-            "micro": "Free. No obligation. Fences Texas calls first to talk through your project, then a local court builder schedules the visit."
+            "micro": "Free. No obligation. Your builder will call within one business day to schedule your free visit."
           },
           {
             "type": "p",
@@ -3075,7 +3075,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           {
             "type": "cta",
             "label": "Get my free fence quote",
-            "micro": "Free. No obligation. Fences Texas calls first to talk through your project, then a local court builder schedules the visit."
+            "micro": "Free. No obligation. Your builder will call within one business day to schedule your free visit."
           }
         ]
       },
@@ -3114,7 +3114,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once your form is in: Fences Texas will call within one business day to confirm your project. Then the builder will call to schedule the visit. That first call is us, talking through the project. No robocalls, and your number never gets sold. We match Grapevine court projects with local court builders. From signed quote to first game usually runs 6 to 10 weeks, and lake lots that need easement review can run longer."
+            "text": "Once your form is in: Your builder will call within one business day to schedule your free visit. That one call is the builder himself, talking through the project and setting the visit. No robocalls, and your number never gets sold. We match Grapevine court projects with local court builders. From signed quote to first game usually runs 6 to 10 weeks, and lake lots that need easement review can run longer."
           }
         ]
       },
@@ -3146,7 +3146,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
               },
               {
                 "q": "What does matching cost me?",
-                "a": "Nothing. You describe the project once, Fences Texas calls to talk it through, and a local builder visits and gives you an itemized quote. You pay only the builder you hire, only for the court."
+                "a": "Nothing. You describe the project once, your builder calls to schedule the visit, walks the yard, and gives you an itemized quote. You pay only the builder you hire, only for the court."
               }
             ]
           }
@@ -3162,7 +3162,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
           {
             "type": "cta",
             "label": "Get my free fence quote",
-            "micro": "Free. No obligation. Fences Texas calls first to talk through your project, then a local court builder schedules the visit."
+            "micro": "Free. No obligation. Your builder will call within one business day to schedule your free visit."
           }
         ]
       }
@@ -3171,7 +3171,7 @@ export const wave1Pages: Record<string, Wave1Page> = {
       "heading": "QUOTE BRIDGE COPY",
       "paras": [
         "**What the free quote actually gets you.** A local court builder walks your yard, checks the footprint, the slope, and equipment access, and then prices the whole project in writing: grading, slab, surface system, enclosure, and lights, each on its own line. Nothing about your yard gets guessed from a web page, and the written number is yours to keep whether you build or not.",
-        "*Fences Texas calls first to confirm your project. Then the builder calls to schedule the visit. No obligation.*"
+        "*Your builder will call within one business day to schedule your free visit. No obligation.*"
       ]
     }
   }

@@ -491,7 +491,7 @@ const LeadForm = ({
                           <Input placeholder="Your phone number" {...field} />
                         </FormControl>
                         <div className="mt-1 text-sm text-muted-foreground">
-                          Fences Texas calls first to confirm your project. Then your contractor calls to schedule the measurement.
+                          Your contractor calls to schedule the measurement.
                         </div>
                         <FormMessage />
                       </FormItem>} />
