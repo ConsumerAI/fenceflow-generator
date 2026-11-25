@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LeadForm from '@/components/LeadForm';
+import { CityBreadcrumbs, CityLinkBlocks } from '@/components/CityLinkBlocks';
 import { Button } from '@/components/ui/button';
 import type { Wave1Page, PageSection, ContentBlock } from '@/data/wave1Content';
 
@@ -185,10 +186,12 @@ function Wave1Layout({ page, canonicalPath }: { page: Wave1Page; canonicalPath: 
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main>
+          <CityBreadcrumbs page={page} />
           <Hero page={page} />
           {page.sections.slice(1).map((section, i) => (
             <BodySection key={i} section={section} tinted={i % 2 === 1} />
           ))}
+          <CityLinkBlocks page={page} />
           <section className="py-16 md:py-20 bg-texas-terracotta/10">
             <div className="container mx-auto px-4">
               <div className="max-w-lg mx-auto">
