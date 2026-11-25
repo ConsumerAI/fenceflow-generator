@@ -12,6 +12,8 @@ import { Button } from '@/components/ui/button';
 import SocialProof from '@/components/SocialProof';
 
 import StaticServiceContent from '@/components/StaticServiceContent';
+import { getWave1Page } from '@/data/wave1Content';
+import { Wave1ServiceLayout } from '@/components/Wave1Content';
 
 // Lazy load components that aren't immediately visible
 const PlanToPickets = lazy(() => import('@/components/PlanToPickets'));
@@ -40,6 +42,12 @@ const CityServicePage: React.FC<CityServicePageProps> = ({ city, service }) => {
   
   if (!serviceType) {
     return <div>Error: Invalid service type.</div>;
+  }
+
+  // Wave 1: Grapevine sports courts renders the locked v5 courts copy.
+  const wave1ServicePage = getWave1Page(`${city.toLowerCase()}/${service.toLowerCase()}`);
+  if (wave1ServicePage) {
+    return <Wave1ServiceLayout page={wave1ServicePage} />;
   }
 
   // Get service-specific content
