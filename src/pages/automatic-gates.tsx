@@ -7,6 +7,15 @@ import LeadForm from '@/components/LeadForm';
 import PlanToPickets from '@/components/PlanToPickets';
 import { Button } from '@/components/ui/button';
 import SocialProof from '@/components/SocialProof';
+import {
+  buildGraph,
+  businessNode,
+  webPageNode,
+  serviceNode,
+  BUSINESS_DESCRIPTION_DFW,
+  SERVICE_DESCRIPTIONS,
+  SITE_URL,
+} from '@/lib/schema';
 
 const AutomaticGatesPage = () => {
   // Images for the gallery
@@ -39,6 +48,21 @@ const AutomaticGatesPage = () => {
       <Helmet>
         <title>Automatic Gate Installation in Dallas/Fort Worth - FencesTexas</title>
         <meta name="description" content="Find your perfect automatic gate contractor in Dallas/Fort Worth. Expert installation of residential and commercial automatic gates. Get matched with ONE verified pro." />
+        {/* Claims-safe structured data (schema-spec, src/lib/schema.ts). */}
+        <script type="application/ld+json">
+          {buildGraph([
+            businessNode(BUSINESS_DESCRIPTION_DFW),
+            webPageNode(
+              `${SITE_URL}/automatic-gates`,
+              'Automatic Gate Installation in Dallas/Fort Worth - FencesTexas'
+            ),
+            serviceNode({
+              pageUrl: `${SITE_URL}/automatic-gates`,
+              name: 'Automatic Gates',
+              description: SERVICE_DESCRIPTIONS['Automatic Gates'],
+            }),
+          ])}
+        </script>
       </Helmet>
       
       <div className="min-h-screen flex flex-col">

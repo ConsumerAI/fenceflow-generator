@@ -9,6 +9,15 @@ import ImageCarousel from '@/components/ImageCarousel';
 import PlanToPickets from '@/components/PlanToPickets';
 import CityCapabilities from '@/components/CityCapabilities';
 import { ServiceInfo, ServiceType } from '@/lib/types';
+import {
+  buildGraph,
+  businessNode,
+  webPageNode,
+  serviceNode,
+  BUSINESS_DESCRIPTION_DFW,
+  SERVICE_HUB_PATHS,
+  SITE_URL,
+} from '@/lib/schema';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, ClipboardList, Fence, PartyPopper, Building, Briefcase, Factory } from 'lucide-react';
 import CommercialCityGrid from '@/components/CommercialCityGrid';
@@ -109,47 +118,27 @@ const ServicePage: React.FC<ServicePageProps> = ({
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        {/* Claims-safe structured data (schema-spec, src/lib/schema.ts).
+            The legacy GeoCircle LocalBusiness block was deleted: its "#1"
+            description, 100 mi radius and self-referencing sameAs fail the
+            claims register. No FAQPage node is emitted on hubs: the visible
+            hub FAQ answers still carry unapproved claims (coverage count,
+            warranty wording, install timeline), and the mirror rule plus
+            the register core rule bar them from schema until the hub FAQ
+            copy is rebuilt. */}
         <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Fences Texas",
-          "description": "DFW's #1 Fence Contractor Network",
-          "email": "team@fencestexas.com",
-          "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": 32.7767,
-              "longitude": -96.7970
-            },
-            "geoRadius": "100 mi"
-          },
-          "serviceArea": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": 32.7767,
-              "longitude": -96.7970
-            },
-            "geoRadius": "100 mi"
-          },
-          "sameAs": ["https://fencestexas.com"]
-        })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": homepageFaqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        })}
+          {buildGraph([
+            businessNode(BUSINESS_DESCRIPTION_DFW),
+            webPageNode(
+              `${SITE_URL}${SERVICE_HUB_PATHS[serviceInfo.title] ?? ''}`,
+              pageTitle
+            ),
+            serviceNode({
+              pageUrl: `${SITE_URL}${SERVICE_HUB_PATHS[serviceInfo.title] ?? ''}`,
+              name: serviceInfo.title,
+              description: serviceInfo.description,
+            }),
+          ])}
         </script>
       </Helmet>
       
