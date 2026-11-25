@@ -123,7 +123,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in, here is the sequence. Your contractor will call within one business day to schedule your free measurement. Expect no automated dialing, no passing your number along for marketing calls, and no push to sign on the spot. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in, here is the sequence. Your contractor will call within one business day to schedule your free measurement. Expect no automated dialing, no passing your number along for marketing calls, and no push to sign on the spot. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -322,7 +322,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once the form is in: Your contractor will call within one business day to schedule your free measurement. On that call he goes over your details with you and settles the measuring time. A person makes it, not a robocall, and your number never gets sold. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Once the form is in: Your contractor will call within one business day to schedule your free measurement. On that call he goes over your details with you and settles the measuring time. A person makes it, not a robocall, and your number never gets sold. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -517,7 +517,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Expect a short conversation about the job itself, ending with a measuring time on the calendar. No robocalls, no sale of your number, nobody leaning on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Expect a short conversation about the job itself, ending with a measuring time on the calendar. No robocalls, no sale of your number, nobody leaning on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -712,7 +712,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form lands: Your contractor will call within one business day to schedule your free measurement. On that call he goes over your project with you before setting the visit. No robocalls, your number is never sold, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form lands: Your contractor will call within one business day to schedule your free measurement. On that call he goes over your project with you before setting the visit. No robocalls, your number is never sold, and nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -907,7 +907,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On his call he goes over the project with you and sets the visit. Your number will not be sold to a call center, there are no robocalls, and nobody will push you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On his call he goes over the project with you and sets the visit. Your number will not be sold to a call center, there are no robocalls, and nobody will push you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -1106,7 +1106,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. On that call he runs through everything you sent and settles the measuring time. No robocalls, no selling your number, and no hard sell. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. On that call he runs through everything you sent and settles the measuring time. No robocalls, no selling your number, and no hard sell. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -1301,7 +1301,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Here is what follows. Your contractor will call within one business day to schedule your free measurement. On his call he goes over the project with you and checks that everything is right. No robocall blasts, no selling your number, nobody leaning on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Here is what follows. Your contractor will call within one business day to schedule your free measurement. On his call he goes over the project with you and checks that everything is right. No robocall blasts, no selling your number, nobody leaning on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -1496,7 +1496,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once your form is in, the sequence is simple: Your contractor will call within one business day to schedule your free measurement. On his call, expect a quick run through the details you sent, and he sets the visit, nothing more. No automated dialing, and your number never goes to telemarketers. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Once your form is in, the sequence is simple: Your contractor will call within one business day to schedule your free measurement. On his call, expect a quick run through the details you sent, and he sets the visit, nothing more. No automated dialing, and your number never goes to telemarketers. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -1695,7 +1695,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in, expect this sequence. Your contractor will call within one business day to schedule your free measurement. No robocalls, your number is not sold to a call center, and nobody pushes you to sign on the spot. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in, expect this sequence. Your contractor will call within one business day to schedule your free measurement. No robocalls, your number is not sold to a call center, and nobody pushes you to sign on the spot. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -1894,7 +1894,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens once the form goes in: Your contractor will call within one business day to schedule your free measurement. On that call he goes over the details you sent and sets the visit. Your number is never sold, no robocalls follow, and nobody pressures you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens once the form goes in: Your contractor will call within one business day to schedule your free measurement. On that call he goes over the details you sent and sets the visit. Your number is never sold, no robocalls follow, and nobody pressures you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -2093,7 +2093,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. No automated dialing, no handing your number to a call center, no leaning on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. No automated dialing, no handing your number to a call center, no leaning on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -2292,7 +2292,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. His call is a check of what you sent, and he sets the visit time on it. No robocalls from us, no selling your number, nobody pushing you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. His call is a check of what you sent, and he sets the visit time on it. No robocalls from us, no selling your number, nobody pushing you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -2491,7 +2491,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On his call he runs through what you sent in, a short check, and sets the visit. Your number is not sold and no robocalls follow. Nobody pressures you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On his call he runs through what you sent in, a short check, and sets the visit. Your number is not sold and no robocalls follow. Nobody pressures you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -2686,7 +2686,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Talking with him is how the visit gets set: he asks about anything the form left unclear and picks a time with you. No robocalls, your number is never sold, and nobody pushes you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Talking with him is how the visit gets set: he asks about anything the form left unclear and picks a time with you. No robocalls, your number is never sold, and nobody pushes you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -2881,7 +2881,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He will have your form in front of him, confirm the scope, and agree on when to come measure. No automated dialing, no selling your number onward, no leaning on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He will have your form in front of him, confirm the scope, and agree on when to come measure. No automated dialing, no selling your number onward, no leaning on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -3076,7 +3076,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Expect his call to be short: he checks what you sent and sets the measuring time. Your number never gets sold, no automated calls follow, and nobody leans on you. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Expect his call to be short: he checks what you sent and sets the measuring time. Your number never gets sold, no automated calls follow, and nobody leans on you. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -3279,7 +3279,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. The two of you sort out the specifics on the phone, and the measuring appointment comes out of that conversation. Your number stays private: never sold, never robocalled. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. The two of you sort out the specifics on the phone, and the measuring appointment comes out of that conversation. Your number stays private: never sold, never robocalled. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -3478,7 +3478,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Use that conversation to pin down the specifics and lock in when he comes out to measure. Your number is not sold, there are no robocalls, and nobody pushes you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Use that conversation to pin down the specifics and lock in when he comes out to measure. Your number is not sold, there are no robocalls, and nobody pushes you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -3685,7 +3685,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. Talk through the job with him on that call, and the measuring visit gets set before you hang up. Nobody sells your number, and there are no robocall pitches. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. Talk through the job with him on that call, and the measuring visit gets set before you hang up. Nobody sells your number, and there are no robocall pitches. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -3884,7 +3884,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Only Fences Texas and your matched contractor receive your number: no robocalls, no selling it, no pressure to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Only Fences Texas and your matched contractor receive your number: no robocalls, no selling it, no pressure to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -4091,7 +4091,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On that call he checks your details and sets the visit: no automated dialing, your number never gets sold to a call center, nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On that call he checks your details and sets the visit: no automated dialing, your number never gets sold to a call center, nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -4290,7 +4290,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He rings with your request in hand, talks through the job, and the two of you settle on a visit time. No robocalls from us, and we never sell your number to a call center. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He rings with your request in hand, talks through the job, and the two of you settle on a visit time. No robocalls from us, and we never sell your number to a call center. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -4493,7 +4493,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form lands: Your contractor will call within one business day to schedule your free measurement. On that call he checks the details and sets the visit. Expect no robocalls, no sale of your number, and no pressure to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form lands: Your contractor will call within one business day to schedule your free measurement. On that call he checks the details and sets the visit. Expect no robocalls, no sale of your number, and no pressure to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -4688,7 +4688,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. That conversation covers the specifics of your fence and ends with a measuring visit scheduled: no robocalls, no selling your number, no push to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. That conversation covers the specifics of your fence and ends with a measuring visit scheduled: no robocalls, no selling your number, no push to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -4882,7 +4882,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form comes in: Your contractor will call within one business day to schedule your free measurement. On that call he checks the details you sent and sets the visit. You will get no robocalls, and we never sell your number. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form comes in: Your contractor will call within one business day to schedule your free measurement. On that call he checks the details you sent and sets the visit. You will get no robocalls, and we never sell your number. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -5077,7 +5077,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. No robocalls will follow, your number stays out of call center hands, and nobody will push you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. No robocalls will follow, your number stays out of call center hands, and nobody will push you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -5276,7 +5276,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. Think of that call as a quick check of details and a chance to set the visit, nothing beyond that. Your phone number goes no further than us and your matched contractor. It does not go to a call center and it does not get sold. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. Think of that call as a quick check of details and a chance to set the visit, nothing beyond that. Your phone number goes no further than us and your matched contractor. It does not go to a call center and it does not get sold. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -5483,7 +5483,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. On that call he checks your details against the form and sets the visit. Your number does not get sold, no robocall follows, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. On that call he checks your details against the form and sets the visit. Your number does not get sold, no robocall follows, and nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -5678,7 +5678,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "Once your form is in, the sequence is simple. Your contractor will call within one business day to schedule your free measurement. He reviews your project with you on the phone, and the measuring visit gets lined up from there. No robocalls, no sale of your number, no push to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "Once your form is in, the sequence is simple. Your contractor will call within one business day to schedule your free measurement. He reviews your project with you on the phone, and the measuring visit gets lined up from there. No robocalls, no sale of your number, no push to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -5877,7 +5877,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Your number stays put: no automated dialing, no call center handoff, no arm-twisting to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. Your number stays put: no automated dialing, no call center handoff, no arm-twisting to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -6080,7 +6080,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. The phone conversation walks your project start to finish and lands on a measuring time: no robocalls, no number sold, no arm twisting toward a signature. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. The phone conversation walks your project start to finish and lands on a measuring time: no robocalls, no number sold, no arm twisting toward a signature. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -6275,7 +6275,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. His call is a detail check as he sets the visit. No automated dialing, no passing your number to a call center, no pressure to sign anything. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After you send the form: Your contractor will call within one business day to schedule your free measurement. His call is a detail check as he sets the visit. No automated dialing, no passing your number to a call center, no pressure to sign anything. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -6482,7 +6482,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. You will not get robocalls, your phone number stays private and is never sold, and there is no push to sign on the spot. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. You will not get robocalls, your phone number stays private and is never sold, and there is no push to sign on the spot. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -6689,7 +6689,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. On his call he checks your details and sets the visit. Your number stays private, no robocalls follow, and nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form goes in: Your contractor will call within one business day to schedule your free measurement. On his call he checks your details and sets the visit. Your number stays private, no robocalls follow, and nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
@@ -6888,7 +6888,7 @@ export const wave2Pages: Record<string, Wave1Page> = {
           },
           {
             "type": "p",
-            "text": "After the form lands: Your contractor will call within one business day to schedule your free measurement. Expect that conversation with him to be a quick check of what you sent as he sets the visit. Your number stays out of call centers, no automated dialers, nobody leans on you to sign. Every matched contractor backs the work with a workmanship warranty in writing, 3 years minimum."
+            "text": "After the form lands: Your contractor will call within one business day to schedule your free measurement. Expect that conversation with him to be a quick check of what you sent as he sets the visit. Your number stays out of call centers, no automated dialers, nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
           }
         ]
       },
