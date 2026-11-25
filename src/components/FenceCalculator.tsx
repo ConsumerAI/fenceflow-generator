@@ -140,7 +140,7 @@ const FenceCalculator = ({ onCalculate }: FenceCalculatorProps) => {
               Get my free fence quote
             </Button>
             <p className="text-xs text-muted-foreground mt-3 italic">
-              Fences Texas calls first to confirm your project. Then your contractor calls to schedule the measurement. No obligation.
+              Your contractor will call within one business day to schedule your free measurement. No obligation.
             </p>
           </div>
         </>
