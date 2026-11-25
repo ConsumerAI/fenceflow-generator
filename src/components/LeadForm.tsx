@@ -16,6 +16,7 @@ import { MapPin, Lock, ArrowRight, ArrowLeft } from 'lucide-react';
 import ProgressBar from './ProgressBar';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
 import SocialProof from '@/components/SocialProof';
+import StickyEstimateBar from './StickyEstimateBar';
 import { trackEvent } from '@/lib/analytics';
 
 // Conversion pass (Nov 25, 2026): the estimate is step 1, not a reward for
@@ -67,6 +68,12 @@ interface LeadFormProps {
   // The page's locked v5 screen copy (estimate results bridge on fence
   // pages, quote bridge on the courts page), from the wave data.
   screenParas?: string[] | null;
+  // Conversion round 2: the hero instance on rebuilt wave pages renders
+  // the sticky mobile estimate bar. Only one instance per page sets this.
+  stickyBar?: boolean;
+  // The bar's label: the page's own hero CTA text, passed from the wave
+  // data so the bar speaks in the page's locked copy.
+  stickyLabel?: string;
 }
 
 const LeadForm = ({
@@ -75,7 +82,9 @@ const LeadForm = ({
   className = '',
   service_type,
   pageKind,
-  screenParas
+  screenParas,
+  stickyBar,
+  stickyLabel
 }: LeadFormProps) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -90,7 +99,12 @@ const LeadForm = ({
       min: number;
       max: number;
     };
+    num_gates?: number;
   }>({});
+  // Mirrors the calculator's "Not sure" footage toggle, so the contact
+  // step can pin the honest deferral line when there is no estimate.
+  const [feetUnknown, setFeetUnknown] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
   const trackedEstimateRef = useRef(false);
   const trackedStartRef = useRef(false);
 
@@ -407,8 +421,26 @@ const LeadForm = ({
     );
   };
 
+  // Estimate summary pin (conversion round 2): at the contact step, the
+  // visitor's own numbers stay in view above the highest-friction fields.
+  // Built only from their calculator inputs; when they picked "Not sure"
+  // for footage there is no range to pin, so the pin carries the same
+  // honest deferral line the calculator showed them.
+  const pinGates = fenceDetails.num_gates ?? 0;
+  const pinGatesText = pinGates === 0
+    ? 'with no gates counted'
+    : pinGates === 1
+      ? 'with 1 gate counted at $500'
+      : `with ${pinGates} gates counted at $500 each`;
+  const pinDetailLine = fenceDetails.estimatedCost
+    ? fenceDetails.fence_material === 'Not sure yet'
+      ? `For ${fenceDetails.linear_feet} ft, priced across the usual materials, pine to cedar, ${pinGatesText}. Your contractor prices the exact material when he measures.`
+      : `For ${fenceDetails.linear_feet} ft of ${fenceDetails.fence_material}, ${pinGatesText}.`
+    : null;
+  const showPin = isResidential && (Boolean(fenceDetails.estimatedCost) || feetUnknown);
+
   return <>
-      <div className={formClasses} id="quote">
+      <div className={formClasses} id="quote" ref={formRef} data-lead-form="true">
         <div className="rounded-t-xl bg-texas-terracotta text-white p-6 -mx-6 -mt-6 md:-mx-8 md:-mt-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">{formTitle}</h2>
           <p className="text-white/90">{formSubtitle}</p>
@@ -463,6 +495,7 @@ const LeadForm = ({
                     bridgeParas={screenParas}
                     onBridgeCta={() => { if (validateStep1()) goToStep(2); }}
                     projectNeed={projectNeed ?? undefined}
+                    onFeetUnknownChange={setFeetUnknown}
                   />
                 </>}
 
@@ -565,6 +598,33 @@ const LeadForm = ({
               </>}
 
             {currentStep === 3 && <>
+                {showPin && (
+                  <div className="p-4 bg-green-50 border border-green-100 rounded-md">
+                    {fenceDetails.estimatedCost ? (
+                      <>
+                        <p className="font-medium text-lg text-green-800">
+                          Your ballpark: {formatPrice(fenceDetails.estimatedCost.min)} – {formatPrice(fenceDetails.estimatedCost.max)}
+                        </p>
+                        {pinDetailLine && <p className="text-sm text-green-800 mt-1">{pinDetailLine}</p>}
+                        <p className="text-xs text-muted-foreground mt-2">
+                          Includes your footage and material, plus the gates you entered at $500 each. Does not include tear-out or haul-off of an old fence, or any required permit.
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          {callLine} No obligation.
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p className="text-sm text-green-800 leading-relaxed">
+                          No problem. Your contractor measures the fence line at the free visit, and your written quote is built from the real number, not a guess.
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-2">
+                          {callLine} No obligation.
+                        </p>
+                      </>
+                    )}
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <FormField control={form.control} name="name" render={({
                 field
@@ -655,6 +715,13 @@ const LeadForm = ({
       <div className="mt-4">
         <SocialProof />
       </div>
+      {stickyBar && (
+        <StickyEstimateBar
+          label={stickyLabel ?? (isCourts ? 'Get my free fence quote' : 'Estimate my fence cost')}
+          city={city}
+          formRef={formRef}
+        />
+      )}
     </>;
 };
 

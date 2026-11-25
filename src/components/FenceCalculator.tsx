@@ -45,6 +45,10 @@ export interface CalculatorResult {
   linear_feet: number;
   fence_material: CalculatorFormData['fence_material'];
   estimatedCost: { min: number; max: number };
+  // The visitor-entered gate count behind the estimate, so the lead form
+  // can pin the full summary (footage, material, gates) at the contact
+  // step. Display only: the lead payload is built from the fields above.
+  num_gates: number;
 }
 
 interface FenceCalculatorProps {
@@ -60,6 +64,9 @@ interface FenceCalculatorProps {
   onBridgeCta?: () => void;
   // "Partial replacement" changes the footage question to the failing run.
   projectNeed?: string;
+  // Reports the "Not sure" footage toggle so the lead form can show the
+  // honest deferral line at the contact step instead of an estimate pin.
+  onFeetUnknownChange?: (unknown: boolean) => void;
 }
 
 // Minimal inline renderer for the locked screen copy: **bold** segments,
@@ -85,7 +92,7 @@ const FALLBACK_BRIDGE_PARAS = [
   '*Your contractor will call within one business day to schedule your free measurement. No obligation.*',
 ];
 
-const FenceCalculator = ({ onCalculate, bridgeParas, onBridgeCta, projectNeed }: FenceCalculatorProps) => {
+const FenceCalculator = ({ onCalculate, bridgeParas, onBridgeCta, projectNeed, onFeetUnknownChange }: FenceCalculatorProps) => {
   const [estimatedCost, setEstimatedCost] = useState<{ min: number; max: number } | null>(null);
   const [feetUnknown, setFeetUnknown] = useState(false);
   const onCalculateRef = useRef(onCalculate);
@@ -132,7 +139,8 @@ const FenceCalculator = ({ onCalculate, bridgeParas, onBridgeCta, projectNeed }:
       onCalculateRef.current({
         linear_feet: feetValue,
         fence_material: fenceMaterial,
-        estimatedCost: { min: minCost, max: maxCost }
+        estimatedCost: { min: minCost, max: maxCost },
+        num_gates: gates
       });
     } else {
       setEstimatedCost(null);
@@ -291,7 +299,11 @@ const FenceCalculator = ({ onCalculate, bridgeParas, onBridgeCta, projectNeed }:
                 </FormControl>
                 <button
                   type="button"
-                  onClick={() => setFeetUnknown(prev => !prev)}
+                  onClick={() => {
+                    const next = !feetUnknown;
+                    setFeetUnknown(next);
+                    onFeetUnknownChange?.(next);
+                  }}
                   aria-pressed={feetUnknown}
                   className={`mt-2 text-sm underline underline-offset-2 ${feetUnknown ? 'text-texas-terracotta font-medium' : 'text-muted-foreground'}`}
                 >
