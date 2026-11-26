@@ -1,4 +1,5 @@
-// Geographic neighbor map for the rebuilt (wave 1 and wave 2) city pages.
+// Geographic neighbor map for the rebuilt (wave 1, wave 2, and wave 3
+// tranche 1) city pages.
 // Editorial selection only: each city lists 4 to 5 real adjacent or near
 // adjacent DFW communities, chosen by geography, never an all to all grid.
 // Keys and values are city slugs from src/lib/cities.ts. Most values are
@@ -9,18 +10,18 @@
 
 export const cityNeighbors: Record<string, string[]> = {
   'dallas': ['garland', 'richardson', 'irving', 'grand-prairie', 'farmers-branch'],
-  'fort-worth': ['arlington', 'burleson', 'keller', 'haltom-city', 'watauga'],
+  'fort-worth': ['arlington', 'benbrook', 'keller', 'haltom-city', 'saginaw'],
   'arlington': ['fort-worth', 'grand-prairie', 'mansfield', 'euless', 'bedford'],
   'plano': ['richardson', 'allen', 'frisco', 'murphy', 'wylie'],
   'frisco': ['plano', 'mckinney', 'little-elm', 'the-colony', 'prosper'],
   'mckinney': ['allen', 'frisco', 'prosper', 'celina', 'anna'],
   'grapevine': ['southlake', 'colleyville', 'coppell', 'euless', 'flower-mound'],
-  'denton': ['lewisville', 'flower-mound', 'little-elm', 'the-colony', 'sanger'],
+  'denton': ['lewisville', 'corinth', 'little-elm', 'argyle', 'sanger'],
   'irving': ['dallas', 'grand-prairie', 'coppell', 'farmers-branch', 'euless'],
   'garland': ['dallas', 'richardson', 'mesquite', 'rowlett', 'sachse'],
   'carrollton': ['farmers-branch', 'dallas', 'lewisville', 'the-colony', 'coppell'],
   'richardson': ['dallas', 'plano', 'garland', 'murphy', 'farmers-branch'],
-  'lewisville': ['flower-mound', 'the-colony', 'carrollton', 'coppell', 'denton'],
+  'lewisville': ['flower-mound', 'the-colony', 'carrollton', 'lake-dallas', 'denton'],
   'grand-prairie': ['arlington', 'dallas', 'irving', 'cedar-hill', 'mansfield'],
   'sherman': ['denison', 'anna', 'mckinney', 'celina'],
   'allen': ['plano', 'mckinney', 'murphy', 'frisco', 'fairview'],
@@ -36,11 +37,11 @@ export const cityNeighbors: Record<string, string[]> = {
   'duncanville': ['cedar-hill', 'desoto', 'dallas', 'grand-prairie'],
   'euless': ['bedford', 'hurst', 'grapevine', 'irving', 'colleyville'],
   'farmers-branch': ['carrollton', 'dallas', 'richardson', 'irving', 'coppell'],
-  'flower-mound': ['lewisville', 'grapevine', 'coppell', 'the-colony', 'denton'],
+  'flower-mound': ['lewisville', 'grapevine', 'coppell', 'highland-village', 'denton'],
   'forney': ['mesquite', 'terrell', 'rockwall', 'garland'],
   'haltom-city': ['fort-worth', 'north-richland-hills', 'watauga', 'keller', 'richland-hills'],
   'hurst': ['bedford', 'euless', 'north-richland-hills', 'colleyville', 'watauga'],
-  'keller': ['southlake', 'watauga', 'north-richland-hills', 'fort-worth', 'colleyville'],
+  'keller': ['southlake', 'watauga', 'north-richland-hills', 'fort-worth', 'roanoke'],
   'lancaster': ['desoto', 'dallas', 'cedar-hill', 'waxahachie', 'hutchins'],
   'little-elm': ['frisco', 'the-colony', 'denton', 'prosper', 'lewisville'],
   'mansfield': ['arlington', 'burleson', 'midlothian', 'fort-worth', 'grand-prairie'],
@@ -52,12 +53,29 @@ export const cityNeighbors: Record<string, string[]> = {
   'rockwall': ['rowlett', 'wylie', 'forney', 'heath', 'garland'],
   'rowlett': ['garland', 'rockwall', 'sachse', 'wylie', 'mesquite'],
   'sachse': ['garland', 'wylie', 'murphy', 'rowlett', 'richardson'],
-  'southlake': ['grapevine', 'colleyville', 'keller', 'coppell', 'flower-mound'],
+  'southlake': ['grapevine', 'colleyville', 'keller', 'coppell', 'trophy-club'],
   'terrell': ['forney', 'mesquite', 'kaufman', 'rockwall'],
   'the-colony': ['lewisville', 'frisco', 'little-elm', 'carrollton', 'plano'],
   'watauga': ['north-richland-hills', 'keller', 'haltom-city', 'hurst', 'fort-worth'],
   'waxahachie': ['midlothian', 'lancaster', 'desoto', 'ennis', 'mansfield'],
-  'wylie': ['murphy', 'sachse', 'plano', 'rockwall', 'rowlett'],
+  'wylie': ['murphy', 'sachse', 'plano', 'rockwall', 'lucas'],
+  'trophy-club': ['roanoke', 'southlake', 'keller', 'grapevine', 'argyle'],
+  'highland-village': ['flower-mound', 'lewisville', 'argyle', 'corinth', 'lake-dallas'],
+  'argyle': ['denton', 'corinth', 'highland-village', 'flower-mound', 'roanoke'],
+  'fairview': ['lucas', 'allen', 'mckinney', 'wylie', 'plano'],
+  'melissa': ['anna', 'mckinney', 'celina', 'allen', 'prosper'],
+  'heath': ['rockwall', 'fate', 'forney', 'rowlett', 'terrell'],
+  'lucas': ['fairview', 'allen', 'wylie', 'murphy', 'plano'],
+  'corinth': ['denton', 'lake-dallas', 'highland-village', 'lewisville', 'argyle'],
+  'lake-dallas': ['corinth', 'lewisville', 'highland-village', 'denton', 'little-elm'],
+  'roanoke': ['trophy-club', 'keller', 'argyle', 'southlake', 'flower-mound'],
+  'saginaw': ['fort-worth', 'keller', 'watauga', 'haltom-city', 'benbrook'],
+  'benbrook': ['fort-worth', 'aledo', 'granbury', 'burleson', 'arlington'],
+  'aledo': ['benbrook', 'fort-worth', 'granbury', 'burleson', 'arlington'],
+  'granbury': ['aledo', 'benbrook', 'cleburne', 'fort-worth', 'burleson'],
+  'sunnyvale': ['mesquite', 'garland', 'dallas', 'rowlett', 'forney'],
+  'richland-hills': ['haltom-city', 'north-richland-hills', 'hurst', 'fort-worth', 'watauga'],
+  'fate': ['rockwall', 'heath', 'royse-city', 'rowlett', 'greenville'],
 };
 
 export function formatSlug(slug: string): string {
