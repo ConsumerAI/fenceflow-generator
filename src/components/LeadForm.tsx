@@ -12,7 +12,8 @@ import { Lead, ServiceType } from '@/lib/types';
 import { supabase, supabaseInstance } from '@/lib/supabase';
 import FenceCalculator, { CalculatorFormData, CalculatorResult } from './FenceCalculator';
 import AddressAutocomplete from './AddressAutocomplete';
-import { MapPin, Lock, ArrowRight, ArrowLeft } from 'lucide-react';
+import { MapPin, Lock, ArrowRight, ArrowLeft, ChevronDown } from 'lucide-react';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import ProgressBar from './ProgressBar';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
 import SocialProof from '@/components/SocialProof';
@@ -20,11 +21,16 @@ import StickyEstimateBar from './StickyEstimateBar';
 import { trackEvent } from '@/lib/analytics';
 
 // Conversion pass (Nov 25, 2026): the estimate is step 1, not a reward for
-// finishing the form. Flow is now:
+// finishing the form. Conversion round 3 (Nov 25, 2026) collapsed the old
+// steps 2 and 3 into one final step. Flow is now:
 //   Step 1: "What do you need?" chips + the calculator (residential) + ZIP.
-//   Step 2: service type, timeline, project details.
-//   Step 3: name, phone, email, address (ZIP first, address last, per the
-//           form addendum), then submit.
+//   Step 2: estimate pin, then name, phone, email, address (ZIP first,
+//           address last, per the form addendum), then a project-details
+//           accordion (service type, timeline, details), then submit.
+// Owner ruling (Nov 25, 2026): the timeline is always the visitor's own
+// choice. It is never preselected or defaulted, and it stays a required
+// field. If a visitor tries to submit without picking one, the accordion
+// opens to the timeline control and its error shows there, in place.
 // The submission payload keys and the Supabase path are unchanged. The
 // project-need answer rides in the existing message field as a labeled
 // first line, so the lead record needs no new column.
@@ -107,6 +113,19 @@ const LeadForm = ({
   const formRef = useRef<HTMLDivElement>(null);
   const trackedEstimateRef = useRef(false);
   const trackedStartRef = useRef(false);
+  // Conversion round 3: the project-details accordion on the final step.
+  // It starts closed so the contact fields lead, and it opens on demand or
+  // programmatically when a submit attempt is missing a required choice
+  // inside it (timeline or service type), so the error is never hidden.
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const detailsRef = useRef<HTMLDivElement>(null);
+
+  const handleDetailsOpenChange = (open: boolean) => {
+    if (open && !detailsOpen) {
+      trackEvent('details_accordion_open', { city });
+    }
+    setDetailsOpen(open);
+  };
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -212,22 +231,28 @@ const LeadForm = ({
     return ok;
   };
 
-  const validateStep2 = (): boolean => {
+  // Conversion round 3: there is no step 2 gate anymore. Timeline and
+  // service type validate at submit through the zod schema, exactly as
+  // every other field does. If either is missing, open the accordion to
+  // the control so the visitor sees the prompt where the choice lives.
+  // The timeline is never filled in for them (owner ruling, Nov 25, 2026).
+  const handleFinalSubmit = async () => {
     const values = form.getValues();
-    let ok = true;
-    if (!values.service_type) {
-      form.setError('service_type', {
-        message: 'Please select a service type'
-      });
-      ok = false;
+    if (!values.service_type || !values.preferred_timeline) {
+      handleDetailsOpenChange(true);
+      setTimeout(() => {
+        detailsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 50);
     }
-    if (!values.preferred_timeline) {
-      form.setError('preferred_timeline', {
-        message: 'Please select your preferred timeline'
-      });
-      ok = false;
+    try {
+      const result = await form.handleSubmit(onSubmit)();
+      console.log('Form submission result:', result);
+      if (!form.formState.errors || Object.keys(form.formState.errors).length === 0) {
+        setIsSuccess(true);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
     }
-    return ok;
   };
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
@@ -355,7 +380,7 @@ const LeadForm = ({
 
   const buttonBaseClasses = "w-full bg-texas-terracotta hover:bg-texas-earth text-white flex items-center justify-center transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]";
 
-  const stepLabels = ['Your estimate', 'Project details', 'Your details'];
+  const stepLabels = ['Your estimate', 'Your details'];
 
   if (isSuccess) {
     return <div className={formClasses}>
@@ -447,11 +472,11 @@ const LeadForm = ({
         </div>
 
         <div className="-mx-6 md:-mx-8">
-          <ProgressBar currentStep={currentStep} totalSteps={3} />
+          <ProgressBar currentStep={currentStep} totalSteps={2} />
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-4 mb-6">
-          Step {currentStep} of 3: {stepLabels[currentStep - 1]}
+          Step {currentStep} of 2: {stepLabels[currentStep - 1]}
         </p>
 
         <Form {...form}>
@@ -524,80 +549,6 @@ const LeadForm = ({
               </>}
 
             {currentStep === 2 && <>
-                <FormField control={form.control} name="service_type" render={({
-              field
-            }) => <FormItem>
-                      <FormLabel>Service Type</FormLabel>
-                      <Select onValueChange={value => {
-                field.onChange(value);
-                form.clearErrors('service_type');
-              }} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select service type" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {Object.values(ServiceType).map(type => <SelectItem key={type} value={type}>
-                              {type}
-                            </SelectItem>)}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>} />
-
-                <FormField control={form.control} name="preferred_timeline" render={({
-              field
-            }) => <FormItem>
-                      <FormLabel>Preferred Timeline</FormLabel>
-                      <Select onValueChange={value => {
-                field.onChange(value);
-                form.clearErrors('preferred_timeline');
-              }} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select timeline" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="ASAP">ASAP</SelectItem>
-                          <SelectItem value="Within 1 Month">Within 1 Month</SelectItem>
-                          <SelectItem value="Within 3 Months">Within 3 Months</SelectItem>
-                          <SelectItem value="Just Researching">Just Researching</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>} />
-
-                <FormField control={form.control} name="message" render={({
-              field
-            }) => <FormItem>
-                      <FormLabel>Project Details (Optional)</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder={projectNeed === 'Partial replacement'
-                            ? 'Which side is failing? Anything else your contractor should know?'
-                            : 'Anything your contractor should know? A gate that sticks, a dog, an HOA letter, it all helps.'}
-                          className="resize-none"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>} />
-
-                <Button type="button" onClick={() => { if (validateStep2()) goToStep(3); }} className={buttonBaseClasses}>
-                  Continue
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <button type="button" onClick={() => setCurrentStep(1)} className="w-full text-sm text-muted-foreground underline underline-offset-2 flex items-center justify-center gap-1">
-                  <ArrowLeft className="h-3 w-3" /> Back to your estimate
-                </button>
-                <p className="text-center text-sm text-muted-foreground mt-2">
-                  One step left: your contact details, so your contractor can call with the measurement time.
-                </p>
-              </>}
-
-            {currentStep === 3 && <>
                 {showPin && (
                   <div className="p-4 bg-green-50 border border-green-100 rounded-md">
                     {fenceDetails.estimatedCost ? (
@@ -676,22 +627,88 @@ const LeadForm = ({
                       <FormMessage />
                     </FormItem>} />
 
-                <Button type="button" onClick={async () => {
-                  try {
-                    const result = await form.handleSubmit(onSubmit)();
-                    console.log('Form submission result:', result);
-                    if (!form.formState.errors || Object.keys(form.formState.errors).length === 0) {
-                      setIsSuccess(true);
-                    }
-                  } catch (error) {
-                    console.error('Form submission error:', error);
-                  }
-                }} disabled={isSubmitting} className={buttonBaseClasses}>
+                <div ref={detailsRef}>
+                  <Collapsible open={detailsOpen} onOpenChange={handleDetailsOpenChange}>
+                    <CollapsibleTrigger asChild>
+                      <button type="button" className="w-full flex items-center justify-between rounded-md border border-input bg-white px-4 py-3 text-left hover:border-texas-terracotta transition-colors" aria-expanded={detailsOpen}>
+                        <span>
+                          <span className="block text-sm font-medium">Project details and timeline</span>
+                          <span className="block text-xs text-muted-foreground mt-0.5">Your timeline is required. The rest helps your contractor prepare.</span>
+                        </span>
+                        <ChevronDown className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform ${detailsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="pt-4 space-y-4">
+                      <FormField control={form.control} name="service_type" render={({
+                    field
+                  }) => <FormItem>
+                            <FormLabel>Service Type</FormLabel>
+                            <Select onValueChange={value => {
+                      field.onChange(value);
+                      form.clearErrors('service_type');
+                    }} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select service type" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {Object.values(ServiceType).map(type => <SelectItem key={type} value={type}>
+                                    {type}
+                                  </SelectItem>)}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>} />
+
+                      <FormField control={form.control} name="preferred_timeline" render={({
+                    field
+                  }) => <FormItem>
+                            <FormLabel>Preferred Timeline</FormLabel>
+                            <Select onValueChange={value => {
+                      field.onChange(value);
+                      form.clearErrors('preferred_timeline');
+                    }} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select timeline" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="ASAP">ASAP</SelectItem>
+                                <SelectItem value="Within 1 Month">Within 1 Month</SelectItem>
+                                <SelectItem value="Within 3 Months">Within 3 Months</SelectItem>
+                                <SelectItem value="Just Researching">Just Researching</SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>} />
+
+                      <FormField control={form.control} name="message" render={({
+                    field
+                  }) => <FormItem>
+                            <FormLabel>Project Details (Optional)</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder={projectNeed === 'Partial replacement'
+                                  ? 'Which side is failing? Anything else your contractor should know?'
+                                  : 'Anything your contractor should know? A gate that sticks, a dog, an HOA letter, it all helps.'}
+                                className="resize-none"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>} />
+                    </CollapsibleContent>
+                  </Collapsible>
+                </div>
+
+                <Button type="button" onClick={handleFinalSubmit} disabled={isSubmitting} className={buttonBaseClasses}>
                   {quoteCta}
                   <Lock className="ml-2 h-4 w-4" />
                 </Button>
-                <button type="button" onClick={() => setCurrentStep(2)} className="w-full text-sm text-muted-foreground underline underline-offset-2 flex items-center justify-center gap-1">
-                  <ArrowLeft className="h-3 w-3" /> Back to project details
+                <button type="button" onClick={() => setCurrentStep(1)} className="w-full text-sm text-muted-foreground underline underline-offset-2 flex items-center justify-center gap-1">
+                  <ArrowLeft className="h-3 w-3" /> Back to your estimate
                 </button>
 
                 <p className="text-center text-sm text-foreground mt-2">
