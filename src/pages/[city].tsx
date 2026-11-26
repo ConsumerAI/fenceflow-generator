@@ -18,6 +18,7 @@ import { ServiceInfo } from '@/lib/types';
 import SocialProof from '@/components/SocialProof';
 import { getWave1Page } from '@/data/wave1Content';
 import { getWave2Page } from '@/data/wave2Content';
+import { getWave3Page } from '@/data/wave3Content';
 import { Wave1CityLayout } from '@/components/Wave1Content';
 
 // Service data
@@ -78,8 +79,8 @@ const CityPage = () => {
         return;
       }
 
-      // Wave 1 and 2 cities render locked static copy; no runtime content fetch.
-      if (getWave1Page(city) || getWave2Page(city)) {
+      // Wave 1, 2 and 3 cities render locked static copy; no runtime content fetch.
+      if (getWave1Page(city) || getWave2Page(city) || getWave3Page(city)) {
         setIsLoading(false);
         return;
       }
@@ -115,8 +116,8 @@ const CityPage = () => {
     return <NotFound />;
   }
 
-  // Waves 1 and 2: locked v5 copy replaces the template for these cities.
-  const wave1Page = getWave1Page(city) ?? getWave2Page(city);
+  // Waves 1, 2 and 3: locked v5 copy replaces the template for these cities.
+  const wave1Page = getWave1Page(city) ?? getWave2Page(city) ?? getWave3Page(city);
   if (wave1Page) {
     return <Wave1CityLayout page={wave1Page} />;
   }
