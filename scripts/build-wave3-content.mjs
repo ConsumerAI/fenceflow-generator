@@ -1,4 +1,4 @@
-// Build-time content generator for Wave 3 tranche 1 pages.
+// Build-time content generator for Wave 3 pages (all 50 cities, tranches 1 to 3).
 //
 // Parses the v5-format markdown drafts in
 // ~/workspace/fence-rebuild/wave3-content/ into a typed TypeScript data
@@ -36,6 +36,39 @@ const CITY_NAMES = {
   sunnyvale: 'Sunnyvale',
   'richland-hills': 'Richland Hills',
   fate: 'Fate',
+  princeton: 'Princeton',
+  lavon: 'Lavon',
+  'royse-city': 'Royse City',
+  'red-oak': 'Red Oak',
+  'glenn-heights': 'Glenn Heights',
+  ennis: 'Ennis',
+  kaufman: 'Kaufman',
+  greenville: 'Greenville',
+  denison: 'Denison',
+  gainesville: 'Gainesville',
+  decatur: 'Decatur',
+  azle: 'Azle',
+  crowley: 'Crowley',
+  everman: 'Everman',
+  'forest-hill': 'Forest Hill',
+  'white-settlement': 'White Settlement',
+  'lake-worth': 'Lake Worth',
+  aubrey: 'Aubrey',
+  'pilot-point': 'Pilot Point',
+  ponder: 'Ponder',
+  justin: 'Justin',
+  sanger: 'Sanger',
+  bridgeport: 'Bridgeport',
+  rhome: 'Rhome',
+  springtown: 'Springtown',
+  alvarado: 'Alvarado',
+  joshua: 'Joshua',
+  keene: 'Keene',
+  kennedale: 'Kennedale',
+  hutchins: 'Hutchins',
+  seagoville: 'Seagoville',
+  venus: 'Venus',
+  'river-oaks': 'River Oaks',
 };
 
 const RESIDENTIAL_SLUGS = Object.keys(CITY_NAMES);
