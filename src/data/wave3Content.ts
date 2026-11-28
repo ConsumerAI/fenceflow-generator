@@ -3241,6 +3241,6282 @@ export const wave3Pages: Record<string, Wave1Page> = {
         "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
       ]
     }
+  },
+  "princeton": {
+    "slug": "princeton",
+    "cityName": "Princeton",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Princeton, TX: First Fence for a New Princeton Yard | Fences Texas",
+    "metaDescription": "Closing on a new Princeton home with a bare backyard? Run the calculator for a real range, then get a free itemized quote from a local Princeton contractor who handles the permit, the HOA, and the steel posts Princeton requires. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Princeton fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It is closing week, and the house is finished down to the last outlet cover while the lot next door is still framing studs and the backyard is graded dirt with a survey stake in each corner. That is the normal Princeton starting point."
+          },
+          {
+            "type": "p",
+            "text": "It is about a first fence: the dog cannot be let out, the kids play in a yard that ends wherever they stop running, and the neighbors on both sides are working through the same decision in the same month. Fences Texas lines you up with a Princeton contractor who builds first fences in new subdivisions every week. One conversation about the yard is enough: he comes out, measures it, and leaves a price you are free to turn down."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Start with the calculator, then send your details.",
+                "text": "A rough run length, your new address, and whether the yard is bare or has a builder fence to remove. You will see a ballpark figure while your phone number is still yours alone."
+              },
+              {
+                "title": "A Princeton contractor phones to set the measuring visit.",
+                "text": ""
+              },
+              {
+                "title": "You receive a written, broken-out quote.",
+                "text": "Posts, gates, permit, and any removal each sit on their own line once he has walked the lot. Hire him if the figure works for you. Decline, and that closes the matter."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a finished Princeton yard looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "a six foot privacy fence, boards tight, a gate wide enough for a mower, and a back line that finally makes the yard feel like part of the house instead of part of the construction zone."
+          },
+          {
+            "type": "p",
+            "text": "Princeton writes its fence standard into city rules more firmly than most towns around it. Side and rear fences go up to six feet, front yard fences stop at forty eight inches, barbed wire is not allowed, and the posts are schedule 40 steel set in concrete, with wood posts not permitted. Rain makes the Blackland Prairie clay heave; a dry August pulls it back until cracks open, and buried posts feel every bit of it. Steel in concrete holds its line through those seasons in a way a wood post in dirt never will."
+          }
+        ]
+      },
+      {
+        "heading": "What a Princeton fence costs, and how the number gets built",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Two things drive a Princeton quote more than anything else: how many feet the fence runs, and what those feet are built from. Cedar sits at the top of that scale. Pine cuts the per-foot figure to roughly fifty percent of cedar, iron lands below cedar, and pool mesh is figured separately. Gates surprise people. A standard walk gate is one thing, a wide double gate for trailer access is another, and both belong on the quote as separate lines rather than buried in the footage."
+          },
+          {
+            "type": "p",
+            "text": "Run your footage through the calculator and you will hold a realistic range in under a minute. Treat it as a planning figure. The contractor walks the lot, confirms the corners from your survey, and only then puts a firm, itemized price in writing."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The paperwork and legwork you hand off",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Princeton requires a permit on fences built and repaired, and repair work past a short run counts as permitted work too, so even a partial rebuild on an older Princeton street is not a handshake job. Permit duty belongs to your contractor, who files whatever Princeton demands and follows city rules on post type and height."
+          },
+          {
+            "type": "p",
+            "text": "Then there is the subdivision layer. In communities like Arcadia Farms and Whitewing Trails, the HOA may hold opinions about height, stain, and which side of the fence faces the street. Utility lines get marked through 811 before a single post hole opens, which matters in new Princeton subdivisions where lines run shallow and close to the back property line."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor walks your lot with a tape and your survey.",
+                "text": "He checks corners, gate swings, and where the line meets each neighbor, then prices the job he actually saw."
+              },
+              {
+                "title": "You study the itemized quote at home.",
+                "text": "Every piece is listed separately, so you can compare it against the calculator range and ask about any line that looks off."
+              },
+              {
+                "title": "Once construction wraps, you inspect it side by side.",
+                "text": "Open and close each gate and point out any flaw; the last check stays in your pocket until satisfied."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. On that call he reviews your details and locks in the measuring appointment, nothing more. Expect no automated dialing, no telemarketing handoff, and no arm twisting at your kitchen table. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: Princeton edition",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most Princeton backyards wind up in cedar for practical reasons: it shrugs off decay, drinks stain without blotching, and overlapping board-on-board runs stay closed after hot weather shrinks each board. Where money is tight, pine earns its keep: at roughly fifty percent of cedar per-foot figure, a young family can fence a new lot now instead of someday. Iron belongs in front yards, where Princeton caps height at forty eight inches, and around pools, where an open fence keeps sightlines clear."
+          }
+        ]
+      },
+      {
+        "heading": "Princeton fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a fence run in Princeton?",
+                "a": "Length plus lumber choice are nearly the whole story, and the calculator above turns them into an estimated range in thirty seconds or so. For comparison, figure pine at close to fifty percent of cedar per foot, iron somewhere under cedar, and gates counted apart from the run. A firm total only comes after he has measured the lot himself, standing on Princeton ground."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Any permit wait or HOA review counts toward that same span rather than stretching it."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Being there for the measuring appointment helps: gate and boundary questions settle far more simply with everyone looking at the same line. Once building starts, plenty of Princeton owners go to work; an unlocked gate and a dog plan is all the crew needs."
+              },
+              {
+                "q": "Who takes care of the permit and my HOA?",
+                "a": "He does, for both. Princeton will not let a fence go up without a permit, so yours files the application as part of his job and builds to the city specifications for posts and height. If your subdivision HOA has a fence spec, name the community in the form and that approval gets worked into the plan from the start."
+              },
+              {
+                "q": "Does Princeton really require steel posts?",
+                "a": "Yes. The city standard calls for schedule 40 steel posts on side and rear fences, and wood posts are not permitted. It is one reason Princeton fences tend to stay straight: the part in the clay is steel set in concrete, not a wood post slowly rotting at ground level."
+              },
+              {
+                "q": "Only one side of my fence is failing. Can that side be replaced on its own?",
+                "a": "Yes. Do not assume a single side escapes the paperwork: once repair work grows past a short run, Princeton wants it permitted, so one side still means a permit and an inspection. If the bad side borders a neighbor, say so in the form. Princeton subdivisions split shared runs all the time, and the estimate can cover your portion alone."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Princeton fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Send one form and a contractor from nearby will be out with a tape measure; soon after, the dog gets a yard of his own."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "lavon": {
+    "slug": "lavon",
+    "cityName": "Lavon",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Lavon, TX: A Fence That Holds Up to Lake Wind | Fences Texas",
+    "metaDescription": "Gate rattling in the lake wind again? Run your Lavon lot through the calculator for a real range, then get a free itemized quote from a local Lavon contractor who handles the permit and builds for Lavon Lake weather. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Lavon fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The gate has rattled in the lake wind since spring. Every gust off Lake Lavon finds it, the latch complains, and by now you can hear from the kitchen whether it caught or not. Lavon is a small Collin County city tucked against the southeast shore of the lake it is named for, and that water is the defining fact of fence life here: open fetch, steady wind, and yards in Grand Heritage and Elevon that face it with very little in between."
+          },
+          {
+            "type": "p",
+            "text": "Either way the fix starts the same. Fences Texas matches you with a Lavon contractor who builds for this shoreline. Tell him about the job once; he measures, quotes in writing, and leaves the yes or no with you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run the estimator, then submit the form.",
+                "text": "Give a rough length, your Lavon address, and whether this is a fresh fence or a tired one coming out. The ballpark shows first, with no phone number demanded."
+              },
+              {
+                "title": "The contractor calls to arrange the site visit.",
+                "text": ""
+              },
+              {
+                "title": "A line-by-line quote lands after he measures.",
+                "text": "Removal, gates, and permit work are spelled out on their own lines. Take it if the number suits you, or decline and owe nothing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a sound Lavon fence looks like on a windy lot",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a settled Lavon street in Bear Creek or Trails of Lavon, a sound fence reads quietly: the top line runs level, the gate shuts with a soft click instead of a rattle, and nothing leans toward the lake. Lavon sits on Blackland Prairie clay that swells when it soaks and shrinks hard when it dries, and wind off the water leans on a solid privacy fence like a hand that never lets up. Posts set deep in concrete are how local crews answer both problems at once, because a post that starts plumb in clay and takes wind load season after season needs a footing that grips."
+          },
+          {
+            "type": "p",
+            "text": "Exposure changes the details. A back line that faces open water or an empty field in Lavon catches gusts a sheltered interior lot never feels, and a good contractor will say so at the measuring visit and build that side accordingly rather than treating every Lavon yard as the same job."
+          }
+        ]
+      },
+      {
+        "heading": "What a Lavon fence costs, and what moves the figure",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage sets the base of every Lavon quote, and material moves it from there. Footage first, then what covers it. Cedar carries the highest per-foot figure; pine near fifty percent of that, iron below cedar, pool mesh on separate terms. Gates are the classic forgotten line: one walk gate is simple, a double gate wide enough for a boat trailer is a different piece of work, and lake lots in Lavon ask for that second kind more often than most towns."
+          },
+          {
+            "type": "p",
+            "text": "That range cannot see your slope, your gates, or your exposure, so the contractor confirms the real price standing in your yard, in writing, with each piece listed."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Permits, repairs, and the forty percent line",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Lavon requires a permit for fence construction under its fence ordinance, and applications run through the city portal, so the paperwork is part of the job your contractor handles. Lavon also draws a line most cities leave fuzzy: work counts as a repair only when the replaced material stays at or under forty percent of the fence and the scope, location, and dimensions stay the same. Cross that line and Lavon treats the project as a new fence, permit and all."
+          },
+          {
+            "type": "p",
+            "text": "Name the community in the form and it gets handled in order. Digging waits until 811 has marked the buried lines, and an old fence comes down and leaves with the crew under the same quoted price."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A Lavon contractor measures the line in person.",
+                "text": "He checks the corners, the gate hardware, and which runs take the lake wind, then prices what he found."
+              },
+              {
+                "title": "You get the quote in writing and take your time.",
+                "text": "It is broken into parts, so the fence, the gates, and the removal are each visible. Accept it or pass on it; the quote itself costs nothing."
+              },
+              {
+                "title": "After the build, you go over it with the crew chief.",
+                "text": "Try each gate, look down each run, and settle every concern before the balance is paid."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He goes over the job details, confirms access to the yard, and fixes the measuring time. That is the whole call. No robocalls, no number passed along to a call center, no signing pressure. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron around the lake",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On Lavon back lines, cedar is the workhorse: decay bounces off it, stain goes on clean, and overlapping boards mean August shrinkage opens no gaps. For a long run on a budget, pine is hard to beat at roughly fifty percent of cedar per foot. Iron earns its keep out front, where Lavon caps fences at four feet and demands at least half the design stay open, and around pools, where visibility is the whole idea."
+          }
+        ]
+      },
+      {
+        "heading": "Lavon fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "How much should I expect a Lavon fence to cost?",
+                "a": "Two inputs drive the number: how far the fence travels and what covers it. Plug both into the calculator and a range pops back in thirty seconds or so. To compare materials, set pine near fifty percent of cedar per foot and iron between the two; gates carry a charge apart from the run. The contractor confirms the firm price on site after measuring."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Permit processing and any HOA review are already counted inside those two to three weeks."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Try to be around when he measures: gate and boundary calls are easier in the grass than over the phone. During the build, most Lavon owners head to work; leave access open and sort out the dogs."
+              },
+              {
+                "q": "What happens with the permit and my HOA?",
+                "a": "He files and handles both. Under the Lavon fence ordinance a permit comes first, and filing for it is work your contractor absorbs into the job. Grand Heritage, Elevon, and other Lavon communities each keep their own fence standards, so name yours in the form and that approval gets sequenced in."
+              },
+              {
+                "q": "Why does my gate keep failing in the wind?",
+                "a": "Lavon lots near the lake take steady wind off open water, and a gate is the moving part that absorbs it. Undersized hinges, a post that has loosened in clay, or a latch that barely catches will all show up as a rattling gate first. The fix is a properly set post and hardware sized for the exposure, which your contractor specs at the measuring visit."
+              },
+              {
+                "q": "One side of my fence is shot. Can I just replace that side?",
+                "a": "Yes. Sections and single sides are everyday work in Lavon. One caution from the city code: if the replaced material passes forty percent of the whole fence, Lavon counts the job as new construction rather than a repair, with a permit to match. Before he quotes anything, he will work out which side of the forty percent line your project falls on."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Lavon fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One form brings out a contractor from the area, a price in writing, and a gate that clicks shut in a lake wind."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "royse-city": {
+    "slug": "royse-city",
+    "cityName": "Royse City",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Royse City, TX: Built to the City Post Standard | Fences Texas",
+    "metaDescription": "New subdivision fence going up within sight of the old Royse City water tower? Run the calculator for a real range, then get a free itemized quote from a local contractor who builds to Royse City steel post rules and handles the permit. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Royse City fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "From the back window of a new Verandah house you can watch three other fences going up on your street, and on a clear day the old Royse City water tower stands over downtown to the south. That contrast is Royse City right now: a railroad town founded in the 1880s wrapped in some of the fastest subdivision growth in North Texas, with the population more than doubling since 2020 and thousands of new homes permitted in five years."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas connects you with a Royse City contractor who works these streets daily. One explanation is enough. He measures the lot, writes up a price, and you sign only if you want to."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Type in a rough length and hit send.",
+                "text": "Tell us if the yard sits empty, wears a builder fence, or has one giving up, and include the Royse City address. The estimate appears before any phone number is requested."
+              },
+              {
+                "title": "Your contractor rings to book the measurement.",
+                "text": ""
+              },
+              {
+                "title": "His walk of the property comes first; the detailed quote comes after.",
+                "text": "Old fence removal, gates, and permit each appear as a charge of their own. If the total works, hire him. If not, you are done, with the quote still yours."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a proper Royse City fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Waterscape or Woodland Creek a proper fence has a particular stance: eight feet is the city ceiling, the boards run true, and the whole line feels planted rather than perched. Royse City earns that feel through a rule most cities never write down. The city defines a fence post as a steel pipe of a set diameter, sunk at least two feet into concrete, spaced no more than eight feet apart. A wood post does not meet the definition, which means a wood post fence is not merely flimsy in Royse City, it is not a code fence at all."
+          },
+          {
+            "type": "p",
+            "text": "The ground argues for the same standard. The Blackland Prairie clay under Royse City does the same dance: soaked, it expands; parched, it splits open, and posts are tested by every swing. Two feet of steel in concrete is how a fence stays straight through those cycles on an open former farm field where nothing blocks the wind."
+          }
+        ]
+      },
+      {
+        "heading": "What a Royse City fence costs, and where the money goes",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Feet first, material second: that is the shape of every Royse City quote. Cedar tops the price ladder. Pine lands near fifty percent of cedar per foot, iron below cedar but above pine, and pool mesh gets quoted apart. Gates deserve their own attention, since a single walk gate and a wide equipment gate are different builds, and both show up as separate lines on a proper quote."
+          },
+          {
+            "type": "p",
+            "text": "Give the calculator your footage and it hands back a planning range in thirty seconds or so. Corners, grade changes, and corner lot setbacks are invisible to it, which is why the binding price waits for his tape measure and a written breakdown."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The Royse City rules you do not have to carry",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Royse City requires a permit for all fences, full stop, and the application wants a site plan showing the fence against property lines, pools, and easements. He draws up and files the permit paperwork himself; the city counter is his problem, never yours."
+          },
+          {
+            "type": "p",
+            "text": "Corner lots get the rule Royse City is known for: a privacy fence must stand at least seven feet off the side property line, a setback that surprises owners who assumed the fence could hug the line like their neighbors on interior lots. Front yards take only a low decorative fence. Name your community in the form and the contractor sequences city and HOA approvals before the first hole is dug."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor measures against your survey.",
+                "text": "He verifies corners, checks the corner lot setback if it applies, and notes gates and easements before pricing anything."
+              },
+              {
+                "title": "You receive the full written breakdown.",
+                "text": "Fence, gates, removal, and permit sit on separate lines, ready to compare against your calculator range. Hire him or decline; either way there is no charge for the quote."
+              },
+              {
+                "title": "At the end, the two of you walk the finished job together.",
+                "text": "Work each gate, check the runs, and name anything that falls short; the final check waits."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He confirms the details you sent, asks about access and dogs, and sets the measuring appointment. Nothing is sold on that call, and your number is not passed to a call center or a robocall list. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: Royse City choices",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Royse City subdivisions, cedar is what you see most: decay resistant, handsome under stain, and built board-on-board it stays tight when plain boards shrink. A tight budget stretches furthest in pine, at near fifty percent of cedar per foot, across a long rear line. Iron handles front yards under the decorative fence rule and pool enclosures where visibility matters. Under every one of them, Royse City wants steel pipe posts two feet deep in concrete, and that hidden standard is what your quote should state in plain words."
+          }
+        ]
+      },
+      {
+        "heading": "Royse City fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What should I budget for a Royse City fence?",
+                "a": "Feed the calculator your footage and a material pick, and thirty seconds later you have a range to plan around. For comparison, pine sits near fifty percent of cedar per-foot price, iron between them, gates billed apart from the fence. Only after his own tape has crossed your lot does he commit to a figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Permitting and HOA review, where either applies, are folded into that same window."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "If you can be there when he measures, do. Gate swings and boundary questions resolve fastest in the grass. On build days, most Royse City owners leave for work; keep gates accessible and the dogs sorted."
+              },
+              {
+                "q": "Permit and HOA: whose job are they?",
+                "a": "Covered, both of them. No Royse City fence goes up legally without a permit, so yours files the application and builds to the city steel post spec. Communities such as Verandah and Waterscape run their own fence review, so list your subdivision in the form and that review joins the schedule early."
+              },
+              {
+                "q": "Why does Royse City care what my posts are made of?",
+                "a": "Because the city wrote the post into its fence definition: steel pipe of a specified size, set at least two feet deep in concrete, no more than eight feet apart. In soil that heaves and contracts, a footing like that decides whether the line stays plumb for a decade or starts tilting within three summers."
+              },
+              {
+                "q": "The back line is fine but one side is failing. Can I replace just that part?",
+                "a": "Yes. One-side replacements are routine in Royse City, and since the city requires a permit for all fences, the partial job gets the same permit and steel post treatment as a full one. Flag a shared boundary in the form. On streets this new, neighbors split runs constantly, and pricing can be arranged around your share."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Royse City fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Send the form and you get a contractor from the area, a price in writing, and a backyard the kids and dog can claim."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "red-oak": {
+    "slug": "red-oak",
+    "cityName": "Red Oak",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Red Oak, TX: Replacing the Twenty Year Builder Fence | Fences Texas",
+    "metaDescription": "Original builder fence hitting year twenty in Red Oak? Run the calculator for a real range, then get a free itemized quote from a local Red Oak contractor who handles the permit, including the picket replacement rule. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Red Oak fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The original builder fence is hitting year twenty all at once. That is the Red Oak story on street after street of 1990s and 2000s subdivisions: the fences went in the same season the houses did, aged in the same sun, and now lean, gray, and shed pickets in the same spring."
+          },
+          {
+            "type": "p",
+            "text": "The neighbor on one side is getting quotes, the neighbor on the other side has a panel held up by a garden stake, and your gate needs a hip check to close. Fences Texas matches you with a Red Oak contractor who prices this exact job every week. Explain the fence once. After that the measuring and written pricing are his job, and the decision is yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Estimate first, form second.",
+                "text": "Enter a rough length and your Red Oak address, and say whether the old fence comes out. The range shows before a phone number is ever requested."
+              },
+              {
+                "title": "Your contractor calls to schedule the walk-through.",
+                "text": ""
+              },
+              {
+                "title": "You get the quote in writing, itemized.",
+                "text": "The new fence, the gates, the tear-out, and the permit appear as separate lines. Hire him if it fits the budget. Pass, and the quote cost you nothing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a renewed Red Oak fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fresh boards with a consistent tone, a top line that runs straight past the oak that shades the corner, and a gate that latches the first time, every time. Underneath sits the part that decides whether you do this again in eight years or in twenty. Red Oak ground splits two ways: central and eastern parts of the city sit on expansive Houston Black clay, while western areas run into caliche, a hard cemented layer that fights the auger. A contractor who works Red Oak knows which side of town he is digging before he quotes, because clay asks for depth and concrete while caliche asks for patience and the right equipment."
+          },
+          {
+            "type": "p",
+            "text": "Clay swells and shrinks with the seasons and walks shallow posts crooked, and a fence built to shrug that off starts with footings sized for the soil it stands in."
+          }
+        ]
+      },
+      {
+        "heading": "What a Red Oak fence costs, and how to read the quote",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A Red Oak replacement quote has a shape worth learning. Most of the total rides on two choices: how many feet and what you run them in. Cedar is priciest, pine lands near fifty percent of it per foot, iron below cedar, and pool mesh priced apart. Then come the replacement lines a first fence never sees: tearing out the old fence and hauling it off. Those belong on the quote as visible lines, not folded silently into the footage, and gates get their own line as well."
+          },
+          {
+            "type": "p",
+            "text": "In thirty seconds or so the calculator produces a range, and you can measure the written quote against it. The contractor firms the number up only after measuring, walking the shared lines, and checking which soil your Red Oak lot actually sits on."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Permits, pickets, and the Red Oak quarter rule",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Red Oak asks for a permit on a new fence, a fence that changes height, a fence that moves, and, here is the local twist, a repair that replaces more than a quarter of the pickets. Swap a handful of boards and it is maintenance. Replace a full side and the city counts it as permitted work. Your contractor figures out which side of the permit line your job lands on and pulls whatever the city requires; that line is his headache, not yours."
+          },
+          {
+            "type": "p",
+            "text": "Placement rules matter too. On a typical Red Oak subdivision lot the fence stops at the front building line, while estate zoning and acreage lots of an acre or more can carry a masonry, brick, or iron fence out to the front property line. Corner lots carry visibility rules near intersections."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A Red Oak contractor walks the fence with you.",
+                "text": "He notes which sections are shared, which posts have gone soft, and how the gates should swing, then measures the real footage."
+              },
+              {
+                "title": "The written quote arrives broken into parts.",
+                "text": "New fence, gates, tear-out, permit: four lines you can weigh separately and compare with your calculator range. Say yes or say no; the quote is free either way."
+              },
+              {
+                "title": "The crew builds, you walk the result together.",
+                "text": "Sight down each run, latch each gate, and point out anything you want corrected before the last payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He runs through the details you sent, confirms the shared lines and gate questions, and books the measurement. The call is short, human, and free of any obligation to proceed. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron on a Red Oak lot",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cedar is the replacement most Red Oak owners choose: it weathers gracefully, takes stain, and board-on-board work keeps a backyard private when summer heat shrinks the boards. Pine is the value play at roughly fifty percent of cedar per-foot price, and along a long shared line it often lets both households say yes. Iron fits estate and acreage frontages where Red Oak allows it forward, and pool enclosures where an open fence is required."
+          }
+        ]
+      },
+      {
+        "heading": "Red Oak fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "How much does a fence run in Red Oak?",
+                "a": "Enter footage and a material choice above and the calculator answers in thirty seconds or so. As a comparison, pine sits near fifty percent of cedar per foot, iron between the two, and taking out an old fence adds removal and hauling charges of their own. He locks the exact figure only once he has measured in person."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Permit and HOA business, where either applies, is counted within that same span."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Homeowners who can attend the measuring visit should. Gate swings and shared lines settle in minutes out in the yard. While the crew works, most Red Oak owners go to their jobs; leave the gates unlatched and arrange for the dogs."
+              },
+              {
+                "q": "Who handles the permit side and my HOA?",
+                "a": "The permit side sits with your contractor. Red Oak demands one whenever a fence is new, taller, relocated, or repaired past a quarter of its pickets, and pulling it is bundled into his job. Subdivision HOAs add their own fence rules on top of the city's, so name yours in the form and both sets get planned together."
+              },
+              {
+                "q": "Can my fence come forward to the street?",
+                "a": "On a standard subdivision lot, no: a Red Oak fence stops at the front building line. The exception is estate zoning or a lot of an acre or more, where a masonry, brick, or wrought iron fence may extend to the front property line. Your contractor confirms which rule your address falls under before quoting."
+              },
+              {
+                "q": "Can I replace only the one bad side of my fence?",
+                "a": "Yes, and the city quarter rule decides: one full side almost always crosses the quarter of pickets line, making it permitted work held to the full standard. On Red Oak subdivision streets most lines are shared, so when a neighbor pays for part of yours, the quote can cover just your portion."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Red Oak fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fill out one form and a contractor from the area will walk your line with a tape, then follow with a number in writing."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "glenn-heights": {
+    "slug": "glenn-heights",
+    "cityName": "Glenn Heights",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Glenn Heights, TX: The Corner Lot Side Fence, Done Right | Fences Texas",
+    "metaDescription": "Corner lot in Glenn Heights with the whole street reading your side fence? Run the calculator for a real range, then get a free itemized quote from a local Glenn Heights contractor who handles the permit and the corner rules. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Glenn Heights fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A corner lot in Glenn Heights lives with an exposure interior lots never feel: your side fence is not a side fence at all, it is the face your house shows the cross street, and the whole neighborhood reads it every day. When that fence grays, leans, or loses boards, it is not a private embarrassment in the backyard. It is the first thing anyone sees of your home."
+          },
+          {
+            "type": "p",
+            "text": "Glenn Heights is a small city with a split identity, straddling the Dallas and Ellis county line, served by DeSoto ISD on one side and Red Oak ISD on the other,. Fences Texas matches you with a Glenn Heights contractor who knows corner lots and county lines alike. One explanation covers it. He measures, quotes in writing, and the proceed call is yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Start by running your numbers through the calculator.",
+                "text": "Flag a corner lot if you own one, and say whether this is new, a replacement, or a repair. The figure comes up front, before anyone asks for your number."
+              },
+              {
+                "title": "The contractor phones to arrange the measuring visit.",
+                "text": ""
+              },
+              {
+                "title": "A written, itemized quote comes back after the visit.",
+                "text": "Fence, gates, removal, and permit on separate lines. Hire him if the number works. Turn it down and the story ends there."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a street-facing Glenn Heights fence should look like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a corner in Lindell Estates or Mesa, the finished fence does double duty: from the backyard it is privacy, and from the cross street it is curb appeal, a clean run of boards with a level top and a gate that sits square in its frame."
+          },
+          {
+            "type": "p",
+            "text": "The ground under Glenn Heights is Blackland Prairie clay, the shrink and swell soil that dominates this side of the metroplex. It swells after a wet spring, shrinks and cracks in August, and works steadily on fence posts the whole time. Deep posts in concrete are how local builders answer that soil, and a corner raises the stakes: a leaning fence gets an audience on two streets. A Glenn Heights contractor quotes the post work plainly, so you can see the part of the job that decides how the fence looks in five years, not just in five weeks."
+          }
+        ]
+      },
+      {
+        "heading": "What a Glenn Heights fence costs, and what shapes it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Corner lots run long, and length is the first driver of any Glenn Heights quote. Material is the other lever: pine at roughly fifty percent of cedar per foot, iron below cedar, and pool mesh outside both."
+          },
+          {
+            "type": "p",
+            "text": "Your footage goes into the calculator and a range comes back in thirty seconds or so. It cannot see your intersection setback or your subdivision standards, so the contractor walks the lot, checks the corner conditions, and only then writes the firm, broken-out price."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Two counties, one permit, and the corner rules",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Glenn Heights requires permits and inspections for fences, and the city's own guidance draws the repair line at thirty six linear feet: replace or repair beyond that length and the job needs a permit. Whichever side of the county line your lot falls on, pulling the needed permit is included in his work."
+          },
+          {
+            "type": "p",
+            "text": "The city's fence rules also cap how tall a residential fence may run and keep fences from extending past the front building line, and fences near street corners must leave drivers a clear view. Privacy fences carry their own tighter height provision in the city code, which is exactly the sort of detail your contractor confirms for your address before quoting rather than after. Name your subdivision in the form. Before a hole is dug, 811 locates the buried utilities, and a replaced fence leaves on the truck as part of the quoted work, not stacked at the curb of a very visible corner."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor measures both street frontages.",
+                "text": "He checks the corner visibility zone, the gate placements, and the shared back line, then prices the job he walked."
+              },
+              {
+                "title": "You review an itemized written quote.",
+                "text": "Each element stands on its own line for comparison with your calculator range. Accept it or let it go; the quote itself is free."
+              },
+              {
+                "title": "He builds, and you inspect the finished fence together.",
+                "text": "Walk both streets, test both gates, and settle any snag before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He verifies the job details, asks about the corner and the gates, and fixes the measuring appointment. No robocalls follow, your number is not sold onward, and nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron for a Glenn Heights corner",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cedar is the usual choice for the street-facing run: it holds stain evenly, resists rot, and board-on-board construction keeps the backyard private while presenting a finished face to the cross street. At roughly fifty percent of cedar per-foot price, pine keeps a long corner run within reach without cutting corners. Iron works where openness is wanted, at frontages and around pools. In Glenn Heights the material conversation always ends at the posts, because clay ground decides how long any of these fences stand straight, and deep concrete footings are the answer your quote should name."
+          }
+        ]
+      },
+      {
+        "heading": "Glenn Heights fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does fencing a Glenn Heights yard cost?",
+                "a": "The calculator above turns your footage and material pick into a range in thirty seconds or so. Compare them this way: pine near fifty percent of cedar per foot, iron between the two, gates billed on separate lines, and old fence removal added on a replacement. The contractor confirms the firm figure after measuring your Glenn Heights lot."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Where a permit or an HOA review applies, that time is already inside the two to three week window."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Attend the measuring visit if you can. Gate placement and shared boundary questions are easier with the yard in front of everyone. During the build, most Glenn Heights owners head to work; an open gate and a dog plan is all the crew asks."
+              },
+              {
+                "q": "What about permits and HOA rules?",
+                "a": "Your contractor handles it. Glenn Heights insists on permits and inspections for fence work, and once a repair grows past thirty six linear feet it needs a permit of its own, which he pulls as part of the job. If your subdivision HOA keeps fence standards, name the community in the form and the crew builds to both sets of rules."
+              },
+              {
+                "q": "Does the corner of my lot change the fence rules?",
+                "a": "It can. Glenn Heights keeps fences from blocking driver views near intersections and from running past the front building line, and a corner side fence sits in that spotlight. Your contractor checks the visibility rules for your corner at the measuring visit and places the fence accordingly."
+              },
+              {
+                "q": "What if only one side of my fence is bad?",
+                "a": "Yes. Replacing one side, or just part of the fence, happens all over Glenn Heights. One wrinkle matters: past thirty six linear feet of repair, the city wants it permitted, so he pulls that permit and builds the section to full standard. Note a shared boundary in the form and pricing can divide along it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Glenn Heights fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Send one form and a contractor from the area comes out, price in writing, with a corner fence your street can admire."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "ennis": {
+    "slug": "ennis",
+    "cityName": "Ennis",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Ennis, TX: A Fence That Fits a Bluebonnet Street | Fences Texas",
+    "metaDescription": "Fencing a home on an Ennis bluebonnet trail street, historic bungalow or new build? Run the calculator for a real range, then get a free itemized quote from a local Ennis contractor who knows the vinyl ban, the historic review, and the inspection rule. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Ennis fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Every April the bluebonnet trail rolls past your street, and half of Ellis County drives slowly by your front yard taking pictures of the flowers. A fence in Ennis has to fit its street, whether that street is on the trail route, inside the historic district, or out in the new growth."
+          },
+          {
+            "type": "p",
+            "text": "Ennis has grown past twenty five thousand people, and its fence questions split by era: an older home whose fence should respect the house, and a newer home whose builder fence needs upgrading to something with a longer life. Fences Texas matches you with an Ennis contractor who works both worlds. Give one account of the job. He follows up with his own measurements and a written price; whether it happens is your call."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run the numbers, then send the form.",
+                "text": "Give your Ennis address, a rough footage, and whether the house is historic, established, or new. The range appears with no phone number required."
+              },
+              {
+                "title": "Your contractor calls to set the measuring visit.",
+                "text": ""
+              },
+              {
+                "title": "The written quote follows, line by line.",
+                "text": "Fence, gates, tear-out, and any permit or review costs itemized. Hire him if it suits you. Decline, and nothing is owed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the right Ennis fence looks like on your street",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a Templeton-McCanless street, the right fence looks like it grew up with the house: a modest front profile, natural wood tones, nothing shiny or synthetic shouting over a century old porch. Across town in a newer Ennis subdivision, the right fence is a full privacy build with tight boards and a gate that swings true. Both stand on the same ground truth. Ennis sits on Blackland Prairie clay, which swells when it rains and shrinks and cracks through the dry months, patiently working fence posts out of plumb."
+          },
+          {
+            "type": "p",
+            "text": "Ennis crews that stay busy sink every post deep into concrete; they are the crews called to re-set the shallow ones somebody else buried. Material choice here carries a legal wrinkle most towns do not have, covered in the next sections, and it is one more reason the measuring visit matters: the contractor reads your street, your district, and your soil before he prices a single foot."
+          }
+        ]
+      },
+      {
+        "heading": "What an Ennis fence costs, and what changes it",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Feet and material, as everywhere, but Ennis adds its own material arithmetic. The material ladder in Ennis: cedar at the top, iron beneath it, pine near fifty percent of cedar per foot, pool mesh figured separately. The Ennis twist is that vinyl is off the table for most residential lots under the city development ordinance, so the budget conversation runs between pine, cedar, and composite rather than defaulting to plastic panels. Gates are their own line, and an older Ennis property may add tear-out for a fence that has been patched for years."
+          },
+          {
+            "type": "p",
+            "text": "Feed your yard into the calculator and thirty seconds later you hold an honest planning range."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "No permit, an inspection, and a banned material",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ennis breaks the pattern of its neighbors: for a standard fence the city does not require a permit, though a fence over eight feet does need one. But do not mistake that for no rules. The city still requires the finished fence to be inspected by the building inspections department, and your contractor arranges that as part of the job. Height limits still bind: eight feet on most residential lots, less in the agricultural and estate zones, and front yards take only a low, open style."
+          },
+          {
+            "type": "p",
+            "text": "Two more Ennis specifics matter. Vinyl fences are prohibited on most residential lots, with treated cedar and redwood among the named allowed materials. And if your home sits in the Residential Historic District or the Historic Downtown District, exterior work visible from the street, fences included, needs a Certificate of Appropriateness before work begins."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor walks your Ennis lot and reads the street.",
+                "text": "He checks district status, frontage rules, and the soil under the line, then measures the real footage."
+              },
+              {
+                "title": "You get an itemized quote to study at home.",
+                "text": "Fence, gates, removal, and any review or permit items each appear separately. Take it or leave it; the quote is free."
+              },
+              {
+                "title": "He builds it, the city inspects it, and you walk it together.",
+                "text": "Work the gates, sight the runs, and flag anything for correction before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He confirms your details, asks about the district and the frontage, and schedules the measuring visit. The call carries no obligation, no robocall follow-up, and no pressure to commit. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the Ennis short list",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cedar is the Ennis favorite, and the city ordinance names treated cedar and redwood among allowed materials: it suits historic streets and new subdivisions alike, resists rot, and takes stain well. For long rear runs, pine is the practical Ennis buy at roughly fifty percent of cedar per foot. Iron serves front yards, where Ennis wants a low and open profile, and pool enclosures. Vinyl, the default in many towns, is prohibited on most Ennis residential lots, so expect your contractor to steer the conversation to wood and metal from the start."
+          }
+        ]
+      },
+      {
+        "heading": "Ennis fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "How much will my Ennis fence cost?",
+                "a": "The calculator takes your footage and material and builds a range in thirty seconds or so. Pine lands near fifty percent of cedar per-foot price, iron between the two, and gates and old fence removal show up as their own lines on the written quote. His exact total waits until he has measured the yard himself."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Permit or HOA business, on the rare job where either applies, counts inside that same window."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Make the measuring appointment if you can. Questions about gates and shared lines settle in minutes when everyone is standing where the fence will go. While the building happens, most Ennis owners are at work; leave the crew a way in and decide ahead where the dogs go."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Ennis is unusual: a standard fence needs no permit, though one over eight feet does, and your contractor handles any required permit. What Ennis does require is a city inspection of the finished fence, which the crew arranges. Historic district properties need a Certificate of Appropriateness first, and an HOA adds another layer, so name yours in the form and both get planned together."
+              },
+              {
+                "q": "Can I use vinyl for my Ennis fence?",
+                "a": "On most Ennis residential lots, no. The city development ordinance prohibits vinyl fences in the main residential zones and names materials like treated cedar, redwood, masonry, ornamental metal, and treated wood instead. Your contractor will confirm the rule for your zoning at the measuring visit."
+              },
+              {
+                "q": "Can a single failing side be replaced by itself?",
+                "a": "Yes. Partial replacements are everyday work in Ennis, and the finished result still goes through the city inspection, so a one-side job is held to the same standard as a full fence. Tell us when a boundary is shared. Ennis neighbors divide a common run's cost all the time, and your quote can be scoped to your part."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Ennis fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One form sends a contractor from the area down your street, tape in hand, with a written price to follow."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "kaufman": {
+    "slug": "kaufman",
+    "cityName": "Kaufman",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Kaufman, TX: Priced From a Photo, Built on a Survey | Fences Texas",
+    "metaDescription": "Pricing a Kaufman fence from a photo a renter sent, or for your own yard? Run the calculator for a real range, then get a free itemized quote from a local Kaufman contractor who handles the permit, the survey, and the strict front yard rules. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Kaufman fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The photo arrived from a renter: one panel down, one leaning, and a dog in the frame looking pleased with himself. That is how a lot of Kaufman fence projects begin, with an owner who may live across the county or across the state, pricing a job from a phone picture."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas matches Kaufman owners, near or far, with a local contractor who measures in person and quotes in writing. You describe the job once, he walks the line, and the decision is yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Get the ballpark, then send what you know.",
+                "text": "Address, rough footage, a note if you are pricing from out of town. The estimate needs no phone number to run."
+              },
+              {
+                "title": "The contractor calls to plan the site visit.",
+                "text": ""
+              },
+              {
+                "title": "A written, itemized quote follows the visit.",
+                "text": "Fence, gates, tear-out, and permit each on their own line, in a document you can review from anywhere. Hire him if it works. If not, nothing is owed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a well-built Kaufman fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In town, a well-built Kaufman fence is unremarkable in the best way: straight runs behind the front yard line, a gate that closes behind the mower, boards that have not cupped or grayed unevenly. Both kinds stand or fall on the same buried detail."
+          },
+          {
+            "type": "p",
+            "text": "Kaufman sits at the eastern edge of the Blackland Prairie, where clay ground swells and shrinks with the seasons and, further east, gives way to sandier soils. Clay works posts loose over time, which is why local crews set posts deep in concrete rather than trusting a tamped dirt hole. A contractor pricing a Kaufman job from a site visit can tell you which ground your lot has and what the footing plan is. A contractor pricing from a photo cannot, which is the whole reason the visit comes before the number."
+          }
+        ]
+      },
+      {
+        "heading": "Kaufman pricing, and why the survey carries weight",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Every Kaufman quote starts from one base: how much fence and what it is built from. Cedar is the expensive end; pine runs near fifty percent of cedar per foot, iron in between, and pool mesh figured separately. Gates add their own lines, and Kaufman has a gate rule with teeth, covered below, that can shape where a driveway gate lands and what it costs."
+          },
+          {
+            "type": "p",
+            "text": "Rough footage in, and thirty seconds later the calculator hands back a range solid enough for an owner working from out of town. The firm price waits for the measuring visit, and Kaufman asks for something specific at permit time: a survey showing the property lines with the fence location marked. Your contractor works from that survey, so the fence lands on your land and the quote reflects the real line."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "A front yard rule stricter than its neighbors",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kaufman routes fence permits through Development Services, where the application asks for a checklist plus a survey, and that filing falls to your contractor as part of his job. The rules he builds to are unusually clear about the front of the house: no fence or wall is permitted in the front yard of a single-family home at all. The single exception is a decorative fence no more than three feet tall and at least half open, and the city is explicit that chain link and wire mesh do not count as decorative."
+          },
+          {
+            "type": "p",
+            "text": "Elsewhere the lines stay strict. A residential fence generally holds at least twenty feet off a public street, vehicle gates set back at least twenty feet from the property line, fences behind the front yard line may rise to eight feet, and electrically charged fences and scrap materials like plywood and corrugated metal are prohibited. Buried lines get marked through 811 ahead of digging, and when a fence is replaced, tearing it out and hauling it off is priced into the quote."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor measures on site, survey in hand.",
+                "text": "He marks the line against the property boundaries, checks gate setbacks, and prices the job he stood in."
+              },
+              {
+                "title": "You receive the itemized quote wherever you are.",
+                "text": "Each part is listed separately, so an owner forty miles away can judge it as clearly as one standing in the yard. Accept or decline; the quote is free."
+              },
+              {
+                "title": "He builds it and documents the walk-through.",
+                "text": "Gates tested, runs sighted, photos available for owners who cannot attend, and anything off gets fixed before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He goes over access, tenants, and timing, then sets the measuring visit. Owners out of town stay in the loop by phone and in writing, with no robocalls and no pressure to sign from a distance. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: Kaufman practicalities",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For backyard privacy in Kaufman, cedar is the usual answer: it fights decay, looks right under stain, and board-on-board runs stay closed when summer shrinks the lumber. Pine does the heavy lifting on rentals and long runs in Kaufman, at near fifty percent of cedar per foot, where sensible matters more than fancy. Iron fills the one front yard opening Kaufman allows, a low decorative run at least half open, and encloses pools under the pool code. Kaufman prohibits materials never made for fencing, from plywood to corrugated metal, so expect a quote built from proper fencing stock only."
+          }
+        ]
+      },
+      {
+        "heading": "Kaufman fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What should I expect to pay in Kaufman?",
+                "a": "Enter your footage, pick a material, and the calculator answers in thirty seconds or so. Pine sits near fifty percent of cedar per foot, iron between them, and gates plus old fence removal each get their own line on the quote. The exact total is set only after he has measured in person."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Any permit step or HOA review that applies is already counted in that two to three week span."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Being present for the measuring visit is worth it: gate locations and shared boundary questions settle far more easily with the yard right there. On building days, most Kaufman owners are at work; leave access open and account for the dogs."
+              },
+              {
+                "q": "Who files the permit, and what about an HOA?",
+                "a": "Handled by your contractor. Kaufman's application pairs the city checklist with a survey showing the fence against your property lines, and filing whatever permit is required is part of his job. A subdivision HOA adds a layer; name it in the form and that approval joins the plan from the start."
+              },
+              {
+                "q": "Why can I not fence my Kaufman front yard?",
+                "a": "Kaufman simply prohibits fences in the front yard of a single-family home, apart from one narrow exception: a decorative fence three feet or under that is at least half open, and chain link does not qualify as decorative. It is one of the strictest front yard rules in the area, and your contractor builds to it from the first sketch."
+              },
+              {
+                "q": "One side of my fence is failing. Is a partial replacement possible?",
+                "a": "Yes. Partial replacements are normal Kaufman work, especially on rental properties where one storm-damaged side needs attention. Share whether a tenant is in place when you send the form, and the contractor will coordinate access for both the measuring visit and the build."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Kaufman fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One form turns a renter's photo into a measured, written, itemized quote you can judge from wherever you sit."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "greenville": {
+    "slug": "greenville",
+    "cityName": "Greenville",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Greenville, TX: Replacing the Chain Link Era Fence | Fences Texas",
+    "metaDescription": "Chain link era fence on a Greenville brick ranch street? Run the calculator for a real range, then get a free itemized quote from a local Greenville contractor who handles the permit and the metal post rule. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Greenville fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The chain link has been there since the house was young. On Greenville's brick ranch streets it is the same story block after block: a fence from another era, still standing, still technically a fence, but offering no privacy, no quiet, and not much security for a dog with ambitions."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas matches you with a Greenville contractor who does this conversion every week. Explain it once. From there he measures the lot, prices in writing, and leaves the decision with you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run the calculator first, the form second.",
+                "text": "A rough length, the Greenville address, and one note: the chain link there now comes out. The range shows with no phone number required."
+              },
+              {
+                "title": "Expect his call to set up the site visit.",
+                "text": "Gates and shared lines come up, and a time gets booked."
+              },
+              {
+                "title": "The itemized quote arrives after he walks the lot.",
+                "text": "New fence, gates, removal of the old chain link, and permit, each on its own line. Hire him if the figure works. Pass, and you owe nothing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a Greenville ranch street looks like with a real fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Swap the chain link for a six foot wood privacy fence on a Greenville ranch lot and the backyard changes character overnight: the patio becomes a room, the dog gets a border he respects, and the street noise drops behind a wall of boards. The finished side faces out toward the street, which Greenville's rules ask for, so the block gets the clean face and the posts stay home."
+          },
+          {
+            "type": "p",
+            "text": "Underground, Greenville writes its standard down. Metal posts are required, set in pier holes at least eighteen inches deep. That is not decoration. Greenville sits on Blackland Prairie clay with high shrink and swell, ground that heaves in a wet spring and cracks in a dry summer, and eighteen inches of pier is the city's floor for keeping a fence honest in that soil. Hear out his post plan. Posts decide everything: a fence on the right footings stays plumb for years, while one on the wrong ones has you shimming it by year three."
+          }
+        ]
+      },
+      {
+        "heading": "Greenville pricing, and what swapping out chain link adds",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage and material form the base of the quote in Greenville, as everywhere. Cedar leads on price; pine runs near fifty percent of cedar per foot, iron below cedar, and pool mesh priced apart. A chain link conversion adds two lines a new subdivision job does not have: pulling the old fence, posts and all, and hauling it away. Buried in a vague total, it is where quotes get padded, so look for it as its own line."
+          },
+          {
+            "type": "p",
+            "text": "Gates deserve the same treatment, one line each, sized for how you actually use the yard. The calculator gives you a planning range for your footage in about half a minute. The contractor then measures, checks how much of the old fence is coming out, and writes the firm price with every part visible."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The Greenville half-fence rule",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Greenville draws the clearest repair line in this part of Texas. Change the height, change the location, change the type, or replace fifty percent or more of an existing fence, and the city wants a permit with a site plan. Stay under half with the same height, location, and type, and the work counts as a repair with no permit needed. Swapping chain link for wood changes the fence type outright, which makes the job permitted work, with the permit filing included in his job."
+          },
+          {
+            "type": "p",
+            "text": "The rest of the Greenville standard is equally plain: rear fences up to eight feet, front yard fences no more than forty eight inches and at least half open, the fence may not interfere with drainage, and pool fences carry barrier rules with an inspection. Utilities get located through 811 before the first pier hole, and the old chain link leaves on the truck."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A Greenville contractor measures the lot in person.",
+                "text": ""
+              },
+              {
+                "title": "The breakdown is yours to study.",
+                "text": "Fence, gates, removal, and permit each carry their own line, ready to check against the calculator range. Say yes or no; the quote costs nothing."
+              },
+              {
+                "title": "When the building stops, the inspection starts, with you beside the crew.",
+                "text": "Every gate gets swung, every run gets sighted, and anything not right gets fixed before the last payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He confirms the details, asks about the old fence and the gates, and sets the measuring time. No automated dialing, no telemarketers holding your number, and nothing about that call obliges you. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron for a Greenville conversion",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cedar is the upgrade most Greenville ranch owners pick: private, warm in tone against brick, and rot resistant, with board-on-board work closing the gaps summer shrinkage opens. Pine changes the math on a full perimeter: near fifty percent of cedar per-foot price, it brings a full conversion within a working budget, and plenty of Greenville streets have made that choice. Iron fits front yards under the forty eight inch, half open rule and pool enclosures. Whatever covers the line, Greenville requires metal posts in proper piers underneath, and that standard is stated in your quote."
+          }
+        ]
+      },
+      {
+        "heading": "Greenville fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "How much does a Greenville fence run?",
+                "a": "Footage and material go into the calculator; a range comes out in thirty seconds or so. In relative terms, set pine near fifty percent of cedar per foot and iron between the two; chain link removal and gates appear as charges of their own. He commits to a total only after measuring the lot himself."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Permit and HOA steps, where either applies, are already counted in those two to three weeks."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Show up for the measuring visit if you can. Gate and boundary questions are best answered in the yard itself. On build days, most Greenville owners go to work; the crew needs gates accessible and a dog plan."
+              },
+              {
+                "q": "Permit and HOA: who sorts those out?",
+                "a": "Your contractor handles it. Greenville demands a permit whenever a fence changes height, moves, changes type, or is half or more replaced, and he files for it as part of his job. Where an HOA runs your subdivision, put its name in the form and its standards get worked into the plan early."
+              },
+              {
+                "q": "Why does Greenville require metal posts?",
+                "a": "Because clay ground moves. The city requires metal fence posts set in pier holes at least eighteen inches deep and six inches across, a footing standard written for shrink and swell soil. Wood posts rot at the ground line and loosen as the clay cycles; steel in a proper pier holds the line."
+              },
+              {
+                "q": "Only one side is failing. Can I replace just that part?",
+                "a": "Yes, and Greenville draws an easy line to follow: swap out less than half the fence without changing height, location, or type and the city calls it a repair, no permit needed; cross halfway and it becomes a permitted replacement. Either way the work is a normal job here. Put shared boundaries in the form. Dividing a common run with the neighbor is standard practice on ranch street blocks."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Greenville fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Send one form and you get a contractor from the area, a price in writing, and a backyard that reads as yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "denison": {
+    "slug": "denison",
+    "cityName": "Denison",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Denison, TX: A Fence Decision in Lake Texoma Country | Fences Texas",
+    "metaDescription": "Fencing an older Denison home, or a place that splits time with Lake Texoma? Run the calculator for a real range, then get a free itemized quote from a local Denison contractor who handles the permit and the twenty foot repair line. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Denison fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Half the errands in Denison point toward the lake. They are the aging back lines of mid-century homes, chain link and tired wood that have served for decades and are finally being judged."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas matches you with a Denison contractor who works those streets. One description is all it takes: he measures, writes the quote, and the yes or no is yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run the estimator, then submit the form.",
+                "text": "A rough length, your Denison address, and whether the old fence comes out. The rough figure shows up before anyone asks for your phone number."
+              },
+              {
+                "title": "The contractor phones to book the measuring visit.",
+                "text": ""
+              },
+              {
+                "title": "Then comes the quote, in writing, part by part.",
+                "text": "Fence, gates, removal, and permit each stand on their own line. Hire him if the number suits you. If not, the quote cost you nothing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a settled Denison fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a settled Denison street, the right fence does not shout. It runs straight behind a brick ranch, the boards share one tone, the gate latches without a lift-and-push ritual, and the yard reads as kept rather than new. Getting an older lot to that state takes a site visit, not a guess: old posts may be rotted below grade where you cannot see it, lines may have crept over the years, and corners deserve a check against the survey before new work follows an old mistake."
+          },
+          {
+            "type": "p",
+            "text": "The ground makes its own argument. Denison sits on the northern edge of the Blackland Prairie, clay soil that swells in wet months and shrinks and cracks in dry ones, worrying fence posts season after season. Add the open fetch of wind that comes down the Texoma corridor, and a Denison fence earns its keep through its footings. Deep posts in concrete are the standard local answer, and your contractor will state the post plan plainly in the quote."
+          }
+        ]
+      },
+      {
+        "heading": "Denison pricing, and how the quote stays honest",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Two things set the base: total feet and the material covering them. Cedar costs the most per foot; pine lands near fifty percent of cedar, iron between the two, and pool mesh on its own terms. Denison's older lots add the usual replacement lines, tear-out and haul-off of the old fence, and those belong on the quote as visible items. Gates are separate lines too, and on lots that see lake traffic, a wide gate for a boat or trailer is a common and sensible ask."
+          },
+          {
+            "type": "p",
+            "text": "The calculator turns your yard into a range in thirty seconds or so, a planning figure to hold against any quote. The firm price comes after the measuring visit, when the contractor has seen the old posts, the real corners, and the ground he will dig."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Corner lots, permits, and the twenty foot repair line",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fence work in Denison needs a permit from the Building Department, applications run online, and filing for it is part of his work. The city draws its repair line in feet rather than percent: repairing less than twenty feet of fence does not need a permit, while larger work does. That single rule decides whether a weekend panel fix stays a weekend panel fix, and your contractor will place your job on the right side of it."
+          },
+          {
+            "type": "p",
+            "text": "Height and placement get confirmed for your address before quoting: Denison's residential fence rules cap heights, hold front yard fences lower, and corner lots have their own history here, since the council amended the corner lot fence rules in 2022 to give single-family homes their backyard privacy back while keeping a setback from the sidewalk. Digging starts only after 811 has located the buried lines, and on a replacement the old fence leaves with the crew."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor walks your Denison lot and checks the old line.",
+                "text": "He probes the posts, verifies the corners, and measures the true footage before pricing."
+              },
+              {
+                "title": "You receive the quote in writing, itemized.",
+                "text": "Each element stands alone for comparison with your calculator range. Take the quote or leave it; it costs nothing either way."
+              },
+              {
+                "title": "At the end he walks the finished fence at your side.",
+                "text": "Swing each gate, look down each run, and raise any concern; the final payment waits until it is settled."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. He reviews your details, confirms access and timing, and schedules the measurement. The call is brief and human, with no robocalls, no number passed along, and no pressure to commit. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron in Texoma country",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On Denison's brick streets cedar just looks right: it weathers toward a tone that belongs next to old brick, decay does not trouble it, and overlapping boards keep the yard screened after summer shrinkage. For long rear lines, and for a second place near the lake, pine is the practical Denison pick at roughly fifty percent of cedar per-foot price. Iron handles front yards, where fences run lower, and pool enclosures that need visibility. Under all of them, deep concrete footings answer the clay and the lake wind, and that is the line to look for in any Denison quote."
+          }
+        ]
+      },
+      {
+        "heading": "Denison fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a Denison fence cost me?",
+                "a": "How far the fence runs and what covers it decide the price, and the calculator above converts both into a range in thirty seconds. Set pine near fifty percent of cedar per foot, iron between them; gates bill apart from the run, and a replacement adds taking the old fence out. A binding price only follows his own measuring visit."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit. Once the crew starts, most backyard fences go up in 1 to 2 days. Permit and HOA steps, where either applies, are counted inside that same two to three week window."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Try to be there when he measures. Gate placement and shared lines settle best with everyone out in the grass. When the crew arrives, most Denison owners head to work as usual; leave gates accessible and have a dog plan."
+              },
+              {
+                "q": "Who deals with the permit and any HOA?",
+                "a": "That side belongs to your contractor. Denison runs fence projects through its Building Department, work under twenty feet of repair is exempt, and he files for whatever permit is required as part of his job. Height and corner rules are confirmed for your address at the measuring visit, and if an association covers your street, name it in the form."
+              },
+              {
+                "q": "Did Denison really change its corner lot fence rules?",
+                "a": "Yes. In 2022 the city council amended the corner lot rules for single-family homes after the older limits cost owners their backyard privacy, allowing taller fences between the street and the house with a setback from the sidewalk or property line. Your contractor applies the current rule to your corner at the measuring visit."
+              },
+              {
+                "q": "Can I replace just the one side that is failing?",
+                "a": "Yes. Partial work is the Denison norm, and the city rule is simple: a repair under twenty feet needs no permit, while a larger section is permitted work built to full standard. Say in the form when a line is shared. On Denison's older streets, neighbors splitting a fence is everyday practice, and the quote can cover your share."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Denison fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Send one form and you get a contractor from the area, a number in writing, and a yard that keeps the dog home."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "gainesville": {
+    "slug": "gainesville",
+    "cityName": "Gainesville",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Gainesville, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Wind working on a tired back fence in Gainesville? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit, the plot plan, and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Gainesville fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Stand on the back line of a Gainesville lot on open ground north of town and you can feel what the fence feels. Nothing breaks the wind between the Red River and your yard. A tired fence out here racks, loosens at the posts, and one spring gust finishes what ten dry summers started."
+          },
+          {
+            "type": "p",
+            "text": "Gainesville is the Cooke County seat, an I-35 town of Victorian streets near the courthouse square and newer homes toward the edges, and a lot of its houses were standing before 1970. Their fences have usually been patched more than once. At some point the honest move is a new fence, set right, with a price you saw before anyone dug a hole."
+          },
+          {
+            "type": "p",
+            "text": "In Gainesville, Fences Texas pairs you with a contractor already building across Cooke County. Describe the job once; he measures, prices it, and you decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Begin on the calculator, then send the form through.",
+                "text": "Rough footage is fine; say if this replaces an old fence or starts fresh, and add your address. The ballpark needs no phone number. Sending the form is what puts the work in front of a contractor."
+              },
+              {
+                "title": "He phones to set the measuring visit.",
+                "text": "Expect a short call about gates, shared lines, and timing, then a time to walk the property."
+              },
+              {
+                "title": "Only after he measures do you get the written quote.",
+                "text": "Tear-out gets its own line, gates get theirs, the permit gets one too. Take it and the backyard is scheduled. Pass, and you owe nothing for asking."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a sound Gainesville fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Think of a back line near the square, where a new wood privacy fence runs plumb behind a Victorian house and the gate swings shut without being lifted. Or a lot on the open north side, built for exposure: posts deep, concrete at every one, because the wind gets a clean run at anything solid."
+          },
+          {
+            "type": "p",
+            "text": "Much of the area sits on Houston Black clay, heavy soil that swells in a wet month and shrinks hard in a dry one, and that cycle works posts loose a little more every year. Add open-ground wind and a shallow post has two enemies instead of one."
+          },
+          {
+            "type": "p",
+            "text": "So ask about post depth and concrete before you ask about pickets. On a Gainesville lot open to the wind, that answer decides between straight at year five and leaning by year two."
+          }
+        ]
+      },
+      {
+        "heading": "Gainesville fence pricing, and how the number gets nailed down",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "How many feet you run sets a Gainesville price's skeleton; what those feet are built from fills in the rest. Pine is the cheap end, roughly half of cedar's per-foot cost in Cooke County; iron prices between them, and pool mesh gets quoted apart. Gates cost more than plain run, and pulling an old fence out adds labor to any replacement."
+          },
+          {
+            "type": "p",
+            "text": "Two Gainesville yards with the same footage can differ by a gate, a tear-out, and a slope. Feed the calculator your footage; thirty seconds later you have a range to plan around. Treat it as a planning figure. The firm figure waits until he has measured on site, and his quote itemizes tear-out, gate work, and permit instead of one lump sum."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The paperwork and dirty work are not your problem",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No Gainesville fence goes up legally without a permit from Community Development, and the application asks for a plot plan marking your lines, setbacks, and easements. Secondary guides put rear and side yard fences at a six foot limit, with corner-lot sight triangles held lower so drivers can see. Filing is your contractor's job, and so is building inside the rules attached to your lot."
+          },
+          {
+            "type": "p",
+            "text": "Easements outrank fences in Gainesville, so the plan gets checked before posts get placed. Before any hole opens, buried lines get marked through an 811 call. When an old fence comes down, removal and hauling sit inside the quote, and the crew takes the debris with them."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He prices the line he actually walked.",
+                "text": "Corners, gates, shared stretches, and wind exposure feed the figure, and post depth and setting are written in for you to judge."
+              },
+              {
+                "title": "You sit with the quote and choose.",
+                "text": "It is itemized line by line. Signing puts you on the schedule. Declining ends the matter, and the quote stays yours either way."
+              },
+              {
+                "title": "After the build, the two of you inspect it side by side.",
+                "text": "Swing every gate on the finished run together, and say anything that looks off before the last payment moves."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "After the form: Your contractor will call within one business day to schedule your free measurement. Details and scheduling are that call's whole agenda, nothing else. No robocall chains, no number sold onward, no arm-twisting to sign on the spot. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Picking between cedar, pine, and iron in Gainesville",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Around Gainesville, cedar is what privacy means: rot takes it slowly, stain goes on even, and board-on-board runs stay closed when August shrinks the wood. Pine asks roughly half of cedar's per-foot figure and repays you with fewer years, a trade Gainesville landlords and budget jobs accept happily. Iron stays open and strong, the right call for a front-facing run or a pool, and it suits the older streets near the square where a solid wall would look out of place."
+          }
+        ]
+      },
+      {
+        "heading": "Gainesville fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a Gainesville fence cost me?",
+                "a": "Two choices set your Gainesville total: how much fence, and what it is made of. The calculator prices exactly those two. Give it your yard; half a minute later, a range comes back. For a Gainesville rule of thumb, pine sits near half of cedar per foot, iron between them, and gates ride as a line owners often forget. Once he has measured at your place, he confirms the exact figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Should I be there when he comes?",
+                "a": "Meet him for the measuring if you can; gate spots and property lines settle easier standing together at the fence. During the build, most Gainesville owners are at work or out. The crew needs yard access from you, and a plan for the dogs."
+              },
+              {
+                "q": "Who deals with the permit and any association?",
+                "a": "A Gainesville permit carries a plot plan; your contractor files the packet as part of the job and builds within your lot's height and sight line limits. Deed restrictions or an association on your property? Name them in the form, and checking them joins the plan from the start."
+              },
+              {
+                "q": "What do I pay for the match?",
+                "a": "Not a cent. Describe the job once; a nearby contractor who wants it gets matched to you, and an itemized quote comes back. Money moves only if you hire him, and only for the fence. Too high? He is not hired, and asking cost you zero."
+              },
+              {
+                "q": "Only one side of my fence is shot. Can just that side be replaced?",
+                "a": "Yes. Replacing one failing side is an ordinary job in Gainesville, especially where wind worked on one exposure harder than the rest. Put that in the form, and add whether a neighbor shares that side, because a shared line can be priced with the split spelled out."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Gainesville fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A straight fence, a gate that shuts, and a number in writing first. Gainesville crews book good weather early, and open-ground lots do not get kinder to old fences. Start with the estimate, and decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "decatur": {
+    "slug": "decatur",
+    "cityName": "Decatur",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Decatur, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Backyard fence meeting a field fence at one corner in Decatur? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Decatur fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Plenty of Decatur properties have a corner where two kinds of fencing shake hands. The backyard run ends, the field fence begins, and the same corner post is supposed to hold both. When that corner goes soft, the dog finds it first, then the neighbor's cattle get a vote, and a backyard problem turns into a property problem."
+          },
+          {
+            "type": "p",
+            "text": "Decatur is the Wise County seat, where US 287 crosses US 380, with Victorian and ranch homes near the square, established streets off Thompson, and acreage toward the grasslands. A fence here can be a privacy job, a boundary job, or both on the same lot."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas sends Decatur jobs to one contractor who already works Wise County. One description from you; he measures, quotes it in writing, and you decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Key in an approximate footage and send the form.",
+                "text": "New fence or replacement, rough is acceptable, and the ballpark never requires a phone number. Submitting is what hands the job to a contractor."
+              },
+              {
+                "title": "He rings you to book the measuring visit.",
+                "text": "A few questions about gates, corners, and whether any of the line is shared or borders pasture, then a time is set."
+              },
+              {
+                "title": "What comes back is a quote with every piece on its own line.",
+                "text": "Removal, gates, and permit each stand alone. Hire him and the work is booked. Decline and the conversation is over."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a well-built Decatur fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Stand at that meeting corner outside the core, where a cedar privacy run hands off to a field line, both plumb, the corner post set deep enough to carry the pull from two directions. Or take an in-town lot near the square, where a new fence behind a Craftsman porch gives the yard an edge the old chain link never did."
+          },
+          {
+            "type": "p",
+            "text": "Decatur lots ask different questions by location. In town, the questions are lines, gates, and what the street can see. On acreage, the question is footage, and whether the back line is doing boundary work as well as backyard work. A good contractor prices the lot you actually have, not the standard lot in a brochure."
+          },
+          {
+            "type": "p",
+            "text": "Whatever the lot, posts set deep in concrete are the part you will never see and always feel, every time the gate closes true."
+          }
+        ]
+      },
+      {
+        "heading": "What a Decatur fence costs, and how to get a real number",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Start with footage, because on Decatur acreage the footage can run long and it drives everything else. Then material: cedar tops a Decatur range, pine sits near half of cedar's per-foot figure, iron prices between them, and pool mesh is separate. Gates are separate, and a wide gate for equipment access is its own conversation. Hauling off an old fence adds to a replacement."
+          },
+          {
+            "type": "p",
+            "text": "Thirty seconds with this page's calculator turns Decatur footage into a usable range: it plans the job rather than promising a price. Only walking the actual line, corners and all, produces the firm price, and his written quote keeps tear-out, gates, and permit apart."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "None of the tedious parts land on you",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Decatur does issue fence permits, and its zoning is fussy about where on a lot a fence may stand. The city's fence section keeps fences out of the required front yard next to a public street and holds a residential fence back from the street, and on corner lots a six foot fence along the side street needs a ten foot setback from the property line. A builder learned that the hard way in Decatur in 2026, when a six foot fence built at the property line was denied and needed a variance hearing to stay. Your contractor files the permit and sites the fence inside the rules the first time."
+          },
+          {
+            "type": "p",
+            "text": "The city was still debating its front yard rules through 2025, one more reason the contractor confirms the current reading for your address. An 811 locate happens before any digging starts on a Decatur lot. Replacing a Decatur fence? Its tear-out and hauling are already inside the quote."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor measures the line himself.",
+                "text": "He walks corners and gates, checks whether any stretch is shared, and prices what is actually there. The quote states how posts are set, so the invisible part is on paper."
+              },
+              {
+                "title": "The decision is yours, at your pace.",
+                "text": "Lines are itemized, so you can weigh gates and materials separately. Hire him, or keep the quote and stop there."
+              },
+              {
+                "title": "Once built, he walks the whole thing with you.",
+                "text": "Together you swing each gate and walk the finished run, and anything wrong gets settled before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "After you send the form, this is the sequence: Your contractor will call within one business day to schedule your free measurement. That conversation stays narrow: your project, and when to measure it. No call center, no robocalls, no pressure applied. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Decatur material choices, without the sales pitch",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most Decatur backyards get privacy from cedar, which shrugs at rot, stains well, and, built board-on-board, never opens a gap you can see through. At roughly half of cedar's per-foot price, pine weathers sooner, and on a long Decatur acreage run, where footage is the bill, sooner can be the smart buy. Iron keeps a view open and reads right near the square and around pools, where a solid fence would fight the house."
+          }
+        ]
+      },
+      {
+        "heading": "Decatur fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a fence run me in Decatur?",
+                "a": "Your Decatur number rests on footage and material, and this page's calculator turns that pair into a yard specific range in roughly thirty seconds. Side by side for Decatur work, pine sits near half of cedar's per-foot figure, iron occupies the middle, and gates get priced apart. After measuring at your property, he confirms the precise figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Should I be around for the visit?",
+                "a": "For measuring, be there if you can; corners and gate swings settle simpler standing on the line together. On build days most owners are away. Access is what the crew needs, plus a plan for dogs and any livestock near the line."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Decatur requires a fence permit, and the front yard and corner lot setback rules are the part people trip on. Filing is folded into the job by your contractor, who also checks the rule governing your address. In a newer subdivision with an association, mention it in the form so approval is planned in."
+              },
+              {
+                "q": "What does the match cost me, and how does it work?",
+                "a": "Zero. Describe the job once; a contractor who wants Decatur work gets matched to you, with an itemized quote following. The only money you pay goes to a contractor you hired, for the fence alone. Quote too steep? Pass, and asking cost you nothing."
+              },
+              {
+                "q": "One side of my Decatur fence is failing. Must the whole fence go?",
+                "a": "Yes. One-side replacements are common in Decatur, and so is replacing the backyard run while a sound field line stays. Note it in the form, and flag if a neighbor shares the failing side, so the quote can be built around a split if you want one."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Decatur fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One measured line, one written number, and a corner that holds both fences. Decatur crews fill their spring and summer books fast. Start with the estimate, and decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "azle": {
+    "slug": "azle",
+    "cityName": "Azle",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Azle, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Sloped lot dropping toward Eagle Mountain Lake in Azle? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit checks and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Azle fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On the lake side of Azle, plenty of backyards do not sit flat. The lot tips toward Eagle Mountain Lake, and a fence built as if the ground were level ends up with gaps under one end, boards buried at the other, and a gate that drags by the second summer. Out here the steps in the fence are not decoration. They are the whole job."
+          },
+          {
+            "type": "p",
+            "text": "Azle is a small city on SH 199 at the Tarrant and Parker county line: part in-town streets, part lake-edge lots, part acreage. The fence that suits a flat lot near Main Street is not the fence a sloped lot above the water needs."
+          },
+          {
+            "type": "p",
+            "text": "On this side of Eagle Mountain Lake, Fences Texas routes Azle homeowners to one local contractor. Outline the job once; he measures, quotes, and leaves the call to you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run the estimator, then submit the form.",
+                "text": "Rough footage is expected. Say if the lot slopes, because that changes the build. The ballpark itself never asks for your phone number."
+              },
+              {
+                "title": "Your contractor calls to arrange the site visit.",
+                "text": "He will ask about gates, the drop on the lot, and any pool, then set a time to walk it."
+              },
+              {
+                "title": "After the visit comes a written quote, broken into lines.",
+                "text": "Removal is one line, gates another, a permit a third. Approve it and the job is scheduled. Pass and nothing is owed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a right-built Azle fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Follow a sloped lot down toward the water and a good fence steps with the grade: each section level, the run dropping in clean increments, boards tight to the ground at the low end without being buried at the high end. The gate lands on the flattest ground available and swings clear. That is what stepping is for, and it is the difference between a fence that looks tailored and one that looks tired by August."
+          },
+          {
+            "type": "p",
+            "text": "Azle's own code cares about the front of the lot more than the back. A front yard fence in Azle may rise no more than four feet and must stay at least half open, so iron and picket styles do the front work here while solid privacy fences belong in back. Along the sides and back, a fence may sit on the property line, provided easements stay clear."
+          },
+          {
+            "type": "p",
+            "text": "Ask how the crew handles your grade. The answer tells you whether they have built on lake lots or only read about them."
+          }
+        ]
+      },
+      {
+        "heading": "Azle fence costs, and how to land on your figure",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The cost levers here are mostly the usual ones; Azle adds one. Footage leads. Material is next: cedar leads in Azle, pine follows at roughly half of cedar's per-foot figure, iron settles between, and pool mesh is separate. Gates are separate line items. Then comes the ground itself: a stepped build on a slope takes more labor than the same footage on flat dirt, and an honest quote says so."
+          },
+          {
+            "type": "p",
+            "text": "Half a minute is all this page's calculator needs to turn Azle footage into a plannable range. Use it as a planning figure. The contractor sets the firm price after walking your grade, and the quote itemizes tear-out, gates, and any permit so the slope premium, if there is one, shows up as a visible line instead of a surprise."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Azle sorts the red tape so you do not have to",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Whether an Azle fence needs a permit is a narrower question than in most cities, and sorting it out is your contractor's job. Under the city code, a permit is required when a fence encloses a pool, crosses a corner visibility triangle or a driveway entrance, sits between the front property line and the setback, or runs through a drainage easement. An ordinary back fence usually falls outside that list, but the front yard rules, four feet and half open, apply either way."
+          },
+          {
+            "type": "p",
+            "text": "No fence may be built across a recorded drainage easement without city council approval, which matters on lake lots where drainage runs downhill by design. Before digging in Azle, buried lines get located through 811. For an Azle replacement, the quote carries tear-out and hauling already."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He measures the lot and the slope.",
+                "text": "The quote reflects stepped sections where the grade demands them, and it states post depth and setting in plain terms."
+              },
+              {
+                "title": "You review an itemized number.",
+                "text": "Gates, removal, and permit are separate lines, so you can adjust the job before you commit. Hire him, or decline and keep the quote."
+              },
+              {
+                "title": "The build ends with a walk-through.",
+                "text": "Check the steps, the ground clearance, and every gate with the contractor before the final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Once the form is in: Your contractor will call within one business day to schedule your free measurement. That call serves one purpose: your details and the appointment. No robocalls, no number passed around, no signing pressure. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, and iron on Azle lots",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Azle backyards default to cedar: rot bothers it little, stain takes well, and board-on-board stays shut as boards shrink. Pine, at close to half of cedar's per-foot figure, ages quicker, which makes sense where Azle footage runs long. Up front in Azle, iron earns its keep where code demands a fence stay half open, and it does pool duty too, where barriers must stand four feet tall and gates must close and latch themselves."
+          }
+        ]
+      },
+      {
+        "heading": "Azle fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will an Azle fence cost?",
+                "a": "Footage plus material drives any Azle price, and the calculator here converts them into a range for your yard in roughly thirty seconds. Side by side for Azle: pine near half of cedar's per-foot cost, iron in the middle, gates billed apart. Sloped lots can add stepped-build labor, which the contractor prices after walking the grade."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I have to be there?",
+                "a": "Be there for measuring if you can, doubly so on a slope, since gate placement and step locations are best decided standing on the ground. On build days, most Azle owners are out. For the crew: gate access, and somewhere for the dogs to be."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Azle requires a fence permit only in specific cases, like a pool enclosure, a corner visibility triangle, or a fence in a drainage easement, and your contractor checks which case your lot falls into and files if one applies. The front yard limit of four feet and half open applies regardless. If an association covers your street, note it in the form."
+              },
+              {
+                "q": "What do I owe for the match?",
+                "a": "Nothing at all. Your one description gets matched to a local contractor who wants Azle work, and an itemized quote returns. Payment happens only to a contractor you hire, and only for the fence. Quote over budget? He does not get the job, and the quote cost you nothing."
+              },
+              {
+                "q": "Just one side of my fence is bad. Is a partial job possible?",
+                "a": "Yes. Partial replacement is a normal Azle job, and on a slope it is often the downhill side that fails first. Say that in the form, and mention if the bad side borders a neighbor, so a split can be accounted for."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Azle fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A fence that steps with your lot instead of fighting it, priced in writing before work starts. Lake-side crews book out early when the weather turns. Begin with the estimate; decide after."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "crowley": {
+    "slug": "crowley",
+    "cityName": "Crowley",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Crowley, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "A subdivision fence in Crowley hitting the same age as every fence on the street? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit, the HOA, and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Crowley fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Drive a Crowley subdivision street that filled in during one building season and you can read the fences like tree rings. They all went in the same year, they have all weathered the same summers, and they are all giving up at roughly the same time. Yours is not failing because you neglected it. It is failing on schedule, along with the rest of the street."
+          },
+          {
+            "type": "p",
+            "text": "Crowley grew from a Deer Creek farming settlement and a railroad stop into a south Fort Worth suburb of subdivisions: Deer Creek and Laurenwood from the earlier waves, and Carson Ranch, Crescent Springs Ranch, Sendero Oaks, and their neighbors from the recent ones. When a whole street of fences ages together, the replacement conversation is half the neighborhood's business whether you invite it or not."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas matches Crowley homeowners to a contractor who already works southern Tarrant County. One description from you, then he measures, then he quotes, and the choice stays yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Give the calculator a footage figure, then send the form in.",
+                "text": "No phone number is requested to see the ballpark. Telling us new fence or replacement, and roughly how much of the old one is involved, shapes everything after."
+              },
+              {
+                "title": "The contractor phones to set up measuring.",
+                "text": "He will ask about shared sides and association rules, then book the visit."
+              },
+              {
+                "title": "What arrives after the visit is itemized.",
+                "text": "Tear-out, gates, and permit each stand on their own line. Say yes and you are on the schedule. Say no and it ends there."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a fresh Crowley fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a Deer Creek lot, it looks like the street resetting itself: a straight cedar run where the gray, cupped boards were, posts hidden from the street side the way the recorded rules in subdivisions like Park Glen require, and a gate that finally latches with one hand. In a newer ranch-named subdivision, it looks like the fence the builder promised and did not quite deliver, built this time with posts set to last past the warranty on the house."
+          },
+          {
+            "type": "p",
+            "text": "Under Crowley sits Houston Black, Blackland Prairie clay that takes on water and swells, then bakes dry and pulls back. That cycle is what walks a whole street of same-age fences out of line together, post by post, summer by summer."
+          },
+          {
+            "type": "p",
+            "text": "The fix is not mysterious. Posts set deep, in concrete, on every line, including the shared ones nobody wants to pay for alone."
+          }
+        ]
+      },
+      {
+        "heading": "What a Crowley fence costs, and how to find your figure",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Crowley pricing turns on footage and material, with two local wrinkles. Material, relatively, for Crowley: cedar is the expensive end, pine prices near half of cedar per foot, iron falls between, and pool mesh is priced apart. Gates are their own line. The wrinkles are tear-out, since nearly every Crowley job in an established subdivision is a replacement, and shared lines, since nearly every side fence is half a neighbor's."
+          },
+          {
+            "type": "p",
+            "text": "Put Crowley footage into this page's calculator; a real range comes back in roughly thirty seconds. That range plans the job; it does not promise it. Measuring comes first; then the contractor confirms the price, in a written quote separating tear-out, gates, and permit, so honest comparison with the street's other quotes is possible."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The permit maze is handled for you in Crowley",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Where Crowley draws its permit line rewards knowing it in advance. Replacing less than half of an existing fence, in the same spot and the same material, needs no permit at all. A new fence, a replacement of half or more, or a switch in fence type is a permitted job through the Community Development department. Your contractor files when filing is due and can tell you which side of the line your job sits on before anyone commits."
+          },
+          {
+            "type": "p",
+            "text": "The city caps fence height at eight feet, and subdivision associations layer their own rules on top: materials, hidden supports on street-facing runs, and written approval before building in communities like Park Glen. Digging waits until 811 locates the buried lines, and a Crowley quote includes tear-out plus hauling already."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Your line gets walked, and the job in front of him is what gets priced.",
+                "text": "Shared sides, gate count, and the old fence's shape all count, and post setting is stated in the quote."
+              },
+              {
+                "title": "You decide with the lines in front of you.",
+                "text": "Each cost sits on its own line, which makes a neighbor split simple to structure. Hiring is your call, and the quote is yours regardless."
+              },
+              {
+                "title": "He builds, you walk it together.",
+                "text": "Check the run, the gates, and the shared corners before final payment changes hands."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What the form sets in motion: Your contractor will call within one business day to schedule your free measurement. Your details and a measuring time are the call's whole subject. No robocall chains follow, your number is not sold to any call center, and nobody leans on you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "What Crowley owners usually build with",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Crowley's subdivisions, cedar is the standard: clay country weather does not faze it, stain can match an association palette, and board-on-board closes the view entirely. Pine asks about half of cedar's price per foot and returns fewer years, arithmetic that pencils out on Crowley rentals and long runs. Iron handles front-facing stretches and pool enclosures where the rules want openness, and it never needs stain."
+          }
+        ]
+      },
+      {
+        "heading": "Crowley fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a new fence cost me in Crowley?",
+                "a": "Footage and material decide a Crowley fence, and this page's calculator turns yours into a range in roughly thirty seconds. In Crowley terms, pine prices at about half of cedar per foot, iron sits in the middle, and gates sit as a line apart. Your line gets measured; only then does the contractor confirm an exact price."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Should I be home when he measures?",
+                "a": "Being home for measuring helps in Crowley; shared lines and gate placement settle best face to face. During the build most people are at work. Give the crew a way into the yard, and a plan for the dogs."
+              },
+              {
+                "q": "Who handles Crowley's permit and my association?",
+                "a": "Replace under half a Crowley fence, same spot, same material, and the city asks no permit; build new, go bigger, or change material, and a permit is required. Filing, when due, is folded into the job by your contractor. Most Crowley subdivisions also want association approval, so name yours in the form."
+              },
+              {
+                "q": "What does the Crowley match cost?",
+                "a": "No charge. Describe your Crowley job once; a local contractor who wants it gets matched to you, and an itemized quote lands in your hands. The sole payment you make is to a contractor you hired, for the fence alone. If the quote lands too high, pass; it cost you nothing."
+              },
+              {
+                "q": "Only one side of my fence is failing. Can I redo just that side?",
+                "a": "Yes, and Crowley sweetens it: swap under half the fence for the same material in the same spot, and no city permit is needed. Say what portion is failing in the form, and whether the line is shared, since most Crowley side fences are."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Crowley fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Your street is going to redo its fences one house at a time over the next few years. There is no prize for going last with the worst one. The estimate comes first; deciding comes after."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "everman": {
+    "slug": "everman",
+    "cityName": "Everman",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Everman, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Repair or replace in Everman, with a fixed income doing the deciding? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Everman fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The Everman fence conversation usually happens at a kitchen table, with the numbers written down and a fixed income sitting across from them. Repair it again, or replace it once and stop paying for the same fence in installments? That is a real question in a small, older city on Fort Worth's south edge, where most houses were built without an association, without a big lot, and without money earmarked for surprises."
+          },
+          {
+            "type": "p",
+            "text": "This page will not pretend the choice is easy. It will give you a range first, then a written quote with every piece priced separately, so the repair-versus-replace math happens with real figures instead of guesses."
+          },
+          {
+            "type": "p",
+            "text": "For Everman, Fences Texas finds you a contractor working Tarrant County's south side. Describe the job once; he measures and quotes it, and you make the call."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Get the ballpark, then send in the form.",
+                "text": "Rough footage is fine, and the estimate itself needs no phone number. Note whether you are weighing a repair against a replacement, because the contractor should price both honestly."
+              },
+              {
+                "title": "He calls to book a measuring visit.",
+                "text": "A short conversation about what is failing and what can be saved, then a time."
+              },
+              {
+                "title": "The quote that comes back prices each piece apart.",
+                "text": "Removal, gates, and permit each get priced alone. Hire him if the replacement math wins. If repair is the smarter call this year, you will see that in the numbers too."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a done-right Everman fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It looks modest and it looks finished: a six foot wood privacy run on a small Enon Avenue area lot, plumb at every post, a gate that closes without a hip check, and no daylight showing under the bottom board where the dog has been studying the gap. Nothing fancy. Just a fence that stops being a recurring expense."
+          },
+          {
+            "type": "p",
+            "text": "Underneath, the difference is depth. Everman sits on blackland clay that swells in a wet season and shrinks in a dry one, and the older fences around town were often set shallow by the standards of their day. Shallow posts heave, then lean, then take the run with them."
+          },
+          {
+            "type": "p",
+            "text": "A replacement earns its money at the post holes. Deep holes, concrete footings, posts rated for ground contact: that is the part of the quote worth reading twice."
+          }
+        ]
+      },
+      {
+        "heading": "Everman fence costs, laid out plainly",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "As anywhere, an Everman total is footage times material: cedar at the top, pine at roughly half of cedar's per-foot figure, iron between, pool mesh quoted apart. Gates are separate lines, and tearing out a failed fence adds labor to a replacement job. On a small Everman lot the footage is usually short, which is the one piece of good news in the whole conversation."
+          },
+          {
+            "type": "p",
+            "text": "Half a minute on this page's calculator yields a real Everman range, and a planning tool is what that range is. The written quote after measuring is the decision tool, because it prices removal, gates, and permit separately, so you can see exactly what a full replacement costs against another round of repairs."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Everman paperwork, without the headache",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Everman posts its rule on the city site, and it is plain: a new fence takes a permit, a repair does not. The city's fee schedule follows the same logic. Swap a fence like for like, changing neither height, material, nor placement, and Everman charges nothing; alter any of those three and the job becomes a permitted one. Your contractor sorts your project into the right bucket and files if filing is due."
+          },
+          {
+            "type": "p",
+            "text": "Fence disrepair is on the city's list of commonly enforced code violations, which is worth knowing before a complaint makes the decision for you. In Everman, 811 locates the buried lines before digging begins. A replacement quote in Everman prices tear-out and hauling already, so no old fence lingers."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor measures and tells you what he finds.",
+                "text": "Which sections are truly gone, which could be repaired, and what each path costs. The quote shows post depth and setting in writing."
+              },
+              {
+                "title": "You choose with both numbers visible.",
+                "text": "The quote is itemized, so a phased job, worst side now and the rest later, can be priced as such. No hire, no charge for the quote."
+              },
+              {
+                "title": "The build ends with a joint walk.",
+                "text": "Together you check gates, work latches, and sight down the lines before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "From form to phone, here is the order of events: Your contractor will call within one business day to schedule your free measurement. That call covers details and scheduling, full stop. No robocalls, no number sold on, no pressure at the table. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Everman fence materials, briefly",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Everman soil, cedar outlasts the alternatives and stains well, and board-on-board keeps even a small yard private when boards shrink. The budget answer in Everman is pine, priced near half of cedar per foot, and on a short run here, that saving can be the difference between building now and putting it off another year. Iron suits front runs and pool enclosures where openness is required, and it asks almost nothing in upkeep."
+          }
+        ]
+      },
+      {
+        "heading": "Everman fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What should an Everman fence cost?",
+                "a": "An Everman price is decided by how much fence and what it is built from, and this page's calculator turns yours into a real range in about thirty seconds. Relatively, for Everman work: pine near half of cedar's per-foot figure, iron in the middle, gates billed separately. After measuring, the contractor confirms an exact Everman price, with removal and permit on lines of their own."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Being home for the measuring visit helps, because the repair-versus-replace conversation is better held standing at the fence. On build days, most owners are out. What the crew needs is simple: access to the yard, and a plan for the dogs."
+              },
+              {
+                "q": "What does Everman require, permit wise?",
+                "a": "New Everman fence: permit required. Repair: none. And a replacement that alters height, material, or placement counts, in the city's eyes, as a new job. Your contractor confirms which category yours falls into and handles any filing. Associations are rare on Everman streets; if yours happens to have one, name it when you send the form."
+              },
+              {
+                "q": "How does matching work in Everman, and what does it cost me?",
+                "a": "Nothing out of pocket. One description from you gets matched, here in Everman, to a contractor who wants the work, and an itemized quote is what comes back. You pay a contractor only if you hire one, and the payment is for the fence, full stop. If the replacement math fails, he does not get hired, and the quote will have cost you nothing."
+              },
+              {
+                "q": "One side of my Everman fence is bad. Must I replace it all?",
+                "a": "Yes. One-side replacement is the most common Everman job, and keeping the same height, material, and placement can keep it in the city's no-charge replacement category. In the form, identify the failing side, and say whether the neighbor on that side shares it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Everman fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One written quote, both options priced, and a fence that stops appearing in the household budget every year. Start where the numbers start, with the estimate, and decide after that."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "forest-hill": {
+    "slug": "forest-hill",
+    "cityName": "Forest Hill",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Forest Hill, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "A leaning section in Forest Hill propped for one season too many? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Forest Hill fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Every Forest Hill street has one: a fence section held up by a prop, a board screwed to a post that is mostly memory, a lean that got a little worse each season until propping it became part of the yard work. A season of that is resourceful. Three seasons is a fence asking to be replaced before it chooses its own moment, usually during a storm, with the dog watching."
+          },
+          {
+            "type": "p",
+            "text": "Forest Hill is a mature city completely surrounded by Fort Worth, with modest older homes, practical owners, and fences that have been repaired in patches for years. The city also has opinions about fences, written into its code, and a propped section is closer to a code problem here than most owners realize."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas connects Forest Hill owners with one contractor in southeast Tarrant County. Describe your job once; he measures, he quotes, and you decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Estimate first, form second.",
+                "text": "Your rough footage produces a ballpark with no phone number attached. Sending the form is what moves the job to a contractor."
+              },
+              {
+                "title": "He calls and sets the measuring appointment.",
+                "text": "Expect questions about which sections lean, what is shared, and what you want saved, if anything."
+              },
+              {
+                "title": "The quote you get back is written and split into lines.",
+                "text": "Tear-out, gates, and permit stand apart. Approve it and the crew is scheduled. Decline and the quote is still yours."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a Forest Hill fence should look like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Straight, for a start, and standing on the hardware the city insists on. Forest Hill's code requires every fence to be built from all new materials and to stand on new metal vertical posts cemented into the ground. That is not a suggestion a contractor negotiates with. Building that way also suits the Blackland Prairie clay beneath Forest Hill, which swells in wet months, shrinks in dry ones, and works wooden posts loose."
+          },
+          {
+            "type": "p",
+            "text": "A finished Forest Hill fence also stands within the lean limit the code sets: a fence more than twenty percent out of vertical is out of compliance, full stop. The new fence should not be anywhere near that conversation."
+          },
+          {
+            "type": "p",
+            "text": "Picture the propped section replaced by a run that needs no props, no apologies, and no seasonal ritual with a screw gun."
+          }
+        ]
+      },
+      {
+        "heading": "What a Forest Hill fence costs, and how to get the number",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Two drivers set the figure on any Forest Hill lot. The first is footage. Second is what you build from: cedar tops the Forest Hill list, pine lands near half of cedar's per-foot figure, iron holds the middle, and pool mesh is figured separately. Gates surprise people for a simple reason: a gate is labor and hardware, not mere footage. Tear-out matters here too, since most Forest Hill jobs start with a tired fence that has to come out and go away."
+          },
+          {
+            "type": "p",
+            "text": "Run through this page's calculator, your footage becomes a real Forest Hill range in roughly half a minute. That range is for planning. After measuring, the contractor supplies the binding number, itemized so tear-out, gates, and permit stand apart, letting you see what the new posts and materials truly cost."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The annoying parts, Forest Hill edition",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Forest Hill runs its own permit office, separate from Fort Worth, and its code is specific. New fences need permits, as do replacements past a small share of the existing fence. Up front, four feet above the yard's average grade is the ceiling. Easements stay empty, and corner lots keep sight lines open near intersections. Decorative iron up to six feet in front is reserved for lots over an acre, with most of the fence left visible through."
+          },
+          {
+            "type": "p",
+            "text": "Your contractor files with Forest Hill itself, builds on the metal posts the code demands, and keeps the run out of easements. In Forest Hill, digging waits for an 811 locate. A Forest Hill replacement quote prices tear-out and hauling already, props and all."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Your contractor measures the line and checks the lean.",
+                "text": "He notes which sections are salvageable and which are done, and the quote states post type and setting, which in this city means new metal in cement."
+              },
+              {
+                "title": "You read the itemized quote and decide.",
+                "text": "Separate lines for removal, gates, and permit make it easy to phase the work if the whole fence cannot happen at once. Passing costs you nothing."
+              },
+              {
+                "title": "The crew builds, and you inspect it together.",
+                "text": "Walk the run, work the gates, and flag anything off before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What follows the form is simple: Your contractor will call within one business day to schedule your free measurement. The call handles your details and the visit time. Expect no robocall follow up, no selling your number onward, and no pressure to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Forest Hill materials: cedar, pine, iron",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Privacy in Forest Hill usually means cedar panels on metal posts: the cedar shrugs off rot and takes stain, while the posts answer both the code and the clay. Pine panels cost about half as much per foot and weather faster, a workable trade where the budget leads. Where Forest Hill height and visibility rules bite up front, iron is the answer, and around a pool it answers again, where barriers must reach four feet."
+          }
+        ]
+      },
+      {
+        "heading": "Forest Hill fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a Forest Hill fence cost me?",
+                "a": "A Forest Hill price is set by footage and material, and the calculator here converts those into a range for your yard within about thirty seconds. Relatively in Forest Hill, pine sits near half of cedar's per-foot figure, iron between them, and gates appear as their own item. Measuring finished, the contractor confirms the exact Forest Hill price."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Should I be there for measuring?",
+                "a": "For the measuring visit, your presence helps: you can walk the lean together and agree on gate placement. On build days most people are away. The crew needs access to the yard and a plan for dogs."
+              },
+              {
+                "q": "Whose permit governs a Forest Hill fence?",
+                "a": "Permits for a Forest Hill address come from Forest Hill itself; Fort Worth paperwork covers nothing here. Filing is part of your contractor's job, as is building to the city's material and post rules. If deed restrictions apply on your street, mention them in the form."
+              },
+              {
+                "q": "How does the Forest Hill match work, and what does it cost?",
+                "a": "You pay nothing for the match. Describe a Forest Hill job once; the match goes to a local contractor who wants it, and an itemized quote comes back. Payment goes only to a contractor you hire, and only for fence work. A quote that lands too high means he is not hired, and it cost you nothing to get."
+              },
+              {
+                "q": "My fence is bad on just one side. Can that side alone be replaced?",
+                "a": "Yes. Replacing the failing side is a standard Forest Hill job, and the new section still has to stand on new metal posts set in cement under the city code. Name the bad side in the form, and say if a neighbor shares that line, so a split can be built into the quote."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Forest Hill fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Take the prop down because the fence no longer needs it. That is the whole goal, priced in writing before anyone digs. Begin with the estimate; decide once you have seen it."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "white-settlement": {
+    "slug": "white-settlement",
+    "cityName": "White Settlement",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in White Settlement, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "A fence in White Settlement older than the plant career of the person replacing it? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your White Settlement fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Some White Settlement fences have outlasted the careers of the people now replacing them. A fence that went up when its owner started at the plant, patched through decades of shifts, kids, and dogs, can be standing out of habit more than strength. When it finally leans past saving, the replacement is not really a purchase. It is the closing of a long account."
+          },
+          {
+            "type": "p",
+            "text": "White Settlement is a blue-collar, mid-century city on Fort Worth's west side, built around the defense plant economy, with older homes on established streets and owners who value work done right the first time. A fence here gets bought the same way: once, properly, with the price in writing."
+          },
+          {
+            "type": "p",
+            "text": "In west Tarrant County, Fences Texas pairs White Settlement homeowners with one local contractor. Describe the job once; he measures and quotes it, and you decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Begin with the calculator, then send the form in.",
+                "text": "Rough footage is fine, and the ballpark requires no phone number. Note if the old fence is coming out, because in this city it nearly always is."
+              },
+              {
+                "title": "A call from your contractor sets up the measuring visit.",
+                "text": "Gates, shared lines, and timing get a brief rundown, then an appointment is set."
+              },
+              {
+                "title": "The itemized quote follows the measurement.",
+                "text": "Tear-out, gates, and permit each appear on a line of their own. Hire him and the build is booked. Pass and nothing is owed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a proper White Settlement fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It looks like the old one did on its best day, only straighter: a wood privacy run on a mid-century lot, metal posts under it as the city's fence application requires, holes dug two feet deep, and a gate that swings on hinges instead of hope. It looks unremarkable from the street, which in White Settlement is a compliment. The fence is not the story. The yard behind it is."
+          },
+          {
+            "type": "p",
+            "text": "The city code explains why the old fence had to go, in unusually plain terms. A fence section counts as dilapidated when an eight foot stretch leans more than fifteen degrees out of vertical, or when a tenth of the pickets in a section are damaged, missing, or rotted. Most end-of-life fences in town meet one of those definitions years before they fall."
+          },
+          {
+            "type": "p",
+            "text": "The replacement should be built to stay out of that paragraph for decades: deep posts, sound materials, and nothing propped."
+          }
+        ]
+      },
+      {
+        "heading": "What a White Settlement fence costs, and how to get it in writing",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The arithmetic runs on footage and material. For White Settlement material pricing, cedar leads, pine follows at about half of cedar's per-foot figure, iron settles between, and pool mesh is quoted separately. Gates are priced as gates, not as footage, and they surprise people. Tear-out is the other honest line: a fence that old does not come out for free, and any quote that hides removal inside a lump is a quote to read twice."
+          },
+          {
+            "type": "p",
+            "text": "From your footage alone, this page's calculator produces a real range in roughly thirty seconds. That range is for planning. The firm price is set only after on site measuring, in a written quote listing tear-out, gates, and permit apart, so every part of the job can be verified."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "White Settlement permit rules, handled for you",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Before any White Settlement fence is constructed, the ordinance requires a building permit with no exceptions; past eight feet, a fence also needs board approval. The application wants a site plan. One more rule catches people: the code bans bracing a tired fence with anything visible from a street, alley, or neighboring property, so propping the old fence up for another year is not a legal strategy here. Your contractor files the permit, builds to the eight foot cap, and works inside the current standards, which the city was reviewing again in late 2026, so he confirms the latest reading for your address."
+          },
+          {
+            "type": "p",
+            "text": "Digging in White Settlement waits until 811 locates the lines. Into a White Settlement quote go tear-out and hauling, and the old fence leaves when the crew does."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He measures the line and prices the whole job.",
+                "text": "Corners, gates, shared stretches, and the condition of the old fence all go into an itemized quote that states post depth in writing."
+              },
+              {
+                "title": "You weigh it at home, without an audience.",
+                "text": "Hire him if the number works. If it does not work, the quote stays in your hands and the matter ends there."
+              },
+              {
+                "title": "The crew builds, then you walk the fence together.",
+                "text": "Test the gates, check the lines, and settle anything questionable before the final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Here is what sending the form actually triggers: Your contractor will call within one business day to schedule your free measurement. Your details and the appointment are what that call is for. No robocalls follow, no call center buys your number, and no one pressures you to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "White Settlement fence materials in short",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For long service in White Settlement, owners pick cedar: rot does not trouble it, stain sits strong on it, and board-on-board holds privacy together when summer shrink pulls at boards. At roughly half of cedar's figure per foot, pine gives back some service years for the saving, a trade suiting White Settlement rentals and shorter horizons. Iron stays open and nearly maintenance-free, right for front runs and pools, and it will not rot at the post line the way old wood does."
+          }
+        ]
+      },
+      {
+        "heading": "White Settlement fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a White Settlement fence cost?",
+                "a": "Two things decide a White Settlement price, footage and material, and this page's calculator turns them into a real range in about thirty seconds. As a White Settlement guide: pine near half of cedar's per-foot figure, iron in the middle, gates carried as their own line item. On site, after measuring, the contractor confirms the exact price."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Should I be home for the measuring?",
+                "a": "Being home helps at measuring time in White Settlement, since gate placement and shared lines settle best in person. On build days most people are at work. Access to your yard, plus a plan for dogs, is what the crew needs."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "White Settlement requires a permit for any new fence, with a site plan, and caps height at eight feet without board approval. The filing is your contractor's to handle as part of the job, and he confirms the current standards for your address. An association covering your street? Mention it in the form."
+              },
+              {
+                "q": "What do I pay for matching?",
+                "a": "Free. One description of your White Settlement job, one match with a local contractor who wants it, and an itemized quote comes back. Only a contractor you hire gets paid, and only for the fence. Number too high? Pass; the quote cost you nothing."
+              },
+              {
+                "q": "One side of my fence is gone. Can I replace only that?",
+                "a": "Yes. Replacing one failing side is routine in White Settlement, and a permit still applies, which your contractor handles. In the form, say which side has gone, and whether a neighbor shares it, because a shared line can be quoted with a split in mind."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your White Settlement fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A fence bought once and built right, with the price in writing before the first post hole. That standard built this town. The estimate starts it; decide after."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "lake-worth": {
+    "slug": "lake-worth",
+    "cityName": "Lake Worth",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Lake Worth, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "A cottage lot in Lake Worth where weekend water traffic watches your yard? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Lake Worth fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A Lake Worth cottage lot lives a double life. All week the yard is quiet, and then the weekend brings the lake crowd past your fence: boats, visitors, and a steady set of eyes on a backyard that used to feel private. A fence with gaps, a short run, or a gate that hangs open turns that weekend traffic into an audience, and cottage owners here learn to think about sightlines the way other towns think about shade."
+          },
+          {
+            "type": "p",
+            "text": "Lake Worth is a small lake city inside Fort Worth's west side, where casino-era and mid-century cottages became year-round homes on lots drawn for weekends. The fences do full-time work on part-time lot lines, and the city's fence code has something to say about nearly every part of that job."
+          },
+          {
+            "type": "p",
+            "text": "Fences Texas connects Lake Worth homeowners to a contractor on Fort Worth's west side. Describe the job once; he measures, quotes, and the decision is yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Estimate your footage, then submit the form.",
+                "text": "The ballpark needs no phone number. Mention a pool or a cottage lot line that sits close to the water, since both change the build."
+              },
+              {
+                "title": "The contractor calls to schedule the measuring visit.",
+                "text": "He will ask about gates, alleys, and any shared cottage lines, then set a time."
+              },
+              {
+                "title": "A written quote comes back, pieces separated.",
+                "text": "Removal, gates, and permit each take a line. Approve it and the job joins the schedule. Decline and nothing follows you."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What a well-judged Lake Worth fence looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "It gives the yard back without walling off the lake. A solid cedar run across the back, tall enough to close the sightlines from the street and neighboring lots, with iron where the view toward the water is worth keeping. The gate latches every time, because on a lake street a gate left ajar is an invitation."
+          },
+          {
+            "type": "p",
+            "text": "Lake Worth writes its expectations down. A residential fence here must stand at least four feet tall and no more than eight, a floor as well as a ceiling, and it may not be built closer to the street than the house itself. Along a Lake Worth lot's sides and rear, fencing may sit on the property line, while corner lots keep sight triangles clear where streets and alleys meet."
+          },
+          {
+            "type": "p",
+            "text": "Under it all sits Blackland Prairie clay, swelling and shrinking with the seasons, so posts set deep in concrete are what keep a straight fence straight."
+          }
+        ]
+      },
+      {
+        "heading": "Lake Worth fence costs, and pricing a cottage lot",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Two things decide a Lake Worth price, footage and material: cedar at the top, pine at roughly half of cedar's per-foot figure, iron between, and pool mesh figured on its own. Gates are separate lines, and a gate wide enough for a boat or trailer differs from a walk gate. A replacement adds tear-out and hauling, and cottage lots here hide old posts and buried concrete."
+          },
+          {
+            "type": "p",
+            "text": "In about thirty seconds, this page's calculator turns Lake Worth footage into a plannable range. Treat the range as a planning figure, not a promise. Your actual lines get measured first; then the contractor fixes the price, in a quote breaking out tear-out, gates, and permit, so every part of the job shows before you commit."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Lake Worth permits and paperwork, off your plate",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Any new Lake Worth fence needs a permit, and so does rebuilding one that fails to conform to the code. The repair side is more forgiving: rebuilding a conforming fence without expanding its perimeter needs no permit, and minor repairs to a nonconforming fence stay exempt under a quarter of the fence's area on any straight line. Which side of that line your Lake Worth project falls on, your contractor can tell you, and when a permit is due, he files it."
+          },
+          {
+            "type": "p",
+            "text": "The code also bans a shortcut lake homeowners are fond of: weaving slats through chain link to fake a privacy fence is prohibited in residential districts here. Pool fences carry the strictest rule around, at least six feet with self-closing, self-latching gates. An 811 locate precedes any Lake Worth digging, and the quote prices tear-out with hauling."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Your lot lines get measured by a contractor.",
+                "text": "Gates, alley access, and any pool get checked, and post depth and setting go into the quote, documenting the hidden work."
+              },
+              {
+                "title": "The quote is yours to sit with.",
+                "text": "Lines are itemized, so you can trim a gate or change a material and see the effect. Hire him, or pass with no charge for asking."
+              },
+              {
+                "title": "He builds it, and you walk the result together.",
+                "text": "Sightlines, gates, and ground clearance get checked with you before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Sending the form sets one thing in motion: Your contractor will call within one business day to schedule your free measurement. Your details and the appointment: that is the call, nothing more. No robocalls follow a Lake Worth form, your number is not sold onward, and signing pressure plays no part. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron around the lake",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Back lots in Lake Worth get privacy from cedar, which resists rot, takes stain well, and, run board-on-board, opens no gaps for the weekend audience. Pine, costing roughly half of cedar per foot in Lake Worth, weathers faster in exchange, fair for a rental cottage or a tight budget. Iron keeps the water side open and handles pool duty, where Lake Worth wants a barrier at least six feet tall with self-closing, self-latching gates."
+          }
+        ]
+      },
+      {
+        "heading": "Lake Worth fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a Lake Worth fence cost?",
+                "a": "Your Lake Worth figure depends on footage and material, and the calculator here converts them into a yard specific range in roughly half a minute. Relatively for Lake Worth: pine near half of cedar's per-foot figure, iron in the middle, gates priced on their own line. Once measuring is done, your contractor confirms the exact figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Should I be there for measuring?",
+                "a": "Your presence at measuring helps in Lake Worth, because sightlines and gate placement are easier judged standing in the yard. During the build, most owners are out. For the crew, arrange access and a place for the dogs."
+              },
+              {
+                "q": "Which Lake Worth projects need a permit?",
+                "a": "New fence in Lake Worth: permitted. Rebuild of a nonconforming fence: permitted. Repairs to a conforming fence within its original perimeter: exempt. Your contractor sorts out which applies and files as part of the job. If deed restrictions cover your cottage street, note them in the form."
+              },
+              {
+                "q": "What does the Lake Worth match cost me?",
+                "a": "Nothing for the matching. Describe a Lake Worth job once; the match goes to a contractor who wants west side work, and an itemized quote comes back. Payment reaches a contractor only when you hire him, and only for fence work. Quote too high? He is not hired, and the quote cost you nothing."
+              },
+              {
+                "q": "Only one side of my fence is failing. Can I replace just that side?",
+                "a": "Yes. Partial replacement is common on Lake Worth cottage lots, and if the existing fence conforms to the code and the work stays inside its original perimeter, the repair can be permit-exempt. In the form, name the failing side, and note whether the neighbor shares it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Lake Worth fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A yard that is yours again on weekends, priced in writing before work begins. West side crews book the lake season early. Start with the estimate."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "aubrey": {
+    "slug": "aubrey",
+    "cityName": "Aubrey",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Aubrey, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "New subdivision on one side, horse pasture on the other? Run your Aubrey lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the HOA. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Aubrey fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Stand at the back of a new Sandbrock Ranch yard and the view past your lot line is not another rooftop. It is a pasture, with actual horses in it, because Aubrey is where the US 380 subdivisions run straight into working horse country. That back line has to do two jobs at once: give your kids and your dog a private yard, and hold a clean edge against open land."
+          },
+          {
+            "type": "p",
+            "text": "Plenty of Aubrey fences are first fences. The house closed, the yard is sod and good intentions, and the builder left the fencing to you. Others are acreage lines west of town that have leaned through one too many spring storms. Tell it once and he takes it from there: measured, priced, and your call at the end."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Details first, ballpark right behind them.",
+                "text": "Rough footage, new or replacement, and your address. No phone number gets asked for, and the form is how your job reaches a local contractor."
+              },
+              {
+                "title": "Then he calls to line up a measuring visit.",
+                "text": "Gates, corners, and scheduling get talked through, and a time gets picked for him to walk the line himself."
+              },
+              {
+                "title": "Once he has measured, the quote arrives in writing.",
+                "text": "Removal, gates, and permit each get a line of their own, out in the open. Hire him if the number works for your household. If it does not, keep the quote anyway. Nothing chases you afterward."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Walk a Silverado back line six months after install: cedar running straight along the lot edge, board-on-board so the boards still meet after a dry August pulls at them, and a gate wide enough for a mower that actually latches. This is Blackland Prairie clay, and it swells when the rain comes and shrinks hard when summer dries it out. Year after year that slow movement works posts loose and leans them out of true. Aubrey crews bury posts deep and set them in concrete without thinking twice. On this ground a shallow post is a return trip scheduled early."
+          },
+          {
+            "type": "p",
+            "text": "The answer tells you how long that fence expects to stand straight."
+          }
+        ]
+      },
+      {
+        "heading": "What an Aubrey fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nothing moves an Aubrey total like footage does, and footage here is all over the map. A Savannah lot is a short, tidy run. An acreage line beyond the subdivisions is a different job altogether. Material is the second lever. Cedar sits at the top of the material ladder, pine comes in at roughly half its per-foot cost, iron falls between those two, and pool mesh gets priced in a category all its own. Gates surprise people; they carry hardware and framing the straight runs do not, and they land on the quote as their own line."
+          },
+          {
+            "type": "p",
+            "text": "Feed this page's calculator your footage and a genuine range for your yard comes back in roughly thirty seconds. Treat that range as a planning figure. Only an on-site measurement firms it up, and then removal, gates, and the permit are broken out separately, so each piece of the total explains itself."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most owners never see the paperwork coming, but Aubrey fence work starts there. Fences here fold into a combined accessory application handled by Development Services, and your contractor takes care of whatever permit the job requires, as part of the work. If your street sits in an HOA, and most new Aubrey streets do, the architectural spec gets checked before materials are ordered, not after the fence is up and the letters start."
+          },
+          {
+            "type": "p",
+            "text": "The city also holds owners to a maintenance standard: a fence may not lean more than ten degrees out of vertical, and broken or missing parts past a modest threshold have to be repaired or replaced. Replacing a fence? The old one comes down and leaves with the crew, part of the quoted work. No gray boards wait stacked by your curb."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He prices the job he finds on your line, not a guess.",
+                "text": "He checks gates and corners in person, notes the slope and the pasture side, and writes the post setting into the quote, so the build quality is yours to judge before you commit."
+              },
+              {
+                "title": "You sit with the numbers and choose.",
+                "text": "The quote is itemized line by line. Say yes and get on the schedule, or pass and keep the quote. Nobody chases you either way."
+              },
+              {
+                "title": "After the build, the two of you walk the fence.",
+                "text": "Go the full length beside him, swing each gate, and point at whatever looks off, all before the final payment moves."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. That call confirms your details and picks the measuring time, nothing else. No robocalls, no call center handoff, nobody pushing a signature at you. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Ask around a new Aubrey subdivision and cedar is what you will see: rot resistant, even under stain, built board-on-board so the yard stays private as boards season. Pine trades some service life for a per-foot cost near half of cedar, a trade that makes real sense on long acreage runs, where footage is the bill. Iron earns its place where a view or a pool is involved, and where an HOA or a screening rule wants an open face instead of a solid wall. Run your own yard through it and a genuine range comes back in roughly thirty seconds. Rule of thumb: cedar costs about double pine per foot, iron falls between, and gates carry their own line. The exact figure gets settled on site, after your lot is measured."
+          },
+          {
+            "type": "p",
+            "text": "**How long does the whole thing take?** Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. For build days, most Aubrey owners are at work. What the crew needs from you is a way in through a gate and a plan that keeps the dogs indoors."
+          },
+          {
+            "type": "p",
+            "text": "**Who deals with the permit and my HOA?** Yes, both are handled for you. In Aubrey the permit runs through the Development Services application, and pulling whatever yours requires is your contractor's task, folded into the work. Architectural review in your neighborhood? Name it in the form, and the spec gets verified before a single board is ordered."
+          },
+          {
+            "type": "p",
+            "text": "**How does the matching work, and is it free?** Nothing. One description is enough. We line you up with a local contractor who wants the job, and an itemized quote comes back. You pay only if you hire him, and only for the fence itself. Too high? Walk away, and the quote still cost you nothing."
+          },
+          {
+            "type": "p",
+            "text": "**Only one side of my fence is bad. Can I replace just that part?** Yes. Replacing a single run is routine work in Aubrey, especially the pasture side that takes the weather. Put that in the form, along with whether a neighbor shares the line. A shared line gets quoted in a way that keeps the cost conversation simple."
+          }
+        ]
+      },
+      {
+        "heading": "Get your Aubrey fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One form puts a real number on the yard, whether it backs onto a pasture in Sandbrock Ranch or a cul-de-sac in Savannah. Spring and summer schedules fill from the front, so the earlier the measuring visit happens, the better your pick of build dates. Get the estimate first and let the decision rest on something solid."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "pilot-point": {
+    "slug": "pilot-point",
+    "cityName": "Pilot Point",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Pilot Point, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Horses on the trail, lake wind off Ray Roberts, and a fence code with a written repair rule. Run your Pilot Point lot through the calculator, then get a free quote from a local contractor. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Pilot Point fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a still morning in Pilot Point you can hear hooves before you see them. The Greenbelt trail riders pass along the corridor by Lake Ray Roberts, and plenty of back fences here stand close enough to that world that they are part yard fence, part pasture fence. A fence in Pilot Point has to look right from the kitchen window and still mean business on the side that faces open land."
+          },
+          {
+            "type": "p",
+            "text": "The town is changing fast around that older core. One telling is enough: he measures, he prices, you say yes or no."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run your numbers first, then send the form.",
+                "text": "A rough footage guess is enough to start. The ballpark appears with no phone number requested, and the form itself is what delivers your job to a local contractor."
+              },
+              {
+                "title": "A call from him sets up the measuring visit.",
+                "text": "The two of you go over gates, shared lines, and timing, then pick when he will walk your Pilot Point yard himself."
+              },
+              {
+                "title": "After measuring, he sends a written quote with everything itemized.",
+                "text": "Removal, gates, and permit appear one per line, nothing bundled. Hire him if the price suits you. Pass, and the quote is yours to keep with nothing owed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a Yarbrough Farms lot, finished reads plain: cedar running straight, the backyard closed to the street behind, a gate swinging true, no daylight under the bottom rail. Out toward Windrose, where lots stretch to an acre or more, the same build stretches longer and the post work matters more with every extra foot of exposure."
+          },
+          {
+            "type": "p",
+            "text": "Pilot Point ground is Blackland Prairie clay at the northern edge of Denton County. It heaves when it is wet and cracks open when it is dry, and fence posts ride that movement unless they are set deep and in concrete. On this soil, that answer is the fence."
+          }
+        ]
+      },
+      {
+        "heading": "What a Pilot Point fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage first, since Pilot Point footage tells two very different stories. An in-town lot near the square might need a short run and one gate. A Windrose acre lot can need three long sides. Material moves the total after that: cedar is the ceiling, pine lands near half its cost per foot, iron in between, pool mesh in a class of its own. Gates and tear-out of an old fence each add their own lines on a real quote."
+          },
+          {
+            "type": "p",
+            "text": "Run the numbers through this page's calculator and thirty seconds later you hold a genuine range, which beats guessing off a neighbor's invoice. Read the range as a planning figure only. Measuring on site is what firms the price up. Then the written quote pulls tear-out, gates, and permit apart into separate lines, leaving the number nowhere to hide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For a town its size, Pilot Point writes unusually detailed fence rules. Your contractor works inside every one of them so you never have to open the code book. The city caps a residential fence at eight feet, measures height from the grade on your side of the fence, and requires a permit before a fence is built or substantially repaired. Swapping pickets needs no permit, but once a repair touches posts or passes half of any single run, counted across a full year of small fixes, the job becomes permitted work with a final inspection at the end. Which side of that line your job falls on gets sorted out by your contractor before a single post hole gets dug."
+          },
+          {
+            "type": "p",
+            "text": "Before any digging, 811 locates the utilities. Replacing a fence? Tear-out and haul-off of the old one ride inside the quoted price."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The actual job gets measured and priced, not a template.",
+                "text": "He walks the whole line, checks every gate and corner, and states the post setting in the written quote, answering the quality question on paper."
+              },
+              {
+                "title": "You review the quote on your own schedule.",
+                "text": "Every cost sits on its own line. Hire him and pick a build window, or decline and keep the paperwork. Either outcome is fine."
+              },
+              {
+                "title": "Once built, he walks it alongside you.",
+                "text": "With the last gate hung, the two of you go along the fence and anything needing attention gets pointed out before the final payment happens."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Your details and the measuring appointment are the whole of that call. Robocalls, none. Number sold onward, never. Signature pressure, zero. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Backyard Pilot Point defaults to cedar: it shrugs off the clay country swing from wet to dry, takes stain well, and board-on-board closes every sightline. At roughly half of cedar's price per foot, pine is the honest budget pick when acreage footage, not finish, is what drives the bill. Iron suits front yards under the decorative fence limits, pool enclosures, and any lot where you want the lake or the pasture to stay visible through the fence instead of being walled off from it."
+          }
+        ]
+      },
+      {
+        "heading": "Pilot Point fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a fence run me in Pilot Point?",
+                "a": "Two things decide it: how many feet, and which material. This page's calculator turns both into a genuine range for your yard in roughly thirty seconds. Roughly speaking, cedar costs about twice what pine does per foot, iron sits between the two, and gates hide on their own line, the one people forget. The exact price gets confirmed on site after the contractor measures."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. On build days most owners are away. The crew needs a gate to get in, plus plans for dogs and any horses nearby."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "It is handled as part of the job. Pilot Point requires a fence permit for new fences and larger repairs, and your contractor pulls any required permit and schedules the final inspection. Yarbrough Farms, Mustang Creek, and several other newer subdivisions run HOAs. Name yours in the form and its spec gets checked before anything else happens."
+              },
+              {
+                "q": "How does the matching work, and is it free?",
+                "a": "Nothing. Tell us the job one time and we will match you to a local contractor who wants it; an itemized quote follows. The only person you ever pay is the contractor you hire, and the only thing you pay for is the fence. Quote too high? Decline it. It cost you nothing."
+              },
+              {
+                "q": "One side of my fence is failing. Can that side alone be replaced?",
+                "a": "Yes, and the city code is plain about the line: swapping pickets needs no permit, but past half of a run, or once posts are involved, the job does. Describe the bad side in the form, note if a neighbor shares that line, and the quote will reflect the right scope and the right paperwork."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Pilot Point fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Close to the square or out past where the trail riders ride by, the route is the same: one form, a local contractor out measuring, and a written number in your hands. Build slots in spring and summer go to the jobs that start earliest. Begin with the estimate and make the call from there."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "ponder": {
+    "slug": "ponder",
+    "cityName": "Ponder",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Ponder, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "A first subdivision street in a town that had none a decade ago. Run your Ponder lot through the calculator for a real range, then get a free quote from a local contractor. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Ponder fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A decade ago Ponder had no subdivision streets at all. Now the first ones are filling in off FM 156, and every fresh lot on them needs the same first decision, where the fence goes and what it is made of."
+          },
+          {
+            "type": "p",
+            "text": "Questions differ by house. The want underneath does not: a straight fence, a gate that shuts, a price that holds up in writing."
+          },
+          {
+            "type": "p",
+            "text": "For Ponder homeowners, Fences Texas lines up a local fence contractor whose work covers western Denton County. Say it once: he measures, he quotes, you decide whether it happens."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Type in your footage and the ballpark is yours.",
+                "text": "Thirty seconds, roughly, and no phone number gets asked for. When you are ready, the form sends your job to a local contractor."
+              },
+              {
+                "title": "A phone call from him books the measuring visit.",
+                "text": "You talk over the fence's job: pets, privacy, maybe a pool down the road, and he picks a time to see the lot himself."
+              },
+              {
+                "title": "A written, itemized quote follows the visit.",
+                "text": "Gates, removal of any old fence, and permit appear as separate lines. Take the job if the number works. Leave it if it does not, and the quote is still yours."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On one of the new Ponder streets the finished fence is the thing that turns a construction lot into a backyard: cedar boards running level across ground that was pasture last year, a wide gate for the mower, and a corner that meets the neighbor's run cleanly. On the older grid the win looks different, a gray, patched line replaced in one pass so the whole yard reads cared for again."
+          },
+          {
+            "type": "p",
+            "text": "The ground under both is Blackland Prairie clay, and it does not care whether the house above it is new or a hundred years old. Wet months swell it and dry months shrink it; shallow posts get worked out of line by that cycling. Ponder soil teaches the same lesson to every crew that works it, so local posts go in deep, seated in concrete."
+          },
+          {
+            "type": "p",
+            "text": "In clay country, that is the whole ballgame."
+          }
+        ]
+      },
+      {
+        "heading": "What a Ponder fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage is what sets the job's scale. An acre outside the grid and a compact in-town Ponder lot share a name and little else. The calculator on this page exists to price whichever one is actually yours. Then material. Cedar tops the range; reckon pine at about half cedar's cost for each foot, iron between the two, and pool mesh figured separately from both. Gates carry their own hardware and framing, and pulling out an old fence adds removal work to a replacement."
+          },
+          {
+            "type": "p",
+            "text": "Before you call a soul, run your numbers and a genuine range is yours in thirty seconds or so. Use it for planning, not as a promise. What binds is the on-site measurement's price, written out line by line: tear-out, gates, and permit visible, none of it buried in a lump sum."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Reputation says small towns mean little paperwork. Ponder disagrees. Ponder has a dedicated fence and screening permit application, its own pool application, and plan review and inspections handled through an outside inspection service with requests taken online. Your contractor files whatever permit the job requires and keeps the inspection steps in order, part of the job itself, so a town under three thousand never stalls your fence on process."
+          },
+          {
+            "type": "p",
+            "text": "New subdivision street with an association? Put it in the form. Then the fence spec gets checked against neighborhood rules ahead of any materials being ordered. Older Ponder lots mostly skip that layer entirely, which the contractor confirms for your address either way."
+          },
+          {
+            "type": "p",
+            "text": "811 locates the utility lines before digging starts. For replacements, the quote already carries tear-out and haul-off, so the old fence rides away with the crew."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Out he comes to walk the line and price what stands there.",
+                "text": "He notes slope, corners, how gates swing, and which lines are shared, and the quote records the post setting, leaving the build quality yours to weigh."
+              },
+              {
+                "title": "You read the quote and make the call.",
+                "text": "It is broken into lines you can question one at a time. Hiring him is one option. Passing, quote in hand and owing nothing, is the other."
+              },
+              {
+                "title": "Installation done, you inspect it together.",
+                "text": "Every run gets walked beside the contractor, every gate opened and closed, and anything that looks wrong gets raised before the final payment is due."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Your details plus a measuring time: that call has no other business. Robocalls, no. Call centers, no. On-the-spot signing pressure, none. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most new Ponder backyards end up choosing cedar. Rot does not trouble it, stain lands evenly on it, and its board-on-board build holds the yard's privacy while boards season. Pine's per-foot cost lands near half of cedar's, a fair trade on a long run with a real budget, above all on acreage, where footage piles up fast. Iron is the open option, right for a front yard, a pool enclosure, or any lot where you would rather keep the view of open land than wall it out."
+          }
+        ]
+      },
+      {
+        "heading": "Ponder fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does fencing a Ponder yard cost?",
+                "a": "It hinges on footage and material. Feed both to this page's calculator and your yard gets a genuine range back in about thirty seconds. Relatively speaking, a foot of pine costs about half a foot of cedar, iron occupies the middle ground, and gates get priced as a line item apart. The contractor confirms the firm number on site after measuring."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. During the build, most owners are out. The crew's needs are simple: a way into the yard, and a dog plan while gates stand open."
+              },
+              {
+                "q": "Who sorts out the permit and my HOA?",
+                "a": "That filing is his job: whatever permit yours requires gets handled as part of the work, and Ponder's own fence and screening application makes it a routine he knows. New street, new HOA? Jot it in the form, and before building starts the neighborhood spec gets its check."
+              },
+              {
+                "q": "What does matching involve, and what do I pay for it?",
+                "a": "Nothing. Describe it one time. We match you to a local contractor eager for the work; back comes an itemized quote. Payment goes only to a contractor you actually hire, and only ever for the fence. If his quote lands too high, decline it; having gotten it cost you nothing."
+              },
+              {
+                "q": "One side of my fence is failing. Must I replace the whole thing?",
+                "a": "Yes. One run at a time is normal work, and on the older Ponder grid it is often the smart scope. Name the side in the form, and say whether a neighbor shares it. Around just that stretch the quote gets built, permit handled to fit."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Ponder fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "One form gets your lot measured and a written number in hand. Start with the estimate, then decide with the real figure in front of you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "justin": {
+    "slug": "justin",
+    "cityName": "Justin",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Justin, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Boot town roots, brand new subdivisions, and roads that were gravel in living memory. Run your Justin lot through the calculator, then get a free quote from a local contractor. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Justin fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Head west on FM 407 out of Justin and the pavement tells the town's story. Longtime residents remember when some of these roads were gravel, and the back line of a house out here used to mark where the yard ended and the field began. Now Timberbrook and Treeline streets stand on that same ground, and the back line is a subdivision fence that has to satisfy an HOA instead of a herd."
+          },
+          {
+            "type": "p",
+            "text": "Justin guards its rural character while it grows, which makes fence jobs here a two-part puzzle: build something sturdy enough for open country wind and clay, and build it to the spec your street requires. Explain the job a single time and the rest follows: his measurement, his written quote, your verdict."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Begin with the online ballpark.",
+                "text": "Rough footage is fine and no phone number is asked. Sending the form afterward is what routes your job to a local contractor."
+              },
+              {
+                "title": "He calls to schedule the on-site measurement.",
+                "text": "Details get talked through, gates, materials, timing, and he books the visit to walk your Justin line himself."
+              },
+              {
+                "title": "The quote reaches you in writing, line by line.",
+                "text": "After measuring, tear-out, gates, and permit each carry a separate price. Hire him if it works for you. If not, the quote stays yours and the conversation ends there."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Timberbrook the finished fence is part of the streetscape: a board-on-board cedar run that matches the neighborhood standard, tied into the greenbelt trail system without a sag or a gap in sight. In old town Justin the same craftsmanship shows up smaller, a tired chain link and patchwork line replaced by one straight privacy fence that gives a sixties ranch house its backyard back."
+          },
+          {
+            "type": "p",
+            "text": "The ground argues with all of it. Eastern Justin sits on expansive black clay, while the western side runs into caliche and alluvial soils, and both shift enough to lean posts that were set shallow or dry. Here, crews sink posts deep and anchor them in concrete. Ask, and yours can tell you which soil your own street sits on."
+          },
+          {
+            "type": "p",
+            "text": "Material is the next decision. Cedar is the benchmark: pine lands at roughly half its per-foot price, iron in between, pool mesh on its own scale. Gates add framing and hardware beyond the straight runs, and a replacement adds tear-out of whatever is standing now."
+          },
+          {
+            "type": "p",
+            "text": "Your footage goes to this page's calculator, and a genuine range for your yard lands in your hands within thirty seconds. It is a planning number, honest about its limits. After he measures on site, the firm quote follows, its tear-out, gates, and permit itemized so the total can be audited line by line."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Fence permits in Justin go through the city's online portal, submittal list and all. Whatever permit your job needs, your contractor handles it as part of the work. The application needs a site plan showing the fence location, property lines, height, and material, and the city defines a replacement fence narrowly: same location, same materials, same height, covering at least half the total length. If your subdivision has an HOA, and Timberbrook, Treeline, and Wildflower Ranch all do, the neighborhood spec gets checked before anything is ordered."
+          },
+          {
+            "type": "p",
+            "text": "Before digging, utilities get located through 811. On replacements, the old fence is removed and hauled off inside the quoted work."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A local contractor walks the line and builds the quote from the real yard.",
+                "text": "Corners, gates, slope, and soil all get noted, and the quote states the post setting method in plain terms."
+              },
+              {
+                "title": "You take your time with the written numbers.",
+                "text": "Each line stands on its own, so you can question any part of it. Approve it and get scheduled, or decline and keep the quote free and clear."
+              },
+              {
+                "title": "A joint walkthrough closes the installation.",
+                "text": "The finished fence gets walked with the contractor beside you, every gate latch tested, and anything questionable addressed ahead of final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Your details and the measuring appointment are all that call touches. No robocalls. Your number never gets sold onward. No signature pressure. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most Justin backyards run on cedar: rot resistant, even to stain, with board-on-board construction closing whatever gaps appear as boards season through summer heat. At about half of cedar's per-foot price, pine makes its case on long runs, on acreage lots, and anywhere the budget casts the deciding vote. Iron fits front yards, pools, and the lots along greenbelts and trails where an open face keeps the view and still draws a firm line. In Justin subdivisions the HOA spec may narrow the choice before you make it, which is worth checking at the quote stage rather than after."
+          }
+        ]
+      },
+      {
+        "heading": "Justin fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will fencing my Justin yard cost?",
+                "a": "Footage decides it, material decides it, and this page's calculator converts the pair into a genuine range in about thirty seconds. Expect pine at roughly half cedar's per-foot cost, iron occupying the middle, and gates carried on a line of their own in the quote. The exact price gets confirmed by the contractor once he has measured your Justin yard."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. On build days, most Justin owners are at work or on the road to Alliance. All the crew needs is yard access and a dog plan."
+              },
+              {
+                "q": "Who handles the permit and my HOA?",
+                "a": "Your contractor does. Justin's fence applications go through its online portal and need a site plan; filing whatever permit your job requires is his, as part of the work. Name your HOA in the form if you have one, and the build gets planned around its spec from the start."
+              },
+              {
+                "q": "How does the match happen, and what do I pay?",
+                "a": "Nothing. A single description of the job is all it takes. We match you to a local contractor who wants it, and an itemized quote is what you get. Pay goes only to the contractor you hire, and only ever for the fence itself. If the quote overshoots your budget, do not hire him; the quote itself cost you nothing."
+              },
+              {
+                "q": "Only one side of my fence is failing. Can I replace just it?",
+                "a": "Yes. Partial replacement is common, and Justin even defines replacement work in its submittal guide, same spot and same height among the criteria. In the form, name the failing side and whether the neighbor shares it; the quote then gets scoped to that single run."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Justin fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Timberbrook cul-de-sac or an acre beyond the old gravel roads, it starts the same way: one form, a local contractor out to measure, a written number back in your hands. Spring and summer build calendars fill in order, so earlier is better. Begin from the estimate, and let a real figure drive the decision."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "sanger": {
+    "slug": "sanger",
+    "cityName": "Sanger",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Sanger, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "You can hear I-35 over that fence, and it is finally due. Run your Sanger lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Sanger fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "There is a particular Sanger sound: eighteen wheelers rolling I-35, close enough that a backyard conversation pauses when a truck downshifts.  That fence is finally due."
+          },
+          {
+            "type": "p",
+            "text": "Established streets near the core carry older fences at the end of their run, Sanger Circle and Lane Ranch are still building out, and acreage east toward Lake Ray Roberts plays by longer footage and fewer rules from neighbors."
+          },
+          {
+            "type": "p",
+            "text": "Sanger homeowners get connected by Fences Texas to a local contractor whose territory covers both sides of I-35. One description does it: measurement and quote from him, decision from you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Ballpark first, form second.",
+                "text": "Type in rough footage and back comes the range, thirty seconds later, no phone number needed. The form is the step that hands your job to a local contractor."
+              },
+              {
+                "title": "His call sets up the measuring visit.",
+                "text": "Together you go over the job, which gates, which sides, what comes out, and a time gets booked for him to walk the line."
+              },
+              {
+                "title": "The itemized quote arrives after measuring.",
+                "text": "Removal, gates, and permit each sit on their own line. Hire him if the total works. If it does not, the quote stays with you and nothing is owed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Stand in a Sanger Circle backyard after the build and the change is audible: a tight board-on-board cedar fence takes the edge off the highway hum, the gate latches with a solid click, and the yard feels like a room again. On an older street off the core, the finished job looks simpler and matters just as much, one straight run where a patched, leaning line used to announce itself to everyone driving past."
+          },
+          {
+            "type": "p",
+            "text": "Under the fence, Sanger ground is Blackland Prairie clay, swelling in wet months and shrinking in dry ones. Posts set shallow get worked loose by that cycle, and the highway side of a lot takes wind on top of it. In Sanger, posts go in deep, seated in concrete. Crews learned why by replacing enough fences built the other way."
+          },
+          {
+            "type": "p",
+            "text": "It is the difference between a fence and a fence problem deferred."
+          }
+        ]
+      },
+      {
+        "heading": "What a Sanger fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage leads here as it leads everywhere, but Sanger demands an honest count: modest runs in town, and acreage toward the lake that can stretch several times longer. Material follows. Where material is concerned, cedar prices highest per foot, pine at about half of that, iron between them, and pool mesh figured apart from the rest. Gates bring hardware and framing costs the straight footage does not, and tearing out a dead fence adds a removal line to replacement jobs."
+          },
+          {
+            "type": "p",
+            "text": "Your actual footage goes into this page's calculator and out comes a genuine range, thirty seconds or so later. Treat the range as a planning tool. Measuring on site produces the firm number. It arrives written out, tear-out, gates, and permit itemized, letting you follow the money from line to line."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The simplest fence rule in Denton County belongs to Sanger, and it is enforced plainly: no lot gets a fence of any kind before a city building permit exists for it. As part of the job your contractor pulls whatever permit is required, builds only with approved materials, keeps the whole fence clear of city easements and public property, and respects the city's eight foot height cap. You never have to read the ordinance; the fence simply comes out compliant."
+          },
+          {
+            "type": "p",
+            "text": "Posts matter in the fine print too. City standards in parts of Sanger call for metal posts anchored in concrete and stained wood on subdivision fences, the kind of detail a local contractor already knows and a first time fence buyer would never think to ask about. Neighborhood HOA? Mention it in the form and the plan absorbs its spec."
+          },
+          {
+            "type": "p",
+            "text": "811 handles the utility locates before digging, and replacement quotes already price the old fence's haul-off."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He measures your yard and prices the job he actually sees.",
+                "text": "Gates, corners, and the highway side all get checked, and the written quote spells out how posts are set."
+              },
+              {
+                "title": "You decide from an itemized page.",
+                "text": "Every line can be questioned on its own. Say yes and the build gets scheduled, or say no and keep the quote at no cost."
+              },
+              {
+                "title": "The crew builds, and you walk the result together.",
+                "text": "Check each run and gate with the contractor before final payment, and anything that needs fixing gets flagged on the spot."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. That call is about your details and a measuring time. It stops there. Robocalls, call centers, signature pressure: none of the three. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The Sanger backyard standard is cedar, and near the highway board-on-board is the version earning that title: its overlapping boards keep privacy complete while taking some traffic noise out of the yard. Pine, at about half the per-foot cost, is the fair choice on long acreage, where footage rather than finish drives the bill. Iron is the open answer for front yards, pools, and lake side lots where the view is the point. Sanger's approved material list covers wood, masonry, wrought iron, chain link, and vinyl, so the conversation starts with what your lot needs rather than what the city allows."
+          }
+        ]
+      },
+      {
+        "heading": "Sanger fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will a Sanger fence cost me?",
+                "a": "Two inputs decide it, your footage and your material, and this page's calculator gives your yard a genuine range in roughly thirty seconds. Pine costs roughly half what cedar does per foot; iron occupies the middle ground; gates get priced on a separate line. Once he has measured on site, the contractor confirms the exact figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. On install days most Sanger owners are gone. A gate the crew can use, and a plan for the dogs."
+              },
+              {
+                "q": "Who deals with the permit and my HOA?",
+                "a": "Your contractor. A building permit is required in Sanger for any fence at all; he pulls it, part of the job, and builds within the city's material and height rules. Have an HOA of your own? Put its name in the form; the neighborhood spec then gets checked before a single material order goes in."
+              },
+              {
+                "q": "What does the matching involve, and is it free?",
+                "a": "Nothing. You describe the job one time. From there we match you to a local contractor who wants the work; what comes back is an itemized quote. The contractor you hire is the only person you pay, and the fence is the only thing you pay for. Too high? Do not hire him. Getting the quote cost you nothing."
+              },
+              {
+                "q": "Just one side of my fence is bad. Can I replace only that side?",
+                "a": "Yes. Replacing the highway side alone is one of the most common Sanger jobs there is. Tell us the side in the form, and whether the line is shared with a neighbor. That run, its tear-out, and the matching permit are what the quote will cover."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Sanger fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A single form puts a contractor in your yard with a tape, and a written number follows, highway side and all. Lead with the estimate, then decide with an actual figure in front of you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "bridgeport": {
+    "slug": "bridgeport",
+    "cityName": "Bridgeport",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Bridgeport, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Wind off Lake Bridgeport does not negotiate. Run your Bridgeport lot through the calculator for a real range, then get a free quote from a local contractor. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Bridgeport fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pick a lot on the west side of Bridgeport, up where the ground rises toward Lake Bridgeport, and the wind arrives the way it wants to: off miles of open water, unbroken by anything taller than a rooftop. Fences up there do not fail gracefully. They lean a degree at a time all winter, then give up a whole panel on the first hard spring blow."
+          },
+          {
+            "type": "p",
+            "text": "Your one description starts the whole thing: he measures, he quotes, the deciding stays yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Estimate first, form after.",
+                "text": "A rough footage figure brings back a ballpark in about thirty seconds, and nobody asks for your phone number. The form moves your job to a local contractor."
+              },
+              {
+                "title": "His phone call arranges the measurement.",
+                "text": "The job gets talked through, gates, exposure, what goes and what stays, and a time gets set for him to walk your Bridgeport lot."
+              },
+              {
+                "title": "Measuring done, the written quote is yours.",
+                "text": "Its lines itemize tear-out, gates, and permit separately, one from another. Hire him if the number works. Pass, and the quote is yours with nothing attached."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a shore side lot, finished means the yard's whole weather changes: a straight, tight run that no longer leans into the wind's argument, boards meeting edge to edge, a gate that shuts against a lake breeze without a wrestling match. In town, on the older streets near the US 380 corridor, the same quality reads as simple order, one clean line where a patched fence used to wander."
+          },
+          {
+            "type": "p",
+            "text": "Bridgeport ground is transitional country, clay in the low spots and rock close to the surface on the rises, which makes digging honest work and post setting a real decision. A post that hits rock at a shallow depth or floats in wet clay will not hold a wind loaded fence for long. Posts here go deep, set in concrete by local crews who work around the rock instead of pretending it away."
+          },
+          {
+            "type": "p",
+            "text": "The answer predicts the next ten winters."
+          }
+        ]
+      },
+      {
+        "heading": "What a Bridgeport fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The main lever is footage, and Bridgeport footage swings wide: one lot needs a short in-town side run, another needs a lake lot's full perimeter. Next lever: material. Per foot, cedar costs about double pine, iron lands between the two, and pool mesh gets priced apart from both. Gates add hardware and framing beyond the straight runs, and a replacement carries tear-out of the old fence as its own line."
+          },
+          {
+            "type": "p",
+            "text": "Thirty seconds with this page's calculator turns your footage into a genuine range. Use the range for planning. On site, after measuring, the firm price gets set. The quote then writes everything out line by line, tear-out, gates, permit, so exactly what you are paying for is plain to see."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Bridgeport publishes a fence permit application of its own, and the city's guidance draws a line worth knowing: building a fence counts as permit work, while a replacement standing six feet or under sits on the list of jobs needing none. Before work starts, your contractor confirms where your project lands relative to that line, and pulls any permit it requires, part of the job."
+          },
+          {
+            "type": "p",
+            "text": "Pool owners get their own city checklist: the pool permit application calls for a fence at least four feet high with a self-closing, self-latching gate. If a pool is part of your yard now or part of the plan, say so in the form and the barrier gets built into the quote from the start."
+          },
+          {
+            "type": "p",
+            "text": "Before anyone digs, 811 locates the utilities, a step that matters doubly on Bridgeport's rocky ground. Replacement quotes price in tear-out with haul-off, so the old fence departs with the crew."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A local contractor walks your line and prices the real conditions.",
+                "text": "Wind exposure, slope, rock, and gates all get noted, and the quote states how the posts will be set."
+              },
+              {
+                "title": "You review an itemized quote and decide in your own time.",
+                "text": "Each cost stands on its own line. Hire him and get on the schedule, or decline and keep the quote at no charge."
+              },
+              {
+                "title": "The build ends with a walk you take together.",
+                "text": "Every section gets your eye run down it, every gate a swing, and anything needing attention gets flagged before the final payment comes due."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. That call is about your details and the measuring appointment only. No robocalls, no call center gets your number, no signing pressure. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For privacy in Bridgeport, cedar sets the standard: stain takes well on it, wet winters off the lake do not rot it, and its board-on-board face stays solid against the wind. At roughly half of cedar's per-foot cost, pine suits the long ranch style run, the kind where footage dominates the budget. Iron is the right call where the lake view is the reason you bought the lot, and it is the classic pool fence as well, open, strong, and easy to keep sightlines through. On exposed lots the post work matters more than the board choice, so judge the quote by what goes in the ground."
+          }
+        ]
+      },
+      {
+        "heading": "Bridgeport fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will my Bridgeport fence cost?",
+                "a": "It is decided by footage and by material. Feed both to the calculator on this page and your yard gets a genuine range back, in about thirty seconds. Cedar runs about double pine per foot, iron occupies the middle ground, and gates price out as a line item apart. After measuring on site, the contractor confirms the exact price."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. On build days most Bridgeport owners are away. Gate access for the crew, and a dog plan."
+              },
+              {
+                "q": "Permit and HOA: who takes care of those?",
+                "a": "Your contractor handles the permitting as part of the work, and replacements at the same height, six feet and under, are exempt under Bridgeport's own guidance, which he confirms for your project. Property in an HOA? Put its name in the form; its spec gets checked before anything proceeds."
+              },
+              {
+                "q": "What happens in the matching, and what do I pay?",
+                "a": "Nothing. One time is all the describing it takes. We match you to a local contractor eager for the work. What you receive is a quote with every cost itemized. The only payee is a contractor you hire; the only purchase is the fence. Quote too steep? Decline it, and it still cost you nothing."
+              },
+              {
+                "q": "One run of my fence is bad. Can the rest stay?",
+                "a": "Yes. The lake side alone is a common Bridgeport scope, since it takes the worst of the wind. In the form, identify the run and say whether it is shared with a neighbor. Around that section the quote gets built, tear-out included."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Bridgeport fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In town or up by the water, one form does it: a local contractor comes out to your lot, and a written number comes back to you. Spring wind season is when the weak fences announce themselves, and build calendars fill in order. The estimate is the place to start; decide from there."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "rhome": {
+    "slug": "rhome",
+    "cityName": "Rhome",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Rhome, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "An acre lot where the fence run outlasts the street. Run your Rhome lot through the calculator for a real range, then get a free quote from a local contractor. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Rhome fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The back run alone can be longer than the street frontage of an entire suburban block back in Fort Worth, and there are three more sides after it."
+          },
+          {
+            "type": "p",
+            "text": "A fence here is a perimeter decision first and a privacy decision second."
+          },
+          {
+            "type": "p",
+            "text": "Rhome homeowners get matched by Fences Texas with a local contractor for whom acreage is a normal day, never an exception. Say it once. His job: measure and quote. Yours: decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run the ballpark with your best footage guess.",
+                "text": "Acreage math is rough by nature and the calculator expects that; no phone number is needed. Send the form when you want a contractor involved."
+              },
+              {
+                "title": "Booking the measuring visit takes one call from him.",
+                "text": "The two of you talk through how much perimeter you actually want fenced, and a time gets set for walking it together."
+              },
+              {
+                "title": "The written quote follows the walk.",
+                "text": "Gates, tear-out, and any permit sit on separate lines. If the number works for the property, hire him. If it does not, you keep the quote and the matter ends there."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A Rhome acre gives a finished job a particular satisfaction: cedar privacy fencing closes the backyard in around the house, inside a much larger property, leaving the family ground private and the rest of the land open. Out by the road, a long iron or pipe style run can carry the property line without walling off the country. Both read as deliberate, which is what good fencing on big ground looks like."
+          },
+          {
+            "type": "p",
+            "text": "The clay under Rhome does not scale down just because the lot is big. It swells wet and shrinks dry across every foot of the run, and a long fence multiplies every weak post into a visible lean. Wise County crews sink their posts deep, concrete them in, and space the work against wind load, since an acre lot hands the wind a running start."
+          },
+          {
+            "type": "p",
+            "text": "On acreage, that answer is the quote."
+          }
+        ]
+      },
+      {
+        "heading": "What a Rhome fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Rhome, footage rules everything, more completely than in any suburb on this map. Fencing the backyard alone and fencing the full perimeter can differ by hundreds of feet, so the first pricing decision is scope: which lines, and which sides get privacy treatment versus an open style. Material follows scope. Cedar is the expensive end; pine runs near half its per-foot cost, iron between them, pool mesh apart. Gates on acreage earn their line honestly, since a drive gate and a walk gate are different hardware entirely."
+          },
+          {
+            "type": "p",
+            "text": "Your best footage goes into this page's calculator, and back comes a genuine range in about thirty seconds, sized to the scope you entered. The range plans; it does not promise. The firm price comes after the contractor walks the ground, and the written quote itemizes gates, tear-out, and any permit so the total can be checked line by line."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Permits in Rhome still run the old way: downloadable forms, and a building department you can reach directly. Your contractor confirms what your specific project needs before work starts, because the honest answer in Rhome depends on the job: simple panel replacement on your own line is one thing, while new footings near a right of way or easement, or structural changes at a corner or gate, can need city or county approval. Any required fence permit gets handled as part of the job."
+          },
+          {
+            "type": "p",
+            "text": "Subdivision properties add one more layer. Several Rhome subdivisions ask for architectural review on work visible from the street, including height and material changes. Put your subdivision's name in the form, and the review gets built into the timeline rather than ambushing you mid build."
+          },
+          {
+            "type": "p",
+            "text": "Before digging, 811 locates the utilities. On acreage, where lines run long and often unmarked, that step matters. Replacement quotes already price tear-out with haul-off."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He walks the ground with you and prices the scope you chose.",
+                "text": "Backyard only or full perimeter, gates where you actually drive and walk, and the quote states the post plan in writing."
+              },
+              {
+                "title": "You weigh an itemized quote, line by line.",
+                "text": "Change the scope on paper if the total demands it; that is what the lines are for. Hire him, or pass, quote kept and free either way."
+              },
+              {
+                "title": "The crew builds, and you walk the fence together at the end.",
+                "text": "Check the runs, work the gates, and get anything that looks off addressed before final payment."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. The call is limited to your details and setting the measuring time. No robocalls, no call center in the middle, no pressure to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Rhome the backyard answer is cedar: it resists rot, looks good up close, and its board-on-board build keeps the house ground private while boards season. Pine's per-foot cost, about half of cedar's, is what makes long runs affordable; on acreage, that difference can decide whole sides of a property. Where you want a boundary marked without the view closed off, iron draws the clean, open line, and around pools it remains the standard choice. Many Rhome properties end up mixing them, cedar near the house, an open style on the outer lines, and the quote can be built exactly that way."
+          }
+        ]
+      },
+      {
+        "heading": "Rhome fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will fencing my Rhome place cost?",
+                "a": "First scope, then footage, then material: this page's calculator turns those entries into a genuine range in about thirty seconds. Cedar per foot runs about double pine, iron lands in the middle ground, and gates carry a line of their own. The contractor confirms the exact figure after walking your Rhome ground."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. On build days most owners are out. Access is the crew's requirement, plus a plan covering dogs and any livestock near the work."
+              },
+              {
+                "q": "Permit and HOA: who verifies what?",
+                "a": "Before starting, your contractor verifies where your address and project stand on permits, and handles whatever filing is required, part of the job. Subdivision with an architectural review? Put it in the form, and into the plan the approval gets scheduled."
+              },
+              {
+                "q": "Matching: how does it work, and what do I pay?",
+                "a": "Nothing. Describe the job one time. We match you to a local contractor who wants the work; back comes a quote, costs itemized. You pay the contractor you hire, for the fence and nothing else. Quote too high? Do not hire him. It cost you nothing to get."
+              },
+              {
+                "q": "One side of my fence is bad. Must the whole fence go?",
+                "a": "Yes, and out on Rhome acreage that scope is often the sensible one. One failing run gets replaced without touching the sound sides. In the form, say the side, and whether any of it is shared with a neighbor. That stretch, and its tear-out, is what the quote will cover."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Rhome fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A local contractor walks your lot, and an itemized figure comes back to you, all from one form. Jobs take build slots in the order they arrive. Start with the estimate, and decide once the information is solid."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "springtown": {
+    "slug": "springtown",
+    "cityName": "Springtown",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Springtown, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "A fence that has to satisfy a family and a few head of livestock. Run your Springtown lot through the calculator, then get a free quote from a local contractor. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Springtown fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The fence here has to keep the kids and the dog in the yard, keep a few head of livestock where they belong, and do both on the same piece of Parker County ground."
+          },
+          {
+            "type": "p",
+            "text": "Fences range from tidy in-town privacy runs to long country lines that nobody in a suburb would recognize as a backyard project."
+          },
+          {
+            "type": "p",
+            "text": "For Springtown homeowners, Fences Texas finds a local fence contractor whose building is rural first by habit. One telling moves it: he measures, he quotes, you decide the rest."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Footage in, ballpark out.",
+                "text": "Roughly thirty seconds is all it takes, and no phone number is asked. Send the form and your job lands in front of a local contractor."
+              },
+              {
+                "title": "A ring from him arranges the measuring visit.",
+                "text": "The split gets talked through, pasture versus yard, cross fencing versus gates, and a time gets booked for walking the property."
+              },
+              {
+                "title": "A written quote comes back itemized.",
+                "text": "Gates, tear-out, and permit appear as separate lines after he measures. Hire him if the number works. Decline, and the quote is yours to keep for nothing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the finished version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Covenant Park the finished fence is a clean suburban answer: cedar boards running straight behind a new house, a gate that latches every time, and a backyard that finally feels finished. Out on the acreage past Goshen Creek, the finished work looks different and works just as hard, a privacy fence hugging the house ground with an open, sturdy run carrying the outer line where the animals are."
+          },
+          {
+            "type": "p",
+            "text": "Springtown ground sits in a transition band, sandy loam mixed with clay, draining better than the heavy black clay farther east but still holding enough clay to move posts through wet and dry cycles. Add open exposure on the hills along Highway 199 and a shallow post has two enemies at once. Deep posts in concrete are simply the default here for local crews, never an upgrade."
+          },
+          {
+            "type": "p",
+            "text": "On Springtown soil, that is where fences are won and lost."
+          }
+        ]
+      },
+      {
+        "heading": "What a Springtown fence costs, and how to price your own yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Scale gets set by footage, and Springtown footage hinges on which fence you mean. Behind the house, the backyard run is one number; around acreage, the outer line is another entirely. Most owners price the house ground first and treat the perimeter as a second phase, which the quote can separate cleanly. Material is the other lever. Cedar is the costly end of the other lever; pine runs at about half its per-foot cost, iron between, pool mesh priced apart. Gates add their own framing and hardware, and a drive gate is a different animal from a walk gate in every sense."
+          },
+          {
+            "type": "p",
+            "text": "This page's calculator converts your footage into a genuine range inside thirty seconds. Read it as a planning figure. The binding price follows the on-site measurement, written line by line with tear-out, gates, and permit visible."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Almost everyone gets surprised by one Springtown fence rule: the building code here expressly requires a permit for any fence six feet and under, the very backyard privacy fence most cities exempt outright. Your contractor pulls whatever permit the job requires and works the city's process, so the surprise stays his to solve."
+          },
+          {
+            "type": "p",
+            "text": "That permit habit is worth having in a town actively debating its fence standards, where height and pool barrier rules have been in front of the council in recent ordinance discussions. A contractor who builds in Springtown keeps up with where those rules land; you should not have to. A newer subdivision property may carry fence style requirements of its own. Name the subdivision in the form and its spec gets checked ahead of materials being ordered. Acreage outside the subdivisions, by contrast, often carries few deed restrictions, or none."
+          },
+          {
+            "type": "p",
+            "text": "811 gets the utilities located before digging. On replacements, tear-out and haul-off of the old fence sit inside the quoted price."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The real scope gets priced by a local contractor walking the property.",
+                "text": "He notes yard lines and pasture lines, gates, and what the ground is doing, and the quote records the post setting."
+              },
+              {
+                "title": "You study the itemized quote and decide.",
+                "text": "Split the phases if the total calls for it; the lines make that easy. Hire him, or pass, quote kept free."
+              },
+              {
+                "title": "He builds it and walks the finished fence with you.",
+                "text": "Test the gates, check the runs, and raise anything that needs attention before final payment is made."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Your details and the measuring appointment: the call sticks to those, nothing more. Robocalls, none. Call centers never get your number. Signing pressure, none. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On Springtown house ground, cedar is the standard: rot resistant, quick to take stain, and board-on-board, keeping the yard private while boards season through summer. At roughly half the per-foot cost of cedar, pine is what carries so many long country runs, the places where footage outweighs finish. The open option is iron: front yards, pools, and any line where the boundary should stay firm while the view stays intact. A mixed build, cedar at the house and an open style outside, is a normal Springtown quote, not a special request."
+          }
+        ]
+      },
+      {
+        "heading": "Springtown fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What will my Springtown fence cost?",
+                "a": "Footage and material are what decide it. Run them through this page's calculator and a genuine range for your property comes back in about thirty seconds. Per foot, pine costs about half of cedar; iron lands mid range; gates get priced on a line apart. The contractor confirms the exact number on site after measuring."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts. On build days most owners are away. Access is what the crew needs, plus plans for dogs and livestock nearby."
+              },
+              {
+                "q": "Permit and HOA: how are those handled?",
+                "a": "By your contractor. Even standard height fences need a building permit in Springtown; filing it is part of his job. If your subdivision has fence style rules, say so in the form and the build gets planned around them from the start."
+              },
+              {
+                "q": "How does the matching go, and what does it cost?",
+                "a": "Nothing. Describe the job one time and we will match you to a local contractor who wants the job. Back comes a quote with every cost itemized. You pay the contractor you hire, and you pay for the fence only. If his number lands too high, do not hire him; the quote you got cost you nothing."
+              },
+              {
+                "q": "Only one side is failing. Do I have to replace the rest?",
+                "a": "Yes. Replacing a single run is routine, and on acreage it is often phase one of a bigger plan. In the form, note the side and whether it is shared with a neighbor; that stretch gets scoped by the quote, tear-out and matching permit included."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Springtown fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Backyard in Covenant Park or a livestock line past Goshen Creek, the job starts the same: one form, a local contractor out measuring, a written number back to you. Start with the estimate and decide with the real figure in hand."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "alvarado": {
+    "slug": "alvarado",
+    "cityName": "Alvarado",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Alvarado, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Fence down at a rental, or a new Alvarado backyard with no fence at all? Run the lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Alvarado fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The photo arrives on your phone on a Tuesday. Your tenant in Alvarado has sent a picture of the back fence lying in the grass after a windy night, and you are looking at it from forty miles away. That is how a lot of Alvarado fence decisions start: at a distance, from a photograph, with a tenant waiting on an answer."
+          },
+          {
+            "type": "p",
+            "text": "Maybe you live in the house instead. Your gate scrapes, ground level rot has softened the posts, and the dog already knows which board wiggles. Either way, you need a straight fence around an Alvarado yard, a price you can trust without standing in the yard yourself, and paperwork handled by somebody local."
+          },
+          {
+            "type": "p",
+            "text": "Through Fences Texas, Alvarado owners and landlords get paired with a contractor who is already working Johnson County week in and week out."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Start with the calculator, then forward the form.",
+                "text": "Give the footage as best you know it, say fresh fence or replacement, and add the property address. The ballpark shows up before anyone asks for a phone number."
+              },
+              {
+                "title": "The contractor rings you and books the measuring visit.",
+                "text": "He confirms the details on that call, including who will be at the property, you or your tenant."
+              },
+              {
+                "title": "After measuring, he sends a written quote broken out line by line.",
+                "text": "Gates, removal, and the permit each appear separately. Sign if the number works. Walk away if it does not, and nothing follows you."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Think of an Eagle Glen backyard where the builder fence came out and a cedar privacy fence went in straight enough to sight down, with a gate that shuts on the first push. Out toward the acreage edge of Alvarado, it is a long run across open ground holding its line in a Johnson County wind."
+          },
+          {
+            "type": "p",
+            "text": "Under all three sits the same ground problem. This is Blackland Prairie clay country, and the clay under Alvarado swells after rain and shrinks hard through a dry summer, walking posts out of plumb year after year."
+          },
+          {
+            "type": "p",
+            "text": "Before signing anything, put one question to every bidder: what depth do the posts reach, and what holds them there?"
+          }
+        ]
+      },
+      {
+        "heading": "What an Alvarado fence costs, and how to pin it down from wherever you are",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Nothing moves the total like footage does, and Alvarado footage has a way of exceeding expectations, above all out on those one-acre and multi-acre parcels near the town edge. What you build from matters next. Cedar tops the list, iron sits below it, pine lands near half of cedar per foot, and pool mesh stands apart. Gates add up faster than owners expect, and hauling off a dead fence belongs in the quote, not in your tenant's yard."
+          },
+          {
+            "type": "p",
+            "text": "Put your footage into the calculator above and a range comes back in roughly thirty seconds. Treat it as a planning figure. The firm number comes after the contractor walks the line and counts the gates, and his quote breaks the job into lines so you can see the money."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The paperwork and the dirty work are not your problem",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Alvarado has a fence permit process, and it starts with a site plan: the lot, the house and every other structure including a pool, the setbacks, the proposed fence line, and any utility or drainage easements, which a fence may not sit inside. The city caps a front-yard fence at four feet and any fence at eight. Your contractor prepares the application as part of the job and stands the finished fence up for the city's completion inspection."
+          },
+          {
+            "type": "p",
+            "text": "If your Alvarado property sits in a newer builder community, an HOA may want its own approval first, and the contractor works through that too. Utility lines get marked through 811 before anyone digs. When an old fence comes out, removal is already in the price and the crew hauls it away, so no tenant spends weeks looking at dead gray boards."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "He walks the property and measures.",
+                "text": "Every corner, gate swing, and easement gets checked against the real yard, and the quote records post depth and setting material so you can judge the build from wherever you are."
+              },
+              {
+                "title": "You study the quote on your own time.",
+                "text": "The fence, the gates, the removal, and the permit each carry their own line. Approve it or decline it. The quote stays yours either way."
+              },
+              {
+                "title": "The crew builds, and the job gets a final walk.",
+                "text": "You, your tenant, or your property manager walks the finished line with the contractor, and anything off gets flagged before the last payment moves."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. That call covers your details, property access, and the appointment, nothing beyond that. No robocalls, no call center, no pressure at a distance. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Across Alvarado, cedar is what privacy usually means. It shrugs off rot, accepts stain, and overlapping boards keep the yard screened after August heat shrinks each board. Pine will run you roughly half of cedar per foot, though it wears out sooner. On a rental, where the return matters, sooner can still pencil out. Iron belongs where the fence should be seen through, around a pool or across a front line in a community like Lone Oak."
+          }
+        ]
+      },
+      {
+        "heading": "Alvarado fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Alvarado?",
+                "a": "Two things set it: your footage and your material. Hence the calculator at the top of the page. Enter rough numbers for your yard and the range appears almost at once. For a rough ordering: cedar costs the most, iron less, pine about half of cedar, and do not forget gates, which price on their own line. The contractor locks the exact figure after measuring on site."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home, or on site at all?",
+                "a": "Plenty of Alvarado jobs are handled by owners who never stand in the yard. For the measuring visit, somebody who can speak to gates and property lines should be reachable, and a tenant can often cover that. While work runs, crews need gate access plus a pet plan."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Filing the city permit, site plan and all, belongs to the contractor, who also builds within Alvarado height limits."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. One description of the job is all it takes. From there we pair you with a local contractor who wants it, and his written quote follows. Payment goes only to whoever you hire, and only for the fence. A quote you decline costs you nothing."
+              },
+              {
+                "q": "Only one side of my fence is failing. Can I replace part of it?",
+                "a": "Yes. One-side replacements and full tear-outs with haul-off are everyday work in Alvarado. Note it on the form. If that side borders a neighbor, say so too, because a line the two of you share can get a quote built for a clean split."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Alvarado fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Send the form, get a measured quote in writing, and give your tenant, or yourself, a fence that stands straight. Spring and summer dates in Alvarado get claimed early. Begin with the estimate, then decide with real numbers in hand."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "joshua": {
+    "slug": "joshua",
+    "cityName": "Joshua",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Joshua, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Builder fence giving up early in a young Joshua subdivision? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit, the HOA, and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Joshua fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Your subdivision in Joshua is not old. The houses in Silo Mills and Mockingbird Hills still feel new, and yet the builder fence out back is already gray, already leaning, already letting the gate sag. Builder fences go in fast and cheap, and in Joshua they give up years before the house around them does."
+          },
+          {
+            "type": "p",
+            "text": "So now you are pricing a fence you did not expect to buy this soon, on a lot that runs a quarter acre to a half acre. You want a fence built better than the one the builder left, a real price for your yard, and no second replacement five years from now."
+          },
+          {
+            "type": "p",
+            "text": "For Joshua owners, Fences Texas pairs you with a contractor from the area who builds all over Johnson County. One description from you, one measuring visit from him, and the choice remains yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Run your yard through the calculator and submit the form.",
+                "text": "A rough footage guess is fine, along with new fence or replacement and your address. First thing you see is the range, and no phone number is asked for it."
+              },
+              {
+                "title": "A call comes next to arrange measuring.",
+                "text": "On it, he reviews what you sent, asks what shape the old fence is in, and finds a time to walk your property."
+              },
+              {
+                "title": "After measuring, an itemized quote comes back.",
+                "text": "Gates priced apart, removal apart, the permit apart. Hire him if the number makes sense for the house. If not, that is the end of the conversation."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Walk out back in a Joshua subdivision after the job is done and the difference is plain. The new fence stands at a full eight feet where the code now allows it, boards tight, top line level from corner to corner, and the yard feels private in a way the six-foot builder fence never managed. On a half-acre lot in Heritage II or Oak Knoll, the back line runs long, and a straight run that long is its own proof."
+          },
+          {
+            "type": "p",
+            "text": "Joshua ground explains why the first fence failed early. Wet, this clay expands. Dry, it contracts. Any post set too shallow gets carried along by that cycle until the whole fence tilts. Crews who build in Joshua set posts deep and in concrete for exactly that reason. When you compare quotes, look for the post line: depth and setting material, written down, tell you more about the next fifteen years than any promise about the boards."
+          }
+        ]
+      },
+      {
+        "heading": "What a Joshua fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Start with length. Joshua yards hold more of it than a typical suburban yard does, because a quarter acre or a half acre stretches both side runs and the back line alike. What it is made of comes second: cedar dearest, iron below that, pine near half of cedar per foot, pool mesh quoted apart. Every gate adds a line, and pulling out a failed builder fence adds removal work."
+          },
+          {
+            "type": "p",
+            "text": "Type footage into the calculator above and it hands back a planning range within thirty seconds, before any visit happens. On site, he verifies the figure himself. His written quote lists removal, gates, and the permit as separate lines, leaving nothing buried inside one lump sum."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "You do not have to deal with any of the annoying parts",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "No fence rises in Joshua without a permit first. The filing needs a plot plan marking the enclosure, easements, setback lines, and the visibility triangles at each corner. The code caps a residential fence at eight feet, holds a decorative front fence to four feet, and keeps fences out of drainage easements and floodways. Your contractor prepares that filing as part of the job."
+          },
+          {
+            "type": "p",
+            "text": "Newer Joshua neighborhoods often answer to an HOA with its own fence spec. That approval goes into the plan early, not as a surprise mid-build. Utility lines are located through 811 before any post hole opens. On a replacement, the failed builder fence is torn out and hauled away as part of the quoted work."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Out comes a local contractor to measure and quote.",
+                "text": "He traces every run, checks gate spots and corners, and prices the job as your yard actually presents it. His quote states post depth and setting material in plain terms."
+              },
+              {
+                "title": "You take the quote and decide in your own time.",
+                "text": "Hiring him is your call, and passing is a complete answer too."
+              },
+              {
+                "title": "Once built, the two of you walk it.",
+                "text": "Stroll the new line side by side, swing each gate, and call out whatever catches your eye before the last payment goes out."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Expect no robocalls, no number passed to any call center, and no pressure selling later. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most Joshua backyards land on cedar in the end. Rot barely touches it, stain takes well, and overlapping boards hold privacy even after summer heat shrinks the wood. Pine costs roughly half as much per foot but ages quicker, which makes sense whenever the budget is doing the deciding."
+          }
+        ]
+      },
+      {
+        "heading": "Joshua fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Joshua?",
+                "a": "It hinges on two inputs, footage and material, and the calculator above exists to convert yours into a yard specific range in thirty seconds or so. Ranked by cost, cedar leads, then iron, then pine at roughly half of cedar per foot, with gates carrying a line all their own. The exact figure gets confirmed by the contractor after he measures."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Try to be there when he measures. Gate placement and lines you share with neighbors settle far easier in person. For build days, most Joshua homeowners are at work. Crews need a way through a gate and arrangements for the dog."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Neither lands on you. A Joshua permit demands a plot plan, and filing it falls to your contractor as part of the job. If your subdivision has an HOA specification, mention it on the form and he builds that approval into the timeline."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. Describe the job just once. We match you to a local contractor hungry for work like yours, and back comes an itemized quote. The only money you hand over goes to whoever you hire, for the fence alone."
+              },
+              {
+                "q": "One side of my fence has gone bad. Can just that part be replaced?",
+                "a": "Yes. Partial replacements are common in Joshua, where one sun-beaten side often fails years before the others. One caution from the code: repairing more than half of an older nonconforming fence can trigger a permit, and your contractor will flag that before work starts. Shared lines can be quoted so a neighbor split is easy to document."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Joshua fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A builder fence that failed early deserves a better second act: deeper posts, honest materials, and a written quote you can read line by line. Joshua calendars fill fast in spring and summer, so start with the estimate while the choice of dates is still yours."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "keene": {
+    "slug": "keene",
+    "cityName": "Keene",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Keene, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "On a quiet Keene street, a neat fence is part of how a house presents itself. Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Keene fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Keene is a quiet town, and its streets show it. Lawns get mowed, porches stay swept, and a fence that leans or grays out stands out here in a way it might not somewhere louder. On the streets around Southwestern Adventist University, where the houses sit on the old campus grid, a tidy fence is part of keeping a house properly."
+          },
+          {
+            "type": "p",
+            "text": "Maybe your fence has reached the point where neat is no longer available. The boards have cupped, the gate needs a lift and a shove, and every repair buys less time than the last one. What you want is a fence built right, priced honestly for your lot, and put up by a crew that respects how this town keeps its week."
+          },
+          {
+            "type": "p",
+            "text": "Keene owners reach a Johnson County contractor through Fences Texas. Describe the job once and he comes to measure, quotes in writing, and leaves the decision with you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Estimate first, form second.",
+                "text": "Enter your best footage guess, choose new fence or replacement, and leave the address. The ballpark appears on screen before any phone number enters the picture."
+              },
+              {
+                "title": "A call follows to arrange the measuring visit.",
+                "text": "The contractor talks through the job with you and picks a time, working around the rhythm of a Keene week rather than against it."
+              },
+              {
+                "title": "The quote then arrives, itemized.",
+                "text": "Removal sits apart, gates sit apart, the permit sits apart. Take the job if the figure suits the house. Decline it, and the matter closes politely."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Near campus, on a mid-century lot, done right looks like order coming back: cedar holding a true line along both sides, a gate clicking shut instead of needing a shoulder behind it, and a yard that once again feels like an outdoor room. In the newer subdivisions along the southern edge of Keene, the fixed version is a fence built to the standard of the street, uniform and clean from the curb."
+          },
+          {
+            "type": "p",
+            "text": "Keene ground asks for care underneath. The town sits on a watershed divide, Turkey Creek drainage to the north and east, East Buffalo Creek to the south and west, and parts of town carry slope or rock close enough to the surface to change how a post hole digs. Add Johnson County clay that swells and shrinks with the seasons, and post depth stops being a detail. A good Keene quote tells you plainly how the posts will be set."
+          }
+        ]
+      },
+      {
+        "heading": "What a Keene fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage sets the scale of the job, and Keene footage refuses to be guessed from the town size: old grid lots were platted generous, while lots on the south side subdivisions run standard. The rest follows from material. Cedar runs dearest, iron under it, pine at about half of cedar per foot, with pool mesh off on its own. Gates are easy to undercount, and removing a worn-out fence adds honest labor to a replacement."
+          },
+          {
+            "type": "p",
+            "text": "Feed the calculator above your own numbers and thirty seconds later you are holding a genuine range. That range guides planning. It promises nothing. Standing in your yard is where he locks the price down. His written quote breaks removal, gates, and the permit apart so the total reads clearly."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The parts nobody enjoys, handled quietly",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Keene runs its permits through the city's Development Services office and its online portal, with contractors registered with the city before they file. Your contractor pins down what your fence demands, files whatever Keene asks for, and builds by the rules governing your street."
+          },
+          {
+            "type": "p",
+            "text": "Scheduling carries a local wrinkle in Keene, and a good contractor knows it without being told. This is a Seventh-day Adventist community, and many neighbors keep the Sabbath from Friday sundown to Saturday sundown. Work here gets planned Sunday through Friday, with the crew gone before sundown on Friday. Before digging, utility lines are marked through 811. Replacing? Removal and haul-off already sit inside the quoted price, and the old fence rides away with the crew."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor measures your line and writes the quote.",
+                "text": "He checks corners, gates, slope, and any rock near the surface, then prices the job he actually saw. Post depth and setting go into the quote in writing."
+              },
+              {
+                "title": "You read the quote at your table and decide.",
+                "text": "Each part of the work carries its own line, so you can weigh the fence itself against the removal and the gates. Hiring him is your decision, and a no costs you nothing."
+              },
+              {
+                "title": "After the build, inspection is a joint walk.",
+                "text": "Pace the finished fence beside him, swing each gate, and flag anything needing attention before you pay in full."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. No robocalls, no call center, no follow-up pressure. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Keene houses wear cedar well. Rot struggles against it, stain goes on evenly, and boards laid over boards keep the yard screened long after summer shrinkage sets in. At roughly half of cedar per foot, pine gives up years earlier. For a plain back line, earlier can still be the smart call."
+          }
+        ]
+      },
+      {
+        "heading": "Keene fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Keene?",
+                "a": "Two inputs govern it, footage and material, and the calculator above turns yours into a range sized to your yard within thirty seconds. Put side by side: cedar at the top, iron in the gap below it, pine near half of cedar per foot, and gates adding a separate line again. Once he has measured at your place, he confirms the precise figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Be present for measuring if you can. Questions about gates and boundary lines resolve fastest with everyone standing in the yard itself. On build days, most Keene homeowners go about their normal routine. For the crew: a gate they can use, plus a dog plan."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "What Keene demands at your address, your contractor verifies, files the permit as part of his work, and builds to city rules. If a subdivision association needs to approve the fence first, say so on the form and that step goes into the plan."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. Describe your job a single time. We pair you with a local contractor keen for the work, and an itemized quote comes back. Money goes only to the contractor you hired, and only toward the fence."
+              },
+              {
+                "q": "What if just one side of my fence is bad? Can I replace part of it?",
+                "a": "Yes. Keene crews swap out one tired side all the time. Removal and haul-off for that single run can be quoted on its own. On the form, flag whether a neighbor shares that side. Where a line is shared, the quote can be written so both households hold the split in writing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Keene fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A fence that matches the care you already put into the house is one form away. Keene crews book their spring and summer work in order, and the calendar rewards whoever starts early. Begin with the estimate, read the written quote at your table, and decide from there."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "kennedale": {
+    "slug": "kennedale",
+    "cityName": "Kennedale",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Kennedale, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Half-acre pocket of country with a Kennedale address? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit, the HOA, and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Kennedale fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Your lot does not feel like the suburbs, even though the address says Kennedale. There is a half acre of grass, a couple of big trees, maybe a shed and a stretch of open ground, and Fort Worth close enough that the commute is easy."
+          },
+          {
+            "type": "p",
+            "text": "The fence out there now was probably built for a smaller version of your life. The dog is bigger, the kids range further, or the old line has rotted at the posts under the tree shade. You want a fence that fits the size of the place, priced by someone who has measured it, and built to stand where wind and roots both get a vote."
+          },
+          {
+            "type": "p",
+            "text": "Kennedale owners get matched, through Fences Texas, with a contractor working southeast Tarrant County."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Give the calculator your best footage, then send the form.",
+                "text": "Fresh build or replacement, plus the address. The range comes back first, with no phone number needed to see it, and the form carries your job to a local contractor."
+              },
+              {
+                "title": "He calls, talks it through, and books the measurement.",
+                "text": "Gate spots, tree lines, and shared sides all get noted on that call so the visit covers them."
+              },
+              {
+                "title": "The itemized quote follows the measuring visit.",
+                "text": "Removal, gates, and permit appear as separate lines. If the total fits the property, hire him. If it does not, you owe nothing for having asked."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On the older west side of Kennedale, where bungalows and ranch houses sit under mature trees, the finished fence changes the feel of the yard: straight, and finally private. On the east side, in the newer brick subdivisions, it looks like the street standard kept, clean lines and a gate that swings true. Out on the perimeter lots, it is a long run holding its line across open ground, the kind of fence that makes acreage feel owned instead of merely surveyed."
+          },
+          {
+            "type": "p",
+            "text": "Under every version, the same two forces are at work. The ground here is prairie-edge clay that moves with the weather, swelling wet and shrinking dry until shallow posts tilt. And those big Kennedale trees send roots along the fence line, lifting and pushing as they grow. Crews who know this city set posts deep in concrete and plan around root zones instead of discovering them mid-dig."
+          }
+        ]
+      },
+      {
+        "heading": "What a Kennedale fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Kennedale, everything starts with how much fence the lot demands. A half-acre pocket carries far more fence than a standard subdivision lot, and the long back line is where the total gets decided. Material follows. Cedar tops it, iron sits under cedar, pine runs near half of cedar per foot, pool mesh apart. Gates matter more out here too, since a wide lot often needs a wide gate."
+          },
+          {
+            "type": "p",
+            "text": "Above, the calculator converts the footage you enter into a range in thirty seconds or so. Work with that number today as your planning figure. Afterwards he measures the place himself and locks the price into a written quote. Removal, gates, and the permit appear as distinct lines there, so a long run cannot hide inside a vague total."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Permits, corners, and other Kennedale fine print, handled",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kennedale requires a permit for fences, filed online through the city's MyGov system with the Building Inspections division, by a registered contractor or the property owner. Your contractor handles the filing as part of his work. The city's development code is particular about screening and privacy fences, right down to picket gaps and metal framing on wood screening fences, and it watches corner lots closely, since a fence in the wrong spot can steal a driver's sight line."
+          },
+          {
+            "type": "p",
+            "text": "If your Kennedale home is in a neighborhood with an HOA, its fence guidelines on height, material, and design get worked through in the same pass. Before any digging, buried lines get marked by calling 811. For replacements, removal and haul-off sit inside the quoted price, with the old fence leaving alongside the crew."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A contractor from nearby measures the place and prices what is actually there.",
+                "text": "Walking the whole perimeter, he notes trees, gate positions, and corners. His quote also records post setting, so the work can be judged before you pay anything toward it."
+              },
+              {
+                "title": "The itemized quote lands with you, and the decision follows.",
+                "text": "Fence apart, removal apart, gates apart, permit apart: every piece carries a figure of its own. Take him on, or walk away holding the quote, owing nothing either way."
+              },
+              {
+                "title": "The build closes with a walk you take together.",
+                "text": "Sight along the long back run, swing all the gates, and point at whatever looks wrong before final payment leaves your hands."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Details and the measuring appointment are all that call is for. Expect no robocalls, no number sold onward, no arm twisting to sign. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Kennedale backyards default to cedar. It resists rot, looks right under trees, and overlapped boards keep the yard screened through summer shrinkage. At about half of cedar per foot, pine wears out sooner. Along a long perimeter, where footage runs the bill, sooner can be a fair trade. Iron is the choice where the view should stay open, at a pool or across a front line."
+          }
+        ]
+      },
+      {
+        "heading": "Kennedale fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Kennedale?",
+                "a": "Two things govern it here: the footage your lot needs and the material you pick. The calculator above was built to turn both into a lot specific range within thirty seconds. As a rough ranking, cedar costs most, iron comes next, pine lands at about half of cedar per foot, and gates bill separately. The contractor confirms the exact number after measuring the property."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "For measuring, be there if you possibly can. A big lot throws up questions only its owner can settle: gate spots, tree lines, and which boundary is truly yours. On build days, most people are away. Crews ask for gate access and a plan covering any animals."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Covered. Kennedale fence permits are part of the job, filed by your contractor, and the build follows the city's code, including its corner-lot sight rules. If your neighborhood HOA has fence guidelines, note them on the form so approval is built into the schedule."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. Describe your job one time only. We match you with a local contractor eager for the work, and an itemized quote follows. Payment flows only to the contractor you hired, for the fence itself and nothing else."
+              },
+              {
+                "q": "Can I replace just the one bad side of my fence?",
+                "a": "Yes. Partial replacement is common in Kennedale, especially on the shaded side where rot wins first. Removal and haul-off for that side alone can be quoted by itself."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Kennedale fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Your lot deserves a fence measured to its actual size, quoted in writing, and built for clay, roots, and open-ground wind. Spring and summer slots in Kennedale go in the order requests arrive. Begin with the estimate while good dates remain."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "hutchins": {
+    "slug": "hutchins",
+    "cityName": "Hutchins",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Hutchins, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Warehouses rising all around your Hutchins street, and your fence is the thing falling down? Run your lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Hutchins fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Drive down your street in Hutchins and the change is hard to miss. Warehouses keep rising along the highway corridor, trucks roll past, and the blocks of modest houses in between carry on with their lives. Your house is one of them, and its fence is the part that has not kept up: boards missing, a lean you can measure, a gate that has not latched properly in a year."
+          },
+          {
+            "type": "p",
+            "text": "You do not need a sales pitch. You need a straight fence, a price in writing that a household budget can judge, and a contractor who treats a small Hutchins job with the same care as a big suburban one."
+          },
+          {
+            "type": "p",
+            "text": "Hutchins owners find their contractor through Fences Texas: a local builder who works the southern end of Dallas County."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Enter rough footage in the calculator, then submit the form.",
+                "text": "Fresh fence or replacement, plus the property address. The ballpark range appears first, and seeing it never requires a phone number."
+              },
+              {
+                "title": "He rings you to set up the measuring visit.",
+                "text": "That conversation confirms your details, access, and pets, and lands on a time that suits your schedule."
+              },
+              {
+                "title": "A written quote follows, itemized piece by piece.",
+                "text": "Removal, gates, permit: a line apiece. Hire him if the numbers work for your household. If they do not, that is the end of it, with no follow-up pressure."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Picture your own street an hour after the crew leaves. The Hutchins version of fixed is not fancy. It is a back line standing plumb for the first time in years, boards tight enough that the yard is private again, and a gate that swings shut and stays shut. On the older blocks near downtown Hutchins, that change is the difference between a house that looks kept and one that looks tired."
+          },
+          {
+            "type": "p",
+            "text": "The ground under Hutchins explains most of the leaning. Blackland Prairie clay is what sits under Hutchins. Rain makes it swell, drought makes it shrink hard, and season by season that movement pushes shallow posts further out of true. Hutchins even writes the end state into its code: a fence leaning more than twenty degrees out of plumb is a violation on its face. Local crews answer with depth and concrete around every post. Anything less gets tested by this clay, and fails."
+          }
+        ]
+      },
+      {
+        "heading": "What a Hutchins fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage outweighs everything else in the total. Measure before estimating, honestly, even if the number is rough. Next in weight is material. Cedar costs the most per foot, iron less than cedar, pine roughly half of cedar, and pool mesh belongs in a category apart. People underestimate gates. One gate runs more than plain fence of the same width, and any replacement also has to carry removal and haul-off of the old one."
+          },
+          {
+            "type": "p",
+            "text": "Half a minute with the calculator above gives a range shaped to your yard. Read it as a planning number. The measuring visit is where the firm price gets set. There, his quote spells removal, gates, and the permit out line by line, letting a tight budget see precisely what it would be agreeing to."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Hutchins writes its fence rules down, and your contractor follows them",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Hutchins regulates fences more closely than its size suggests. Under the city's fence article, any fence over two feet tall needs a permit from the building official before it goes up. No fence may rise more than eight feet above the natural grade, and a front-yard fence tops out at four feet and must be built open enough to see through, at least six square inches of openings in every square foot."
+          },
+          {
+            "type": "p",
+            "text": "Pulling that permit is part of his job, and he builds to what the article demands. The code itself never has to cross your desk. If a taller or differently placed fence is truly needed, the city has a variance path through its zoning board, and the contractor can say whether your case fits it. An 811 call locates buried lines ahead of any digging. Replacements fold tear-out and haul-off into the quoted price itself."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "A local contractor walks your line and writes the quote.",
+                "text": "He measures the footage, checks the corners and gates, and states how the posts will be set, deep and in concrete, in plain writing you can keep."
+              },
+              {
+                "title": "You decide from the itemized page.",
+                "text": "Every part of the job carries its own line, so you can judge the fence apart from the removal and the permit. Hiring him is your call. Passing ends it cleanly."
+              },
+              {
+                "title": "He builds the fence, then walks it with you.",
+                "text": "Go along the finished line together, test the gates, and name anything that does not look right before the final payment is made."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. Your details and the appointment: that call covers those, and nothing beyond them. No robocalls, no call center, no number sold onward. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For a Hutchins backyard built to last, cedar leads. Rot cannot get much purchase on it, heat does not faze it, and overlapped boards close over the gaps shrinkage opens. At roughly half the cost per foot, pine weathers quicker. Plenty of Hutchins households find that the honest answer for their budget. Iron is the front-yard and pool material, open by design, which is also what the city's front-yard openness rule asks for."
+          }
+        ]
+      },
+      {
+        "heading": "Hutchins fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Hutchins?",
+                "a": "It comes down to footage and material. Yours go into the calculator above and come out as a range in thirty seconds flat. On site, tape in hand, he locks the figure down."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Show up for measuring if you can, so gate choices and boundary lines get agreed with everyone present. On build days, most Hutchins homeowners are at work. Beyond that, crews ask only for gate access and a plan for the dogs."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Permitting sits inside the job itself. Any Hutchins fence taller than two feet needs one. Your contractor files for it, then builds within the height and openness rules the city sets. Streets with an association and rules of its own: name it on the form, and he works through those alongside everything else."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. Say what the job is, once. We match you to a local contractor wanting that kind of work, and an itemized quote returns. Only the contractor you hire gets paid, and only for the fence."
+              },
+              {
+                "q": "Can I replace only the side of my fence that is bad?",
+                "a": "Yes. Put it on the form. Mention too whether a neighbor shares that side, because where the line is shared the quote can be arranged so the split comes out clean."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Hutchins fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "While the corridor changes around your street, your yard can stay the kept, private place it has always been. Spring and summer Hutchins work books in the order it arrives. Get the estimate first, then decide with actual numbers in front of you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "seagoville": {
+    "slug": "seagoville",
+    "cityName": "Seagoville",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Seagoville, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Long back line on a lot bigger than the house suggests? Run your Seagoville yard through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Seagoville fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Stand at the back door of a Seagoville house and the lot keeps going. That is the Seagoville pattern: a modest house on ground with real depth to it, and a fence line long enough that replacing it is a genuine project, not a weekend errand."
+          },
+          {
+            "type": "p",
+            "text": "When that back line starts to go, it goes in sections. A panel sags on the far side, a post gives up near the gate, and suddenly the dog has options he should not have. You need the whole line walked, measured honestly, and priced by someone who builds to this city's unusually specific fence code."
+          },
+          {
+            "type": "p",
+            "text": "Seagoville owners get matched through Fences Texas with a contractor working southeast Dallas County. Describe your job one time, he comes out to measure, and a written quote puts the decision in your hands."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Give the calculator your footage and submit the form.",
+                "text": "Even a paced-off guess helps."
+              },
+              {
+                "title": "A call from the contractor arranges the measuring visit.",
+                "text": "He goes over the details with you, including how much of the old fence is standing, and books the walk."
+              },
+              {
+                "title": "Your quote arrives in writing, broken into lines.",
+                "text": "Gates one line, removal another, permit a third, the fence apart. Hire him if the number suits the property. Decline, and nothing further happens."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "On a deep Seagoville lot, the far line is what the finished job is judged by: one run holding straight across ground mostly seen from afar, no sagging panel calling attention to itself each time you glance out back. Closer in, in Highland Meadows or on the older in-town streets, it reads as a tidy privacy fence that matches the standard of the street, gates hung square and latching clean."
+          },
+          {
+            "type": "p",
+            "text": "Under Seagoville lies Houston Black clay. Soaked, that heavy prairie soil swells. Dried out, it shrinks. Either way it works against fence posts twelve months a year. The city answers that in its own code, and the answer is unusually concrete: schedule 40 steel pipe posts, set two feet deep in concrete. When a Seagoville crew builds that way, it is not upselling you. It is following Article 21.08, and it is why a fence built here can stay straight."
+          }
+        ]
+      },
+      {
+        "heading": "What a Seagoville fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In Seagoville, length decides whether a quote stays sane. The median lot here runs about a fifth of an acre, and the rural-edge lots run far bigger, so back lines stretch well past what most suburban owners picture. Material multiplies that length next. Cedar per foot costs the most, iron sits below cedar, pine comes in near half of cedar, pool mesh apart from the rest. Gates are easy to undercount on a deep lot, and tearing out a long dead fence is a full job by itself."
+          },
+          {
+            "type": "p",
+            "text": "Your footage, entered above, converts to a range in thirty seconds or so. Treat the range as a planning figure. Walking the whole property is how he confirms the real number. His written quote then lists removal, gates, and the permit apart, so long footage cannot hide inside one lump sum."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "Seagoville has opinions about fences, and your contractor knows them",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This city writes fence rules with unusual precision, and a local contractor builds inside them without you studying a word. A new fence needs a permit, filed with a site plan showing the lot, the existing improvements, the fence line, its height and type, and any easements. The permit runs on a clock, the finished fence gets inspected, and the post specification is in the code itself: schedule 40 steel pipe, two feet deep in concrete, for a new fence in an existing neighborhood."
+          },
+          {
+            "type": "p",
+            "text": "Repairs carry rules too. Replacing six or more panels requires a permit of its own, and a damaged, leaning, or missing section has to be repaired with comparable material within thirty days. That clock is worth knowing before a storm does your scheduling for you. Buried lines get located first, through an 811 call."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "The contractor walks the entire property and measures.",
+                "text": "On a deep Seagoville lot that walk matters: the far corners, the gate placements, and the easements all get seen in person, and the quote reflects the real run, not a guess from the street."
+              },
+              {
+                "title": "Review the itemized quote whenever it suits you.",
+                "text": "Fence on one line, removal on another, gates and permit on theirs, showing exactly where a long lot spends its money. Approve it or pass. Either way, the quote is yours."
+              },
+              {
+                "title": "After the build, walk the line beside the crew.",
+                "text": "Inspect that far back run, swing the gates yourself, and raise whatever looks off while final payment is still pending."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. No robocalls, no call center, no pressure afterward. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Privacy in Seagoville usually means cedar. It shrugs at rot, takes stain gladly, and overlapped boards keep even a deep yard screened when heat shrinks the wood. Pine, at about half the cost per foot, gives up years sooner. Across a very long run, sooner may be what makes doing the job now possible at all. Iron is the pool and front-line answer, open and durable."
+          }
+        ]
+      },
+      {
+        "heading": "Seagoville fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Seagoville?",
+                "a": "Footage plus material: those two decide it. The calculator above exists to turn yours into a range fitted to your lot, in thirty seconds or so. Side by side, cedar is dearest, iron cheaper, pine cheapest at roughly half of cedar per foot, and gates carry their own line still. Measuring the property is what lets him confirm the exact figure."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Be there for measuring if you can. On a deep lot, nobody knows which corner is true like the owner does. On build days, most Seagoville homeowners are out. Crews need entry through a gate, plus a plan for dogs or other animals kept there."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Both ride along inside the job. A permit is required in Seagoville for new fences and for larger panel replacements alike, and filing belongs to a contractor registered with the city. Yours files, then builds to code, posts and all. If your community has an association, mention it on the form so its approval is planned in."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. Describe the job once and we match you to a local contractor who wants that work. Back comes an itemized quote. Payment reaches only the contractor you hired, and covers the fence alone."
+              },
+              {
+                "q": "Can part of my fence be replaced if only one side is bad?",
+                "a": "Yes, though Seagoville adds one wrinkle: six or more replacement panels trigger a permit, and city rules give a damaged section thirty days to be repaired. Note on the form whether the line is shared with a neighbor."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Seagoville fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A long lot deserves a fence measured honestly and built to the code this city actually wrote. Seagoville crews fill their spring and summer calendars in order, so start with the estimate before the next storm picks your timing for you."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "venus": {
+    "slug": "venus",
+    "cityName": "Venus",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in Venus, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "New streets arriving in a town that kept the same streets for decades? Run your Venus lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your Venus fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For most of its life, Venus was finished. That is changing fast. New streets are going in, new houses are rising on ground that was pasture not long ago, and Venus is growing at a pace nobody here pictured a decade back."
+          },
+          {
+            "type": "p",
+            "text": "If you are on one of those new streets, your fence question is simple: the house is done, the yard is bare, and the dog is waiting. If you are on an older Venus street, the question is the opposite: a fence that has stood for decades is finally done standing. Either way, you need a measured price for your lot and a contractor who knows this town's permit office and its ground."
+          },
+          {
+            "type": "p",
+            "text": "Through Fences Texas, Venus owners reach a contractor working the Johnson and Ellis county line country. Describe the job once, he measures, and a written quote is yours to decide from."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Start at the calculator and send the form in.",
+                "text": "Rough footage, new fence or replacement, and your address. The range is what shows first. Seeing it needs no phone number at all."
+              },
+              {
+                "title": "Booking the measuring visit is what his call is for.",
+                "text": "On it he confirms your details, asks what survey you hold for the lot, if any, and locks in the appointment."
+              },
+              {
+                "title": "You get the quote in writing, itemized.",
+                "text": "Tear-out, gates, and permit each carry a line. Hire him if the figure works for the house. Pass, and the quote is still yours to keep."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Along a new Venus street, a finished fence is what settles a new house in: privacy boards ringing a yard that was bare dirt on closing day, a gate working from the very first day, and a back yard opened up for kids and dog alike. On an older street off Highway 67, it is quieter: the sagging line gone, a straight fence where the old one leaned, and a yard that looks looked after again."
+          },
+          {
+            "type": "p",
+            "text": "Both versions stand on the same ground. Venus sits on Blackland Prairie clay that swells in a wet spring and shrinks through a dry summer, strong enough to tilt any post set shallow. It is also a two-county town, Johnson on one side of the line and Ellis on the other, so the survey and plat paperwork for a Venus lot can live in either of two courthouses."
+          }
+        ]
+      },
+      {
+        "heading": "What a Venus fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage leads, here as everywhere. Venus lots range widely: tidy new subdivision lots at one end, older rural edge parcels with long back lines at the other. Material comes after. Per foot, cedar is priciest, iron cheaper, pine roughly half of cedar, and pool mesh priced in a category separate from all of them. Gates add their own lines, and a replacement carries tear-out and haul-off."
+          },
+          {
+            "type": "p",
+            "text": "Enter footage above and the calculator returns a range in thirty seconds or so, a planning number yours to hold today. He then measures the property himself and confirms the price inside a written quote. Gates, removal, and the permit are broken out there, so the total never lands as a mystery."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "The permit office, the county line, and the rest of the fine print",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Venus lists fences plainly among the work that requires a city permit, alongside pools, carports, and storage buildings, and its code enforcement office enforces a fence ordinance of its own. That filing is part of his job, handled at the Highway 67 Planning and Permits office. Before building, he also confirms which height rules currently govern your address, because the cap most often cited for homes here is six feet, with front fences held lower and partly open."
+          },
+          {
+            "type": "p",
+            "text": "Homes in the newest Venus subdivisions may answer to an association with fence requirements of its own. Any approval it demands gets folded into the plan from the outset. Utility lines are located through 811 before anyone digs. Replacements price removal in, and the crew hauls the old fence off with them."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Your lot gets measured by a local contractor, who writes the quote.",
+                "text": "Walking the line, he checks corners and gate spots against your survey, then prices the job as he found it. Post setting gets stated in the quote itself."
+              },
+              {
+                "title": "Deciding happens from the itemized quote.",
+                "text": "Fence on one line, removal on another, gates and permit on theirs, and the whole job is visible at once. Hire him, or decline and keep the quote."
+              },
+              {
+                "title": "Once the crew has built it, you walk it with them.",
+                "text": "Work each gate, sight along the back line, and flag anything off before final payment moves."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. That call exists to review your details and set the measuring visit. No robocalls, no call center holding your number, no pressure to decide on the spot. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Most Venus backyards settle on cedar for privacy. Heat does not trouble it, rot stays at bay, and overlapped boards keep the yard closed through August shrinkage. At roughly half of what cedar costs per foot, pine weathers faster. Where footage stretches long and money is tight, faster can be a reasonable trade. Iron fits a front line or a pool, open enough to meet the partly open standard Venus asks of front fences."
+          }
+        ]
+      },
+      {
+        "heading": "Venus fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in Venus?",
+                "a": "Footage and material together decide it. Pricing those two is exactly what the calculator above is there for. After measuring on site, he confirms the exact price there."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Try to attend the measuring visit. Gates and boundary lines settle best face to face, doubly so in a town where your lot might sit in either of two counties. On install days, most people are out. Crews need access at the gate and a plan for the dogs."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Sorted. Fence work in Venus requires a permit. Filing it is part of your contractor's job, as is confirming the rules that currently apply at your address. New subdivision with an association? Say so on the form, and its approval gets built into the plan by the crew."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. One description is all the job needs. We match you with a local contractor wanting the work, and an itemized quote comes back to you. A call from your contractor follows, covering details and scheduling the measurement. Only your chosen contractor gets paid by you, and only for fence work."
+              },
+              {
+                "q": "Can I replace a single bad side of my fence?",
+                "a": "Yes. Crews here handle partial replacements, tear-out and haul-off included, all the time. Use the form to say so, and note whether neighboring lots share the other sides. Shared lines get split here often. A quote can be structured around that split."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your Venus fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Whether your street is brand new or a hundred years old, the next step is the same: an estimate, a measured visit, and a written quote you can judge in peace. Start with the estimate."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
+  },
+  "river-oaks": {
+    "slug": "river-oaks",
+    "cityName": "River Oaks",
+    "kind": "residential",
+    "metaTitle": "Fence Installation in River Oaks, TX: What a New Fence Costs on a Lot Like Yours | Fences Texas",
+    "metaDescription": "Cottage backyard under big river-bottom oaks, and the fence is rotting in the shade? Run your River Oaks lot through the calculator for a real range, then get a free quote from a local contractor who handles the permit and the haul-off. No obligation.",
+    "hasProofSlot": true,
+    "sections": [
+      {
+        "heading": "Get a price for your River Oaks fence",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The oaks in your River Oaks backyard were old when the house was young. This little enclave west of Fort Worth sits down in the Trinity River bottom, and its mid-century cottages live under a canopy that keeps back yards shaded and damp long after a rain. It is a lovely way to live. It is a hard way for a wood fence to live."
+          },
+          {
+            "type": "p",
+            "text": "Shade rot is the River Oaks fence story. Boards that never fully dry go soft at the ground line, posts wick moisture in the dark, and one spring you push on the back fence and feel the whole section give. What you need is a fence built for shade and moisture from the start, priced by a contractor who has measured your lot, under a city fence code rewritten recently enough to matter."
+          },
+          {
+            "type": "p",
+            "text": "River Oaks owners reach, through Fences Texas, a contractor who works this Fort Worth side. Describe your job one time and he measures it, quotes in writing, and leaves you to decide."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Type your footage into the calculator above, then submit the form.",
+                "text": "Fresh fence or a replacement, plus where you live. What appears first is the range. No phone number is needed to view it."
+              },
+              {
+                "title": "His call arranges the measuring visit.",
+                "text": "Details get confirmed on it, he asks after the old fence and your trees, and the walk gets booked."
+              },
+              {
+                "title": "An itemized quote follows in writing.",
+                "text": "Removal on its own line, gates on theirs, the permit on its. If the number works for the house, hire him. Otherwise the quote stays yours and that ends it."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "What the fixed version looks like",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Under a River Oaks canopy, a finished job is small things done right, studied closely. The new fence stands plumb in ground that stays soft, the boards sit clear of the damp soil line, and the gate under the big oak swings without dragging for the first time in years."
+          },
+          {
+            "type": "p",
+            "text": "Underneath, the work is about moisture and movement. River bottom ground holds water, the clay in it swells and shrinks with the seasons, and shade slows every drying cycle. Crews who build in River Oaks set posts deep and in concrete, keep wood off the wet ground where they can, and pick materials that tolerate shade. One built for the bottom will not."
+          }
+        ]
+      },
+      {
+        "heading": "What a River Oaks fence costs, and how to find out for your yard",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Footage leads off. River Oaks lots are settled cottage lots, which keeps most runs shorter than a suburban standard run. Material follows close behind. Cedar per foot runs highest, iron below it, pine at roughly half of cedar, pool mesh priced apart from the others. Gates are the line owners forget, and on a shaded lot the tear-out can hold surprises, since rotted sections sometimes come apart rather than come out, which is labor either way."
+          },
+          {
+            "type": "p",
+            "text": "Thirty seconds with the calculator above yields a range for your yard, a figure to plan from. On site measuring is how the firm price gets confirmed. In his written quote, removal, gates, and the permit sit separated, letting you see the whole job before any commitment."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      },
+      {
+        "heading": "River Oaks rewrote its fence rules, and your contractor works under the new ones",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In November 2023 the City of River Oaks adopted a new fence ordinance, and any fence built after it needs a building permit. Your contractor files that permit through City Administration as part of the job, so your new fence lands on the right side of the line."
+          },
+          {
+            "type": "p",
+            "text": "The ordinance, Section 21 of the zoning code, allows up to eight feet in side and rear yards, holds front yards to four feet, and is stricter still with a solid fence in front of the house, while decorative wrought iron can go taller if it stays at least half open and is approved. Corner lots keep a twenty-foot visibility triangle clear at intersections. One material is simply off the table: solid sheet metal panels are not allowed on residential lots, and no part of a fence may cross a property line."
+          }
+        ]
+      },
+      {
+        "heading": "How getting matched works",
+        "blocks": [
+          {
+            "type": "steps",
+            "items": [
+              {
+                "title": "Measuring your lot and writing the quote falls to a local contractor.",
+                "text": "Shaded ground, roots running along the line, gates, corners: he checks each, then prices the job as it truly stands. How the posts will be set goes into the quote in plain words."
+              },
+              {
+                "title": "The itemized quote is yours to read at your own pace.",
+                "text": "Fence, removal, gates, permit: each carries a line of its own, hiding nothing. Hire him, or decline holding the quote, with no obligation trailing after you."
+              },
+              {
+                "title": "He builds it, and the two of you walk it.",
+                "text": "Open the gates, sight down the runs, and point out anything that wants fixing before the final payment is made."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "text": "What happens after you send the form: Your contractor will call within one business day to schedule your free measurement. That call is for your details and the measuring appointment. It covers nothing beyond those. Robocalls: none. Call centers: none. Pressure to sign: none. Every matched contractor backs the work with a one-year workmanship warranty in writing."
+          }
+        ]
+      },
+      {
+        "heading": "Cedar, pine, or iron: the short version",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Shade is where cedar earns its place in River Oaks. No other wood resists rot as well, stain takes beautifully, and overlapped boards keep a small yard to itself. Pine runs about half of cedar per foot but gives up sooner, and permanent shade brings that shorter life forward. Weigh the trade honestly. Iron is the shade-proof answer where it fits, at a pool or a front line, since it does not rot and its open build suits the city's front-yard rules."
+          }
+        ]
+      },
+      {
+        "heading": "River Oaks fence questions",
+        "blocks": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "q": "What does a fence cost in River Oaks?",
+                "a": "What decides it is your footage paired with your material. The calculator above turns that pairing into a lot fitted range in thirty seconds or so. At your property, after measuring, he confirms the exact figure himself."
+              },
+              {
+                "q": "How long does the whole thing take?",
+                "a": "Most fences are finished within 2 to 3 weeks of the quote visit; most backyard fences go up in 1 to 2 days once the crew starts."
+              },
+              {
+                "q": "Do I need to be home?",
+                "a": "Attend the measuring visit if you can. Shaded lots raise questions, about trees, about roots, about lines, that settle far easier standing in the yard. On build days, most River Oaks homeowners are out. Crews need a gate they can enter and arrangements for dogs."
+              },
+              {
+                "q": "What about the permit and my HOA?",
+                "a": "Permitting is folded into the job. Under the 2023 ordinance, every fence built in River Oaks now needs one. Yours gets filed by your contractor, who builds to Section 21, front yard and corner rules included. Streets whose association sets fence standards: note yours on the form, and he works through those standards too."
+              },
+              {
+                "q": "How does matching work, and what does it cost me?",
+                "a": "Nothing. A single description of the job suffices. We match you to a local contractor who is after the work, and an itemized quote comes to you. You pay the contractor you hired. Nobody else, and nothing beyond the fence."
+              },
+              {
+                "q": "Can I replace just the bad side of my fence?",
+                "a": "Yes. Replacing just the failed run, tear-out and haul-off included, is routine here."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Get your River Oaks fence priced",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "A cottage lot under old oaks deserves a fence built for shade, quoted in writing, and permitted under the rules this city actually has now. In River Oaks, spring and summer work books in arrival order. Begin with the estimate while room remains on the calendar."
+          },
+          {
+            "type": "cta",
+            "label": "Estimate my fence cost",
+            "micro": "Rough footage is fine. No phone number needed for the estimate."
+          }
+        ]
+      }
+    ],
+    "screenBlock": {
+      "heading": "ESTIMATE RESULTS SCREEN COPY",
+      "paras": [
+        "**That range is a planning number. Here is what it cannot see.**",
+        "Your ballpark is built from the footage and material you entered, nothing else. What it cannot price is your yard: the gates you actually need, whether an old fence has to come out and be hauled off, and any required permit. Those three are where a ballpark and a real price part ways.",
+        "**Want a firm price for your yard?** A local contractor will measure your fence line and give you a free, written quote that spells out gates, removal, and any required permit.",
+        "**[Get my free fence quote]**",
+        "*Your contractor will call within one business day to schedule your free measurement. No obligation.*"
+      ]
+    }
   }
 };
 
